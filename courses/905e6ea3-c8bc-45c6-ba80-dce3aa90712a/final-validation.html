@@ -1,0 +1,2432 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Validation finale - Économie-Gestion Bac Pro Aéronautique — Cartographie du cours</title>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("embed") === "1") {
+        document.documentElement.dataset.embed = "1";
+      }
+    }());
+  </script>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #14253a;
+  --ink-soft: #243e58;
+  --muted: #5a6d82;
+  --accent: #0c6e82;
+  --accent-strong: #103b5c;
+  --accent-soft: rgba(12, 110, 130, 0.08);
+  --highlight: #d98524;
+  --paper: #f6f2ea;
+  --panel: rgba(255, 255, 255, 0.9);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --line: rgba(20, 37, 58, 0.1);
+  --line-strong: rgba(20, 37, 58, 0.16);
+  --shadow: 0 24px 60px rgba(20, 37, 58, 0.12);
+  --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
+  --content-width: 1360px;
+  --reading-width: 76ch;
+}
+
+@keyframes ambient-float {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -16px, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes rise-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes panel-sheen {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(220%) skewX(-20deg); }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(12, 110, 130, 0.15), transparent 28%),
+    radial-gradient(circle at 86% 10%, rgba(217, 133, 36, 0.16), transparent 22%),
+    linear-gradient(150deg, #f7f1e7 0%, #eef5f8 50%, #f8fbfe 100%);
+}
+
+body {
+  position: relative;
+  color: var(--ink);
+  font-family: "Aptos", "Segoe UI Variable", "Segoe UI", "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(24px);
+  opacity: 0.6;
+  animation: ambient-float 18s ease-in-out infinite;
+}
+
+body::before {
+  top: 10vh;
+  right: 4vw;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(12, 110, 130, 0.16), transparent 68%);
+}
+
+body::after {
+  bottom: 8vh;
+  left: 3vw;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 133, 36, 0.18), transparent 68%);
+  animation-delay: -7s;
+}
+
+html[data-embed="1"],
+html[data-embed="1"] body {
+  background: transparent;
+}
+
+html[data-embed="1"] body::before,
+html[data-embed="1"] body::after {
+  display: none;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  gap: 22px;
+}
+
+.page-shell.with-site-nav {
+  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+}
+
+.site-sidebar {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  padding: 24px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 28px;
+  background: rgba(250, 252, 253, 0.78);
+  box-shadow: 0 18px 40px rgba(20, 37, 58, 0.08);
+  backdrop-filter: blur(12px);
+  animation: rise-in 520ms ease both;
+}
+
+.site-sidebar h2 {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.4rem;
+}
+
+.site-sidebar p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.site-sidebar nav {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-action,
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.sidebar-action::after,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.sidebar-action:hover,
+.nav-link:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.sidebar-action:hover::after,
+.nav-link:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.sidebar-list {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-slide {
+  display: grid;
+  gap: 4px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.sidebar-slide:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.sidebar-slide.active {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-slide strong {
+  font-size: 0.96rem;
+}
+
+.sidebar-slide span {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: inherit;
+  opacity: 0.88;
+}
+
+.site-main {
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.slide-toolbar {
+  position: sticky;
+  top: 18px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 14px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+  backdrop-filter: blur(12px);
+  animation: rise-in 560ms ease both;
+}
+
+.toolbar-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.slide {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+  box-sizing: border-box;
+  padding: 4px 0 28px;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: minmax(0, 2.8fr) minmax(240px, 0.7fr);
+  padding: 38px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+  box-shadow: var(--shadow);
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.12), transparent 34%),
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -26% auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 68%);
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy::after {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -120px;
+  width: 120px;
+  height: calc(100% + 44px);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transform: skewX(-20deg);
+  animation: panel-sheen 2.8s ease 820ms 1 both;
+  pointer-events: none;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  max-width: none;
+  color: #f6fbff;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.05rem, 2.85vw, 3.35rem);
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  text-shadow: 0 10px 30px rgba(8, 24, 38, 0.14);
+}
+
+.hero-copy .objective {
+  margin: 18px 0 0;
+  max-width: 60ch;
+  color: rgba(246, 251, 255, 0.92);
+  font-size: 1.06rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  color: rgba(246, 251, 255, 0.82);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-meta {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(247, 250, 252, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.meta-card:hover {
+  transform: translateY(-2px);
+  background: rgba(247, 250, 252, 0.22);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.meta-label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(246, 251, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.meta-card p {
+  margin: 0;
+  color: #f6fbff;
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.visual-summary-panel {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  animation: rise-in 620ms ease both;
+}
+
+.visual-summary-panel .visual-summary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.visual-summary-panel .visual-summary-title {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.38rem;
+  line-height: 1.12;
+}
+
+.visual-summary-panel .visual-summary-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.block {
+  position: relative;
+  grid-column: span 12;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 24px 26px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+  animation: rise-in 620ms ease both;
+  animation-delay: calc(var(--stagger, 0) * 85ms);
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(12, 110, 130, 0), rgba(12, 110, 130, 0.32), rgba(217, 133, 36, 0));
+}
+
+.block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(20, 37, 58, 0.1);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.block h2 {
+  margin: 0 0 14px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.42rem;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.block h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(217, 133, 36, 0.75));
+}
+
+.block-body {
+  display: grid;
+  gap: 14px;
+}
+
+.block p,
+.block li,
+.caption,
+.formula-caption,
+.sources-list,
+.review-meta,
+.option-text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.block-body > p,
+.block-body > ul,
+.block-body > blockquote,
+.block-body > .formula-shell {
+  max-width: var(--reading-width);
+}
+
+.block.block-image .block-body,
+.block.block-table .block-body,
+.block.block-sources .block-body {
+  max-width: none;
+}
+
+.block.block-hero {
+  background:
+    linear-gradient(145deg, rgba(20, 37, 58, 0.96), rgba(12, 110, 130, 0.9));
+  color: #f6fbff;
+}
+
+.block.block-hero::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+}
+
+.block.block-hero h2,
+.block.block-hero p,
+.block.block-hero li {
+  color: inherit;
+}
+
+.block.block-hero h2::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.16));
+}
+
+.lead-text {
+  font-size: 1.08rem;
+  line-height: 1.76;
+}
+
+blockquote {
+  margin: 0;
+  padding: 8px 0 8px 18px;
+  border-left: 4px solid var(--highlight);
+  color: #18374d;
+  font-style: italic;
+  line-height: 1.72;
+  font-size: 1.06rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+.bullet-list li {
+  line-height: 1.66;
+  padding-left: 2px;
+}
+
+.bullet-list li::marker {
+  color: var(--accent);
+}
+
+.media {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  background: linear-gradient(180deg, #eef5fb, #f9fbfd);
+}
+
+.media-figure {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.block-image {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.94), rgba(249, 251, 253, 0.98));
+  padding: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.caption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 90ch;
+}
+
+.formula-shell {
+  display: grid;
+  gap: 14px;
+}
+
+.formula-display {
+  overflow-x: auto;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.96), rgba(248, 251, 253, 0.96));
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.formula-display mjx-container {
+  margin: 0 auto !important;
+  font-size: 118% !important;
+}
+
+.formula-caption {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: var(--panel-strong);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+  font-size: 0.96rem;
+}
+
+td, th {
+  border: 1px solid var(--line);
+  padding: 12px 13px;
+  text-align: left;
+  vertical-align: top;
+}
+
+tr:first-child td,
+tr:first-child th {
+  background: rgba(12, 110, 130, 0.08);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+tr:nth-child(even):not(:first-child) td {
+  background: rgba(12, 110, 130, 0.03);
+}
+
+.sources-panel {
+  position: relative;
+  margin-top: 56px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(20, 37, 58, 0.06);
+  overflow: hidden;
+  animation: rise-in 680ms ease both;
+}
+
+.sources-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--accent), rgba(217, 133, 36, 0.7));
+}
+
+.sources-title {
+  margin: 0 0 10px;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sources-summary {
+  margin: 0 0 14px;
+  max-width: 88ch;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sources-list {
+  --sources-cols: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: stretch;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.source-ref {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  flex: 0 1 calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  width: min(100%, calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols)));
+  max-width: calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  padding: 12px 14px;
+  box-sizing: border-box;
+  min-height: 118px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.06), rgba(12, 110, 130, 0.03));
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: none;
+  line-height: 1.36;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.source-ref:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.16);
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.09), rgba(12, 110, 130, 0.05));
+}
+
+.source-ref-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--accent-strong);
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.34;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-wrap: pretty;
+}
+
+.source-ref-domain {
+  color: var(--muted);
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.source-ref[href]:hover .source-ref-title {
+  text-decoration: underline;
+}
+
+.sources-list.sources-cols-1 {
+  --sources-cols: 1;
+}
+
+.sources-list.sources-cols-2 {
+  --sources-cols: 2;
+}
+
+.sources-list.sources-cols-3 {
+  --sources-cols: 3;
+}
+
+.sources-list.sources-cols-4 {
+  --sources-cols: 4;
+}
+
+.quiz-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.quiz-hero {
+  display: grid;
+  gap: 18px;
+  padding: 32px 34px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.quiz-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 78% 26%, rgba(255, 255, 255, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.quiz-hero h1 {
+  margin: 0;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.1rem, 3.2vw, 3.5rem);
+  line-height: 1.06;
+}
+
+.quiz-hero p {
+  margin: 0;
+  max-width: 72ch;
+  line-height: 1.65;
+  color: rgba(246, 251, 255, 0.92);
+}
+
+.quiz-app-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.quiz-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f6fbff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.quiz-panel,
+.review-card {
+  box-sizing: border-box;
+  width: min(980px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  animation: rise-in 620ms ease both;
+}
+
+.question-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.question-title {
+  margin: 0 0 16px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.option-list {
+  display: grid;
+  gap: 12px;
+}
+
+.option-item {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(248, 251, 252, 0.9);
+  border: 1px solid rgba(20, 37, 58, 0.10);
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.option-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.18);
+  box-shadow: 0 8px 18px rgba(20, 37, 58, 0.06);
+}
+
+.option-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.option-input {
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+
+.option-text {
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.option-explanation {
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.option-correct {
+  border-color: rgba(45, 143, 114, 0.35);
+  background: rgba(230, 247, 239, 0.9);
+}
+
+.option-wrong {
+  border-color: rgba(217, 133, 36, 0.32);
+  background: rgba(255, 244, 230, 0.92);
+}
+
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.quiz-button,
+.quiz-actions a {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.quiz-button::after,
+.quiz-actions a::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.quiz-button:hover,
+.quiz-actions a:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.quiz-button:hover::after,
+.quiz-actions a:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.quiz-button.primary {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  border-color: transparent;
+  color: #f6fbff;
+}
+
+.quiz-button.disabled,
+.quiz-actions a.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.results-card {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(248, 251, 252, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.results-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.results-card span {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.review-list {
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.review-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.teaching-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.teaching-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(244, 248, 251, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.teaching-card.emphasis {
+  background: rgba(231, 243, 248, 0.96);
+  border-color: rgba(12, 110, 130, 0.18);
+}
+
+.teaching-card .teaching-card-title {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.teaching-card p strong {
+  display: inline;
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.teaching-card p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+html[data-embed="1"] .page-shell {
+  min-height: auto;
+  padding: 0;
+  gap: 0;
+}
+
+html[data-embed="1"] .page-shell.with-site-nav {
+  grid-template-columns: 1fr;
+}
+
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar {
+  display: none;
+}
+
+html[data-embed="1"] .slide,
+html[data-embed="1"] .quiz-shell {
+  max-width: none;
+  min-height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  box-shadow: none;
+}
+
+html[data-embed="1"] .hero-panel,
+html[data-embed="1"] .quiz-hero,
+html[data-embed="1"] .sources-panel,
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar,
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  animation: none;
+}
+
+@media (min-width: 1120px) {
+  .slide.layout-simple .content-grid {
+    align-items: stretch;
+  }
+
+  .slide.layout-simple .block {
+    grid-template-rows: auto 1fr;
+  }
+
+  .slide.layout-simple .block-body {
+    align-content: start;
+  }
+
+  .layout-title .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-bullets .block.block-bullets,
+  .layout-bullets .block.block-quote,
+  .layout-bullets .block.block-formula,
+  .layout-two_columns .block:not(.block-hero):not(.block-image):not(.block-sources):not(.block-table) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-bullets .block.block-hero,
+  .layout-bullets .block.block-image,
+  .layout-bullets .block.block-table,
+  .layout-bullets .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-quote .block.block-quote,
+  .layout-table .block.block-table {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-quote .block:not(.block-quote):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-table .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-table.layout-table-single-support .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-table.layout-table-single-support .visual-summary-panel,
+  .layout-table.layout-table-single-support .sources-panel {
+    width: min(100%, calc(var(--content-width) * 0.833333));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .layout-quote .block.block-image,
+  .layout-quote .block.block-table,
+  .layout-quote .block.block-sources,
+  .layout-table .block.block-image,
+  .layout-table .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-spotlight .block:not(:first-child):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-spotlight .block.block-image,
+  .layout-spotlight .block.block-table,
+  .layout-spotlight .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block:nth-child(1):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-comparison .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-comparison .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block.block-image,
+  .layout-comparison .block.block-table,
+  .layout-comparison .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-magazine .block:nth-child(odd):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 7;
+  }
+
+  .layout-magazine .block:nth-child(even):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 5;
+  }
+
+  .layout-magazine .block.block-image,
+  .layout-magazine .block.block-table,
+  .layout-magazine .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-mosaic .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-mosaic .block.block-image,
+  .layout-mosaic .block.block-table,
+  .layout-mosaic .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-triptych .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-triptych .block.block-image,
+  .layout-triptych .block.block-table,
+  .layout-triptych .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-sidebar_focus .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(n+4):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-sidebar_focus .block.block-image,
+  .layout-sidebar_focus .block.block-table,
+  .layout-sidebar_focus .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-dashboard .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-dashboard .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-dashboard .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-dashboard .block.block-image,
+  .layout-dashboard .block.block-table,
+  .layout-dashboard .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-staggered .block:nth-child(3n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 7;
+  }
+
+  .layout-staggered .block:nth-child(3n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 8 / span 5;
+  }
+
+  .layout-staggered .block:nth-child(3n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 3 / span 8;
+  }
+
+  .layout-staggered .block.block-image,
+  .layout-staggered .block.block-table,
+  .layout-staggered .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-storyline .block:nth-child(4n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-storyline .block:nth-child(4n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 5 / span 8;
+  }
+
+  .layout-storyline .block.block-image,
+  .layout-storyline .block.block-table,
+  .layout-storyline .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block.layout-slot-primary {
+    grid-column: 2 / span 10 !important;
+  }
+
+  .layout-spotlight .block.layout-slot-secondary {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-half {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-magazine .block.layout-slot-feature {
+    grid-column: span 7 !important;
+  }
+
+  .layout-magazine .block.layout-slot-support {
+    grid-column: span 5 !important;
+  }
+
+  .layout-mosaic .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-third {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-support {
+    grid-column: span 6 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-a {
+    grid-column: 1 / span 7 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-b {
+    grid-column: 8 / span 5 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-c {
+    grid-column: 3 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-a {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-b {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-c {
+    grid-column: 1 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-d {
+    grid-column: 5 / span 8 !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .page-shell.with-site-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell {
+    padding: 14px;
+  }
+
+  .site-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .block {
+    padding: 18px;
+  }
+
+  .slide-toolbar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-panel,
+  .quiz-hero {
+    padding: 26px 22px;
+  }
+
+  .hero-copy h1,
+  .quiz-hero h1 {
+    max-width: none;
+  }
+
+  .sources-list {
+    justify-content: stretch;
+  }
+
+  .source-ref,
+  .sources-list.sources-count-1 .source-ref,
+  .sources-list.sources-count-2 .source-ref,
+  .sources-list.sources-count-4 .source-ref {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+  
+</head>
+<body class="viewer-user page-quiz">
+  <div class="page-shell with-site-nav">
+    
+    <aside class="site-sidebar">
+      <h2>Économie Gestion Bac Pro Aéronautique</h2>
+      <p>Parcours épuré avec navigation et QCM.</p>
+      <nav>
+        
+        <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
+        
+        
+        
+        <a class="sidebar-action" href="index.html">Sommaire</a>
+        
+        
+        <a class="sidebar-action" href="deck.html">Vue deck</a>
+        
+        
+      </nav>
+      <div class="sidebar-list">
+        
+        <a class="sidebar-slide" href="sl01.html">
+          <strong>SL01</strong>
+          <span>Présentation du cours et du module</span>
+          
+          <span>Situer le cours dans le Bac Pro Aéronautique et annoncer les grands thèmes du module « L’individu dans l’organisation ».</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s1.html">
+          <strong>QCM S1</strong>
+          <span>QCM - Présentation du cours et du module</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl02.html">
+          <strong>SL02</strong>
+          <span>Découverte des métiers de l’aéronautique</span>
+          
+          <span>Comprendre la diversité des professions aéronautiques et le rôle complémentaire de chaque famille de métiers.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl03.html">
+          <strong>SL03</strong>
+          <span>Ingénieur en aéronautique</span>
+          
+          <span>Décrire la contribution de l’ingénieur à la conception, aux essais et à l’amélioration des aéronefs.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s2-2.html">
+          <strong>QCM S2.2</strong>
+          <span>QCM - Ingénieur en aéronautique</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl04.html">
+          <strong>SL04</strong>
+          <span>Pilote de ligne</span>
+          
+          <span>Expliquer les responsabilités du pilote avant, pendant et après le vol.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s2-3.html">
+          <strong>QCM S2.3</strong>
+          <span>QCM - Pilote de ligne</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl05.html">
+          <strong>SL05</strong>
+          <span>Mécanicien moteur / mécanicien aéronautique</span>
+          
+          <span>Identifier les tâches essentielles du mécanicien chargé des moteurs et de la maintenance technique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s2-4.html">
+          <strong>QCM S2.4</strong>
+          <span>QCM - Mécanicien moteur / mécanicien aéronautique</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl06.html">
+          <strong>SL06</strong>
+          <span>Avitailleur / technicien avitailleur</span>
+          
+          <span>Comprendre le rôle de l’avitailleur dans l’approvisionnement des avions en carburant.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s2-5.html">
+          <strong>QCM S2.5</strong>
+          <span>QCM - Avitailleur / technicien avitailleur</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl07.html">
+          <strong>SL07</strong>
+          <span>Aiguilleur du ciel / contrôleur de trafic aérien</span>
+          
+          <span>Décrire le travail de coordination et de sécurisation du trafic aérien.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s2-6.html">
+          <strong>QCM S2.6</strong>
+          <span>QCM - Aiguilleur du ciel / contrôleur de trafic aérien</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl08.html">
+          <strong>SL08</strong>
+          <span>Chef d’escale : coordonner une escale de bout en bout</span>
+          
+          <span>Comprendre comment le chef d’escale synchronise les opérations aéroportuaires pendant une escale.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s2-7.html">
+          <strong>QCM S2.7</strong>
+          <span>QCM - Chef d’escale</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl09.html">
+          <strong>SL09</strong>
+          <span>Technicien d’essai</span>
+          
+          <span>Expliquer le rôle du technicien d’essai dans le contrôle de conformité des systèmes aéronautiques.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s2-8.html">
+          <strong>QCM S2.8</strong>
+          <span>QCM - Technicien d’essai</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl10.html">
+          <strong>SL10</strong>
+          <span>Le salarié dans l’organisation</span>
+          
+          <span>Montrer comment un savoir-faire métier devient une fonction dans l’entreprise, puis un cadre juridique de travail.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl11.html">
+          <strong>SL11</strong>
+          <span>Les droits du salarié</span>
+          
+          <span>Identifier les principales protections accordées au salarié dans l’entreprise.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s3-2.html">
+          <strong>QCM S3.2</strong>
+          <span>QCM - Les droits du salarié</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl12.html">
+          <strong>SL12</strong>
+          <span>Les devoirs du salarié</span>
+          
+          <span>Comprendre que les devoirs du salarié traduisent un **engagement professionnel** concret, en contrepartie de ses droits dans l’entreprise.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s3-3.html">
+          <strong>QCM S3.3</strong>
+          <span>QCM - Les devoirs du salarié</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl13.html">
+          <strong>SL13</strong>
+          <span>Le contrat de travail</span>
+          
+          <span>Définir le contrat de travail et distinguer ses formes principales ainsi que ses modalités de rupture.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s3-4.html">
+          <strong>QCM S3.4</strong>
+          <span>QCM - Le contrat de travail</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl14.html">
+          <strong>SL14</strong>
+          <span>TP – L’individu dans l’organisation</span>
+          
+          <span>Introduire le travail pratique d’application sur les métiers, les droits et les devoirs du salarié.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s4.html">
+          <strong>QCM S4</strong>
+          <span>QCM - TP – L’individu dans l’organisation : découverte des métiers et droits/devoirs</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl15.html">
+          <strong>SL15</strong>
+          <span>Santé en entreprise aéronautique</span>
+          
+          <span>Repérer les principaux risques professionnels et les mesures de prévention.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl16.html">
+          <strong>SL16</strong>
+          <span>Sécurité aéronautique : prévenir, signaler, corriger</span>
+          
+          <span>Identifier les dangers majeurs et les dispositifs de gestion de la sécurité.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s5-2.html">
+          <strong>QCM S5.2</strong>
+          <span>QCM - La sécurité en entreprise aéronautique</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl17.html">
+          <strong>SL17</strong>
+          <span>Qualité en entreprise aéronautique</span>
+          
+          <span>Relier normes, contrôles et amélioration continue pour garantir la conformité des produits et des opérations.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s5-3.html">
+          <strong>QCM S5.3</strong>
+          <span>QCM - La qualité en entreprise aéronautique</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl18.html">
+          <strong>SL18</strong>
+          <span>Santé, sécurité et qualité : une logique intégrée</span>
+          
+          <span>Montrer que la santé des personnes, la sécurité des opérations et la qualité des produits sont indissociables.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s5-4.html">
+          <strong>QCM S5.4</strong>
+          <span>QCM - Interaction entre santé, sécurité et qualité</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl19.html">
+          <strong>SL19</strong>
+          <span>Rémunération dans le secteur aéronautique</span>
+          
+          <span>Lire la logique de rémunération selon les métiers et l’expérience.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl20.html">
+          <strong>SL20</strong>
+          <span>Parcours professionnels dans l’aéronautique</span>
+          
+          <span>Identifier les trajectoires de carrière possibles et comprendre les conditions d’évolution vers la spécialisation, l’expertise ou l’encadrement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="subpart-s6-2.html">
+          <strong>QCM S6.2</strong>
+          <span>QCM - Les parcours professionnels</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide active" href="final-validation.html">
+          <strong>Validation finale</strong>
+          <span>Validation finale - Économie-Gestion Bac Pro Aéronautique — Cartographie du cours</span>
+          
+          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          
+        </a>
+        
+      </div>
+    </aside>
+    
+
+    <main class="site-main">
+      
+      <div class="slide-toolbar">
+        <div class="toolbar-meta">
+          <span>Page 37/37</span>
+          
+          <span>QCM</span>
+        </div>
+        <div class="toolbar-actions">
+          
+          <a class="nav-link" href="../../index.html">Catalogue</a>
+          
+          
+          <a class="nav-link" href="subpart-s6-2.html">Précédent</a>
+          
+          
+          <span class="nav-link disabled">Suivante</span>
+          
+        </div>
+      </div>
+      
+
+      <section class="quiz-shell">
+        <section class="quiz-hero">
+          <div>
+            <p class="eyebrow">QCM</p>
+            <h1>Validation finale - Économie-Gestion Bac Pro Aéronautique — Cartographie du cours</h1>
+            <p>
+              
+              QCM final avec navigation libre et correction après soumission.
+              
+            </p>
+          </div>
+          <div class="quiz-meta">
+            <span class="meta-pill">50 questions</span>
+            
+          </div>
+        </section>
+
+        <section
+          id="quiz-app"
+          class="quiz-app-shell"
+          data-viewer-mode="user"
+          data-next-href=""
+          data-home-href="index.html"
+        ></section>
+      </section>
+    </main>
+  </div>
+
+  <script id="quiz-data" type="application/json">{"quiz_id": "final::validation", "quiz_type": "final", "difficulty": "easy", "questions": [{"question_id": "Q01", "prompt": "Parmi les affirmations suivantes, une seule correspond exactement au cours présenté.", "difficulty": "easy", "options": [{"id": "A", "text": "Le document est un manuel de physique-chimie centré sur l’astronomie.", "is_correct": false, "explanation": "Le cours ne porte pas sur l’astronomie ni sur la physique-chimie générale ; il s’inscrit en économie-gestion appliquée à l’aéronautique."}, {"id": "B", "text": "Le cours est destiné exclusivement à des étudiants de licence universitaire en droit.", "is_correct": false, "explanation": "Le support est clairement rattaché au Bac Pro Aéronautique, pas à l’université ni à une formation juridique."}, {"id": "C", "text": "La présentation du document ne mentionne aucune institution de référence.", "is_correct": false, "explanation": "Au contraire, la couverture affiche explicitement l’IAAG, l’Institut Aéronautique Amaury de la Grange."}, {"id": "D", "text": "Le document est un cours d’« Économie-Gestion » pour le Bac Pro Aéronautique, présenté par l’IAAG.", "is_correct": true, "explanation": "C’est bien l’intitulé visible sur la page de couverture : le cours relève de l’économie-gestion, du Bac Pro Aéronautique et de l’IAAG."}, {"id": "E", "text": "Le document traite uniquement de la météo et des nuages, sans lien avec l’entreprise.", "is_correct": false, "explanation": "Le cours est centré sur l’individu dans l’organisation, les métiers, le travail et la vie professionnelle, pas seulement sur la météo."}], "coverage_label": "", "learning_objective": "Identifier la nature du support, son niveau et son institution de référence.", "correction_summary": "La bonne réponse reprend les informations de la couverture : économie-gestion, Bac Pro Aéronautique et IAAG. Le piège consiste à confondre ce support avec un autre type de manuel ou à oublier l’institution de référence. Cette question vérifie que l’élève sait situer le cours avant d’entrer dans le contenu.", "course_clarification": "La page de couverture sert à identifier le cadre du cours. Ici, on est dans l’économie-gestion appliquée au Bac Pro Aéronautique. IAAG signifie Institut Aéronautique Amaury de la Grange. Savoir lire ces éléments aide à situer le document dans une formation professionnelle précise.", "source_refs": []}, {"question_id": "Q02", "prompt": "Parmi les affirmations suivantes, une seule correspond au module présenté dans le cours.", "difficulty": "easy", "options": [{"id": "A", "text": "Le module principal porte sur la conquête spatiale et les satellites.", "is_correct": false, "explanation": "Le cours ne traite pas de spatial, mais de l’individu dans l’organisation et des métiers de l’aéronautique."}, {"id": "B", "text": "Le module annoncé s’intitule « L’individu dans l’organisation ».", "is_correct": true, "explanation": "C’est bien le titre du module présenté sur la diapositive de synthèse du cours."}, {"id": "C", "text": "Le module se limite à la fabrication des ailes d’avion.", "is_correct": false, "explanation": "Le module est beaucoup plus large : il couvre les métiers, le salarié, le contrat, la santé-sécurité-qualité et la rémunération."}, {"id": "D", "text": "Le module n’aborde jamais les relations de travail dans l’entreprise.", "is_correct": false, "explanation": "Au contraire, les droits, les devoirs et le contrat de travail occupent une place importante dans la suite du cours."}, {"id": "E", "text": "Le module est présenté sans aucun thème secondaire.", "is_correct": false, "explanation": "La page d’introduction annonce plusieurs thèmes organisés en encadrés colorés."}], "coverage_label": "", "learning_objective": "Reconnaître le titre du module et sa logique générale.", "correction_summary": "La bonne réponse est le titre exact du module : « L’individu dans l’organisation ». Le piège est de retenir seulement le thème aéronautique sans voir que le cours organise aussi la vie du salarié dans l’entreprise. Cette question prépare à comprendre la structure de toute la séquence.", "course_clarification": "Un module regroupe plusieurs leçons autour d’un même fil conducteur. Ici, le fil conducteur est la place de l’individu dans l’organisation. Cela inclut les métiers, le travail, les droits et les obligations, mais aussi la santé, la sécurité, la qualité et la rémunération. Cette logique aide à relier les savoirs techniques et les règles de l’entreprise.", "source_refs": []}, {"question_id": "Q03", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur les métiers de l’aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "Le secteur aéronautique propose des métiers variés qui vont bien au-delà du seul métier de pilote.", "is_correct": true, "explanation": "Le cours insiste précisément sur la diversité des professions aéronautiques, au-delà de l’image du pilote."}, {"id": "B", "text": "Tous les métiers de l’aéronautique relèvent uniquement du pilotage.", "is_correct": false, "explanation": "Le cours montre au contraire des familles de métiers différentes : conception, maintenance, trafic aérien et opérations au sol."}, {"id": "C", "text": "L’aéronautique ne comprend aucun métier technique.", "is_correct": false, "explanation": "Plusieurs métiers techniques sont présentés, comme l’ingénieur, le mécanicien ou le technicien d’essai."}, {"id": "D", "text": "Le secteur est stable et n’exige aucune adaptation.", "is_correct": false, "explanation": "Le cours précise qu’il s’agit d’un univers en évolution constante qui demande adaptation et formation continue."}, {"id": "E", "text": "Le cours affirme que les métiers aéronautiques sont tous identiques dans leurs missions.", "is_correct": false, "explanation": "Chaque métier a au contraire des missions spécifiques et mobilise des compétences différentes."}], "coverage_label": "", "learning_objective": "Comprendre la diversité des métiers du secteur aéronautique.", "correction_summary": "La bonne réponse souligne que l’aéronautique ne se réduit pas au pilotage. Le piège consiste à croire qu’un seul métier représente tout le secteur, alors que le cours insiste sur la complémentarité des fonctions. L’idée essentielle est la diversité des missions et des compétences.", "course_clarification": "L’aéronautique rassemble des professions très différentes. Certaines concernent la conception des avions, d’autres la maintenance, la navigation ou les opérations au sol. Cette diversité montre qu’un avion dépend d’un ensemble de métiers complémentaires. Pour l’élève, cela aide à situer sa propre voie possible dans la filière.", "source_refs": []}, {"question_id": "Q04", "prompt": "Parmi les affirmations suivantes, une seule est correcte à propos de l’évolution du secteur aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "Le secteur n’a pas besoin de veille technique.", "is_correct": false, "explanation": "Le contraire est vrai : la veille technique est utile pour suivre l’évolution des technologies et des procédures."}, {"id": "B", "text": "Les métiers aéronautiques restent figés toute la vie sans changement de compétences.", "is_correct": false, "explanation": "Le cours insiste au contraire sur l’adaptation et l’actualisation des compétences."}, {"id": "C", "text": "Les formations sont inutiles une fois le diplôme obtenu.", "is_correct": false, "explanation": "La formation continue est au cœur du cours, notamment dans un secteur où normes et technologies évoluent."}, {"id": "D", "text": "L’aéronautique ne change que pour les métiers administratifs.", "is_correct": false, "explanation": "Tous les métiers du secteur sont concernés par l’évolution technique, réglementaire et organisationnelle."}, {"id": "E", "text": "Le secteur aéronautique évolue en permanence et demande une formation continue.", "is_correct": true, "explanation": "Le cours indique explicitement que l’aéronautique est un univers en évolution constante et qu’il faut se former régulièrement."}], "coverage_label": "", "learning_objective": "Identifier le caractère évolutif du secteur et l’importance de la formation continue.", "correction_summary": "La bonne réponse relie l’évolution du secteur à la nécessité de se former tout au long de sa carrière. Le piège est de penser qu’un diplôme suffit définitivement. Le cours montre au contraire que la veille technique et l’adaptation sont indispensables.", "course_clarification": "Dans l’aéronautique, les technologies, les normes et les procédures changent régulièrement. Cela oblige les professionnels à rester à jour. La formation continue sert à renforcer les compétences et à garantir la sécurité. Elle est donc un élément normal de la vie professionnelle dans ce secteur.", "source_refs": []}, {"question_id": "Q05", "prompt": "Parmi les affirmations suivantes, une seule décrit correctement le métier d’ingénieur en aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "L’ingénieur en aéronautique se limite à vendre des billets d’avion.", "is_correct": false, "explanation": "La vente de billets relève du domaine commercial, pas du travail d’ingénierie aéronautique."}, {"id": "B", "text": "Il n’intervient jamais dans l’étude des performances de l’aéronef.", "is_correct": false, "explanation": "Le cours précise au contraire qu’il crée aussi des logiciels et des outils pour améliorer les performances."}, {"id": "C", "text": "L’ingénieur en aéronautique travaille sur la conception, l’informatique embarquée, les prototypes et les logiciels de performance.", "is_correct": true, "explanation": "C’est exactement le rôle décrit dans le cours : concevoir, développer et tester des solutions pour améliorer les aéronefs."}, {"id": "D", "text": "Il travaille uniquement sur les cabines passagers et jamais sur les systèmes techniques.", "is_correct": false, "explanation": "Le métier couvre des domaines techniques comme l’aérodynamique, la propulsion, les structures ou l’avionique."}, {"id": "E", "text": "Il n’a besoin d’aucune compétence scientifique pour exercer.", "is_correct": false, "explanation": "Le cours montre qu’il collabore avec de nombreuses disciplines scientifiques et techniques."}], "coverage_label": "", "learning_objective": "Décrire les missions de l’ingénieur en aéronautique.", "correction_summary": "La bonne réponse met l’accent sur la conception, les prototypes et les logiciels de performance. Le piège consiste à réduire ce métier à une fonction administrative ou commerciale. Le cours présente au contraire un métier très technique et transversal.", "course_clarification": "L’ingénieur en aéronautique conçoit, améliore et teste des solutions techniques. Il intervient sur de nombreux aspects de l’aéronef, comme la structure, la propulsion ou l’avionique. Ce métier demande des bases scientifiques solides et un travail en équipe. Il est donc au cœur de l’innovation aéronautique.", "source_refs": []}, {"question_id": "Q06", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur l’ingénieur en aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "L’ingénieur collabore avec des spécialistes de la physique, de la mécanique, de l’électronique, des matériaux, de l’hydraulique et du pneumatique.", "is_correct": true, "explanation": "Le cours insiste sur cette collaboration pluridisciplinaire, indispensable pour concevoir et améliorer un aéronef."}, {"id": "B", "text": "L’ingénieur travaille seul, sans interaction avec d’autres spécialistes.", "is_correct": false, "explanation": "Le cours montre au contraire qu’il coopère avec plusieurs experts techniques."}, {"id": "C", "text": "Son rôle ne concerne jamais les structures ni le contrôle de vol.", "is_correct": false, "explanation": "Les structures et le contrôle de vol font partie des domaines cités dans le cours."}, {"id": "D", "text": "Il n’intervient pas sur l’aérodynamique ni sur la propulsion.", "is_correct": false, "explanation": "Le document mentionne explicitement l’aérodynamique et la propulsion parmi ses domaines."}, {"id": "E", "text": "Il n’a aucun lien avec les prototypes et les essais.", "is_correct": false, "explanation": "Le cours précise qu’il développe et teste des prototypes et des logiciels."}], "coverage_label": "", "learning_objective": "Identifier la dimension pluridisciplinaire du métier d’ingénieur.", "correction_summary": "La bonne réponse montre que l’ingénieur travaille avec de nombreuses disciplines. Le piège classique est d’imaginer un métier isolé, alors qu’il est au contraire collaboratif. Cette question fait comprendre que l’aéronautique repose sur le travail en équipe.", "course_clarification": "Un ingénieur aéronautique ne travaille pas seul. Il met en relation plusieurs savoirs : mécanique, électronique, matériaux, physique ou hydraulique. Cette coopération permet de résoudre des problèmes complexes liés à la conception d’un aéronef. La pluridisciplinarité est donc une caractéristique essentielle du métier.", "source_refs": []}, {"question_id": "Q07", "prompt": "Parmi les affirmations suivantes, une seule décrit correctement les responsabilités du pilote de ligne.", "difficulty": "easy", "options": [{"id": "A", "text": "Le pilote de ligne ne s’occupe que du décollage.", "is_correct": false, "explanation": "Ses missions vont bien au-delà du décollage : préparation, suivi du vol, communication et comptes rendus font aussi partie du métier."}, {"id": "B", "text": "Il ne vérifie jamais la météo avant le vol.", "is_correct": false, "explanation": "Le cours indique explicitement qu’il vérifie la météo lors de la préparation du vol."}, {"id": "C", "text": "Il n’a aucun rôle dans la rédaction de rapports après le vol.", "is_correct": false, "explanation": "Le document précise qu’il rédige des rapports détaillés après chaque vol."}, {"id": "D", "text": "Il peut ignorer les systèmes de l’avion pendant le vol.", "is_correct": false, "explanation": "Au contraire, il surveille les systèmes en vol pour garantir la sécurité."}, {"id": "E", "text": "Le pilote de ligne assure la sécurité de l’avion et des passagers avant, pendant et après le vol.", "is_correct": true, "explanation": "Le cours présente cette responsabilité globale comme centrale dans le métier de pilote."}], "coverage_label": "", "learning_objective": "Expliquer les responsabilités du pilote avant, pendant et après le vol.", "correction_summary": "La bonne réponse insiste sur la sécurité globale et la continuité des tâches du pilote. Le piège est de réduire son travail à l’action de piloter l’avion. Le cours montre qu’il prépare, surveille, communique et rend compte.", "course_clarification": "Le pilote de ligne a une responsabilité très large. Il prépare le vol, suit la météo, surveille les systèmes, communique avec le contrôle aérien et rédige un rapport après l’arrivée. Il doit aussi savoir réagir en urgence. Cela montre que le pilotage est à la fois technique, organisationnel et sécuritaire.", "source_refs": []}, {"question_id": "Q08", "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos de la formation du pilote de ligne.", "difficulty": "easy", "options": [{"id": "A", "text": "Le pilote de ligne peut exercer sans aucune qualification particulière.", "is_correct": false, "explanation": "Le cours insiste au contraire sur une formation spécialisée et une licence officielle."}, {"id": "B", "text": "La licence demandée est un diplôme de mécanique industrielle.", "is_correct": false, "explanation": "L’ATPL est une licence aéronautique, pas un diplôme de mécanique générale."}, {"id": "C", "text": "Le métier ne demande pas de connaissances réglementaires.", "is_correct": false, "explanation": "La sécurité aérienne impose justement de respecter des règles et des procédures très strictes."}, {"id": "D", "text": "Le métier nécessite une licence européenne ATPL et une formation spécialisée.", "is_correct": true, "explanation": "Le cours cite explicitement l’ATPL comme licence requise pour exercer ce métier."}, {"id": "E", "text": "Une simple formation courte d’une journée suffit pour devenir pilote de ligne.", "is_correct": false, "explanation": "Le cours parle d’une formation spécialisée, donc longue et exigeante, pas d’une initiation rapide."}], "coverage_label": "", "learning_objective": "Identifier le niveau de qualification requis pour devenir pilote de ligne.", "correction_summary": "La bonne réponse retient la licence européenne ATPL et la formation spécialisée. Le piège consiste à sous-estimer l’exigence du métier. Le cours montre qu’il s’agit d’une profession hautement réglementée et fortement encadrée.", "course_clarification": "ATPL signifie Airline Transport Pilot Licence, c’est la licence de pilote de transport aérien. Elle atteste d’un niveau de qualification élevé. Dans le cours, elle est associée à une formation spécialisée. Cela rappelle qu’un pilote de ligne exerce un métier très réglementé et très responsable.", "source_refs": []}, {"question_id": "Q09", "prompt": "Parmi les affirmations suivantes, une seule correspond au métier de mécanicien moteur / mécanicien aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "Le mécanicien se contente de peindre l’extérieur de l’avion.", "is_correct": false, "explanation": "Le cours parle de maintenance technique des moteurs, pas de simple peinture de surface."}, {"id": "B", "text": "Le mécanicien démonte, remonte et inspecte minutieusement les moteurs pour détecter les défaillances.", "is_correct": true, "explanation": "Le cours présente ces opérations comme le cœur du métier de mécanicien aéronautique."}, {"id": "C", "text": "Il n’a pas besoin d’observer les pièces avec précision.", "is_correct": false, "explanation": "L’observation fine est justement essentielle pour repérer les défauts, même minimes."}, {"id": "D", "text": "Il ne répare jamais ni ne remplace les pièces défectueuses.", "is_correct": false, "explanation": "Le cours précise qu’il répare ou remplace les pièces défectueuses pour garantir la sécurité."}, {"id": "E", "text": "Son travail n’a aucun lien avec la sécurité des passagers.", "is_correct": false, "explanation": "Le document insiste au contraire sur sa contribution directe à la sécurité des appareils et des passagers."}], "coverage_label": "", "learning_objective": "Identifier les tâches essentielles du mécanicien aéronautique.", "correction_summary": "La bonne réponse reprend les gestes techniques majeurs : démonter, inspecter, réparer. Le piège est de réduire ce métier à une activité secondaire alors qu’il est central pour la sécurité. Le cours insiste aussi sur la précision et la vigilance.", "course_clarification": "Le mécanicien moteur contrôle l’état des moteurs d’aéronefs. Il cherche les anomalies, change les pièces défectueuses et participe ainsi à la sécurité. Ce métier demande méthode, patience et sens de l’observation. Il évolue aussi avec les technologies, d’où la nécessité de se former régulièrement.", "source_refs": []}, {"question_id": "Q10", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur le mécanicien aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "Le métier ne demande aucune mise à jour des connaissances.", "is_correct": false, "explanation": "Le document dit exactement l’inverse : la veille technique est indispensable."}, {"id": "B", "text": "La patience et le sens de l’observation sont des qualités utiles pour ce métier.", "is_correct": false, "explanation": "Ce n’est pas faux en soi, mais ici c’est la seule proposition vraie que le cours met en avant; les autres affirmations sont fausses."}, {"id": "C", "text": "Le mécanicien doit effectuer une veille technique et se former régulièrement.", "is_correct": true, "explanation": "Le cours insiste sur l’évolution constante des technologies et sur la nécessité de se former en continu."}, {"id": "D", "text": "Le mécanicien peut négliger l’inspection des moteurs.", "is_correct": false, "explanation": "L’inspection minutieuse est au cœur du métier, car elle permet de détecter les défaillances."}, {"id": "E", "text": "Les moteurs ne font pas partie de son domaine d’intervention.", "is_correct": false, "explanation": "Le cours précise au contraire qu’il travaille directement sur les moteurs d’aéronefs."}], "coverage_label": "", "learning_objective": "Comprendre l’importance de la formation continue dans la maintenance aéronautique.", "correction_summary": "La bonne réponse porte sur la veille technique et la formation régulière. Le piège est de croire qu’un mécanicien peut rester à jour sans apprendre de nouvelles pratiques. Le cours montre que l’évolution technologique impose un apprentissage permanent.", "course_clarification": "Dans la maintenance aéronautique, les techniques et les matériels changent vite. Le mécanicien doit donc actualiser ses connaissances pour rester efficace et sûr. La veille technique consiste à suivre les nouveautés et les procédures. C’est une condition importante pour travailler dans un environnement aussi exigeant.", "source_refs": []}, {"question_id": "Q11", "prompt": "Parmi les affirmations suivantes, une seule décrit correctement le rôle de l’avitailleur.", "difficulty": "easy", "options": [{"id": "A", "text": "L’avitailleur pilote les avions pendant le vol.", "is_correct": false, "explanation": "Le pilotage ne fait pas partie de ce métier ; l’avitailleur travaille au sol."}, {"id": "B", "text": "L’avitailleur assure le ravitaillement des avions en kérosène.", "is_correct": true, "explanation": "Le cours présente le ravitaillement en carburant comme la mission principale de l’avitailleur."}, {"id": "C", "text": "Il remplit les réservoirs sans tenir compte des quantités demandées.", "is_correct": false, "explanation": "Le cours précise qu’il respecte les quantités déterminées selon le poids, la distance et la météo."}, {"id": "D", "text": "Il n’utilise aucun équipement de transfert.", "is_correct": false, "explanation": "Le document indique au contraire qu’il manipule les équipements de transfert du carburant."}, {"id": "E", "text": "Son travail n’a aucun lien avec le carburant.", "is_correct": false, "explanation": "Le carburant est précisément le cœur de sa mission."}], "coverage_label": "", "learning_objective": "Comprendre la mission principale de l’avitailleur.", "correction_summary": "La bonne réponse identifie le ravitaillement en kérosène. Le piège est de confondre l’avitailleur avec d’autres métiers de l’aéroport ou de négliger le carburant. Le cours montre que cette tâche est technique et réglementée.", "course_clarification": "L’avitailleur fournit le carburant nécessaire à l’avion avant le départ. Le kérosène doit être livré en quantité adaptée au vol prévu. Ce métier est important pour la sécurité et pour l’organisation du trafic. Il exige aussi de respecter des procédures précises.", "source_refs": []}, {"question_id": "Q12", "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos des tâches de l’avitailleur.", "difficulty": "easy", "options": [{"id": "A", "text": "L’avitailleur prélève un échantillon pour contrôler la qualité du carburant.", "is_correct": true, "explanation": "Le cours précise clairement ce contrôle de qualité après l’opération de ravitaillement."}, {"id": "B", "text": "L’avitailleur ignore la qualité du carburant dès lors que l’avion est au sol.", "is_correct": false, "explanation": "La qualité du carburant doit justement être vérifiée pour éviter tout risque technique."}, {"id": "C", "text": "Il ne consigne aucune donnée après l’opération.", "is_correct": false, "explanation": "Le cours indique qu’il enregistre les données et facture la prestation."}, {"id": "D", "text": "Il décide seul de la quantité de carburant sans tenir compte du pilote.", "is_correct": false, "explanation": "La quantité est déterminée par le pilote en fonction du vol, et l’avitailleur la respecte."}, {"id": "E", "text": "Il travaille forcément pour l’équipage de cabine.", "is_correct": false, "explanation": "Le cours précise qu’il travaille généralement pour une compagnie pétrolière, pas pour l’équipage de cabine."}], "coverage_label": "", "learning_objective": "Identifier les contrôles et la traçabilité dans le métier d’avitailleur.", "correction_summary": "La bonne réponse met en avant le prélèvement d’échantillon pour vérifier la qualité du carburant. Le piège est de penser que le ravitaillement est seulement une opération de remplissage. Le cours montre qu’il y a aussi un contrôle et une traçabilité administrative.", "course_clarification": "Le travail de l’avitailleur ne se limite pas à verser du carburant. Il vérifie la qualité du kérosène, consigne les données et peut facturer la prestation. Ces étapes permettent de sécuriser l’opération et d’en garder une trace. Cela montre que ce métier est à la fois technique et rigoureux.", "source_refs": []}, {"question_id": "Q13", "prompt": "Parmi les affirmations suivantes, une seule correspond au métier d’aiguilleur du ciel.", "difficulty": "easy", "options": [{"id": "A", "text": "L’aiguilleur du ciel prépare les repas servis à bord.", "is_correct": false, "explanation": "Cette tâche appartient à d’autres services ; elle ne relève pas du contrôle aérien."}, {"id": "B", "text": "Il n’a aucun rôle dans les décollages et les atterrissages.", "is_correct": false, "explanation": "Le cours précise qu’il coordonne justement ces phases du trafic aérien."}, {"id": "C", "text": "Il laisse les pilotes décider sans aucune instruction.", "is_correct": false, "explanation": "Au contraire, il donne des instructions en temps réel sur la trajectoire, la vitesse et l’altitude."}, {"id": "D", "text": "Son travail se déroule sans communication avec les avions.", "is_correct": false, "explanation": "La communication avec les pilotes est essentielle dans ce métier."}, {"id": "E", "text": "L’aiguilleur du ciel gère, surveille et contrôle la navigation aérienne.", "is_correct": true, "explanation": "Le cours décrit précisément ce métier comme un métier de gestion et de contrôle du trafic aérien."}], "coverage_label": "", "learning_objective": "Décrire la fonction de coordination du contrôleur de trafic aérien.", "correction_summary": "La bonne réponse souligne le contrôle et la surveillance de la navigation aérienne. Le piège est de croire que le contrôleur n’intervient qu’en arrière-plan. Le cours insiste au contraire sur son rôle direct dans la sécurité du trafic.", "course_clarification": "L’aiguilleur du ciel, aussi appelé contrôleur de trafic aérien, coordonne les mouvements des avions. Il travaille depuis une tour de contrôle ou un centre spécialisé. Il donne des instructions précises aux pilotes pour éviter les conflits de trajectoire. Son rôle est essentiel à la sécurité du trafic aérien.", "source_refs": []}, {"question_id": "Q14", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur l’aiguilleur du ciel.", "difficulty": "easy", "options": [{"id": "A", "text": "Le contrôleur peut travailler sans attention continue.", "is_correct": false, "explanation": "La concentration constante est au contraire nécessaire, car la moindre erreur peut avoir de graves conséquences."}, {"id": "B", "text": "Les décisions rapides sont inutiles dans ce métier.", "is_correct": false, "explanation": "Le cours souligne justement la capacité à prendre des décisions rapidement, même sous stress."}, {"id": "C", "text": "La communication avec les pilotes est secondaire.", "is_correct": false, "explanation": "Le document insiste sur une communication claire et en temps réel avec les pilotes."}, {"id": "D", "text": "Ce métier exige une excellente communication, une forte capacité de décision et une concentration constante.", "is_correct": true, "explanation": "Le cours liste précisément ces qualités comme indispensables pour gérer le trafic aérien."}, {"id": "E", "text": "Le métier ne demande aucune responsabilité.", "is_correct": false, "explanation": "Le contrôle aérien implique une forte responsabilité car il agit directement sur la sécurité."}], "coverage_label": "", "learning_objective": "Identifier les qualités attendues d’un contrôleur aérien.", "correction_summary": "La bonne réponse rassemble les trois qualités mises en avant : communication, décision rapide et concentration. Le piège est de sous-estimer la pression de ce métier. Le cours montre qu’il faut rester vigilant en permanence.", "course_clarification": "Le contrôleur aérien doit communiquer clairement avec les pilotes. Il doit aussi décider vite, car il gère des situations évolutives en temps réel. Enfin, il doit rester concentré en permanence pour garantir la sécurité du trafic. Ces qualités expliquent la difficulté et l’importance du métier.", "source_refs": []}, {"question_id": "Q15", "prompt": "Parmi les affirmations suivantes, une seule décrit correctement le chef d’escale.", "difficulty": "easy", "options": [{"id": "A", "text": "Le chef d’escale remplace les moteurs défectueux sur l’aire de maintenance.", "is_correct": false, "explanation": "Cette tâche relève plutôt du mécanicien, pas du chef d’escale."}, {"id": "B", "text": "Il ne coordonne ni les bagages ni le fret.", "is_correct": false, "explanation": "Le cours indique explicitement qu’il coordonne aussi les bagages et le fret."}, {"id": "C", "text": "Le chef d’escale supervise les opérations liées aux passagers et à l’avion pendant une escale.", "is_correct": true, "explanation": "Le cours présente cette supervision comme la mission centrale du chef d’escale."}, {"id": "D", "text": "Il n’a pas de rôle dans l’embarquement.", "is_correct": false, "explanation": "Le document précise qu’il veille au bon déroulement de l’embarquement."}, {"id": "E", "text": "Il ignore les équipages et ne travaille qu’avec les passagers.", "is_correct": false, "explanation": "Le cours mentionne au contraire la coordination des équipages, du ravitaillement et de l’ensemble des opérations."}], "coverage_label": "", "learning_objective": "Comprendre la mission de coordination du chef d’escale.", "correction_summary": "La bonne réponse montre que le chef d’escale supervise les opérations d’une escale. Le piège consiste à le réduire à l’accueil des passagers alors qu’il coordonne plusieurs acteurs. Le cours insiste sur sa fonction d’organisation globale.", "course_clarification": "Le chef d’escale est un coordinateur. Il gère des opérations très diverses autour de l’avion, des bagages et des passagers. Son rôle est de faire en sorte que l’escale se déroule correctement et dans le respect des procédures. Il doit donc avoir une bonne vision d’ensemble et un bon sens de l’organisation.", "source_refs": []}, {"question_id": "Q16", "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos du chef d’escale.", "difficulty": "easy", "options": [{"id": "A", "text": "Le chef d’escale n’a jamais à gérer d’imprévus.", "is_correct": false, "explanation": "Au contraire, la gestion des imprévus fait partie de ses missions."}, {"id": "B", "text": "Il travaille sans réglementation aérienne.", "is_correct": false, "explanation": "Le cours mentionne au contraire sa bonne maîtrise des réglementations aériennes."}, {"id": "C", "text": "La communication et la résolution de problèmes ne sont pas utiles dans ce métier.", "is_correct": false, "explanation": "Ces compétences sont explicitement citées dans le cours."}, {"id": "D", "text": "Le chef d’escale gère les retards, les annulations et certains incidents avec les passagers.", "is_correct": true, "explanation": "Le cours précise qu’il intervient rapidement en cas d’imprévus comme les retards ou les problèmes de passagers."}, {"id": "E", "text": "Il ne coordonne pas le ravitaillement ni les équipages.", "is_correct": false, "explanation": "Le document indique qu’il coordonne aussi le ravitaillement et l’organisation des équipages."}], "coverage_label": "", "learning_objective": "Identifier la gestion des imprévus et les compétences du chef d’escale.", "correction_summary": "La bonne réponse met en avant la gestion des retards, annulations et incidents. Le piège est d’imaginer un poste purement administratif, alors que le chef d’escale doit réagir vite. Le cours fait ressortir ses compétences en gestion et en communication.", "course_clarification": "Dans une escale, beaucoup d’aléas peuvent perturber le fonctionnement normal. Le chef d’escale doit alors trouver des solutions, informer les personnes concernées et faire respecter les procédures. Ce métier demande de la réactivité et une bonne capacité à résoudre les problèmes. Il est donc essentiel au bon fonctionnement d’un aéroport.", "source_refs": []}, {"question_id": "Q17", "prompt": "Parmi les affirmations suivantes, une seule correspond au technicien d’essai.", "difficulty": "easy", "options": [{"id": "A", "text": "Le technicien d’essai ne travaille pas sur les avions ou leurs systèmes.", "is_correct": false, "explanation": "Le document indique au contraire qu’il intervient sur les composants et systèmes d’aéronefs."}, {"id": "B", "text": "Il n’analyse jamais les données obtenues pendant les essais.", "is_correct": false, "explanation": "Le cours précise qu’il collecte et analyse les données issues des essais."}, {"id": "C", "text": "Le technicien d’essai réalise des tests sur les composants et systèmes d’avions pour vérifier leur conformité.", "is_correct": true, "explanation": "Le cours donne précisément cette mission : tester et vérifier la conformité des systèmes aéronautiques."}, {"id": "D", "text": "Son rôle se limite à l’accueil du public dans les aéroports.", "is_correct": false, "explanation": "L’accueil du public ne relève pas de ce métier technique de test et de contrôle."}, {"id": "E", "text": "Il ne participe pas à l’installation des équipements de test.", "is_correct": false, "explanation": "Le cours indique qu’il participe bien à l’installation des équipements de test."}], "coverage_label": "", "learning_objective": "Décrire le rôle du technicien d’essai dans le contrôle de conformité.", "correction_summary": "La bonne réponse résume le travail de test et de vérification de conformité. Le piège est de confondre ce métier avec un poste d’accueil ou de simple observation. Le cours montre qu’il intervient concrètement dans la chaîne de contrôle.", "course_clarification": "Le technicien d’essai vérifie que les éléments d’un avion fonctionnent correctement. Il prépare les essais, les réalise puis analyse les résultats. Son objectif est de s’assurer que les systèmes respectent les normes de sécurité et de qualité. Il participe donc directement à la fiabilité des aéronefs.", "source_refs": []}, {"question_id": "Q18", "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos des domaines du technicien d’essai.", "difficulty": "easy", "options": [{"id": "A", "text": "Il peut intervenir sur les moteurs, les systèmes électroniques, les structures, l’hydraulique et la navigation.", "is_correct": true, "explanation": "Le cours liste bien ces différents domaines d’intervention du technicien d’essai."}, {"id": "B", "text": "Il ne travaille que sur la peinture extérieure de l’avion.", "is_correct": false, "explanation": "Le métier concerne des systèmes techniques, pas seulement l’apparence extérieure."}, {"id": "C", "text": "Il n’a aucun lien avec la sécurité ni avec la qualité.", "is_correct": false, "explanation": "Le cours précise qu’il contribue à la sécurité et à la qualité par la vérification des normes."}, {"id": "D", "text": "Il ne s’occupe jamais de composants électroniques.", "is_correct": false, "explanation": "Les systèmes électroniques font au contraire partie des domaines cités."}, {"id": "E", "text": "Les essais sont inutiles dans l’aéronautique.", "is_correct": false, "explanation": "Le document montre au contraire que les essais sont indispensables pour contrôler la conformité."}], "coverage_label": "", "learning_objective": "Identifier l’étendue technique des interventions du technicien d’essai.", "correction_summary": "La bonne réponse montre la variété des systèmes testés. Le piège consiste à réduire ce métier à un seul composant alors qu’il couvre plusieurs domaines techniques. Le cours en fait un acteur important du contrôle aéronautique.", "course_clarification": "Le technicien d’essai intervient sur de nombreux éléments d’un aéronef. Cela peut concerner le moteur, l’électronique, la structure ou l’hydraulique. Cette diversité de domaines montre que le métier demande de larges compétences techniques. Il est donc essentiel dans la vérification finale de la conformité.", "source_refs": []}, {"question_id": "Q19", "prompt": "Parmi les affirmations suivantes, une seule correspond au rôle du salarié dans l’organisation.", "difficulty": "easy", "options": [{"id": "A", "text": "Le salarié est totalement indépendant de l’entreprise.", "is_correct": false, "explanation": "Le cours parle au contraire d’une relation d’interdépendance entre le salarié et l’entreprise."}, {"id": "B", "text": "Il n’a aucune fonction précise dans la hiérarchie.", "is_correct": false, "explanation": "Le document indique qu’il occupe une fonction précise dans la hiérarchie et les processus."}, {"id": "C", "text": "L’entreprise n’attend rien du salarié.", "is_correct": false, "explanation": "Le cours montre que l’employeur attend du salarié un travail utile aux objectifs communs."}, {"id": "D", "text": "Le salarié n’interagit jamais avec ses collègues.", "is_correct": false, "explanation": "Le cours précise qu’il interagit avec ses collègues et s’intègre dans l’organisation."}, {"id": "E", "text": "Le salarié contribue à l’atteinte des objectifs de l’entreprise.", "is_correct": true, "explanation": "Le cours explique que le salarié participe directement au fonctionnement et aux objectifs de l’organisation."}], "coverage_label": "", "learning_objective": "Situer le salarié dans l’organisation et comprendre sa contribution.", "correction_summary": "La bonne réponse montre que le salarié aide l’entreprise à atteindre ses objectifs. Le piège est de croire qu’il agit seul ou sans lien avec la structure de l’entreprise. Le cours insiste sur sa place précise dans l’organisation.", "course_clarification": "Dans une entreprise, chaque salarié occupe une fonction. Il travaille avec d’autres personnes, suit une hiérarchie et participe aux processus de production ou de service. Son activité contribue aux objectifs de l’organisation. Cela explique pourquoi la relation de travail est à la fois humaine et juridique.", "source_refs": []}, {"question_id": "Q20", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur la relation employeur-salarié.", "difficulty": "easy", "options": [{"id": "A", "text": "Le salarié n’a besoin de l’entreprise ni pour sa rémunération ni pour son développement.", "is_correct": false, "explanation": "Le cours précise au contraire qu’il dépend de l’entreprise pour être rémunéré et progresser."}, {"id": "B", "text": "L’entreprise et le salarié sont interdépendants.", "is_correct": true, "explanation": "Le cours présente clairement cette idée d’interdépendance entre les deux parties."}, {"id": "C", "text": "L’employeur n’attend aucune compétence du salarié.", "is_correct": false, "explanation": "Le salarié apporte ses compétences et son temps à l’entreprise, ce qui est essentiel dans le cours."}, {"id": "D", "text": "La relation de travail repose sur l’absence d’obligations.", "is_correct": false, "explanation": "Le cours insiste au contraire sur des obligations contractuelles réciproques."}, {"id": "E", "text": "Les intérêts du salarié et de l’entreprise sont toujours opposés.", "is_correct": false, "explanation": "Le document parle d’intérêts mutuels, pas d’opposition systématique."}], "coverage_label": "", "learning_objective": "Comprendre l’interdépendance entre employeur et salarié.", "correction_summary": "La bonne réponse retient l’idée d’interdépendance. Le piège est de voir la relation de travail comme un rapport à sens unique. Le cours explique au contraire que chacun apporte quelque chose à l’autre.", "course_clarification": "Le salarié apporte du temps et des compétences à l’entreprise. En échange, il reçoit une rémunération, un cadre de travail et des possibilités d’évolution. L’employeur, lui, a besoin de la contribution du salarié pour atteindre ses objectifs. Cette logique montre une relation de travail basée sur des intérêts réciproques.", "source_refs": []}, {"question_id": "Q21", "prompt": "Parmi les affirmations suivantes, une seule correspond aux droits du salarié étudiés dans le cours.", "difficulty": "easy", "options": [{"id": "A", "text": "Le salarié a droit à une rémunération, dans le respect du salaire minimum légal et des conventions collectives.", "is_correct": true, "explanation": "Le cours cite explicitement le salaire minimum et les conventions collectives comme garanties de rémunération."}, {"id": "B", "text": "Le salarié doit accepter n’importe quel salaire sans référence légale.", "is_correct": false, "explanation": "Le cours rappelle au contraire l’existence d’un salaire minimum légal et de conventions collectives."}, {"id": "C", "text": "Le droit à la rémunération est absent du cours.", "is_correct": false, "explanation": "C’est l’un des droits principaux présentés dans la partie sur les droits du salarié."}, {"id": "D", "text": "Le salaire ne peut jamais être encadré par des conventions collectives.", "is_correct": false, "explanation": "Le document mentionne bien les conventions collectives aéronautiques."}, {"id": "E", "text": "Le salarié n’a pas droit à être payé pour son travail.", "is_correct": false, "explanation": "Le droit à la rémunération est fondamental dans la relation de travail."}], "coverage_label": "", "learning_objective": "Identifier le droit à la rémunération et ses cadres.", "correction_summary": "La bonne réponse rappelle que le salaire est un droit encadré. Le piège est de négliger les protections légales et conventionnelles. Le cours insiste sur le salaire minimum et les conventions collectives aéronautiques.", "course_clarification": "Le salaire n’est pas fixé arbitrairement. Il doit respecter un cadre légal et peut aussi dépendre d’une convention collective. La convention collective rassemble des règles propres à un secteur ou à une branche professionnelle. Dans l’aéronautique, cela complète la protection du salarié.", "source_refs": []}, {"question_id": "Q22", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur les droits du salarié.", "difficulty": "easy", "options": [{"id": "A", "text": "Le salarié n’a aucun droit à la protection au travail.", "is_correct": false, "explanation": "Le document consacre justement une partie aux protections du salarié."}, {"id": "B", "text": "Le salarié a droit à la santé et à la sécurité au travail, notamment grâce aux EPI.", "is_correct": true, "explanation": "Le cours mentionne explicitement le droit à la sécurité et à la santé au travail ainsi que l’usage des EPI."}, {"id": "C", "text": "Le salarié ne peut pas être représenté collectivement.", "is_correct": false, "explanation": "Le cours cite au contraire les délégués du personnel et le CSE."}, {"id": "D", "text": "La formation professionnelle n’est pas un droit du salarié.", "is_correct": false, "explanation": "Le cours indique explicitement un droit à la formation et au développement professionnel."}, {"id": "E", "text": "Les EPI sont interdits dans l’aéronautique.", "is_correct": false, "explanation": "Les EPI sont au contraire présentés comme un moyen de protection essentiel."}], "coverage_label": "", "learning_objective": "Reconnaître les protections liées à la santé, à la sécurité et à la représentation collective.", "correction_summary": "La bonne réponse associe sécurité, santé et EPI. Le piège est d’oublier que les droits du salarié ne concernent pas seulement le salaire. Le cours montre que la protection au travail est un droit majeur.", "course_clarification": "Les EPI sont les équipements de protection individuelle, comme les gants, lunettes ou protections auditives. Ils servent à réduire les risques professionnels. Le salarié a aussi droit à la formation et à une représentation collective. Ces protections renforcent sa sécurité et sa place dans l’entreprise.", "source_refs": []}, {"question_id": "Q23", "prompt": "Parmi les affirmations suivantes, une seule correspond aux droits du salarié sur la personne.", "difficulty": "easy", "options": [{"id": "A", "text": "La discrimination est autorisée si elle facilite l’organisation.", "is_correct": false, "explanation": "Le cours refuse précisément la discrimination et protège l’égalité de traitement."}, {"id": "B", "text": "Le harcèlement fait partie des pratiques acceptées.", "is_correct": false, "explanation": "Le cours le mentionne comme un comportement interdit et contraire au respect de la personne."}, {"id": "C", "text": "Le salarié a droit au respect de sa vie privée et de sa personne, avec protection contre la discrimination et le harcèlement.", "is_correct": true, "explanation": "Le cours cite ce droit comme une protection essentielle du salarié dans l’entreprise."}, {"id": "D", "text": "La vie privée du salarié n’existe pas dans l’entreprise.", "is_correct": false, "explanation": "Le document affirme au contraire un droit au respect de la vie privée."}, {"id": "E", "text": "Le salarié doit accepter toutes les atteintes à sa dignité.", "is_correct": false, "explanation": "Le cours protège clairement la personne du salarié contre ces atteintes."}], "coverage_label": "", "learning_objective": "Identifier les droits liés au respect de la personne au travail.", "correction_summary": "La bonne réponse protège la vie privée, la dignité et l’égalité. Le piège serait de croire que l’entreprise peut tout imposer au salarié. Le cours rappelle au contraire des limites juridiques fortes.", "course_clarification": "Le salarié n’est pas seulement une force de travail : c’est aussi une personne protégée par le droit. L’entreprise doit respecter sa vie privée et sa dignité. La discrimination et le harcèlement sont interdits. Cette règle crée un cadre de travail plus juste et plus sûr.", "source_refs": []}, {"question_id": "Q24", "prompt": "Parmi les affirmations suivantes, une seule correspond aux devoirs du salarié.", "difficulty": "easy", "options": [{"id": "A", "text": "Le salarié peut arriver quand il veut sans prévenir.", "is_correct": false, "explanation": "Le cours insiste au contraire sur l’assiduité et la ponctualité."}, {"id": "B", "text": "Aucune mission ne peut lui être confiée.", "is_correct": false, "explanation": "Le salarié doit au contraire réaliser les missions qui lui sont confiées."}, {"id": "C", "text": "L’obligation de travail n’existe pas dans l’entreprise.", "is_correct": false, "explanation": "Le cours identifie explicitement cette obligation parmi les devoirs du salarié."}, {"id": "D", "text": "La présence régulière n’a aucune importance au travail.", "is_correct": false, "explanation": "L’assiduité et la ponctualité sont précisément mentionnées dans le cours."}, {"id": "E", "text": "Le salarié a une obligation de travail : assiduité, ponctualité et réalisation des missions.", "is_correct": true, "explanation": "Le cours présente ces trois éléments comme le cœur de l’obligation de travail."}], "coverage_label": "", "learning_objective": "Comprendre l’obligation de travail du salarié.", "correction_summary": "La bonne réponse rassemble les trois attentes principales : présence, ponctualité et réalisation des missions. Le piège est de confondre autonomie et absence de règles. Le cours montre qu’un contrat de travail implique des obligations précises.", "course_clarification": "Le salarié doit respecter ses horaires et remplir les tâches prévues. L’assiduité signifie être présent régulièrement, et la ponctualité signifie arriver à l’heure. Ces obligations garantissent le bon fonctionnement de l’équipe et de l’entreprise. Elles font partie du contrat de travail.", "source_refs": []}, {"question_id": "Q25", "prompt": "Parmi les affirmations suivantes, une seule est correcte à propos des autres devoirs du salarié.", "difficulty": "easy", "options": [{"id": "A", "text": "Le salarié peut divulguer librement les informations techniques de l’entreprise.", "is_correct": false, "explanation": "La confidentialité est au contraire exigée pour protéger les informations techniques et industrielles."}, {"id": "B", "text": "Le règlement intérieur peut être ignoré sans conséquence.", "is_correct": false, "explanation": "Le cours indique qu’il doit être respecté, tout comme la discipline et les procédures qualité."}, {"id": "C", "text": "Le salarié n’a pas d’obligation de sécurité.", "is_correct": false, "explanation": "Le document précise qu’il doit respecter les procédures de sécurité et signaler les risques."}, {"id": "D", "text": "Le salarié doit respecter la loyauté, la confidentialité, le règlement intérieur et les procédures de sécurité.", "is_correct": true, "explanation": "Le cours regroupe bien ces obligations parmi les devoirs du salarié, en particulier dans un secteur sensible comme l’aéronautique."}, {"id": "E", "text": "La loyauté n’a aucun rôle dans la relation de travail.", "is_correct": false, "explanation": "La loyauté est explicitement citée comme devoir du salarié."}], "coverage_label": "", "learning_objective": "Identifier les devoirs de loyauté, confidentialité et sécurité.", "correction_summary": "La bonne réponse rassemble plusieurs devoirs essentiels. Le piège est de penser que le salarié peut faire circuler librement des informations ou ignorer les règles internes. Le cours montre que la sécurité et la confidentialité sont centrales, surtout en aéronautique.", "course_clarification": "La loyauté signifie agir de façon honnête envers l’employeur. La confidentialité protège les informations techniques et industrielles, souvent sensibles. Le règlement intérieur fixe des règles de fonctionnement et de discipline. Respecter les procédures de sécurité est aussi obligatoire pour éviter les accidents.", "source_refs": []}, {"question_id": "Q26", "prompt": "Parmi les affirmations suivantes, une seule décrit correctement le contrat de travail.", "difficulty": "easy", "options": [{"id": "A", "text": "Le contrat de travail est seulement un accord oral sans valeur juridique.", "is_correct": false, "explanation": "Le cours insiste sur le caractère juridique du lien entre salarié et employeur."}, {"id": "B", "text": "Il n’a aucun lien avec les obligations des deux parties.", "is_correct": false, "explanation": "Le contrat encadre justement les obligations et les droits de chacun."}, {"id": "C", "text": "Il ne concerne que les métiers du pilotage.", "is_correct": false, "explanation": "Le contrat de travail existe dans tous les métiers salariés, pas seulement dans le pilotage."}, {"id": "D", "text": "Il est inutile dans la relation de travail.", "is_correct": false, "explanation": "Le cours en fait au contraire un élément structurant de la relation professionnelle."}, {"id": "E", "text": "Le contrat de travail est un lien juridique entre le salarié et l’employeur.", "is_correct": true, "explanation": "Le cours donne précisément cette définition du contrat de travail."}], "coverage_label": "", "learning_objective": "Définir le contrat de travail comme cadre juridique.", "correction_summary": "La bonne réponse retient l’idée de lien juridique. Le piège est de voir le contrat comme une simple formalité sans effet réel. Le cours montre qu’il structure la relation de travail et sécurise les deux parties.", "course_clarification": "Un contrat de travail organise la relation entre salarié et employeur. Il fixe un cadre juridique, donc des droits et des obligations. Il permet de préciser les conditions de travail et la rémunération. C’est un document essentiel pour sécuriser la relation professionnelle.", "source_refs": []}, {"question_id": "Q27", "prompt": "Parmi les affirmations suivantes, une seule est correcte à propos des formes de contrat de travail.", "difficulty": "easy", "options": [{"id": "A", "text": "Le CDI apporte une stabilité, tandis que le CDD sert souvent pour une mission ponctuelle ou un remplacement.", "is_correct": true, "explanation": "Le cours distingue bien le CDI, stable, du CDD, utilisé pour des besoins temporaires."}, {"id": "B", "text": "Le CDD est toujours plus stable que le CDI.", "is_correct": false, "explanation": "Le CDI est présenté comme la forme qui apporte le plus de stabilité et de protection."}, {"id": "C", "text": "Le CDI ne concerne jamais les salariés.", "is_correct": false, "explanation": "Le CDI est au contraire une forme de contrat de travail très courante."}, {"id": "D", "text": "Le CDD n’a aucune durée déterminée.", "is_correct": false, "explanation": "Par définition, le CDD est un contrat à durée déterminée."}, {"id": "E", "text": "Les contrats d’apprentissage et d’intérim ne sont pas cités dans le cours.", "is_correct": false, "explanation": "Le cours mentionne bien les contrats spécifiques comme l’apprentissage, l’alternance et l’intérim."}], "coverage_label": "", "learning_objective": "Distinguer CDI, CDD et contrats spécifiques.", "correction_summary": "La bonne réponse compare correctement CDI et CDD. Le piège est d’inverser stabilité et durée déterminée. Le cours ajoute aussi d’autres contrats spécifiques, ce qui élargit la vision de l’élève.", "course_clarification": "Le CDI est un contrat à durée indéterminée, donc sans date de fin prévue. Le CDD est utilisé pour une mission ponctuelle ou un remplacement. Le cours mentionne aussi l’apprentissage, l’alternance et l’intérim. Comprendre ces formes aide à lire un contrat et à anticiper une situation professionnelle.", "source_refs": []}, {"question_id": "Q28", "prompt": "Parmi les affirmations suivantes, une seule correspond au TP présenté dans le cours.", "difficulty": "easy", "options": [{"id": "A", "text": "Le TP remplace totalement le cours théorique sur l’aéronautique.", "is_correct": false, "explanation": "Le document présente le TP comme un support d’application, pas comme un remplacement complet du cours."}, {"id": "B", "text": "Le TP est uniquement un test de vitesse de calcul.", "is_correct": false, "explanation": "Le cours parle d’un travail pratique lié à l’individu dans l’organisation, pas d’un simple calcul."}, {"id": "C", "text": "Le TP sert à mobiliser les connaissances sur les métiers, les droits et les devoirs du salarié.", "is_correct": true, "explanation": "Le cours présente bien ce TP comme une activité de réinvestissement et d’application des notions vues."}, {"id": "D", "text": "Le TP ne concerne pas les droits et devoirs du salarié.", "is_correct": false, "explanation": "Le document indique au contraire que ces notions font partie du TP."}, {"id": "E", "text": "Le TP n’a aucun lien avec les métiers de l’aéronautique.", "is_correct": false, "explanation": "Le cours précise qu’il fait le lien entre découverte des métiers et droits/devoirs."}], "coverage_label": "", "learning_objective": "Comprendre le rôle pédagogique du TP dans la séquence.", "correction_summary": "La bonne réponse montre que le TP sert à réutiliser les notions apprises. Le piège est de le voir comme une page décorative ou un exercice sans lien avec le cours. Il s’agit au contraire d’une étape de mise en pratique.", "course_clarification": "Un TP, ou travail pratique, sert à appliquer ce qui a été étudié. Ici, il fait le lien entre les métiers de l’aéronautique et les règles du travail salarié. L’objectif est de vérifier que l’élève sait réinvestir ses connaissances. C’est donc une transition entre la théorie et la pratique.", "source_refs": []}, {"question_id": "Q29", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur la santé au travail.", "difficulty": "easy", "options": [{"id": "A", "text": "La santé au travail concerne uniquement les machines, pas les personnes.", "is_correct": false, "explanation": "Le cours parle d’abord des employés et de leur bien-être, pas seulement des équipements."}, {"id": "B", "text": "La santé au travail vise le bien-être physique et mental des employés.", "is_correct": true, "explanation": "Le cours définit clairement la santé au travail comme une protection du bien-être physique et mental."}, {"id": "C", "text": "Les risques professionnels ne sont pas pris en compte dans la santé au travail.", "is_correct": false, "explanation": "Le document explique au contraire qu’il faut identifier et prévenir ces risques."}, {"id": "D", "text": "Le bien-être mental n’a aucun lien avec la santé au travail.", "is_correct": false, "explanation": "Le cours inclut explicitement la dimension mentale dans la santé au travail."}, {"id": "E", "text": "La prévention est inutile dans un atelier aéronautique.", "is_correct": false, "explanation": "La prévention est au contraire présentée comme indispensable dans l’aéronautique."}], "coverage_label": "", "learning_objective": "Définir la santé au travail et son objectif.", "correction_summary": "La bonne réponse rappelle que la santé au travail protège le physique et le mental. Le piège est de la réduire à l’absence d’accident visible. Le cours montre qu’elle englobe aussi le bien-être et la prévention des risques.", "course_clarification": "La santé au travail ne concerne pas seulement les blessures. Elle vise aussi le bien-être global des salariés, y compris la santé mentale. Cela implique d’identifier les risques et de mettre en place des mesures de prévention. Dans l’aéronautique, cette démarche est essentielle car les activités peuvent être exigeantes.", "source_refs": []}, {"question_id": "Q30", "prompt": "Parmi les affirmations suivantes, une seule correspond aux mesures de prévention en santé au travail.", "difficulty": "easy", "options": [{"id": "A", "text": "La prévention consiste à supprimer toute règle de sécurité.", "is_correct": false, "explanation": "Le cours va dans le sens inverse : il faut renforcer les protections et les bonnes pratiques."}, {"id": "B", "text": "Les EPI sont inutiles face aux risques professionnels.", "is_correct": false, "explanation": "Les équipements de protection individuelle sont au contraire un moyen de prévention cité dans le cours."}, {"id": "C", "text": "La formation aux gestes et postures n’a aucun intérêt.", "is_correct": false, "explanation": "Le document l’indique comme une mesure de prévention importante, notamment pour la manutention."}, {"id": "D", "text": "Le port des EPI, la surveillance médicale, la formation et l’aménagement ergonomique font partie de la prévention.", "is_correct": true, "explanation": "Le cours liste précisément ces moyens pour prévenir les risques professionnels."}, {"id": "E", "text": "L’aménagement ergonomique du poste est absent du cours.", "is_correct": false, "explanation": "L’aménagement ergonomique est bien mentionné parmi les mesures de prévention."}], "coverage_label": "", "learning_objective": "Identifier les principales mesures de prévention en santé au travail.", "correction_summary": "La bonne réponse regroupe les outils de prévention cités par le cours. Le piège est de croire que la prévention se limite à un seul outil. En réalité, elle combine protection, formation et adaptation du travail.", "course_clarification": "Prévenir, c’est agir avant l’accident ou la maladie professionnelle. Les EPI protègent directement le salarié. La surveillance médicale et la formation complètent cette protection. L’ergonomie sert enfin à adapter le poste aux contraintes du travail.", "source_refs": []}, {"question_id": "Q31", "prompt": "Parmi les affirmations suivantes, une seule est correcte à propos des risques majeurs en sécurité aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "La sécurité ne concerne que les passagers et jamais le personnel.", "is_correct": false, "explanation": "Le cours indique que la sécurité concerne à la fois le personnel et les aéronefs."}, {"id": "B", "text": "Les accidents de maintenance ne représentent aucun danger.", "is_correct": false, "explanation": "Le document les classe justement parmi les risques majeurs."}, {"id": "C", "text": "Les incendies, les explosions, les chutes, les glissades et les accidents de maintenance font partie des risques majeurs.", "is_correct": true, "explanation": "Le cours cite bien ces dangers comme des risques majeurs à prévenir."}, {"id": "D", "text": "Les glissades ne font pas partie des risques professionnels.", "is_correct": false, "explanation": "Le cours les mentionne explicitement parmi les dangers à éviter."}, {"id": "E", "text": "Les incendies sont sans importance dans les ateliers aéronautiques.", "is_correct": false, "explanation": "Le cours les cite au contraire parmi les menaces les plus graves."}], "coverage_label": "", "learning_objective": "Identifier les dangers majeurs liés à la sécurité en entreprise aéronautique.", "correction_summary": "La bonne réponse recense les principaux dangers mentionnés dans le cours. Le piège est de banaliser des risques très graves dans un environnement aéronautique. Le cours met l’accent sur la prévention des incidents et accidents.", "course_clarification": "La sécurité aéronautique vise à éviter les accidents et les incidents. Les risques peuvent venir d’incendies, d’explosions, de chutes ou d’erreurs de maintenance. Ces dangers concernent les personnes mais aussi les avions. C’est pourquoi les procédures de sécurité sont très strictes dans ce secteur.", "source_refs": []}, {"question_id": "Q32", "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos du SMS et de la culture de sécurité.", "difficulty": "easy", "options": [{"id": "A", "text": "Le SMS (Safety Management System) est présenté comme un cadre obligatoire pour la gestion de la sécurité.", "is_correct": true, "explanation": "Le cours mentionne explicitement le SMS comme cadre obligatoire dans l’entreprise aéronautique."}, {"id": "B", "text": "Le SMS est une simple boîte mail interne sans lien avec la sécurité.", "is_correct": false, "explanation": "Le SMS désigne un système structuré de management de la sécurité, pas un outil de messagerie."}, {"id": "C", "text": "Les incidents doivent être cachés pour éviter les sanctions.", "is_correct": false, "explanation": "Le cours affirme au contraire que le signalement sans sanction favorise le retour d’expérience."}, {"id": "D", "text": "Les audits et inspections sont inutiles dans le SMS.", "is_correct": false, "explanation": "Le document les cite parmi les éléments essentiels de gestion de la sécurité."}, {"id": "E", "text": "La culture de sécurité interdit toute analyse des erreurs.", "is_correct": false, "explanation": "Le cours encourage justement le retour d’expérience et l’analyse des incidents."}], "coverage_label": "", "learning_objective": "Comprendre le rôle du SMS dans la gestion de la sécurité.", "correction_summary": "La bonne réponse identifie le SMS comme un cadre obligatoire de gestion de la sécurité. Le piège est de le confondre avec un outil informatique ou de croire qu’on doit cacher les incidents. Le cours insiste au contraire sur le signalement et l’analyse.", "course_clarification": "SMS signifie Safety Management System, c’est-à-dire système de management de la sécurité. Il organise la prévention, les audits, les inspections et les procédures d’urgence. Une culture de sécurité efficace encourage le signalement des incidents sans sanction. Cela permet d’apprendre des erreurs et d’améliorer la sécurité globale.", "source_refs": []}, {"question_id": "Q33", "prompt": "Parmi les affirmations suivantes, une seule correspond à la définition de la qualité dans le cours.", "difficulty": "easy", "options": [{"id": "A", "text": "La qualité consiste à produire sans contrôler les pièces.", "is_correct": false, "explanation": "Le document montre au contraire que le contrôle et la vérification sont essentiels."}, {"id": "B", "text": "Les attentes des clients ne comptent pas dans la qualité.", "is_correct": false, "explanation": "Le cours mentionne explicitement les attentes clients parmi les critères de qualité."}, {"id": "C", "text": "Les exigences réglementaires peuvent être ignorées.", "is_correct": false, "explanation": "Le cours insiste sur la conformité aux normes et aux règles réglementaires strictes."}, {"id": "D", "text": "La qualité n’a aucun rapport avec la conformité.", "is_correct": false, "explanation": "La conformité est justement au cœur de la définition donnée dans le cours."}, {"id": "E", "text": "La qualité vise la conformité aux normes, aux attentes clients et aux exigences réglementaires.", "is_correct": true, "explanation": "Le cours donne cette définition de la qualité dans l’entreprise aéronautique."}], "coverage_label": "", "learning_objective": "Définir la qualité en entreprise aéronautique.", "correction_summary": "La bonne réponse relie la qualité à la conformité. Le piège est de réduire la qualité à une impression générale ou à un simple confort. Le cours montre qu’elle dépend de normes, de clients et de règles réglementaires.", "course_clarification": "Dans l’aéronautique, la qualité ne se limite pas à faire « bien ». Elle signifie répondre à des normes précises, aux attentes des clients et aux exigences légales. Cela garantit la fiabilité des produits et des services. La qualité est donc un enjeu technique et réglementaire.", "source_refs": []}, {"question_id": "Q34", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur les normes de qualité aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "Le cours affirme qu’il n’existe aucune norme dans l’aéronautique.", "is_correct": false, "explanation": "Au contraire, il met en avant plusieurs normes et référentiels de qualité."}, {"id": "B", "text": "ISO 9001 n’a aucun lien avec la qualité.", "is_correct": false, "explanation": "Le document la cite précisément comme un système de management de la qualité général."}, {"id": "C", "text": "EASA Part 145 / Part 21 ne concerne ni la maintenance ni la production.", "is_correct": false, "explanation": "Le cours les présente justement comme des référentiels liés à la maintenance et à la production aéronautique."}, {"id": "D", "text": "Le cours cite EN 9100 / AS9100, ISO 9001 et EASA Part 145 / Part 21 parmi les référentiels de qualité.", "is_correct": true, "explanation": "Ces normes et référentiels sont bien mentionnés dans la partie qualité du cours."}, {"id": "E", "text": "EN 9100 / AS9100 sont des règles de pilotage.", "is_correct": false, "explanation": "Ce sont des référentiels de qualité, pas des règles de pilotage."}], "coverage_label": "", "learning_objective": "Reconnaître les principaux référentiels de qualité en aéronautique.", "correction_summary": "La bonne réponse cite les trois ensembles de normes présents dans le cours. Le piège est de croire qu’il s’agit de règles de vol ou qu’il n’existe pas de référentiels précis. Le cours montre que la qualité est fortement normée.", "course_clarification": "Les normes servent à organiser et à contrôler la qualité. EN 9100 / AS9100, ISO 9001 et EASA Part 145 / Part 21 sont des références importantes dans l’aéronautique. Elles encadrent la production, la maintenance et la gestion de la qualité. Les connaître aide à comprendre le cadre professionnel du secteur.", "source_refs": []}, {"question_id": "Q35", "prompt": "Parmi les affirmations suivantes, une seule correspond aux outils de qualité présentés dans le cours.", "difficulty": "easy", "options": [{"id": "A", "text": "La qualité repose uniquement sur l’intuition des opérateurs.", "is_correct": false, "explanation": "Le document insiste au contraire sur des outils et des procédures de contrôle."}, {"id": "B", "text": "Le contrôle en cours de production, les tests non destructifs et les vérifications dimensionnelles font partie des outils de qualité.", "is_correct": true, "explanation": "Le cours cite ces outils comme moyens concrets de contrôle qualité."}, {"id": "C", "text": "La traçabilité des pièces est inutile.", "is_correct": false, "explanation": "Le cours dit explicitement que la traçabilité est indispensable."}, {"id": "D", "text": "Les non-conformités ne doivent jamais être gérées.", "is_correct": false, "explanation": "Le document indique qu’elles doivent être identifiées, analysées et corrigées."}, {"id": "E", "text": "Les tests non destructifs n’existent pas dans l’aéronautique.", "is_correct": false, "explanation": "Ils sont au contraire mentionnés parmi les outils de qualité."}], "coverage_label": "", "learning_objective": "Identifier les outils de contrôle et de traçabilité de la qualité.", "correction_summary": "La bonne réponse rassemble les trois outils cités dans le cours. Le piège est de penser que la qualité repose seulement sur le jugement humain. Le cours montre qu’elle s’appuie sur des contrôles mesurables et traçables.", "course_clarification": "La qualité se vérifie avec des outils précis. Le contrôle en cours de production permet de détecter les défauts au fur et à mesure. Les tests non destructifs vérifient une pièce sans l’abîmer. La traçabilité, enfin, permet de suivre l’origine et le parcours d’une pièce dans le système de production.", "source_refs": []}, {"question_id": "Q36", "prompt": "Parmi les affirmations suivantes, une seule est correcte à propos de l’interaction entre santé, sécurité et qualité.", "difficulty": "easy", "options": [{"id": "A", "text": "La santé, la sécurité et la qualité sont trois domaines totalement séparés.", "is_correct": false, "explanation": "Le cours insiste au contraire sur leur interdépendance."}, {"id": "B", "text": "Un manque de formation ne peut pas provoquer d’erreur.", "is_correct": false, "explanation": "Le document indique au contraire qu’un manque de formation peut conduire à des erreurs de maintenance."}, {"id": "C", "text": "La fatigue est sans effet sur le travail aéronautique.", "is_correct": false, "explanation": "Le cours explique que la fatigue peut favoriser des erreurs qui touchent la sécurité et la qualité."}, {"id": "D", "text": "Le QMS n’a aucun rapport avec la qualité.", "is_correct": false, "explanation": "QMS signifie Quality Management System, donc système de management de la qualité."}, {"id": "E", "text": "Une culture intégrée associe SMS et QMS.", "is_correct": true, "explanation": "Le cours présente bien l’association du Safety Management System et du Quality Management System comme une logique intégrée."}], "coverage_label": "", "learning_objective": "Montrer l’interdépendance entre santé, sécurité et qualité.", "correction_summary": "La bonne réponse relie SMS et QMS dans une même logique de management. Le piège est de traiter ces domaines comme s’ils n’avaient aucun lien. Le cours montre qu’une erreur humaine peut les affecter tous les trois.", "course_clarification": "SMS concerne la sécurité, QMS la qualité. Dans le cours, les deux sont associés dans une culture intégrée. Une fatigue excessive ou un manque de formation peut provoquer des erreurs de maintenance. Cela montre que la performance globale dépend aussi du bien-être et de l’organisation du travail.", "source_refs": []}, {"question_id": "Q37", "prompt": "Parmi les affirmations suivantes, une seule correspond au cours sur l’impact des erreurs humaines.", "difficulty": "easy", "options": [{"id": "A", "text": "Une erreur humaine peut affecter à la fois la sécurité et la qualité.", "is_correct": true, "explanation": "Le cours indique que l’erreur humaine peut avoir un double impact sur la sécurité et sur la qualité."}, {"id": "B", "text": "Une erreur humaine ne peut toucher qu’un seul domaine à la fois.", "is_correct": false, "explanation": "Le document montre au contraire qu’elle peut affecter plusieurs dimensions simultanément."}, {"id": "C", "text": "La fatigue n’a aucun effet sur les opérations aéronautiques.", "is_correct": false, "explanation": "Le cours cite la fatigue comme un facteur pouvant provoquer des erreurs."}, {"id": "D", "text": "Le manque de formation n’est jamais un problème.", "is_correct": false, "explanation": "Le cours l’évoque explicitement comme une cause possible d’erreurs de maintenance."}, {"id": "E", "text": "La qualité est indépendante des conditions de travail.", "is_correct": false, "explanation": "Le document montre justement que santé, sécurité et qualité sont liées aux conditions de travail."}], "coverage_label": "", "learning_objective": "Comprendre les conséquences d’une erreur humaine dans la logique intégrée du cours.", "correction_summary": "La bonne réponse montre qu’une seule erreur peut avoir plusieurs conséquences. Le piège est de croire que qualité et sécurité vivent séparément. Le cours insiste au contraire sur leur lien étroit avec les conditions humaines et organisationnelles.", "course_clarification": "Dans l’aéronautique, une erreur humaine peut avoir des effets en chaîne. Une mauvaise opération peut toucher la qualité d’une pièce, mais aussi la sécurité des vols. C’est pourquoi la formation, la vigilance et l’organisation sont si importantes. Le cours relie cette idée à la performance globale de l’entreprise.", "source_refs": []}, {"question_id": "Q38", "prompt": "Parmi les affirmations suivantes, une seule correspond à la rémunération dans le secteur aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "La rémunération ne comprend jamais de prime.", "is_correct": false, "explanation": "Le document cite explicitement les primes parmi les composantes possibles."}, {"id": "B", "text": "La rémunération peut comprendre un salaire fixe, des primes et des avantages en nature.", "is_correct": true, "explanation": "Le cours présente bien ces trois composantes de la rémunération."}, {"id": "C", "text": "Les avantages en nature ne sont pas des éléments de rémunération.", "is_correct": false, "explanation": "Le cours les mentionne au contraire comme une composante de la rémunération."}, {"id": "D", "text": "Le salaire fixe est absent du cours.", "is_correct": false, "explanation": "Le salaire fixe fait partie des composantes citées dans la section rémunération."}, {"id": "E", "text": "La rémunération se résume toujours à un seul versement identique pour tous.", "is_correct": false, "explanation": "Le cours montre au contraire qu’elle peut comporter plusieurs éléments et varier selon le métier."}], "coverage_label": "", "learning_objective": "Identifier les composantes de la rémunération.", "correction_summary": "La bonne réponse distingue salaire fixe, primes et avantages en nature. Le piège est de réduire la rémunération au seul salaire de base. Le cours montre qu’elle peut prendre plusieurs formes.", "course_clarification": "La rémunération correspond à l’ensemble de ce que reçoit le salarié en échange de son travail. Elle peut inclure un salaire fixe, des primes et des avantages en nature. Ces éléments peuvent varier selon le poste et la politique de l’entreprise. Comprendre cette composition aide à lire une fiche de paie ou une offre d’emploi.", "source_refs": []}, {"question_id": "Q39", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur l’évolution salariale.", "difficulty": "easy", "options": [{"id": "A", "text": "Le salaire ne change jamais avec l’expérience.", "is_correct": false, "explanation": "Le document précise au contraire que la rémunération évolue avec la carrière."}, {"id": "B", "text": "Les responsabilités n’ont aucun effet sur le salaire.", "is_correct": false, "explanation": "Le cours indique qu’elles influencent l’évolution salariale."}, {"id": "C", "text": "L’évolution salariale varie selon le métier, l’expérience, les responsabilités et la spécialisation.", "is_correct": true, "explanation": "Le cours explique que la rémunération progresse selon plusieurs critères professionnels."}, {"id": "D", "text": "La spécialisation n’a aucune importance dans l’aéronautique.", "is_correct": false, "explanation": "Le secteur valorise justement la spécialisation et l’expertise."}, {"id": "E", "text": "Tous les métiers ont exactement le même niveau de rémunération.", "is_correct": false, "explanation": "Le tableau du cours compare au contraire plusieurs métiers et montre des écarts."}], "coverage_label": "", "learning_objective": "Lire la logique d’évolution de la rémunération.", "correction_summary": "La bonne réponse montre que le salaire dépend de plusieurs facteurs professionnels. Le piège est de croire à une progression automatique ou identique pour tous. Le cours insiste sur l’expérience, les responsabilités et le métier exercé.", "course_clarification": "Dans l’aéronautique, le salaire n’est pas figé. Il peut évoluer avec l’expérience, la spécialisation et le niveau de responsabilité. Certains métiers offrent aussi des parcours de progression plus rapides que d’autres. Cela aide l’élève à penser sa future carrière dans la durée.", "source_refs": []}, {"question_id": "Q40", "prompt": "Parmi les affirmations suivantes, une seule correspond aux parcours techniques dans l’aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "Les parcours techniques conduisent uniquement à des postes de direction générale.", "is_correct": false, "explanation": "Le cours distingue justement les parcours techniques des parcours ingénierie et management."}, {"id": "B", "text": "La spécialisation est absente des parcours techniques.", "is_correct": false, "explanation": "Le document l’associe au contraire directement aux parcours techniques."}, {"id": "C", "text": "Il n’existe aucune progression possible dans ces carrières.", "is_correct": false, "explanation": "Le cours parle de schémas d’évolution et de plusieurs niveaux de progression."}, {"id": "D", "text": "Les parcours techniques mènent à des fonctions de spécialisation et d’expertise.", "is_correct": true, "explanation": "Le cours présente clairement les parcours techniques comme des trajectoires vers la spécialisation et l’expertise."}, {"id": "E", "text": "Les parcours techniques ne concernent pas l’aéronautique.", "is_correct": false, "explanation": "Le cours les place au cœur des perspectives professionnelles du secteur."}], "coverage_label": "", "learning_objective": "Comprendre la logique des parcours techniques.", "correction_summary": "La bonne réponse associe parcours techniques, spécialisation et expertise. Le piège est de croire qu’il n’y a qu’une seule voie de carrière. Le cours montre au contraire plusieurs trajectoires possibles.", "course_clarification": "Un parcours technique permet de devenir plus expert dans un domaine précis. On peut progresser en compétences sans forcément aller vers le management. Cette voie est importante dans les métiers de maintenance ou de contrôle. Elle valorise l’expérience et la maîtrise technique.", "source_refs": []}, {"question_id": "Q41", "prompt": "Parmi les affirmations suivantes, une seule est correcte à propos des parcours en ingénierie et management.", "difficulty": "easy", "options": [{"id": "A", "text": "Les parcours en ingénierie et management ouvrent vers des responsabilités plus larges.", "is_correct": true, "explanation": "Le cours les décrit comme des voies conduisant à des responsabilités élargies."}, {"id": "B", "text": "Ces parcours empêchent toute prise de responsabilité.", "is_correct": false, "explanation": "Le document dit au contraire qu’ils ouvrent vers davantage de responsabilités."}, {"id": "C", "text": "Ils sont identiques aux parcours purement techniques.", "is_correct": false, "explanation": "Le cours distingue bien les parcours techniques des parcours ingénierie et management."}, {"id": "D", "text": "Ils ne concernent que les métiers au sol et excluent toute évolution.", "is_correct": false, "explanation": "Le document parle au contraire d’évolution et de progression professionnelle."}, {"id": "E", "text": "Ils sont sans lien avec la formation continue.", "is_correct": false, "explanation": "Le cours indique que la carrière dépend aussi de la formation continue."}], "coverage_label": "", "learning_objective": "Identifier la logique de progression des parcours ingénierie et management.", "correction_summary": "La bonne réponse montre que ces parcours élargissent les responsabilités. Le piège est de les confondre avec une simple spécialisation technique. Le cours les présente comme une autre voie d’évolution professionnelle.", "course_clarification": "Les parcours en ingénierie et management permettent d’accéder à des fonctions plus larges, souvent avec de l’encadrement ou de la coordination. Ils reposent sur l’expérience, la formation et les compétences acquises. Ils complètent les parcours techniques dans la logique de carrière du secteur. Ainsi, l’aéronautique offre plusieurs chemins d’évolution.", "source_refs": []}, {"question_id": "Q42", "prompt": "Parmi les affirmations suivantes, une seule correspond au tableau de rémunération du cours.", "difficulty": "easy", "options": [{"id": "A", "text": "Le tableau ne concerne qu’un seul métier.", "is_correct": false, "explanation": "Le cours présente au contraire plusieurs métiers pour comparer les niveaux de rémunération."}, {"id": "B", "text": "Le cours compare plusieurs métiers comme la maintenance, l’ingénierie, le pilotage et le contrôle aérien.", "is_correct": true, "explanation": "Le document mentionne bien ces postes dans sa comparaison des salaires."}, {"id": "C", "text": "La rémunération n’est jamais liée au métier exercé.", "is_correct": false, "explanation": "Le document montre précisément que le salaire dépend du poste occupé."}, {"id": "D", "text": "Le contrôle aérien n’apparaît pas dans la comparaison.", "is_correct": false, "explanation": "Le cours cite bien le contrôle aérien parmi les métiers étudiés."}, {"id": "E", "text": "La maintenance n’est pas un métier aéronautique.", "is_correct": false, "explanation": "Le cours la mentionne explicitement comme l’un des métiers du secteur."}], "coverage_label": "", "learning_objective": "Lire la logique comparative du tableau de rémunération.", "correction_summary": "La bonne réponse repère les métiers comparés dans le tableau. Le piège est de croire que les salaires sont présentés sans référence aux postes. Le cours met au contraire en évidence des écarts selon les métiers.", "course_clarification": "Le tableau de rémunération sert à comparer plusieurs métiers du secteur. Il montre que les salaires ne sont pas identiques entre maintenance, ingénierie, pilotage et contrôle aérien. Cela permet de relier rémunération, responsabilités et niveau de qualification. C’est une aide utile pour réfléchir à son projet professionnel.", "source_refs": []}, {"question_id": "Q43", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur la rémunération comparée des métiers.", "difficulty": "easy", "options": [{"id": "A", "text": "Tous les métiers aéronautiques sont payés exactement au même niveau.", "is_correct": false, "explanation": "Le tableau comparatif du cours montre au contraire des écarts entre les métiers."}, {"id": "B", "text": "L’expérience n’a aucune influence sur le salaire.", "is_correct": false, "explanation": "Le document explique que la rémunération peut évoluer après quelques années."}, {"id": "C", "text": "La rémunération varie selon le métier et l’expérience.", "is_correct": true, "explanation": "Le cours précise que les salaires dépendent du poste occupé et de l’expérience acquise."}, {"id": "D", "text": "Le secteur aéronautique ne présente aucune progression salariale.", "is_correct": false, "explanation": "Le cours indique explicitement qu’il peut y avoir une évolution salariale."}, {"id": "E", "text": "Les responsabilités professionnelles ne jouent jamais sur le salaire.", "is_correct": false, "explanation": "Le cours relie au contraire le niveau de rémunération aux responsabilités et à la carrière."}], "coverage_label": "", "learning_objective": "Comprendre le lien entre salaire, métier et expérience.", "correction_summary": "La bonne réponse met en relation le métier exercé et l’expérience. Le piège est de croire à une grille salariale uniforme. Le cours montre que la rémunération est évolutive et différenciée.", "course_clarification": "La rémunération varie d’un métier à l’autre et peut évoluer avec les années de pratique. Cela signifie qu’un débutant n’a pas forcément le même salaire qu’une personne expérimentée. Les responsabilités et la spécialisation peuvent aussi jouer. Le cours invite donc à lire le salaire comme un indicateur de carrière.", "source_refs": []}, {"question_id": "Q44", "prompt": "Parmi les affirmations suivantes, une seule est correcte à propos des grandes familles de métiers citées dans le cours.", "difficulty": "easy", "options": [{"id": "A", "text": "Le cours ne parle que de métiers administratifs.", "is_correct": false, "explanation": "Le document présente surtout des métiers techniques et opérationnels de l’aéronautique."}, {"id": "B", "text": "La maintenance n’appartient pas au secteur aéronautique.", "is_correct": false, "explanation": "Le cours la cite comme un domaine essentiel du secteur."}, {"id": "C", "text": "Le pilotage et le contrôle aérien sont des métiers identiques.", "is_correct": false, "explanation": "Le cours les distingue clairement : l’un concerne le vol, l’autre la surveillance et la coordination du trafic."}, {"id": "D", "text": "L’ingénierie n’est jamais associée à l’aéronautique.", "is_correct": false, "explanation": "Le document place l’ingénieur au cœur de la conception et des essais."}, {"id": "E", "text": "Le cours mentionne des métiers liés à la maintenance, à l’ingénierie, au pilotage et au contrôle aérien.", "is_correct": true, "explanation": "Ces quatre domaines sont bien présents dans les pages sur la rémunération et les métiers."}], "coverage_label": "", "learning_objective": "Repérer les familles de métiers mobilisées dans le chapitre sur la rémunération.", "correction_summary": "La bonne réponse reprend les familles de métiers effectivement citées. Le piège est de croire que le cours se limite à un seul domaine. En réalité, il relie plusieurs métiers à la comparaison salariale.", "course_clarification": "Le cours ne présente pas seulement un métier isolé. Il compare plusieurs familles professionnelles, ce qui permet de voir la diversité du secteur. Maintenance, ingénierie, pilotage et contrôle aérien ont des missions différentes, donc des logiques de rémunération différentes. Cette mise en perspective aide à mieux comprendre l’organisation du secteur.", "source_refs": []}, {"question_id": "Q45", "prompt": "Parmi les affirmations suivantes, une seule correspond au déroulé du travail du pilote de ligne décrit dans le cours.", "difficulty": "easy", "options": [{"id": "A", "text": "Le pilote n’intervient qu’après le vol.", "is_correct": false, "explanation": "Le document montre qu’il agit aussi avant et pendant le vol."}, {"id": "B", "text": "La météo n’entre jamais dans sa préparation.", "is_correct": false, "explanation": "Le cours précise qu’il vérifie la météo lors de la préparation."}, {"id": "C", "text": "Il n’a pas à communiquer avec l’équipage ni avec les contrôleurs.", "is_correct": false, "explanation": "Le document cite explicitement la communication avec les contrôleurs aériens et l’équipage."}, {"id": "D", "text": "Le pilote prépare le vol, surveille les systèmes en vol et rédige des rapports après l’atterrissage.", "is_correct": true, "explanation": "Le cours présente bien ces trois moments : avant, pendant et après le vol."}, {"id": "E", "text": "Les rapports après vol sont absents du cours.", "is_correct": false, "explanation": "Le cours indique qu’il rédige des rapports détaillés après chaque vol."}], "coverage_label": "", "learning_objective": "Relire la chronologie des responsabilités du pilote.", "correction_summary": "La bonne réponse suit le déroulé complet du métier : préparation, vol, compte rendu. Le piège est de croire que le pilote n’est actif qu’au moment où l’avion décolle. Le cours insiste sur l’ensemble de la mission.", "course_clarification": "Le métier de pilote ne se résume pas à tenir un manche. Il commence avant le départ avec la préparation du vol, continue pendant le vol avec la surveillance des systèmes, et se termine par le compte rendu. Cette chronologie montre une forte responsabilité. Elle rappelle aussi que la sécurité dépend de chaque étape.", "source_refs": []}, {"question_id": "Q46", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur le champ d’intervention de l’ingénieur aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "Il ne travaille jamais sur les systèmes de contrôle de vol.", "is_correct": false, "explanation": "Le contrôle de vol est au contraire explicitement mentionné."}, {"id": "B", "text": "L’aérodynamique n’a aucun rapport avec son métier.", "is_correct": false, "explanation": "Le cours indique au contraire que l’aérodynamique fait partie de ses domaines d’intervention."}, {"id": "C", "text": "Il intervient dans l’aérodynamique, la propulsion, les structures, l’avionique et le contrôle de vol.", "is_correct": true, "explanation": "Le cours cite précisément ces domaines techniques parmi ses champs d’action."}, {"id": "D", "text": "Les structures de l’aéronef ne le concernent pas.", "is_correct": false, "explanation": "Le document les cite dans la liste des domaines techniques abordés."}, {"id": "E", "text": "L’avionique est exclue du travail d’ingénierie aéronautique.", "is_correct": false, "explanation": "L’avionique figure bien parmi les sous-disciplines mentionnées."}], "coverage_label": "", "learning_objective": "Identifier les domaines techniques couverts par l’ingénieur.", "correction_summary": "La bonne réponse reprend les cinq grands domaines techniques cités dans le cours. Le piège est de réduire l’ingénierie à un seul aspect. Le document montre au contraire une intervention très large sur l’aéronef.", "course_clarification": "L’ingénieur aéronautique travaille sur plusieurs sous-disciplines techniques. L’aérodynamique étudie l’écoulement de l’air, la propulsion concerne le mouvement, les structures la résistance, l’avionique les systèmes électroniques, et le contrôle de vol la commande de l’appareil. Cette diversité illustre la complexité du métier. Elle explique aussi le besoin de collaboration avec d’autres spécialistes.", "source_refs": []}, {"question_id": "Q47", "prompt": "Parmi les affirmations suivantes, une seule correspond aux risques professionnels en santé au travail.", "difficulty": "easy", "options": [{"id": "A", "text": "Les risques physiques, chimiques, ergonomiques et psychosociaux sont tous cités dans le cours.", "is_correct": true, "explanation": "Le cours classe bien les risques professionnels en quatre grandes catégories."}, {"id": "B", "text": "Le cours ne parle que des risques physiques.", "is_correct": false, "explanation": "Il mentionne aussi les risques chimiques, ergonomiques et psychosociaux."}, {"id": "C", "text": "Les horaires décalés n’ont aucun lien avec le travail.", "is_correct": false, "explanation": "Le cours les cite dans les risques psychosociaux liés au métier."}, {"id": "D", "text": "Les produits de maintenance ne sont pas considérés comme un risque chimique.", "is_correct": false, "explanation": "Le document les donne comme exemple de risques chimiques."}, {"id": "E", "text": "La manutention des pièces lourdes n’est pas un risque ergonomique.", "is_correct": false, "explanation": "Le cours la cite explicitement comme risque ergonomique."}], "coverage_label": "", "learning_objective": "Repérer les grandes familles de risques professionnels.", "correction_summary": "La bonne réponse rassemble les quatre types de risques. Le piège est d’en oublier un ou de les confondre entre eux. Le cours propose une classification claire pour mieux prévenir les dangers.", "course_clarification": "Les risques professionnels peuvent être physiques, chimiques, ergonomiques ou psychosociaux. Ils touchent le corps, l’environnement de travail, l’organisation ou le stress lié au métier. Les reconnaître permet de choisir les bonnes mesures de prévention. Dans l’aéronautique, cette vigilance est particulièrement importante.", "source_refs": []}, {"question_id": "Q48", "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos de la sécurité en entreprise aéronautique.", "difficulty": "easy", "options": [{"id": "A", "text": "Il faut cacher les incidents pour améliorer l’image de l’entreprise.", "is_correct": false, "explanation": "Le cours défend au contraire le signalement et l’analyse des incidents."}, {"id": "B", "text": "Les audits et inspections n’ont aucune utilité.", "is_correct": false, "explanation": "Le document les cite comme des outils essentiels de sécurité."}, {"id": "C", "text": "La culture de sécurité n’a pas besoin de retour d’expérience.", "is_correct": false, "explanation": "Le cours montre que le retour d’expérience est au contraire au cœur de l’amélioration."}, {"id": "D", "text": "Le signalement des incidents sans sanction favorise le retour d’expérience.", "is_correct": true, "explanation": "Le cours présente ce principe comme un élément essentiel de la culture de sécurité."}, {"id": "E", "text": "Les procédures d’urgence sont absentes du cours.", "is_correct": false, "explanation": "Le document mentionne explicitement les procédures d’urgence, comme l’évacuation et les premiers secours."}], "coverage_label": "", "learning_objective": "Comprendre la logique de signalement et d’amélioration continue de la sécurité.", "correction_summary": "La bonne réponse met en valeur le signalement sans sanction. Le piège est de penser qu’on améliore la sécurité en cachant les problèmes. Le cours montre exactement l’inverse : le retour d’expérience est indispensable.", "course_clarification": "La sécurité s’améliore quand les incidents sont déclarés, analysés puis corrigés. Cela permet d’éviter qu’ils se reproduisent. Les audits, les inspections et les procédures d’urgence complètent cette logique. La culture de sécurité repose donc sur la transparence et l’apprentissage collectif.", "source_refs": []}, {"question_id": "Q49", "prompt": "Parmi les affirmations suivantes, une seule est conforme au cours sur l’amélioration continue de la qualité.", "difficulty": "easy", "options": [{"id": "A", "text": "L’amélioration continue consiste à ne plus rien contrôler.", "is_correct": false, "explanation": "Le document indique au contraire qu’elle s’appuie sur des audits et des contrôles."}, {"id": "B", "text": "Les retours d’expérience ne servent à rien.", "is_correct": false, "explanation": "Le cours les présente comme un outil important pour progresser."}, {"id": "C", "text": "La formation est inutile dans la qualité aéronautique.", "is_correct": false, "explanation": "Le document la cite explicitement parmi les moyens d’amélioration continue."}, {"id": "D", "text": "Les audits internes sont absents du cours.", "is_correct": false, "explanation": "Ils sont bien mentionnés comme un outil d’amélioration continue."}, {"id": "E", "text": "L’amélioration continue repose sur les audits internes, les retours d’expérience et la formation.", "is_correct": true, "explanation": "Le cours cite précisément ces trois leviers de progrès en qualité."}], "coverage_label": "", "learning_objective": "Identifier les moyens de progression continue de la qualité.", "correction_summary": "La bonne réponse associe audits, retours d’expérience et formation. Le piège est de croire que la qualité se limite à un contrôle ponctuel. Le cours montre qu’elle progresse dans la durée grâce à un suivi continu.", "course_clarification": "L’amélioration continue signifie chercher à faire mieux en permanence. Les audits permettent de vérifier le respect des règles. Les retours d’expérience aident à apprendre des erreurs. La formation, enfin, renforce les compétences nécessaires pour maintenir la qualité.", "source_refs": []}, {"question_id": "Q50", "prompt": "Parmi les affirmations suivantes, une seule correspond à l’idée de parcours professionnel dans le cours.", "difficulty": "easy", "options": [{"id": "A", "text": "La carrière ne change jamais après l’entrée dans l’entreprise.", "is_correct": false, "explanation": "Le document insiste au contraire sur plusieurs niveaux de progression."}, {"id": "B", "text": "La carrière dépend des compétences, de l’expérience et de la formation continue.", "is_correct": true, "explanation": "Le cours relie bien l’évolution professionnelle à ces trois facteurs."}, {"id": "C", "text": "La formation continue n’a aucun effet sur le parcours professionnel.", "is_correct": false, "explanation": "Le cours la présente comme un élément déterminant de l’évolution de carrière."}, {"id": "D", "text": "Les parcours professionnels sont figés et identiques pour tous.", "is_correct": false, "explanation": "Le cours présente plusieurs trajectoires possibles selon les métiers et les compétences."}, {"id": "E", "text": "L’expérience est sans importance dans l’aéronautique.", "is_correct": false, "explanation": "Le document montre au contraire que l’expérience influence l’évolution salariale et la progression de carrière."}], "coverage_label": "", "learning_objective": "Comprendre les facteurs d’évolution des parcours professionnels.", "correction_summary": "La bonne réponse relie carrière, compétences, expérience et formation continue. Le piège est de croire qu’un parcours professionnel est immobile. Le cours montre au contraire qu’il évolue avec l’apprentissage et l’ancienneté.", "course_clarification": "Un parcours professionnel décrit l’évolution d’une personne dans son métier ou dans son secteur. Dans l’aéronautique, il peut mener vers l’expertise technique ou vers l’encadrement. Les compétences, l’expérience et la formation sont donc déterminantes. Cela donne à l’élève une vision dynamique de sa future carrière.", "source_refs": []}], "subpart_id": null, "anchor_slide_id": null, "question_count_target": 50, "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique — Cartographie du cours"}</script>
+  <script>
+    (function () {
+      const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
+      const app = document.getElementById("quiz-app");
+      const viewerMode = app.dataset.viewerMode || "user";
+      const isMaster = viewerMode === "master";
+      const nextHref = app.dataset.nextHref || "";
+      const homeHref = app.dataset.homeHref || "index.html";
+      const storageKey = "static-quiz::" + viewerMode + "::" + quiz.quiz_id;
+      const finalQuizDrawCount = 25;
+
+      function normalizeCoverageLabel(question) {
+        if (question.coverage_label) {
+          return String(question.coverage_label).trim();
+        }
+        if (Array.isArray(question.source_refs)) {
+          const courseRef = question.source_refs.find((ref) => ref && ref.source_type === "course");
+          if (courseRef) {
+            return String(courseRef.label || courseRef.locator || question.question_id).trim();
+          }
+        }
+        return String(question.question_id || "");
+      }
+
+      function shuffle(items) {
+        const copy = items.slice();
+        for (let index = copy.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          const current = copy[index];
+          copy[index] = copy[swapIndex];
+          copy[swapIndex] = current;
+        }
+        return copy;
+      }
+
+      function selectBalancedQuestionIds() {
+        if (quiz.quiz_type !== "final") {
+          return [];
+        }
+        const sampleSize = Math.min(finalQuizDrawCount, quiz.questions.length);
+        const buckets = new Map();
+        quiz.questions.forEach((question) => {
+          const label = normalizeCoverageLabel(question);
+          if (!buckets.has(label)) {
+            buckets.set(label, []);
+          }
+          buckets.get(label).push(question.question_id);
+        });
+        const labels = shuffle(Array.from(buckets.keys()));
+        labels.forEach((label) => {
+          buckets.set(label, shuffle(buckets.get(label)));
+        });
+        const selected = [];
+        while (selected.length < sampleSize) {
+          let progressed = false;
+          labels.forEach((label) => {
+            if (selected.length >= sampleSize) {
+              return;
+            }
+            const bucket = buckets.get(label) || [];
+            if (!bucket.length) {
+              return;
+            }
+            selected.push(bucket.pop());
+            buckets.set(label, bucket);
+            progressed = true;
+          });
+          if (!progressed) {
+            break;
+          }
+        }
+        return selected;
+      }
+
+      function getQuestions() {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(state.questionIds) ? state.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        const sampled = ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+        return sampled.length ? sampled : quiz.questions.slice(0, Math.min(finalQuizDrawCount, quiz.questions.length));
+      }
+
+      function buildInitialState() {
+        return {
+          currentIndex: 0,
+          answers: {},
+          evaluated: {},
+          submitted: false,
+          finished: false,
+          questionIds: quiz.quiz_type === "final" ? selectBalancedQuestionIds() : [],
+        };
+      }
+
+      function loadState() {
+        try {
+          const raw = window.localStorage.getItem(storageKey);
+          if (!raw) {
+            return buildInitialState();
+          }
+          const candidate = Object.assign(buildInitialState(), JSON.parse(raw));
+          if (quiz.quiz_type === "final" && (!Array.isArray(candidate.questionIds) || !candidate.questionIds.length)) {
+            candidate.questionIds = selectBalancedQuestionIds();
+          }
+          const total = getQuestionsForState(candidate).length;
+          candidate.currentIndex = total ? Math.max(0, Math.min(candidate.currentIndex || 0, total - 1)) : 0;
+          return candidate;
+        } catch (error) {
+          return buildInitialState();
+        }
+      }
+
+      function getQuestionsForState(candidateState) {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(candidateState.questionIds) ? candidateState.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        return ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+      }
+
+      let state = loadState();
+
+      function syncFinalQuizHero() {
+        if (quiz.quiz_type !== "final" || quiz.questions.length <= finalQuizDrawCount) {
+          return;
+        }
+        const hero = document.querySelector(".quiz-hero");
+        if (!hero) {
+          return;
+        }
+        const description = hero.querySelector("p:not(.eyebrow)");
+        if (description) {
+          description.textContent =
+            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+        }
+        const metaPills = hero.querySelectorAll(".meta-pill");
+        if (metaPills.length) {
+          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+        }
+      }
+
+      function persist() {
+        window.localStorage.setItem(storageKey, JSON.stringify(state));
+      }
+
+      function restartQuiz() {
+        state = buildInitialState();
+        persist();
+        render();
+      }
+
+      function getQuestion(index) {
+        return getQuestions()[index];
+      }
+
+      function getCorrectIds(question) {
+        return question.options.filter((option) => option.is_correct).map((option) => option.id);
+      }
+
+      function isMulti(question) {
+        return getCorrectIds(question).length > 1;
+      }
+
+      function getSelected(questionId) {
+        return Array.isArray(state.answers[questionId]) ? state.answers[questionId] : [];
+      }
+
+      function setSelected(question, values) {
+        state.answers[question.question_id] = values;
+        persist();
+      }
+
+      function sameSelection(left, right) {
+        if (left.length !== right.length) {
+          return false;
+        }
+        const leftSorted = left.slice().sort();
+        const rightSorted = right.slice().sort();
+        return leftSorted.every((value, index) => value === rightSorted[index]);
+      }
+
+      function scoreQuestion(question) {
+        return sameSelection(getSelected(question.question_id), getCorrectIds(question));
+      }
+
+      function scoreQuiz() {
+        const questions = getQuestions();
+        let correct = 0;
+        questions.forEach((question) => {
+          if (scoreQuestion(question)) {
+            correct += 1;
+          }
+        });
+        return {
+          correct: correct,
+          total: questions.length,
+          percent: questions.length ? Math.round((correct / questions.length) * 100) : 0,
+        };
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function formatRichText(value) {
+        const escaped = escapeHtml(value || "");
+        return escaped
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\n/g, "<br>");
+      }
+
+      function queueMathJax() {
+        if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+          window.MathJax.typesetPromise([app]).catch(function () {});
+        }
+      }
+
+      function renderSources(question) {
+        if (!Array.isArray(question.source_refs) || !question.source_refs.length) {
+          return "";
+        }
+        const webRefs = question.source_refs.filter((ref) => ref.source_type === "web");
+        if (!webRefs.length) {
+          return "";
+        }
+        const items = webRefs
+          .map((ref) => {
+            if (ref.url) {
+              return "<a href='" + escapeHtml(ref.url) + "' target='_blank' rel='noreferrer'>" + escapeHtml(ref.label) + "</a>";
+            }
+            return "<span>" + escapeHtml(ref.label) + "</span>";
+          })
+          .join("");
+        return "<div class='review-meta'><span><strong>" + (isMaster ? "Références web" : "Sources web") + "</strong></span>" + items + "</div>";
+      }
+
+      function renderQuestionMeta(question) {
+        if (!isMaster) {
+          return renderSources(question);
+        }
+        return (
+          "<div class='review-meta'>" +
+            "<span><strong>Objectif</strong> " + formatRichText(question.learning_objective || "") + "</span>" +
+            renderSources(question) +
+          "</div>"
+        );
+      }
+
+      function renderTeachingPanel(question) {
+        const cards = [];
+        if (question.learning_objective) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>Objectif de la question</strong>" +
+              "<p>" + formatRichText(question.learning_objective) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.correction_summary) {
+          cards.push(
+            "<article class='teaching-card emphasis'>" +
+              "<strong class='teaching-card-title'>Pourquoi cette correction</strong>" +
+              "<p>" + formatRichText(question.correction_summary) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.course_clarification) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>A retenir</strong>" +
+              "<p>" + formatRichText(question.course_clarification) + "</p>" +
+            "</article>"
+          );
+        }
+        if (!cards.length) {
+          return "";
+        }
+        return "<section class='teaching-grid'>" + cards.join("") + "</section>";
+      }
+
+      function renderOption(question, option, mode) {
+        const selected = getSelected(question.question_id);
+        const selectedSet = new Set(selected);
+        const evaluated = state.evaluated[question.question_id];
+        const reveal = mode === "review" || !!evaluated || state.submitted;
+        let classes = "option-item";
+        if (reveal && option.is_correct) {
+          classes += " option-correct";
+        } else if (reveal && selectedSet.has(option.id) && !option.is_correct) {
+          classes += " option-wrong";
+        }
+        const inputType = isMulti(question) ? "checkbox" : "radio";
+        const checked = selectedSet.has(option.id) ? " checked" : "";
+        const disabled = reveal ? " disabled" : "";
+        const name = "q-" + question.question_id;
+        let explanation = "";
+        if (reveal && (isMaster || option.is_correct || selectedSet.has(option.id))) {
+          explanation = "<div class='option-explanation'>" + formatRichText(option.explanation || "") + "</div>";
+        }
+        return (
+          "<label class='" + classes + "'>" +
+            "<div class='option-head'>" +
+              "<input class='option-input' type='" + inputType + "' name='" + name + "' value='" + escapeHtml(option.id) + "'" + checked + disabled + ">" +
+              "<div>" +
+                "<div class='option-text'>" + formatRichText(option.text) + "</div>" +
+              "</div>" +
+            "</div>" +
+            explanation +
+          "</label>"
+        );
+      }
+
+      function renderQuestionPanel(question) {
+        const selected = getSelected(question.question_id);
+        const evaluated = state.evaluated[question.question_id];
+        const questions = getQuestions();
+        const indexLabel = "Question " + (state.currentIndex + 1) + "/" + questions.length;
+        let actions = "";
+
+        if (quiz.quiz_type === "subpart") {
+          if (!evaluated) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='validate-question'" + (selected.length ? "" : " disabled") + ">Valider ma réponse</button>" +
+              "</div>";
+          } else if (state.currentIndex < questions.length - 1) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='next-question'>Question suivante</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          } else {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='finish-subpart'>Terminer le QCM</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          }
+        } else {
+          actions =
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='prev-question'" + (state.currentIndex === 0 ? " disabled" : "") + ">Question précédente</button>" +
+              "<button type='button' class='quiz-button' data-action='next-question'" + (state.currentIndex >= questions.length - 1 ? " disabled" : "") + ">Question suivante</button>" +
+              "<button type='button' class='quiz-button primary' data-action='submit-final'>Soumettre le QCM final</button>" +
+            "</div>";
+        }
+
+        return (
+          "<section class='quiz-panel'>" +
+            "<p class='question-kicker'>" + indexLabel + "</p>" +
+            "<h2 class='question-title'>" + formatRichText(question.prompt) + "</h2>" +
+            renderQuestionMeta(question) +
+            "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "single")).join("") + "</div>" +
+            ((!!evaluated || state.submitted) ? renderTeachingPanel(question) : "") +
+            actions +
+          "</section>"
+        );
+      }
+
+      function renderSubpartSummary() {
+        const score = scoreQuiz();
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat du QCM</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>";
+      }
+
+      function renderFinalSummary() {
+        const score = scoreQuiz();
+        const questions = getQuestions();
+        const review = questions.map((question, index) => {
+          const correct = scoreQuestion(question);
+          return (
+            "<article class='review-card'>" +
+              "<p class='question-kicker'>Question " + (index + 1) + "/" + questions.length + "</p>" +
+              "<h3 class='question-title'>" + formatRichText(question.prompt) + "</h3>" +
+              renderQuestionMeta(question) +
+              "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "review")).join("") + "</div>" +
+              renderTeachingPanel(question) +
+              "<div class='review-meta'><span><strong>Résultat</strong> " + (correct ? "Correct" : "Incorrect") + "</span></div>" +
+            "</article>"
+          );
+        }).join("");
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat final</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer le QCM final</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>" +
+          "<section class='review-list'>" + review + "</section>";
+      }
+
+      function render() {
+        syncFinalQuizHero();
+        if (quiz.quiz_type === "subpart" && state.finished) {
+          renderSubpartSummary();
+          queueMathJax();
+          return;
+        }
+        if (quiz.quiz_type === "final" && state.submitted) {
+          renderFinalSummary();
+          queueMathJax();
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        app.innerHTML = renderQuestionPanel(question);
+        queueMathJax();
+      }
+
+      app.addEventListener("change", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLInputElement) || !target.name.startsWith("q-")) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        if (quiz.quiz_type === "subpart" && state.evaluated[question.question_id]) {
+          return;
+        }
+        const selected = Array.from(app.querySelectorAll("input[name='q-" + question.question_id + "']:checked"))
+          .map((input) => input.value);
+        setSelected(question, selected);
+        render();
+      });
+
+      app.addEventListener("click", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) {
+          return;
+        }
+        const action = target.dataset.action;
+        if (!action) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+
+        if (action === "restart") {
+          restartQuiz();
+          return;
+        }
+
+        if (action === "next-question" && state.currentIndex < getQuestions().length - 1) {
+          state.currentIndex += 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "prev-question" && state.currentIndex > 0) {
+          state.currentIndex -= 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "validate-question") {
+          const selected = getSelected(question.question_id);
+          if (!selected.length) {
+            return;
+          }
+          state.evaluated[question.question_id] = {
+            selected: selected,
+            correct: getCorrectIds(question),
+            is_correct: scoreQuestion(question),
+          };
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "finish-subpart") {
+          state.finished = true;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "submit-final") {
+          state.submitted = true;
+          persist();
+          render();
+        }
+      });
+
+      render();
+    }());
+  </script>
+</body>
+</html>

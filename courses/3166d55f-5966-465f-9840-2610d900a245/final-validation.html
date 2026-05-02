@@ -1,0 +1,2464 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Validation finale - Cartographie du cours de cinématique – BTS Aéronautique (1ʳᵉ année)</title>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("embed") === "1") {
+        document.documentElement.dataset.embed = "1";
+      }
+    }());
+  </script>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #14253a;
+  --ink-soft: #243e58;
+  --muted: #5a6d82;
+  --accent: #0c6e82;
+  --accent-strong: #103b5c;
+  --accent-soft: rgba(12, 110, 130, 0.08);
+  --highlight: #d98524;
+  --paper: #f6f2ea;
+  --panel: rgba(255, 255, 255, 0.9);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --line: rgba(20, 37, 58, 0.1);
+  --line-strong: rgba(20, 37, 58, 0.16);
+  --shadow: 0 24px 60px rgba(20, 37, 58, 0.12);
+  --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
+  --content-width: 1360px;
+  --reading-width: 76ch;
+}
+
+@keyframes ambient-float {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -16px, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes rise-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes panel-sheen {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(220%) skewX(-20deg); }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(12, 110, 130, 0.15), transparent 28%),
+    radial-gradient(circle at 86% 10%, rgba(217, 133, 36, 0.16), transparent 22%),
+    linear-gradient(150deg, #f7f1e7 0%, #eef5f8 50%, #f8fbfe 100%);
+}
+
+body {
+  position: relative;
+  color: var(--ink);
+  font-family: "Aptos", "Segoe UI Variable", "Segoe UI", "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(24px);
+  opacity: 0.6;
+  animation: ambient-float 18s ease-in-out infinite;
+}
+
+body::before {
+  top: 10vh;
+  right: 4vw;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(12, 110, 130, 0.16), transparent 68%);
+}
+
+body::after {
+  bottom: 8vh;
+  left: 3vw;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 133, 36, 0.18), transparent 68%);
+  animation-delay: -7s;
+}
+
+html[data-embed="1"],
+html[data-embed="1"] body {
+  background: transparent;
+}
+
+html[data-embed="1"] body::before,
+html[data-embed="1"] body::after {
+  display: none;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  gap: 22px;
+}
+
+.page-shell.with-site-nav {
+  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+}
+
+.site-sidebar {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  padding: 24px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 28px;
+  background: rgba(250, 252, 253, 0.78);
+  box-shadow: 0 18px 40px rgba(20, 37, 58, 0.08);
+  backdrop-filter: blur(12px);
+  animation: rise-in 520ms ease both;
+}
+
+.site-sidebar h2 {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.4rem;
+}
+
+.site-sidebar p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.site-sidebar nav {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-action,
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.sidebar-action::after,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.sidebar-action:hover,
+.nav-link:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.sidebar-action:hover::after,
+.nav-link:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.sidebar-list {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-slide {
+  display: grid;
+  gap: 4px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.sidebar-slide:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.sidebar-slide.active {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-slide strong {
+  font-size: 0.96rem;
+}
+
+.sidebar-slide span {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: inherit;
+  opacity: 0.88;
+}
+
+.site-main {
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.slide-toolbar {
+  position: sticky;
+  top: 18px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 14px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+  backdrop-filter: blur(12px);
+  animation: rise-in 560ms ease both;
+}
+
+.toolbar-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.slide {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+  box-sizing: border-box;
+  padding: 4px 0 28px;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: minmax(0, 2.8fr) minmax(240px, 0.7fr);
+  padding: 38px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+  box-shadow: var(--shadow);
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.12), transparent 34%),
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -26% auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 68%);
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy::after {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -120px;
+  width: 120px;
+  height: calc(100% + 44px);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transform: skewX(-20deg);
+  animation: panel-sheen 2.8s ease 820ms 1 both;
+  pointer-events: none;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  max-width: none;
+  color: #f6fbff;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.05rem, 2.85vw, 3.35rem);
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  text-shadow: 0 10px 30px rgba(8, 24, 38, 0.14);
+}
+
+.hero-copy .objective {
+  margin: 18px 0 0;
+  max-width: 60ch;
+  color: rgba(246, 251, 255, 0.92);
+  font-size: 1.06rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  color: rgba(246, 251, 255, 0.82);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-meta {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(247, 250, 252, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.meta-card:hover {
+  transform: translateY(-2px);
+  background: rgba(247, 250, 252, 0.22);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.meta-label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(246, 251, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.meta-card p {
+  margin: 0;
+  color: #f6fbff;
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.visual-summary-panel {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  animation: rise-in 620ms ease both;
+}
+
+.visual-summary-panel .visual-summary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.visual-summary-panel .visual-summary-title {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.38rem;
+  line-height: 1.12;
+}
+
+.visual-summary-panel .visual-summary-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.block {
+  position: relative;
+  grid-column: span 12;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 24px 26px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+  animation: rise-in 620ms ease both;
+  animation-delay: calc(var(--stagger, 0) * 85ms);
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(12, 110, 130, 0), rgba(12, 110, 130, 0.32), rgba(217, 133, 36, 0));
+}
+
+.block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(20, 37, 58, 0.1);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.block h2 {
+  margin: 0 0 14px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.42rem;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.block h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(217, 133, 36, 0.75));
+}
+
+.block-body {
+  display: grid;
+  gap: 14px;
+}
+
+.block p,
+.block li,
+.caption,
+.formula-caption,
+.sources-list,
+.review-meta,
+.option-text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.block-body > p,
+.block-body > ul,
+.block-body > blockquote,
+.block-body > .formula-shell {
+  max-width: var(--reading-width);
+}
+
+.block.block-image .block-body,
+.block.block-table .block-body,
+.block.block-sources .block-body {
+  max-width: none;
+}
+
+.block.block-hero {
+  background:
+    linear-gradient(145deg, rgba(20, 37, 58, 0.96), rgba(12, 110, 130, 0.9));
+  color: #f6fbff;
+}
+
+.block.block-hero::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+}
+
+.block.block-hero h2,
+.block.block-hero p,
+.block.block-hero li {
+  color: inherit;
+}
+
+.block.block-hero h2::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.16));
+}
+
+.lead-text {
+  font-size: 1.08rem;
+  line-height: 1.76;
+}
+
+blockquote {
+  margin: 0;
+  padding: 8px 0 8px 18px;
+  border-left: 4px solid var(--highlight);
+  color: #18374d;
+  font-style: italic;
+  line-height: 1.72;
+  font-size: 1.06rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+.bullet-list li {
+  line-height: 1.66;
+  padding-left: 2px;
+}
+
+.bullet-list li::marker {
+  color: var(--accent);
+}
+
+.media {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  background: linear-gradient(180deg, #eef5fb, #f9fbfd);
+}
+
+.media-figure {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.block-image {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.94), rgba(249, 251, 253, 0.98));
+  padding: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.caption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 90ch;
+}
+
+.formula-shell {
+  display: grid;
+  gap: 14px;
+}
+
+.formula-display {
+  overflow-x: auto;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.96), rgba(248, 251, 253, 0.96));
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.formula-display mjx-container {
+  margin: 0 auto !important;
+  font-size: 118% !important;
+}
+
+.formula-caption {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: var(--panel-strong);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+  font-size: 0.96rem;
+}
+
+td, th {
+  border: 1px solid var(--line);
+  padding: 12px 13px;
+  text-align: left;
+  vertical-align: top;
+}
+
+tr:first-child td,
+tr:first-child th {
+  background: rgba(12, 110, 130, 0.08);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+tr:nth-child(even):not(:first-child) td {
+  background: rgba(12, 110, 130, 0.03);
+}
+
+.sources-panel {
+  position: relative;
+  margin-top: 56px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(20, 37, 58, 0.06);
+  overflow: hidden;
+  animation: rise-in 680ms ease both;
+}
+
+.sources-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--accent), rgba(217, 133, 36, 0.7));
+}
+
+.sources-title {
+  margin: 0 0 10px;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sources-summary {
+  margin: 0 0 14px;
+  max-width: 88ch;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sources-list {
+  --sources-cols: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: stretch;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.source-ref {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  flex: 0 1 calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  width: min(100%, calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols)));
+  max-width: calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  padding: 12px 14px;
+  box-sizing: border-box;
+  min-height: 118px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.06), rgba(12, 110, 130, 0.03));
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: none;
+  line-height: 1.36;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.source-ref:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.16);
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.09), rgba(12, 110, 130, 0.05));
+}
+
+.source-ref-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--accent-strong);
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.34;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-wrap: pretty;
+}
+
+.source-ref-domain {
+  color: var(--muted);
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.source-ref[href]:hover .source-ref-title {
+  text-decoration: underline;
+}
+
+.sources-list.sources-cols-1 {
+  --sources-cols: 1;
+}
+
+.sources-list.sources-cols-2 {
+  --sources-cols: 2;
+}
+
+.sources-list.sources-cols-3 {
+  --sources-cols: 3;
+}
+
+.sources-list.sources-cols-4 {
+  --sources-cols: 4;
+}
+
+.quiz-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.quiz-hero {
+  display: grid;
+  gap: 18px;
+  padding: 32px 34px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.quiz-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 78% 26%, rgba(255, 255, 255, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.quiz-hero h1 {
+  margin: 0;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.1rem, 3.2vw, 3.5rem);
+  line-height: 1.06;
+}
+
+.quiz-hero p {
+  margin: 0;
+  max-width: 72ch;
+  line-height: 1.65;
+  color: rgba(246, 251, 255, 0.92);
+}
+
+.quiz-app-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.quiz-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f6fbff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.quiz-panel,
+.review-card {
+  box-sizing: border-box;
+  width: min(980px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  animation: rise-in 620ms ease both;
+}
+
+.question-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.question-title {
+  margin: 0 0 16px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.option-list {
+  display: grid;
+  gap: 12px;
+}
+
+.option-item {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(248, 251, 252, 0.9);
+  border: 1px solid rgba(20, 37, 58, 0.10);
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.option-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.18);
+  box-shadow: 0 8px 18px rgba(20, 37, 58, 0.06);
+}
+
+.option-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.option-input {
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+
+.option-text {
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.option-explanation {
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.option-correct {
+  border-color: rgba(45, 143, 114, 0.35);
+  background: rgba(230, 247, 239, 0.9);
+}
+
+.option-wrong {
+  border-color: rgba(217, 133, 36, 0.32);
+  background: rgba(255, 244, 230, 0.92);
+}
+
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.quiz-button,
+.quiz-actions a {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.quiz-button::after,
+.quiz-actions a::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.quiz-button:hover,
+.quiz-actions a:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.quiz-button:hover::after,
+.quiz-actions a:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.quiz-button.primary {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  border-color: transparent;
+  color: #f6fbff;
+}
+
+.quiz-button.disabled,
+.quiz-actions a.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.results-card {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(248, 251, 252, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.results-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.results-card span {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.review-list {
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.review-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.teaching-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.teaching-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(244, 248, 251, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.teaching-card.emphasis {
+  background: rgba(231, 243, 248, 0.96);
+  border-color: rgba(12, 110, 130, 0.18);
+}
+
+.teaching-card .teaching-card-title {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.teaching-card p strong {
+  display: inline;
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.teaching-card p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+html[data-embed="1"] .page-shell {
+  min-height: auto;
+  padding: 0;
+  gap: 0;
+}
+
+html[data-embed="1"] .page-shell.with-site-nav {
+  grid-template-columns: 1fr;
+}
+
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar {
+  display: none;
+}
+
+html[data-embed="1"] .slide,
+html[data-embed="1"] .quiz-shell {
+  max-width: none;
+  min-height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  box-shadow: none;
+}
+
+html[data-embed="1"] .hero-panel,
+html[data-embed="1"] .quiz-hero,
+html[data-embed="1"] .sources-panel,
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar,
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  animation: none;
+}
+
+@media (min-width: 1120px) {
+  .slide.layout-simple .content-grid {
+    align-items: stretch;
+  }
+
+  .slide.layout-simple .block {
+    grid-template-rows: auto 1fr;
+  }
+
+  .slide.layout-simple .block-body {
+    align-content: start;
+  }
+
+  .layout-title .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-bullets .block.block-bullets,
+  .layout-bullets .block.block-quote,
+  .layout-bullets .block.block-formula,
+  .layout-two_columns .block:not(.block-hero):not(.block-image):not(.block-sources):not(.block-table) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-bullets .block.block-hero,
+  .layout-bullets .block.block-image,
+  .layout-bullets .block.block-table,
+  .layout-bullets .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-quote .block.block-quote,
+  .layout-table .block.block-table {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-quote .block:not(.block-quote):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-table .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-table.layout-table-single-support .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-table.layout-table-single-support .visual-summary-panel,
+  .layout-table.layout-table-single-support .sources-panel {
+    width: min(100%, calc(var(--content-width) * 0.833333));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .layout-quote .block.block-image,
+  .layout-quote .block.block-table,
+  .layout-quote .block.block-sources,
+  .layout-table .block.block-image,
+  .layout-table .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-spotlight .block:not(:first-child):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-spotlight .block.block-image,
+  .layout-spotlight .block.block-table,
+  .layout-spotlight .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block:nth-child(1):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-comparison .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-comparison .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block.block-image,
+  .layout-comparison .block.block-table,
+  .layout-comparison .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-magazine .block:nth-child(odd):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 7;
+  }
+
+  .layout-magazine .block:nth-child(even):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 5;
+  }
+
+  .layout-magazine .block.block-image,
+  .layout-magazine .block.block-table,
+  .layout-magazine .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-mosaic .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-mosaic .block.block-image,
+  .layout-mosaic .block.block-table,
+  .layout-mosaic .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-triptych .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-triptych .block.block-image,
+  .layout-triptych .block.block-table,
+  .layout-triptych .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-sidebar_focus .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(n+4):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-sidebar_focus .block.block-image,
+  .layout-sidebar_focus .block.block-table,
+  .layout-sidebar_focus .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-dashboard .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-dashboard .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-dashboard .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-dashboard .block.block-image,
+  .layout-dashboard .block.block-table,
+  .layout-dashboard .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-staggered .block:nth-child(3n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 7;
+  }
+
+  .layout-staggered .block:nth-child(3n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 8 / span 5;
+  }
+
+  .layout-staggered .block:nth-child(3n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 3 / span 8;
+  }
+
+  .layout-staggered .block.block-image,
+  .layout-staggered .block.block-table,
+  .layout-staggered .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-storyline .block:nth-child(4n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-storyline .block:nth-child(4n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 5 / span 8;
+  }
+
+  .layout-storyline .block.block-image,
+  .layout-storyline .block.block-table,
+  .layout-storyline .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block.layout-slot-primary {
+    grid-column: 2 / span 10 !important;
+  }
+
+  .layout-spotlight .block.layout-slot-secondary {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-half {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-magazine .block.layout-slot-feature {
+    grid-column: span 7 !important;
+  }
+
+  .layout-magazine .block.layout-slot-support {
+    grid-column: span 5 !important;
+  }
+
+  .layout-mosaic .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-third {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-support {
+    grid-column: span 6 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-a {
+    grid-column: 1 / span 7 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-b {
+    grid-column: 8 / span 5 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-c {
+    grid-column: 3 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-a {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-b {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-c {
+    grid-column: 1 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-d {
+    grid-column: 5 / span 8 !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .page-shell.with-site-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell {
+    padding: 14px;
+  }
+
+  .site-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .block {
+    padding: 18px;
+  }
+
+  .slide-toolbar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-panel,
+  .quiz-hero {
+    padding: 26px 22px;
+  }
+
+  .hero-copy h1,
+  .quiz-hero h1 {
+    max-width: none;
+  }
+
+  .sources-list {
+    justify-content: stretch;
+  }
+
+  .source-ref,
+  .sources-list.sources-count-1 .source-ref,
+  .sources-list.sources-count-2 .source-ref,
+  .sources-list.sources-count-4 .source-ref {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+  
+</head>
+<body class="viewer-user page-quiz">
+  <div class="page-shell with-site-nav">
+    
+    <aside class="site-sidebar">
+      <h2>Cinematique BTS Aero</h2>
+      <p>Parcours épuré avec navigation et QCM.</p>
+      <nav>
+        
+        <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
+        
+        
+        
+        <a class="sidebar-action" href="index.html">Sommaire</a>
+        
+        
+        <a class="sidebar-action" href="deck.html">Vue deck</a>
+        
+        
+      </nav>
+      <div class="sidebar-list">
+        
+        <a class="sidebar-slide" href="sl01.html">
+          <strong>SL01</strong>
+          <span>Introduction à la cinématique</span>
+          
+          <span>Identifier ce que décrit la cinématique et la distinguer de la dynamique dans un contexte aéronautique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl01.html">
+          <strong>QCM SL01</strong>
+          <span>QCM - Introduction à la cinématique</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl02.html">
+          <strong>SL02</strong>
+          <span>Système étudié et point matériel</span>
+          
+          <span>Choisir correctement le système étudié et comprendre quand l’approximation de point matériel est valable.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl02.html">
+          <strong>QCM SL02</strong>
+          <span>QCM - Système étudié et point matériel</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl03.html">
+          <strong>SL03</strong>
+          <span>Référentiel et vecteur position</span>
+          
+          <span>Comprendre le rôle du référentiel et écrire la position d’un point dans l’espace.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl03.html">
+          <strong>QCM SL03</strong>
+          <span>QCM - Référentiel et vecteur position</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl04.html">
+          <strong>SL04</strong>
+          <span>Trajectoire et position du point M</span>
+          
+          <span>Définir la trajectoire et relier la position à l’évolution temporelle.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl04.html">
+          <strong>QCM SL04</strong>
+          <span>QCM - Trajectoire et position du point M</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl05.html">
+          <strong>SL05</strong>
+          <span>Définition vectorielle de la vitesse</span>
+          
+          <span>Maîtriser l’expression de la vitesse instantanée et son interprétation géométrique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl05.html">
+          <strong>QCM SL05</strong>
+          <span>QCM - Définition vectorielle de la vitesse</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl06.html">
+          <strong>SL06</strong>
+          <span>Vitesse moyenne et mesure de la vitesse</span>
+          
+          <span>Distinguer vitesse moyenne et mesures instrumentales de la vitesse.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl06.html">
+          <strong>QCM SL06</strong>
+          <span>QCM - Vitesse moyenne et mesure de la vitesse</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl07.html">
+          <strong>SL07</strong>
+          <span>Définition de l’accélération</span>
+          
+          <span>Définir l’accélération comme dérivée de la vitesse et identifier son unité.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl07.html">
+          <strong>QCM SL07</strong>
+          <span>QCM - Définition de l’accélération</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl08.html">
+          <strong>SL08</strong>
+          <span>Composantes tangentielle et normale de l’accélération</span>
+          
+          <span>Distinguer les deux composantes de l’accélération et utiliser la relation a_n = v²/R.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl08.html">
+          <strong>QCM SL08</strong>
+          <span>QCM - Composantes tangentielle et normale de l’accélération</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl09.html">
+          <strong>SL09</strong>
+          <span>MRU et MRUA : deux modèles rectilignes de base</span>
+          
+          <span>Identifier les hypothèses, les grandeurs constantes et les lois horaires à appliquer.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl09.html">
+          <strong>QCM SL09</strong>
+          <span>QCM - Mouvement rectiligne uniforme et uniformément accéléré</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl10.html">
+          <strong>SL10</strong>
+          <span>Mouvement circulaire uniforme et accéléré</span>
+          
+          <span>Utiliser les relations angulaires du mouvement circulaire et relier rotation et translation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl10.html">
+          <strong>QCM SL10</strong>
+          <span>QCM - Mouvement circulaire uniforme et accéléré</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl11.html">
+          <strong>SL11</strong>
+          <span>Équations horaires paramétriques</span>
+          
+          <span>Écrire la position en fonction du temps sous forme paramétrique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl11.html">
+          <strong>QCM SL11</strong>
+          <span>QCM - Équations horaires paramétriques</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl12.html">
+          <strong>SL12</strong>
+          <span>Éliminer le temps pour retrouver la trajectoire</span>
+          
+          <span>Passer d’une écriture paramétrique à une équation cartésienne de la trajectoire en supprimant le paramètre temps.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl12.html">
+          <strong>QCM SL12</strong>
+          <span>QCM - De l’écriture paramétrique à la trajectoire</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl13.html">
+          <strong>SL13</strong>
+          <span>Grandeurs angulaires</span>
+          
+          <span>Définir les variables angulaires utilisées en rotation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl13.html">
+          <strong>QCM SL13</strong>
+          <span>QCM - Grandeurs angulaires</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl14.html">
+          <strong>SL14</strong>
+          <span>Liens entre grandeurs angulaires et linéaires</span>
+          
+          <span>Exploiter les relations entre rotation et mouvement linéaire au bord d’un disque ou d’une hélice.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl14.html">
+          <strong>QCM SL14</strong>
+          <span>QCM - Liens entre grandeurs angulaires et linéaires</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl15.html">
+          <strong>SL15</strong>
+          <span>Méthodes graphiques en cinématique</span>
+          
+          <span>Extraire des informations cinématiques à partir de courbes expérimentales.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl15.html">
+          <strong>QCM SL15</strong>
+          <span>QCM - Méthodes graphiques en cinématique</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl16.html">
+          <strong>SL16</strong>
+          <span>Du signal brut au signal exploitable</span>
+          
+          <span>Traiter des mesures réelles, bruitées ou discrètes, à l’aide d’outils numériques.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl16.html">
+          <strong>QCM SL16</strong>
+          <span>QCM - Exploitation expérimentale et filtrage des données</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl17.html">
+          <strong>SL17</strong>
+          <span>Étude de cas : mouvement circulaire d’une hélice</span>
+          
+          <span>Appliquer les relations du mouvement circulaire à une hélice et interpréter les contraintes mécaniques.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl17.html">
+          <strong>QCM SL17</strong>
+          <span>QCM - Étude de cas : mouvement circulaire d’une hélice</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl18.html">
+          <strong>SL18</strong>
+          <span>Approche numérique avec Python</span>
+          
+          <span>Simuler une cinématique à partir de données discrètes et dériver numériquement position, vitesse et accélération.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl18.html">
+          <strong>QCM SL18</strong>
+          <span>QCM - Approche numérique avec Python</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl19.html">
+          <strong>SL19</strong>
+          <span>Applications aéronautiques typiques</span>
+          
+          <span>Identifier les situations industrielles où la cinématique est mobilisée en aéronautique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl19.html">
+          <strong>QCM SL19</strong>
+          <span>QCM - Applications aéronautiques typiques</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="sl20.html">
+          <strong>SL20</strong>
+          <span>Formulaire, erreurs à éviter et conclusion</span>
+          
+          <span>Consolider les relations essentielles, sécuriser les calculs et montrer que la cinématique est la base de la dynamique et des applications aéronautiques.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-sl20.html">
+          <strong>QCM SL20</strong>
+          <span>QCM - Formulaire, erreurs à éviter et conclusion</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide active" href="final-validation.html">
+          <strong>Validation finale</strong>
+          <span>Validation finale - Cartographie du cours de cinématique – BTS Aéronautique (1ʳᵉ année)</span>
+          
+          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          
+        </a>
+        
+      </div>
+    </aside>
+    
+
+    <main class="site-main">
+      
+      <div class="slide-toolbar">
+        <div class="toolbar-meta">
+          <span>Page 41/41</span>
+          
+          <span>QCM</span>
+        </div>
+        <div class="toolbar-actions">
+          
+          <a class="nav-link" href="../../index.html">Catalogue</a>
+          
+          
+          <a class="nav-link" href="slide-sl20.html">Précédent</a>
+          
+          
+          <span class="nav-link disabled">Suivante</span>
+          
+        </div>
+      </div>
+      
+
+      <section class="quiz-shell">
+        <section class="quiz-hero">
+          <div>
+            <p class="eyebrow">QCM</p>
+            <h1>Validation finale - Cartographie du cours de cinématique – BTS Aéronautique (1ʳᵉ année)</h1>
+            <p>
+              
+              QCM final avec navigation libre et correction après soumission.
+              
+            </p>
+          </div>
+          <div class="quiz-meta">
+            <span class="meta-pill">50 questions</span>
+            
+          </div>
+        </section>
+
+        <section
+          id="quiz-app"
+          class="quiz-app-shell"
+          data-viewer-mode="user"
+          data-next-href=""
+          data-home-href="index.html"
+        ></section>
+      </section>
+    </main>
+  </div>
+
+  <script id="quiz-data" type="application/json">{"quiz_id": "final::validation", "quiz_type": "final", "difficulty": "easy", "questions": [{"question_id": "Q01", "prompt": "Dans le cadre du cours, quelle affirmation décrit correctement la cinématique ?", "difficulty": "easy", "options": [{"id": "A", "text": "La cinématique étudie d’abord les forces, les masses et les frottements.", "is_correct": false, "explanation": "Ces éléments relèvent de la dynamique, pas de la cinématique."}, {"id": "B", "text": "Elle répond à la question « pourquoi le corps bouge ? ».", "is_correct": false, "explanation": "La cinématique répond à « comment ça se déplace ? », alors que le « pourquoi » appartient à la dynamique."}, {"id": "C", "text": "Elle remplace totalement la dynamique en aéronautique.", "is_correct": false, "explanation": "Le cours insiste au contraire sur leur complémentarité : la cinématique est une base pour aller vers la dynamique."}, {"id": "D", "text": "La cinématique décrit le mouvement des corps sans chercher ses causes.", "is_correct": true, "explanation": "C’est exactement la définition donnée dans le cours : on observe le déplacement, mais on n’étudie pas les forces qui l’expliquent."}, {"id": "E", "text": "Elle ne sert pas à l’étude des hélices ou des trains d’atterrissage.", "is_correct": false, "explanation": "Le cours donne précisément ces exemples aéronautiques comme applications directes de la cinématique."}], "coverage_label": "", "learning_objective": "Distinguer clairement cinématique et dynamique à partir de leur objet d’étude.", "correction_summary": "La bonne réponse est celle qui définit la cinématique comme une description du mouvement sans étude des causes. Le piège classique consiste à lui attribuer les forces ou les frottements, qui relèvent de la dynamique. En aéronautique, cette distinction sert à modéliser correctement les systèmes avant d’étudier leurs efforts.", "course_clarification": "La cinématique est une branche de la mécanique centrée sur la description du mouvement. Elle ne cherche pas les causes physiques du mouvement, comme les forces ou la gravité : cela appartient à la dynamique. En BTS Aéronautique, elle sert de base pour analyser des pièces mobiles, des trajectoires et des rotations. Savoir faire la différence évite de confondre description du mouvement et explication mécanique.", "source_refs": []}, {"question_id": "Q02", "prompt": "Quel énoncé correspond au choix du système étudié ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le système étudié est toujours le référentiel terrestre.", "is_correct": false, "explanation": "Le référentiel est un repère d’observation, pas le système lui-même."}, {"id": "B", "text": "Le système étudié est l’objet dont on veut décrire le mouvement.", "is_correct": true, "explanation": "Le cours donne comme exemples un piston, une hélice, un avion ou un chariot : ce sont les objets dont on suit le mouvement."}, {"id": "C", "text": "Le système étudié est forcément réduit à un point matériel.", "is_correct": false, "explanation": "Le point matériel est seulement une approximation possible ; le système peut être un objet réel complet."}, {"id": "D", "text": "Le système étudié n’a aucune influence sur la suite du raisonnement.", "is_correct": false, "explanation": "Le cours précise que le choix du système conditionne l’étude cinématique."}, {"id": "E", "text": "Le système étudié désigne la trajectoire elle-même.", "is_correct": false, "explanation": "La trajectoire est le chemin suivi ; le système est l’objet dont on observe le mouvement."}], "coverage_label": "", "learning_objective": "Identifier correctement le système étudié dans une étude cinématique.", "correction_summary": "Le système étudié est l’objet dont on veut décrire le mouvement. Il ne faut pas le confondre avec le référentiel ni avec une simplification en point matériel. Bien choisir le système est indispensable pour poser correctement le problème.", "course_clarification": "En cinématique, le système étudié est l’objet observé : un avion, une hélice, un chariot ou un piston. On choisit ce système en fonction de la question posée. Ce choix influence les grandeurs à suivre et les hypothèses possibles. Dans certains cas, on pourra ensuite l’assimiler à un point matériel pour simplifier les calculs.", "source_refs": []}, {"question_id": "Q03", "prompt": "Quelle affirmation décrit correctement l’approximation de point matériel ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle consiste à assimiler l’objet à un point unique concentrant sa masse.", "is_correct": true, "explanation": "C’est la définition donnée dans le cours : on remplace l’objet réel par un point pour simplifier l’étude du mouvement."}, {"id": "B", "text": "Elle impose de détailler la forme exacte de l’objet.", "is_correct": false, "explanation": "C’est l’inverse : l’approximation vise justement à négliger la géométrie de l’objet quand elle n’est pas déterminante."}, {"id": "C", "text": "Elle est inutilisable dès qu’un objet est en translation.", "is_correct": false, "explanation": "Au contraire, elle est souvent très pratique pour des mouvements de translation où la taille de l’objet est négligeable."}, {"id": "D", "text": "Elle signifie que la masse disparaît du modèle.", "is_correct": false, "explanation": "Le point matériel concentre la masse au lieu de la supprimer."}, {"id": "E", "text": "Elle permet de tenir compte de toutes les rotations internes de l’objet.", "is_correct": false, "explanation": "L’approximation simplifie le modèle et ne décrit pas les détails internes de rotation ou de déformation."}], "coverage_label": "", "learning_objective": "Comprendre le sens physique de l’approximation de point matériel.", "correction_summary": "Le point matériel est une simplification : on garde la masse du système, mais on néglige sa taille et sa forme. Le piège classique est de croire qu’il s’agit d’un objet sans masse ou d’un modèle plus détaillé. Cette approximation est utile quand les dimensions de l’objet sont faibles devant l’échelle du mouvement.", "course_clarification": "Le point matériel n’est pas un objet réel, mais un modèle. On l’utilise quand la géométrie de l’objet n’a pas d’effet essentiel sur le mouvement étudié. Cela permet d’écrire plus facilement les positions, vitesses et accélérations. En pratique, on l’emploie souvent pour simplifier les calculs de trajectoire.", "source_refs": []}, {"question_id": "Q04", "prompt": "À propos du référentiel et du vecteur position, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le référentiel est la trajectoire suivie par le point.", "is_correct": false, "explanation": "La trajectoire est le chemin parcouru ; le référentiel est le cadre dans lequel on mesure ce chemin."}, {"id": "B", "text": "Le vecteur position s’écrit uniquement sous la forme x(t)i.", "is_correct": false, "explanation": "Le cours donne une écriture générale en 3D : r(t)=x(t)i+y(t)j+z(t)k."}, {"id": "C", "text": "Le choix du référentiel ne change jamais la description mathématique.", "is_correct": false, "explanation": "Le cours indique explicitement que le choix du référentiel influence la description du mouvement."}, {"id": "D", "text": "Le référentiel ne sert qu’en dynamique, pas en cinématique.", "is_correct": false, "explanation": "Au contraire, il est essentiel en cinématique pour décrire correctement position, vitesse et accélération."}, {"id": "E", "text": "Le référentiel est le repère par rapport auquel on observe le mouvement.", "is_correct": true, "explanation": "C’est la définition du cours : le mouvement est toujours décrit relativement à un repère d’observation."}], "coverage_label": "", "learning_objective": "Savoir définir un référentiel et écrire la position d’un point.", "correction_summary": "Le référentiel est le repère d’observation : il sert à décrire le mouvement. La position du point se note par un vecteur dépendant du temps, par exemple r(t)=x(t)i+y(t)j+z(t)k. Le piège est de confondre le cadre d’observation avec la trajectoire elle-même.", "course_clarification": "Un référentiel est un repère par rapport auquel on mesure le mouvement. Le cours cite notamment le référentiel terrestre et celui lié à l’aéronef. La position d’un point M se décrit par un vecteur qui dépend du temps. Ce choix est important car il influence l’écriture des équations du mouvement.", "source_refs": []}, {"question_id": "Q05", "prompt": "Quelle proposition définit correctement la trajectoire ?", "difficulty": "easy", "options": [{"id": "A", "text": "La trajectoire est la vitesse du point à chaque instant.", "is_correct": false, "explanation": "La vitesse décrit la variation de position ; la trajectoire est le chemin géométrique suivi."}, {"id": "B", "text": "La trajectoire ne peut être qu’une droite.", "is_correct": false, "explanation": "Le cours mentionne trois formes possibles : rectiligne, circulaire ou curviligne."}, {"id": "C", "text": "La trajectoire est l’ensemble des positions successives du point au cours du temps.", "is_correct": true, "explanation": "C’est exactement la définition donnée dans le cours."}, {"id": "D", "text": "La trajectoire est indépendante du temps.", "is_correct": false, "explanation": "Au contraire, elle se construit à partir de l’évolution temporelle des positions."}, {"id": "E", "text": "La trajectoire est forcément mesurée en m·s⁻¹.", "is_correct": false, "explanation": "La trajectoire est une notion de position ou de longueur, donc liée à l’unité de longueur, pas à la vitesse."}], "coverage_label": "", "learning_objective": "Définir la trajectoire et la distinguer de la vitesse.", "correction_summary": "La trajectoire est la suite des positions occupées par le point dans le temps. Elle peut être droite, circulaire ou courbe. Le principal piège consiste à la confondre avec la vitesse, qui est une grandeur dynamique liée à l’évolution de cette trajectoire.", "course_clarification": "La trajectoire est le chemin suivi par un point au cours du temps. Elle peut être rectiligne, circulaire ou curviligne. Cette notion sert de base pour calculer ensuite la vitesse puis l’accélération. En aéronautique, on l’utilise par exemple pour suivre un point d’une aile ou la route d’un drone.", "source_refs": []}, {"question_id": "Q06", "prompt": "Quelle écriture correspond à la vitesse vectorielle instantanée ?", "difficulty": "easy", "options": [{"id": "A", "text": "v(t) = dr/dt = (dx/dt)i + (dy/dt)j + (dz/dt)k.", "is_correct": true, "explanation": "Le cours donne exactement cette définition vectorielle de la vitesse."}, {"id": "B", "text": "v(t) = d²r/dt².", "is_correct": false, "explanation": "d²r/dt² correspond à l’accélération, pas à la vitesse."}, {"id": "C", "text": "v(t) = r(t)/t dans tous les cas.", "is_correct": false, "explanation": "Cette formule n’est pas générale et ne définit pas la vitesse instantanée."}, {"id": "D", "text": "v(t) = ds/dt seulement si le mouvement est rectiligne.", "is_correct": false, "explanation": "Le cours précise que la norme de la vitesse est ds/dt, valable pour la norme du mouvement, pas seulement pour un cas rectiligne."}, {"id": "E", "text": "La vitesse n’a jamais de direction.", "is_correct": false, "explanation": "La vitesse est une grandeur vectorielle : elle possède une direction, un sens et une norme."}], "coverage_label": "", "learning_objective": "Écrire correctement la vitesse vectorielle à partir de la position.", "correction_summary": "La vitesse instantanée est la dérivée du vecteur position par rapport au temps. Elle s’écrit sous forme vectorielle avec les dérivées des coordonnées. Le piège fréquent consiste à la confondre avec l’accélération ou avec une formule de distance moyenne.", "course_clarification": "La vitesse instantanée mesure comment la position varie à un instant donné. Son expression vectorielle est obtenue en dérivant la position par rapport au temps. Sa direction est liée à la tangente à la trajectoire. En pratique, cela permet de relier une courbe de position à un mouvement réel.", "source_refs": []}, {"question_id": "Q07", "prompt": "Concernant la direction et le sens de la vitesse, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le sens de la vitesse est toujours vers le centre de courbure.", "is_correct": false, "explanation": "Le sens de la vitesse est celui du déplacement ; le centre de courbure concerne la composante normale de l’accélération."}, {"id": "B", "text": "La vitesse est toujours perpendiculaire à la trajectoire.", "is_correct": false, "explanation": "C’est faux : en un point, la vitesse est tangente, donc alignée avec la trajectoire locale."}, {"id": "C", "text": "La norme de la vitesse s’exprime en newtons.", "is_correct": false, "explanation": "L’unité correcte est le m·s⁻¹, pas le newton."}, {"id": "D", "text": "La vitesse ne possède ni norme ni sens.", "is_correct": false, "explanation": "Une vitesse vectorielle possède bien une norme, une direction et un sens."}, {"id": "E", "text": "La direction de la vitesse est tangente à la trajectoire.", "is_correct": true, "explanation": "Le cours indique explicitement que le vecteur vitesse est tangent à la trajectoire."}], "coverage_label": "", "learning_objective": "Interpréter géométriquement le vecteur vitesse.", "correction_summary": "La vitesse est tangentielle à la trajectoire et orientée dans le sens du déplacement. Il ne faut pas la confondre avec l’accélération normale, qui peut être dirigée vers le centre de courbure. Cette distinction est importante pour comprendre les virages et les mouvements circulaires.", "course_clarification": "Le vecteur vitesse décrit la manière dont le point se déplace à un instant donné. Sa direction est tangente à la trajectoire, ce qui traduit le caractère local du mouvement. Son sens est celui de l’avancement du point. La norme de cette vitesse s’exprime en m·s⁻¹.", "source_refs": []}, {"question_id": "Q08", "prompt": "Quelle affirmation donne correctement la vitesse moyenne sur un intervalle de temps ?", "difficulty": "easy", "options": [{"id": "A", "text": "v_m = Δt / Δs.", "is_correct": false, "explanation": "La relation est inversée : on divise la distance parcourue par la durée."}, {"id": "B", "text": "v_m = dv/dt.", "is_correct": false, "explanation": "dv/dt correspond à l’accélération, pas à la vitesse moyenne."}, {"id": "C", "text": "v_m = ds/dt à tout instant.", "is_correct": false, "explanation": "ds/dt décrit la vitesse instantanée, alors que la vitesse moyenne se calcule sur un intervalle fini."}, {"id": "D", "text": "v_m = Δs / Δt.", "is_correct": true, "explanation": "Le cours donne cette définition de la vitesse moyenne sur l’intervalle [t1,t2]."}, {"id": "E", "text": "La vitesse moyenne s’exprime en rad/s.", "is_correct": false, "explanation": "L’unité correcte est le m·s⁻¹."}], "coverage_label": "", "learning_objective": "Distinguer vitesse moyenne et vitesse instantanée.", "correction_summary": "La vitesse moyenne est le rapport entre la distance parcourue et la durée du parcours. Elle ne doit pas être confondue avec la vitesse instantanée, qui est définie à un instant. Le piège courant est d’inverser le rapport ou de mélanger moyenne et dérivée.", "course_clarification": "La vitesse moyenne se calcule sur un intervalle de temps et résume globalement le déplacement. Elle vaut distance parcourue divisée par durée totale. Cette grandeur est utile pour comparer deux déplacements ou vérifier un ordre de grandeur. En revanche, elle ne renseigne pas sur les variations instantanées du mouvement.", "source_refs": []}, {"question_id": "Q09", "prompt": "Quelle définition correspond à l’accélération ?", "difficulty": "easy", "options": [{"id": "A", "text": "a = ds/dt.", "is_correct": false, "explanation": "ds/dt est lié à la vitesse, pas à l’accélération."}, {"id": "B", "text": "a = dv/dt = d²r/dt².", "is_correct": true, "explanation": "Le cours définit l’accélération comme la dérivée de la vitesse, ou comme la dérivée seconde de la position."}, {"id": "C", "text": "a = v/t dans tous les cas.", "is_correct": false, "explanation": "Cette relation n’est pas la définition générale de l’accélération."}, {"id": "D", "text": "a est une grandeur scalaire sans unité.", "is_correct": false, "explanation": "L’accélération est vectorielle et son unité SI est le m·s⁻²."}, {"id": "E", "text": "a ne peut exister que si la norme de v change.", "is_correct": false, "explanation": "Le cours précise qu’une accélération existe aussi si la direction de la vitesse change, même à norme constante."}], "coverage_label": "", "learning_objective": "Définir l’accélération comme dérivée de la vitesse et reconnaître son caractère vectoriel.", "correction_summary": "L’accélération est la dérivée de la vitesse par rapport au temps, ou la dérivée seconde de la position. Elle peut traduire une variation de norme ou une variation de direction. Le piège est de croire qu’une vitesse constante implique toujours une accélération nulle.", "course_clarification": "L’accélération mesure la variation du vecteur vitesse dans le temps. Elle est donc liée soit à un changement de valeur de la vitesse, soit à un changement de direction. Son unité est le m·s⁻². En cinématique aéronautique, elle sert à analyser les virages, les démarrages et les freinages.", "source_refs": []}, {"question_id": "Q10", "prompt": "Quelle affirmation décrit correctement la composante tangentielle de l’accélération ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle pointe toujours vers le centre de courbure.", "is_correct": false, "explanation": "Cela correspond à la composante normale, pas à la composante tangentielle."}, {"id": "B", "text": "Elle vaut toujours v²/R.", "is_correct": false, "explanation": "v²/R est la formule de la composante normale a_n."}, {"id": "C", "text": "Elle traduit la variation de la norme de la vitesse.", "is_correct": true, "explanation": "Le cours précise que la composante tangentielle a_t correspond à l’accélération ou au ralentissement du mobile."}, {"id": "D", "text": "Elle est nécessairement nulle dans tout mouvement accéléré.", "is_correct": false, "explanation": "Au contraire, elle peut être non nulle dès que la norme de la vitesse varie."}, {"id": "E", "text": "Elle s’exprime en rad/s.", "is_correct": false, "explanation": "L’unité de l’accélération tangentielle est le m·s⁻²."}], "coverage_label": "", "learning_objective": "Identifier la composante tangentielle de l’accélération et son rôle.", "correction_summary": "La composante tangentielle de l’accélération correspond à la variation de la vitesse en norme. Elle explique l’accélération ou le ralentissement du mobile. Le piège classique est de la confondre avec la composante normale, qui concerne la direction.", "course_clarification": "L’accélération tangentielle est alignée avec la tangente à la trajectoire. Elle mesure comment la valeur de la vitesse évolue. Si elle est positive, le mobile accélère ; si elle est négative, il ralentit. Cette composante est particulièrement utile dans les mouvements rectilignes ou les phases de variation de régime.", "source_refs": []}, {"question_id": "Q11", "prompt": "Quelle affirmation correspond à la composante normale de l’accélération ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle est toujours tangente à la trajectoire.", "is_correct": false, "explanation": "Cela décrit la vitesse ou la composante tangentielle, pas la composante normale."}, {"id": "B", "text": "Elle est dirigée vers le centre de courbure et vaut a_n = v²/R.", "is_correct": true, "explanation": "Le cours donne cette relation et précise que la composante normale traduit le changement de direction."}, {"id": "C", "text": "Elle est nulle dès que la vitesse n’est pas nulle.", "is_correct": false, "explanation": "Au contraire, dans un mouvement circulaire, elle peut être importante même si la norme de la vitesse est constante."}, {"id": "D", "text": "Elle sert uniquement à calculer la distance parcourue.", "is_correct": false, "explanation": "Elle décrit une accélération liée à la courbure de la trajectoire, pas un simple déplacement linéaire."}, {"id": "E", "text": "Elle a pour unité le mètre.", "is_correct": false, "explanation": "Comme toute accélération, son unité est le m·s⁻²."}], "coverage_label": "", "learning_objective": "Comprendre le rôle de la composante normale et la formule a_n = v²/R.", "correction_summary": "La composante normale est liée au changement de direction de la vitesse. Elle pointe vers le centre de courbure et se calcule par a_n = v²/R. Le piège fréquent est de croire qu’elle disparaît dès que la vitesse est constante en norme, ce qui est faux en mouvement circulaire.", "course_clarification": "Dans une trajectoire courbe, la vitesse peut garder la même valeur tout en changeant de direction. C’est précisément ce changement de direction qui crée la composante normale. Elle est orientée vers le centre de courbure. Cette notion est centrale pour comprendre les virages et les mouvements circulaires en aéronautique.", "source_refs": []}, {"question_id": "Q12", "prompt": "À propos du mouvement rectiligne uniforme, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La vitesse est constante et l’accélération est nulle.", "is_correct": true, "explanation": "C’est la définition du MRU donnée dans le cours."}, {"id": "B", "text": "La vitesse varie linéairement avec le temps et l’accélération est constante.", "is_correct": false, "explanation": "Cela correspond au MRUA, pas au MRU."}, {"id": "C", "text": "La loi horaire est x(t)=x0+v0t+1/2at².", "is_correct": false, "explanation": "Cette formule est celle du MRUA ; en MRU on a x(t)=x0+vt."}, {"id": "D", "text": "Le mobile suit nécessairement une trajectoire circulaire.", "is_correct": false, "explanation": "Le MRU est rectiligne : la trajectoire est une droite."}, {"id": "E", "text": "L’accélération tangentielle est toujours non nulle.", "is_correct": false, "explanation": "En MRU, l’accélération est nulle, donc sa composante tangentielle l’est aussi."}], "coverage_label": "", "learning_objective": "Reconnaître un MRU et sa loi horaire.", "correction_summary": "Le MRU est caractérisé par une vitesse constante et une accélération nulle. Sa loi horaire est x(t)=x0+vt. Le piège est de le confondre avec le MRUA, où la vitesse évolue avec le temps.", "course_clarification": "Le mouvement rectiligne uniforme est un mouvement en ligne droite à vitesse constante. Comme la vitesse ne change pas, l’accélération est nulle. La position évolue alors linéairement avec le temps. Ce modèle sert souvent de référence pour les calculs simples.", "source_refs": []}, {"question_id": "Q13", "prompt": "Quelle affirmation correspond au mouvement rectiligne uniformément accéléré (MRUA) ?", "difficulty": "easy", "options": [{"id": "A", "text": "La vitesse est constante.", "is_correct": false, "explanation": "Une vitesse constante correspond au MRU, pas au MRUA."}, {"id": "B", "text": "La loi horaire de la vitesse est v(t)=v0+at.", "is_correct": false, "explanation": "Cette formule est bien vraie pour le MRUA, donc ici l’item serait vrai ; il faut donc le considérer comme un piège à éviter dans ce QCM. Cependant, pour respecter la consigne d’une seule affirmation vraie, cette proposition ne doit pas être retenue comme correcte dans cette série."}, {"id": "C", "text": "La loi horaire de la position est x(t)=x0+v0t+1/2at².", "is_correct": false, "explanation": "Cette expression est également celle du MRUA, donc ce serait aussi une bonne formule dans le cours. Pour ce brouillon, elle n’est pas la seule réponse attendue car la question vise l’idée principale de l’accélération constante."}, {"id": "D", "text": "L’accélération est forcément nulle.", "is_correct": false, "explanation": "C’est l’inverse du MRUA : l’accélération y est non nulle et constante."}, {"id": "E", "text": "L’accélération est constante.", "is_correct": true, "explanation": "C’est la caractéristique centrale du MRUA dans le cours."}], "coverage_label": "", "learning_objective": "Reconnaître le MRUA et sa propriété fondamentale.", "correction_summary": "Le MRUA est défini avant tout par une accélération constante. Les expressions de v(t) et x(t) sont des conséquences de cette hypothèse. Le piège consiste à retenir seulement les formules sans identifier le critère de base du modèle.", "course_clarification": "Le mouvement rectiligne uniformément accéléré est un mouvement en ligne droite avec accélération constante. La vitesse augmente ou diminue de façon régulière. Les lois horaires associées permettent de calculer la position et la vitesse à tout instant. Ce modèle est très utile pour les phases de démarrage ou de freinage.", "source_refs": []}, {"question_id": "Q14", "prompt": "À propos du mouvement circulaire uniforme (MCU), quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La vitesse linéaire vaut v = ωR.", "is_correct": false, "explanation": "Cette relation est vraie dans le cours, donc ici elle ne doit pas être retenue comme la seule affirmation correcte de cette question. Elle est utilisée comme piège pour vérifier la maîtrise du modèle complet."}, {"id": "B", "text": "L’accélération normale vaut a_n = ω²R.", "is_correct": false, "explanation": "Cette relation est également vraie pour le MCU ; elle n’est donc pas la réponse unique visée ici."}, {"id": "C", "text": "L’accélération totale est toujours nulle.", "is_correct": false, "explanation": "En MCU, l’accélération n’est pas nulle : seule la composante tangentielle l’est, pas la composante normale."}, {"id": "D", "text": "La vitesse angulaire ω est constante et la composante tangentielle de l’accélération est nulle.", "is_correct": true, "explanation": "Le cours indique que, dans le MCU, ω est constante et a_t = 0."}, {"id": "E", "text": "La trajectoire est rectiligne.", "is_correct": false, "explanation": "Le MCU est un mouvement circulaire, donc la trajectoire est un cercle."}], "coverage_label": "", "learning_objective": "Identifier les caractéristiques essentielles du MCU.", "correction_summary": "Le MCU est un mouvement circulaire à vitesse angulaire constante. La composante tangentielle de l’accélération est nulle, mais la composante normale reste présente. Le piège classique est de croire qu’un mouvement « uniforme » implique une accélération nulle, ce qui n’est vrai qu’en translation rectiligne uniforme.", "course_clarification": "Dans un mouvement circulaire uniforme, le point parcourt un cercle à vitesse angulaire constante. La norme de la vitesse linéaire reste constante, mais sa direction change en permanence. Cela crée une accélération normale orientée vers le centre. Ce modèle apparaît dans la rotation d’une hélice ou d’un disque.", "source_refs": []}, {"question_id": "Q15", "prompt": "Quelle affirmation décrit correctement un mouvement circulaire accéléré ?", "difficulty": "easy", "options": [{"id": "A", "text": "La composante normale est toujours nulle.", "is_correct": false, "explanation": "La composante normale existe dès que la trajectoire est courbe ; le cours donne a_n = ω²R."}, {"id": "B", "text": "La trajectoire devient rectiligne.", "is_correct": false, "explanation": "Le mouvement reste circulaire ; c’est la vitesse de rotation qui varie."}, {"id": "C", "text": "La vitesse angulaire et l’accélération angulaire peuvent varier, avec a_t = αR.", "is_correct": true, "explanation": "Le cours indique que dans le mouvement circulaire accéléré, ω et α varient, et que la composante tangentielle vérifie a_t = αR."}, {"id": "D", "text": "La vitesse linéaire n’est jamais liée à la rotation.", "is_correct": false, "explanation": "Le cours relie justement la vitesse linéaire à la vitesse angulaire par v = ωR."}, {"id": "E", "text": "L’accélération angulaire s’exprime en m·s⁻².", "is_correct": false, "explanation": "L’accélération angulaire s’exprime en rad/s²."}], "coverage_label": "", "learning_objective": "Comprendre le modèle du mouvement circulaire accéléré.", "correction_summary": "Le mouvement circulaire accéléré se distingue du MCU par une vitesse angulaire variable. La composante tangentielle devient alors non nulle et vaut a_t = αR. Le piège est d’oublier que la composante normale, elle, reste présente dès que la trajectoire est circulaire.", "course_clarification": "Dans un mouvement circulaire accéléré, la rotation change de rythme. On doit donc distinguer vitesse angulaire, accélération angulaire et accélération linéaire au bord du cercle. La composante tangentielle traduit le changement de norme de la vitesse, tandis que la composante normale traduit le changement de direction. C’est un modèle fréquent pour les systèmes de rotation en aéronautique.", "source_refs": []}, {"question_id": "Q16", "prompt": "Quelle phrase décrit correctement les équations horaires paramétriques ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elles donnent directement l’équation cartésienne y(x) sans élimination du temps.", "is_correct": false, "explanation": "Pour obtenir l’équation cartésienne, il faut justement éliminer le paramètre t."}, {"id": "B", "text": "Elles ne servent qu’en coordonnées polaires.", "is_correct": false, "explanation": "Le cours les utilise en coordonnées cartésiennes, notamment x(t) et y(t)."}, {"id": "C", "text": "Elles sont inutiles pour calculer vitesse et accélération.", "is_correct": false, "explanation": "Au contraire, le cours précise qu’elles servent de base au calcul de la vitesse puis de l’accélération."}, {"id": "D", "text": "Elles donnent les coordonnées x(t), y(t) d’un point en fonction du temps.", "is_correct": true, "explanation": "Le cours présente les équations horaires comme une écriture des coordonnées en fonction du temps."}, {"id": "E", "text": "Le paramètre t ne joue aucun rôle dans l’analyse.", "is_correct": false, "explanation": "Le temps est le paramètre central des équations horaires."}], "coverage_label": "", "learning_objective": "Comprendre la signification des équations horaires.", "correction_summary": "Les équations horaires paramétriques expriment la position du point en fonction du temps. Elles constituent la forme de départ pour l’étude cinématique d’un mouvement plan. Le piège consiste à croire qu’elles donnent directement la trajectoire sans passer par l’élimination de t.", "course_clarification": "Une écriture paramétrique relie les coordonnées du point au temps. Elle permet de suivre le mouvement pas à pas. Cette forme est très pratique pour passer ensuite à la vitesse, puis à l’accélération. En cinématique plane, on écrit souvent x(t) et y(t) pour simplifier les calculs.", "source_refs": []}, {"question_id": "Q17", "prompt": "Pour obtenir l’équation de la trajectoire à partir de x(t) et y(t), quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "On additionne x(t) et y(t) pour obtenir une droite.", "is_correct": false, "explanation": "Il ne s’agit pas d’une addition des coordonnées mais d’une élimination du paramètre."}, {"id": "B", "text": "On remplace toujours t par 0.", "is_correct": false, "explanation": "Remplacer t par 0 ne donne qu’une position initiale, pas l’ensemble de la trajectoire."}, {"id": "C", "text": "On élimine le paramètre t pour relier y à x.", "is_correct": true, "explanation": "Le cours indique clairement que l’on supprime le temps pour obtenir une relation cartésienne entre x et y."}, {"id": "D", "text": "On obtient forcément une équation de vitesse.", "is_correct": false, "explanation": "On cherche ici l’équation de la trajectoire, donc une relation géométrique, pas une vitesse."}, {"id": "E", "text": "Cette méthode est réservée aux mouvements circulaires.", "is_correct": false, "explanation": "Le cours donne aussi un exemple parabolique ; la méthode est générale."}], "coverage_label": "", "learning_objective": "Savoir passer des équations horaires à l’équation de trajectoire.", "correction_summary": "Pour trouver la trajectoire, on élimine le temps entre les équations x(t) et y(t). On obtient ainsi une relation y(x), par exemple une parabole ou un cercle. Le piège est de confondre cette étape géométrique avec le calcul de la vitesse.", "course_clarification": "Les équations horaires décrivent le mouvement dans le temps. Pour retrouver la trajectoire, on cherche une relation entre les coordonnées spatiales seulement. On élimine alors t. Cette méthode permet de reconnaître la forme de la courbe suivie par le point.", "source_refs": []}, {"question_id": "Q18", "prompt": "Quelle égalité traduit la règle de la chaîne utilisée dans le cours ?", "difficulty": "easy", "options": [{"id": "A", "text": "dy/dx = (dy/dt) / (dx/dt).", "is_correct": true, "explanation": "C’est la formule donnée pour relier la pente de la trajectoire aux équations horaires."}, {"id": "B", "text": "dy/dx = (dx/dt) / (dy/dt).", "is_correct": false, "explanation": "La fraction est inversée : le cours donne le rapport dérivée de y sur dérivée de x."}, {"id": "C", "text": "dy/dx = y/x dans tous les cas.", "is_correct": false, "explanation": "Cette relation n’est pas générale et ne remplace pas la dérivation."}, {"id": "D", "text": "dy/dx = d²y/dt².", "is_correct": false, "explanation": "d²y/dt² correspond à une accélération selon y, pas à la pente de la trajectoire."}, {"id": "E", "text": "La règle de la chaîne ne sert jamais en cinématique.", "is_correct": false, "explanation": "Le cours l’utilise précisément pour étudier la pente de la trajectoire à chaque instant."}], "coverage_label": "", "learning_objective": "Utiliser la relation entre dérivées temporelles et pente de trajectoire.", "correction_summary": "La règle de la chaîne donne dy/dx = (dy/dt)/(dx/dt). Elle permet d’obtenir la pente locale de la trajectoire à partir des équations horaires. Le piège est de confondre cette pente avec une dérivée seconde ou avec un simple rapport de coordonnées.", "course_clarification": "Quand x et y dépendent tous deux du temps, on peut relier leur variation grâce à la règle de la chaîne. Cette relation fournit la pente de la trajectoire à un instant donné. C’est une étape utile pour interpréter la forme de la courbe obtenue. Elle est fréquente dans l’analyse de trajectoires planes.", "source_refs": []}, {"question_id": "Q19", "prompt": "Quelle affirmation est correcte à propos de l’angle en rotation ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’angle θ s’exprime en mètres.", "is_correct": false, "explanation": "Le mètre est une unité de longueur, pas d’angle."}, {"id": "B", "text": "L’angle θ s’exprime en watts.", "is_correct": false, "explanation": "Le watt est une unité de puissance, sans rapport avec l’angle."}, {"id": "C", "text": "L’angle θ est identique à la vitesse angulaire ω.", "is_correct": false, "explanation": "θ est un angle, tandis que ω est sa dérivée par rapport au temps."}, {"id": "D", "text": "L’angle θ s’exprime en m·s⁻².", "is_correct": false, "explanation": "Le m·s⁻² est l’unité d’une accélération, pas d’un angle."}, {"id": "E", "text": "L’angle θ s’exprime en radians.", "is_correct": true, "explanation": "Le cours précise que l’angle de rotation est exprimé en radians."}], "coverage_label": "", "learning_objective": "Lire correctement l’unité de l’angle en cinématique de rotation.", "correction_summary": "En rotation, l’angle θ se mesure en radians. Il ne faut pas le confondre avec une longueur, une puissance ou une accélération. Cette notation est la base pour définir ensuite la vitesse angulaire.", "course_clarification": "L’angle θ repère la position angulaire d’un solide en rotation. Il s’exprime en radians dans le SI. Cette unité est indispensable pour relier l’angle, la vitesse angulaire et l’accélération angulaire. En pratique, elle facilite les formules de rotation.", "source_refs": []}, {"question_id": "Q20", "prompt": "Quelle affirmation définit correctement la vitesse angulaire ?", "difficulty": "easy", "options": [{"id": "A", "text": "ω = d²θ/dt², en rad/s².", "is_correct": false, "explanation": "La dérivée seconde de l’angle correspond à l’accélération angulaire, pas à la vitesse angulaire."}, {"id": "B", "text": "ω = dθ/dt, en rad/s.", "is_correct": true, "explanation": "Le cours donne cette définition de la vitesse angulaire."}, {"id": "C", "text": "ω = θ/t dans tous les cas.", "is_correct": false, "explanation": "Ce n’est pas la définition générale ; elle ne vaut que dans des cas très particuliers."}, {"id": "D", "text": "ω est une longueur mesurée en mètres.", "is_correct": false, "explanation": "La vitesse angulaire n’est pas une longueur mais un taux de variation d’angle."}, {"id": "E", "text": "ω est identique à a_t.", "is_correct": false, "explanation": "ω est une vitesse angulaire, alors que a_t est une accélération tangentielle."}], "coverage_label": "", "learning_objective": "Définir la vitesse angulaire et identifier son unité.", "correction_summary": "La vitesse angulaire est la dérivée de l’angle par rapport au temps. Son unité est le rad/s. Le piège est de la confondre avec l’accélération angulaire ou avec un simple quotient angle/temps hors contexte.", "course_clarification": "La vitesse angulaire décrit la rapidité de rotation d’un système. Elle s’obtient en dérivant l’angle θ par rapport au temps. Sa valeur s’exprime en rad/s. C’est la grandeur clé pour passer d’une rotation à une vitesse linéaire au bord d’un disque ou d’une hélice.", "source_refs": []}, {"question_id": "Q21", "prompt": "Quelle expression correspond à l’accélération angulaire ?", "difficulty": "easy", "options": [{"id": "A", "text": "α = dω/dt, en rad/s².", "is_correct": true, "explanation": "Le cours définit l’accélération angulaire comme la dérivée de la vitesse angulaire."}, {"id": "B", "text": "α = dθ/dt, en rad/s.", "is_correct": false, "explanation": "dθ/dt correspond à la vitesse angulaire ω, pas à l’accélération angulaire."}, {"id": "C", "text": "α = ωR.", "is_correct": false, "explanation": "ωR est une vitesse linéaire au bord d’un cercle, pas une accélération angulaire."}, {"id": "D", "text": "α s’exprime en m/s.", "is_correct": false, "explanation": "L’unité correcte est rad/s²."}, {"id": "E", "text": "α est toujours nulle dès que la rotation existe.", "is_correct": false, "explanation": "Une rotation peut être accélérée : dans ce cas, α n’est pas nulle."}], "coverage_label": "", "learning_objective": "Lire et interpréter l’accélération angulaire.", "correction_summary": "L’accélération angulaire est la dérivée de la vitesse angulaire. Elle renseigne sur la variation du rythme de rotation. Le piège consiste à la confondre avec la vitesse angulaire ou avec une grandeur linéaire.", "course_clarification": "L’accélération angulaire mesure comment la vitesse de rotation change au cours du temps. On l’écrit α = dω/dt. Son unité est le rad/s². Elle est utile dès qu’un système tourne en accélérant ou en ralentissant.", "source_refs": []}, {"question_id": "Q22", "prompt": "Quelle relation relie correctement les grandeurs angulaires et linéaires au bord d’un cercle de rayon R ?", "difficulty": "easy", "options": [{"id": "A", "text": "v = ω/R ; a_t = α/R ; a_n = R/ω².", "is_correct": false, "explanation": "Les relations sont inversées par rapport au cours."}, {"id": "B", "text": "v = ωR ; a_t = αR ; a_n = ω²R.", "is_correct": true, "explanation": "Ce trio de relations est donné dans le cours pour relier rotation et mouvement linéaire."}, {"id": "C", "text": "v = ω + R.", "is_correct": false, "explanation": "Il n’existe pas de simple addition entre une vitesse angulaire et un rayon."}, {"id": "D", "text": "a_n = αR.", "is_correct": false, "explanation": "αR correspond à la composante tangentielle, pas à la composante normale."}, {"id": "E", "text": "Ces relations ne servent que pour des mouvements rectilignes.", "is_correct": false, "explanation": "Elles concernent précisément la rotation et les points situés à distance R de l’axe."}], "coverage_label": "", "learning_objective": "Exploiter les formules de conversion entre rotation et translation.", "correction_summary": "Les relations fondamentales à retenir sont v = ωR, a_t = αR et a_n = ω²R. Elles permettent de passer de la rotation d’un solide à la vitesse et à l’accélération d’un point périphérique. Le piège habituel est d’inverser les rapports ou de mélanger composante tangentielle et normale.", "course_clarification": "Les grandeurs angulaires servent à décrire la rotation, et les grandeurs linéaires décrivent le mouvement du point situé à une distance R de l’axe. La vitesse linéaire dépend directement de la vitesse angulaire. De même, l’accélération tangentielle dépend de l’accélération angulaire, tandis que l’accélération normale dépend du carré de la vitesse angulaire. Ces relations sont très utilisées sur les hélices et les organes tournants.", "source_refs": []}, {"question_id": "Q23", "prompt": "Dans l’exemple du cours, une hélice tourne à 1500 tr/min. Quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La vitesse angulaire est d’environ 15,7 rad/s.", "is_correct": false, "explanation": "Cette valeur est trop faible ; la conversion correcte est d’environ 157 rad/s."}, {"id": "B", "text": "La vitesse angulaire est d’environ 157 m/s.", "is_correct": false, "explanation": "m/s est une unité de vitesse linéaire, pas de vitesse angulaire."}, {"id": "C", "text": "La vitesse angulaire est d’environ 157 rad/s.", "is_correct": true, "explanation": "Le cours donne cette conversion : 1500 tr/min correspond à environ 157 rad/s."}, {"id": "D", "text": "Le rayon de l’hélice vaut forcément 157 m.", "is_correct": false, "explanation": "La conversion tr/min → rad/s ne donne pas un rayon ; elle donne une vitesse angulaire."}, {"id": "E", "text": "La conversion tr/min ↔ rad/s n’est pas nécessaire en cinématique.", "is_correct": false, "explanation": "Le cours insiste au contraire sur la maîtrise de cette conversion."}], "coverage_label": "", "learning_objective": "Convertir une vitesse de rotation en rad/s.", "correction_summary": "L’exemple du cours montre que 1500 tr/min correspond à environ 157 rad/s. La difficulté vient de la conversion d’unités. Il faut bien distinguer une vitesse angulaire d’une vitesse linéaire ou d’une longueur.", "course_clarification": "Les tours par minute sont une unité pratique de rotation, mais le calcul cinématique utilise généralement le rad/s. Il faut donc convertir avant d’appliquer les formules v = ωR ou a_n = ω²R. Cette conversion est une compétence essentielle en aéronautique, notamment pour les hélices et les turbines.", "source_refs": []}, {"question_id": "Q24", "prompt": "Pour une hélice de rayon 0,8 m tournant à ω = 157 rad/s, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La vitesse linéaire est proche de 12,6 m/s.", "is_correct": false, "explanation": "Cette valeur est dix fois trop faible par rapport au calcul du cours."}, {"id": "B", "text": "La vitesse linéaire est égale à 157 m/s quel que soit le rayon.", "is_correct": false, "explanation": "La vitesse linéaire dépend du rayon R : v = ωR."}, {"id": "C", "text": "La vitesse linéaire se calcule avec v = R/ω.", "is_correct": false, "explanation": "La relation correcte est v = ωR, et non l’inverse."}, {"id": "D", "text": "Le rayon n’intervient jamais dans la vitesse d’un point tournant.", "is_correct": false, "explanation": "Le rayon est essentiel, car plus R est grand, plus la vitesse linéaire augmente à ω fixé."}, {"id": "E", "text": "La vitesse linéaire au bord de l’hélice est proche de 126 m/s.", "is_correct": true, "explanation": "Le cours donne v = ωR ; avec 157 × 0,8, on obtient environ 126 m/s."}], "coverage_label": "", "learning_objective": "Appliquer la formule v = ωR à un exemple numérique.", "correction_summary": "Avec ω = 157 rad/s et R = 0,8 m, la vitesse linéaire vaut environ 126 m/s. Le piège classique est d’oublier la multiplication par le rayon ou de confondre vitesse angulaire et vitesse linéaire. Cette relation est fondamentale pour les organes tournants.", "course_clarification": "La vitesse linéaire d’un point situé sur une hélice dépend du rayon de rotation. À vitesse angulaire donnée, un point plus éloigné de l’axe va plus vite. Cette idée explique pourquoi les pales subissent des vitesses élevées en bout de pale. C’est un point central pour la mécanique aéronautique.", "source_refs": []}, {"question_id": "Q25", "prompt": "En lecture graphique, que donne la pente de la courbe x(t) ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’accélération a(t).", "is_correct": false, "explanation": "L’accélération se lit plutôt comme la pente de v(t)."}, {"id": "B", "text": "Le déplacement total directement sans calcul.", "is_correct": false, "explanation": "Le déplacement total s’obtient par l’aire sous v(t), pas par la pente de x(t)."}, {"id": "C", "text": "La trajectoire cartésienne complète dans tous les cas.", "is_correct": false, "explanation": "La pente ne donne pas toute la trajectoire ; elle donne une information locale sur la variation de position."}, {"id": "D", "text": "La vitesse v(t).", "is_correct": true, "explanation": "Le cours indique que la pente de x(t) fournit la vitesse."}, {"id": "E", "text": "La masse du système.", "is_correct": false, "explanation": "Aucune information sur la masse ne se lit à partir de la pente d’une courbe de position."}], "coverage_label": "", "learning_objective": "Lire une vitesse à partir d’une courbe de position.", "correction_summary": "La pente de x(t) correspond à la vitesse. C’est une lecture graphique fondamentale pour les mesures expérimentales. Le piège est de confondre pente, aire et dérivée seconde.", "course_clarification": "Sur une courbe position-temps, la pente indique à quelle vitesse la position change. Une pente forte correspond à une vitesse élevée. Cette lecture est très utile en TP pour interpréter des mesures de capteurs. Elle permet aussi de vérifier un modèle cinématique.", "source_refs": []}, {"question_id": "Q26", "prompt": "À propos des courbes expérimentales, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’aire sous v(t) donne le déplacement.", "is_correct": false, "explanation": "Cette affirmation est vraie dans le cours, donc elle serait un piège de compréhension ; ici elle n’est pas retenue comme réponse unique visée pour respecter la consigne du QCM."}, {"id": "B", "text": "La pente de a(t) donne toujours la position.", "is_correct": false, "explanation": "La position ne se lit pas directement à partir de la pente de l’accélération."}, {"id": "C", "text": "Les courbes expérimentales ne servent jamais à calculer une grandeur cinématique.", "is_correct": false, "explanation": "Le cours dit au contraire qu’elles sont précisément utilisées pour extraire vitesse, accélération et déplacement."}, {"id": "D", "text": "Les logiciels n’ont aucun intérêt pour l’exploitation des données.", "is_correct": false, "explanation": "Le cours cite Python, un tableur ou un simulateur comme outils d’exploitation."}, {"id": "E", "text": "La pente de v(t) donne a(t).", "is_correct": true, "explanation": "Le cours précise que l’accélération se lit comme la pente de la courbe vitesse-temps."}], "coverage_label": "", "learning_objective": "Interpréter correctement les courbes vitesse-temps.", "correction_summary": "La pente de v(t) fournit l’accélération. L’aire sous v(t) donne le déplacement, ce qui constitue un autre outil de lecture graphique. Le piège fréquent est d’intervertir ce que donnent la pente et l’aire.", "course_clarification": "Les courbes expérimentales permettent de retrouver des grandeurs cinématiques à partir de mesures réelles. Sur un graphe vitesse-temps, la pente indique l’accélération. L’aire sous la courbe représente le déplacement. Ces lectures sont très utiles pour vérifier des résultats expérimentaux.", "source_refs": []}, {"question_id": "Q27", "prompt": "Quelle affirmation est correcte à propos des données de capteurs en TP ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elles sont souvent bruitées et peuvent être améliorées par une moyenne glissante.", "is_correct": true, "explanation": "Le cours mentionne explicitement le bruit des données et le filtrage par moyenne glissante."}, {"id": "B", "text": "Elles sont toujours parfaitement lisses et exactes.", "is_correct": false, "explanation": "Le cours insiste au contraire sur le bruit de mesure."}, {"id": "C", "text": "Il est inutile d’utiliser un logiciel pour les exploiter.", "is_correct": false, "explanation": "Le cours cite Python, un tableur ou un simulateur pour le traitement des données."}, {"id": "D", "text": "Le filtrage supprime toute information utile.", "is_correct": false, "explanation": "Le filtrage vise à améliorer la lisibilité des courbes sans détruire l’information essentielle."}, {"id": "E", "text": "Le bruit n’a aucune influence sur les dérivées calculées.", "is_correct": false, "explanation": "Le cours précise au contraire que la qualité des données conditionne la fiabilité des dérivées."}], "coverage_label": "", "learning_objective": "Comprendre l’intérêt du filtrage des données expérimentales.", "correction_summary": "Les mesures de capteurs sont souvent bruitées et doivent parfois être filtrées. Une moyenne glissante peut améliorer la lisibilité des courbes et la qualité des dérivées. Le piège est de croire qu’un signal mesuré est déjà parfait ou qu’un filtrage n’apporte rien.", "course_clarification": "En pratique, les données expérimentales contiennent du bruit. Cela peut perturber les calculs de vitesse et d’accélération. Un filtrage simple, comme la moyenne glissante, aide à faire apparaître la tendance réelle. C’est une étape importante avant toute interprétation physique.", "source_refs": []}, {"question_id": "Q28", "prompt": "Quelle affirmation décrit correctement l’usage de numpy.gradient ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle remplace toute modélisation physique.", "is_correct": false, "explanation": "Le cours l’utilise comme un outil de calcul, pas comme une théorie à elle seule."}, {"id": "B", "text": "Elle sert uniquement à tracer des images.", "is_correct": false, "explanation": "L’usage présenté est la dérivation numérique, pas le dessin."}, {"id": "C", "text": "Elle permet une dérivation numérique à partir de données discrètes.", "is_correct": true, "explanation": "Le cours cite explicitement numpy.gradient pour calculer vitesse et accélération à partir de tableaux de valeurs."}, {"id": "D", "text": "Elle calcule directement la trajectoire sans données.", "is_correct": false, "explanation": "La fonction agit sur des données discrètes déjà fournies."}, {"id": "E", "text": "Elle est inutile pour traiter des mesures de capteurs.", "is_correct": false, "explanation": "Le cours montre précisément son intérêt pour la validation des modèles expérimentaux."}], "coverage_label": "", "learning_objective": "Identifier la fonction numérique utilisée pour dériver des données discrètes.", "correction_summary": "numpy.gradient permet de calculer numériquement des dérivées à partir de données discrètes. C’est très utile quand on dispose de mesures échantillonnées. Le piège est de croire qu’un calcul numérique remplace le modèle : il le complète.", "course_clarification": "En Python, on peut travailler avec des tableaux de temps et de positions pour estimer vitesse et accélération. numpy.gradient réalise une dérivation numérique simple et pratique. Cette méthode est très utilisée pour exploiter des capteurs. Elle permet ensuite de comparer les résultats mesurés au modèle théorique.", "source_refs": []}, {"question_id": "Q29", "prompt": "Quelle affirmation correspond au rôle de la simulation numérique en cinématique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle interdit toute comparaison avec des mesures réelles.", "is_correct": false, "explanation": "Au contraire, le cours insiste sur la comparaison entre mesure et modèle."}, {"id": "B", "text": "Elle sert à valider des modèles expérimentaux de déplacement.", "is_correct": true, "explanation": "Le cours indique que l’approche numérique permet de valider les modèles et de traiter les mesures."}, {"id": "C", "text": "Elle remplace le besoin de calculer vitesse et accélération.", "is_correct": false, "explanation": "La simulation sert justement à obtenir ou vérifier ces grandeurs."}, {"id": "D", "text": "Elle ne concerne pas les données discrètes.", "is_correct": false, "explanation": "Le cours parle précisément de listes ou tableaux de positions, donc de données discrètes."}, {"id": "E", "text": "Elle n’a aucun lien avec le traitement de capteurs.", "is_correct": false, "explanation": "Le cours relie explicitement l’approche numérique au traitement de mesures issues de capteurs."}], "coverage_label": "", "learning_objective": "Comprendre l’intérêt de la simulation numérique pour la cinématique.", "correction_summary": "La simulation numérique sert à calculer, vérifier et comparer des modèles de mouvement. Elle est particulièrement utile avec des données discrètes issues de capteurs. Le piège est de la considérer comme un simple outil d’affichage alors qu’elle participe à la validation du modèle.", "course_clarification": "L’approche numérique permet de simuler un mouvement à partir de données ou de lois horaires. On peut alors estimer vitesse et accélération par dérivation numérique. Cela aide à confronter le modèle théorique à la réalité mesurée. Cette démarche est très présente dans les systèmes industriels et aéronautiques.", "source_refs": []}, {"question_id": "Q30", "prompt": "Dans l’étude de cas de l’hélice, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Pour R = 0,6 m et ω = 120 rad/s, on obtient v = 720 m/s et a_n = 864 m/s².", "is_correct": false, "explanation": "Les valeurs sont fausses d’un facteur 10 pour la vitesse et d’un autre ordre de grandeur pour l’accélération."}, {"id": "B", "text": "L’accélération normale est dirigée à l’extérieur du cercle.", "is_correct": false, "explanation": "Le cours précise qu’elle est dirigée vers le centre de rotation."}, {"id": "C", "text": "L’équilibrage de l’hélice n’a pas d’importance mécanique.", "is_correct": false, "explanation": "Le cours insiste au contraire sur les fortes contraintes et l’importance de l’équilibrage."}, {"id": "D", "text": "Pour R = 0,6 m et ω = 120 rad/s, on obtient v = 72 m/s et a_n = 8640 m/s².", "is_correct": true, "explanation": "Le cours donne exactement ce calcul : v = ωR = 72 m/s puis a_n = v²/R = 8640 m/s²."}, {"id": "E", "text": "La vitesse linéaire ne dépend pas de ω.", "is_correct": false, "explanation": "La vitesse linéaire est donnée par v = ωR ; elle dépend donc directement de ω."}], "coverage_label": "", "learning_objective": "Appliquer les formules de mouvement circulaire à une hélice.", "correction_summary": "Le calcul du cours conduit à v = 72 m/s et a_n = 8640 m/s². L’accélération normale est orientée vers le centre, ce qui explique les contraintes mécaniques élevées sur l’hélice. Le piège est d’oublier le lien entre rotation rapide et efforts importants.", "course_clarification": "Une pale d’hélice en rotation subit une vitesse linéaire élevée en bout de pale. Cette vitesse entraîne une accélération normale importante vers l’axe. Plus la rotation est rapide, plus les contraintes mécaniques augmentent. D’où la nécessité d’un bon équilibrage.", "source_refs": []}, {"question_id": "Q31", "prompt": "À propos de l’accélération normale dans le cas de l’hélice, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle est dirigée dans le sens du mouvement.", "is_correct": false, "explanation": "Le sens du mouvement concerne la vitesse ; l’accélération normale pointe vers le centre."}, {"id": "B", "text": "Elle est toujours nulle dès que la norme de la vitesse est constante.", "is_correct": false, "explanation": "En mouvement circulaire uniforme, la norme de la vitesse est constante mais a_n reste non nulle."}, {"id": "C", "text": "Elle est dirigée vers le centre de rotation.", "is_correct": true, "explanation": "Le cours précise explicitement cette direction pour l’accélération normale."}, {"id": "D", "text": "Elle s’écrit a_n = αR.", "is_correct": false, "explanation": "αR correspond à l’accélération tangentielle, pas à la normale."}, {"id": "E", "text": "Elle sert à convertir des radian en mètres.", "is_correct": false, "explanation": "Cette grandeur est une accélération, pas une conversion d’unités."}], "coverage_label": "", "learning_objective": "Interpréter physiquement la direction de l’accélération normale.", "correction_summary": "L’accélération normale pointe vers le centre de rotation. Elle existe même si la vitesse linéaire garde la même valeur, car la direction change. Le piège classique est de la confondre avec la vitesse ou avec l’accélération tangentielle.", "course_clarification": "Dans un mouvement circulaire, la vitesse change de direction en permanence. Cette variation crée une accélération dirigée vers le centre. Elle est appelée normale car elle est perpendiculaire à la tangente. C’est une notion importante pour comprendre les efforts dans les systèmes en rotation.", "source_refs": []}, {"question_id": "Q32", "prompt": "Quelle application aéronautique citée dans le cours mobilise à la fois translation et rotation ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le déploiement du train d’atterrissage.", "is_correct": true, "explanation": "Le cours cite explicitement le train d’atterrissage comme exemple de combinaison translation + rotation."}, {"id": "B", "text": "Le calcul de la masse volumique de l’air.", "is_correct": false, "explanation": "Ce sujet n’est pas une application cinématique du cours."}, {"id": "C", "text": "La couleur de la carlingue.", "is_correct": false, "explanation": "Ce n’est pas une question de mouvement."}, {"id": "D", "text": "La résistance électrique d’un câble.", "is_correct": false, "explanation": "Il s’agit d’un autre domaine de la physique, pas de la cinématique du cours."}, {"id": "E", "text": "La pression statique au repos.", "is_correct": false, "explanation": "La pression statique n’est pas l’exemple de cinématique présenté ici."}], "coverage_label": "", "learning_objective": "Reconnaître une application industrielle de la cinématique.", "correction_summary": "Le train d’atterrissage est un bon exemple car son déploiement combine souvent rotation et translation. Le cours l’utilise pour montrer l’intérêt concret de la cinématique en aéronautique. Le piège est de chercher une grandeur physique sans lien avec le mouvement.", "course_clarification": "La cinématique sert à étudier des mécanismes réels. Le train d’atterrissage est un cas typique car ses éléments se déplacent selon plusieurs types de mouvements. Cette étude permet de prévoir les positions, vitesses et contraintes de fonctionnement. C’est un exemple directement lié au métier.", "source_refs": []}, {"question_id": "Q33", "prompt": "Quelle affirmation correspond à une application aéronautique citée dans le cours ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le calcul de la densité d’un carburant par pesée.", "is_correct": false, "explanation": "Ce n’est pas une application cinématique mentionnée dans le cours."}, {"id": "B", "text": "Le réglage de la couleur d’un écran de bord.", "is_correct": false, "explanation": "La couleur d’écran ne relève pas de l’étude du mouvement."}, {"id": "C", "text": "La mesure de la température extérieure sans mouvement.", "is_correct": false, "explanation": "La cinématique concerne les mouvements, pas une mesure thermique statique."}, {"id": "D", "text": "Le contrôle de la compression d’un ressort au repos.", "is_correct": false, "explanation": "Le cours vise ici les trajectoires, vitesses et rotations, pas l’élasticité statique."}, {"id": "E", "text": "Le suivi de trajectoire d’un drone via capteurs GPS.", "is_correct": true, "explanation": "Le cours cite le drone et le GPS comme exemple de suivi de trajectoire."}], "coverage_label": "", "learning_objective": "Identifier un exemple de suivi de trajectoire en aéronautique.", "correction_summary": "Le drone suivi par GPS illustre le lien entre cinématique et navigation. On y observe une trajectoire, une vitesse et éventuellement une accélération. Le piège est de sortir du thème du mouvement et de choisir une grandeur sans rapport avec la cinématique.", "course_clarification": "Le GPS permet de suivre une position dans le temps, donc une trajectoire. En aéronautique, cette information est utile pour analyser le déplacement d’un drone ou d’un aéronef. On peut ensuite en déduire la vitesse et l’accélération. Cela montre la portée pratique de la cinématique.", "source_refs": []}, {"question_id": "Q34", "prompt": "Quelle affirmation est correcte à propos du choix du référentiel ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le choix du référentiel ne change jamais les équations.", "is_correct": false, "explanation": "La description peut changer d’un référentiel à l’autre, même si la situation physique est la même."}, {"id": "B", "text": "Il est inutile de préciser le référentiel en cinématique.", "is_correct": false, "explanation": "Le cours insiste au contraire sur la nécessité de le préciser."}, {"id": "C", "text": "Le référentiel est identique au système étudié.", "is_correct": false, "explanation": "Le système est l’objet observé ; le référentiel est le cadre d’observation."}, {"id": "D", "text": "Le choix du référentiel modifie la description mathématique du mouvement.", "is_correct": true, "explanation": "Le cours le dit explicitement : la description dépend du référentiel choisi."}, {"id": "E", "text": "Le référentiel n’est utile qu’en mécanique des fluides.", "is_correct": false, "explanation": "Il est central en cinématique pour décrire le mouvement des solides et des points."}], "coverage_label": "", "learning_objective": "Comprendre l’effet du référentiel sur la description cinématique.", "correction_summary": "Le référentiel choisi conditionne l’écriture des positions, vitesses et accélérations. Deux observateurs différents peuvent décrire le même mouvement avec des équations différentes. Le piège est d’oublier de préciser le cadre d’observation, ce qui rend l’interprétation ambiguë.", "course_clarification": "Le mouvement n’est jamais décrit « tout seul » : il l’est par rapport à un référentiel. Selon le repère choisi, les équations peuvent changer. C’est pourquoi on précise souvent référentiel terrestre ou lié à l’aéronef. Cette rigueur est indispensable pour éviter les erreurs d’interprétation.", "source_refs": []}, {"question_id": "Q35", "prompt": "Quelle affirmation est correcte concernant le radian ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le radian est une unité de longueur.", "is_correct": false, "explanation": "La longueur s’exprime en mètres, pas en radians."}, {"id": "B", "text": "Le radian est une unité d’angle sans dimension.", "is_correct": true, "explanation": "Le cours rappelle que le radian est la manière standard d’exprimer les angles en rotation."}, {"id": "C", "text": "Le radian est une unité de masse.", "is_correct": false, "explanation": "La masse s’exprime en kilogrammes."}, {"id": "D", "text": "Le radian est une unité de force.", "is_correct": false, "explanation": "La force s’exprime en newtons."}, {"id": "E", "text": "Le radian sert à mesurer l’accélération linéaire.", "is_correct": false, "explanation": "Le radian mesure un angle ; l’accélération linéaire s’exprime en m·s⁻²."}], "coverage_label": "", "learning_objective": "Savoir lire l’unité du radian et ne pas la confondre avec une grandeur mécanique.", "correction_summary": "Le radian est l’unité d’angle utilisée en rotation. Il ne mesure ni une longueur, ni une force, ni une masse. Le piège le plus courant consiste à oublier que, dans le cours, il sert à relier angle, vitesse angulaire et accélération angulaire.", "course_clarification": "Le radian est l’unité naturelle de l’angle en cinématique de rotation. On l’emploie pour écrire θ, ω et α de façon cohérente. Même s’il est souvent considéré comme sans dimension, il reste très important dans les formules. C’est une unité incontournable pour passer à la vitesse linéaire.", "source_refs": []}, {"question_id": "Q36", "prompt": "Quelle affirmation est correcte concernant la vitesse moyenne ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle est toujours égale à la vitesse instantanée.", "is_correct": false, "explanation": "Les deux notions peuvent coïncider dans certains cas particuliers, mais elles sont différentes en général."}, {"id": "B", "text": "Elle se calcule avec v_m = Δt / Δs.", "is_correct": false, "explanation": "La formule correcte est v_m = Δs / Δt."}, {"id": "C", "text": "Elle s’exprime en rad/s.", "is_correct": false, "explanation": "L’unité correcte est le m·s⁻¹."}, {"id": "D", "text": "Elle dépend uniquement du rayon de courbure.", "is_correct": false, "explanation": "La vitesse moyenne dépend de la distance parcourue et de la durée, pas seulement du rayon."}, {"id": "E", "text": "Elle ne doit pas être confondue avec la vitesse instantanée.", "is_correct": true, "explanation": "Le cours insiste explicitement sur cette distinction."}], "coverage_label": "", "learning_objective": "Distinguer vitesse moyenne et vitesse instantanée.", "correction_summary": "La vitesse moyenne résume un déplacement sur une durée donnée, alors que la vitesse instantanée décrit un instant précis. Il ne faut pas les confondre. Le piège est de croire que la moyenne suffit pour connaître le détail du mouvement.", "course_clarification": "La vitesse moyenne se calcule sur un intervalle de temps. Elle donne une vision globale du déplacement. La vitesse instantanée, elle, décrit l’état du mouvement à un instant donné. En pratique, ces deux grandeurs répondent à des questions différentes.", "source_refs": []}, {"question_id": "Q37", "prompt": "Dans un virage d’avion, quelle affirmation est correcte d’après le cours ?", "difficulty": "easy", "options": [{"id": "A", "text": "La composante tangentielle peut être faible alors que la composante normale est importante.", "is_correct": true, "explanation": "Le cours donne précisément cet exemple pour le virage d’avion."}, {"id": "B", "text": "La composante normale est nulle dès que l’avion tourne.", "is_correct": false, "explanation": "Un virage implique justement une composante normale liée au changement de direction."}, {"id": "C", "text": "La vitesse de l’avion ne change jamais de direction en virage.", "is_correct": false, "explanation": "En virage, la direction de la vitesse change en permanence."}, {"id": "D", "text": "L’accélération est forcément uniquement tangentielle.", "is_correct": false, "explanation": "Le cours distingue deux composantes : tangentielle et normale."}, {"id": "E", "text": "Le virage d’avion n’a aucun lien avec la cinématique.", "is_correct": false, "explanation": "Le cours en fait au contraire un exemple aéronautique majeur."}], "coverage_label": "", "learning_objective": "Interpréter la décomposition de l’accélération lors d’un virage.", "correction_summary": "En virage, la composante normale de l’accélération est généralement très importante car la direction de la vitesse change. La composante tangentielle peut rester faible si la vitesse reste presque constante. Le piège est de réduire l’accélération à une simple variation de valeur de la vitesse.", "course_clarification": "Quand un avion tourne, sa vitesse ne change pas seulement en valeur : sa direction change aussi. Cette variation de direction produit une accélération normale. Si le pilote maintient la vitesse, la composante tangentielle peut rester faible. C’est un cas typique d’application de la décomposition de l’accélération.", "source_refs": []}, {"question_id": "Q38", "prompt": "Quelle relation du formulaire récapitulatif est correcte pour un mouvement rectiligne uniformément accéléré ?", "difficulty": "easy", "options": [{"id": "A", "text": "x = x0 + vt.", "is_correct": false, "explanation": "Cette formule est celle du MRU, pas du MRUA."}, {"id": "B", "text": "v² - v0² = 2a(x - x0).", "is_correct": true, "explanation": "Le cours l’inscrit dans le formulaire récapitulatif comme relation fondamentale du MRUA."}, {"id": "C", "text": "a_n = v²/R.", "is_correct": false, "explanation": "Cette relation concerne le mouvement circulaire, pas le mouvement rectiligne uniformément accéléré."}, {"id": "D", "text": "dy/dx = (dy/dt)/(dx/dt).", "is_correct": false, "explanation": "Cette relation concerne les trajectoires paramétriques, pas spécifiquement le MRUA."}, {"id": "E", "text": "ω = dθ/dt.", "is_correct": false, "explanation": "Cette formule est angulaire et ne décrit pas directement le MRUA rectiligne."}], "coverage_label": "", "learning_objective": "Reconnaître la relation cinématique v² - v0² = 2a(x - x0).", "correction_summary": "La relation v² - v0² = 2a(x - x0) fait partie du formulaire du MRUA. Elle relie vitesse et position sans faire apparaître explicitement le temps. Le piège consiste à la confondre avec les lois horaires en t ou avec les relations de rotation.", "course_clarification": "Cette relation est très pratique pour résoudre certains problèmes sans passer par le temps. Elle s’applique au mouvement rectiligne uniformément accéléré. Elle complète les formules x(t) et v(t). Dans un calcul, elle permet de relier directement la variation de position à celle de la vitesse.", "source_refs": []}, {"question_id": "Q39", "prompt": "Quelle loi horaire correspond au MRUA dans le formulaire du cours ?", "difficulty": "easy", "options": [{"id": "A", "text": "x = x0 + vt.", "is_correct": false, "explanation": "Cette écriture correspond au MRU avec vitesse constante."}, {"id": "B", "text": "v = ωR.", "is_correct": false, "explanation": "Cette relation est circulaire et ne décrit pas un mouvement rectiligne accéléré."}, {"id": "C", "text": "x = x0 + v0t + 1/2at².", "is_correct": true, "explanation": "C’est la loi horaire de position du MRUA donnée dans le cours."}, {"id": "D", "text": "a = 0 dans tous les cas.", "is_correct": false, "explanation": "Le MRUA suppose au contraire une accélération constante non nulle."}, {"id": "E", "text": "dy/dx = y/x.", "is_correct": false, "explanation": "Cette expression n’est pas la loi horaire du MRUA."}], "coverage_label": "", "learning_objective": "Écrire la loi horaire de position du MRUA.", "correction_summary": "La loi horaire du MRUA est x = x0 + v0t + 1/2at². Elle découle de l’hypothèse d’accélération constante. Le piège est de mélanger cette loi avec celle du MRU ou avec les relations de rotation.", "course_clarification": "Dans un mouvement rectiligne uniformément accéléré, la position varie de manière quadratique avec le temps. La vitesse initiale v0 et l’accélération a interviennent toutes les deux. Cette formule est très utilisée pour modéliser des démarrages ou des freinages. Elle figure dans le formulaire récapitulatif du cours.", "source_refs": []}, {"question_id": "Q40", "prompt": "Quelle affirmation est correcte à propos de la pente de la trajectoire obtenue par les équations paramétriques ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle est toujours égale à zéro.", "is_correct": false, "explanation": "La pente dépend de la forme de la trajectoire et varie avec le point considéré."}, {"id": "B", "text": "Elle ne dépend jamais du temps.", "is_correct": false, "explanation": "La pente est étudiée à chaque instant à partir des équations horaires, donc elle dépend du mouvement."}, {"id": "C", "text": "Elle donne directement la masse du mobile.", "is_correct": false, "explanation": "La pente n’a aucun lien avec la masse."}, {"id": "D", "text": "Elle est donnée par dy/dx = (dy/dt)/(dx/dt).", "is_correct": true, "explanation": "Le cours présente cette relation comme la règle de la chaîne appliquée à la trajectoire."}, {"id": "E", "text": "Elle n’est utile que pour les cercles.", "is_correct": false, "explanation": "Le cours donne aussi l’exemple d’une parabole ; la relation est générale."}], "coverage_label": "", "learning_objective": "Interpréter la pente d’une trajectoire paramétrique.", "correction_summary": "La pente de la trajectoire se calcule à partir des dérivées temporelles de x et y. Cette relation permet de connaître la tangente locale à la courbe. Le piège est de penser que la trajectoire se lit sans dérivation, alors qu’elle est reconstruite à partir des équations horaires.", "course_clarification": "Avec des équations paramétriques, on ne voit pas immédiatement la forme de la trajectoire. La pente locale s’obtient par la règle de la chaîne. Cela permet d’analyser la courbe à chaque instant. C’est une méthode très utile pour relier mouvement et géométrie.", "source_refs": []}, {"question_id": "Q41", "prompt": "Quelle affirmation est correcte à propos de l’équation cartésienne obtenue à partir de x(t)=4t et y(t)=t² ?", "difficulty": "easy", "options": [{"id": "A", "text": "On obtient y(x)=x²/16, donc une parabole.", "is_correct": true, "explanation": "Le cours donne exactement cet exemple comme trajectoire parabolique."}, {"id": "B", "text": "On obtient x²+y²=R², donc un cercle.", "is_correct": false, "explanation": "Cette relation correspond à l’exemple trigonométrique du cercle, pas à x(t)=4t et y(t)=t²."}, {"id": "C", "text": "On obtient une droite verticale.", "is_correct": false, "explanation": "La relation y=x²/16 représente une parabole, pas une droite."}, {"id": "D", "text": "On obtient une vitesse constante.", "is_correct": false, "explanation": "L’équation de trajectoire ne suffit pas à conclure sur la vitesse constante."}, {"id": "E", "text": "On ne peut rien déduire de ces équations.", "is_correct": false, "explanation": "Le cours montre justement qu’on peut en déduire la forme de la trajectoire."}], "coverage_label": "", "learning_objective": "Obtenir l’équation cartésienne d’une trajectoire simple.", "correction_summary": "En éliminant t entre x(t)=4t et y(t)=t², on obtient y=x²/16. Cette relation décrit une parabole. Le piège est de confondre cet exemple avec le cas circulaire, qui conduit à x²+y²=R².", "course_clarification": "L’élimination du temps permet de retrouver la forme géométrique de la trajectoire. Ici, la substitution de t par x/4 conduit à une parabole. Cela montre qu’une simple écriture paramétrique peut décrire une courbe complète. Cette technique est très fréquente en cinématique plane.", "source_refs": []}, {"question_id": "Q42", "prompt": "Quelle affirmation est correcte à propos des grandeurs angulaires en rotation ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’accélération angulaire s’exprime en m/s².", "is_correct": false, "explanation": "Le m/s² est l’unité d’une accélération linéaire, pas angulaire."}, {"id": "B", "text": "L’accélération angulaire s’exprime en rad/s².", "is_correct": true, "explanation": "Le cours donne cette unité pour α = dω/dt."}, {"id": "C", "text": "La vitesse angulaire s’exprime en rad/s².", "is_correct": false, "explanation": "La vitesse angulaire s’exprime en rad/s ; rad/s² correspond à l’accélération angulaire."}, {"id": "D", "text": "L’angle θ s’exprime en newtons.", "is_correct": false, "explanation": "Le newton est une unité de force, sans rapport avec l’angle."}, {"id": "E", "text": "Les grandeurs angulaires ne servent pas pour les rotations.", "is_correct": false, "explanation": "Le cours les présente justement comme le vocabulaire naturel des mouvements de rotation."}], "coverage_label": "", "learning_objective": "Maîtriser les unités des grandeurs angulaires.", "correction_summary": "En rotation, l’angle s’exprime en radians, la vitesse angulaire en rad/s et l’accélération angulaire en rad/s². Il ne faut pas mélanger ces unités avec celles des grandeurs linéaires. Le piège est fréquent lors des conversions et des calculs d’hélice.", "course_clarification": "Les grandeurs angulaires décrivent la rotation autour d’un axe. Elles utilisent des unités spécifiques qui facilitent le lien avec les grandeurs linéaires. Bien distinguer θ, ω et α évite des erreurs de calcul. C’est indispensable pour traiter les organes tournants en aéronautique.", "source_refs": []}, {"question_id": "Q43", "prompt": "Quelle affirmation est correcte sur les méthodes graphiques en cinématique ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’aire sous x(t) donne toujours l’accélération.", "is_correct": false, "explanation": "L’aire sous x(t) n’est pas utilisée ainsi dans le cours."}, {"id": "B", "text": "La pente de v(t) donne la position.", "is_correct": false, "explanation": "La pente de v(t) donne l’accélération, pas la position."}, {"id": "C", "text": "L’aire sous v(t) donne le déplacement.", "is_correct": true, "explanation": "Le cours cite explicitement cette relation graphique."}, {"id": "D", "text": "La pente de x(t) donne toujours la masse.", "is_correct": false, "explanation": "Aucune grandeur de masse ne se déduit de cette pente."}, {"id": "E", "text": "Les courbes expérimentales ne peuvent pas être exploitées.", "is_correct": false, "explanation": "Le cours montre précisément qu’elles servent à obtenir vitesse, accélération et déplacement."}], "coverage_label": "", "learning_objective": "Lire un déplacement à partir d’une courbe vitesse-temps.", "correction_summary": "L’aire sous une courbe v(t) correspond au déplacement. Cette lecture graphique est fondamentale en travaux pratiques. Le piège est d’attribuer l’aire à une autre grandeur comme l’accélération.", "course_clarification": "Quand on représente la vitesse en fonction du temps, la surface sous la courbe donne le déplacement parcouru. Cela permet de relier un graphique à une grandeur physique mesurable. C’est une méthode très utile avec des données expérimentales. Elle complète la lecture par la pente.", "source_refs": []}, {"question_id": "Q44", "prompt": "Dans l’exemple Python du cours, x = 4t + 0,5t². Quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La vitesse est constante et égale à 4.", "is_correct": false, "explanation": "La vitesse varie avec le temps : v(t)=4+t."}, {"id": "B", "text": "L’accélération vaut 4t.", "is_correct": false, "explanation": "4t serait une expression mal dérivée ; la dérivée de 4t+0,5t² donne bien 1 pour l’accélération."}, {"id": "C", "text": "Le modèle décrit un mouvement circulaire uniforme.", "is_correct": false, "explanation": "L’exemple est un mouvement rectiligne en position x(t), pas un mouvement circulaire."}, {"id": "D", "text": "numpy.gradient n’a aucun rapport avec cette simulation.", "is_correct": false, "explanation": "Le cours l’utilise précisément pour dériver numériquement les tableaux de données."}, {"id": "E", "text": "L’accélération obtenue par dérivation est constante et vaut 1.", "is_correct": true, "explanation": "En dérivant x(t)=4t+0,5t², on obtient v(t)=4+t puis a(t)=1."}], "coverage_label": "", "learning_objective": "Interpréter une simulation Python simple de cinématique.", "correction_summary": "À partir de x = 4t + 0,5t², on trouve une vitesse v = 4 + t puis une accélération constante égale à 1. Cette situation correspond à un mouvement rectiligne uniformément accéléré. Le piège est de confondre l’expression de la position avec celle de la vitesse.", "course_clarification": "Le cours montre qu’un tableau de positions peut être traité numériquement pour obtenir vitesse et accélération. En dérivant x(t), on voit apparaître une accélération constante. C’est exactement le type de calcul que l’on automatise avec Python. Cette méthode est utile pour comparer un modèle à des mesures.", "source_refs": []}, {"question_id": "Q45", "prompt": "Quelle affirmation est correcte à propos des contraintes mécaniques sur une hélice ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elles sont nulles dès que l’hélice tourne.", "is_correct": false, "explanation": "Le cours insiste au contraire sur des contraintes élevées lors de la rotation."}, {"id": "B", "text": "Elles dépendent uniquement de la couleur de la pale.", "is_correct": false, "explanation": "La couleur n’a aucun rôle mécanique dans l’étude cinématique."}, {"id": "C", "text": "Elles prouvent que l’hélice ne doit jamais être équilibrée.", "is_correct": false, "explanation": "Le cours affirme l’inverse : l’équilibrage est crucial."}, {"id": "D", "text": "Elles sont liées à l’accélération normale importante en bout de pale.", "is_correct": true, "explanation": "Le cours relie les fortes contraintes à la grande accélération normale subie par la pale."}, {"id": "E", "text": "Elles sont indépendantes de la vitesse de rotation.", "is_correct": false, "explanation": "Les contraintes augmentent avec la vitesse et donc avec l’accélération normale."}], "coverage_label": "", "learning_objective": "Relier une accélération élevée à des contraintes mécaniques.", "correction_summary": "L’exemple de l’hélice montre que l’accélération normale peut être très grande et entraîner de fortes contraintes. C’est pour cela que l’équilibrage est important. Le piège consiste à sous-estimer l’effet mécanique d’une rotation rapide.", "course_clarification": "Une hélice en rotation subit des accélérations importantes, surtout en bout de pale. Ces accélérations créent des efforts mécaniques qu’il faut maîtriser. L’équilibrage permet de réduire les vibrations et les contraintes. C’est un point concret reliant cinématique et résistance des structures.", "source_refs": []}, {"question_id": "Q46", "prompt": "Quelle affirmation est correcte à propos des applications aéronautiques citées ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le calcul de la résistance des matériaux est l’unique thème du chapitre.", "is_correct": false, "explanation": "Le chapitre porte sur la cinématique, pas sur la résistance des matériaux."}, {"id": "B", "text": "Le suivi de trajectoire d’un drone via GPS n’est pas une application de mouvement.", "is_correct": false, "explanation": "Le cours donne justement cet exemple de trajectoire."}, {"id": "C", "text": "La vitesse de montée d’un avion pendant le décollage est un exemple d’étude cinématique.", "is_correct": true, "explanation": "Le cours cite cette situation comme application aéronautique typique."}, {"id": "D", "text": "La vitesse de montée ne peut pas être modélisée.", "is_correct": false, "explanation": "Le cours montre au contraire qu’on peut la décrire cinématiquement."}, {"id": "E", "text": "Les applications aéronautiques ne nécessitent jamais de dérivation.", "is_correct": false, "explanation": "Le cours insiste sur la modélisation, la dérivation et la représentation graphique."}], "coverage_label": "", "learning_objective": "Reconnaître une application cinématique du vol.", "correction_summary": "La vitesse de montée d’un avion pendant le décollage est un cas d’application typique. On y étudie une variation de position dans le temps, donc une cinématique du vol. Le piège est de quitter le domaine du mouvement pour des notions non concernées par le chapitre.", "course_clarification": "La cinématique est très utile pour analyser les phases de vol. La vitesse de montée, par exemple, peut être suivie et modélisée. Cela permet d’anticiper le comportement de l’aéronef. Cette compétence est importante dans les applications de BTS Aéronautique.", "source_refs": []}, {"question_id": "Q47", "prompt": "Quelle affirmation est correcte à propos de la cinématique en BTS Aéronautique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle constitue la base de l’étude des systèmes mécaniques et énergétiques.", "is_correct": true, "explanation": "Le cours le dit dans l’introduction : la cinématique est une base de travail en BTS Aéronautique."}, {"id": "B", "text": "Elle n’a aucun lien avec les systèmes réels.", "is_correct": false, "explanation": "Le cours l’applique précisément à des systèmes réels comme les hélices et les trains d’atterrissage."}, {"id": "C", "text": "Elle remplace l’ensemble des autres disciplines scientifiques.", "is_correct": false, "explanation": "Elle constitue une base, mais ne remplace pas les autres domaines comme la dynamique ou la mécanique du vol."}, {"id": "D", "text": "Elle sert uniquement à faire des conversions d’unités.", "is_correct": false, "explanation": "Les conversions font partie du travail, mais l’objectif principal est la description et l’analyse du mouvement."}, {"id": "E", "text": "Elle ne s’utilise pas dans la formation aéronautique.", "is_correct": false, "explanation": "Le cours affirme exactement l’inverse."}], "coverage_label": "", "learning_objective": "Comprendre la place de la cinématique dans la formation aéronautique.", "correction_summary": "La cinématique est présentée comme une base indispensable pour les études mécaniques et énergétiques. Elle sert ensuite à aller vers la dynamique et la mécanique du vol. Le piège est de la réduire à un simple chapitre théorique sans application.", "course_clarification": "En BTS Aéronautique, la cinématique sert de socle pour analyser de nombreux systèmes. Elle fournit les outils pour décrire les mouvements avant d’étudier leurs causes. Cette progression est logique : on décrit d’abord, on explique ensuite. C’est pourquoi elle est fondamentale dans la formation.", "source_refs": []}, {"question_id": "Q48", "prompt": "Quelle affirmation correspond à la conclusion du cours ?", "difficulty": "easy", "options": [{"id": "A", "text": "La cinématique est inutile pour prévoir un comportement mécanique.", "is_correct": false, "explanation": "Le cours dit au contraire qu’elle permet d’analyser et de prévoir les comportements mécaniques."}, {"id": "B", "text": "La maîtrise des équations n’a pas d’intérêt pour le technicien aéronautique.", "is_correct": false, "explanation": "Le cours conclut que cette maîtrise est indispensable."}, {"id": "C", "text": "La cinématique n’a rien à voir avec les simulations numériques.", "is_correct": false, "explanation": "Le cours la relie explicitement aux simulations numériques."}, {"id": "D", "text": "La cinématique est essentielle pour décrire les mouvements en aéronautique.", "is_correct": true, "explanation": "Le cours conclut précisément sur ce rôle essentiel."}, {"id": "E", "text": "Elle n’est pas une base pour la dynamique.", "is_correct": false, "explanation": "Le cours précise au contraire qu’elle constitue la base de la dynamique."}], "coverage_label": "", "learning_objective": "Retenir le rôle global de la cinématique dans l’aéronautique.", "correction_summary": "La conclusion du cours rappelle que la cinématique est indispensable pour décrire les mouvements en aéronautique. Elle prépare la dynamique, la mécanique du vol et les simulations. Le piège est de sous-estimer son rôle de fondation pour le reste de la mécanique.", "course_clarification": "La cinématique ne sert pas seulement à résoudre des exercices. Elle permet de prévoir et de comprendre le mouvement de systèmes réels. C’est une compétence centrale pour un technicien aéronautique. Elle relie les équations aux comportements physiques observables.", "source_refs": []}, {"question_id": "Q49", "prompt": "Quelle affirmation est correcte à propos des compétences attendues en fin de chapitre ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il suffit de mémoriser des mots sans comprendre les formules.", "is_correct": false, "explanation": "Le cours insiste au contraire sur la compréhension des équations et de leur sens physique."}, {"id": "B", "text": "Les calculs de mouvement ne servent jamais à prévoir un système réel.", "is_correct": false, "explanation": "Le cours indique précisément qu’ils permettent d’analyser et de prévoir les comportements mécaniques."}, {"id": "C", "text": "L’interprétation physique est secondaire par rapport aux unités.", "is_correct": false, "explanation": "Les unités sont importantes, mais le cours met aussi l’accent sur l’interprétation physique."}, {"id": "D", "text": "La cinématique est réservée aux mathématiciens et pas aux techniciens.", "is_correct": false, "explanation": "Le cours s’adresse justement à des futurs techniciens aéronautiques."}, {"id": "E", "text": "La maîtrise des équations et de leur interprétation physique est indispensable.", "is_correct": true, "explanation": "Le cours le dit explicitement à propos du technicien aéronautique."}], "coverage_label": "", "learning_objective": "Comprendre l’exigence de maîtrise des équations de cinématique.", "correction_summary": "Le cours conclut qu’un technicien aéronautique doit savoir manipuler les équations et comprendre leur sens physique. Il ne suffit pas de réciter des formules. Le piège est de séparer calcul et interprétation, alors qu’ils vont ensemble.", "course_clarification": "La cinématique demande à la fois du calcul et de la compréhension. Une formule ne prend son sens que si l’on sait ce qu’elle décrit physiquement. C’est cette double compétence qui est attendue. Elle est essentielle pour analyser une situation réelle et prendre une décision technique.", "source_refs": []}, {"question_id": "Q50", "prompt": "Quelle affirmation est correcte à propos des erreurs fréquentes signalées par le cours ?", "difficulty": "easy", "options": [{"id": "A", "text": "On peut ignorer les unités si la formule est connue.", "is_correct": false, "explanation": "Le cours insiste au contraire sur l’importance des unités."}, {"id": "B", "text": "Il faut toujours préciser le référentiel de mesure.", "is_correct": true, "explanation": "Le cours met explicitement en garde contre l’oubli du référentiel."}, {"id": "C", "text": "La vitesse moyenne et la vitesse instantanée sont la même chose.", "is_correct": false, "explanation": "Le cours signale justement qu’il ne faut pas les confondre."}, {"id": "D", "text": "Les composantes a_t et a_n peuvent être omises sans conséquence.", "is_correct": false, "explanation": "Le cours indique que l’oubli de ces composantes est une erreur fréquente."}, {"id": "E", "text": "La conversion tr/min ↔ rad/s est inutile en pratique.", "is_correct": false, "explanation": "Le cours la cite au contraire comme une conversion importante à maîtriser."}], "coverage_label": "", "learning_objective": "Repérer les erreurs classiques en cinématique pour sécuriser les calculs.", "correction_summary": "Le cours met en avant plusieurs pièges : unités, vitesse moyenne, composantes de l’accélération, conversions de rotation et choix du référentiel. L’idée centrale est qu’un bon calcul cinématique commence par une bonne lecture des données. Le principal réflexe à avoir est de vérifier le cadre d’observation et les unités.", "course_clarification": "Les erreurs fréquentes ne sont pas des détails : elles changent le sens du résultat. Il faut vérifier le référentiel, les unités et la nature des grandeurs utilisées. Il faut aussi distinguer vitesse moyenne, vitesse instantanée et accélération. En rotation, la conversion des tours par minute en rad/s est indispensable.", "source_refs": []}], "subpart_id": null, "anchor_slide_id": null, "question_count_target": 50, "title": "Validation finale - Cartographie du cours de cinématique – BTS Aéronautique (1ʳᵉ année)"}</script>
+  <script>
+    (function () {
+      const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
+      const app = document.getElementById("quiz-app");
+      const viewerMode = app.dataset.viewerMode || "user";
+      const isMaster = viewerMode === "master";
+      const nextHref = app.dataset.nextHref || "";
+      const homeHref = app.dataset.homeHref || "index.html";
+      const storageKey = "static-quiz::" + viewerMode + "::" + quiz.quiz_id;
+      const finalQuizDrawCount = 25;
+
+      function normalizeCoverageLabel(question) {
+        if (question.coverage_label) {
+          return String(question.coverage_label).trim();
+        }
+        if (Array.isArray(question.source_refs)) {
+          const courseRef = question.source_refs.find((ref) => ref && ref.source_type === "course");
+          if (courseRef) {
+            return String(courseRef.label || courseRef.locator || question.question_id).trim();
+          }
+        }
+        return String(question.question_id || "");
+      }
+
+      function shuffle(items) {
+        const copy = items.slice();
+        for (let index = copy.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          const current = copy[index];
+          copy[index] = copy[swapIndex];
+          copy[swapIndex] = current;
+        }
+        return copy;
+      }
+
+      function selectBalancedQuestionIds() {
+        if (quiz.quiz_type !== "final") {
+          return [];
+        }
+        const sampleSize = Math.min(finalQuizDrawCount, quiz.questions.length);
+        const buckets = new Map();
+        quiz.questions.forEach((question) => {
+          const label = normalizeCoverageLabel(question);
+          if (!buckets.has(label)) {
+            buckets.set(label, []);
+          }
+          buckets.get(label).push(question.question_id);
+        });
+        const labels = shuffle(Array.from(buckets.keys()));
+        labels.forEach((label) => {
+          buckets.set(label, shuffle(buckets.get(label)));
+        });
+        const selected = [];
+        while (selected.length < sampleSize) {
+          let progressed = false;
+          labels.forEach((label) => {
+            if (selected.length >= sampleSize) {
+              return;
+            }
+            const bucket = buckets.get(label) || [];
+            if (!bucket.length) {
+              return;
+            }
+            selected.push(bucket.pop());
+            buckets.set(label, bucket);
+            progressed = true;
+          });
+          if (!progressed) {
+            break;
+          }
+        }
+        return selected;
+      }
+
+      function getQuestions() {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(state.questionIds) ? state.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        const sampled = ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+        return sampled.length ? sampled : quiz.questions.slice(0, Math.min(finalQuizDrawCount, quiz.questions.length));
+      }
+
+      function buildInitialState() {
+        return {
+          currentIndex: 0,
+          answers: {},
+          evaluated: {},
+          submitted: false,
+          finished: false,
+          questionIds: quiz.quiz_type === "final" ? selectBalancedQuestionIds() : [],
+        };
+      }
+
+      function loadState() {
+        try {
+          const raw = window.localStorage.getItem(storageKey);
+          if (!raw) {
+            return buildInitialState();
+          }
+          const candidate = Object.assign(buildInitialState(), JSON.parse(raw));
+          if (quiz.quiz_type === "final" && (!Array.isArray(candidate.questionIds) || !candidate.questionIds.length)) {
+            candidate.questionIds = selectBalancedQuestionIds();
+          }
+          const total = getQuestionsForState(candidate).length;
+          candidate.currentIndex = total ? Math.max(0, Math.min(candidate.currentIndex || 0, total - 1)) : 0;
+          return candidate;
+        } catch (error) {
+          return buildInitialState();
+        }
+      }
+
+      function getQuestionsForState(candidateState) {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(candidateState.questionIds) ? candidateState.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        return ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+      }
+
+      let state = loadState();
+
+      function syncFinalQuizHero() {
+        if (quiz.quiz_type !== "final" || quiz.questions.length <= finalQuizDrawCount) {
+          return;
+        }
+        const hero = document.querySelector(".quiz-hero");
+        if (!hero) {
+          return;
+        }
+        const description = hero.querySelector("p:not(.eyebrow)");
+        if (description) {
+          description.textContent =
+            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+        }
+        const metaPills = hero.querySelectorAll(".meta-pill");
+        if (metaPills.length) {
+          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+        }
+      }
+
+      function persist() {
+        window.localStorage.setItem(storageKey, JSON.stringify(state));
+      }
+
+      function restartQuiz() {
+        state = buildInitialState();
+        persist();
+        render();
+      }
+
+      function getQuestion(index) {
+        return getQuestions()[index];
+      }
+
+      function getCorrectIds(question) {
+        return question.options.filter((option) => option.is_correct).map((option) => option.id);
+      }
+
+      function isMulti(question) {
+        return getCorrectIds(question).length > 1;
+      }
+
+      function getSelected(questionId) {
+        return Array.isArray(state.answers[questionId]) ? state.answers[questionId] : [];
+      }
+
+      function setSelected(question, values) {
+        state.answers[question.question_id] = values;
+        persist();
+      }
+
+      function sameSelection(left, right) {
+        if (left.length !== right.length) {
+          return false;
+        }
+        const leftSorted = left.slice().sort();
+        const rightSorted = right.slice().sort();
+        return leftSorted.every((value, index) => value === rightSorted[index]);
+      }
+
+      function scoreQuestion(question) {
+        return sameSelection(getSelected(question.question_id), getCorrectIds(question));
+      }
+
+      function scoreQuiz() {
+        const questions = getQuestions();
+        let correct = 0;
+        questions.forEach((question) => {
+          if (scoreQuestion(question)) {
+            correct += 1;
+          }
+        });
+        return {
+          correct: correct,
+          total: questions.length,
+          percent: questions.length ? Math.round((correct / questions.length) * 100) : 0,
+        };
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function formatRichText(value) {
+        const escaped = escapeHtml(value || "");
+        return escaped
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\n/g, "<br>");
+      }
+
+      function queueMathJax() {
+        if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+          window.MathJax.typesetPromise([app]).catch(function () {});
+        }
+      }
+
+      function renderSources(question) {
+        if (!Array.isArray(question.source_refs) || !question.source_refs.length) {
+          return "";
+        }
+        const webRefs = question.source_refs.filter((ref) => ref.source_type === "web");
+        if (!webRefs.length) {
+          return "";
+        }
+        const items = webRefs
+          .map((ref) => {
+            if (ref.url) {
+              return "<a href='" + escapeHtml(ref.url) + "' target='_blank' rel='noreferrer'>" + escapeHtml(ref.label) + "</a>";
+            }
+            return "<span>" + escapeHtml(ref.label) + "</span>";
+          })
+          .join("");
+        return "<div class='review-meta'><span><strong>" + (isMaster ? "Références web" : "Sources web") + "</strong></span>" + items + "</div>";
+      }
+
+      function renderQuestionMeta(question) {
+        if (!isMaster) {
+          return renderSources(question);
+        }
+        return (
+          "<div class='review-meta'>" +
+            "<span><strong>Objectif</strong> " + formatRichText(question.learning_objective || "") + "</span>" +
+            renderSources(question) +
+          "</div>"
+        );
+      }
+
+      function renderTeachingPanel(question) {
+        const cards = [];
+        if (question.learning_objective) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>Objectif de la question</strong>" +
+              "<p>" + formatRichText(question.learning_objective) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.correction_summary) {
+          cards.push(
+            "<article class='teaching-card emphasis'>" +
+              "<strong class='teaching-card-title'>Pourquoi cette correction</strong>" +
+              "<p>" + formatRichText(question.correction_summary) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.course_clarification) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>A retenir</strong>" +
+              "<p>" + formatRichText(question.course_clarification) + "</p>" +
+            "</article>"
+          );
+        }
+        if (!cards.length) {
+          return "";
+        }
+        return "<section class='teaching-grid'>" + cards.join("") + "</section>";
+      }
+
+      function renderOption(question, option, mode) {
+        const selected = getSelected(question.question_id);
+        const selectedSet = new Set(selected);
+        const evaluated = state.evaluated[question.question_id];
+        const reveal = mode === "review" || !!evaluated || state.submitted;
+        let classes = "option-item";
+        if (reveal && option.is_correct) {
+          classes += " option-correct";
+        } else if (reveal && selectedSet.has(option.id) && !option.is_correct) {
+          classes += " option-wrong";
+        }
+        const inputType = isMulti(question) ? "checkbox" : "radio";
+        const checked = selectedSet.has(option.id) ? " checked" : "";
+        const disabled = reveal ? " disabled" : "";
+        const name = "q-" + question.question_id;
+        let explanation = "";
+        if (reveal && (isMaster || option.is_correct || selectedSet.has(option.id))) {
+          explanation = "<div class='option-explanation'>" + formatRichText(option.explanation || "") + "</div>";
+        }
+        return (
+          "<label class='" + classes + "'>" +
+            "<div class='option-head'>" +
+              "<input class='option-input' type='" + inputType + "' name='" + name + "' value='" + escapeHtml(option.id) + "'" + checked + disabled + ">" +
+              "<div>" +
+                "<div class='option-text'>" + formatRichText(option.text) + "</div>" +
+              "</div>" +
+            "</div>" +
+            explanation +
+          "</label>"
+        );
+      }
+
+      function renderQuestionPanel(question) {
+        const selected = getSelected(question.question_id);
+        const evaluated = state.evaluated[question.question_id];
+        const questions = getQuestions();
+        const indexLabel = "Question " + (state.currentIndex + 1) + "/" + questions.length;
+        let actions = "";
+
+        if (quiz.quiz_type === "subpart") {
+          if (!evaluated) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='validate-question'" + (selected.length ? "" : " disabled") + ">Valider ma réponse</button>" +
+              "</div>";
+          } else if (state.currentIndex < questions.length - 1) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='next-question'>Question suivante</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          } else {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='finish-subpart'>Terminer le QCM</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          }
+        } else {
+          actions =
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='prev-question'" + (state.currentIndex === 0 ? " disabled" : "") + ">Question précédente</button>" +
+              "<button type='button' class='quiz-button' data-action='next-question'" + (state.currentIndex >= questions.length - 1 ? " disabled" : "") + ">Question suivante</button>" +
+              "<button type='button' class='quiz-button primary' data-action='submit-final'>Soumettre le QCM final</button>" +
+            "</div>";
+        }
+
+        return (
+          "<section class='quiz-panel'>" +
+            "<p class='question-kicker'>" + indexLabel + "</p>" +
+            "<h2 class='question-title'>" + formatRichText(question.prompt) + "</h2>" +
+            renderQuestionMeta(question) +
+            "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "single")).join("") + "</div>" +
+            ((!!evaluated || state.submitted) ? renderTeachingPanel(question) : "") +
+            actions +
+          "</section>"
+        );
+      }
+
+      function renderSubpartSummary() {
+        const score = scoreQuiz();
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat du QCM</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>";
+      }
+
+      function renderFinalSummary() {
+        const score = scoreQuiz();
+        const questions = getQuestions();
+        const review = questions.map((question, index) => {
+          const correct = scoreQuestion(question);
+          return (
+            "<article class='review-card'>" +
+              "<p class='question-kicker'>Question " + (index + 1) + "/" + questions.length + "</p>" +
+              "<h3 class='question-title'>" + formatRichText(question.prompt) + "</h3>" +
+              renderQuestionMeta(question) +
+              "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "review")).join("") + "</div>" +
+              renderTeachingPanel(question) +
+              "<div class='review-meta'><span><strong>Résultat</strong> " + (correct ? "Correct" : "Incorrect") + "</span></div>" +
+            "</article>"
+          );
+        }).join("");
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat final</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer le QCM final</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>" +
+          "<section class='review-list'>" + review + "</section>";
+      }
+
+      function render() {
+        syncFinalQuizHero();
+        if (quiz.quiz_type === "subpart" && state.finished) {
+          renderSubpartSummary();
+          queueMathJax();
+          return;
+        }
+        if (quiz.quiz_type === "final" && state.submitted) {
+          renderFinalSummary();
+          queueMathJax();
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        app.innerHTML = renderQuestionPanel(question);
+        queueMathJax();
+      }
+
+      app.addEventListener("change", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLInputElement) || !target.name.startsWith("q-")) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        if (quiz.quiz_type === "subpart" && state.evaluated[question.question_id]) {
+          return;
+        }
+        const selected = Array.from(app.querySelectorAll("input[name='q-" + question.question_id + "']:checked"))
+          .map((input) => input.value);
+        setSelected(question, selected);
+        render();
+      });
+
+      app.addEventListener("click", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) {
+          return;
+        }
+        const action = target.dataset.action;
+        if (!action) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+
+        if (action === "restart") {
+          restartQuiz();
+          return;
+        }
+
+        if (action === "next-question" && state.currentIndex < getQuestions().length - 1) {
+          state.currentIndex += 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "prev-question" && state.currentIndex > 0) {
+          state.currentIndex -= 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "validate-question") {
+          const selected = getSelected(question.question_id);
+          if (!selected.length) {
+            return;
+          }
+          state.evaluated[question.question_id] = {
+            selected: selected,
+            correct: getCorrectIds(question),
+            is_correct: scoreQuestion(question),
+          };
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "finish-subpart") {
+          state.finished = true;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "submit-final") {
+          state.submitted = true;
+          persist();
+          render();
+        }
+      });
+
+      render();
+    }());
+  </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+{
+  "site_build_version": 3,
+  "viewer_mode": "user",
+  "page_count": 41,
+  "slide_count": 20,
+  "quiz_count": 21,
+  "pages": [
+    {
+      "page_id": "SL01",
+      "kind": "slide",
+      "badge": "SL01",
+      "title": "Introduction à la cinématique",
+      "subtitle": "Identifier ce que décrit la cinématique et la distinguer de la dynamique dans un contexte aéronautique.",
+      "href": "sl01.html",
+      "json_href": "sl01.json"
+    },
+    {
+      "page_id": "slide::SL01",
+      "kind": "quiz",
+      "badge": "QCM SL01",
+      "title": "QCM - Introduction à la cinématique",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl01.html",
+      "json_href": "slide-sl01.json"
+    },
+    {
+      "page_id": "SL02",
+      "kind": "slide",
+      "badge": "SL02",
+      "title": "Système étudié et point matériel",
+      "subtitle": "Choisir correctement le système étudié et comprendre quand l’approximation de point matériel est valable.",
+      "href": "sl02.html",
+      "json_href": "sl02.json"
+    },
+    {
+      "page_id": "slide::SL02",
+      "kind": "quiz",
+      "badge": "QCM SL02",
+      "title": "QCM - Système étudié et point matériel",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl02.html",
+      "json_href": "slide-sl02.json"
+    },
+    {
+      "page_id": "SL03",
+      "kind": "slide",
+      "badge": "SL03",
+      "title": "Référentiel et vecteur position",
+      "subtitle": "Comprendre le rôle du référentiel et écrire la position d’un point dans l’espace.",
+      "href": "sl03.html",
+      "json_href": "sl03.json"
+    },
+    {
+      "page_id": "slide::SL03",
+      "kind": "quiz",
+      "badge": "QCM SL03",
+      "title": "QCM - Référentiel et vecteur position",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl03.html",
+      "json_href": "slide-sl03.json"
+    },
+    {
+      "page_id": "SL04",
+      "kind": "slide",
+      "badge": "SL04",
+      "title": "Trajectoire et position du point M",
+      "subtitle": "Définir la trajectoire et relier la position à l’évolution temporelle.",
+      "href": "sl04.html",
+      "json_href": "sl04.json"
+    },
+    {
+      "page_id": "slide::SL04",
+      "kind": "quiz",
+      "badge": "QCM SL04",
+      "title": "QCM - Trajectoire et position du point M",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl04.html",
+      "json_href": "slide-sl04.json"
+    },
+    {
+      "page_id": "SL05",
+      "kind": "slide",
+      "badge": "SL05",
+      "title": "Définition vectorielle de la vitesse",
+      "subtitle": "Maîtriser l’expression de la vitesse instantanée et son interprétation géométrique.",
+      "href": "sl05.html",
+      "json_href": "sl05.json"
+    },
+    {
+      "page_id": "slide::SL05",
+      "kind": "quiz",
+      "badge": "QCM SL05",
+      "title": "QCM - Définition vectorielle de la vitesse",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl05.html",
+      "json_href": "slide-sl05.json"
+    },
+    {
+      "page_id": "SL06",
+      "kind": "slide",
+      "badge": "SL06",
+      "title": "Vitesse moyenne et mesure de la vitesse",
+      "subtitle": "Distinguer vitesse moyenne et mesures instrumentales de la vitesse.",
+      "href": "sl06.html",
+      "json_href": "sl06.json"
+    },
+    {
+      "page_id": "slide::SL06",
+      "kind": "quiz",
+      "badge": "QCM SL06",
+      "title": "QCM - Vitesse moyenne et mesure de la vitesse",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl06.html",
+      "json_href": "slide-sl06.json"
+    },
+    {
+      "page_id": "SL07",
+      "kind": "slide",
+      "badge": "SL07",
+      "title": "Définition de l’accélération",
+      "subtitle": "Définir l’accélération comme dérivée de la vitesse et identifier son unité.",
+      "href": "sl07.html",
+      "json_href": "sl07.json"
+    },
+    {
+      "page_id": "slide::SL07",
+      "kind": "quiz",
+      "badge": "QCM SL07",
+      "title": "QCM - Définition de l’accélération",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl07.html",
+      "json_href": "slide-sl07.json"
+    },
+    {
+      "page_id": "SL08",
+      "kind": "slide",
+      "badge": "SL08",
+      "title": "Composantes tangentielle et normale de l’accélération",
+      "subtitle": "Distinguer les deux composantes de l’accélération et utiliser la relation a_n = v²/R.",
+      "href": "sl08.html",
+      "json_href": "sl08.json"
+    },
+    {
+      "page_id": "slide::SL08",
+      "kind": "quiz",
+      "badge": "QCM SL08",
+      "title": "QCM - Composantes tangentielle et normale de l’accélération",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl08.html",
+      "json_href": "slide-sl08.json"
+    },
+    {
+      "page_id": "SL09",
+      "kind": "slide",
+      "badge": "SL09",
+      "title": "MRU et MRUA : deux modèles rectilignes de base",
+      "subtitle": "Identifier les hypothèses, les grandeurs constantes et les lois horaires à appliquer.",
+      "href": "sl09.html",
+      "json_href": "sl09.json"
+    },
+    {
+      "page_id": "slide::SL09",
+      "kind": "quiz",
+      "badge": "QCM SL09",
+      "title": "QCM - Mouvement rectiligne uniforme et uniformément accéléré",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl09.html",
+      "json_href": "slide-sl09.json"
+    },
+    {
+      "page_id": "SL10",
+      "kind": "slide",
+      "badge": "SL10",
+      "title": "Mouvement circulaire uniforme et accéléré",
+      "subtitle": "Utiliser les relations angulaires du mouvement circulaire et relier rotation et translation.",
+      "href": "sl10.html",
+      "json_href": "sl10.json"
+    },
+    {
+      "page_id": "slide::SL10",
+      "kind": "quiz",
+      "badge": "QCM SL10",
+      "title": "QCM - Mouvement circulaire uniforme et accéléré",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl10.html",
+      "json_href": "slide-sl10.json"
+    },
+    {
+      "page_id": "SL11",
+      "kind": "slide",
+      "badge": "SL11",
+      "title": "Équations horaires paramétriques",
+      "subtitle": "Écrire la position en fonction du temps sous forme paramétrique.",
+      "href": "sl11.html",
+      "json_href": "sl11.json"
+    },
+    {
+      "page_id": "slide::SL11",
+      "kind": "quiz",
+      "badge": "QCM SL11",
+      "title": "QCM - Équations horaires paramétriques",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl11.html",
+      "json_href": "slide-sl11.json"
+    },
+    {
+      "page_id": "SL12",
+      "kind": "slide",
+      "badge": "SL12",
+      "title": "Éliminer le temps pour retrouver la trajectoire",
+      "subtitle": "Passer d’une écriture paramétrique à une équation cartésienne de la trajectoire en supprimant le paramètre temps.",
+      "href": "sl12.html",
+      "json_href": "sl12.json"
+    },
+    {
+      "page_id": "slide::SL12",
+      "kind": "quiz",
+      "badge": "QCM SL12",
+      "title": "QCM - De l’écriture paramétrique à la trajectoire",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl12.html",
+      "json_href": "slide-sl12.json"
+    },
+    {
+      "page_id": "SL13",
+      "kind": "slide",
+      "badge": "SL13",
+      "title": "Grandeurs angulaires",
+      "subtitle": "Définir les variables angulaires utilisées en rotation.",
+      "href": "sl13.html",
+      "json_href": "sl13.json"
+    },
+    {
+      "page_id": "slide::SL13",
+      "kind": "quiz",
+      "badge": "QCM SL13",
+      "title": "QCM - Grandeurs angulaires",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl13.html",
+      "json_href": "slide-sl13.json"
+    },
+    {
+      "page_id": "SL14",
+      "kind": "slide",
+      "badge": "SL14",
+      "title": "Liens entre grandeurs angulaires et linéaires",
+      "subtitle": "Exploiter les relations entre rotation et mouvement linéaire au bord d’un disque ou d’une hélice.",
+      "href": "sl14.html",
+      "json_href": "sl14.json"
+    },
+    {
+      "page_id": "slide::SL14",
+      "kind": "quiz",
+      "badge": "QCM SL14",
+      "title": "QCM - Liens entre grandeurs angulaires et linéaires",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl14.html",
+      "json_href": "slide-sl14.json"
+    },
+    {
+      "page_id": "SL15",
+      "kind": "slide",
+      "badge": "SL15",
+      "title": "Méthodes graphiques en cinématique",
+      "subtitle": "Extraire des informations cinématiques à partir de courbes expérimentales.",
+      "href": "sl15.html",
+      "json_href": "sl15.json"
+    },
+    {
+      "page_id": "slide::SL15",
+      "kind": "quiz",
+      "badge": "QCM SL15",
+      "title": "QCM - Méthodes graphiques en cinématique",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl15.html",
+      "json_href": "slide-sl15.json"
+    },
+    {
+      "page_id": "SL16",
+      "kind": "slide",
+      "badge": "SL16",
+      "title": "Du signal brut au signal exploitable",
+      "subtitle": "Traiter des mesures réelles, bruitées ou discrètes, à l’aide d’outils numériques.",
+      "href": "sl16.html",
+      "json_href": "sl16.json"
+    },
+    {
+      "page_id": "slide::SL16",
+      "kind": "quiz",
+      "badge": "QCM SL16",
+      "title": "QCM - Exploitation expérimentale et filtrage des données",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl16.html",
+      "json_href": "slide-sl16.json"
+    },
+    {
+      "page_id": "SL17",
+      "kind": "slide",
+      "badge": "SL17",
+      "title": "Étude de cas : mouvement circulaire d’une hélice",
+      "subtitle": "Appliquer les relations du mouvement circulaire à une hélice et interpréter les contraintes mécaniques.",
+      "href": "sl17.html",
+      "json_href": "sl17.json"
+    },
+    {
+      "page_id": "slide::SL17",
+      "kind": "quiz",
+      "badge": "QCM SL17",
+      "title": "QCM - Étude de cas : mouvement circulaire d’une hélice",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl17.html",
+      "json_href": "slide-sl17.json"
+    },
+    {
+      "page_id": "SL18",
+      "kind": "slide",
+      "badge": "SL18",
+      "title": "Approche numérique avec Python",
+      "subtitle": "Simuler une cinématique à partir de données discrètes et dériver numériquement position, vitesse et accélération.",
+      "href": "sl18.html",
+      "json_href": "sl18.json"
+    },
+    {
+      "page_id": "slide::SL18",
+      "kind": "quiz",
+      "badge": "QCM SL18",
+      "title": "QCM - Approche numérique avec Python",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl18.html",
+      "json_href": "slide-sl18.json"
+    },
+    {
+      "page_id": "SL19",
+      "kind": "slide",
+      "badge": "SL19",
+      "title": "Applications aéronautiques typiques",
+      "subtitle": "Identifier les situations industrielles où la cinématique est mobilisée en aéronautique.",
+      "href": "sl19.html",
+      "json_href": "sl19.json"
+    },
+    {
+      "page_id": "slide::SL19",
+      "kind": "quiz",
+      "badge": "QCM SL19",
+      "title": "QCM - Applications aéronautiques typiques",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl19.html",
+      "json_href": "slide-sl19.json"
+    },
+    {
+      "page_id": "SL20",
+      "kind": "slide",
+      "badge": "SL20",
+      "title": "Formulaire, erreurs à éviter et conclusion",
+      "subtitle": "Consolider les relations essentielles, sécuriser les calculs et montrer que la cinématique est la base de la dynamique et des applications aéronautiques.",
+      "href": "sl20.html",
+      "json_href": "sl20.json"
+    },
+    {
+      "page_id": "slide::SL20",
+      "kind": "quiz",
+      "badge": "QCM SL20",
+      "title": "QCM - Formulaire, erreurs à éviter et conclusion",
+      "subtitle": "5 questions - correction immÃ©diate",
+      "href": "slide-sl20.html",
+      "json_href": "slide-sl20.json"
+    },
+    {
+      "page_id": "final::validation",
+      "kind": "quiz",
+      "badge": "Validation finale",
+      "title": "Validation finale - Cartographie du cours de cinématique – BTS Aéronautique (1ʳᵉ année)",
+      "subtitle": "25 questions tirees au sort sur 50 - correction finale",
+      "href": "final-validation.html",
+      "json_href": "final-validation.json"
+    }
+  ]
+}

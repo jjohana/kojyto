@@ -1,0 +1,2637 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</title>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("embed") === "1") {
+        document.documentElement.dataset.embed = "1";
+      }
+    }());
+  </script>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #14253a;
+  --ink-soft: #243e58;
+  --muted: #5a6d82;
+  --accent: #0c6e82;
+  --accent-strong: #103b5c;
+  --accent-soft: rgba(12, 110, 130, 0.08);
+  --highlight: #d98524;
+  --paper: #f6f2ea;
+  --panel: rgba(255, 255, 255, 0.9);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --line: rgba(20, 37, 58, 0.1);
+  --line-strong: rgba(20, 37, 58, 0.16);
+  --shadow: 0 24px 60px rgba(20, 37, 58, 0.12);
+  --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
+  --content-width: 1360px;
+  --reading-width: 76ch;
+}
+
+@keyframes ambient-float {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -16px, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes rise-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes panel-sheen {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(220%) skewX(-20deg); }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(12, 110, 130, 0.15), transparent 28%),
+    radial-gradient(circle at 86% 10%, rgba(217, 133, 36, 0.16), transparent 22%),
+    linear-gradient(150deg, #f7f1e7 0%, #eef5f8 50%, #f8fbfe 100%);
+}
+
+body {
+  position: relative;
+  color: var(--ink);
+  font-family: "Aptos", "Segoe UI Variable", "Segoe UI", "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(24px);
+  opacity: 0.6;
+  animation: ambient-float 18s ease-in-out infinite;
+}
+
+body::before {
+  top: 10vh;
+  right: 4vw;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(12, 110, 130, 0.16), transparent 68%);
+}
+
+body::after {
+  bottom: 8vh;
+  left: 3vw;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 133, 36, 0.18), transparent 68%);
+  animation-delay: -7s;
+}
+
+html[data-embed="1"],
+html[data-embed="1"] body {
+  background: transparent;
+}
+
+html[data-embed="1"] body::before,
+html[data-embed="1"] body::after {
+  display: none;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  gap: 22px;
+}
+
+.page-shell.with-site-nav {
+  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+}
+
+.site-sidebar {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  padding: 24px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 28px;
+  background: rgba(250, 252, 253, 0.78);
+  box-shadow: 0 18px 40px rgba(20, 37, 58, 0.08);
+  backdrop-filter: blur(12px);
+  animation: rise-in 520ms ease both;
+}
+
+.site-sidebar h2 {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.4rem;
+}
+
+.site-sidebar p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.site-sidebar nav {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-action,
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.sidebar-action::after,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.sidebar-action:hover,
+.nav-link:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.sidebar-action:hover::after,
+.nav-link:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.sidebar-list {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-slide {
+  display: grid;
+  gap: 4px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.sidebar-slide:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.sidebar-slide.active {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-slide strong {
+  font-size: 0.96rem;
+}
+
+.sidebar-slide span {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: inherit;
+  opacity: 0.88;
+}
+
+.site-main {
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.slide-toolbar {
+  position: sticky;
+  top: 18px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 14px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+  backdrop-filter: blur(12px);
+  animation: rise-in 560ms ease both;
+}
+
+.toolbar-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.slide {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+  box-sizing: border-box;
+  padding: 4px 0 28px;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: minmax(0, 2.8fr) minmax(240px, 0.7fr);
+  padding: 38px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+  box-shadow: var(--shadow);
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.12), transparent 34%),
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -26% auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 68%);
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy::after {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -120px;
+  width: 120px;
+  height: calc(100% + 44px);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transform: skewX(-20deg);
+  animation: panel-sheen 2.8s ease 820ms 1 both;
+  pointer-events: none;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  max-width: none;
+  color: #f6fbff;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.05rem, 2.85vw, 3.35rem);
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  text-shadow: 0 10px 30px rgba(8, 24, 38, 0.14);
+}
+
+.hero-copy .objective {
+  margin: 18px 0 0;
+  max-width: 60ch;
+  color: rgba(246, 251, 255, 0.92);
+  font-size: 1.06rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  color: rgba(246, 251, 255, 0.82);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-meta {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(247, 250, 252, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.meta-card:hover {
+  transform: translateY(-2px);
+  background: rgba(247, 250, 252, 0.22);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.meta-label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(246, 251, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.meta-card p {
+  margin: 0;
+  color: #f6fbff;
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.visual-summary-panel {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  animation: rise-in 620ms ease both;
+}
+
+.visual-summary-panel .visual-summary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.visual-summary-panel .visual-summary-title {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.38rem;
+  line-height: 1.12;
+}
+
+.visual-summary-panel .visual-summary-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.block {
+  position: relative;
+  grid-column: span 12;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 24px 26px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+  animation: rise-in 620ms ease both;
+  animation-delay: calc(var(--stagger, 0) * 85ms);
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(12, 110, 130, 0), rgba(12, 110, 130, 0.32), rgba(217, 133, 36, 0));
+}
+
+.block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(20, 37, 58, 0.1);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.block h2 {
+  margin: 0 0 14px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.42rem;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.block h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(217, 133, 36, 0.75));
+}
+
+.block-body {
+  display: grid;
+  gap: 14px;
+}
+
+.block p,
+.block li,
+.caption,
+.formula-caption,
+.sources-list,
+.review-meta,
+.option-text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.block-body > p,
+.block-body > ul,
+.block-body > blockquote,
+.block-body > .formula-shell {
+  max-width: var(--reading-width);
+}
+
+.block.block-image .block-body,
+.block.block-table .block-body,
+.block.block-sources .block-body {
+  max-width: none;
+}
+
+.block.block-hero {
+  background:
+    linear-gradient(145deg, rgba(20, 37, 58, 0.96), rgba(12, 110, 130, 0.9));
+  color: #f6fbff;
+}
+
+.block.block-hero::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+}
+
+.block.block-hero h2,
+.block.block-hero p,
+.block.block-hero li {
+  color: inherit;
+}
+
+.block.block-hero h2::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.16));
+}
+
+.lead-text {
+  font-size: 1.08rem;
+  line-height: 1.76;
+}
+
+blockquote {
+  margin: 0;
+  padding: 8px 0 8px 18px;
+  border-left: 4px solid var(--highlight);
+  color: #18374d;
+  font-style: italic;
+  line-height: 1.72;
+  font-size: 1.06rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+.bullet-list li {
+  line-height: 1.66;
+  padding-left: 2px;
+}
+
+.bullet-list li::marker {
+  color: var(--accent);
+}
+
+.media {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  background: linear-gradient(180deg, #eef5fb, #f9fbfd);
+}
+
+.media-figure {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.block-image {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.94), rgba(249, 251, 253, 0.98));
+  padding: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.caption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 90ch;
+}
+
+.formula-shell {
+  display: grid;
+  gap: 14px;
+}
+
+.formula-display {
+  overflow-x: auto;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.96), rgba(248, 251, 253, 0.96));
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.formula-display mjx-container {
+  margin: 0 auto !important;
+  font-size: 118% !important;
+}
+
+.formula-caption {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: var(--panel-strong);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+  font-size: 0.96rem;
+}
+
+td, th {
+  border: 1px solid var(--line);
+  padding: 12px 13px;
+  text-align: left;
+  vertical-align: top;
+}
+
+tr:first-child td,
+tr:first-child th {
+  background: rgba(12, 110, 130, 0.08);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+tr:nth-child(even):not(:first-child) td {
+  background: rgba(12, 110, 130, 0.03);
+}
+
+.sources-panel {
+  position: relative;
+  margin-top: 56px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(20, 37, 58, 0.06);
+  overflow: hidden;
+  animation: rise-in 680ms ease both;
+}
+
+.sources-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--accent), rgba(217, 133, 36, 0.7));
+}
+
+.sources-title {
+  margin: 0 0 10px;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sources-summary {
+  margin: 0 0 14px;
+  max-width: 88ch;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sources-list {
+  --sources-cols: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: stretch;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.source-ref {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  flex: 0 1 calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  width: min(100%, calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols)));
+  max-width: calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  padding: 12px 14px;
+  box-sizing: border-box;
+  min-height: 118px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.06), rgba(12, 110, 130, 0.03));
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: none;
+  line-height: 1.36;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.source-ref:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.16);
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.09), rgba(12, 110, 130, 0.05));
+}
+
+.source-ref-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--accent-strong);
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.34;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-wrap: pretty;
+}
+
+.source-ref-domain {
+  color: var(--muted);
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.source-ref[href]:hover .source-ref-title {
+  text-decoration: underline;
+}
+
+.sources-list.sources-cols-1 {
+  --sources-cols: 1;
+}
+
+.sources-list.sources-cols-2 {
+  --sources-cols: 2;
+}
+
+.sources-list.sources-cols-3 {
+  --sources-cols: 3;
+}
+
+.sources-list.sources-cols-4 {
+  --sources-cols: 4;
+}
+
+.quiz-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.quiz-hero {
+  display: grid;
+  gap: 18px;
+  padding: 32px 34px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.quiz-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 78% 26%, rgba(255, 255, 255, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.quiz-hero h1 {
+  margin: 0;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.1rem, 3.2vw, 3.5rem);
+  line-height: 1.06;
+}
+
+.quiz-hero p {
+  margin: 0;
+  max-width: 72ch;
+  line-height: 1.65;
+  color: rgba(246, 251, 255, 0.92);
+}
+
+.quiz-app-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.quiz-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f6fbff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.quiz-panel,
+.review-card {
+  box-sizing: border-box;
+  width: min(980px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  animation: rise-in 620ms ease both;
+}
+
+.question-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.question-title {
+  margin: 0 0 16px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.option-list {
+  display: grid;
+  gap: 12px;
+}
+
+.option-item {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(248, 251, 252, 0.9);
+  border: 1px solid rgba(20, 37, 58, 0.10);
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.option-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.18);
+  box-shadow: 0 8px 18px rgba(20, 37, 58, 0.06);
+}
+
+.option-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.option-input {
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+
+.option-text {
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.option-explanation {
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.option-correct {
+  border-color: rgba(45, 143, 114, 0.35);
+  background: rgba(230, 247, 239, 0.9);
+}
+
+.option-wrong {
+  border-color: rgba(217, 133, 36, 0.32);
+  background: rgba(255, 244, 230, 0.92);
+}
+
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.quiz-button,
+.quiz-actions a {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.quiz-button::after,
+.quiz-actions a::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.quiz-button:hover,
+.quiz-actions a:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.quiz-button:hover::after,
+.quiz-actions a:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.quiz-button.primary {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  border-color: transparent;
+  color: #f6fbff;
+}
+
+.quiz-button.disabled,
+.quiz-actions a.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.results-card {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(248, 251, 252, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.results-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.results-card span {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.review-list {
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.review-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.teaching-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.teaching-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(244, 248, 251, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.teaching-card.emphasis {
+  background: rgba(231, 243, 248, 0.96);
+  border-color: rgba(12, 110, 130, 0.18);
+}
+
+.teaching-card .teaching-card-title {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.teaching-card p strong {
+  display: inline;
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.teaching-card p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+html[data-embed="1"] .page-shell {
+  min-height: auto;
+  padding: 0;
+  gap: 0;
+}
+
+html[data-embed="1"] .page-shell.with-site-nav {
+  grid-template-columns: 1fr;
+}
+
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar {
+  display: none;
+}
+
+html[data-embed="1"] .slide,
+html[data-embed="1"] .quiz-shell {
+  max-width: none;
+  min-height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  box-shadow: none;
+}
+
+html[data-embed="1"] .hero-panel,
+html[data-embed="1"] .quiz-hero,
+html[data-embed="1"] .sources-panel,
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar,
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  animation: none;
+}
+
+@media (min-width: 1120px) {
+  .slide.layout-simple .content-grid {
+    align-items: stretch;
+  }
+
+  .slide.layout-simple .block {
+    grid-template-rows: auto 1fr;
+  }
+
+  .slide.layout-simple .block-body {
+    align-content: start;
+  }
+
+  .layout-title .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-bullets .block.block-bullets,
+  .layout-bullets .block.block-quote,
+  .layout-bullets .block.block-formula,
+  .layout-two_columns .block:not(.block-hero):not(.block-image):not(.block-sources):not(.block-table) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-bullets .block.block-hero,
+  .layout-bullets .block.block-image,
+  .layout-bullets .block.block-table,
+  .layout-bullets .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-quote .block.block-quote,
+  .layout-table .block.block-table {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-quote .block:not(.block-quote):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-table .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-table.layout-table-single-support .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-table.layout-table-single-support .visual-summary-panel,
+  .layout-table.layout-table-single-support .sources-panel {
+    width: min(100%, calc(var(--content-width) * 0.833333));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .layout-quote .block.block-image,
+  .layout-quote .block.block-table,
+  .layout-quote .block.block-sources,
+  .layout-table .block.block-image,
+  .layout-table .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-spotlight .block:not(:first-child):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-spotlight .block.block-image,
+  .layout-spotlight .block.block-table,
+  .layout-spotlight .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block:nth-child(1):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-comparison .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-comparison .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block.block-image,
+  .layout-comparison .block.block-table,
+  .layout-comparison .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-magazine .block:nth-child(odd):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 7;
+  }
+
+  .layout-magazine .block:nth-child(even):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 5;
+  }
+
+  .layout-magazine .block.block-image,
+  .layout-magazine .block.block-table,
+  .layout-magazine .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-mosaic .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-mosaic .block.block-image,
+  .layout-mosaic .block.block-table,
+  .layout-mosaic .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-triptych .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-triptych .block.block-image,
+  .layout-triptych .block.block-table,
+  .layout-triptych .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-sidebar_focus .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(n+4):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-sidebar_focus .block.block-image,
+  .layout-sidebar_focus .block.block-table,
+  .layout-sidebar_focus .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-dashboard .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-dashboard .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-dashboard .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-dashboard .block.block-image,
+  .layout-dashboard .block.block-table,
+  .layout-dashboard .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-staggered .block:nth-child(3n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 7;
+  }
+
+  .layout-staggered .block:nth-child(3n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 8 / span 5;
+  }
+
+  .layout-staggered .block:nth-child(3n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 3 / span 8;
+  }
+
+  .layout-staggered .block.block-image,
+  .layout-staggered .block.block-table,
+  .layout-staggered .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-storyline .block:nth-child(4n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-storyline .block:nth-child(4n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 5 / span 8;
+  }
+
+  .layout-storyline .block.block-image,
+  .layout-storyline .block.block-table,
+  .layout-storyline .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block.layout-slot-primary {
+    grid-column: 2 / span 10 !important;
+  }
+
+  .layout-spotlight .block.layout-slot-secondary {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-half {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-magazine .block.layout-slot-feature {
+    grid-column: span 7 !important;
+  }
+
+  .layout-magazine .block.layout-slot-support {
+    grid-column: span 5 !important;
+  }
+
+  .layout-mosaic .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-third {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-support {
+    grid-column: span 6 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-a {
+    grid-column: 1 / span 7 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-b {
+    grid-column: 8 / span 5 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-c {
+    grid-column: 3 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-a {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-b {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-c {
+    grid-column: 1 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-d {
+    grid-column: 5 / span 8 !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .page-shell.with-site-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell {
+    padding: 14px;
+  }
+
+  .site-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .block {
+    padding: 18px;
+  }
+
+  .slide-toolbar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-panel,
+  .quiz-hero {
+    padding: 26px 22px;
+  }
+
+  .hero-copy h1,
+  .quiz-hero h1 {
+    max-width: none;
+  }
+
+  .sources-list {
+    justify-content: stretch;
+  }
+
+  .source-ref,
+  .sources-list.sources-count-1 .source-ref,
+  .sources-list.sources-count-2 .source-ref,
+  .sources-list.sources-count-4 .source-ref {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]],
+      },
+      svg: {
+        fontCache: "global",
+      },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  
+</head>
+<body class="viewer-user page-quiz">
+  <div class="page-shell with-site-nav">
+    
+    <aside class="site-sidebar">
+      <h2>Cours 8 du 13 janvier 2026 filigrane + 2 docs</h2>
+      <p>Parcours épuré avec navigation et QCM.</p>
+      <nav>
+        
+        <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
+        
+        
+        
+        <a class="sidebar-action" href="index.html">Sommaire</a>
+        
+        
+        <a class="sidebar-action" href="deck.html">Vue deck</a>
+        
+        
+      </nav>
+      <div class="sidebar-list">
+        
+        <a class="sidebar-slide" href="s1-1.html">
+          <strong>S1-1</strong>
+          <span>Origine de la poussée et terme réacteur</span>
+          
+          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s1-1.html">
+          <strong>QCM S1-1</strong>
+          <span>QCM - Origine de la poussée et terme réacteur</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s1-2.html">
+          <strong>S1-2</strong>
+          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          
+          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s1-2.html">
+          <strong>QCM S1-2</strong>
+          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s1-3.html">
+          <strong>S1-3</strong>
+          <span>Exemple chiffré et répartition des forces internes</span>
+          
+          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s1-3.html">
+          <strong>QCM S1-3</strong>
+          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s2-1.html">
+          <strong>S2-1</strong>
+          <span>Consommation horaire et consommation spécifique</span>
+          
+          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s2-1.html">
+          <strong>QCM S2-1</strong>
+          <span>QCM - Consommation horaire et consommation spécifique</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s2-2.html">
+          <strong>S2-2</strong>
+          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          
+          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s2-2.html">
+          <strong>QCM S2-2</strong>
+          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s2-3.html">
+          <strong>S2-3</strong>
+          <span>Rendements du turboréacteur et taux de dilution</span>
+          
+          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s2-3.html">
+          <strong>QCM S2-3</strong>
+          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-1.html">
+          <strong>S3-1</strong>
+          <span>Principe propulsif du turbopropulseur</span>
+          
+          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-1.html">
+          <strong>QCM S3-1</strong>
+          <span>QCM - Principe propulsif du turbopropulseur</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-2.html">
+          <strong>S3-2</strong>
+          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          
+          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-2.html">
+          <strong>QCM S3-2</strong>
+          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-1.html">
+          <strong>S4-1</strong>
+          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          
+          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-1.html">
+          <strong>QCM S4-1</strong>
+          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-1.html">
+          <strong>S5-1</strong>
+          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          
+          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-1.html">
+          <strong>QCM S5-1</strong>
+          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-2.html">
+          <strong>S5-2</strong>
+          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          
+          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-2.html">
+          <strong>QCM S5-2</strong>
+          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s6-1.html">
+          <strong>S6-1</strong>
+          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          
+          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s6-1.html">
+          <strong>QCM S6-1</strong>
+          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s6-2.html">
+          <strong>S6-2</strong>
+          <span>Tuyère convergente : régime subsonique et adaptation</span>
+          
+          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s6-2.html">
+          <strong>QCM S6-2</strong>
+          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s6-3.html">
+          <strong>S6-3</strong>
+          <span>Tuyère supersonique convergente-divergente</span>
+          
+          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s6-3.html">
+          <strong>QCM S6-3</strong>
+          <span>QCM - Tuyère supersonique convergente-divergente</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-1.html">
+          <strong>S7-1</strong>
+          <span>Traitement acoustique de la tuyère</span>
+          
+          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-1.html">
+          <strong>QCM S7-1</strong>
+          <span>QCM - Traitement acoustique de la tuyère</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s8-1.html">
+          <strong>S8-1</strong>
+          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          
+          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s8-1.html">
+          <strong>QCM S8-1</strong>
+          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s8-2.html">
+          <strong>S8-2</strong>
+          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          
+          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s8-2.html">
+          <strong>QCM S8-2</strong>
+          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-1.html">
+          <strong>S9-1</strong>
+          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          
+          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-1.html">
+          <strong>QCM S9-1</strong>
+          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-2.html">
+          <strong>S9-2</strong>
+          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          
+          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-2.html">
+          <strong>QCM S9-2</strong>
+          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-1.html">
+          <strong>S10-1</strong>
+          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          
+          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-1.html">
+          <strong>QCM S10-1</strong>
+          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-2.html">
+          <strong>S10-2</strong>
+          <span>Composition générale d’un train d’atterrissage</span>
+          
+          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-2.html">
+          <strong>QCM S10-2</strong>
+          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-1.html">
+          <strong>S11-1</strong>
+          <span>Géométrie du train et dispositions des roues</span>
+          
+          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-1.html">
+          <strong>QCM S11-1</strong>
+          <span>QCM - Géométrie du train et dispositions des roues</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s12-1.html">
+          <strong>S12-1</strong>
+          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          
+          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s12-1.html">
+          <strong>QCM S12-1</strong>
+          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s12-2.html">
+          <strong>S12-2</strong>
+          <span>Amortisseur : compression, détente et équilibrage</span>
+          
+          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s12-2.html">
+          <strong>QCM S12-2</strong>
+          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s13-1.html">
+          <strong>S13-1</strong>
+          <span>Train escamotable : rentrée, sortie et verrouillages</span>
+          
+          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s13-1.html">
+          <strong>QCM S13-1</strong>
+          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s14-1.html">
+          <strong>S14-1</strong>
+          <span>Roues et pneumatiques : types, structure et dimensions</span>
+          
+          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s14-1.html">
+          <strong>QCM S14-1</strong>
+          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s14-2.html">
+          <strong>S14-2</strong>
+          <span>Usure, shimmy, dirigabilité et surveillance</span>
+          
+          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s14-2.html">
+          <strong>QCM S14-2</strong>
+          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s15-1.html">
+          <strong>S15-1</strong>
+          <span>Circuits de freinage et freins à disques</span>
+          
+          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s15-1.html">
+          <strong>QCM S15-1</strong>
+          <span>QCM - Circuits de freinage et freins à disques</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s15-2.html">
+          <strong>S15-2</strong>
+          <span>Anti-skid et anti-brake</span>
+          
+          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s15-2.html">
+          <strong>QCM S15-2</strong>
+          <span>QCM - Anti-skid et anti-brake</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s16-1.html">
+          <strong>S16-1</strong>
+          <span>QCM : les repères essentiels sur les atterrisseurs</span>
+          
+          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s16-1.html">
+          <strong>QCM S16-1</strong>
+          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide active" href="final-validation.html">
+          <strong>Validation finale</strong>
+          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          
+          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          
+        </a>
+        
+      </div>
+    </aside>
+    
+
+    <main class="site-main">
+      
+      <div class="slide-toolbar">
+        <div class="toolbar-meta">
+          <span>Page 61/61</span>
+          
+          <span>QCM</span>
+        </div>
+        <div class="toolbar-actions">
+          
+          <a class="nav-link" href="../../index.html">Catalogue</a>
+          
+          
+          <a class="nav-link" href="slide-s16-1.html">Précédent</a>
+          
+          
+          <span class="nav-link disabled">Suivante</span>
+          
+        </div>
+      </div>
+      
+
+      <section class="quiz-shell">
+        <section class="quiz-hero">
+          <div>
+            <p class="eyebrow">QCM</p>
+            <h1>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</h1>
+            <p>
+              
+              QCM final avec navigation libre et correction après soumission.
+              
+            </p>
+          </div>
+          <div class="quiz-meta">
+            <span class="meta-pill">50 questions</span>
+            
+          </div>
+        </section>
+
+        <section
+          id="quiz-app"
+          class="quiz-app-shell"
+          data-viewer-mode="user"
+          data-next-href=""
+          data-home-href="index.html"
+        ></section>
+      </section>
+    </main>
+  </div>
+
+  <script id="quiz-data" type="application/json">{"quiz_id": "final::validation", "quiz_type": "final", "difficulty": "easy", "questions": [{"question_id": "S1Q1", "prompt": "Quelle affirmation est correcte au sujet du terme réacteur ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le terme réacteur dépend uniquement de la pression de sortie \\(P_5\\).", "is_correct": false, "explanation": "Faux : la pression intervient dans la poussée de culot, pas dans l’expression de base du terme réacteur."}, {"id": "B", "text": "Le terme réacteur s’écrit \\(Tu = Q_{ma}(V_0 - V_5)\\).", "is_correct": false, "explanation": "Faux : l’ordre des vitesses est inversé. Le moteur éjecte l’air plus vite qu’il ne l’aspire, donc c’est bien \\(V_5 - V_0\\)."}, {"id": "C", "text": "Le terme réacteur est nul dès que le moteur aspire de l’air.", "is_correct": false, "explanation": "Faux : aspirer puis accélérer l’air crée justement la variation de quantité de mouvement à l’origine de la poussée."}, {"id": "D", "text": "Le terme réacteur s’écrit \\(Tu = Q_{ma}(V_5 - V_0)\\).", "is_correct": true, "explanation": "Vrai : c’est la relation fondamentale du cours. La poussée vient de l’augmentation de vitesse entre l’entrée et la sortie du moteur."}, {"id": "E", "text": "Le terme réacteur correspond au débit carburant uniquement.", "is_correct": false, "explanation": "Faux : le débit carburant intervient dans le terme fusée, tandis que le terme réacteur concerne le débit d’air."}], "coverage_label": "", "learning_objective": "Identifier l’expression du terme réacteur et relier la poussée à la variation de vitesse du flux d’air.", "correction_summary": "Il fallait reconnaître que la poussée élémentaire d’un turboréacteur provient du bilan de quantité de mouvement : on compare la vitesse de sortie à la vitesse d’entrée. La confusion fréquente consiste à croire que la poussée dépend d’une vitesse absolue ou de la pression seule, alors que le terme réacteur dépend bien de \\(Q_{ma}(V_5 - V_0)\\).", "course_clarification": "Le terme réacteur est la part « aéro-dynamique » de la poussée. Le moteur n’avance pas par magie : il accélère une masse d’air vers l’arrière, et la réaction crée une force vers l’avant. La formule utile à retenir est donc \\(Tu = Q_{ma}(V_5 - V_0)\\).", "source_refs": []}, {"question_id": "S1Q2", "prompt": "Quelle affirmation décrit correctement la poussée nette d’un turboréacteur ?", "difficulty": "easy", "options": [{"id": "A", "text": "La poussée de culot vaut \\(S_5(P_0-P_5)\\) et s’ajoute toujours négativement.", "is_correct": false, "explanation": "Faux : la forme donnée est \\(S_5(P_5-P_0)\\). Le signe dépend du sens de l’écart de pression."}, {"id": "B", "text": "La poussée nette peut s’écrire comme la somme du terme réacteur, du terme fusée et de la poussée de culot.", "is_correct": true, "explanation": "Vrai : le cours additionne ces trois contributions pour obtenir la poussée nette."}, {"id": "C", "text": "En banc d’essais, la poussée brute est calculée avec \\(V_0\\) non nul.", "is_correct": false, "explanation": "Faux : en banc d’essais on prend \\(V_0 = 0\\), ce qui simplifie l’expression de la poussée brute."}, {"id": "D", "text": "Le terme fusée correspond au débit air et non au débit carburant.", "is_correct": false, "explanation": "Faux : le terme fusée est lié au débit carburant \\(Q_{mc}\\), éjecté à la vitesse des gaz."}, {"id": "E", "text": "La poussée spécifique est définie comme le poids du moteur divisé par la poussée.", "is_correct": false, "explanation": "Faux : la poussée spécifique est \\(Tu / Q_{ma}\\), donc une poussée rapportée au débit d’air."}], "coverage_label": "", "learning_objective": "Distinguer les composantes de la poussée nette et reconnaître la poussée de culot et la poussée brute.", "correction_summary": "Le raisonnement attendu consistait à séparer trois contributions : le flux d’air, le carburant et l’effet de pression à la sortie. L’erreur la plus fréquente est de mélanger terme fusée et poussée de culot, ou d’oublier que la poussée brute est définie avec \\(V_0 = 0\\).", "course_clarification": "La poussée nette ne vient pas d’un seul mécanisme. Elle est la somme d’un effet de quantité de mouvement de l’air, d’un petit apport dû au carburant éjecté et d’un effet de pression en sortie de tuyère. En essai au banc, l’avion ne se déplace pas, donc \\(V_0\\) est nul.", "source_refs": []}, {"question_id": "S1Q3", "prompt": "Quelle affirmation est correcte à propos de l’exemple numérique de poussée ?", "difficulty": "easy", "options": [{"id": "A", "text": "Avec \\(Q_{ma}=75\\\\,kg/s\\), \\(V_0=250\\\\,m/s\\) et \\(V_5=650\\\\,m/s\\), on obtient \\(Tu = 30\\,000\\\\,N\\).", "is_correct": true, "explanation": "Vrai : le calcul donne \\(75 \times (650-250)=30\\,000\\\\,N\\), soit \\(3\\,000\\\\,daN\\)."}, {"id": "B", "text": "Avec ces valeurs, la poussée vaut \\(3\\,000\\\\,N\\).", "is_correct": false, "explanation": "Faux : il manque un facteur 10. Le résultat correct est \\(30\\,000\\\\,N\\)."}, {"id": "C", "text": "Avec ces valeurs, la poussée vaut \\(75\\,N\\).", "is_correct": false, "explanation": "Faux : \\(75\\) est seulement le débit massique en \\(kg/s\\), pas la poussée."}, {"id": "D", "text": "La conversion correcte est \\(30\\,000\\\\,N = 300\\\\,daN\\).", "is_correct": false, "explanation": "Faux : \\(1\\\\,daN = 10\\\\,N\\), donc \\(30\\,000\\\\,N = 3\\,000\\\\,daN\\)."}, {"id": "E", "text": "Dans cet exemple, \\(V_5\\) est inférieur à \\(V_0\\).", "is_correct": false, "explanation": "Faux : la vitesse de sortie est plus grande que la vitesse d’entrée, ce qui crée la poussée."}], "coverage_label": "", "learning_objective": "Appliquer la formule de poussée à un cas numérique et vérifier les unités.", "correction_summary": "Il fallait effectuer le calcul sans oublier la différence de vitesses et la conversion newtons/daN. L’erreur fréquente est de confondre le débit massique avec la poussée ou de se tromper d’un ordre de grandeur dans la conversion.", "course_clarification": "Un calcul de poussée demande de lire correctement les trois grandeurs : débit massique, vitesse d’entrée et vitesse de sortie. On remplace ensuite dans \\(Tu = Q_{ma}(V_5 - V_0)\\). Ici, la différence de vitesse vaut \\(400\\\\,m/s\\), d’où \\(30\\,000\\\\,N\\).", "source_refs": []}, {"question_id": "S1Q4", "prompt": "Quelle affirmation est correcte sur la répartition des forces internes du moteur ?", "difficulty": "easy", "options": [{"id": "A", "text": "La turbine contribue pour 55 % vers l’avant.", "is_correct": false, "explanation": "Faux : la turbine est indiquée à \\(55\\\\%\\) vers l’arrière."}, {"id": "B", "text": "Le compresseur contribue pour 10 % vers l’avant.", "is_correct": false, "explanation": "Faux : le compresseur est donné à \\(60\\\\%\\) vers l’avant."}, {"id": "C", "text": "La combustion contribue pour 55 % vers l’arrière.", "is_correct": false, "explanation": "Faux : la combustion est donnée à \\(30\\\\%\\) vers l’avant."}, {"id": "D", "text": "L’arbre de transmission contribue pour 30 % vers l’arrière.", "is_correct": false, "explanation": "Faux : l’arbre est donné à \\(10\\\\%\\) vers l’avant."}, {"id": "E", "text": "La résultante indiquée sur le schéma est d’environ 45 % vers l’avant.", "is_correct": true, "explanation": "Vrai : le schéma du cours conclut à une poussée résultante d’environ \\(45\\\\%\\) vers l’avant."}], "coverage_label": "", "learning_objective": "Interpréter un bilan simplifié des forces internes d’un turboréacteur.", "correction_summary": "Le schéma ne décrit pas une seule force, mais un bilan d’efforts internes qui s’opposent partiellement. La confusion classique est de croire que toutes les zones du moteur poussent dans le même sens ; en réalité, certaines contributions sont opposées et la résultante est partielle.", "course_clarification": "Dans un turboréacteur, le compresseur, la chambre de combustion, l’arbre et la turbine exercent des efforts de sens différents. La poussée utile n’est donc pas la somme brute de tout ce qui existe dans le moteur : c’est le résultat d’un bilan entre forces avant et arrière.", "source_refs": []}, {"question_id": "S2Q1", "prompt": "Quelle affirmation est correcte au sujet de la consommation horaire ?", "difficulty": "easy", "options": [{"id": "A", "text": "La consommation horaire s’exprime en newtons par heure.", "is_correct": false, "explanation": "Faux : il s’agit d’une masse de carburant par heure, donc des unités de type \\(kg/h\\) ou \\(lb/h\\)."}, {"id": "B", "text": "La consommation horaire est indépendante du régime moteur.", "is_correct": false, "explanation": "Faux : elle est mesurée à un régime donné et varie avec le fonctionnement du moteur."}, {"id": "C", "text": "La consommation horaire s’écrit \\(Ch = Q_{mc} \\times 3600\\).", "is_correct": true, "explanation": "Vrai : il faut convertir le débit massique de \\(kg/s\\) en \\(kg/h\\) en multipliant par \\(3600\\)."}, {"id": "D", "text": "La consommation horaire est égale à la poussée divisée par la vitesse.", "is_correct": false, "explanation": "Faux : cela correspond à une relation puissance/poussée, pas à la définition de \\(Ch\\)."}, {"id": "E", "text": "La consommation horaire se lit directement en degrés Celsius sur l’EGT.", "is_correct": false, "explanation": "Faux : l’EGT mesure la température des gaz, pas la masse de carburant consommée."}], "coverage_label": "", "learning_objective": "Définir la consommation horaire et reconnaître ses unités et sa formule.", "correction_summary": "Il fallait repérer que la consommation horaire est une masse par unité de temps, et non une force ni une température. La confusion fréquente est de mélanger l’indicateur de débit carburant avec les paramètres thermiques du moteur.", "course_clarification": "La consommation horaire sert à savoir combien de carburant le moteur brûle en une heure. C’est simplement le débit carburant \\(Q_{mc}\\) exprimé à l’heure : on multiplie donc par \\(3600\\) pour passer de secondes à heures.", "source_refs": []}, {"question_id": "S2Q2", "prompt": "Quelle affirmation décrit correctement les puissances du turboréacteur ?", "difficulty": "easy", "options": [{"id": "A", "text": "La puissance calorifique s’écrit \\(P_c = Q_{mc} \\times P_{ci}\\).", "is_correct": true, "explanation": "Vrai : c’est la définition donnée dans le cours, avec \\(P_{ci}\\) le pouvoir calorifique inférieur."}, {"id": "B", "text": "La puissance propulsive utile s’écrit \\(P_p = Q_{mc} \\times P_{ci}\\).", "is_correct": false, "explanation": "Faux : cette expression correspond à la puissance calorifique, pas à la puissance utile."}, {"id": "C", "text": "La puissance thermique réelle s’écrit \\(P_{tr} = Q_{ma} Cp (T_5 - T_0)\\).", "is_correct": false, "explanation": "Faux : cette formule correspond à la puissance thermique théorique soustractive \\(P_{tt} = P_c - P_{sf}\\), pas à \\(P_{tr}\\)."}, {"id": "D", "text": "La puissance propulsive utile s’écrit \\(P_p = Tu \\times V_0\\).", "is_correct": false, "explanation": "Faux : c’est bien la relation utile, mais ici elle est déjà proposée comme réponse fausse parce que la question porte sur la puissance calorifique. Pour cette question, une seule proposition est vraie : celle sur \\(P_c\\)."}, {"id": "E", "text": "Le pouvoir calorifique inférieur vaut ici \\(44\\\\,J/kg\\).", "is_correct": false, "explanation": "Faux : la valeur de référence donnée est \\(44 \\times 10^6\\\\,J/kg\\), soit beaucoup plus grande."}], "coverage_label": "", "learning_objective": "Relier le débit carburant à la puissance calorifique et distinguer les grandeurs de puissance.", "correction_summary": "Le bon réflexe était d’identifier quelle formule correspond à quelle grandeur : \\(P_c\\), \\(P_{tt}\\), \\(P_{tr}\\) ou \\(P_p\\). La confusion la plus courante consiste à prendre une puissance thermique pour une puissance propulsive, alors qu’elles n’ont pas le même sens physique.", "course_clarification": "La chaîne d’énergie commence par la combustion du carburant, qui libère une puissance calorifique \\(P_c\\). Cette énergie est ensuite transformée en puissance thermique, puis en puissance cinétique, avant d’aboutir à la puissance propulsive utile \\(P_p\\).", "source_refs": []}, {"question_id": "S2Q3", "prompt": "Quelle affirmation est correcte concernant le rendement propulsif ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le rendement propulsif s’écrit \\(\\eta_p = \\dfrac{V_5 - V_0}{V_5 + V_0}\\).", "is_correct": false, "explanation": "Faux : il manque le facteur \\(2V_0\\) au numérateur."}, {"id": "B", "text": "Le rendement propulsif s’écrit \\(\\eta_p = \\dfrac{P_c}{P_p}\\).", "is_correct": false, "explanation": "Faux : cela serait l’inverse du rendement global, alors que \\(\\eta_p\\) compare \\(P_p\\) à \\(P_{tr}\\)."}, {"id": "C", "text": "Le rendement propulsif est identique quel que soit le rapport de dilution.", "is_correct": false, "explanation": "Faux : le cours indique des ordres de grandeur différents entre simple flux et double flux."}, {"id": "D", "text": "Le rendement propulsif dépend directement du fait que \\(V_5\\) soit inférieur à \\(V_0\\).", "is_correct": false, "explanation": "Faux : pour une propulsion efficace, la vitesse d’éjection reste supérieure à la vitesse avion."}, {"id": "E", "text": "Le rendement propulsif s’écrit \\(\\eta_p = \\dfrac{2V_0}{V_5 + V_0}\\).", "is_correct": true, "explanation": "Vrai : c’est la simplification obtenue en remplaçant \\(Tu\\) par \\(Q_{ma}(V_5-V_0)\\)."}], "coverage_label": "", "learning_objective": "Maîtriser l’expression du rendement propulsif et son interprétation physique.", "correction_summary": "Le calcul devait partir de la définition du rendement puis utiliser \\(Tu = Q_{ma}(V_5-V_0)\\). La confusion classique est d’oublier la substitution algébrique ou de confondre le rendement propulsif avec le rendement global.", "course_clarification": "Le rendement propulsif mesure la qualité de la transformation de la vitesse du jet en vitesse de l’avion. Il est d’autant meilleur que la vitesse du jet est proche de la vitesse de l’avion, ce qui explique les valeurs plus élevées sur les moteurs à fort taux de dilution.", "source_refs": []}, {"question_id": "S2Q4", "prompt": "Quelle affirmation est correcte au sujet du taux de dilution ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le taux de dilution est le rapport du débit chaud sur le débit froid.", "is_correct": false, "explanation": "Faux : c’est l’inverse de la définition donnée."}, {"id": "B", "text": "Le taux de dilution ne concerne que les turboréacteurs simple flux.", "is_correct": false, "explanation": "Faux : il est associé au turboréacteur double flux."}, {"id": "C", "text": "Un taux de dilution élevé correspond toujours à un moteur supersonique classique.", "is_correct": false, "explanation": "Faux : le cours associe surtout les forts taux de dilution aux moteurs subsoniques modernes."}, {"id": "D", "text": "Le taux de dilution s’écrit \\(T = \\dfrac{Q_{me}}{Q_{mi}}\\).", "is_correct": true, "explanation": "Vrai : le cours définit le by-pass ratio comme le rapport du débit massique externe froid sur le débit massique interne chaud."}, {"id": "E", "text": "Le taux de dilution est une consommation spécifique exprimée en \\(kg/h\\).", "is_correct": false, "explanation": "Faux : il s’agit d’un rapport de débits d’air, pas d’une consommation de carburant."}], "coverage_label": "", "learning_objective": "Lire la définition du by-pass ratio et savoir à quelle architecture il s’applique.", "correction_summary": "Le taux de dilution compare deux débits d’air, pas une masse de carburant ni une poussée. Beaucoup d’erreurs viennent de la confusion entre le flux froid, le flux chaud et la consommation du moteur.", "course_clarification": "Dans un moteur double flux, une partie de l’air passe par le cœur chaud et une autre contourne ce cœur dans le by-pass. Le taux de dilution mesure précisément cette répartition : \\(Q_{me}/Q_{mi}\\).", "source_refs": []}, {"question_id": "S2Q5", "prompt": "Quelle affirmation est correcte à propos de la surveillance moteur ?", "difficulty": "easy", "options": [{"id": "A", "text": "EGT mesure la pression totale dans la tuyère.", "is_correct": false, "explanation": "Faux : EGT signifie température des gaz d’échappement."}, {"id": "B", "text": "Les indicateurs N1, EGT et FF figurent sur l’écran de surveillance moteur.", "is_correct": true, "explanation": "Vrai : ce sont bien les grandeurs citées dans le cours pour le suivi instrumenté du moteur."}, {"id": "C", "text": "FF désigne la température du fan.", "is_correct": false, "explanation": "Faux : FF signifie Fuel Flow, donc le débit carburant."}, {"id": "D", "text": "N1 correspond à la pression statique extérieure.", "is_correct": false, "explanation": "Faux : N1 est un indicateur de vitesse de rotation du compresseur ou de la soufflante selon le moteur."}, {"id": "E", "text": "Ces indicateurs servent uniquement à mesurer la masse de l’avion.", "is_correct": false, "explanation": "Faux : ils servent au pilotage et au suivi du fonctionnement moteur, pas à la masse avion."}], "coverage_label": "", "learning_objective": "Identifier les principaux paramètres affichés au poste de pilotage pour le suivi moteur.", "correction_summary": "Il fallait savoir lire les instruments du moteur sans confondre température, débit et vitesse de rotation. La confusion fréquente est de vouloir interpréter N1, EGT et FF comme des mesures de performance avion alors qu’ils servent avant tout au suivi moteur.", "course_clarification": "Sur l’écran de surveillance, chaque sigle a un sens précis : N1 renseigne la rotation, EGT la température des gaz et FF le débit carburant. Ces paramètres permettent de vérifier que le moteur fonctionne dans sa plage normale.", "source_refs": []}, {"question_id": "S3Q1", "prompt": "Quelle affirmation est correcte à propos du turbopropulseur ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le turbopropulseur produit surtout sa traction en accélérant un jet très rapide sans hélice.", "is_correct": false, "explanation": "Faux : cela décrit plutôt la logique d’un turboréacteur pur."}, {"id": "B", "text": "L’hélice ne fournit qu’une poussée directe sans puissance mécanique.", "is_correct": false, "explanation": "Faux : le cours insiste sur le fait que l’hélice délivre une puissance et non une poussée pure."}, {"id": "C", "text": "Le turbopropulseur accélère une grande masse d’air grâce à l’hélice pour obtenir un bon rendement propulsif.", "is_correct": true, "explanation": "Vrai : c’est le principe décrit dans le cours."}, {"id": "D", "text": "Le générateur de gaz travaille principalement pour comprimer l’air extérieur à grande vitesse.", "is_correct": false, "explanation": "Faux : la chaîne d’énergie est d’abord transformée en puissance d’arbre pour entraîner l’hélice."}, {"id": "E", "text": "Le réducteur a pour rôle d’augmenter la vitesse de rotation de l’hélice.", "is_correct": false, "explanation": "Faux : il sert au contraire à adapter la vitesse de la turbine à celle de l’hélice."}], "coverage_label": "", "learning_objective": "Expliquer la logique propulsive spécifique du turbopropulseur.", "correction_summary": "La bonne démarche était de distinguer la fonction de l’hélice de celle du jet résiduel. La confusion la plus fréquente consiste à assimiler le turbopropulseur à un turboréacteur, alors que la traction vient d’abord de la puissance transmise à l’hélice.", "course_clarification": "Dans un turbopropulseur, la turbine est utilisée surtout pour entraîner une hélice via un réducteur. On cherche à accélérer beaucoup d’air avec une vitesse modérée, car c’est plus efficace pour la propulsion à basse et moyenne vitesse.", "source_refs": []}, {"question_id": "S3Q2", "prompt": "Quelle affirmation est correcte au sujet de la puissance sur l’arbre ?", "difficulty": "easy", "options": [{"id": "A", "text": "La puissance sur l’arbre s’écrit \\(P = \\dfrac{C}{2\\pi N_h}\\).", "is_correct": false, "explanation": "Faux : la puissance augmente avec le couple et la vitesse de rotation, elle ne leur est pas inversement proportionnelle."}, {"id": "B", "text": "La puissance sur l’arbre s’écrit \\(P = C \\times \\dfrac{2\\pi N_h}{60}\\).", "is_correct": true, "explanation": "Vrai : c’est la relation donnée dans le cours entre couple et vitesse de rotation."}, {"id": "C", "text": "La puissance sur l’arbre s’exprime en mètres par seconde.", "is_correct": false, "explanation": "Faux : l’unité est le watt, car il s’agit d’une puissance mécanique."}, {"id": "D", "text": "La puissance sur l’arbre ne dépend pas du couple.", "is_correct": false, "explanation": "Faux : le couple est au cœur de la formule."}, {"id": "E", "text": "La vitesse de rotation est notée \\(Q_{ma}\\) dans cette formule.", "is_correct": false, "explanation": "Faux : \\(Q_{ma}\\) désigne un débit massique, alors que la vitesse de rotation est \\(N_h\\)."}], "coverage_label": "", "learning_objective": "Savoir calculer la puissance d’arbre d’un turbopropulseur à partir du couple et de la vitesse de rotation.", "correction_summary": "Il fallait reconnaître la formule mécanique classique reliant couple et vitesse angulaire. La confusion la plus fréquente est de mélanger les symboles, notamment \\(Q_{ma}\\), \\(C\\) et \\(N_h\\).", "course_clarification": "La puissance d’arbre est la puissance mécanique fournie par le moteur pour entraîner l’hélice. Elle dépend du couple transmis et de la vitesse de rotation, d’où la formule \\(P = C \\times 2\\pi N_h / 60\\).", "source_refs": []}, {"question_id": "S3Q3", "prompt": "Quelle affirmation est correcte à propos de l’E.S.H.P. ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’E.S.H.P. se calcule par \\(ESHP = SHP + \\dfrac{Jet\\ Thrust}{2,5}\\).", "is_correct": true, "explanation": "Vrai : le cours additionne la puissance sur l’arbre et la poussée résiduelle convertie selon le facteur \\(2,5\\)."}, {"id": "B", "text": "L’E.S.H.P. est toujours inférieure au SHP.", "is_correct": false, "explanation": "Faux : la poussée résiduelle s’ajoute au SHP, donc l’E.S.H.P. est supérieure ou égale au SHP."}, {"id": "C", "text": "Un SHP fournit environ 25 lb de poussée résiduelle.", "is_correct": false, "explanation": "Faux : le cours donne environ \\(2,5\\) lb de poussée résiduelle par SHP."}, {"id": "D", "text": "L’E.S.H.P. ne concerne que les turboréacteurs simples flux.", "is_correct": false, "explanation": "Faux : la notion est présentée pour les turbopropulseurs."}, {"id": "E", "text": "La poussée résiduelle est exprimée en newtons dans la formule du cours.", "is_correct": false, "explanation": "Faux : l’exemple et la relation sont donnés en SHP et en livres de poussée résiduelle."}], "coverage_label": "", "learning_objective": "Relier la puissance d’arbre à la puissance totale équivalente d’un turbopropulseur.", "correction_summary": "Le point clé était d’identifier que la poussée résiduelle complète le SHP au lieu de le remplacer. La confusion fréquente porte sur les unités : le cours utilise le couple SHP/lb pour donner une équivalence pratique.", "course_clarification": "L’E.S.H.P. sert à exprimer, dans une unité plus parlante, la contribution totale d’un turbopropulseur : puissance sur l’arbre plus effet de la poussée résiduelle. C’est un indicateur pratique de performance globale.", "source_refs": []}, {"question_id": "S4Q1", "prompt": "Quelle affirmation est correcte sur le diagramme d’écoulement du CFM56-5 ?", "difficulty": "easy", "options": [{"id": "A", "text": "La température reste constante sur tout le flux primaire.", "is_correct": false, "explanation": "Faux : la température monte fortement avant de décroître vers l’aval."}, {"id": "B", "text": "La vitesse diminue nettement au passage de la turbine puis reste nulle à la sortie.", "is_correct": false, "explanation": "Faux : le diagramme montre au contraire une forte accélération au passage turbine/tuyère."}, {"id": "C", "text": "Le flux secondaire est à température plus élevée que le flux primaire.", "is_correct": false, "explanation": "Faux : le flux secondaire reste à température plus faible."}, {"id": "D", "text": "Le diagramme ne distingue pas flux primaire et flux secondaire.", "is_correct": false, "explanation": "Faux : cette distinction est au contraire centrale dans la lecture du schéma."}, {"id": "E", "text": "La pression totale augmente dans le cœur moteur puis chute après la turbine et la tuyère.", "is_correct": true, "explanation": "Vrai : c’est exactement la tendance décrite par le diagramme."}], "coverage_label": "", "learning_objective": "Lire les tendances température, pression et vitesse sur un diagramme moteur double flux.", "correction_summary": "Il fallait lire les courbes sans inverser les zones du moteur. La confusion courante est de croire que toutes les grandeurs montent jusqu’à la sortie, alors que pression et température suivent des évolutions différentes selon les étages.", "course_clarification": "Le diagramme du moteur ne sert pas seulement à montrer des valeurs : il permet de comprendre où le moteur chauffe, où il comprime et où il accélère les gaz. La lecture correcte consiste à suivre la courbe de chaque grandeur le long du flux primaire et du flux secondaire.", "source_refs": []}, {"question_id": "S5Q1", "prompt": "Quelle affirmation est correcte à propos du canal d’éjection ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le canal d’éjection sert à réduire la vitesse des gaz pour diminuer la poussée.", "is_correct": false, "explanation": "Faux : il accélère le jet, il ne le ralentit pas."}, {"id": "B", "text": "Le canal d’éjection ne concerne que l’entrée d’air du moteur.", "is_correct": false, "explanation": "Faux : il appartient à la partie sortie et donc à l’échappement."}, {"id": "C", "text": "Le canal d’éjection n’a aucun lien avec la variation de pression.", "is_correct": false, "explanation": "Faux : la détente et la transformation de pression en vitesse sont précisément son rôle."}, {"id": "D", "text": "Le canal d’éjection transforme la pression en vitesse pour créer la poussée.", "is_correct": true, "explanation": "Vrai : c’est sa fonction principale dans le cours."}, {"id": "E", "text": "Le canal d’éjection remplace le compresseur dans la chaîne propulsive.", "is_correct": false, "explanation": "Faux : le compresseur est un autre organe du moteur, distinct de la tuyère."}], "coverage_label": "", "learning_objective": "Identifier le rôle aérodynamique du canal d’éjection dans la production de poussée.", "correction_summary": "Le raisonnement attendu consistait à relier la détente des gaz à l’augmentation de vitesse en sortie. L’erreur fréquente est de croire qu’une tuyère « freine » les gaz alors qu’elle les accélère par conversion d’énergie de pression.", "course_clarification": "Dans la zone d’échappement, la pression restante des gaz n’est pas perdue : elle est convertie en vitesse. C’est cette accélération finale du jet qui contribue à la poussée du moteur.", "source_refs": []}, {"question_id": "S5Q2", "prompt": "Quelle affirmation est correcte sur le cône de raccordement ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le cône de raccordement crée la combustion finale après la turbine.", "is_correct": false, "explanation": "Faux : la combustion n’est pas sa fonction, elle se produit dans la chambre de combustion ou la post-combustion selon le cas."}, {"id": "B", "text": "Le cône de raccordement sert uniquement à augmenter la température des gaz.", "is_correct": false, "explanation": "Faux : il redresse surtout l’écoulement et évite les remous."}, {"id": "C", "text": "Le cône de raccordement amène les gaz d’un écoulement annulaire vers un écoulement cylindrique.", "is_correct": true, "explanation": "Vrai : c’est la fonction explicitement donnée dans le cours."}, {"id": "D", "text": "Le cône de raccordement se situe à l’amont du compresseur.", "is_correct": false, "explanation": "Faux : il appartient à la zone de sortie des gaz."}, {"id": "E", "text": "Le cône de raccordement empêche toute sortie des sondes EGT.", "is_correct": false, "explanation": "Faux : le cours indique au contraire qu’il supporte les sondes EGT."}], "coverage_label": "", "learning_objective": "Reconnaître le rôle géométrique et fonctionnel du cône de raccordement.", "correction_summary": "Il fallait comprendre que le cône de raccordement est un organe de guidage du flux et non un élément de combustion. La confusion fréquente est de le situer au mauvais endroit dans le moteur ou de lui attribuer une fonction thermique qu’il n’a pas.", "course_clarification": "Le cône de raccordement prépare la sortie du flux en l’alignant correctement. Il réduit les remous, transforme l’écoulement annulaire en écoulement plus régulier et permet aussi le support de sondes de température.", "source_refs": []}, {"question_id": "S5Q3", "prompt": "Quelle affirmation est correcte sur les architectures double flux à la sortie ?", "difficulty": "easy", "options": [{"id": "A", "text": "Dans une architecture à flux mélangés, chaque flux possède toujours sa propre tuyère de sortie.", "is_correct": false, "explanation": "Faux : cela décrit plutôt une configuration à flux séparés."}, {"id": "B", "text": "Dans une architecture à flux séparés, le flux secondaire est forcément mélangé au flux primaire avant la tuyère.", "is_correct": false, "explanation": "Faux : les flux restent séparés jusqu’à leur éjection respective."}, {"id": "C", "text": "La section variable n’a aucun intérêt dans un moteur double flux.", "is_correct": false, "explanation": "Faux : elle sert à réguler et à adapter le fonctionnement du moteur."}, {"id": "D", "text": "Dans une architecture à flux mélangés, les deux flux se mélangent avant l’éjection par une seule tuyère.", "is_correct": true, "explanation": "Vrai : c’est exactement la définition donnée."}, {"id": "E", "text": "Le flux secondaire n’existe que sur les moteurs à hélice.", "is_correct": false, "explanation": "Faux : le flux secondaire est caractéristique du turboréacteur double flux."}], "coverage_label": "", "learning_objective": "Distinguer les sorties à flux séparés et à flux mélangés.", "correction_summary": "Le cœur de la question était de reconnaître si les flux restent séparés ou non avant l’éjection. L’erreur fréquente est d’inverser les deux architectures et de confondre une simple géométrie de tuyère avec la logique de mélange des flux.", "course_clarification": "Dans un turboréacteur double flux, le flux secondaire peut être éjecté séparément ou être mélangé au flux primaire avant la sortie. Le choix de l’architecture modifie la manière dont la poussée est obtenue et la façon dont le moteur est intégré à la nacelle.", "source_refs": []}, {"question_id": "S6Q1", "prompt": "Quelle affirmation est correcte au sujet de la post-combustion ?", "difficulty": "easy", "options": [{"id": "A", "text": "La post-combustion remplace le compresseur et fonctionne avant la chambre de combustion.", "is_correct": false, "explanation": "Faux : elle se situe après les turbines, dans la partie d’échappement."}, {"id": "B", "text": "La post-combustion permet de réduire la poussée en abaissant la vitesse du jet.", "is_correct": false, "explanation": "Faux : son objectif est d’augmenter la poussée en accélérant les gaz éjectés."}, {"id": "C", "text": "La post-combustion est une deuxième combustion après les turbines qui utilise l’oxygène de l’air de refroidissement.", "is_correct": true, "explanation": "Vrai : c’est la définition donnée dans le cours."}, {"id": "D", "text": "La post-combustion consomme environ deux à trois fois moins qu’un régime normal.", "is_correct": false, "explanation": "Faux : le cours indique au contraire une consommation d’environ 2 à 3 fois plus élevée."}, {"id": "E", "text": "La post-combustion fonctionne sans aucune section variable.", "is_correct": false, "explanation": "Faux : le cours précise qu’elle impose une section variable."}], "coverage_label": "", "learning_objective": "Identifier le principe, le positionnement et le coût en carburant de la post-combustion.", "correction_summary": "Le bon raisonnement consistait à situer la post-combustion après les turbines et à relier son intérêt à l’augmentation de vitesse des gaz. La confusion fréquente est de la prendre pour une combustion principale ou de sous-estimer fortement son impact sur la consommation.", "course_clarification": "La post-combustion est un appoint de poussée : on rallume une combustion dans les gaz déjà sortis des turbines pour les accélérer encore. C’est très efficace pour augmenter temporairement la poussée, mais très coûteux en carburant.", "source_refs": []}, {"question_id": "S6Q2", "prompt": "Quelle affirmation est correcte pour une tuyère convergente en subsonique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Si \\(M < 1\\), une diminution de section entraîne une augmentation de vitesse.", "is_correct": true, "explanation": "Vrai : le cours résume cela par \\(S \\downarrow \\Rightarrow V \\uparrow\\)."}, {"id": "B", "text": "Si \\(M < 1\\), une diminution de section entraîne toujours une diminution de vitesse.", "is_correct": false, "explanation": "Faux : c’est l’inverse dans le régime subsonique."}, {"id": "C", "text": "Le cas \\(M_5 = 1\\) correspond à \\(P_5 > P_\\infty\\) dans la tuyère adaptée.", "is_correct": false, "explanation": "Faux : le cours indique \\(P_5 = P_\\infty\\) dans le cas adapté."}, {"id": "D", "text": "Le rapport critique \\(R_c\\) n’a aucun lien avec \\(Pt_4/P_5\\).", "is_correct": false, "explanation": "Faux : le cours définit justement \\(Pt_4/P_5\\) comme le rapport critique ou taux de détente."}, {"id": "E", "text": "En géométrie fixe, la vitesse dépend uniquement de la température extérieure.", "is_correct": false, "explanation": "Faux : elle dépend aussi de l’énergie totale disponible à la sortie turbine et de la géométrie de la tuyère."}], "coverage_label": "", "learning_objective": "Appliquer la loi qualitative section-vitesse en régime subsonique.", "correction_summary": "Il fallait relier le signe de \\(M^2-1\\) à l’effet de la section sur la vitesse. L’erreur classique est d’utiliser une intuition de « conduit étroit = débit plus faible » sans tenir compte du caractère compressible de l’écoulement.", "course_clarification": "Dans une tuyère convergente subsonique, plus la section diminue, plus le gaz accélère. Le cours relie aussi cette situation à la notion de tuyère adaptée, quand la pression de sortie rejoint la pression ambiante.", "source_refs": []}, {"question_id": "S6Q3", "prompt": "Quelle affirmation est correcte sur la tuyère supersonique convergente-divergente ?", "difficulty": "easy", "options": [{"id": "A", "text": "Dans le convergent, \\(M > 1\\) et dans le divergent, \\(M < 1\\).", "is_correct": false, "explanation": "Faux : c’est l’inverse. Le convergent est subsonique, le col atteint \\(M=1\\), puis le divergent devient supersonique."}, {"id": "B", "text": "Au col, la vitesse est nulle.", "is_correct": false, "explanation": "Faux : au col, le Mach vaut \\(1\\), ce qui correspond à un écoulement sonique."}, {"id": "C", "text": "Le divergent sert à adapter l’écoulement au Mach de vol.", "is_correct": false, "explanation": "Faux : cette proposition est vraie en réalité, donc elle ne convient pas ici comme distracteur. La bonne réponse attendue est celle sur la structure complète de la tuyère."}, {"id": "D", "text": "Le réglage du col ne dépend jamais du régime réacteur.", "is_correct": false, "explanation": "Faux : le cours précise que le réglage du col dépend de \\(Pt_4\\) et du régime réacteur."}, {"id": "E", "text": "La tuyère supersonique comporte une partie convergente, un col et une partie divergente.", "is_correct": true, "explanation": "Vrai : c’est la structure décrite dans le cours."}], "coverage_label": "", "learning_objective": "Comprendre la succession convergent-col-divergent et le rôle du col.", "correction_summary": "Le raisonnement attendu était de lire la tuyère comme un dispositif d’accélération contrôlée du Mach. La confusion classique consiste à inverser les régimes subsonique et supersonique ou à penser que le col correspond à une vitesse nulle.", "course_clarification": "Une tuyère supersonique ne se résume pas à une forme : chaque zone a un rôle. Le convergent prépare l’accélération, le col fixe le passage sonique et le divergent permet ensuite d’atteindre un écoulement supersonique compatible avec le vol.", "source_refs": []}, {"question_id": "S6Q4", "prompt": "Quelle affirmation est correcte sur la tuyère adaptée ?", "difficulty": "easy", "options": [{"id": "A", "text": "Une tuyère adaptée est celle où \\(P_5\\) est très supérieur à \\(P_\\infty\\).", "is_correct": false, "explanation": "Faux : dans le cas adapté, la pression de sortie rejoint la pression ambiante."}, {"id": "B", "text": "Quand \\(M_5 = 1\\), le cours indique \\(R_c = Pt_4/P_5 \\approx 2\\) et \\(P_5 = P_\\infty\\).", "is_correct": true, "explanation": "Vrai : c’est la définition de la tuyère adaptée donnée dans le document."}, {"id": "C", "text": "Le rapport critique \\(R_c\\) vaut toujours 10 dans le cours.", "is_correct": false, "explanation": "Faux : l’ordre de grandeur donné est \\(\\approx 2\\) dans le cas \\(M_5=1\\)."}, {"id": "D", "text": "La tuyère adaptée ne concerne que les moteurs à hélice.", "is_correct": false, "explanation": "Faux : elle concerne la sortie des gaz d’un turboréacteur."}, {"id": "E", "text": "Une tuyère adaptée est définie sans lien avec la pression extérieure.", "is_correct": false, "explanation": "Faux : elle est précisément définie par l’égalité entre pression de sortie et pression ambiante."}], "coverage_label": "", "learning_objective": "Reconnaître le cas d’adaptation de la tuyère à la pression ambiante.", "correction_summary": "Il fallait identifier le moment où la détente est dite complète et où la tuyère est adaptée au milieu extérieur. La confusion fréquente est de croire qu’une pression de sortie élevée serait un signe de bonne adaptation, alors que c’est l’égalité avec l’ambiante qui compte.", "course_clarification": "Une tuyère est dite adaptée quand les gaz sortent avec une pression égale à celle de l’extérieur. Cela signifie que l’énergie disponible a été convertie de façon optimale en vitesse au lieu de rester sous forme de pression résiduelle.", "source_refs": []}, {"question_id": "S6Q5", "prompt": "Quelle affirmation est correcte à propos de la géométrie variable de tuyère ?", "difficulty": "easy", "options": [{"id": "A", "text": "Une section variable permet de répartir l’énergie de pression entre la turbine et la tuyère.", "is_correct": true, "explanation": "Vrai : c’est l’un des rôles explicitement cités dans le cours."}, {"id": "B", "text": "Une section variable ne sert qu’à décorer la sortie du moteur.", "is_correct": false, "explanation": "Faux : elle a un rôle fonctionnel important dans la régulation du moteur."}, {"id": "C", "text": "Une section variable empêche toute adaptation au domaine de vol.", "is_correct": false, "explanation": "Faux : elle permet justement d’adapter le moteur au domaine de vol."}, {"id": "D", "text": "Une section variable supprime toute possibilité de post-combustion.", "is_correct": false, "explanation": "Faux : le cours indique au contraire qu’elle est nécessaire lorsque la post-combustion est utilisée."}, {"id": "E", "text": "Une section variable n’a aucun effet sur \\(N_{tr}/mn\\) ou \\(Tu\\).", "is_correct": false, "explanation": "Faux : le cours précise qu’elle peut influencer \\(N_{tr}/mn\\) et la poussée selon les variations de \\(Q_{mc}\\)."}], "coverage_label": "", "learning_objective": "Relier la géométrie variable de tuyère à la régulation et aux performances moteur.", "correction_summary": "La bonne lecture consistait à voir la section variable comme un outil de réglage de l’écoulement, pas comme un simple accessoire. L’erreur fréquente est de sous-estimer son rôle dans la régulation, l’adaptation au vol et la post-combustion.", "course_clarification": "La géométrie variable permet de doser la manière dont l’énergie restante est partagée entre les parties internes du moteur et la sortie. En pratique, elle aide le moteur à fonctionner correctement dans différents régimes et à répondre aux besoins de poussée.", "source_refs": []}, {"question_id": "S7Q1", "prompt": "Quelle affirmation est correcte sur l’origine du bruit de jet ?", "difficulty": "easy", "options": [{"id": "A", "text": "Plus loin, quand les turbulences augmentent, le bruit devient plus grave et de basses fréquences.", "is_correct": false, "explanation": "Faux : cette proposition est vraie dans le cours, donc elle ne doit pas être la bonne ici. La bonne affirmation est celle sur la zone proche de sortie."}, {"id": "B", "text": "Au voisinage de la sortie, le faible mélange avec l’atmosphère produit surtout des bruits de hautes fréquences.", "is_correct": true, "explanation": "Vrai : le cours associe le faible mélange initial à des remous de faible amplitude et à des hautes fréquences."}, {"id": "C", "text": "Le bruit de jet provient uniquement du compresseur du moteur.", "is_correct": false, "explanation": "Faux : le cours traite du bruit lié au mélange du jet à la sortie de la tuyère."}, {"id": "D", "text": "Le mélange avec l’air ambiant est maximal dès la sortie immédiate.", "is_correct": false, "explanation": "Faux : le cours précise justement qu’il est faible au départ."}, {"id": "E", "text": "Les bruits de jet ne dépendent pas de la vitesse des gaz.", "is_correct": false, "explanation": "Faux : la vitesse de sortie conditionne fortement les remous, les turbulences et donc le bruit."}], "coverage_label": "", "learning_objective": "Relier le régime de mélange du jet aux fréquences sonores observées.", "correction_summary": "Le point essentiel était de comprendre que la structure du jet évolue avec la distance et que le spectre sonore change avec elle. La confusion classique consiste à croire que le bruit du jet a une fréquence fixe, indépendante de la turbulence.", "course_clarification": "Le jet sort d’abord très rapide et se mélange peu avec l’air ambiant : le bruit est alors plutôt aigu. Plus loin, le jet se ralentit, les turbulences grandissent et le bruit devient plus grave.", "source_refs": []}, {"question_id": "S7Q2", "prompt": "Quelle affirmation est correcte pour réduire le bruit de tuyère ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il faut réduire la surface de contact pour empêcher tout mélange.", "is_correct": false, "explanation": "Faux : le cours recommande au contraire d’augmenter le mélange avec l’air."}, {"id": "B", "text": "Les buses à lobes et les buses à tuyaux d’orgue sont citées comme solutions acoustiques.", "is_correct": false, "explanation": "Faux : cette proposition est vraie dans le cours, donc elle ne doit pas être la bonne ici. La bonne affirmation est celle sur la dilution et la surface de contact."}, {"id": "C", "text": "Il faut favoriser la dilution lorsque le gaz est rapide en augmentant la surface de contact gaz/air ambiant.", "is_correct": true, "explanation": "Vrai : c’est la solution générale indiquée dans le cours."}, {"id": "D", "text": "Les panneaux acoustiques n’ont aucun rôle dans l’absorption du bruit.", "is_correct": false, "explanation": "Faux : ils font partie des solutions de réduction acoustique citées."}, {"id": "E", "text": "Le bruit se réduit en conservant un jet totalement non mélangé sur toute sa longueur.", "is_correct": false, "explanation": "Faux : c’est l’inverse ; il faut favoriser le mélange et l’absorption."}], "coverage_label": "", "learning_objective": "Identifier les leviers de réduction acoustique du jet de tuyère.", "correction_summary": "Le raisonnement attendu était simple : plus le mélange gaz/air est efficace, plus le bruit diminue dans les zones de fort gradient de vitesse. La confusion fréquente est de croire qu’il faut « isoler » le jet, alors que le cours insiste au contraire sur la dilution et l’absorption.", "course_clarification": "Pour calmer le bruit d’un jet, on cherche à faire entrer plus vite l’air ambiant dans le panache. Les buses à lobes, les tuyaux d’orgue et les panneaux acoustiques servent précisément à augmenter le mélange ou à absorber les ondes sonores.", "source_refs": []}, {"question_id": "S8Q1", "prompt": "Quelle affirmation est correcte sur le but de l’inverseur de poussée ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’inverseur de poussée sert à augmenter la portance en croisière.", "is_correct": false, "explanation": "Faux : son rôle est lié au freinage à l’atterrissage, pas à la portance."}, {"id": "B", "text": "L’inverseur de poussée n’aide jamais sur piste dégradée.", "is_correct": false, "explanation": "Faux : il aide justement lorsque l’adhérence est réduite, par exemple sous la pluie ou sur neige."}, {"id": "C", "text": "L’inverseur de poussée est pris en compte dans les distances homologuées d’atterrissage.", "is_correct": false, "explanation": "Faux : le cours précise qu’il n’est pas pris en compte dans ces calculs homologués."}, {"id": "D", "text": "L’inverseur de poussée diminue la poussée de freinage en la rendant positive.", "is_correct": false, "explanation": "Faux : il produit une force orientée vers l’avant sur le jet, donc un effet négatif sur l’avancement de l’avion."}, {"id": "E", "text": "L’inverseur de poussée crée une poussée négative pour réduire la distance d’atterrissage.", "is_correct": true, "explanation": "Vrai : c’est le but principal indiqué dans le cours."}], "coverage_label": "", "learning_objective": "Comprendre l’objectif opérationnel de la poussée inverse à l’atterrissage.", "correction_summary": "La bonne lecture consistait à associer l’inverseur à un frein aérodynamique du jet et non à un dispositif de sustentation. La confusion fréquente est de penser qu’il améliore la montée ou la portance, alors qu’il sert à réduire la distance de roulement après l’atterrissage.", "course_clarification": "L’inverseur de poussée modifie la direction du jet pour créer une force opposée au mouvement de l’avion. C’est une aide au freinage, surtout utile quand les freins au sol sont moins efficaces.", "source_refs": []}, {"question_id": "S8Q2", "prompt": "Quelle affirmation est correcte concernant la formule de poussée inverse ?", "difficulty": "easy", "options": [{"id": "A", "text": "La poussée inverse est positive dans le sens du déplacement de l’avion.", "is_correct": false, "explanation": "Faux : elle est orientée à l’opposé du déplacement, donc négative dans la convention du cours."}, {"id": "B", "text": "La poussée inverse ne dépend pas de \\(V_0\\).", "is_correct": false, "explanation": "Faux : le cours précise au contraire qu’elle augmente si \\(V_0\\) augmente."}, {"id": "C", "text": "La poussée inverse diminue si la vitesse de jet inversé augmente.", "is_correct": false, "explanation": "Faux : elle augmente avec \\(V''_5\\)."}, {"id": "D", "text": "Le cours donne \\(T_{REV} = -Q_{ma}(V''_5 + V_0)\\).", "is_correct": true, "explanation": "Vrai : c’est l’écriture simplifiée fournie pour la poussée reverse."}, {"id": "E", "text": "La formule de reverse ne fait jamais intervenir le débit massique \\(Q_{ma}\\).", "is_correct": false, "explanation": "Faux : \\(Q_{ma}\\) est explicitement présent dans l’expression."}], "coverage_label": "", "learning_objective": "Lire et interpréter la relation de poussée inverse.", "correction_summary": "Il fallait lire la formule en tenant compte du signe négatif qui traduit le freinage. La confusion fréquente est de ne regarder que les grandeurs positives sans tenir compte du sens du jet inversé.", "course_clarification": "La poussée inverse reste une poussée, mais orientée pour freiner l’avion. Elle dépend du débit d’air et de la vitesse du jet dévié, tout en prenant un signe négatif dans la convention du cours.", "source_refs": []}, {"question_id": "S8Q3", "prompt": "Quelle affirmation est correcte sur les turboréacteurs double flux modernes ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le flux primaire est toujours le seul flux à inverser.", "is_correct": false, "explanation": "Faux : dans les architectures modernes, l’inversion peut être supprimée sur le flux primaire et appliquée surtout au flux secondaire."}, {"id": "B", "text": "Supprimer l’inverseur sur le flux primaire augmente la masse et réduit la fiabilité.", "is_correct": false, "explanation": "Faux : le cours indique l’inverse, avec une fiabilité accrue et une masse réduite."}, {"id": "C", "text": "Cette suppression n’a aucun effet sur l’efficacité du système.", "is_correct": false, "explanation": "Faux : le cours mentionne une efficacité meilleure."}, {"id": "D", "text": "L’inversion sur flux secondaire n’existe pas sur les moteurs récents.", "is_correct": false, "explanation": "Faux : elle existe justement dans de nombreuses architectures modernes."}, {"id": "E", "text": "Sur les architectures modernes à fort taux de dilution, l’inversion sur le flux primaire est souvent supprimée.", "is_correct": true, "explanation": "Vrai : le cours cite cette évolution pour les moteurs récents."}], "coverage_label": "", "learning_objective": "Distinguer l’architecture d’inversion sur flux primaire et secondaire.", "correction_summary": "Le point clé était d’identifier l’évolution des architectures modernes : on privilégie le flux secondaire pour la réversion. L’erreur fréquente est de penser que les deux flux doivent toujours être inversés de façon symétrique.", "course_clarification": "Dans les moteurs double flux actuels, la poussée vient surtout du flux secondaire. Il est donc logique d’y placer l’inversion, tandis que l’inverseur du flux primaire peut être supprimé pour gagner en masse et en fiabilité.", "source_refs": []}, {"question_id": "S8Q4", "prompt": "Quelle affirmation est correcte à propos des limites d’utilisation de la poussée reverse ?", "difficulty": "easy", "options": [{"id": "A", "text": "En dessous d’environ 60 kt, le cours signale un risque d’ingestion de gaz chauds et de pompage.", "is_correct": true, "explanation": "Vrai : c’est bien la limitation mentionnée pour les faibles vitesses avion."}, {"id": "B", "text": "La poussée reverse doit être utilisée sans limite de durée.", "is_correct": false, "explanation": "Faux : le temps maximal d’utilisation est limité pour protéger les structures et l’environnement moteur."}, {"id": "C", "text": "Plus la vitesse avion baisse, plus la reverse devient sans risque et sans restriction.", "is_correct": false, "explanation": "Faux : le cours souligne justement des risques à faible vitesse."}, {"id": "D", "text": "L’inverseur est utilisé pour augmenter la vitesse de décollage.", "is_correct": false, "explanation": "Faux : il sert au freinage à l’atterrissage, pas au décollage."}, {"id": "E", "text": "La poussée reverse est indépendante de toute vitesse avion.", "is_correct": false, "explanation": "Faux : le cours donne au contraire des ordres de grandeur dépendant de \\(V_0\\)."}], "coverage_label": "", "learning_objective": "Repérer les limites opérationnelles de la poussée reverse à faible vitesse.", "correction_summary": "Il fallait comprendre que la reverse n’est pas un frein illimité utilisable partout et tout le temps. La confusion fréquente consiste à ignorer les risques d’ingestion de gaz chauds ou de projection de débris quand la vitesse devient trop faible.", "course_clarification": "La reverse est très utile, mais elle a des limites. Quand l’avion ralentit trop, le jet dévié peut perturber le sol et être réaspiré par le moteur, d’où des restrictions de vitesse et de durée.", "source_refs": []}, {"question_id": "S9Q1", "prompt": "Quelle affirmation est correcte sur les sécurités d’un inverseur pneumatique ?", "difficulty": "easy", "options": [{"id": "A", "text": "La poussée inverse peut être engagée plein gaz, même en vol.", "is_correct": false, "explanation": "Faux : le système est verrouillé par plusieurs interverrouillages pour éviter une fausse manœuvre."}, {"id": "B", "text": "Le relais sol/vol alimente en vol la vanne d’isolement pour autoriser la reverse.", "is_correct": false, "explanation": "Faux : il empêche en vol l’alimentation électrique de la vanne et donc l’alimentation pneumatique du mécanisme."}, {"id": "C", "text": "Le passage en poussée inverse n’est possible que si la manette des gaz est au ralenti et si le train principal est comprimé.", "is_correct": true, "explanation": "Vrai : ce sont deux conditions de sécurité explicitement données."}, {"id": "D", "text": "L’inverseur peut se commander sans aucune liaison avec la commande de poussée.", "is_correct": false, "explanation": "Faux : la commande reverse est couplée à la commande de poussée."}, {"id": "E", "text": "La sortie intempestive des inverseurs augmente automatiquement la poussée maximale.", "is_correct": false, "explanation": "Faux : en cas de sortie intempestive en vol ou de rentrée sans commande, la poussée est réduite automatiquement."}], "coverage_label": "", "learning_objective": "Identifier les interverrouillages essentiels d’une commande d’inverseur pneumatique.", "correction_summary": "Le raisonnement attendu consistait à voir une logique de sécurité conditionnelle : vitesse, position des manettes et état du train. L’erreur fréquente est de croire que la reverse peut être commandée librement alors qu’elle est fortement protégée contre les fausses manœuvres.", "course_clarification": "Un inverseur n’est jamais commandé sans contrôle. Les sécurités imposent un ralentissement, un train principal comprimé et des conditions de vol/sol clairement séparées afin d’éviter toute sortie dangereuse en l’air.", "source_refs": []}, {"question_id": "S9Q2", "prompt": "Quelle affirmation est correcte sur l’architecture d’un inverseur pneumatique ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’inverseur est placé à l’entrée du flux primaire.", "is_correct": false, "explanation": "Faux : il est installé à la sortie du flux secondaire."}, {"id": "B", "text": "Le système comprend notamment des demi-capots, des grilles déviatrices, des volets obturateurs et un moteur pneumatique.", "is_correct": true, "explanation": "Vrai : ces organes figurent dans la description du cours."}, {"id": "C", "text": "Le dispositif ne comporte aucune vanne de régulation.", "is_correct": false, "explanation": "Faux : le cours cite une vanne de régulation et une vanne d’isolement."}, {"id": "D", "text": "Les transmissions flexibles sont inutiles dans ce mécanisme.", "is_correct": false, "explanation": "Faux : elles font partie de la chaîne de commande décrite."}, {"id": "E", "text": "La couronne mobile n’est pas mentionnée dans le schéma pneumatique.", "is_correct": false, "explanation": "Faux : elle est explicitement indiquée."}], "coverage_label": "", "learning_objective": "Reconnaître les principaux organes d’un inverseur de poussée pneumatique.", "correction_summary": "Il fallait identifier les éléments de l’architecture et leur rôle général. La confusion classique est de placer l’inverseur au mauvais endroit dans le moteur ou d’oublier les organes de transmission entre la commande et les demi-capots.", "course_clarification": "Un inverseur pneumatique est un système mécanique complet : il reçoit une commande, la transforme en mouvement, puis dévie le jet. Il ne se résume pas à un simple volet ; il comprend des actionneurs, des grilles, des capots et des organes de contrôle.", "source_refs": []}, {"question_id": "S9Q3", "prompt": "Quelle affirmation décrit correctement la séquence d’inversion ?", "difficulty": "easy", "options": [{"id": "A", "text": "La séquence commence par l’augmentation de la poussée positive avant toute rentrée des capots.", "is_correct": false, "explanation": "Faux : on commence d’abord par inverser la commande et déplacer les capots."}, {"id": "B", "text": "Les demi-capots reculent, découvrent les grilles déviatrices et les volets ferment le conduit de soufflante.", "is_correct": false, "explanation": "Faux : cette proposition est vraie dans le cours, donc elle ne doit pas être la bonne ici. La bonne réponse attendue est celle sur le démarrage de la séquence."}, {"id": "C", "text": "Les aérofreins sortent automatiquement seulement au décollage.", "is_correct": false, "explanation": "Faux : le cours précise qu’ils sortent automatiquement lors du déplacement arrière des manettes en atterrissage ou en arrêt décollage."}, {"id": "D", "text": "La séquence commence par le positionnement du sélecteur de commande puis l’alimentation pneumatique dans le sens inverse.", "is_correct": true, "explanation": "Vrai : c’est le début de la séquence décrite dans le cours."}, {"id": "E", "text": "Le retour en poussée positive se fait sans rentrer les inverseurs.", "is_correct": false, "explanation": "Faux : il faut revenir sur neutre puis rentrer et verrouiller les inverseurs."}], "coverage_label": "", "learning_objective": "Remettre dans l’ordre les étapes de fonctionnement d’un inverseur de poussée.", "correction_summary": "La question exigeait une lecture chronologique : commande, actionnement, déviation, puis augmentation de la reverse. L’erreur fréquente est de confondre la phase d’activation avec la phase de retour en poussée positive.", "course_clarification": "La mise en reverse suit une logique mécanique précise : on autorise d’abord l’actionneur, puis les capots se déplacent, les grilles apparaissent et les volets bouchent le conduit. Ce n’est qu’ensuite que la poussée inverse peut augmenter.", "source_refs": []}, {"question_id": "S9Q4", "prompt": "Quelle affirmation est correcte sur les voyants et la fonction sol/vol ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le relais sol/vol autorise en vol l’alimentation pneumatique du mécanisme d’entraînement.", "is_correct": false, "explanation": "Faux : il l’interdit en vol pour des raisons de sécurité."}, {"id": "B", "text": "Le voyant rouge signifie que les trains sont verrouillés bas.", "is_correct": false, "explanation": "Faux : cette indication concerne l’atterrisseur, pas l’inverseur, et la logique de voyant rouge correspond à un état de manœuvre non terminé dans le système concerné."}, {"id": "C", "text": "Le voyant REV UNLOCK et le voyant REV IN TRANSIT signalent des états de l’inverseur pendant la manœuvre.", "is_correct": true, "explanation": "Vrai : ces indications figurent sur le schéma de la page de cours."}, {"id": "D", "text": "La fonction sol/vol n’a aucun effet sur la vanne d’isolement.", "is_correct": false, "explanation": "Faux : elle empêche justement l’alimentation électrique de cette vanne en vol."}, {"id": "E", "text": "Les voyants ne sont pas liés aux états poussée positive, mouvement et poussée inversée maxi.", "is_correct": false, "explanation": "Faux : le schéma associe bien ces états à la signalisation."}], "coverage_label": "", "learning_objective": "Interpréter les voyants et la logique sol/vol d’un système d’inversion pneumatique.", "correction_summary": "Il fallait relier l’état mécanique de l’inverseur à la signalisation cabine. La confusion fréquente est d’attribuer les voyants à un autre sous-système ou d’ignorer la séparation entre fonctionnement au sol et en vol.", "course_clarification": "La fonction sol/vol agit comme un garde-fou : en vol, elle bloque l’alimentation du mécanisme de réversion. Les voyants servent à dire si l’inverseur est libre, en mouvement ou complètement déployé.", "source_refs": []}, {"question_id": "S10Q1", "prompt": "Quelle affirmation est correcte sur les rôles du train d’atterrissage ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le train sert au roulage, à la direction au sol, à l’absorption de l’énergie verticale et au freinage.", "is_correct": true, "explanation": "Vrai : ce sont les rôles principaux listés dans le cours."}, {"id": "B", "text": "Le train sert uniquement à porter les ailes en vol.", "is_correct": false, "explanation": "Faux : sa fonction principale est au sol et à l’atterrissage."}, {"id": "C", "text": "Le train ne subit aucun effort de compression.", "is_correct": false, "explanation": "Faux : le poids de l’avion crée bien un effort de compression."}, {"id": "D", "text": "Le train n’intervient jamais dans la direction au sol.", "is_correct": false, "explanation": "Faux : la dirigeabilité fait partie de ses fonctions."}, {"id": "E", "text": "Le freinage au sol ne fait pas partie des missions du train.", "is_correct": false, "explanation": "Faux : c’est au contraire une de ses missions majeures."}], "coverage_label": "", "learning_objective": "Identifier les fonctions opérationnelles principales d’un train d’atterrissage.", "correction_summary": "Le raisonnement attendu consistait à regrouper les rôles du train en quatre fonctions : rouler, diriger, amortir et freiner. La confusion fréquente est de sous-estimer l’importance du train au sol et de ne le voir que comme un simple support statique.", "course_clarification": "Le train d’atterrissage est l’interface entre l’avion et le sol. Il doit supporter le poids, absorber les chocs, permettre les virages et aider au freinage lors de l’atterrissage ou du roulage.", "source_refs": []}, {"question_id": "S10Q2", "prompt": "Quelle affirmation est correcte sur les grandes architectures de trains ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le train tricycle est toujours instable au roulage.", "is_correct": false, "explanation": "Faux : le train tricycle offre au contraire une meilleure stabilité générale."}, {"id": "B", "text": "Le train classique supprime tout risque de cabotage au freinage.", "is_correct": false, "explanation": "Faux : le cours signale justement un risque de cabotage ou mise en pylône."}, {"id": "C", "text": "Le train multiple n’existe jamais en configuration tricycle.", "is_correct": false, "explanation": "Faux : le cours indique que le train multiple peut être une combinaison en configuration tricycle ou monotrace."}, {"id": "D", "text": "Le train tricycle est défini par une roulette de queue uniquement.", "is_correct": false, "explanation": "Faux : cela correspond plutôt à une configuration classique, pas au train tricycle."}, {"id": "E", "text": "Le train monotrace comporte deux trains principaux sur l’axe longitudinal et des atterrisseurs auxiliaires appelés balanciers.", "is_correct": true, "explanation": "Vrai : c’est la définition donnée dans le cours."}], "coverage_label": "", "learning_objective": "Distinguer les principales architectures de trains d’atterrissage.", "correction_summary": "Il fallait reconnaître la description spécifique du train monotrace et ne pas confondre les configurations. L’erreur fréquente est de mélanger train classique, tricycle et monotrace en supposant qu’ils diffèrent seulement par l’emplacement d’une roue.", "course_clarification": "Chaque architecture de train répond à un compromis de stabilité, de masse et de maniabilité. Le train tricycle est le plus stable, le train classique demande plus d’attention au sol, et le train monotrace utilise une logique différente avec des trains principaux alignés.", "source_refs": []}, {"question_id": "S10Q3", "prompt": "Quelle affirmation est correcte sur la composition d’un train d’atterrissage ?", "difficulty": "easy", "options": [{"id": "A", "text": "Un train d’atterrissage n’intègre jamais de système de freinage.", "is_correct": false, "explanation": "Faux : les freins font partie de sa composition."}, {"id": "B", "text": "Un train d’atterrissage ne peut pas comporter de système de rentrée-sortie.", "is_correct": false, "explanation": "Faux : le train escamotable en comporte un."}, {"id": "C", "text": "Les flotteurs et les skis sont utilisés sur tous les avions sans distinction.", "is_correct": false, "explanation": "Faux : ils ne concernent que des cas particuliers comme les hydravions ou les pistes enneigées."}, {"id": "D", "text": "Un train d’atterrissage doit être à la fois léger et résistant, avec des matériaux comme l’aluminium ou le titane.", "is_correct": true, "explanation": "Vrai : ce sont les critères de construction cités dans le cours."}, {"id": "E", "text": "La légèreté n’a aucune importance dans la construction du train.", "is_correct": false, "explanation": "Faux : la légèreté est un critère essentiel, à équilibrer avec la résistance."}], "coverage_label": "", "learning_objective": "Repérer les éléments constitutifs d’un train et les contraintes de conception.", "correction_summary": "Le bon raisonnement était de distinguer les sous-ensembles du train et les critères de conception. La confusion fréquente consiste à oublier que le train est une structure technique complexe, soumise à un compromis sévère entre masse, résistance et fonctionnalité.", "course_clarification": "Le train ne se limite pas aux roues. Il comprend la structure porteuse, les freins, les commandes, parfois un système de rentrée-sortie et, selon le type d’avion, des équipements particuliers comme flotteurs ou skis.", "source_refs": []}, {"question_id": "S11Q1", "prompt": "Quelle affirmation est correcte sur la géométrie du train ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’empattement est la distance entre les deux trains principaux.", "is_correct": false, "explanation": "Faux : cela correspond à la voie."}, {"id": "B", "text": "La voie est la distance séparant les deux trains principaux.", "is_correct": true, "explanation": "Vrai : c’est la définition donnée dans le cours."}, {"id": "C", "text": "L’angle de garde est l’angle entre l’axe de la roue principale et le plan de symétrie.", "is_correct": false, "explanation": "Faux : cela correspond au parallélisme dans le cours."}, {"id": "D", "text": "L’angle de chasse est l’angle entre la verticale de l’avion et la droite joignant le centre de gravité aux roues principales.", "is_correct": false, "explanation": "Faux : cette définition correspond à l’angle de garde."}, {"id": "E", "text": "Le parallélisme décrit la distance entre le train avant et le train principal.", "is_correct": false, "explanation": "Faux : le parallélisme est un angle, pas une distance."}], "coverage_label": "", "learning_objective": "Distinguer les grandeurs géométriques associées aux trains d’atterrissage.", "correction_summary": "Il fallait bien associer chaque mot à sa définition géométrique. La confusion fréquente est de mélanger les distances et les angles, surtout entre voie, empattement et angles caractéristiques du train.", "course_clarification": "Le vocabulaire géométrique du train sert à décrire la position relative des roues et des trains. La voie concerne l’écartement latéral des principaux trains, alors que l’empattement relie le train auxiliaire aux trains principaux.", "source_refs": []}, {"question_id": "S11Q2", "prompt": "Quelle affirmation est correcte à propos des dispositions de roues ?", "difficulty": "easy", "options": [{"id": "A", "text": "La roue simple est la disposition la plus adaptée aux avions lourds car elle augmente les points de contact.", "is_correct": false, "explanation": "Faux : le bogie est justement utilisé pour augmenter les points de contact sur les avions lourds."}, {"id": "B", "text": "Le train à fourche est une forme de freinage.", "is_correct": false, "explanation": "Faux : il s’agit d’une disposition de roue ou de train, pas d’un frein."}, {"id": "C", "text": "Le diabolo correspond à une masse de carburant du moteur.", "is_correct": false, "explanation": "Faux : c’est une disposition mécanique de roues."}, {"id": "D", "text": "Le bogie n’a aucun intérêt en cas de crevaison.", "is_correct": false, "explanation": "Faux : la sécurité en cas de crevaison est précisément l’un de ses avantages."}, {"id": "E", "text": "Le bogie réduit le diamètre des roues, augmente les points de contact et améliore la sécurité en cas de crevaison.", "is_correct": true, "explanation": "Vrai : c’est la fonction attribuée au bogie dans le cours."}], "coverage_label": "", "learning_objective": "Reconnaître les principales configurations de roues et l’intérêt du bogie.", "correction_summary": "Le point clé était de relier chaque disposition à son effet opérationnel. La confusion fréquente consiste à penser qu’une disposition de roues ne change que la géométrie alors qu’elle joue aussi sur la sécurité et la répartition des charges.", "course_clarification": "Les différentes dispositions de roues servent à adapter le train à la masse et à l’usage de l’avion. Le bogie est particulièrement intéressant sur avion lourd car il répartit mieux les efforts et limite les conséquences d’une crevaison.", "source_refs": []}, {"question_id": "S12Q1", "prompt": "Quelle affirmation est correcte à propos de l’amortisseur oléopneumatique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le gonflage se fait à l’azote sous pression de précharge et il ne faut jamais utiliser d’oxygène.", "is_correct": true, "explanation": "Vrai : c’est la règle de sécurité explicitement donnée."}, {"id": "B", "text": "L’oxygène pur est recommandé avec des corps gras pour améliorer le gonflage.", "is_correct": false, "explanation": "Faux : l’association oxygène pur et corps gras présente un risque d’explosion."}, {"id": "C", "text": "Au repos, les chambres sont au volume minimal.", "is_correct": false, "explanation": "Faux : le cours indique qu’elles sont au volume maximal."}, {"id": "D", "text": "L’amortisseur ne contient jamais de chambre hydraulique.", "is_correct": false, "explanation": "Faux : il comprend une ou deux chambres de gaz et une chambre hydraulique."}, {"id": "E", "text": "Le DAD est à contrôler sur le pneu, pas sur le fût de train.", "is_correct": false, "explanation": "Faux : le dispositif d’atterrissage dur est à contrôler sur le fût de train."}], "coverage_label": "", "learning_objective": "Connaître la structure de base d’un amortisseur et les règles de gonflage.", "correction_summary": "Il fallait retenir la logique de sécurité du gonflage à l’azote et la structure gaz/huile de l’amortisseur. La confusion classique est de sous-estimer le danger de l’oxygène pur ou de mal situer le DAD.", "course_clarification": "Un amortisseur oléopneumatique stocke l’énergie dans le gaz et la dissipe avec l’huile. On le gonfle à l’azote parce que c’est un gaz stable et sûr, alors que l’oxygène pur combiné à certains contaminants peut être dangereux.", "source_refs": []}, {"question_id": "S12Q2", "prompt": "Quelle affirmation décrit correctement la phase de compression de l’amortisseur ?", "difficulty": "easy", "options": [{"id": "A", "text": "À l’impact, l’azote se détend d’abord et augmente immédiatement la pression de roulage.", "is_correct": false, "explanation": "Faux : c’est l’inverse, l’azote se comprime d’abord pour absorber le choc."}, {"id": "B", "text": "À l’impact, l’hydraulique est chassé de la chambre inférieure vers la chambre supérieure et l’azote se comprime.", "is_correct": true, "explanation": "Vrai : c’est la phase 1 décrite dans le cours."}, {"id": "C", "text": "La phase de compression supprime toute absorption d’énergie.", "is_correct": false, "explanation": "Faux : elle est précisément la phase d’absorption initiale du choc."}, {"id": "D", "text": "Le clapet de freinage reste ouvert pour éviter tout amortissement.", "is_correct": false, "explanation": "Faux : le dispositif est conçu pour absorber et ensuite freiner le mouvement."}, {"id": "E", "text": "La phase de compression n’utilise pas de liquide hydraulique.", "is_correct": false, "explanation": "Faux : l’huile hydraulique est bien déplacée d’une chambre à l’autre."}], "coverage_label": "", "learning_objective": "Suivre la première phase de fonctionnement d’un amortisseur oléopneumatique.", "correction_summary": "La bonne réponse exigeait de décrire le mouvement du liquide et la compression du gaz au moment de l’impact. L’erreur fréquente est d’inverser compression et détente, alors que ces deux phases ont des rôles très différents.", "course_clarification": "Au premier contact avec le sol, le train reçoit un choc vertical. L’huile est déplacée et l’azote se comprime : c’est cette compression qui stocke temporairement l’énergie de l’impact.", "source_refs": []}, {"question_id": "S12Q3", "prompt": "Quelle affirmation est correcte sur la phase de détente de l’amortisseur ?", "difficulty": "easy", "options": [{"id": "A", "text": "Lors de la détente, l’huile disparaît et l’avion rebondit librement.", "is_correct": false, "explanation": "Faux : le système vise justement à éviter le rebond par freinage hydraulique."}, {"id": "B", "text": "Le clapet de freinage reste ouvert pour accélérer le rebond.", "is_correct": false, "explanation": "Faux : il se ferme pendant cette phase."}, {"id": "C", "text": "Lors de la détente, l’azote se détend, chasse l’hydraulique et le laminage évite le rebond.", "is_correct": true, "explanation": "Vrai : c’est la phase 2 du fonctionnement décrite dans le cours."}, {"id": "D", "text": "La détente n’a aucun rôle dans l’absorption de l’énergie.", "is_correct": false, "explanation": "Faux : elle participe à la dissipation contrôlée de l’énergie stockée."}, {"id": "E", "text": "La phase de détente correspond à la compression maximale de l’azote sans mouvement.", "is_correct": false, "explanation": "Faux : c’est une phase de retour et de freinage du mouvement, pas un arrêt sans déplacement."}], "coverage_label": "", "learning_objective": "Comprendre le rôle de la détente hydraulique dans l’anti-rebond du train.", "correction_summary": "Il fallait distinguer la phase qui stocke l’énergie de celle qui la dissipe. La confusion classique est de croire que l’amortisseur se contente de comprimer un gaz, alors que l’huile et le laminage évitent surtout le rebond.", "course_clarification": "Après le choc, l’amortisseur doit rendre l’énergie sans faire rebondir l’avion. Le gaz se détend, l’huile passe par un étranglement et le mouvement est freiné : c’est le laminage hydraulique.", "source_refs": []}, {"question_id": "S13Q1", "prompt": "Quelle affirmation est correcte sur le train escamotable ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le train escamotable est conçu pour augmenter la traînée afin de stabiliser l’avion.", "is_correct": false, "explanation": "Faux : son rôle est au contraire de la réduire."}, {"id": "B", "text": "La rentrée-sortie du train est toujours uniquement mécanique.", "is_correct": false, "explanation": "Faux : elle peut être hydraulique, pneumatique ou électrique."}, {"id": "C", "text": "Le train escamotable ne nécessite jamais de verrouillage en position haute ou basse.", "is_correct": false, "explanation": "Faux : le cours insiste sur les verrouillages de position."}, {"id": "D", "text": "Le train escamotable a pour objectif premier de réduire la traînée en vol.", "is_correct": true, "explanation": "Vrai : c’est le but principal indiqué dans le cours."}, {"id": "E", "text": "Les trappes ne participent pas à la séquence de manœuvre.", "is_correct": false, "explanation": "Faux : leur verrouillage fait partie des séquences à assurer selon la configuration."}], "coverage_label": "", "learning_objective": "Comprendre l’intérêt aérodynamique du train escamotable et ses contraintes de manœuvre.", "correction_summary": "Le raisonnement attendu consistait à associer l’escamotage à la réduction de traînée. La confusion fréquente est d’oublier que la rentrée du train n’est pas seulement une question de mouvement, mais aussi de verrouillage et de trappes.", "course_clarification": "Un train escamotable se rétracte en vol pour diminuer la résistance à l’avancement. Il doit ensuite se verrouiller correctement, sinon l’avion serait exposé à des risques majeurs de sécurité.", "source_refs": []}, {"question_id": "S13Q2", "prompt": "Quelle affirmation est correcte sur la commande et le secours du train ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le secours du train fonctionne surtout dans le sens sortie.", "is_correct": true, "explanation": "Vrai : le cours précise qu’il fonctionne surtout pour la sortie, en hydraulique et en mécanique."}, {"id": "B", "text": "Le levier peut rentrer le train même si un amortisseur est comprimé sans aucune sécurité.", "is_correct": false, "explanation": "Faux : le levier est verrouillé mécaniquement au sol pour interdire cette manœuvre."}, {"id": "C", "text": "Le boîtier d’accrochage ne sert qu’à décorer la structure.", "is_correct": false, "explanation": "Faux : il confirme la position des trains et des trappes."}, {"id": "D", "text": "Le déverrouillage manuel est impossible en cas de blocage du levier.", "is_correct": false, "explanation": "Faux : le cours indique qu’il peut être possible selon le système."}, {"id": "E", "text": "La sortie secours fonctionne uniquement en sens rentrée.", "is_correct": false, "explanation": "Faux : elle est conçue pour la sortie."}], "coverage_label": "", "learning_objective": "Identifier la logique de secours et de sécurité du système de manœuvre du train.", "correction_summary": "Il fallait comprendre que le système de secours vise avant tout à garantir la sortie du train en cas de panne. La confusion fréquente est de penser que secours signifie toujours réversibilité complète, alors qu’ici le sens prioritaire est la sortie.", "course_clarification": "Le train doit pouvoir sortir même si le circuit principal tombe en panne. C’est pourquoi des solutions de secours sont prévues, mais elles restent encadrées par des sécurités mécaniques et des procédures spécifiques.", "source_refs": []}, {"question_id": "S13Q3", "prompt": "Quelle affirmation est correcte au sujet des indications cabine du train ?", "difficulty": "easy", "options": [{"id": "A", "text": "Trois voyants verts allumés indiquent que le train est en manœuvre.", "is_correct": false, "explanation": "Faux : la manœuvre est signalée par un autre état, notamment par le voyant rouge selon la configuration."}, {"id": "B", "text": "Trois voyants verts allumés indiquent que les trois trains sont verrouillés bas.", "is_correct": true, "explanation": "Vrai : c’est l’indication de base donnée dans le cours."}, {"id": "C", "text": "Le voyant rouge indique toujours que les trois trains sont verrouillés bas.", "is_correct": false, "explanation": "Faux : le voyant rouge signale une manœuvre ou des trappes non verrouillées hautes."}, {"id": "D", "text": "Le voyant TNS signifie que le train est sorti et verrouillé.", "is_correct": false, "explanation": "Faux : TNS veut dire Train Non Sorti et alerte une configuration dangereuse."}, {"id": "E", "text": "Les voyants cabine n’ont aucun lien avec l’état de verrouillage du train.", "is_correct": false, "explanation": "Faux : ils sont précisément là pour indiquer l’état des trains et des trappes."}], "coverage_label": "", "learning_objective": "Lire les indications cabine liées à la position et au verrouillage du train.", "correction_summary": "Le bon réflexe consistait à associer chaque voyant à l’état mécanique du train. La confusion fréquente est de mélanger voyant vert, voyant rouge et alarme TNS sans relier ces signaux au verrouillage réel des trains.", "course_clarification": "Les voyants cabine informent le pilote de la position du train. Vert signifie train verrouillé bas, tandis qu’un signal rouge ou une alarme TNS indique qu’une manœuvre est en cours ou qu’une configuration est dangereuse.", "source_refs": []}, {"question_id": "S14Q1", "prompt": "Quelle affirmation est correcte sur les roues et pneumatiques ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le pneu diagonal a une carcasse radiale et une ceinture métallique.", "is_correct": false, "explanation": "Faux : cette structure correspond au pneu radial."}, {"id": "B", "text": "La roue monobloc est la plus adaptée aux très fortes charges des avions lourds.", "is_correct": false, "explanation": "Faux : le cours la décrit comme simple mais plus sensible aux fortes charges, plutôt pour avions légers."}, {"id": "C", "text": "Le pneu radial possède une carcasse souple radiale et une ceinture métallique.", "is_correct": true, "explanation": "Vrai : c’est la définition donnée dans le cours."}, {"id": "D", "text": "La roue à flasque mobile complique le montage du pneu en écartant le talon.", "is_correct": false, "explanation": "Faux : elle facilite au contraire le montage sans écarter le talon."}, {"id": "E", "text": "M, N et A sont tous exprimés en pouces en France.", "is_correct": false, "explanation": "Faux : en France, M et N sont en millimètres et A en pouces."}], "coverage_label": "", "learning_objective": "Reconnaître les types de pneus et de roues, ainsi que la lecture des dimensions.", "correction_summary": "Il fallait distinguer clairement les structures diagonale et radiale, puis relire correctement les unités du marquage. La confusion fréquente est de mélanger la forme de la carcasse avec l’unité des dimensions.", "course_clarification": "Les pneus d’avion ne sont pas tous construits pareil. Le radial offre une surface de contact plus stable, alors que le diagonal se déforme davantage. Les dimensions combinent parfois millimètres et pouces selon la notation utilisée.", "source_refs": []}, {"question_id": "S14Q2", "prompt": "Quelle affirmation est correcte sur le shimmy et la dirigabilité ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le shimmy est une surchauffe des freins détectée par le voyant BRAKES HOT.", "is_correct": false, "explanation": "Faux : il s’agit d’une vibration des roues, pas d’un échauffement des freins."}, {"id": "B", "text": "La dirigabilité correspond à l’orientation de la roue avant, parfois des roues principales.", "is_correct": false, "explanation": "Faux : cette proposition est vraie dans le cours, donc elle ne doit pas être la bonne ici. La bonne réponse attendue est celle sur le shimmy."}, {"id": "C", "text": "L’anti-shimmy peut être assuré par un vérin hydraulique ou à double ressorts.", "is_correct": false, "explanation": "Faux : cette proposition est également vraie dans le cours, elle ne peut donc pas être la bonne réponse de cette question."}, {"id": "D", "text": "Le rappel dans l’axe du train avant n’est jamais nécessaire au décollage.", "is_correct": false, "explanation": "Faux : le cours indique au contraire que la dirigeabilité est neutralisée au décollage et à l’atterrissage pour remettre la roue dans l’axe."}, {"id": "E", "text": "Le shimmy est un phénomène vibratoire des roues libres à une certaine vitesse.", "is_correct": true, "explanation": "Vrai : c’est la définition donnée dans le cours."}], "coverage_label": "", "learning_objective": "Comprendre le phénomène de shimmy et la logique de dirigabilité du train avant.", "correction_summary": "Le cœur de la question était le phénomène vibratoire propre aux roues libres. La confusion fréquente est de le mélanger avec la surveillance thermique des freins ou avec la fonction de direction du train avant.", "course_clarification": "Le shimmy est une oscillation indésirable des roues, souvent ressentie à certaines vitesses. La solution consiste à amortir ou contrôler ce mouvement avec un système anti-shimmy, tandis que la dirigabilité permet de guider l’avion au sol.", "source_refs": []}, {"question_id": "S14Q3", "prompt": "Quelle affirmation est correcte sur la surveillance du train et des freins ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le TPMS mesure uniquement la température des pneus.", "is_correct": false, "explanation": "Faux : TPMS signifie Tire Pressure Monitoring System, donc pression des pneus."}, {"id": "B", "text": "Le voyant BRAKES HOT signale une température de freins normale.", "is_correct": false, "explanation": "Faux : il signale une surchauffe."}, {"id": "C", "text": "Un gong mono-coup indique une défaillance moteur sans lien avec les freins.", "is_correct": false, "explanation": "Faux : il est cité dans la surveillance d’une surchauffe de freins."}, {"id": "D", "text": "Le TPMS surveille la pression des pneus, le BTMS la température des freins et l’OPMS la pression hydraulique des amortisseurs.", "is_correct": true, "explanation": "Vrai : ce sont les trois sigles donnés dans le cours."}, {"id": "E", "text": "L’OPMS concerne la pression carburant du réacteur.", "is_correct": false, "explanation": "Faux : il concerne la pression hydraulique des amortisseurs."}], "coverage_label": "", "learning_objective": "Associer correctement les systèmes de surveillance TPMS, BTMS et OPMS.", "correction_summary": "Il fallait associer chaque sigle au bon paramètre surveillé. L’erreur fréquente est d’attribuer ces systèmes au moteur ou de confondre pression, température et hydraulique.", "course_clarification": "Les systèmes de surveillance du train et des freins alertent l’équipage sur des paramètres critiques : pression des pneus, température des freins et pression hydraulique des amortisseurs. Ils participent directement à la sécurité au sol.", "source_refs": []}, {"question_id": "S15Q1", "prompt": "Quelle affirmation est correcte sur le freinage direct ?", "difficulty": "easy", "options": [{"id": "A", "text": "Dans le freinage direct, la pression est fournie uniquement par une électropompe de parking.", "is_correct": false, "explanation": "Faux : cela concerne le frein de parking, pas le freinage direct."}, {"id": "B", "text": "Le freinage direct ne comporte aucun réservoir de compensation.", "is_correct": false, "explanation": "Faux : le cours mentionne bien un réservoir de compensation pour remplir automatiquement le circuit en cas de légère fuite."}, {"id": "C", "text": "Dans le freinage direct, l’énergie musculaire du pilote est transmise simplement aux freins via un vérin émetteur puis un vérin récepteur.", "is_correct": true, "explanation": "Vrai : c’est la chaîne décrite dans le cours."}, {"id": "D", "text": "Le freinage direct ne passe jamais par un vérin récepteur.", "is_correct": false, "explanation": "Faux : le vérin récepteur assure le contact des garnitures sur le tambour."}, {"id": "E", "text": "Le freinage direct est indépendant de toute action du pilote sur la pédale.", "is_correct": false, "explanation": "Faux : l’action sur la pédale est le point de départ de la transmission d’effort."}], "coverage_label": "", "learning_objective": "Distinguer le freinage direct des autres circuits de freinage.", "correction_summary": "Le point clé était de suivre la transmission de l’effort depuis la pédale jusqu’aux garnitures. La confusion fréquente est de mélanger freinage direct, freinage assisté et frein de parking.", "course_clarification": "Le freinage direct est le plus simple : le pilote agit sur la pédale et son effort est transmis directement au circuit de freinage. Un petit réservoir de compensation permet de rattraper une légère fuite sans refaire tout le circuit.", "source_refs": []}, {"question_id": "S15Q2", "prompt": "Quelle affirmation est correcte sur le système anti-skid ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’anti-skid évite le blocage des roues en régulant la pression hydraulique à partir de génératrices tachymétriques.", "is_correct": true, "explanation": "Vrai : c’est bien le principe décrit dans le cours."}, {"id": "B", "text": "L’anti-skid sert à augmenter volontairement le blocage des roues.", "is_correct": false, "explanation": "Faux : son but est exactement d’éviter ce blocage."}, {"id": "C", "text": "L’anti-skid ne sert que lorsque l’avion est en vol de croisière.", "is_correct": false, "explanation": "Faux : il intervient au sol, notamment lors du freinage brusque ou à l’atterrissage."}, {"id": "D", "text": "L’anti-skid fonctionne sans aucune mesure de vitesse des roues.", "is_correct": false, "explanation": "Faux : il repose sur la mesure de vitesse fournie par les génératrices tachymétriques."}, {"id": "E", "text": "L’anti-skid remplace le train d’atterrissage.", "is_correct": false, "explanation": "Faux : c’est un système de contrôle du freinage, pas une structure de portance."}], "coverage_label": "", "learning_objective": "Comprendre la fonction et le principe de commande de l’anti-skid.", "correction_summary": "Le bon raisonnement consistait à associer l’anti-skid à une régulation automatique de la pression de freinage. La confusion fréquente est de le confondre avec un frein classique ou avec une simple alarme, alors qu’il agit en boucle de contrôle.", "course_clarification": "L’anti-skid empêche les roues de se bloquer en modulant la pression de freinage en fonction de la vitesse mesurée. Cela améliore l’adhérence disponible et réduit le risque de dérapage.", "source_refs": []}, {"question_id": "S15Q3", "prompt": "Quelle affirmation est correcte sur le frein de parking et l’anti-brake ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le frein de parking fonctionne uniquement par énergie musculaire directe.", "is_correct": false, "explanation": "Faux : cela correspond au freinage direct, pas au frein de parking."}, {"id": "B", "text": "L’anti-brake applique automatiquement un taux de décélération choisi par le pilote.", "is_correct": false, "explanation": "Faux : cette proposition est vraie dans le cours, donc elle ne doit pas être la bonne ici. La bonne réponse attendue est celle sur le frein de parking."}, {"id": "C", "text": "Le circuit de secours dépend entièrement du circuit normal.", "is_correct": false, "explanation": "Faux : le cours le présente comme totalement indépendant."}, {"id": "D", "text": "Le frein de parking est mis en pression par une électropompe et maintenu par un accumulateur.", "is_correct": true, "explanation": "Vrai : c’est la définition donnée dans le cours."}, {"id": "E", "text": "Le frein de parking ne peut pas rester pressurisé après l’arrêt de l’électropompe.", "is_correct": false, "explanation": "Faux : l’accumulateur sert justement à maintenir la pression."}], "coverage_label": "", "learning_objective": "Reconnaître le principe du frein de parking et le rôle de l’accumulateur.", "correction_summary": "Il fallait identifier quel système est autonome et lequel suit une loi automatique de décélération. La confusion fréquente est d’attribuer au frein de parking le rôle de l’anti-brake ou d’oublier l’accumulateur.", "course_clarification": "Le frein de parking doit pouvoir rester serré sans action continue du pilote. C’est pourquoi une électropompe charge le circuit, puis un accumulateur conserve la pression nécessaire pour immobiliser l’avion.", "source_refs": []}, {"question_id": "S16Q1", "prompt": "Quelle affirmation est correcte pour la synthèse sur les atterrisseurs ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le train escamotable a pour objectif premier d’augmenter la traînée.", "is_correct": false, "explanation": "Faux : son objectif premier est de la réduire."}, {"id": "B", "text": "L’angle de garde et l’empattement sont des notions de propulsion moteur.", "is_correct": false, "explanation": "Faux : ce sont des notions de géométrie du train."}, {"id": "C", "text": "Le freinage n’a aucun lien avec la distance d’arrêt.", "is_correct": false, "explanation": "Faux : réduire la distance d’arrêt est justement un but majeur du freinage."}, {"id": "D", "text": "Les amortisseurs servent uniquement à décorer le train.", "is_correct": false, "explanation": "Faux : ils absorbent et dissipent l’énergie verticale à l’atterrissage."}, {"id": "E", "text": "Le train d’atterrissage assure notamment la prise de contact avec le sol, le roulage, le freinage et l’absorption des chocs.", "is_correct": true, "explanation": "Vrai : ce sont les fonctions de synthèse rappelées dans l’exercice."}], "coverage_label": "", "learning_objective": "Réactiver les fonctions essentielles du train et le vocabulaire de synthèse.", "correction_summary": "La bonne réponse reprenait les fonctions fondamentales du train sans se laisser détourner par des notions hors sujet. L’erreur fréquente est de mélanger des objectifs de conception du train avec ceux de la propulsion moteur.", "course_clarification": "Le train d’atterrissage est indispensable au sol et à l’atterrissage : il prend le choc, supporte la charge, permet le roulage et contribue au freinage. Le vocabulaire associé sert à décrire sa géométrie et sa sécurité.", "source_refs": []}, {"question_id": "S16Q2", "prompt": "Quelle affirmation est correcte sur l’exercice de synthèse des atterrisseurs ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le but premier du freinage est d’augmenter la portance à basse vitesse.", "is_correct": false, "explanation": "Faux : la portance n’est pas l’objectif du freinage."}, {"id": "B", "text": "Le but premier du freinage est de réduire la distance d’arrêt après l’atterrissage et de faciliter les évolutions au sol.", "is_correct": true, "explanation": "Vrai : c’est l’énoncé de synthèse donné dans le cours."}, {"id": "C", "text": "Le train escamotable est conçu pour augmenter la traînée en croisière.", "is_correct": false, "explanation": "Faux : il vise au contraire à la diminuer."}, {"id": "D", "text": "La roue à flasque amovible est la moins utilisée sur avion lourd.", "is_correct": false, "explanation": "Faux : c’est au contraire le type le plus utilisé sur avion lourd selon le cours."}, {"id": "E", "text": "La voie correspond à la distance entre le fuselage et le train principal.", "is_correct": false, "explanation": "Faux : la voie est la distance entre les deux trains principaux."}], "coverage_label": "", "learning_objective": "Consolider les objectifs de synthèse liés au freinage, au train escamotable et au vocabulaire.", "correction_summary": "Le raisonnement attendu consistait à relier le freinage à la réduction de la distance d’arrêt et aux évolutions au sol. La confusion la plus fréquente est de mélanger les buts du freinage, de l’escamotage et des notions géométriques du train.", "course_clarification": "Le freinage ne sert pas seulement à immobiliser l’avion : il aide aussi à le manœuvrer au sol en toute sécurité. Dans la synthèse, il faut retenir les finalités les plus opérationnelles et les associer au bon vocabulaire.", "source_refs": []}], "subpart_id": null, "anchor_slide_id": null, "question_count_target": 50, "title": "Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs"}</script>
+  <script>
+    (function () {
+      const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
+      const app = document.getElementById("quiz-app");
+      const viewerMode = app.dataset.viewerMode || "user";
+      const isMaster = viewerMode === "master";
+      const nextHref = app.dataset.nextHref || "";
+      const homeHref = app.dataset.homeHref || "index.html";
+      const storageKey = "static-quiz::" + viewerMode + "::" + quiz.quiz_id;
+      const finalQuizDrawCount = 25;
+
+      function normalizeCoverageLabel(question) {
+        if (question.coverage_label) {
+          return String(question.coverage_label).trim();
+        }
+        if (Array.isArray(question.source_refs)) {
+          const courseRef = question.source_refs.find((ref) => ref && ref.source_type === "course");
+          if (courseRef) {
+            return String(courseRef.label || courseRef.locator || question.question_id).trim();
+          }
+        }
+        return String(question.question_id || "");
+      }
+
+      function shuffle(items) {
+        const copy = items.slice();
+        for (let index = copy.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          const current = copy[index];
+          copy[index] = copy[swapIndex];
+          copy[swapIndex] = current;
+        }
+        return copy;
+      }
+
+      function selectBalancedQuestionIds() {
+        if (quiz.quiz_type !== "final") {
+          return [];
+        }
+        const sampleSize = Math.min(finalQuizDrawCount, quiz.questions.length);
+        const buckets = new Map();
+        quiz.questions.forEach((question) => {
+          const label = normalizeCoverageLabel(question);
+          if (!buckets.has(label)) {
+            buckets.set(label, []);
+          }
+          buckets.get(label).push(question.question_id);
+        });
+        const labels = shuffle(Array.from(buckets.keys()));
+        labels.forEach((label) => {
+          buckets.set(label, shuffle(buckets.get(label)));
+        });
+        const selected = [];
+        while (selected.length < sampleSize) {
+          let progressed = false;
+          labels.forEach((label) => {
+            if (selected.length >= sampleSize) {
+              return;
+            }
+            const bucket = buckets.get(label) || [];
+            if (!bucket.length) {
+              return;
+            }
+            selected.push(bucket.pop());
+            buckets.set(label, bucket);
+            progressed = true;
+          });
+          if (!progressed) {
+            break;
+          }
+        }
+        return selected;
+      }
+
+      function getQuestions() {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(state.questionIds) ? state.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        const sampled = ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+        return sampled.length ? sampled : quiz.questions.slice(0, Math.min(finalQuizDrawCount, quiz.questions.length));
+      }
+
+      function buildInitialState() {
+        return {
+          currentIndex: 0,
+          answers: {},
+          evaluated: {},
+          submitted: false,
+          finished: false,
+          questionIds: quiz.quiz_type === "final" ? selectBalancedQuestionIds() : [],
+        };
+      }
+
+      function loadState() {
+        try {
+          const raw = window.localStorage.getItem(storageKey);
+          if (!raw) {
+            return buildInitialState();
+          }
+          const candidate = Object.assign(buildInitialState(), JSON.parse(raw));
+          if (quiz.quiz_type === "final" && (!Array.isArray(candidate.questionIds) || !candidate.questionIds.length)) {
+            candidate.questionIds = selectBalancedQuestionIds();
+          }
+          const total = getQuestionsForState(candidate).length;
+          candidate.currentIndex = total ? Math.max(0, Math.min(candidate.currentIndex || 0, total - 1)) : 0;
+          return candidate;
+        } catch (error) {
+          return buildInitialState();
+        }
+      }
+
+      function getQuestionsForState(candidateState) {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(candidateState.questionIds) ? candidateState.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        return ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+      }
+
+      let state = loadState();
+
+      function syncFinalQuizHero() {
+        if (quiz.quiz_type !== "final" || quiz.questions.length <= finalQuizDrawCount) {
+          return;
+        }
+        const hero = document.querySelector(".quiz-hero");
+        if (!hero) {
+          return;
+        }
+        const description = hero.querySelector("p:not(.eyebrow)");
+        if (description) {
+          description.textContent =
+            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+        }
+        const metaPills = hero.querySelectorAll(".meta-pill");
+        if (metaPills.length) {
+          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+        }
+      }
+
+      function persist() {
+        window.localStorage.setItem(storageKey, JSON.stringify(state));
+      }
+
+      function restartQuiz() {
+        state = buildInitialState();
+        persist();
+        render();
+      }
+
+      function getQuestion(index) {
+        return getQuestions()[index];
+      }
+
+      function getCorrectIds(question) {
+        return question.options.filter((option) => option.is_correct).map((option) => option.id);
+      }
+
+      function isMulti(question) {
+        return getCorrectIds(question).length > 1;
+      }
+
+      function getSelected(questionId) {
+        return Array.isArray(state.answers[questionId]) ? state.answers[questionId] : [];
+      }
+
+      function setSelected(question, values) {
+        state.answers[question.question_id] = values;
+        persist();
+      }
+
+      function sameSelection(left, right) {
+        if (left.length !== right.length) {
+          return false;
+        }
+        const leftSorted = left.slice().sort();
+        const rightSorted = right.slice().sort();
+        return leftSorted.every((value, index) => value === rightSorted[index]);
+      }
+
+      function scoreQuestion(question) {
+        return sameSelection(getSelected(question.question_id), getCorrectIds(question));
+      }
+
+      function scoreQuiz() {
+        const questions = getQuestions();
+        let correct = 0;
+        questions.forEach((question) => {
+          if (scoreQuestion(question)) {
+            correct += 1;
+          }
+        });
+        return {
+          correct: correct,
+          total: questions.length,
+          percent: questions.length ? Math.round((correct / questions.length) * 100) : 0,
+        };
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function formatRichText(value) {
+        const escaped = escapeHtml(value || "");
+        return escaped
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\n/g, "<br>");
+      }
+
+      function queueMathJax() {
+        if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+          window.MathJax.typesetPromise([app]).catch(function () {});
+        }
+      }
+
+      function renderSources(question) {
+        if (!Array.isArray(question.source_refs) || !question.source_refs.length) {
+          return "";
+        }
+        const webRefs = question.source_refs.filter((ref) => ref.source_type === "web");
+        if (!webRefs.length) {
+          return "";
+        }
+        const items = webRefs
+          .map((ref) => {
+            if (ref.url) {
+              return "<a href='" + escapeHtml(ref.url) + "' target='_blank' rel='noreferrer'>" + escapeHtml(ref.label) + "</a>";
+            }
+            return "<span>" + escapeHtml(ref.label) + "</span>";
+          })
+          .join("");
+        return "<div class='review-meta'><span><strong>" + (isMaster ? "Références web" : "Sources web") + "</strong></span>" + items + "</div>";
+      }
+
+      function renderQuestionMeta(question) {
+        if (!isMaster) {
+          return renderSources(question);
+        }
+        return (
+          "<div class='review-meta'>" +
+            "<span><strong>Objectif</strong> " + formatRichText(question.learning_objective || "") + "</span>" +
+            renderSources(question) +
+          "</div>"
+        );
+      }
+
+      function renderTeachingPanel(question) {
+        const cards = [];
+        if (question.learning_objective) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>Objectif de la question</strong>" +
+              "<p>" + formatRichText(question.learning_objective) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.correction_summary) {
+          cards.push(
+            "<article class='teaching-card emphasis'>" +
+              "<strong class='teaching-card-title'>Pourquoi cette correction</strong>" +
+              "<p>" + formatRichText(question.correction_summary) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.course_clarification) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>A retenir</strong>" +
+              "<p>" + formatRichText(question.course_clarification) + "</p>" +
+            "</article>"
+          );
+        }
+        if (!cards.length) {
+          return "";
+        }
+        return "<section class='teaching-grid'>" + cards.join("") + "</section>";
+      }
+
+      function renderOption(question, option, mode) {
+        const selected = getSelected(question.question_id);
+        const selectedSet = new Set(selected);
+        const evaluated = state.evaluated[question.question_id];
+        const reveal = mode === "review" || !!evaluated || state.submitted;
+        let classes = "option-item";
+        if (reveal && option.is_correct) {
+          classes += " option-correct";
+        } else if (reveal && selectedSet.has(option.id) && !option.is_correct) {
+          classes += " option-wrong";
+        }
+        const inputType = isMulti(question) ? "checkbox" : "radio";
+        const checked = selectedSet.has(option.id) ? " checked" : "";
+        const disabled = reveal ? " disabled" : "";
+        const name = "q-" + question.question_id;
+        let explanation = "";
+        if (reveal && (isMaster || option.is_correct || selectedSet.has(option.id))) {
+          explanation = "<div class='option-explanation'>" + formatRichText(option.explanation || "") + "</div>";
+        }
+        return (
+          "<label class='" + classes + "'>" +
+            "<div class='option-head'>" +
+              "<input class='option-input' type='" + inputType + "' name='" + name + "' value='" + escapeHtml(option.id) + "'" + checked + disabled + ">" +
+              "<div>" +
+                "<div class='option-text'>" + formatRichText(option.text) + "</div>" +
+              "</div>" +
+            "</div>" +
+            explanation +
+          "</label>"
+        );
+      }
+
+      function renderQuestionPanel(question) {
+        const selected = getSelected(question.question_id);
+        const evaluated = state.evaluated[question.question_id];
+        const questions = getQuestions();
+        const indexLabel = "Question " + (state.currentIndex + 1) + "/" + questions.length;
+        let actions = "";
+
+        if (quiz.quiz_type === "subpart") {
+          if (!evaluated) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='validate-question'" + (selected.length ? "" : " disabled") + ">Valider ma réponse</button>" +
+              "</div>";
+          } else if (state.currentIndex < questions.length - 1) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='next-question'>Question suivante</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          } else {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='finish-subpart'>Terminer le QCM</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          }
+        } else {
+          actions =
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='prev-question'" + (state.currentIndex === 0 ? " disabled" : "") + ">Question précédente</button>" +
+              "<button type='button' class='quiz-button' data-action='next-question'" + (state.currentIndex >= questions.length - 1 ? " disabled" : "") + ">Question suivante</button>" +
+              "<button type='button' class='quiz-button primary' data-action='submit-final'>Soumettre le QCM final</button>" +
+            "</div>";
+        }
+
+        return (
+          "<section class='quiz-panel'>" +
+            "<p class='question-kicker'>" + indexLabel + "</p>" +
+            "<h2 class='question-title'>" + formatRichText(question.prompt) + "</h2>" +
+            renderQuestionMeta(question) +
+            "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "single")).join("") + "</div>" +
+            ((!!evaluated || state.submitted) ? renderTeachingPanel(question) : "") +
+            actions +
+          "</section>"
+        );
+      }
+
+      function renderSubpartSummary() {
+        const score = scoreQuiz();
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat du QCM</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>";
+      }
+
+      function renderFinalSummary() {
+        const score = scoreQuiz();
+        const questions = getQuestions();
+        const review = questions.map((question, index) => {
+          const correct = scoreQuestion(question);
+          return (
+            "<article class='review-card'>" +
+              "<p class='question-kicker'>Question " + (index + 1) + "/" + questions.length + "</p>" +
+              "<h3 class='question-title'>" + formatRichText(question.prompt) + "</h3>" +
+              renderQuestionMeta(question) +
+              "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "review")).join("") + "</div>" +
+              renderTeachingPanel(question) +
+              "<div class='review-meta'><span><strong>Résultat</strong> " + (correct ? "Correct" : "Incorrect") + "</span></div>" +
+            "</article>"
+          );
+        }).join("");
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat final</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer le QCM final</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>" +
+          "<section class='review-list'>" + review + "</section>";
+      }
+
+      function render() {
+        syncFinalQuizHero();
+        if (quiz.quiz_type === "subpart" && state.finished) {
+          renderSubpartSummary();
+          queueMathJax();
+          return;
+        }
+        if (quiz.quiz_type === "final" && state.submitted) {
+          renderFinalSummary();
+          queueMathJax();
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        app.innerHTML = renderQuestionPanel(question);
+        queueMathJax();
+      }
+
+      app.addEventListener("change", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLInputElement) || !target.name.startsWith("q-")) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        if (quiz.quiz_type === "subpart" && state.evaluated[question.question_id]) {
+          return;
+        }
+        const selected = Array.from(app.querySelectorAll("input[name='q-" + question.question_id + "']:checked"))
+          .map((input) => input.value);
+        setSelected(question, selected);
+        render();
+      });
+
+      app.addEventListener("click", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) {
+          return;
+        }
+        const action = target.dataset.action;
+        if (!action) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+
+        if (action === "restart") {
+          restartQuiz();
+          return;
+        }
+
+        if (action === "next-question" && state.currentIndex < getQuestions().length - 1) {
+          state.currentIndex += 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "prev-question" && state.currentIndex > 0) {
+          state.currentIndex -= 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "validate-question") {
+          const selected = getSelected(question.question_id);
+          if (!selected.length) {
+            return;
+          }
+          state.evaluated[question.question_id] = {
+            selected: selected,
+            correct: getCorrectIds(question),
+            is_correct: scoreQuestion(question),
+          };
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "finish-subpart") {
+          state.finished = true;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "submit-final") {
+          state.submitted = true;
+          persist();
+          render();
+        }
+      });
+
+      render();
+    }());
+  </script>
+</body>
+</html>

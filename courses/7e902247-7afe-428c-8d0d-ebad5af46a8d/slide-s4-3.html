@@ -1,0 +1,2624 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN</title>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("embed") === "1") {
+        document.documentElement.dataset.embed = "1";
+      }
+    }());
+  </script>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #14253a;
+  --ink-soft: #243e58;
+  --muted: #5a6d82;
+  --accent: #0c6e82;
+  --accent-strong: #103b5c;
+  --accent-soft: rgba(12, 110, 130, 0.08);
+  --highlight: #d98524;
+  --paper: #f6f2ea;
+  --panel: rgba(255, 255, 255, 0.9);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --line: rgba(20, 37, 58, 0.1);
+  --line-strong: rgba(20, 37, 58, 0.16);
+  --shadow: 0 24px 60px rgba(20, 37, 58, 0.12);
+  --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
+  --content-width: 1360px;
+  --reading-width: 76ch;
+}
+
+@keyframes ambient-float {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -16px, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes rise-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes panel-sheen {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(220%) skewX(-20deg); }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(12, 110, 130, 0.15), transparent 28%),
+    radial-gradient(circle at 86% 10%, rgba(217, 133, 36, 0.16), transparent 22%),
+    linear-gradient(150deg, #f7f1e7 0%, #eef5f8 50%, #f8fbfe 100%);
+}
+
+body {
+  position: relative;
+  color: var(--ink);
+  font-family: "Aptos", "Segoe UI Variable", "Segoe UI", "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(24px);
+  opacity: 0.6;
+  animation: ambient-float 18s ease-in-out infinite;
+}
+
+body::before {
+  top: 10vh;
+  right: 4vw;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(12, 110, 130, 0.16), transparent 68%);
+}
+
+body::after {
+  bottom: 8vh;
+  left: 3vw;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 133, 36, 0.18), transparent 68%);
+  animation-delay: -7s;
+}
+
+html[data-embed="1"],
+html[data-embed="1"] body {
+  background: transparent;
+}
+
+html[data-embed="1"] body::before,
+html[data-embed="1"] body::after {
+  display: none;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  gap: 22px;
+}
+
+.page-shell.with-site-nav {
+  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+}
+
+.site-sidebar {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  padding: 24px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 28px;
+  background: rgba(250, 252, 253, 0.78);
+  box-shadow: 0 18px 40px rgba(20, 37, 58, 0.08);
+  backdrop-filter: blur(12px);
+  animation: rise-in 520ms ease both;
+}
+
+.site-sidebar h2 {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.4rem;
+}
+
+.site-sidebar p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.site-sidebar nav {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-action,
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.sidebar-action::after,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.sidebar-action:hover,
+.nav-link:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.sidebar-action:hover::after,
+.nav-link:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.sidebar-list {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-slide {
+  display: grid;
+  gap: 4px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.sidebar-slide:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.sidebar-slide.active {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-slide strong {
+  font-size: 0.96rem;
+}
+
+.sidebar-slide span {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: inherit;
+  opacity: 0.88;
+}
+
+.site-main {
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.slide-toolbar {
+  position: sticky;
+  top: 18px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 14px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+  backdrop-filter: blur(12px);
+  animation: rise-in 560ms ease both;
+}
+
+.toolbar-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.slide {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+  box-sizing: border-box;
+  padding: 4px 0 28px;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: minmax(0, 2.8fr) minmax(240px, 0.7fr);
+  padding: 38px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+  box-shadow: var(--shadow);
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.12), transparent 34%),
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -26% auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 68%);
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy::after {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -120px;
+  width: 120px;
+  height: calc(100% + 44px);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transform: skewX(-20deg);
+  animation: panel-sheen 2.8s ease 820ms 1 both;
+  pointer-events: none;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  max-width: none;
+  color: #f6fbff;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.05rem, 2.85vw, 3.35rem);
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  text-shadow: 0 10px 30px rgba(8, 24, 38, 0.14);
+}
+
+.hero-copy .objective {
+  margin: 18px 0 0;
+  max-width: 60ch;
+  color: rgba(246, 251, 255, 0.92);
+  font-size: 1.06rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  color: rgba(246, 251, 255, 0.82);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-meta {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(247, 250, 252, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.meta-card:hover {
+  transform: translateY(-2px);
+  background: rgba(247, 250, 252, 0.22);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.meta-label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(246, 251, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.meta-card p {
+  margin: 0;
+  color: #f6fbff;
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.visual-summary-panel {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  animation: rise-in 620ms ease both;
+}
+
+.visual-summary-panel .visual-summary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.visual-summary-panel .visual-summary-title {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.38rem;
+  line-height: 1.12;
+}
+
+.visual-summary-panel .visual-summary-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.block {
+  position: relative;
+  grid-column: span 12;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 24px 26px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+  animation: rise-in 620ms ease both;
+  animation-delay: calc(var(--stagger, 0) * 85ms);
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(12, 110, 130, 0), rgba(12, 110, 130, 0.32), rgba(217, 133, 36, 0));
+}
+
+.block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(20, 37, 58, 0.1);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.block h2 {
+  margin: 0 0 14px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.42rem;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.block h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(217, 133, 36, 0.75));
+}
+
+.block-body {
+  display: grid;
+  gap: 14px;
+}
+
+.block p,
+.block li,
+.caption,
+.formula-caption,
+.sources-list,
+.review-meta,
+.option-text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.block-body > p,
+.block-body > ul,
+.block-body > blockquote,
+.block-body > .formula-shell {
+  max-width: var(--reading-width);
+}
+
+.block.block-image .block-body,
+.block.block-table .block-body,
+.block.block-sources .block-body {
+  max-width: none;
+}
+
+.block.block-hero {
+  background:
+    linear-gradient(145deg, rgba(20, 37, 58, 0.96), rgba(12, 110, 130, 0.9));
+  color: #f6fbff;
+}
+
+.block.block-hero::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+}
+
+.block.block-hero h2,
+.block.block-hero p,
+.block.block-hero li {
+  color: inherit;
+}
+
+.block.block-hero h2::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.16));
+}
+
+.lead-text {
+  font-size: 1.08rem;
+  line-height: 1.76;
+}
+
+blockquote {
+  margin: 0;
+  padding: 8px 0 8px 18px;
+  border-left: 4px solid var(--highlight);
+  color: #18374d;
+  font-style: italic;
+  line-height: 1.72;
+  font-size: 1.06rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+.bullet-list li {
+  line-height: 1.66;
+  padding-left: 2px;
+}
+
+.bullet-list li::marker {
+  color: var(--accent);
+}
+
+.media {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  background: linear-gradient(180deg, #eef5fb, #f9fbfd);
+}
+
+.media-figure {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.block-image {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.94), rgba(249, 251, 253, 0.98));
+  padding: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.caption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 90ch;
+}
+
+.formula-shell {
+  display: grid;
+  gap: 14px;
+}
+
+.formula-display {
+  overflow-x: auto;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.96), rgba(248, 251, 253, 0.96));
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.formula-display mjx-container {
+  margin: 0 auto !important;
+  font-size: 118% !important;
+}
+
+.formula-caption {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: var(--panel-strong);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+  font-size: 0.96rem;
+}
+
+td, th {
+  border: 1px solid var(--line);
+  padding: 12px 13px;
+  text-align: left;
+  vertical-align: top;
+}
+
+tr:first-child td,
+tr:first-child th {
+  background: rgba(12, 110, 130, 0.08);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+tr:nth-child(even):not(:first-child) td {
+  background: rgba(12, 110, 130, 0.03);
+}
+
+.sources-panel {
+  position: relative;
+  margin-top: 56px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(20, 37, 58, 0.06);
+  overflow: hidden;
+  animation: rise-in 680ms ease both;
+}
+
+.sources-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--accent), rgba(217, 133, 36, 0.7));
+}
+
+.sources-title {
+  margin: 0 0 10px;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sources-summary {
+  margin: 0 0 14px;
+  max-width: 88ch;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sources-list {
+  --sources-cols: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: stretch;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.source-ref {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  flex: 0 1 calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  width: min(100%, calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols)));
+  max-width: calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  padding: 12px 14px;
+  box-sizing: border-box;
+  min-height: 118px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.06), rgba(12, 110, 130, 0.03));
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: none;
+  line-height: 1.36;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.source-ref:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.16);
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.09), rgba(12, 110, 130, 0.05));
+}
+
+.source-ref-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--accent-strong);
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.34;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-wrap: pretty;
+}
+
+.source-ref-domain {
+  color: var(--muted);
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.source-ref[href]:hover .source-ref-title {
+  text-decoration: underline;
+}
+
+.sources-list.sources-cols-1 {
+  --sources-cols: 1;
+}
+
+.sources-list.sources-cols-2 {
+  --sources-cols: 2;
+}
+
+.sources-list.sources-cols-3 {
+  --sources-cols: 3;
+}
+
+.sources-list.sources-cols-4 {
+  --sources-cols: 4;
+}
+
+.quiz-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.quiz-hero {
+  display: grid;
+  gap: 18px;
+  padding: 32px 34px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.quiz-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 78% 26%, rgba(255, 255, 255, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.quiz-hero h1 {
+  margin: 0;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.1rem, 3.2vw, 3.5rem);
+  line-height: 1.06;
+}
+
+.quiz-hero p {
+  margin: 0;
+  max-width: 72ch;
+  line-height: 1.65;
+  color: rgba(246, 251, 255, 0.92);
+}
+
+.quiz-app-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.quiz-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f6fbff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.quiz-panel,
+.review-card {
+  box-sizing: border-box;
+  width: min(980px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  animation: rise-in 620ms ease both;
+}
+
+.question-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.question-title {
+  margin: 0 0 16px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.option-list {
+  display: grid;
+  gap: 12px;
+}
+
+.option-item {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(248, 251, 252, 0.9);
+  border: 1px solid rgba(20, 37, 58, 0.10);
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.option-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.18);
+  box-shadow: 0 8px 18px rgba(20, 37, 58, 0.06);
+}
+
+.option-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.option-input {
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+
+.option-text {
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.option-explanation {
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.option-correct {
+  border-color: rgba(45, 143, 114, 0.35);
+  background: rgba(230, 247, 239, 0.9);
+}
+
+.option-wrong {
+  border-color: rgba(217, 133, 36, 0.32);
+  background: rgba(255, 244, 230, 0.92);
+}
+
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.quiz-button,
+.quiz-actions a {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.quiz-button::after,
+.quiz-actions a::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.quiz-button:hover,
+.quiz-actions a:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.quiz-button:hover::after,
+.quiz-actions a:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.quiz-button.primary {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  border-color: transparent;
+  color: #f6fbff;
+}
+
+.quiz-button.disabled,
+.quiz-actions a.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.results-card {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(248, 251, 252, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.results-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.results-card span {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.review-list {
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.review-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.teaching-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.teaching-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(244, 248, 251, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.teaching-card.emphasis {
+  background: rgba(231, 243, 248, 0.96);
+  border-color: rgba(12, 110, 130, 0.18);
+}
+
+.teaching-card .teaching-card-title {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.teaching-card p strong {
+  display: inline;
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.teaching-card p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+html[data-embed="1"] .page-shell {
+  min-height: auto;
+  padding: 0;
+  gap: 0;
+}
+
+html[data-embed="1"] .page-shell.with-site-nav {
+  grid-template-columns: 1fr;
+}
+
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar {
+  display: none;
+}
+
+html[data-embed="1"] .slide,
+html[data-embed="1"] .quiz-shell {
+  max-width: none;
+  min-height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  box-shadow: none;
+}
+
+html[data-embed="1"] .hero-panel,
+html[data-embed="1"] .quiz-hero,
+html[data-embed="1"] .sources-panel,
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar,
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  animation: none;
+}
+
+@media (min-width: 1120px) {
+  .slide.layout-simple .content-grid {
+    align-items: stretch;
+  }
+
+  .slide.layout-simple .block {
+    grid-template-rows: auto 1fr;
+  }
+
+  .slide.layout-simple .block-body {
+    align-content: start;
+  }
+
+  .layout-title .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-bullets .block.block-bullets,
+  .layout-bullets .block.block-quote,
+  .layout-bullets .block.block-formula,
+  .layout-two_columns .block:not(.block-hero):not(.block-image):not(.block-sources):not(.block-table) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-bullets .block.block-hero,
+  .layout-bullets .block.block-image,
+  .layout-bullets .block.block-table,
+  .layout-bullets .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-quote .block.block-quote,
+  .layout-table .block.block-table {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-quote .block:not(.block-quote):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-table .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-table.layout-table-single-support .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-table.layout-table-single-support .visual-summary-panel,
+  .layout-table.layout-table-single-support .sources-panel {
+    width: min(100%, calc(var(--content-width) * 0.833333));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .layout-quote .block.block-image,
+  .layout-quote .block.block-table,
+  .layout-quote .block.block-sources,
+  .layout-table .block.block-image,
+  .layout-table .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-spotlight .block:not(:first-child):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-spotlight .block.block-image,
+  .layout-spotlight .block.block-table,
+  .layout-spotlight .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block:nth-child(1):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-comparison .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-comparison .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block.block-image,
+  .layout-comparison .block.block-table,
+  .layout-comparison .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-magazine .block:nth-child(odd):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 7;
+  }
+
+  .layout-magazine .block:nth-child(even):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 5;
+  }
+
+  .layout-magazine .block.block-image,
+  .layout-magazine .block.block-table,
+  .layout-magazine .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-mosaic .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-mosaic .block.block-image,
+  .layout-mosaic .block.block-table,
+  .layout-mosaic .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-triptych .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-triptych .block.block-image,
+  .layout-triptych .block.block-table,
+  .layout-triptych .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-sidebar_focus .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(n+4):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-sidebar_focus .block.block-image,
+  .layout-sidebar_focus .block.block-table,
+  .layout-sidebar_focus .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-dashboard .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-dashboard .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-dashboard .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-dashboard .block.block-image,
+  .layout-dashboard .block.block-table,
+  .layout-dashboard .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-staggered .block:nth-child(3n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 7;
+  }
+
+  .layout-staggered .block:nth-child(3n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 8 / span 5;
+  }
+
+  .layout-staggered .block:nth-child(3n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 3 / span 8;
+  }
+
+  .layout-staggered .block.block-image,
+  .layout-staggered .block.block-table,
+  .layout-staggered .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-storyline .block:nth-child(4n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-storyline .block:nth-child(4n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 5 / span 8;
+  }
+
+  .layout-storyline .block.block-image,
+  .layout-storyline .block.block-table,
+  .layout-storyline .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block.layout-slot-primary {
+    grid-column: 2 / span 10 !important;
+  }
+
+  .layout-spotlight .block.layout-slot-secondary {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-half {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-magazine .block.layout-slot-feature {
+    grid-column: span 7 !important;
+  }
+
+  .layout-magazine .block.layout-slot-support {
+    grid-column: span 5 !important;
+  }
+
+  .layout-mosaic .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-third {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-support {
+    grid-column: span 6 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-a {
+    grid-column: 1 / span 7 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-b {
+    grid-column: 8 / span 5 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-c {
+    grid-column: 3 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-a {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-b {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-c {
+    grid-column: 1 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-d {
+    grid-column: 5 / span 8 !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .page-shell.with-site-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell {
+    padding: 14px;
+  }
+
+  .site-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .block {
+    padding: 18px;
+  }
+
+  .slide-toolbar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-panel,
+  .quiz-hero {
+    padding: 26px 22px;
+  }
+
+  .hero-copy h1,
+  .quiz-hero h1 {
+    max-width: none;
+  }
+
+  .sources-list {
+    justify-content: stretch;
+  }
+
+  .source-ref,
+  .sources-list.sources-count-1 .source-ref,
+  .sources-list.sources-count-2 .source-ref,
+  .sources-list.sources-count-4 .source-ref {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+  
+</head>
+<body class="viewer-user page-quiz">
+  <div class="page-shell with-site-nav">
+    
+    <aside class="site-sidebar">
+      <h2>AERONEFS ATA 24</h2>
+      <p>Parcours épuré avec navigation et QCM.</p>
+      <nav>
+        
+        <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
+        
+        
+        
+        <a class="sidebar-action" href="index.html">Sommaire</a>
+        
+        
+        <a class="sidebar-action" href="deck.html">Vue deck</a>
+        
+        
+      </nav>
+      <div class="sidebar-list">
+        
+        <a class="sidebar-slide" href="s1-1.html">
+          <strong>S1-1</strong>
+          <span>Génération AC en vol : panorama des sources</span>
+          
+          <span>Identifier les sources principales qui alimentent le système électrique alternatif (AC SYSTEM) en vol et leur organisation générale.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s1-1.html">
+          <strong>QCM S1-1</strong>
+          <span>QCM - Génération AC en vol : panorama des sources</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s1-2.html">
+          <strong>S1-2</strong>
+          <span>IDG : implantation sur moteur et liaison mécanique</span>
+          
+          <span>Décrire l’implantation d’un IDG sur moteur et sa connexion mécanique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s1-2.html">
+          <strong>QCM S1-2</strong>
+          <span>QCM - IDG : implantation sur moteur et liaison mécanique</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s1-3.html">
+          <strong>S1-3</strong>
+          <span>GCU : contrôle et surveillance des IDG</span>
+          
+          <span>Expliquer le rôle de la GCU dans la commande et la surveillance des IDG.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s1-3.html">
+          <strong>QCM S1-3</strong>
+          <span>QCM - GCU : contrôle et surveillance des IDG</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s1-4.html">
+          <strong>S1-4</strong>
+          <span>APU GEN et répartition du contrôle GCU/GAPCU</span>
+          
+          <span>Distinguer la source APU et son bloc de contrôle dédié.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s1-4.html">
+          <strong>QCM S1-4</strong>
+          <span>QCM - APU GEN et répartition du contrôle GCU/GAPCU</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s2-1.html">
+          <strong>S2-1</strong>
+          <span>Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
+          
+          <span>Identifier les sources externes disponibles au sol pour alimenter le réseau AC.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s2-1.html">
+          <strong>QCM S2-1</strong>
+          <span>QCM - Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s2-2.html">
+          <strong>S2-2</strong>
+          <span>Panneau de puissance externe et réceptacles</span>
+          
+          <span>Lire le panneau de contrôle de puissance externe et ses fonctions principales.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s2-2.html">
+          <strong>QCM S2-2</strong>
+          <span>QCM - Panneau de puissance externe et réceptacles</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s2-3.html">
+          <strong>S2-3</strong>
+          <span>Raccordement au AC SYSTEM et implantation près du NLG</span>
+          
+          <span>Localiser l’interface de puissance externe et son lien avec le réseau AC.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s2-3.html">
+          <strong>QCM S2-3</strong>
+          <span>QCM - Raccordement au AC SYSTEM et implantation près du NLG</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-1.html">
+          <strong>S3-1</strong>
+          <span>Génération de secours : logique de bascule</span>
+          
+          <span>Comprendre la logique d’alimentation de secours lorsque les sources normales ne sont plus disponibles.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-1.html">
+          <strong>QCM S3-1</strong>
+          <span>QCM - Génération de secours : logique de bascule</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-2.html">
+          <strong>S3-2</strong>
+          <span>Batteries et STATIC INVERTER</span>
+          
+          <span>Montrer la chaîne BATTERY 1 / BATTERY 2 → STATIC INVERTER → réseau AC essentiel, et préciser le caractère dégradé de cette alimentation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-2.html">
+          <strong>QCM S3-2</strong>
+          <span>QCM - Batteries et STATIC INVERTER</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>EMER GEN et EMER GEN GCU</span>
+          
+          <span>Repérer la commande et la surveillance de la source électrique de secours.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - EMER GEN et EMER GEN GCU</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Réseau AC essentiel et indisponibilité des sources normales</span>
+          
+          <span>Distinguer le réseau AC général du réseau AC essentiel en situation dégradée.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Réseau AC essentiel et indisponibilité des sources normales</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-1.html">
+          <strong>S4-1</strong>
+          <span>Architecture DC : vue d’ensemble</span>
+          
+          <span>Présenter les grandes familles de sources qui alimentent le système électrique continu (DC SYSTEM) et garder visibles les liaisons avec le système électrique alternatif (AC SYSTEM).</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-1.html">
+          <strong>QCM S4-1</strong>
+          <span>QCM - Architecture DC : vue d’ensemble</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>TR 1, TR 2, TR ESS et APU TR</span>
+          
+          <span>Identifier le rôle des transformateur-rectificateurs dans l’alimentation du réseau DC.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - TR 1, TR 2, TR ESS et APU TR</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-3.html">
+          <strong>S4-3</strong>
+          <span>Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
+          
+          <span>Situer les batteries, le STATIC INVERTER et l’EMER GEN dans la logique d’alimentation DC, en distinguant alimentation normale et secours.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide active" href="slide-s4-3.html">
+          <strong>QCM S4-3</strong>
+          <span>QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-4.html">
+          <strong>S4-4</strong>
+          <span>APU BATTERY et alimentation de l’APU STARTER</span>
+          
+          <span>Décrire la chaîne d’alimentation dédiée au démarrage de l’APU.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-4.html">
+          <strong>QCM S4-4</strong>
+          <span>QCM - APU BATTERY et alimentation de l’APU STARTER</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-5.html">
+          <strong>S4-5</strong>
+          <span>Blocs de contrôle et interfaces avec le DC SYSTEM</span>
+          
+          <span>Identifier les unités de contrôle visibles et leur lien avec l’alimentation DC.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-5.html">
+          <strong>QCM S4-5</strong>
+          <span>QCM - Blocs de contrôle et interfaces avec le DC SYSTEM</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-1.html">
+          <strong>S5-1</strong>
+          <span>ECAM ELEC AC : lire la page d’un coup d’œil</span>
+          
+          <span>Lire la page ECAM dédiée à l’électricité AC et comprendre sa logique d’affichage.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-1.html">
+          <strong>QCM S5-1</strong>
+          <span>QCM - ECAM ELEC AC : lecture générale de la page</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-2.html">
+          <strong>S5-2</strong>
+          <span>Surveillance des sources AC sur l’Electronic Centralized Aircraft Monitor (ECAM)</span>
+          
+          <span>Identifier les indications principales liées aux générateurs sur l’ECAM.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-2.html">
+          <strong>QCM S5-2</strong>
+          <span>QCM - Surveillance des sources : GEN 1, GEN 2 et APU GEN</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Lire les paramètres de surveillance sur la page ECAM AC</span>
+          
+          <span>Associer chaque valeur affichée à sa source de surveillance, notamment les IDG et les sources externes visibles.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Surveillance des IDG et des paramètres affichés</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-4.html">
+          <strong>S5-4</strong>
+          <span>Panneau AC GENERATION et commandes P/BSW</span>
+          
+          <span>Repérer les P/BSW, les voyants et la chaîne EMER GEN / CSM/G sur le synoptique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-4.html">
+          <strong>QCM S5-4</strong>
+          <span>QCM - Panneau AC GENERATION et commandes P/BSW</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-5.html">
+          <strong>S5-5</strong>
+          <span>Panneau ELEC : sélection des sources et bus</span>
+          
+          <span>Identifier les commandes et voyants du panneau ELEC, puis relier chaque libellé à sa fonction de sélection ou de supervision.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-5.html">
+          <strong>QCM S5-5</strong>
+          <span>QCM - Panneau ELEC : sélection des sources et bus</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-6.html">
+          <strong>S5-6</strong>
+          <span>Panneau EMER ELEC PWR : test et commande de secours</span>
+          
+          <span>Identifier les commandes du panneau dédié à la génération électrique d’urgence.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-6.html">
+          <strong>QCM S5-6</strong>
+          <span>QCM - Panneau EMER ELEC PWR : test et commande de secours</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s6-1.html">
+          <strong>S6-1</strong>
+          <span>Ground Service Network : principe de fonctionnement</span>
+          
+          <span>Comprendre l’alimentation du réseau de service au sol sans énergiser tout le réseau électrique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s6-1.html">
+          <strong>QCM S6-1</strong>
+          <span>QCM - Ground Service Network : principe de fonctionnement</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s6-2.html">
+          <strong>S6-2</strong>
+          <span>MAINT BUS : alimentation du réseau de service</span>
+          
+          <span>Montrer que, switch MAINT BUS sur ON, le réseau de service au sol est alimenté par **EXT PWR A ONLY** sans mettre sous tension tout le réseau électrique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s6-2.html">
+          <strong>QCM S6-2</strong>
+          <span>QCM - MAINT BUS : alimentation du réseau de service</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s6-3.html">
+          <strong>S6-3</strong>
+          <span>Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
+          
+          <span>Localiser les interfaces qui relient le service au sol aux réseaux AC et DC.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s6-3.html">
+          <strong>QCM S6-3</strong>
+          <span>QCM - Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-1.html">
+          <strong>S7-1</strong>
+          <span>ECMU : gestion des contacteurs</span>
+          
+          <span>Identifier le rôle des ECMU dans la commande des contacteurs électriques.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-1.html">
+          <strong>QCM S7-1</strong>
+          <span>QCM - ECMU : gestion des contacteurs</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>CBMU : surveillance des C/B et des RCCBs</span>
+          
+          <span>Expliquer la fonction de surveillance des disjoncteurs par le CBMU.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - CBMU : surveillance des C/B et des RCCBs</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Superviser les disjoncteurs via l’ECAM</span>
+          
+          <span>Lire la page ECAM dédiée aux disjoncteurs et interpréter leur statut comme un état de supervision.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Page ECAM C/B : signalement des déclenchements</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-4.html">
+          <strong>S7-4</strong>
+          <span>AC & DC CONTACTORS : distribution vers les charges</span>
+          
+          <span>Comprendre comment les contacteurs alimentent les réseaux de charge.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-4.html">
+          <strong>QCM S7-4</strong>
+          <span>QCM - AC & DC CONTACTORS : distribution vers les charges</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-5.html">
+          <strong>S7-5</strong>
+          <span>De la supervision à la distribution des charges</span>
+          
+          <span>Lire le synoptique électrique dans l’ordre : surveillance, commande, puis répartition vers les charges.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-5.html">
+          <strong>QCM S7-5</strong>
+          <span>QCM - Lien entre supervision, contacteurs et load distribution</span>
+          
+          <span>5 questions - correction immÃ©diate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="final-validation.html">
+          <strong>Validation finale</strong>
+          <span>Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion</span>
+          
+          <span>25 questions tirees au sort sur 100 - correction finale</span>
+          
+        </a>
+        
+      </div>
+    </aside>
+    
+
+    <main class="site-main">
+      
+      <div class="slide-toolbar">
+        <div class="toolbar-meta">
+          <span>Page 28/61</span>
+          
+          <span>QCM</span>
+        </div>
+        <div class="toolbar-actions">
+          
+          <a class="nav-link" href="../../index.html">Catalogue</a>
+          
+          
+          <a class="nav-link" href="s4-3.html">Précédent</a>
+          
+          
+          <a class="nav-link" href="s4-4.html">Suivante</a>
+          
+        </div>
+      </div>
+      
+
+      <section class="quiz-shell">
+        <section class="quiz-hero">
+          <div>
+            <p class="eyebrow">QCM</p>
+            <h1>QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN</h1>
+            <p>
+              
+              QCM intermédiaire avec correction immédiate question par question.
+              
+            </p>
+          </div>
+          <div class="quiz-meta">
+            <span class="meta-pill">5 questions</span>
+            
+          </div>
+        </section>
+
+        <section
+          id="quiz-app"
+          class="quiz-app-shell"
+          data-viewer-mode="user"
+          data-next-href="s4-4.html"
+          data-home-href="index.html"
+        ></section>
+      </section>
+    </main>
+  </div>
+
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S4-3", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S4-3-Q1", "prompt": "Concernant l’alimentation de secours du réseau AC liée à la logique DC, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le STATIC INVERTER est alimenté directement par les IDGs.", "is_correct": false, "explanation": "Faux : les IDGs alimentent le AC SYSTEM, mais le schéma de secours montre le STATIC INVERTER alimenté par les batteries, pas directement par les IDGs."}, {"id": "B", "text": "Le STATIC INVERTER produit normalement le DC SYSTEM à partir du réseau AC principal.", "is_correct": false, "explanation": "Faux : son rôle visible ici est lié au secours AC Essential, pas à une production normale du DC SYSTEM."}, {"id": "C", "text": "Le STATIC INVERTER remplace les TR 1 et TR 2 dans l’alimentation normale du DC SYSTEM.", "is_correct": false, "explanation": "Faux : les transformer rectifier TR 1 et TR 2 participent à l’alimentation du DC SYSTEM, tandis que le STATIC INVERTER a un rôle de secours AC."}, {"id": "D", "text": "Le STATIC INVERTER peut fournir une partie du réseau AC Essential quand aucune autre source AC n’est disponible.", "is_correct": true, "explanation": "Vrai : le schéma indique que, sans autre source AC disponible, l’énergie issue des batteries alimente le STATIC INVERTER, qui fournit une partie du réseau AC appelée AC Essential electrical system network."}, {"id": "E", "text": "Le STATIC INVERTER alimente l’EMER GEN lorsqu’une panne AC apparaît.", "is_correct": false, "explanation": "Faux : l’EMER GEN est une autre source associée à l’AC SYSTEM ; il n’est pas alimenté par le STATIC INVERTER sur le schéma."}], "coverage_label": "STATIC INVERTER et alimentation de secours", "learning_objective": "Identifier le rôle du STATIC INVERTER dans l’alimentation de secours du réseau AC.", "correction_summary": "La bonne lecture consiste à distinguer la source d’énergie et la fonction du convertisseur : les batteries alimentent le STATIC INVERTER, qui fournit ensuite une partie du réseau AC Essential si les autres sources AC sont indisponibles. L’erreur fréquente est de confondre ce secours AC avec l’alimentation normale du DC SYSTEM.", "course_clarification": "Le STATIC INVERTER convertit l’énergie des batteries en AC. Il intervient en secours pour une partie du réseau AC Essential, pas pour remplacer les TR dans l’alimentation normale du DC SYSTEM.", "source_refs": []}, {"question_id": "S4-3-Q2", "prompt": "À propos des batteries et de l’acronyme BCL, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "BCL signifie Battery Control Link.", "is_correct": false, "explanation": "Faux : cette expansion ne correspond pas à l’abréviation indiquée sur le schéma."}, {"id": "B", "text": "BCL signifie Battery Charge Limiter.", "is_correct": true, "explanation": "Vrai : l’abréviation BCL est explicitement donnée et doit être conservée telle quelle."}, {"id": "C", "text": "Les BATTERY 1 et 2 alimentent directement le AC SYSTEM en fonctionnement normal.", "is_correct": false, "explanation": "Faux : les batteries sont liées à la distribution DC et au STATIC INVERTER pour le secours, pas à une alimentation normale directe du AC SYSTEM."}, {"id": "D", "text": "Les batteries n’ont aucun lien avec la logique d’alimentation DC.", "is_correct": false, "explanation": "Faux : le schéma montre au contraire BATTERY 1 et 2 intégrées à la distribution DC via les BCL et les circuits associés."}, {"id": "E", "text": "Le BCL est un convertisseur placé entre l’APU GEN et l’AC SYSTEM.", "is_correct": false, "explanation": "Faux : le BCL concerne les batteries ; il n’est pas un convertisseur entre l’APU GEN et l’AC SYSTEM."}], "coverage_label": "BCL et batteries", "learning_objective": "Reconnaître le rôle du BCL et situer les batteries dans la distribution électrique.", "correction_summary": "Il faut reconnaître l’acronyme BCL et ne pas le confondre avec un convertisseur ou une source d’AC. Les batteries restent des éléments de la logique DC, reliées à la distribution via les BCL et les circuits associés.", "course_clarification": "BCL veut dire Battery Charge Limiter. Les BATTERY 1 et 2 appartiennent à la logique DC et interviennent aussi dans le secours via le STATIC INVERTER.", "source_refs": []}, {"question_id": "S4-3-Q3", "prompt": "Concernant l’EMER GEN et son contrôle, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’EMER GEN est contrôlé et surveillé par l’EMER GEN GCU.", "is_correct": true, "explanation": "Vrai : le schéma associe explicitement l’EMER GEN à l’EMER GEN GCU, qui assure la commande et la surveillance."}, {"id": "B", "text": "L’EMER GEN est contrôlé par le GAPCU comme l’APU GEN.", "is_correct": false, "explanation": "Faux : le GAPCU est lié à l’APU GEN ; l’EMER GEN possède son propre contrôleur, l’EMER GEN GCU."}, {"id": "C", "text": "L’EMER GEN alimente directement les batteries sans passer par le DC SYSTEM.", "is_correct": false, "explanation": "Faux : le schéma le relie au AC SYSTEM et à la logique de secours, pas à une alimentation directe des batteries."}, {"id": "D", "text": "L’EMER GEN n’apparaît jamais dans la logique d’alimentation de secours.", "is_correct": false, "explanation": "Faux : il fait précisément partie des éléments de secours représentés dans l’architecture."}, {"id": "E", "text": "L’EMER GEN remplace les IDGs en fonctionnement normal.", "is_correct": false, "explanation": "Faux : les IDGs sont les générateurs entraînés par les moteurs ; l’EMER GEN est une source associée au secours."}], "coverage_label": "EMER GEN et commande", "learning_objective": "Identifier le rôle du contrôleur EMER GEN GCU dans la chaîne d’alimentation de secours.", "correction_summary": "Le point clé est de relier chaque source à son unité de commande. L’EMER GEN n’est pas piloté par le GAPCU ; il est associé à son propre EMER GEN GCU. La confusion fréquente vient du fait que plusieurs blocs de contrôle apparaissent sur le même schéma.", "course_clarification": "L’EMER GEN est une source de secours reliée au AC SYSTEM. Sa commande et sa surveillance sont assurées par l’EMER GEN GCU.", "source_refs": []}, {"question_id": "S4-3-Q4", "prompt": "À propos de l’APU STARTER et de l’alimentation associée, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’APU STARTER est alimenté uniquement par les IDGs moteur.", "is_correct": false, "explanation": "Faux : les IDGs alimentent le AC SYSTEM ; ils ne sont pas indiqués comme source directe du STARTER de l’APU."}, {"id": "B", "text": "L’APU STARTER est relié au BCL avant toute alimentation.", "is_correct": false, "explanation": "Faux : le schéma relie le STARTER à l’APU TR / APU BATTERY, pas à une chaîne passant par le BCL."}, {"id": "C", "text": "L’APU STARTER fonctionne sans aucune source électrique associée.", "is_correct": false, "explanation": "Faux : un starter a besoin d’une alimentation électrique ; ici elle vient des éléments APU TR / APU BATTERY."}, {"id": "D", "text": "L’APU STARTER alimente directement le DC SYSTEM.", "is_correct": false, "explanation": "Faux : le STARTER consomme de l’énergie pour lancer l’APU ; il n’est pas une source d’alimentation du DC SYSTEM."}, {"id": "E", "text": "L’APU STARTER est alimenté via l’APU TR / APU BATTERY.", "is_correct": true, "explanation": "Vrai : le schéma indique explicitement que le STARTER de l’APU est alimenté depuis l’APU TR et/ou l’APU BATTERY."}], "coverage_label": "APU STARTER et alimentation associée", "learning_objective": "Lire la liaison entre l’APU STARTER, l’APU TR et l’APU BATTERY.", "correction_summary": "Il faut distinguer l’organe qui consomme l’énergie pour démarrer l’APU et les sources qui l’alimentent. L’erreur classique est d’inverser le sens de la chaîne énergétique ou de confondre starter et générateur.", "course_clarification": "L’APU STARTER reçoit son alimentation depuis l’APU TR / APU BATTERY. Il sert au démarrage de l’APU, pas à l’alimentation du DC SYSTEM.", "source_refs": []}, {"question_id": "S4-3-Q5", "prompt": "Dans la chaîne d’alimentation du DC SYSTEM, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Les IDGs alimentent directement le DC SYSTEM sans conversion.", "is_correct": false, "explanation": "Faux : les IDGs alimentent le AC SYSTEM ; la conversion vers le DC passe par des convertisseurs comme les TR."}, {"id": "B", "text": "L’APU GEN est un convertisseur DC placé avant les batteries.", "is_correct": false, "explanation": "Faux : l’APU GEN est une source AC associée au AC SYSTEM, pas un convertisseur DC placé avant les batteries."}, {"id": "C", "text": "Les TR 1, TR 2, TR ESS et APU TR participent à l’alimentation du DC SYSTEM.", "is_correct": true, "explanation": "Vrai : le schéma de génération DC montre ces transformer rectifier comme éléments participant à l’alimentation du DC SYSTEM."}, {"id": "D", "text": "Le DC SYSTEM n’est lié à aucune source issue du réseau AC.", "is_correct": false, "explanation": "Faux : le DC SYSTEM est alimenté à partir de plusieurs éléments liés au AC SYSTEM, dont les TR."}, {"id": "E", "text": "L’EMER GEN remplace les BCL pour charger les batteries.", "is_correct": false, "explanation": "Faux : l’EMER GEN et les BCL n’ont pas ce rôle d’interchangeabilité ; le BCL reste lié à la charge des batteries."}], "coverage_label": "Architecture DC et TR", "learning_objective": "Identifier les convertisseurs et sources qui participent à l’alimentation du DC SYSTEM.", "correction_summary": "La lecture attendue consiste à suivre la chaîne d’énergie : les sources AC alimentent des convertisseurs comme les TR, qui participent ensuite à l’alimentation du DC SYSTEM. La confusion fréquente est de croire que les IDGs ou l’APU GEN alimentent directement le DC alors qu’ils relèvent d’abord du réseau AC.", "course_clarification": "Le DC SYSTEM reçoit son énergie via des éléments comme TR 1, TR 2, TR ESS et APU TR. Les IDGs et l’APU GEN appartiennent au réseau AC en amont.", "source_refs": []}], "subpart_id": "S4", "anchor_slide_id": "S4-3", "question_count_target": 5, "title": "QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN"}</script>
+  <script>
+    (function () {
+      const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
+      const app = document.getElementById("quiz-app");
+      const viewerMode = app.dataset.viewerMode || "user";
+      const isMaster = viewerMode === "master";
+      const nextHref = app.dataset.nextHref || "";
+      const homeHref = app.dataset.homeHref || "index.html";
+      const storageKey = "static-quiz::" + viewerMode + "::" + quiz.quiz_id;
+      const finalQuizDrawCount = 25;
+
+      function normalizeCoverageLabel(question) {
+        if (question.coverage_label) {
+          return String(question.coverage_label).trim();
+        }
+        if (Array.isArray(question.source_refs)) {
+          const courseRef = question.source_refs.find((ref) => ref && ref.source_type === "course");
+          if (courseRef) {
+            return String(courseRef.label || courseRef.locator || question.question_id).trim();
+          }
+        }
+        return String(question.question_id || "");
+      }
+
+      function shuffle(items) {
+        const copy = items.slice();
+        for (let index = copy.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          const current = copy[index];
+          copy[index] = copy[swapIndex];
+          copy[swapIndex] = current;
+        }
+        return copy;
+      }
+
+      function selectBalancedQuestionIds() {
+        if (quiz.quiz_type !== "final") {
+          return [];
+        }
+        const sampleSize = Math.min(finalQuizDrawCount, quiz.questions.length);
+        const buckets = new Map();
+        quiz.questions.forEach((question) => {
+          const label = normalizeCoverageLabel(question);
+          if (!buckets.has(label)) {
+            buckets.set(label, []);
+          }
+          buckets.get(label).push(question.question_id);
+        });
+        const labels = shuffle(Array.from(buckets.keys()));
+        labels.forEach((label) => {
+          buckets.set(label, shuffle(buckets.get(label)));
+        });
+        const selected = [];
+        while (selected.length < sampleSize) {
+          let progressed = false;
+          labels.forEach((label) => {
+            if (selected.length >= sampleSize) {
+              return;
+            }
+            const bucket = buckets.get(label) || [];
+            if (!bucket.length) {
+              return;
+            }
+            selected.push(bucket.pop());
+            buckets.set(label, bucket);
+            progressed = true;
+          });
+          if (!progressed) {
+            break;
+          }
+        }
+        return selected;
+      }
+
+      function getQuestions() {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(state.questionIds) ? state.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        const sampled = ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+        return sampled.length ? sampled : quiz.questions.slice(0, Math.min(finalQuizDrawCount, quiz.questions.length));
+      }
+
+      function buildInitialState() {
+        return {
+          currentIndex: 0,
+          answers: {},
+          evaluated: {},
+          submitted: false,
+          finished: false,
+          questionIds: quiz.quiz_type === "final" ? selectBalancedQuestionIds() : [],
+        };
+      }
+
+      function loadState() {
+        try {
+          const raw = window.localStorage.getItem(storageKey);
+          if (!raw) {
+            return buildInitialState();
+          }
+          const candidate = Object.assign(buildInitialState(), JSON.parse(raw));
+          if (quiz.quiz_type === "final" && (!Array.isArray(candidate.questionIds) || !candidate.questionIds.length)) {
+            candidate.questionIds = selectBalancedQuestionIds();
+          }
+          const total = getQuestionsForState(candidate).length;
+          candidate.currentIndex = total ? Math.max(0, Math.min(candidate.currentIndex || 0, total - 1)) : 0;
+          return candidate;
+        } catch (error) {
+          return buildInitialState();
+        }
+      }
+
+      function getQuestionsForState(candidateState) {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(candidateState.questionIds) ? candidateState.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        return ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+      }
+
+      let state = loadState();
+
+      function syncFinalQuizHero() {
+        if (quiz.quiz_type !== "final" || quiz.questions.length <= finalQuizDrawCount) {
+          return;
+        }
+        const hero = document.querySelector(".quiz-hero");
+        if (!hero) {
+          return;
+        }
+        const description = hero.querySelector("p:not(.eyebrow)");
+        if (description) {
+          description.textContent =
+            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+        }
+        const metaPills = hero.querySelectorAll(".meta-pill");
+        if (metaPills.length) {
+          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+        }
+      }
+
+      function persist() {
+        window.localStorage.setItem(storageKey, JSON.stringify(state));
+      }
+
+      function restartQuiz() {
+        state = buildInitialState();
+        persist();
+        render();
+      }
+
+      function getQuestion(index) {
+        return getQuestions()[index];
+      }
+
+      function getCorrectIds(question) {
+        return question.options.filter((option) => option.is_correct).map((option) => option.id);
+      }
+
+      function isMulti(question) {
+        return getCorrectIds(question).length > 1;
+      }
+
+      function getSelected(questionId) {
+        return Array.isArray(state.answers[questionId]) ? state.answers[questionId] : [];
+      }
+
+      function setSelected(question, values) {
+        state.answers[question.question_id] = values;
+        persist();
+      }
+
+      function sameSelection(left, right) {
+        if (left.length !== right.length) {
+          return false;
+        }
+        const leftSorted = left.slice().sort();
+        const rightSorted = right.slice().sort();
+        return leftSorted.every((value, index) => value === rightSorted[index]);
+      }
+
+      function scoreQuestion(question) {
+        return sameSelection(getSelected(question.question_id), getCorrectIds(question));
+      }
+
+      function scoreQuiz() {
+        const questions = getQuestions();
+        let correct = 0;
+        questions.forEach((question) => {
+          if (scoreQuestion(question)) {
+            correct += 1;
+          }
+        });
+        return {
+          correct: correct,
+          total: questions.length,
+          percent: questions.length ? Math.round((correct / questions.length) * 100) : 0,
+        };
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function formatRichText(value) {
+        const escaped = escapeHtml(value || "");
+        return escaped
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\n/g, "<br>");
+      }
+
+      function queueMathJax() {
+        if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+          window.MathJax.typesetPromise([app]).catch(function () {});
+        }
+      }
+
+      function renderSources(question) {
+        if (!Array.isArray(question.source_refs) || !question.source_refs.length) {
+          return "";
+        }
+        const webRefs = question.source_refs.filter((ref) => ref.source_type === "web");
+        if (!webRefs.length) {
+          return "";
+        }
+        const items = webRefs
+          .map((ref) => {
+            if (ref.url) {
+              return "<a href='" + escapeHtml(ref.url) + "' target='_blank' rel='noreferrer'>" + escapeHtml(ref.label) + "</a>";
+            }
+            return "<span>" + escapeHtml(ref.label) + "</span>";
+          })
+          .join("");
+        return "<div class='review-meta'><span><strong>" + (isMaster ? "Références web" : "Sources web") + "</strong></span>" + items + "</div>";
+      }
+
+      function renderQuestionMeta(question) {
+        if (!isMaster) {
+          return renderSources(question);
+        }
+        return (
+          "<div class='review-meta'>" +
+            "<span><strong>Objectif</strong> " + formatRichText(question.learning_objective || "") + "</span>" +
+            renderSources(question) +
+          "</div>"
+        );
+      }
+
+      function renderTeachingPanel(question) {
+        const cards = [];
+        if (question.learning_objective) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>Objectif de la question</strong>" +
+              "<p>" + formatRichText(question.learning_objective) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.correction_summary) {
+          cards.push(
+            "<article class='teaching-card emphasis'>" +
+              "<strong class='teaching-card-title'>Pourquoi cette correction</strong>" +
+              "<p>" + formatRichText(question.correction_summary) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.course_clarification) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>A retenir</strong>" +
+              "<p>" + formatRichText(question.course_clarification) + "</p>" +
+            "</article>"
+          );
+        }
+        if (!cards.length) {
+          return "";
+        }
+        return "<section class='teaching-grid'>" + cards.join("") + "</section>";
+      }
+
+      function renderOption(question, option, mode) {
+        const selected = getSelected(question.question_id);
+        const selectedSet = new Set(selected);
+        const evaluated = state.evaluated[question.question_id];
+        const reveal = mode === "review" || !!evaluated || state.submitted;
+        let classes = "option-item";
+        if (reveal && option.is_correct) {
+          classes += " option-correct";
+        } else if (reveal && selectedSet.has(option.id) && !option.is_correct) {
+          classes += " option-wrong";
+        }
+        const inputType = isMulti(question) ? "checkbox" : "radio";
+        const checked = selectedSet.has(option.id) ? " checked" : "";
+        const disabled = reveal ? " disabled" : "";
+        const name = "q-" + question.question_id;
+        let explanation = "";
+        if (reveal && (isMaster || option.is_correct || selectedSet.has(option.id))) {
+          explanation = "<div class='option-explanation'>" + formatRichText(option.explanation || "") + "</div>";
+        }
+        return (
+          "<label class='" + classes + "'>" +
+            "<div class='option-head'>" +
+              "<input class='option-input' type='" + inputType + "' name='" + name + "' value='" + escapeHtml(option.id) + "'" + checked + disabled + ">" +
+              "<div>" +
+                "<div class='option-text'>" + formatRichText(option.text) + "</div>" +
+              "</div>" +
+            "</div>" +
+            explanation +
+          "</label>"
+        );
+      }
+
+      function renderQuestionPanel(question) {
+        const selected = getSelected(question.question_id);
+        const evaluated = state.evaluated[question.question_id];
+        const questions = getQuestions();
+        const indexLabel = "Question " + (state.currentIndex + 1) + "/" + questions.length;
+        let actions = "";
+
+        if (quiz.quiz_type === "subpart") {
+          if (!evaluated) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='validate-question'" + (selected.length ? "" : " disabled") + ">Valider ma réponse</button>" +
+              "</div>";
+          } else if (state.currentIndex < questions.length - 1) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='next-question'>Question suivante</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          } else {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='finish-subpart'>Terminer le QCM</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          }
+        } else {
+          actions =
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='prev-question'" + (state.currentIndex === 0 ? " disabled" : "") + ">Question précédente</button>" +
+              "<button type='button' class='quiz-button' data-action='next-question'" + (state.currentIndex >= questions.length - 1 ? " disabled" : "") + ">Question suivante</button>" +
+              "<button type='button' class='quiz-button primary' data-action='submit-final'>Soumettre le QCM final</button>" +
+            "</div>";
+        }
+
+        return (
+          "<section class='quiz-panel'>" +
+            "<p class='question-kicker'>" + indexLabel + "</p>" +
+            "<h2 class='question-title'>" + formatRichText(question.prompt) + "</h2>" +
+            renderQuestionMeta(question) +
+            "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "single")).join("") + "</div>" +
+            ((!!evaluated || state.submitted) ? renderTeachingPanel(question) : "") +
+            actions +
+          "</section>"
+        );
+      }
+
+      function renderSubpartSummary() {
+        const score = scoreQuiz();
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat du QCM</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>";
+      }
+
+      function renderFinalSummary() {
+        const score = scoreQuiz();
+        const questions = getQuestions();
+        const review = questions.map((question, index) => {
+          const correct = scoreQuestion(question);
+          return (
+            "<article class='review-card'>" +
+              "<p class='question-kicker'>Question " + (index + 1) + "/" + questions.length + "</p>" +
+              "<h3 class='question-title'>" + formatRichText(question.prompt) + "</h3>" +
+              renderQuestionMeta(question) +
+              "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "review")).join("") + "</div>" +
+              renderTeachingPanel(question) +
+              "<div class='review-meta'><span><strong>Résultat</strong> " + (correct ? "Correct" : "Incorrect") + "</span></div>" +
+            "</article>"
+          );
+        }).join("");
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat final</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer le QCM final</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>" +
+          "<section class='review-list'>" + review + "</section>";
+      }
+
+      function render() {
+        syncFinalQuizHero();
+        if (quiz.quiz_type === "subpart" && state.finished) {
+          renderSubpartSummary();
+          queueMathJax();
+          return;
+        }
+        if (quiz.quiz_type === "final" && state.submitted) {
+          renderFinalSummary();
+          queueMathJax();
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        app.innerHTML = renderQuestionPanel(question);
+        queueMathJax();
+      }
+
+      app.addEventListener("change", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLInputElement) || !target.name.startsWith("q-")) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        if (quiz.quiz_type === "subpart" && state.evaluated[question.question_id]) {
+          return;
+        }
+        const selected = Array.from(app.querySelectorAll("input[name='q-" + question.question_id + "']:checked"))
+          .map((input) => input.value);
+        setSelected(question, selected);
+        render();
+      });
+
+      app.addEventListener("click", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) {
+          return;
+        }
+        const action = target.dataset.action;
+        if (!action) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+
+        if (action === "restart") {
+          restartQuiz();
+          return;
+        }
+
+        if (action === "next-question" && state.currentIndex < getQuestions().length - 1) {
+          state.currentIndex += 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "prev-question" && state.currentIndex > 0) {
+          state.currentIndex -= 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "validate-question") {
+          const selected = getSelected(question.question_id);
+          if (!selected.length) {
+            return;
+          }
+          state.evaluated[question.question_id] = {
+            selected: selected,
+            correct: getCorrectIds(question),
+            is_correct: scoreQuestion(question),
+          };
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "finish-subpart") {
+          state.finished = true;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "submit-final") {
+          state.submitted = true;
+          persist();
+          render();
+        }
+      });
+
+      render();
+    }());
+  </script>
+</body>
+</html>

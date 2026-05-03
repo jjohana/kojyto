@@ -1,6 +1,6 @@
 {
-  "site_build_version": 9,
-  "cache_token": "9-8e1490bbda57",
+  "site_build_version": 10,
+  "cache_token": "10-51ae31e1e76a",
   "viewer_mode": "user",
   "page_count": 41,
   "slide_count": 20,
@@ -371,7 +371,7 @@
       "kind": "quiz",
       "badge": "Validation finale",
       "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique",
-      "subtitle": "25 questions tirées au sort sur 99 - correction finale",
+      "subtitle": "25 questions et correction après soumission.",
       "href": "final-validation.html",
       "json_href": "final-validation.json"
     }

@@ -1,6 +1,6 @@
 {
-  "site_build_version": 9,
-  "cache_token": "9-049adb1465af",
+  "site_build_version": 10,
+  "cache_token": "10-e40d82d93521",
   "viewer_mode": "user",
   "page_count": 41,
   "slide_count": 20,
@@ -371,7 +371,7 @@
       "kind": "quiz",
       "badge": "Validation finale",
       "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)",
-      "subtitle": "25 questions tirées au sort sur 97 - correction finale",
+      "subtitle": "25 questions et correction après soumission.",
       "href": "final-validation.html",
       "json_href": "final-validation.json"
     }

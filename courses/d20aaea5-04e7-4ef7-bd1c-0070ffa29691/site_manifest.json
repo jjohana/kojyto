@@ -1,6 +1,6 @@
 {
-  "site_build_version": 9,
-  "cache_token": "9-766d38ce2b48",
+  "site_build_version": 10,
+  "cache_token": "10-c9f1d4ccddc2",
   "viewer_mode": "user",
   "page_count": 61,
   "slide_count": 30,
@@ -551,7 +551,7 @@
       "kind": "quiz",
       "badge": "Validation finale",
       "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs",
-      "subtitle": "25 questions tirées au sort sur 149 - correction finale",
+      "subtitle": "25 questions et correction après soumission.",
       "href": "final-validation.html",
       "json_href": "final-validation.json"
     }

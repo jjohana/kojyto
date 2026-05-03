@@ -2078,7 +2078,7 @@ html[data-embed="1"] .review-card {
           <strong>Validation finale</strong>
           <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirées au sort sur 149 - correction finale</span>
+          <span>25 questions et correction après soumission.</span>
           
         </a>
         
@@ -2115,12 +2115,12 @@ html[data-embed="1"] .review-card {
             <h1>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</h1>
             <p>
               
-              QCM final avec navigation libre et correction après soumission.
+              25 questions et correction après soumission.
               
             </p>
           </div>
           <div class="quiz-meta">
-            <span class="meta-pill">149 questions</span>
+            <span class="meta-pill">25 questions</span>
             
           </div>
         </section>
@@ -2273,12 +2273,11 @@ html[data-embed="1"] .review-card {
         }
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
-          description.textContent =
-            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
+          description.textContent = getQuestions().length + " questions et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
+          metaPills[0].textContent = getQuestions().length + " questions";
         }
       }
 

@@ -1905,7 +1905,7 @@ html[data-embed="1"] .review-card {
           <strong>Validation finale</strong>
           <span>Validation finale - Économie-Gestion Bac Pro Aéronautique</span>
           
-          <span>25 questions tirées au sort sur 99 - correction finale</span>
+          <span>25 questions et correction après soumission.</span>
           
         </a>
         
@@ -1942,12 +1942,12 @@ html[data-embed="1"] .review-card {
             <h1>Validation finale - Économie-Gestion Bac Pro Aéronautique</h1>
             <p>
               
-              QCM final avec navigation libre et correction après soumission.
+              25 questions et correction après soumission.
               
             </p>
           </div>
           <div class="quiz-meta">
-            <span class="meta-pill">99 questions</span>
+            <span class="meta-pill">25 questions</span>
             
           </div>
         </section>
@@ -2100,12 +2100,11 @@ html[data-embed="1"] .review-card {
         }
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
-          description.textContent =
-            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
+          description.textContent = getQuestions().length + " questions et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
+          metaPills[0].textContent = getQuestions().length + " questions";
         }
       }
 

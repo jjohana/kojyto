@@ -1,6 +1,6 @@
 {
   "site_build_version": 10,
-  "cache_token": "10-8f7542289cc8",
+  "cache_token": "10-d1f1f4bc2a1b",
   "viewer_mode": "user",
   "page_count": 61,
   "slide_count": 30,
@@ -20,7 +20,7 @@
       "kind": "quiz",
       "badge": "QCM S1-1",
       "title": "QCM - Origine de la poussée : terme réacteur",
-      "subtitle": "3 questions - correction immédiate",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s1-1.html",
       "json_href": "slide-s1-1.json"
     },
@@ -56,7 +56,7 @@
       "kind": "quiz",
       "badge": "QCM S1-3",
       "title": "QCM - Tuyère, poussée brute et poussée spécifique",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "4 questions - correction immédiate",
       "href": "slide-s1-3.html",
       "json_href": "slide-s1-3.json"
     },
@@ -74,7 +74,7 @@
       "kind": "quiz",
       "badge": "QCM S2-1",
       "title": "QCM - Consommation horaire et consommation spécifique",
-      "subtitle": "2 questions - correction immédiate",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s2-1.html",
       "json_href": "slide-s2-1.json"
     },
@@ -92,7 +92,7 @@
       "kind": "quiz",
       "badge": "QCM S2-2",
       "title": "QCM - Repères de consommation et surveillance moteur",
-      "subtitle": "3 questions - correction immédiate",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s2-2.html",
       "json_href": "slide-s2-2.json"
     },
@@ -128,7 +128,7 @@
       "kind": "quiz",
       "badge": "QCM S3-2",
       "title": "QCM - Puissance thermique réelle et puissance propulsive",
-      "subtitle": "3 questions - correction immédiate",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s3-2.html",
       "json_href": "slide-s3-2.json"
     },
@@ -218,7 +218,7 @@
       "kind": "quiz",
       "badge": "QCM S5-1",
       "title": "QCM - Canal d’éjection et rôle de la tuyère",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "4 questions - correction immédiate",
       "href": "slide-s5-1.html",
       "json_href": "slide-s5-1.json"
     },
@@ -254,7 +254,7 @@
       "kind": "quiz",
       "badge": "QCM S5-3",
       "title": "QCM - Tuyère convergente, rapport critique et supersonique",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "4 questions - correction immédiate",
       "href": "slide-s5-3.html",
       "json_href": "slide-s5-3.json"
     },
@@ -362,7 +362,7 @@
       "kind": "quiz",
       "badge": "QCM S8-2",
       "title": "QCM - Dispositif pneumatique et séquence de fonctionnement",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "4 questions - correction immédiate",
       "href": "slide-s8-2.html",
       "json_href": "slide-s8-2.json"
     },

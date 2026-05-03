@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S14-Q1",
-      "prompt": "À propos de la lecture d'une courbe de position x(t), quelles affirmations sont correctes ?",
+      "question_id": "S14-9-Q1",
+      "prompt": "À partir d'une courbe de position \\(x(t)\\), quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L'aire sous la courbe x(t) donne le déplacement.",
+          "text": "L'aire sous la courbe \\(x(t)\\) donne directement le déplacement.",
           "is_correct": false,
-          "explanation": "L'aire sous x(t) n'a pas d'interprétation directe ici ; c'est l'aire sous v(t) qui donne le déplacement."
+          "explanation": "L'aire sous \\(x(t)\\) n'a pas d'interprétation cinématique directe ici ; le déplacement se lit avec l'intégrale de \\(v(t)\\), pas avec celle de \\(x(t)\\)."
         },
         {
           "id": "B",
-          "text": "La pente de x(t) donne l'accélération a(t).",
+          "text": "La pente de \\(x(t)\\) donne l'accélération \\(a(t)\\).",
           "is_correct": false,
-          "explanation": "L'accélération correspond à la pente de v(t), pas à celle de x(t)."
+          "explanation": "L'accélération est la pente de \\(v(t)\\), donc la dérivée seconde de \\(x(t)\\), et non la pente de \\(x(t)\\)."
         },
         {
           "id": "C",
-          "text": "Une pente nulle de x(t) signifie toujours que le mobile est immobile à tout instant.",
+          "text": "Une courbe \\(x(t)\\) horizontale signifie forcément une accélération non nulle.",
           "is_correct": false,
-          "explanation": "Une pente nulle à un instant donné signifie seulement que la vitesse instantanée est nulle à cet instant, pas sur tout le mouvement."
+          "explanation": "Une courbe horizontale signifie une position constante et donc une vitesse nulle ; cela n'impose pas une accélération non nulle."
         },
         {
           "id": "D",
-          "text": "La pente de la courbe x(t) permet d'obtenir la vitesse instantanée v(t).",
+          "text": "La pente de \\(x(t)\\) donne la vitesse instantanée \\(v(t)\\).",
           "is_correct": true,
-          "explanation": "La vitesse instantanée est la dérivée de la position par rapport au temps : la pente de x(t) représente donc bien v(t)."
+          "explanation": "La dérivée de la position par rapport au temps est la vitesse instantanée : une pente plus forte correspond à une vitesse plus grande."
         },
         {
           "id": "E",
-          "text": "La courbe x(t) permet de remonter directement à la vitesse par dérivation graphique.",
+          "text": "La pente de \\(x(t)\\) donne la position instantanée.",
           "is_correct": false,
-          "explanation": "On peut bien dériver graphiquement x(t), mais l'affirmation propose une lecture de l'accélération ou de l'aire qui est incorrecte dans ce contexte."
+          "explanation": "La position instantanée est déjà portée par l'ordonnée \\(x(t)\\) ; la pente mesure sa variation, donc la vitesse."
         }
       ],
       "coverage_label": "Méthodes graphiques et expérimentales",
-      "learning_objective": "Identifier la vitesse à partir de la pente de x(t).",
-      "correction_summary": "La seule relation correcte est v(t) = dx/dt : la pente de x(t) donne la vitesse instantanée. Le piège classique est de confondre pente et aire, ou de chercher l'accélération directement sur x(t).",
-      "course_clarification": "La pente d'une courbe mesure sa variation locale. Sur un graphe position-temps, cette variation correspond à la vitesse instantanée, exprimée en m/s.",
+      "learning_objective": "Identifier que la pente d'une courbe de position fournit la vitesse instantanée.",
+      "correction_summary": "La bonne relation est \\(v(t)=\\mathrm{d}x/\\mathrm{d}t\\). Le piège classique consiste à confondre l'ordonnée de la courbe avec sa pente ou à attribuer à \\(x(t)\\) une aire cinématique.",
+      "course_clarification": "En lecture graphique, la pente d'une courbe indique comment la grandeur évolue avec le temps. Pour une position \\(x(t)\\), cette variation est la vitesse instantanée.",
       "source_refs": []
     },
     {
-      "question_id": "S14-Q2",
-      "prompt": "À propos de la courbe v(t), quelles affirmations sont correctes ?",
+      "question_id": "S14-9-Q2",
+      "prompt": "À propos d'une courbe de vitesse \\(v(t)\\), quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L'aire sous v(t) donne le déplacement.",
+          "text": "L'aire sous \\(v(t)\\) donne l'accélération moyenne.",
           "is_correct": false,
-          "explanation": "L'aire sous v(t) correspond bien au déplacement, donc cette formulation est fausse si elle est placée parmi les erreurs à repérer ? Non, ici l'affirmation est vraie ; correction nécessaire."
+          "explanation": "L'aire sous \\(v(t)\\) correspond au déplacement, pas à l'accélération moyenne."
         },
         {
           "id": "B",
-          "text": "La pente de v(t) donne l'accélération a(t).",
+          "text": "La pente de \\(v(t)\\) donne l'accélération instantanée \\(a(t)\\).",
           "is_correct": true,
-          "explanation": "L'accélération est la dérivée de la vitesse par rapport au temps : la pente de v(t) représente donc a(t)."
+          "explanation": "L'accélération est la dérivée de la vitesse par rapport au temps : elle se lit donc comme la pente de la courbe \\(v(t)\\)."
         },
         {
           "id": "C",
-          "text": "Si v(t) est constante, alors la pente de v(t) est nulle.",
+          "text": "Une pente nulle de \\(v(t)\\) signifie une vitesse nulle.",
           "is_correct": false,
-          "explanation": "Cette phrase est vraie en physique : une vitesse constante implique une accélération nulle. Elle ne doit pas être marquée fausse."
+          "explanation": "Une pente nulle signifie une vitesse constante ; cette vitesse peut être positive, négative ou nulle."
         },
         {
           "id": "D",
-          "text": "L'accélération se lit comme une pente sur v(t), pas comme une aire.",
+          "text": "La pente de \\(v(t)\\) donne directement le déplacement.",
           "is_correct": false,
-          "explanation": "Cette formulation est correcte : l'accélération est liée à la pente de v(t)."
+          "explanation": "Le déplacement se déduit de l'aire sous \\(v(t)\\), alors que la pente de \\(v(t)\\) donne l'accélération."
         },
         {
           "id": "E",
-          "text": "Une vitesse négative rend impossible le calcul du déplacement par l'aire algébrique.",
+          "text": "Une courbe \\(v(t)\\) croissante implique toujours une position constante.",
           "is_correct": false,
-          "explanation": "Le déplacement peut rester calculé par l'aire algébrique sous v(t), même si la vitesse prend des valeurs négatives."
+          "explanation": "Si \\(v(t)\\) est croissante, la position varie au contraire de plus en plus vite ; elle n'est pas constante."
         }
       ],
       "coverage_label": "Méthodes graphiques et expérimentales",
-      "learning_objective": "Lire l'accélération sur un graphe vitesse-temps et distinguer pente et aire.",
-      "correction_summary": "La bonne relation est a(t) = dv/dt : l'accélération se lit comme la pente de v(t). Le piège consiste à confondre cette lecture avec l'aire, qui sert au déplacement.",
-      "course_clarification": "Sur un graphe vitesse-temps, une pente positive traduit une accélération positive, une pente nulle une accélération nulle. L'aire sous la courbe sert à quantifier le déplacement.",
+      "learning_objective": "Relier la pente d'une courbe de vitesse à l'accélération instantanée.",
+      "correction_summary": "La bonne relation est \\(a(t)=\\mathrm{d}v/\\mathrm{d}t\\). Le piège est de confondre pente, aire et variation cumulée.",
+      "course_clarification": "La pente d'une courbe de vitesse mesure la rapidité avec laquelle la vitesse change. Si cette pente est constante, l'accélération est constante.",
       "source_refs": []
     },
     {
-      "question_id": "S14-Q3",
-      "prompt": "À propos de l'aire sous la courbe v(t), quelles affirmations sont correctes ?",
+      "question_id": "S14-9-Q3",
+      "prompt": "Que représente l'aire sous une courbe de vitesse \\(v(t)\\) entre deux instants ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L'aire sous la courbe v(t) entre deux instants donne le déplacement.",
+          "text": "Le déplacement entre ces deux instants.",
           "is_correct": true,
-          "explanation": "Le déplacement est l'intégrale de la vitesse sur le temps ; graphiquement, cela se traduit par l'aire algébrique sous v(t)."
+          "explanation": "L'aire algébrique sous \\(v(t)\\) correspond à l'intégrale de la vitesse, donc au déplacement sur l'intervalle considéré."
         },
         {
           "id": "B",
-          "text": "L'aire sous v(t) donne toujours la distance parcourue, même si la vitesse change de signe.",
+          "text": "L'accélération instantanée au milieu de l'intervalle.",
           "is_correct": false,
-          "explanation": "Si la vitesse devient négative, l'aire algébrique peut diminuer : elle donne le déplacement, pas nécessairement la distance totale parcourue."
+          "explanation": "L'accélération instantanée se lit sur la pente de \\(v(t)\\), pas sur son aire."
         },
         {
           "id": "C",
-          "text": "L'aire sous x(t) donne le déplacement.",
+          "text": "La position absolue à l'instant initial.",
           "is_correct": false,
-          "explanation": "Le déplacement ne se lit pas comme l'aire sous la position x(t), mais sous la vitesse v(t)."
+          "explanation": "La position initiale est une valeur de départ ; l'aire sous \\(v(t)\\) fournit une variation de position, donc un déplacement."
         },
         {
           "id": "D",
-          "text": "L'unité de l'aire sous v(t) est le mètre si v est en m/s et le temps en s.",
+          "text": "La pente de la courbe \\(v(t)\\).",
           "is_correct": false,
-          "explanation": "Cette affirmation est vraie : (v \r m/s) \u0000d (t \u0000d s) = m. Elle ne peut pas être classée fausse."
+          "explanation": "La pente et l'aire sont deux informations différentes : la pente donne l'accélération, l'aire donne le déplacement."
         },
         {
           "id": "E",
-          "text": "Un déplacement nul impose forcément que la vitesse ait été nulle à chaque instant.",
+          "text": "La distance parcourue sans tenir compte du signe de la vitesse, dans tous les cas.",
           "is_correct": false,
-          "explanation": "Le déplacement total peut être nul alors que le mobile a bougé, par compensation entre des portions de vitesse positive et négative."
+          "explanation": "L'énoncé parle de déplacement, c'est-à-dire une grandeur algébrique ; la distance parcourue n'est pas la même chose si la vitesse change de signe."
         }
       ],
       "coverage_label": "Méthodes graphiques et expérimentales",
-      "learning_objective": "Interpréter l'aire sous v(t) comme un déplacement algébrique.",
-      "correction_summary": "Le déplacement se lit comme l'aire algébrique sous v(t). Le principal piège est de confondre déplacement et distance, surtout quand la vitesse change de signe.",
-      "course_clarification": "L'aire algébrique tient compte du signe de la vitesse. Une portion sous l'axe des temps contribue négativement au déplacement.",
+      "learning_objective": "Interpréter l'aire sous une courbe de vitesse comme un déplacement.",
+      "correction_summary": "L'aire sous \\(v(t)\\) fournit le déplacement sur l'intervalle choisi. Le piège est de la confondre avec la pente ou avec une vitesse instantanée.",
+      "course_clarification": "Le déplacement est la variation de position entre deux instants. Graphiquement, il se calcule par l'aire sous la courbe de vitesse.",
       "source_refs": []
     },
     {
-      "question_id": "S14-Q4",
-      "prompt": "À propos des données issues de capteurs, quelles affirmations sont correctes ?",
+      "question_id": "S14-9-Q4",
+      "prompt": "Concernant les données issues de capteurs, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Une moyenne glissante est un exemple de filtrage simple.",
+          "text": "Les données de capteurs sont toujours parfaitement lisses et ne nécessitent jamais de traitement.",
           "is_correct": false,
-          "explanation": "Cette affirmation est vraie : la moyenne glissante est bien un filtrage courant pour lisser un signal bruité."
+          "explanation": "Les capteurs produisent souvent des mesures bruitées ; un traitement est donc fréquemment utile pour exploiter correctement les courbes."
         },
         {
           "id": "B",
-          "text": "Le bruit améliore toujours la précision de la dérivation numérique.",
+          "text": "Une moyenne glissante sert à ajouter du bruit pour mieux voir les variations.",
           "is_correct": false,
-          "explanation": "Le bruit dégrade généralement la dérivation numérique, car dériver accentue les variations rapides non souhaitées."
+          "explanation": "Une moyenne glissante vise au contraire à réduire les fluctuations parasites et à lisser les données."
         },
         {
           "id": "C",
-          "text": "Filtrer un signal sert à supprimer toutes les informations utiles.",
+          "text": "Le filtrage supprime la relation entre les mesures et le temps.",
           "is_correct": false,
-          "explanation": "Le but du filtrage est au contraire de réduire le bruit tout en conservant la tendance physique pertinente."
+          "explanation": "Un filtrage conserve l'évolution temporelle tout en atténuant le bruit ; il ne supprime pas l'axe du temps."
         },
         {
           "id": "D",
-          "text": "Un capteur proprement exploité peut éviter toute étape de traitement des données.",
+          "text": "Le bruit des capteurs empêche toute exploitation des mesures.",
           "is_correct": false,
-          "explanation": "Même avec un capteur de bonne qualité, un traitement reste souvent utile pour exploiter correctement les mesures."
+          "explanation": "Le bruit complique l'analyse, mais il ne rend pas les mesures inutilisables : on les traite justement par filtrage et par logiciels."
         },
         {
           "id": "E",
-          "text": "Les données de capteurs sont souvent bruitées et un filtrage peut être nécessaire.",
+          "text": "Les données de capteurs sont souvent bruitées et un filtrage comme une moyenne glissante peut être nécessaire.",
           "is_correct": true,
-          "explanation": "Les mesures expérimentales contiennent souvent des fluctuations parasites ; un filtrage aide à en extraire la tendance utile."
+          "explanation": "Les mesures expérimentales contiennent fréquemment du bruit ; un filtrage simple comme la moyenne glissante permet d'en lisser les fluctuations."
         }
       ],
       "coverage_label": "Méthodes graphiques et expérimentales",
-      "learning_objective": "Reconnaître le rôle du filtrage sur des mesures bruitées.",
-      "correction_summary": "Les capteurs donnent souvent des données bruitées, et un filtrage comme la moyenne glissante permet de les lisser. Le piège est de croire que le bruit aide l'analyse ou que filtrer détruit toute information utile.",
-      "course_clarification": "Le bruit correspond à des fluctuations parasites superposées au signal mesuré. Un filtrage vise à faire ressortir l'évolution globale avant calcul de pente ou de dérivée.",
+      "learning_objective": "Reconnaître le rôle du bruit de mesure et d'un filtrage simple sur des données expérimentales.",
+      "correction_summary": "Les mesures de capteurs sont souvent bruitées, donc un lissage peut être utile avant l'interprétation. Le piège est de croire qu'une mesure brute est toujours exploitable telle quelle.",
+      "course_clarification": "Le bruit correspond à des fluctuations parasites superposées au signal utile. Une moyenne glissante remplace chaque point par la moyenne d'une petite fenêtre de valeurs pour lisser la courbe.",
       "source_refs": []
     },
     {
-      "question_id": "S14-Q5",
-      "prompt": "À propos de l'exploitation numérique des mesures, quelles affirmations sont correctes ?",
+      "question_id": "S14-9-Q5",
+      "prompt": "Quels outils peuvent servir à exploiter des mesures cinématiques et à tracer les courbes associées ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Les mesures expérimentales ne peuvent être traitées qu'à la main.",
+          "text": "Un compas suffit à calculer automatiquement \\(v(t)\\) et \\(a(t)\\) à partir de \\(x(t)\\).",
           "is_correct": false,
-          "explanation": "L'exploitation numérique avec des logiciels est justement prévue pour faciliter l'analyse des données mesurées."
+          "explanation": "Un compas est un outil de dessin, pas un outil de traitement de données mesurées ni de dérivation numérique."
         },
         {
           "id": "B",
-          "text": "La fonction de gradient numérique peut aider à estimer v(t) puis a(t) à partir de x(t).",
+          "text": "Les mesures doivent être exploitées uniquement à la main, sans logiciel.",
           "is_correct": false,
-          "explanation": "Cette affirmation est vraie : une dérivation numérique comme `np.gradient` permet d'approcher v puis a à partir d'une série de positions."
+          "explanation": "Le traitement numérique est précisément indiqué pour analyser les données expérimentales ; il n'est pas limité au calcul manuel."
         },
         {
           "id": "C",
-          "text": "Python, un tableur ou un simulateur peuvent servir à exploiter des mesures expérimentales.",
+          "text": "Python, un tableur ou un simulateur peuvent être utilisés pour exploiter les mesures.",
           "is_correct": true,
-          "explanation": "Ces outils permettent de tracer les courbes, de lisser les données et de calculer des dérivées ou des intégrales numériques."
+          "explanation": "Les mesures peuvent être traitées numériquement avec des outils comme Python, un tableur ou un simulateur afin de calculer et visualiser les grandeurs cinématiques."
         },
         {
           "id": "D",
-          "text": "Un logiciel remplace la nécessité d'interpréter les résultats physiques.",
+          "text": "Python, un tableur ou un simulateur servent seulement à fabriquer du bruit.",
           "is_correct": false,
-          "explanation": "Un logiciel calcule, mais l'interprétation physique des courbes et des unités reste indispensable."
+          "explanation": "Ces outils servent à traiter, représenter et interpréter les mesures ; ils ne sont pas destinés à introduire du bruit."
         },
         {
           "id": "E",
-          "text": "Le traitement numérique est inutile dès qu'une courbe est disponible.",
+          "text": "Aucun logiciel ne permet de représenter une courbe expérimentale.",
           "is_correct": false,
-          "explanation": "Une courbe seule ne suffit pas toujours : il faut souvent extraire des grandeurs par calcul, filtrage ou dérivation numérique."
+          "explanation": "Les logiciels de calcul et de tableur permettent justement de tracer des courbes et d'en extraire des pentes ou des aires."
         }
       ],
       "coverage_label": "Méthodes graphiques et expérimentales",
-      "learning_objective": "Associer les outils numériques à l'exploitation des courbes et des mesures.",
-      "correction_summary": "Les mesures peuvent être exploitées avec Python, un tableur ou un simulateur pour dériver, filtrer et interpréter les données. Le piège est de confondre l'outil de calcul avec la compréhension physique du résultat.",
-      "course_clarification": "L'exploitation numérique transforme des points mesurés en grandeurs cinématiques estimées. Elle complète la lecture graphique, surtout quand les données sont bruitées.",
+      "learning_objective": "Identifier les outils numériques couramment utilisés pour exploiter des mesures expérimentales.",
+      "correction_summary": "Python, un tableur ou un simulateur permettent de traiter et représenter les données expérimentales. Le piège est de confondre exploitation numérique et simple dessin manuel.",
+      "course_clarification": "L'exploitation expérimentale ne se limite pas à la lecture visuelle : on peut calculer des dérivées, lisser des données et tracer des courbes avec des outils numériques. Cela facilite l'analyse de la vitesse, de l'accélération et du déplacement.",
       "source_refs": []
     }
   ],

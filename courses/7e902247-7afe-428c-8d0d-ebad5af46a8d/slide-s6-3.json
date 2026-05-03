@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S6-3_Q1",
-      "prompt": "À propos du réseau de service au sol, quelle affirmation est correcte ?",
+      "question_id": "S6-3-Q1",
+      "prompt": "Quel élément porte la commande **MAINT BUS ON** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La commande MAINT BUS ON se trouve sur le panneau EXT PWR A ONLY.",
+          "text": "Le poussoir **MAINT BUS ON** se trouve sur le panneau **EMER ELEC PWR**.",
           "is_correct": false,
-          "explanation": "EXT PWR A ONLY désigne une source/alimentation représentée dans le schéma, pas le panneau de commande. Le panneau repéré est le FWD CABIN C/B PANEL (5001VE)."
+          "explanation": "Le panneau EMER ELEC PWR concerne l’alimentation électrique d’urgence, pas la commande du MAINT BUS. Le schéma place cette commande ailleurs, sur le FWD CABIN C/B PANEL."
         },
         {
           "id": "B",
-          "text": "La commande MAINT BUS ON est située sur le CBMU.",
+          "text": "Le poussoir **MAINT BUS ON** se trouve sur le panneau **ELEC AC** de l’ECAM.",
           "is_correct": false,
-          "explanation": "Le CBMU appartient à un autre schéma de surveillance des disjoncteurs. Ici, la commande est associée au panneau FWD CABIN C/B PANEL (5001VE)."
+          "explanation": "L’ECAM affiche des états et des sources, mais ne porte pas cette commande physique. La commande MAINT BUS ON est représentée sur un panneau de cabine distinct."
         },
         {
           "id": "C",
-          "text": "La commande MAINT BUS ON agit uniquement sur l’AC ESS FEED.",
+          "text": "Le poussoir **MAINT BUS ON** se trouve sur le **TR 2**.",
           "is_correct": false,
-          "explanation": "AC ESS FEED appartient à la page électrique AC, mais ce n’est pas l’organe décrit pour le réseau de service au sol. Le point clé est la mise sous tension du ground service electrical network via MAINT BUS."
+          "explanation": "TR 2 est un bloc de liaison entre parties AC et DC, ce n’est pas un panneau de commande. Il ne peut donc pas porter un poussoir de mise en service."
         },
         {
           "id": "D",
-          "text": "Le panneau concerné est le FWD CABIN C/B PANEL (5001VE), avec la commande MAINT BUS ON.",
+          "text": "Le poussoir **MAINT BUS ON** se trouve sur le **FWD CABIN C/B PANEL (5001VE)**.",
           "is_correct": true,
-          "explanation": "Le schéma place explicitement la commande MAINT BUS ON sur le FWD CABIN C/B PANEL (5001VE). C’est l’interface à repérer pour le réseau de service au sol."
+          "explanation": "L’interface indiquée par le schéma est bien le panneau avant cabine C/B panel 5001VE. C’est là que se situe la commande qui met le MAINT BUS sur ON."
         },
         {
           "id": "E",
-          "text": "Le schéma place la commande MAINT BUS ON dans le poste de pilotage principal.",
+          "text": "Le poussoir **MAINT BUS ON** se trouve sur le panneau **DC GND NETWORK**.",
           "is_correct": false,
-          "explanation": "Le repère donné est le FWD CABIN C/B PANEL (5001VE), donc un panneau de cabine et non le poste de pilotage principal."
+          "explanation": "DC GND NETWORK désigne un réseau, pas un organe de commande. Le schéma associe la commande au FWD CABIN C/B PANEL (5001VE), pas au réseau de masse DC."
         }
       ],
-      "coverage_label": "FWD CABIN C/B PANEL (5001VE)",
-      "learning_objective": "Identifier l’interface de commande du réseau de service au sol.",
-      "correction_summary": "La bonne réponse est celle qui associe MAINT BUS ON au FWD CABIN C/B PANEL (5001VE). Le piège consiste à confondre la commande avec une source d’alimentation ou avec un autre panneau de surveillance.",
-      "course_clarification": "MAINT BUS est la commande qui autorise l’alimentation du réseau de service au sol. Le repérage précis du panneau permet de localiser où l’action est effectuée dans l’architecture électrique.",
+      "coverage_label": "Ground Service Network : alimentation de service au sol via MAINT BUS",
+      "learning_objective": "Localiser le panneau qui porte la commande MAINT BUS ON.",
+      "correction_summary": "La bonne interface est le FWD CABIN C/B PANEL (5001VE). Le piège consiste à confondre un réseau ou un bloc fonctionnel avec le panneau de commande qui porte le poussoir.",
+      "course_clarification": "Le FWD CABIN C/B PANEL (5001VE) est le panneau physique où l’on trouve la commande MAINT BUS ON. TR 2, DC GND NETWORK et AC GND NETWORK sont des éléments d’architecture électrique, pas des commandes.",
       "source_refs": []
     },
     {
-      "question_id": "S6-3_Q2",
-      "prompt": "Quel énoncé décrit correctement le rôle de TR 2 ?",
+      "question_id": "S6-3-Q2",
+      "prompt": "Quel rôle joue **TR 2** dans le schéma du réseau de service au sol ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "TR 2 est un panneau de commande situé sur le FWD CABIN C/B PANEL (5001VE).",
+          "text": "**TR 2** relie uniquement **DC SYSTEM** au **DC GND NETWORK**.",
           "is_correct": false,
-          "explanation": "Le panneau de commande et le bloc TR 2 sont deux éléments différents. TR 2 est un bloc fonctionnel du schéma, pas un organe de commande."
+          "explanation": "Le schéma ne présente pas TR 2 comme un simple lien interne au domaine DC. Il sert d’interface entre les parties AC et DC."
         },
         {
           "id": "B",
-          "text": "TR 2 fait le lien entre la partie AC et la partie DC du schéma.",
+          "text": "**TR 2** fait le lien entre la partie **AC** et la partie **DC**.",
           "is_correct": true,
-          "explanation": "Le bloc TR 2 est explicitement placé entre les deux domaines, AC et DC. Il matérialise l’interface entre ces deux parties du réseau."
+          "explanation": "Le bloc TR 2 est placé à l’interface entre les deux domaines. Il assure la liaison entre la partie AC et la partie DC dans le schéma."
         },
         {
           "id": "C",
-          "text": "TR 2 relie uniquement le DC GND NETWORK à l’EXTERNAL POWER A ONLY.",
+          "text": "**TR 2** relie uniquement **AC SYSTEM** au **AC GND NETWORK**.",
           "is_correct": false,
-          "explanation": "EXTERNAL POWER A ONLY alimente le réseau de service au sol, mais TR 2 relie la partie AC à la partie DC. Ce n’est pas un lien direct vers l’alimentation externe."
+          "explanation": "AC SYSTEM et AC GND NETWORK sont bien montrés, mais TR 2 n’est pas limité à une liaison interne au domaine AC. Il relie les deux grandes parties du schéma."
         },
         {
           "id": "D",
-          "text": "TR 2 appartient exclusivement au réseau AC et ne touche jamais au DC.",
+          "text": "**TR 2** alimente directement le **ground service network** à la place de **EXT PWR A ONLY**.",
           "is_correct": false,
-          "explanation": "Le rôle attendu est précisément de faire le lien entre AC et DC. Dire qu’il reste exclusivement dans l’AC contredit le schéma."
+          "explanation": "L’alimentation du ground service network est attribuée à EXT PWR A ONLY quand MAINT BUS est sur ON. TR 2 joue un rôle de liaison AC/DC, pas de source d’alimentation directe du réseau de service."
         },
         {
           "id": "E",
-          "text": "TR 2 sert à surveiller les disjoncteurs via le CBMU.",
+          "text": "**TR 2** est un interrupteur de commande situé sur le **FWD CABIN C/B PANEL**.",
           "is_correct": false,
-          "explanation": "La surveillance des disjoncteurs est attribuée au CBMU dans l’autre schéma. TR 2 n’a pas ce rôle de monitoring."
+          "explanation": "TR 2 n’est pas une commande de cockpit ou de panneau cabine. C’est un bloc fonctionnel du schéma électrique, distinct du poussoir MAINT BUS ON."
         }
       ],
-      "coverage_label": "TR 2",
-      "learning_objective": "Comprendre la fonction d’interface du bloc TR 2 entre AC et DC.",
-      "correction_summary": "TR 2 est l’organe d’interface entre les deux réseaux AC et DC. Le piège classique est de lui attribuer un rôle de commande ou de surveillance qu’il n’a pas ici.",
-      "course_clarification": "Un bloc de ce type matérialise une liaison fonctionnelle entre deux domaines électriques. Ici, il faut surtout retenir qu’il relie AC et DC, sans le confondre avec un panneau de commande.",
+      "coverage_label": "Ground Service Network : alimentation de service au sol via MAINT BUS",
+      "learning_objective": "Identifier la fonction de TR 2 comme interface entre AC et DC.",
+      "correction_summary": "TR 2 est le lien entre la partie AC et la partie DC. Le piège est de le prendre pour une source ou pour un simple organe interne à un seul réseau.",
+      "course_clarification": "TR 2 désigne un élément d’interface électrique. Ici, il sert à relier les deux domaines AC et DC, sans être la source qui alimente directement le réseau de service au sol.",
       "source_refs": []
     },
     {
-      "question_id": "S6-3_Q3",
-      "prompt": "À propos de l’alimentation du ground service electrical network, quelle affirmation est exacte ?",
+      "question_id": "S6-3-Q3",
+      "prompt": "Quelles interfaces de masse sont explicitement représentées autour du réseau de service au sol ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Quand le switch MAINT BUS est sur ON, EXT PWR A only alimente le ground service network.",
+          "text": "Le schéma distingue un **DC GND NETWORK** et un **AC GND NETWORK**.",
           "is_correct": true,
-          "explanation": "Le texte du schéma l’indique clairement : en position ON, l’alimentation du réseau de service au sol est assurée par EXT PWR A only."
+          "explanation": "Les deux réseaux de masse sont nommés explicitement dans le schéma. Ils permettent de repérer séparément la partie DC et la partie AC du réseau de service au sol."
         },
         {
           "id": "B",
-          "text": "Quand le switch MAINT BUS est sur ON, tout le réseau électrique est nécessairement energisé.",
+          "text": "Le schéma ne montre **pas** de réseau de masse séparé pour le domaine AC.",
           "is_correct": false,
-          "explanation": "Le principe indiqué est justement l’inverse : le réseau de service au sol est alimenté sans energiser tout le réseau électrique."
+          "explanation": "Cette négation est fausse : un **AC GND NETWORK** est bien affiché. Le schéma sépare clairement les réseaux de masse AC et DC."
         },
         {
           "id": "C",
-          "text": "Quand le switch MAINT BUS est sur ON, le ground service network est alimenté uniquement par le DC SYSTEM.",
+          "text": "Le schéma ne montre **pas** de réseau de masse séparé pour le domaine DC.",
           "is_correct": false,
-          "explanation": "Le schéma ne donne pas le DC SYSTEM comme source unique du réseau de service au sol. La source mentionnée est EXT PWR A only."
+          "explanation": "Cette négation est fausse : un **DC GND NETWORK** est bien indiqué. Le réseau de masse DC est donc explicitement présent."
         },
         {
           "id": "D",
-          "text": "Quand le switch MAINT BUS est sur ON, l’alimentation provient du CBMU.",
+          "text": "Le schéma ne distingue qu’un seul réseau nommé **GND NETWORK** sans précision AC ou DC.",
           "is_correct": false,
-          "explanation": "Le CBMU surveille des disjoncteurs dans un autre thème. Il ne fournit pas l’énergie au ground service network."
+          "explanation": "Le document précise au contraire deux réseaux distincts, l’un pour DC et l’autre pour AC. La distinction est importante pour comprendre l’architecture électrique représentée."
         },
         {
           "id": "E",
-          "text": "Quand le switch MAINT BUS est sur ON, le réseau de service au sol reste sans alimentation.",
+          "text": "Le schéma remplace les réseaux de masse par des liaisons nommées **BUS TIE**.",
           "is_correct": false,
-          "explanation": "C’est contraire au fonctionnement décrit : la position ON permet précisément d’alimenter le réseau de service au sol."
+          "explanation": "BUS TIE apparaît sur d’autres pages de l’électricité, mais pas comme remplacement des réseaux de masse ici. Le schéma du service au sol montre bien des réseaux GND NETWORK dédiés."
         }
       ],
-      "coverage_label": "MAINT BUS / EXT PWR A ONLY",
-      "learning_objective": "Relier la position du switch MAINT BUS à la source d’alimentation du réseau de service au sol.",
-      "correction_summary": "La position ON du MAINT BUS permet l’alimentation du ground service network par EXT PWR A only. L’erreur fréquente consiste à croire que cela met sous tension tout le réseau électrique.",
-      "course_clarification": "Le ground service network est un réseau dédié de service. Il peut être alimenté de façon ciblée, sans imposer l’energisation complète de l’installation électrique.",
+      "coverage_label": "Ground Service Network : alimentation de service au sol via MAINT BUS",
+      "learning_objective": "Reconnaître les deux réseaux de masse explicitement affichés sur le schéma.",
+      "correction_summary": "Les deux interfaces de masse à repérer sont DC GND NETWORK et AC GND NETWORK. Le piège consiste à croire qu’un seul réseau de masse suffit ou à confondre ces réseaux avec d’autres liaisons électriques.",
+      "course_clarification": "Un réseau de masse sert de référence et de retour électrique pour un domaine donné. Ici, le schéma sépare clairement la masse DC et la masse AC afin de montrer comment le service au sol s’intègre à l’architecture électrique.",
       "source_refs": []
     },
     {
-      "question_id": "S6-3_Q4",
-      "prompt": "Comment sont représentés les chemins d’alimentation du réseau de service au sol ?",
+      "question_id": "S6-3-Q4",
+      "prompt": "Quelle affirmation décrit correctement l’alimentation du **ground service network** lorsque **MAINT BUS** est sur **ON** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le schéma ne montre aucune liaison entre les blocs AC et DC.",
+          "text": "Lorsque le switch est sur **ON**, **EXT PWR B ONLY** alimente le **ground service network**.",
           "is_correct": false,
-          "explanation": "Au contraire, le bloc TR 2 et les réseaux de masse montrent des liaisons entre les parties AC et DC."
+          "explanation": "Le schéma cite **EXT PWR A ONLY**, pas EXT PWR B ONLY. Cette substitution de source change complètement l’identification de l’alimentation."
         },
         {
           "id": "B",
-          "text": "Les chemins d’alimentation sont représentés uniquement par des symboles de pression hydraulique.",
+          "text": "Lorsque le switch est sur **ON**, le **ground service network** est alimenté sans aucune source externe.",
           "is_correct": false,
-          "explanation": "Le sujet traité est l’électricité, pas l’hydraulique. Les chemins sont dessinés par des liaisons électriques, pas par des symboles de pression."
+          "explanation": "Le réseau n’est pas alimenté de manière autonome ici : la source externe est explicitement mentionnée. Le texte associe cette alimentation à EXT PWR A ONLY."
         },
         {
           "id": "C",
-          "text": "Les liaisons sont représentées par des codes QR placés sur le dessin.",
+          "text": "Lorsque le switch est sur **ON**, **EXT PWR A ONLY** alimente **tout le réseau électrique**.",
           "is_correct": false,
-          "explanation": "Aucun code QR n’est mentionné ou montré comme moyen de représentation. La représentation repose sur des traits colorés et pointillés."
+          "explanation": "Le point clé est justement l’alimentation du réseau de service au sol **sans energiser l’ensemble du réseau électrique**. Dire que tout le réseau est alimenté contredit la fonction décrite."
         },
         {
           "id": "D",
-          "text": "Les chemins d’alimentation sont indiqués seulement par des valeurs numériques de tension.",
+          "text": "Lorsque le switch est sur **ON**, **TR 2** remplace **EXT PWR A ONLY** comme source d’alimentation.",
           "is_correct": false,
-          "explanation": "Les tensions peuvent figurer sur le schéma, mais elles ne suffisent pas à représenter les chemins. Ce sont les liaisons graphiques qui matérialisent les connexions."
+          "explanation": "TR 2 est un bloc de liaison entre AC et DC, pas la source d’alimentation du réseau de service au sol. La source indiquée pour ce cas est EXT PWR A ONLY."
         },
         {
           "id": "E",
-          "text": "Le schéma utilise des liaisons colorées et pointillées pour matérialiser les chemins d’alimentation.",
+          "text": "Lorsque le switch est sur **ON**, **EXT PWR A ONLY** alimente le **ground service network**.",
           "is_correct": true,
-          "explanation": "Le document précise que les connexions et les chemins d’alimentation sont représentés par des liaisons colorées et pointillées."
+          "explanation": "Le texte du schéma l’indique explicitement. La mise sur ON du switch MAINT BUS permet d’alimenter le réseau de service au sol par EXT PWR A ONLY."
         }
       ],
-      "coverage_label": "Représentation graphique des liaisons",
-      "learning_objective": "Interpréter la lecture graphique d’un schéma électrique simple.",
-      "correction_summary": "Les chemins d’alimentation sont montrés par des liaisons colorées et pointillées. Le piège est de confondre cette représentation fonctionnelle avec de simples valeurs ou avec un autre domaine technique.",
-      "course_clarification": "Dans un schéma électrique, la forme des traits aide à lire les fonctions et les connexions. Ici, les couleurs et pointillés servent à suivre les chemins d’alimentation du réseau de service au sol.",
+      "coverage_label": "Ground Service Network : alimentation de service au sol via MAINT BUS",
+      "learning_objective": "Associer l’état ON du MAINT BUS à la source EXT PWR A ONLY.",
+      "correction_summary": "Quand MAINT BUS est sur ON, c’est EXT PWR A ONLY qui alimente le ground service network. Le piège est de confondre cette alimentation ciblée avec une mise sous tension de tout le réseau électrique.",
+      "course_clarification": "Le ground service network est alimenté de façon sélective. L’intérêt opérationnel est de fournir le service au sol sans energiser tout le système électrique de l’avion.",
       "source_refs": []
     },
     {
-      "question_id": "S6-3_Q5",
-      "prompt": "Quelle association entre réseaux et blocs est correcte ?",
+      "question_id": "S6-3-Q5",
+      "prompt": "Que signifient les liaisons colorées et pointillées sur le schéma du réseau de service au sol ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le DC GND NETWORK et l’AC GND NETWORK sont le même réseau nommé différemment.",
+          "text": "Les liaisons colorées et pointillées indiquent uniquement des défauts de câblage.",
           "is_correct": false,
-          "explanation": "Le schéma distingue clairement un réseau de masse DC et un réseau de masse AC. Les deux réseaux ne sont donc pas fusionnés."
+          "explanation": "Le schéma ne présente pas ces liaisons comme des défauts. Elles représentent des chemins d’alimentation, pas des anomalies."
         },
         {
           "id": "B",
-          "text": "Le réseau de service au sol est directement confondu avec le AC SYSTEM.",
+          "text": "Les liaisons colorées et pointillées indiquent uniquement la position des boutons de commande.",
           "is_correct": false,
-          "explanation": "Le ground service network est un réseau particulier représenté à part. Il n’est pas assimilé au système AC lui-même."
+          "explanation": "La position d’une commande est donnée par son symbole et son étiquette, pas par des traits de liaison. Ici, les traits servent à suivre l’alimentation."
         },
         {
           "id": "C",
-          "text": "Le schéma distingue DC SYSTEM, DC GND NETWORK, AC SYSTEM et AC GND NETWORK.",
+          "text": "Les liaisons colorées et pointillées matérialisent les **chemins d’alimentation**.",
           "is_correct": true,
-          "explanation": "Ces quatre repères sont explicitement cités et visibles. Ils permettent de séparer les domaines DC et AC ainsi que leurs réseaux de masse associés."
+          "explanation": "Le schéma utilise ces tracés pour montrer comment circule l’alimentation entre les blocs. Ils servent donc à visualiser les chemins électriques du réseau."
         },
         {
           "id": "D",
-          "text": "Le bloc TR 2 appartient exclusivement au DC GND NETWORK sans relation avec l’AC.",
+          "text": "Les liaisons colorées et pointillées ne servent **pas** à montrer les connexions électriques.",
           "is_correct": false,
-          "explanation": "TR 2 est justement placé pour faire le lien entre AC et DC. Il ne peut donc pas être limité au seul réseau de masse DC."
+          "explanation": "Cette négation est fausse : le schéma les utilise précisément pour rendre visibles les connexions et les parcours d’alimentation. C’est leur fonction principale."
         },
         {
           "id": "E",
-          "text": "Le réseau de service au sol ne comporte aucune référence à un réseau de masse.",
+          "text": "Les liaisons colorées et pointillées représentent uniquement le réseau de masse **DC GND NETWORK**.",
           "is_correct": false,
-          "explanation": "Le schéma mentionne explicitement DC GND NETWORK et AC GND NETWORK. Les réseaux de masse sont donc bien présents dans la lecture du document."
+          "explanation": "Le schéma emploie ces liaisons pour l’ensemble des chemins d’alimentation, en lien avec plusieurs blocs. Les réduire au seul DC GND NETWORK ne correspond pas à la représentation."
         }
       ],
-      "coverage_label": "DC GND NETWORK / AC GND NETWORK",
-      "learning_objective": "Distinguer les grands blocs du schéma et leurs réseaux de masse associés.",
-      "correction_summary": "La bonne lecture consiste à séparer DC SYSTEM, DC GND NETWORK, AC SYSTEM et AC GND NETWORK, tout en repérant le rôle d’interface de TR 2. Le piège principal est de confondre les réseaux de masse ou de les fusionner.",
-      "course_clarification": "Un réseau de masse sert de référence de retour pour l’électricité. Ici, il faut retenir qu’il existe un couple DC et un couple AC, chacun identifié séparément sur le schéma.",
+      "coverage_label": "Ground Service Network : alimentation de service au sol via MAINT BUS",
+      "learning_objective": "Interpréter la signification graphique des liaisons colorées et pointillées.",
+      "correction_summary": "Les traits colorés et pointillés servent à suivre les chemins d’alimentation dans le schéma. Le piège est de les prendre pour des défauts, des commandes ou un seul réseau particulier.",
+      "course_clarification": "Dans un schéma électrique, une liaison graphique ne donne pas seulement une connexion physique : elle aide aussi à suivre le trajet de l’énergie. Ici, elle permet de lire rapidement l’architecture du service au sol et ses interfaces AC/DC.",
       "source_refs": []
     }
   ],

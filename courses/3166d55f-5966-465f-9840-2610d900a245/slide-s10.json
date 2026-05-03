@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S10-Q1",
-      "prompt": "Dans un mouvement circulaire uniforme de rayon constant, quelles affirmations sont correctes ?",
+      "prompt": "Dans un mouvement circulaire uniforme, quelle affirmation sur la vitesse angulaire est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L'accélération tangentielle est non nulle car la valeur de la vitesse change en permanence.",
+          "text": "La vitesse angulaire \\(\\omega\\) augmente forcément avec le temps.",
           "is_correct": false,
-          "explanation": "La vitesse garde une norme constante, donc il n'y a pas de variation de vitesse en valeur. L'accélération tangentielle est donc nulle."
+          "explanation": "Une augmentation de \\(\\omega\\) correspondrait à un mouvement de rotation non uniforme, avec accélération angulaire non nulle."
         },
         {
           "id": "B",
-          "text": "La vitesse linéaire est nulle puisque le point ne fait que tourner.",
+          "text": "La vitesse angulaire \\(\\omega\\) dépend uniquement du rayon \\(R\\).",
           "is_correct": false,
-          "explanation": "Le point est en mouvement : sa vitesse linéaire n'est pas nulle, même si sa direction change continuellement."
+          "explanation": "Le rayon intervient dans le lien entre vitesse linéaire et vitesse angulaire, mais \\(\\omega\\) n'est pas déterminée par \\(R\\) seul."
         },
         {
           "id": "C",
-          "text": "L'accélération normale est toujours égale à zéro.",
+          "text": "La vitesse angulaire \\(\\omega\\) est toujours nulle.",
           "is_correct": false,
-          "explanation": "Le mouvement circulaire impose une accélération dirigée vers le centre ; elle n'est pas nulle même si la norme de la vitesse reste constante."
+          "explanation": "Si \\(\\omega\\) était nulle, il n'y aurait pas de rotation. Le MCU suppose au contraire un mouvement circulaire avec rotation."
         },
         {
           "id": "D",
-          "text": "La vitesse angulaire \\\\(\\omega\\\\) est constante.",
+          "text": "La vitesse angulaire \\(\\omega\\) est constante.",
           "is_correct": true,
-          "explanation": "En mouvement circulaire uniforme, la rotation se fait à rythme constant : \\\\(\\omega\\\\) ne varie pas au cours du temps."
+          "explanation": "En mouvement circulaire uniforme, la rotation se fait à rythme constant : \\(\\omega\\) ne varie pas au cours du temps."
         },
         {
           "id": "E",
-          "text": "La trajectoire est rectiligne si \\\\(\\omega\\\\) est constante.",
+          "text": "La vitesse angulaire \\(\\omega\\) est égale à l'accélération normale \\(a_n\\).",
           "is_correct": false,
-          "explanation": "Une vitesse angulaire constante n'implique pas une trajectoire rectiligne : la trajectoire reste circulaire."
+          "explanation": "Ces grandeurs n'ont pas la même définition ni la même unité : \\(\\omega\\) s'exprime en rad/s alors que \\(a_n\\) s'exprime en m/s²."
         }
       ],
       "coverage_label": "Mouvement circulaire uniforme (MCU)",
-      "learning_objective": "Identifier les propriétés cinématiques d'un MCU : \\\\(\\omega\\\\) constante, norme de vitesse constante et absence d'accélération tangentielle.",
-      "correction_summary": "La seule affirmation juste est celle sur la constance de \\\\(\\omega\\\\). Le piège classique est de confondre vitesse constante en norme avec absence d'accélération : l'accélération normale existe bien.",
-      "course_clarification": "Dans un MCU, le point tourne à vitesse angulaire constante. La norme de la vitesse reste constante, mais sa direction change, ce qui impose une accélération vers le centre.",
+      "learning_objective": "Identifier la propriété fondamentale d'un MCU : la constance de la vitesse angulaire.",
+      "correction_summary": "La bonne réponse est celle qui affirme la constance de \\(\\omega\\). Le piège classique consiste à confondre rotation uniforme et variation de vitesse de rotation.",
+      "course_clarification": "La vitesse angulaire \\(\\omega\\) mesure la rapidité de rotation. En MCU, elle ne change pas au cours du temps ; c'est la base du lien avec les grandeurs linéaires.",
       "source_refs": []
     },
     {
       "question_id": "S10-Q2",
-      "prompt": "À propos du lien entre vitesse linéaire et vitesse angulaire dans un MCU, quelles affirmations sont correctes ?",
+      "prompt": "Pour un point situé à la distance \\(R\\) de l'axe de rotation, quelle relation est correcte entre la vitesse linéaire \\(v\\) et la vitesse angulaire \\(\\omega\\) ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Si \\\\(R\\\\) double et que \\\\(\\omega\\\\) reste constant, alors \\\\(v\\\\) est divisée par 2.",
+          "text": "\\(v = \\dfrac{\\omega}{R}\\).",
           "is_correct": false,
-          "explanation": "Avec \\\\(v = \\omega R\\\\), doubler \\\\(R\\\\) double au contraire la vitesse linéaire."
+          "explanation": "Le rayon multiplie la vitesse angulaire au lieu de la diviser ; inverser la relation donne une expression dimensionnellement incorrecte."
         },
         {
           "id": "B",
-          "text": "La relation est \\\\(v = \\omega R\\\\).",
+          "text": "\\(v = \\omega R\\).",
           "is_correct": true,
-          "explanation": "Pour un point en rotation de rayon \\\\(R\\\\), la vitesse linéaire est proportionnelle à la vitesse angulaire : \\\\(v = \\omega R\\\\)."
+          "explanation": "La vitesse linéaire d'un point en rotation est proportionnelle à sa distance à l'axe : \\(v = \\omega R\\)."
         },
         {
           "id": "C",
-          "text": "La vitesse linéaire ne dépend pas du rayon.",
+          "text": "\\(v = \\omega^2 R\\).",
           "is_correct": false,
-          "explanation": "Le rayon intervient directement dans \\\\(v = \\omega R\\\\) : plus le rayon est grand, plus la vitesse linéaire est grande à \\\\(\\omega\\\\) donnée."
+          "explanation": "Le carré de \\(\\omega\\) intervient dans l'accélération normale, pas dans la vitesse linéaire."
         },
         {
           "id": "D",
-          "text": "La relation correcte est \\\\(v = \\omega / R\\\\).",
+          "text": "\\(v = R^2\\omega\\).",
           "is_correct": false,
-          "explanation": "Cette écriture inverse la dépendance au rayon ; elle est fausse dimensionnellement et physiquement."
+          "explanation": "Le rayon intervient une seule fois dans la relation entre vitesse linéaire et vitesse angulaire ; ajouter un second facteur \\(R\\) est faux."
         },
         {
           "id": "E",
-          "text": "La vitesse linéaire est égale à l'accélération normale.",
+          "text": "\\(v = \\omega + R\\).",
           "is_correct": false,
-          "explanation": "Vitesse et accélération sont de nature différente. Elles n'ont ni la même unité ni la même expression en MCU."
+          "explanation": "On ne combine pas une vitesse angulaire et une longueur par addition ; la relation correcte est multiplicative."
         }
       ],
-      "coverage_label": "Lien vitesse linéaire / vitesse angulaire",
-      "learning_objective": "Appliquer la relation \\\\(v = \\omega R\\\\) et analyser ses conséquences sur l'effet du rayon.",
-      "correction_summary": "La bonne relation est \\\\(v = \\omega R\\\\). Le piège est d'inverser le rôle du rayon ou de confondre vitesse et accélération.",
-      "course_clarification": "La vitesse angulaire mesure la rapidité de rotation, tandis que la vitesse linéaire mesure la vitesse sur la trajectoire. À rayon plus grand, la vitesse linéaire augmente si \\\\(\\omega\\\\) reste identique.",
+      "coverage_label": "Mouvement circulaire uniforme (MCU)",
+      "learning_objective": "Appliquer la relation entre vitesse linéaire, vitesse angulaire et rayon.",
+      "correction_summary": "La formule à reconnaître est \\(v = \\omega R\\). Le piège habituel est d'inverser le rapport ou d'ajouter des grandeurs de nature différente.",
+      "course_clarification": "La vitesse linéaire est la vitesse mesurée le long de la trajectoire circulaire. Plus le point est loin de l'axe, plus \\(v\\) est grande pour une même \\(\\omega\\).",
       "source_refs": []
     },
     {
       "question_id": "S10-Q3",
-      "prompt": "Pour l'accélération dans un mouvement circulaire uniforme, quelles affirmations sont correctes ?",
+      "prompt": "Dans un mouvement circulaire uniforme, quelle expression donne l'accélération normale ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L'accélération normale vaut \\\\(a_n = \\omega^2 R\\\\).",
+          "text": "\\(a_n = \\omega^2 R\\).",
           "is_correct": true,
-          "explanation": "En MCU, l'accélération est centripète et sa norme s'écrit \\\\(a_n = \\omega^2 R\\\\)."
+          "explanation": "L'accélération normale dépend du carré de la vitesse angulaire et du rayon : \\(a_n = \\omega^2 R\\)."
         },
         {
           "id": "B",
-          "text": "L'accélération tangentielle vaut \\\\(a_t = \\alpha R\\\\) et est non nulle en MCU.",
+          "text": "\\(a_n = \\omega R\\).",
           "is_correct": false,
-          "explanation": "La relation \\\\(a_t = \\alpha R\\\\) est générale, mais en MCU \\\\(\\omega\\\\) est constante donc \\\\(\\alpha = 0\\\\) et \\\\(a_t = 0\\\\)."
+          "explanation": "Cette expression correspond à la vitesse linéaire \\(v\\), pas à l'accélération normale."
         },
         {
           "id": "C",
-          "text": "L'accélération normale est dirigée vers l'extérieur du cercle.",
+          "text": "\\(a_n = 0\\).",
           "is_correct": false,
-          "explanation": "L'accélération normale est dirigée vers le centre de rotation, pas vers l'extérieur."
+          "explanation": "Dans un mouvement circulaire, la direction de la vitesse change en permanence ; il existe donc une accélération normale non nulle."
         },
         {
           "id": "D",
-          "text": "Si \\\\(\\omega\\\\) est constante, alors l'accélération totale est nulle.",
+          "text": "\\(a_n = \\dfrac{\\omega}{R}\\).",
           "is_correct": false,
-          "explanation": "Même avec \\\\(\\omega\\\\) constante, il subsiste une accélération normale non nulle due au changement de direction de la vitesse."
+          "explanation": "Le rayon apparaît au numérateur dans la formule correcte, pas au dénominateur."
         },
         {
           "id": "E",
-          "text": "L'accélération normale dépend uniquement de la masse du mobile.",
+          "text": "\\(a_n = v\\).",
           "is_correct": false,
-          "explanation": "La masse n'intervient pas dans la formule cinématique \\\\(a_n = \\omega^2 R\\\\). Elle apparaîtrait dans une étude dynamique, pas ici."
+          "explanation": "L'accélération et la vitesse ne mesurent pas la même grandeur et n'ont pas les mêmes unités."
         }
       ],
-      "coverage_label": "Accélération normale et tangentielle",
-      "learning_objective": "Distinguer accélération normale et tangentielle en MCU et utiliser \\\\(a_n = \\omega^2 R\\\\).",
-      "correction_summary": "La seule vraie affirmation porte sur \\\\(a_n = \\omega^2 R\\\\). Le piège est de croire qu'une vitesse de norme constante entraîne une accélération nulle : seule la composante tangentielle disparaît.",
-      "course_clarification": "L'accélération normale traduit le changement de direction de la vitesse. En MCU, la composante tangentielle est nulle car la valeur de la vitesse ne varie pas.",
+      "coverage_label": "Mouvement circulaire uniforme (MCU)",
+      "learning_objective": "Reconnaître et utiliser l'expression de l'accélération normale en MCU.",
+      "correction_summary": "La bonne expression est \\(a_n = \\omega^2 R\\). Le principal piège est de confondre cette accélération avec la vitesse linéaire ou d'oublier le carré sur \\(\\omega\\).",
+      "course_clarification": "L'accélération normale est dirigée vers le centre du cercle. Elle traduit le changement de direction de la vitesse, même si sa norme reste constante.",
       "source_refs": []
     },
     {
       "question_id": "S10-Q4",
-      "prompt": "À propos de la nature du mouvement et de la vitesse en MCU, quelles affirmations sont correctes ?",
+      "prompt": "À propos de l'accélération tangentielle dans un mouvement circulaire uniforme, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le vecteur vitesse garde la même direction en permanence.",
+          "text": "L'accélération tangentielle est égale à \\(\\omega^2R\\).",
           "is_correct": false,
-          "explanation": "Dans un mouvement circulaire, la direction du vecteur vitesse change continuellement car il est tangent au cercle."
+          "explanation": "\\(\\omega^2R\\) est l'expression de l'accélération normale, pas de l'accélération tangentielle."
         },
         {
           "id": "B",
-          "text": "La trajectoire est circulaire.",
+          "text": "L'accélération tangentielle est dirigée vers le centre du cercle.",
           "is_correct": false,
-          "explanation": "Cette affirmation est fausse dans l'état présenté : une phrase juste doit préciser que la trajectoire est circulaire, pas autre chose ; ici le point teste la lecture attentive des propriétés du MCU."
+          "explanation": "La direction vers le centre correspond à l'accélération normale ; l'accélération tangentielle, elle, serait portée par la tangente."
         },
         {
           "id": "C",
-          "text": "La vitesse angulaire varie pour conserver une vitesse linéaire constante.",
+          "text": "L'accélération tangentielle est forcément non nulle.",
           "is_correct": false,
-          "explanation": "En MCU, c'est précisément \\\\(\\omega\\\\) qui est constante. La vitesse linéaire constante résulte du rayon constant et de \\\\(v = \\omega R\\\\)."
+          "explanation": "Cette affirmation est incompatible avec un mouvement circulaire uniforme, où la vitesse ne change pas de norme."
         },
         {
           "id": "D",
-          "text": "L'accélération est tangentielle uniquement.",
+          "text": "L'accélération tangentielle vaut toujours la même chose que la vitesse linéaire.",
           "is_correct": false,
-          "explanation": "En MCU, l'accélération tangentielle est nulle ; l'accélération présente seulement une composante normale vers le centre."
+          "explanation": "Accélération et vitesse sont des grandeurs différentes : elles n'ont ni le même sens physique ni les mêmes unités."
         },
         {
           "id": "E",
-          "text": "La norme de la vitesse reste constante.",
+          "text": "L'accélération tangentielle est nulle : \\(a_t = 0\\).",
           "is_correct": true,
-          "explanation": "En MCU, le mobile parcourt le cercle avec une vitesse de valeur constante ; seule la direction du vecteur vitesse change."
+          "explanation": "En MCU, la norme de la vitesse reste constante ; il n'y a donc pas de variation tangentielle de la vitesse."
         }
       ],
-      "coverage_label": "Nature du mouvement circulaire",
-      "learning_objective": "Lire correctement les caractéristiques géométriques et cinématiques d'un MCU.",
-      "correction_summary": "La bonne propriété est la constance de la norme de la vitesse. Le piège est de confondre valeur constante de la vitesse et direction constante du vecteur vitesse.",
-      "course_clarification": "La trajectoire reste un cercle, mais le vecteur vitesse est tangent en chaque point. Sa norme ne change pas, tandis que sa direction tourne avec le mobile.",
+      "coverage_label": "Mouvement circulaire uniforme (MCU)",
+      "learning_objective": "Distinguer la composante tangentielle de l'accélération en MCU.",
+      "correction_summary": "La bonne réponse est \\(a_t = 0\\). Le piège est de confondre l'accélération tangentielle avec l'accélération normale, qui reste seule présente.",
+      "course_clarification": "L'accélération tangentielle traduit une variation de la valeur de la vitesse. En MCU, cette valeur reste constante, donc cette composante est nulle.",
       "source_refs": []
     },
     {
       "question_id": "S10-Q5",
-      "prompt": "Pour un point en MCU de rayon \\\\(R\\\\), quelles affirmations sont correctes si l'on combine les relations du chapitre ?",
+      "prompt": "Dans un mouvement circulaire uniforme, quelle affirmation décrit correctement la vitesse ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "On a \\\\(a_n = \\omega R\\\\) en toute généralité.",
+          "text": "La direction de la vitesse reste constante.",
           "is_correct": false,
-          "explanation": "Cette expression a la dimension d'une vitesse, pas d'une accélération. Elle oublie le carré sur \\\\(\\omega\\\\)."
+          "explanation": "Dans une trajectoire circulaire, la direction de la vitesse tourne sans cesse car elle est tangentielle à la trajectoire."
         },
         {
           "id": "B",
-          "text": "Si \\\\(v\\\\) augmente à rayon constant, \\\\(a_n\\\\) diminue.",
+          "text": "La trajectoire est rectiligne.",
           "is_correct": false,
-          "explanation": "À rayon constant, \\\\(a_n = v^2/R\\\\) : l'accélération normale augmente avec le carré de la vitesse."
+          "explanation": "Un mouvement circulaire uniforme suit une trajectoire circulaire, pas une droite."
         },
         {
           "id": "C",
-          "text": "On peut écrire \\\\(a_n = \\dfrac{v^2}{R}\\\\).",
+          "text": "La norme de la vitesse reste constante.",
           "is_correct": true,
-          "explanation": "En remplaçant \\\\(v\\\\) par \\\\(\\omega R\\\\) dans \\\\(a_n = \\omega^2 R\\\\), on obtient bien \\\\(a_n = v^2/R\\\\)."
+          "explanation": "Le mouvement est uniforme : la valeur de la vitesse ne change pas, même si sa direction change en permanence."
         },
         {
           "id": "D",
-          "text": "Si \\\\(R\\\\) augmente à vitesse linéaire constante, \\\\(a_n\\\\) augmente.",
+          "text": "La vitesse est forcément nulle.",
           "is_correct": false,
-          "explanation": "Avec \\\\(a_n = v^2/R\\\\), une augmentation de \\\\(R\\\\) fait au contraire diminuer l'accélération normale si \\\\(v\\\\) reste constant."
+          "explanation": "Une vitesse nulle correspond à l'arrêt ; un MCU implique au contraire un déplacement continu sur le cercle."
         },
         {
           "id": "E",
-          "text": "La relation \\\\(a_n = v^2/R\\\\) n'est valable que si l'accélération tangentielle est non nulle.",
+          "text": "La norme de la vitesse varie au cours du temps.",
           "is_correct": false,
-          "explanation": "Cette relation est justement valable en mouvement circulaire uniforme, où l'accélération tangentielle est nulle."
+          "explanation": "Si la norme variait, le mouvement ne serait plus uniforme ; l'accélération tangentielle ne serait alors plus nulle."
         }
       ],
-      "coverage_label": "Relations entre grandeurs linéaires et angulaires",
-      "learning_objective": "Relier les expressions \\\\(a_n = \\omega^2 R\\\\) et \\\\(a_n = v^2/R\\\\) et en déduire l'effet des variations de \\\\(v\\\\) et \\\\(R\\\\).",
-      "correction_summary": "La relation correcte est \\\\(a_n = v^2/R\\\\), équivalente à \\\\(a_n = \\omega^2R\\\\). Le piège est de mal interpréter l'effet du rayon ou d'oublier que cette formule reste valable même quand \\\\(a_t = 0\\\\).",
-      "course_clarification": "Les deux écritures de l'accélération normale sont équivalentes grâce à \\\\(v = \\omega R\\\\). Elles permettent de prévoir comment la contrainte augmente quand la vitesse croît ou quand le rayon diminue.",
+      "coverage_label": "Mouvement circulaire uniforme (MCU)",
+      "learning_objective": "Interpréter l'uniformité du mouvement circulaire en termes de norme de vitesse.",
+      "correction_summary": "La bonne affirmation porte sur la constance de la norme de vitesse. Le piège classique est de confondre norme constante et direction constante : ici, seule la direction change.",
+      "course_clarification": "La vitesse est un vecteur : sa norme mesure la rapidité, sa direction indique où se déplace le point. En MCU, seule la direction varie, pas la norme.",
       "source_refs": []
     }
   ],

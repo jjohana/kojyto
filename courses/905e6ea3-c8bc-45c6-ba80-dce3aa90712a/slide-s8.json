@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "s8_q1",
-      "prompt": "Quel énoncé décrit correctement le rôle de l’aiguilleur du ciel ?",
+      "prompt": "Quel énoncé décrit correctement l’aiguilleur du ciel ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il ravitaille les avions en carburant sur l’aire de stationnement.",
+          "text": "Il ravitaille les avions en kérosène sur l’aire de stationnement.",
           "is_correct": false,
-          "explanation": "Cette mission correspond à l’avitailleur, pas au contrôleur de trafic aérien."
+          "explanation": "Le ravitaillement en carburant correspond au métier d’avitailleur, pas à celui d’aiguilleur du ciel."
         },
         {
           "id": "B",
-          "text": "Il réalise des essais techniques sur les moteurs et les systèmes de l’avion.",
+          "text": "Il supervise l’ensemble des opérations liées aux passagers pendant une escale.",
           "is_correct": false,
-          "explanation": "Cette activité relève du technicien d’essai, qui teste des composants et systèmes aéronautiques."
+          "explanation": "Cette mission relève du chef d’escale, qui coordonne les services aux passagers, les bagages et l’organisation au sol."
         },
         {
           "id": "C",
-          "text": "Il supervise les passagers pendant l’embarquement et les bagages à l’escale.",
+          "text": "Il réalise des tests sur les composants et systèmes d’avions pour vérifier leur conformité.",
           "is_correct": false,
-          "explanation": "Cela correspond au chef d’escale, chargé de coordonner les opérations liées aux passagers et à l’avion au sol."
+          "explanation": "Cette activité correspond au technicien d’essai, chargé de contrôler des systèmes et des équipements aéronautiques."
         },
         {
           "id": "D",
           "text": "Il assure la gestion, la surveillance et le contrôle de la navigation aérienne.",
           "is_correct": true,
-          "explanation": "C’est la définition centrale du poste : il organise et surveille le trafic aérien pour maintenir la sécurité et la fluidité des vols."
+          "explanation": "C’est la fonction centrale du contrôleur aérien : surveiller le trafic et organiser la circulation des avions pour garantir la sécurité et la fluidité."
         },
         {
           "id": "E",
-          "text": "Il pilote l’avion à la place du commandant de bord pendant les phases de vol.",
+          "text": "Il répare les moteurs d’avion dans un atelier de maintenance.",
           "is_correct": false,
-          "explanation": "Le contrôleur ne pilote pas l’avion ; il donne des instructions aux pilotes, qui restent responsables du pilotage."
+          "explanation": "La réparation mécanique des moteurs relève d’un métier de maintenance, pas du contrôle aérien."
         }
       ],
       "coverage_label": "Aiguilleur du ciel",
-      "learning_objective": "Identifier la fonction principale du contrôleur aérien.",
-      "correction_summary": "La bonne réponse est celle qui décrit la surveillance et le contrôle de la navigation aérienne. Le piège consiste à confondre ce métier avec des fonctions au sol ou avec le pilotage.",
-      "course_clarification": "L’aiguilleur du ciel contrôle le trafic aérien depuis un poste dédié. Il ne transporte pas, ne répare pas et ne pilote pas : il coordonne et sécurise les mouvements des avions.",
+      "learning_objective": "Identifier la mission principale du contrôleur de trafic aérien.",
+      "correction_summary": "La bonne réponse est celle qui décrit la gestion, la surveillance et le contrôle de la navigation aérienne. Les autres propositions renvoient à d’autres métiers de l’aéronautique.",
+      "course_clarification": "L’aiguilleur du ciel organise le trafic aérien pour éviter les conflits entre avions et sécuriser les phases sensibles. Il ne s’occupe pas de la maintenance ni du service passagers.",
       "source_refs": []
     },
     {
       "question_id": "s8_q2",
-      "prompt": "Où exerce principalement l’aiguilleur du ciel ?",
+      "prompt": "Où travaille l’aiguilleur du ciel ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Depuis la cabine de l’avion pendant le vol.",
+          "text": "Depuis la cabine de pilotage d’un avion de ligne.",
           "is_correct": false,
-          "explanation": "Le contrôleur travaille au sol, dans une installation dédiée, et non dans la cabine d’un avion."
+          "explanation": "La cabine de pilotage est l’espace de travail des pilotes, pas du contrôleur aérien."
         },
         {
           "id": "B",
           "text": "Depuis une tour de contrôle ou un centre spécialisé.",
           "is_correct": true,
-          "explanation": "Le support indique explicitement ces deux lieux d’exercice, qui sont les postes d’où il surveille et coordonne le trafic."
+          "explanation": "Le contrôleur aérien exerce dans des lieux dédiés au suivi du trafic, comme une tour de contrôle ou un centre de contrôle."
         },
         {
           "id": "C",
-          "text": "Depuis un atelier de maintenance des moteurs.",
+          "text": "Depuis un comptoir d’enregistrement des passagers.",
           "is_correct": false,
-          "explanation": "L’atelier de maintenance concerne les techniciens de maintenance, pas le contrôle du trafic aérien."
+          "explanation": "Le comptoir d’enregistrement concerne l’accueil des passagers, pas le contrôle du trafic aérien."
         },
         {
           "id": "D",
-          "text": "Depuis le comptoir d’enregistrement des passagers.",
+          "text": "Depuis un atelier de maintenance des moteurs.",
           "is_correct": false,
-          "explanation": "Le comptoir d’enregistrement relève des opérations d’escale et de l’accueil des passagers, pas du contrôle aérien."
+          "explanation": "L’atelier de maintenance sert à entretenir les avions, ce qui n’est pas le poste de l’aiguilleur du ciel."
         },
         {
           "id": "E",
-          "text": "Depuis une zone de stockage du carburant.",
+          "text": "Depuis un véhicule d’avitaillement en carburant.",
           "is_correct": false,
-          "explanation": "La zone de stockage ou de ravitaillement concerne l’avitaillement, pas la surveillance de la navigation aérienne."
+          "explanation": "Le véhicule d’avitaillement appartient au travail de ravitaillement des avions, pas au contrôle aérien."
         }
       ],
       "coverage_label": "Aiguilleur du ciel",
-      "learning_objective": "Repérer le lieu d’exercice du contrôleur aérien.",
-      "correction_summary": "Le contrôleur aérien travaille depuis une tour de contrôle ou un centre spécialisé. Il ne se trouve ni dans l’avion, ni dans un atelier, ni au comptoir passagers.",
-      "course_clarification": "La tour de contrôle est un poste de surveillance visuelle et technique. Un centre spécialisé peut gérer le trafic aérien à distance avec des outils de suivi et de communication.",
+      "learning_objective": "Reconnaître le lieu d’exercice du contrôleur de trafic aérien.",
+      "correction_summary": "Le contrôleur aérien travaille dans une tour de contrôle ou un centre spécialisé. Les autres lieux proposés correspondent à d’autres fonctions aéroportuaires.",
+      "course_clarification": "La tour de contrôle et le centre spécialisé permettent de surveiller les mouvements des avions et d’échanger avec les pilotes. Ce poste exige une vue d’ensemble du trafic.",
       "source_refs": []
     },
     {
       "question_id": "s8_q3",
-      "prompt": "Quelles actions font partie des tâches de l’aiguilleur du ciel ?",
+      "prompt": "Quelle action fait partie du travail de l’aiguilleur du ciel ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
           "text": "Il coordonne les décollages et les atterrissages.",
           "is_correct": true,
-          "explanation": "La coordination des phases de décollage et d’atterrissage fait partie de ses missions essentielles pour éviter les conflits de trajectoire."
+          "explanation": "La coordination des phases de décollage et d’atterrissage fait partie des tâches essentielles pour sécuriser le trafic aérien."
         },
         {
           "id": "B",
-          "text": "Il gère le trafic en vol.",
+          "text": "Il prélève un échantillon de carburant après chaque opération.",
           "is_correct": false,
-          "explanation": "Cette formulation n’est pas fausse : le texte la mentionne bien. Pour respecter la consigne d’une seule affirmation vraie, celle-ci doit être retenue comme fausse ici, car le reste de la proposition doit être pris comme une tâche distincte et non formulée correctement au regard de la question."
+          "explanation": "Le prélèvement d’un échantillon de carburant est une vérification réalisée lors de l’avitaillement, pas dans le contrôle aérien."
         },
         {
           "id": "C",
-          "text": "Il facture directement le carburant livré aux avions.",
+          "text": "Il installe les équipements de test sur des composants d’avions.",
           "is_correct": false,
-          "explanation": "La facturation concerne l’avitailleur, qui enregistre les données et facture la prestation de carburant."
+          "explanation": "Installer des équipements de test relève du technicien d’essai, qui vérifie des systèmes aéronautiques."
         },
         {
           "id": "D",
-          "text": "Il contrôle la qualité du kérosène après chaque opération de ravitaillement.",
+          "text": "Il organise la distribution des bagages aux passagers.",
           "is_correct": false,
-          "explanation": "Le prélèvement d’échantillon et le contrôle du carburant relèvent de l’avitailleur, pas du contrôleur aérien."
+          "explanation": "La gestion des bagages relève des opérations d’escale, pas du contrôle du trafic aérien."
         },
         {
           "id": "E",
-          "text": "Il installe les équipements de test pour vérifier la conformité des systèmes d’un avion.",
+          "text": "Il contrôle la qualité des repas servis à bord.",
           "is_correct": false,
-          "explanation": "Cette tâche appartient au technicien d’essai, qui réalise des tests sur les composants et systèmes aéronautiques."
+          "explanation": "La qualité des repas n’entre pas dans les missions de l’aiguilleur du ciel, qui s’occupe du trafic aérien."
         }
       ],
       "coverage_label": "Aiguilleur du ciel",
-      "learning_objective": "Associer les principales actions de coordination aérienne au contrôleur.",
-      "correction_summary": "La tâche correcte proposée est la coordination des décollages et des atterrissages. Les autres propositions mélangent d’autres métiers de l’aéronautique.",
-      "course_clarification": "Le contrôleur aérien organise les mouvements des appareils pour maintenir la séparation et la fluidité du trafic. Les opérations de carburant, d’essai ou de facturation relèvent d’autres métiers.",
+      "learning_objective": "Distinguer les tâches concrètes du contrôleur aérien.",
+      "correction_summary": "La coordination des décollages et des atterrissages est bien une mission de l’aiguilleur du ciel. Les autres propositions correspondent à d’autres métiers ou à des tâches sans lien avec le trafic aérien.",
+      "course_clarification": "Le contrôleur aérien intervient surtout aux moments où les mouvements d’avions doivent être synchronisés avec précision. Il veille à éviter les risques lors des phases au sol et à proximité de l’aéroport.",
       "source_refs": []
     },
     {
       "question_id": "s8_q4",
-      "prompt": "Quel type de communication est attendu de l’aiguilleur du ciel ?",
+      "prompt": "Comment l’aiguilleur du ciel communique-t-il avec les pilotes ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il envoie uniquement des messages une fois le vol terminé.",
+          "text": "Il communique uniquement avec les passagers à l’enregistrement.",
           "is_correct": false,
-          "explanation": "Le contrôle aérien repose au contraire sur des échanges en temps réel pendant le vol et les phases critiques."
+          "explanation": "L’échange avec les passagers concerne le personnel d’escale, pas le contrôleur aérien."
         },
         {
           "id": "B",
-          "text": "Il communique seulement avec les passagers pour annoncer l’embarquement.",
+          "text": "Il donne ses consignes plusieurs jours après le vol.",
           "is_correct": false,
-          "explanation": "La communication avec les passagers relève d’autres fonctions d’escale ou de cabine, pas du contrôle aérien."
+          "explanation": "Les instructions doivent être données en temps réel, car elles servent à gérer le trafic pendant le vol."
         },
         {
           "id": "C",
-          "text": "Il donne des instructions sur le remplissage des réservoirs de carburant.",
+          "text": "Il transmet seulement des informations sur le prix du billet.",
           "is_correct": false,
-          "explanation": "Le remplissage des réservoirs concerne l’avitaillement ; le contrôleur donne des consignes de vol, pas de ravitaillement."
+          "explanation": "Le prix du billet n’a aucun rapport avec la mission de contrôle aérien."
         },
         {
           "id": "D",
-          "text": "Il remplace les pilotes pour modifier lui-même la trajectoire de l’avion.",
+          "text": "Il ne donne jamais d’instructions sur la trajectoire.",
           "is_correct": false,
-          "explanation": "Il n’agit pas à la place du pilote ; il transmet des instructions que l’équipage applique dans le cadre du vol."
+          "explanation": "Au contraire, l’une de ses missions est précisément d’indiquer une trajectoire adaptée pour organiser le trafic et éviter les conflits."
         },
         {
           "id": "E",
-          "text": "Il communique en temps réel avec les pilotes pour donner des instructions sur la trajectoire, la vitesse ou l’altitude.",
+          "text": "Il leur donne en temps réel des instructions sur la trajectoire, la vitesse ou l’altitude.",
           "is_correct": true,
-          "explanation": "C’est exactement le cœur de sa mission : transmettre des consignes précises et immédiates pour guider les aéronefs en sécurité."
+          "explanation": "Le contrôleur aérien transmet des consignes immédiates pour ajuster le vol et maintenir la sécurité et la séparation entre les appareils."
         }
       ],
       "coverage_label": "Aiguilleur du ciel",
-      "learning_objective": "Comprendre la nature des échanges entre contrôleur aérien et pilotes.",
-      "correction_summary": "Le point essentiel est la communication en temps réel avec des consignes de trajectoire, de vitesse ou d’altitude. Le piège consiste à confondre instruction de vol et pilotage direct.",
-      "course_clarification": "La communication radio permet d’ajuster rapidement la circulation aérienne. Les consignes portent sur des paramètres précis du vol pour éviter les risques de conflit entre appareils.",
+      "learning_objective": "Comprendre le type d’échanges entre contrôleur aérien et pilotes.",
+      "correction_summary": "Le contrôleur aérien parle aux pilotes en temps réel pour régler la trajectoire, la vitesse ou l’altitude. Le piège consiste à confondre cette communication opérationnelle avec des échanges commerciaux ou passagers.",
+      "course_clarification": "La communication en temps réel permet d’adapter immédiatement le vol aux conditions de trafic. Les consignes portent sur des paramètres techniques du déplacement de l’avion.",
       "source_refs": []
     },
     {
       "question_id": "s8_q5",
-      "prompt": "Quelles qualités sont attendues chez l’aiguilleur du ciel ?",
+      "prompt": "Quelles qualités sont attendues pour exercer le métier d’aiguilleur du ciel ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Une absence totale de communication avec les équipages.",
+          "text": "Une absence de communication avec les autres acteurs du trafic.",
           "is_correct": false,
-          "explanation": "C’est l’inverse de la compétence attendue : le métier repose sur une communication fréquente et précise avec les pilotes."
+          "explanation": "Le poste repose au contraire sur des échanges précis et fréquents avec les pilotes et les services concernés."
         },
         {
           "id": "B",
-          "text": "Une décision lente pour éviter toute réaction immédiate.",
+          "text": "Une capacité à attendre longtemps avant de prendre une décision.",
           "is_correct": false,
-          "explanation": "Le texte insiste au contraire sur la rapidité de décision, indispensable en situation de trafic dense ou d’imprévu."
+          "explanation": "Le métier exige des décisions rapides, car le trafic aérien évolue en temps réel."
         },
         {
           "id": "C",
           "text": "Une excellente communication, une prise de décision rapide sous stress et une concentration constante.",
           "is_correct": true,
-          "explanation": "Ces qualités sont explicitement demandées car le métier exige des échanges précis, des décisions rapides et une vigilance continue."
+          "explanation": "Ces qualités sont nécessaires pour coordonner le trafic, réagir vite et maintenir une attention continue sur la situation aérienne."
         },
         {
           "id": "D",
-          "text": "Une concentration intermittente, car les situations sont toujours répétitives.",
+          "text": "Une concentration intermittente, utile seulement au moment des décollages.",
           "is_correct": false,
-          "explanation": "La surveillance doit être constante, car le trafic aérien évolue en permanence et chaque situation peut changer rapidement."
+          "explanation": "La concentration doit être constante pour suivre l’ensemble du trafic et anticiper les situations à risque."
         },
         {
           "id": "E",
-          "text": "Une priorité donnée à la facture du service plutôt qu’à la sécurité.",
+          "text": "Une priorité donnée au travail manuel plutôt qu’à l’analyse.",
           "is_correct": false,
-          "explanation": "La sécurité du trafic est la priorité du poste ; la facturation n’est pas une mission du contrôleur aérien."
+          "explanation": "Le cœur du métier repose sur l’analyse, la coordination et la prise de décision, pas sur un travail manuel."
         }
       ],
       "coverage_label": "Aiguilleur du ciel",
-      "learning_objective": "Identifier les compétences comportementales attendues pour le poste.",
-      "correction_summary": "Les qualités clés sont la communication, la rapidité de décision sous stress et une attention constante. Le piège est de privilégier des éléments sans lien avec la sécurité aérienne.",
-      "course_clarification": "Le contrôle aérien demande une vigilance continue, car la moindre erreur peut avoir des conséquences immédiates. La clarté des échanges et la capacité à décider vite sont donc essentielles.",
+      "learning_objective": "Identifier les qualités comportementales indispensables au contrôleur aérien.",
+      "correction_summary": "Les qualités attendues sont la communication, la rapidité de décision sous stress et une concentration permanente. Le principal piège est de sous-estimer l’exigence mentale du poste.",
+      "course_clarification": "Le métier demande de traiter beaucoup d’informations à la fois sans perdre le fil. La fiabilité des décisions dépend d’une attention continue et d’échanges clairs.",
       "source_refs": []
     }
   ],

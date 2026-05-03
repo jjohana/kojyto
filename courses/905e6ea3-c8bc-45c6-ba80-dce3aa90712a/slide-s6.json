@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "s6_q1",
-      "prompt": "Quel énoncé décrit correctement l’activité principale du mécanicien aéronautique sur un moteur ?",
+      "question_id": "s6-q1",
+      "prompt": "Quel énoncé décrit correctement le travail du mécanicien aéronautique sur les moteurs ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il se limite à observer l’extérieur de l’avion sans ouvrir les moteurs.",
+          "text": "Il pilote les aéronefs pendant les vols commerciaux.",
           "is_correct": false,
-          "explanation": "C’est faux : le travail porte justement sur le démontage, le remontage et l’inspection détaillée des moteurs."
+          "explanation": "Le pilotage relève du pilote, pas du mécanicien aéronautique. Ici, l’intervention se fait sur les moteurs au sol."
         },
         {
           "id": "B",
-          "text": "Il assure uniquement la communication radio avec les passagers.",
+          "text": "Il se limite à observer les moteurs sans jamais intervenir dessus.",
           "is_correct": false,
-          "explanation": "C’est faux : cette tâche relève d’autres fonctions, pas de la maintenance moteur."
+          "explanation": "Le métier ne consiste pas seulement à regarder : il comprend aussi le démontage et le remontage des éléments moteurs."
         },
         {
           "id": "C",
-          "text": "Il conçoit les plans de vol avant le décollage.",
+          "text": "Il répare uniquement les éléments de cabine passagers.",
           "is_correct": false,
-          "explanation": "C’est faux : la planification du vol correspond au pilote ou à l’équipe de conduite, pas au mécanicien moteur."
+          "explanation": "La mission présentée concerne les moteurs d’aéronefs, pas l’aménagement de la cabine."
         },
         {
           "id": "D",
           "text": "Il démonte, remonte et inspecte minutieusement les moteurs.",
           "is_correct": true,
-          "explanation": "C’est exact : l’activité centrale consiste à manipuler le moteur avec précision pour contrôler son état et son bon assemblage."
+          "explanation": "C’est l’activité centrale décrite pour ce métier : le travail porte sur la maintenance détaillée des moteurs, avec démontage, remontage et inspection."
         },
         {
           "id": "E",
-          "text": "Il remplace les contrôleurs aériens pendant les phases d’atterrissage.",
+          "text": "Il contrôle exclusivement les bagages avant le départ.",
           "is_correct": false,
-          "explanation": "C’est faux : le mécanicien moteur intervient sur la maintenance, pas sur le contrôle aérien."
+          "explanation": "Le contrôle des bagages n’appartient pas à cette fonction ; le cœur du métier est la maintenance des moteurs."
         }
       ],
-      "coverage_label": "Rôle du mécanicien aéronautique",
-      "learning_objective": "Identifier les actions de base du mécanicien aéronautique sur un moteur.",
-      "correction_summary": "Le raisonnement attendu consiste à repérer l’action qui correspond à la maintenance mécanique concrète : démonter, remonter et inspecter. Les autres propositions mélangent des métiers différents, comme le pilotage, la communication ou le contrôle aérien, ce qui crée une confusion fréquente.",
-      "course_clarification": "Le mécanicien aéronautique intervient directement sur les moteurs : il les démonte, les remonte et les contrôle avec précision pour vérifier leur état.",
+      "coverage_label": "Mécanicien moteur / mécanicien aéronautique",
+      "learning_objective": "Identifier les opérations de base réalisées sur un moteur d’aéronef.",
+      "correction_summary": "La bonne réponse est celle qui associe démontage, remontage et inspection minutieuse des moteurs. Le piège consiste à confondre ce métier avec des fonctions de pilotage ou de service au sol.",
+      "course_clarification": "Un mécanicien aéronautique intervient sur les moteurs et leurs composants pour vérifier leur état et les remettre en service. Les verbes clés sont démonter, inspecter, réparer et remonter.",
       "source_refs": []
     },
     {
-      "question_id": "s6_q2",
-      "prompt": "Quel énoncé traduit correctement la contribution du mécanicien aéronautique à la sécurité ?",
+      "question_id": "s6-q2",
+      "prompt": "Quel énoncé correspond à la détection et au traitement d’une panne moteur ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il attend qu’une panne grave apparaisse avant d’agir.",
+          "text": "Il attend qu’une panne majeure immobilise l’appareil avant d’intervenir.",
           "is_correct": false,
-          "explanation": "C’est faux : l’objectif est justement de repérer les défauts très tôt, avant qu’ils ne deviennent dangereux."
+          "explanation": "Le métier vise justement à repérer les défaillances tôt, même lorsqu’elles sont minimes, pour éviter une panne grave."
         },
         {
           "id": "B",
-          "text": "Il détecte les défaillances, même minimes, puis répare ou remplace les pièces défectueuses.",
+          "text": "Il détecte des défaillances, même minimes, puis répare ou remplace les pièces défectueuses.",
           "is_correct": true,
-          "explanation": "C’est exact : repérer une anomalie faible puis corriger la pièce concernée permet de préserver la sécurité de l’appareil."
+          "explanation": "La vigilance sur les petites anomalies est explicitement attendue, puis l’action consiste à réparer ou remplacer la pièce en cause."
         },
         {
           "id": "C",
-          "text": "Il améliore la sécurité uniquement en changeant la couleur des pièces.",
+          "text": "Il ignore les défauts faibles parce qu’ils n’ont aucun effet sur la sécurité.",
           "is_correct": false,
-          "explanation": "C’est faux : la sécurité dépend d’actions techniques sur l’état des pièces, pas d’un changement esthétique."
+          "explanation": "Les petites défaillances comptent au contraire, car elles peuvent annoncer un problème plus important."
         },
         {
           "id": "D",
-          "text": "Il garantit la sécurité sans vérifier l’état des moteurs.",
+          "text": "Il remplace toujours le moteur complet dès la moindre anomalie.",
           "is_correct": false,
-          "explanation": "C’est faux : la sécurité passe au contraire par un contrôle minutieux des moteurs et des éléments défectueux."
+          "explanation": "Le texte parle de pièces défectueuses : on répare ou on remplace l’élément concerné, pas forcément tout le moteur."
         },
         {
           "id": "E",
-          "text": "Il n’intervient que sur les sièges et la cabine des passagers.",
+          "text": "Il se contente d’enregistrer l’anomalie sans effectuer de réparation.",
           "is_correct": false,
-          "explanation": "C’est faux : le cœur du métier décrit ici concerne les moteurs et leur maintenance."
+          "explanation": "Le métier ne se limite pas au constat : il comprend la remise en état par réparation ou remplacement."
         }
       ],
-      "coverage_label": "Sécurité et réparation",
-      "learning_objective": "Relier la détection des défauts à la sécurité des appareils.",
-      "correction_summary": "Le point clé est le lien entre contrôle technique et sécurité. La bonne réponse associe détection précoce, réparation ou remplacement, puis protection des personnes. Une erreur fréquente consiste à croire qu’il faut attendre une panne visible, alors que la prévention est essentielle.",
-      "course_clarification": "La sécurité dépend d’une maintenance rigoureuse : une petite défaillance peut devenir grave si elle n’est pas repérée et corrigée à temps.",
+      "coverage_label": "Mécanicien moteur / mécanicien aéronautique",
+      "learning_objective": "Comprendre comment sont traitées les défaillances sur un moteur d’aéronef.",
+      "correction_summary": "La bonne réponse associe détection fine des défauts et action sur les pièces défectueuses. Le piège est de réduire le rôle à un simple constat sans intervention.",
+      "course_clarification": "Une défaillance est un dysfonctionnement ou un signe d’usure. En maintenance, repérer tôt une anomalie permet d’éviter une panne plus sérieuse.",
       "source_refs": []
     },
     {
-      "question_id": "s6_q3",
-      "prompt": "Quelle exigence professionnelle est liée à l’évolution des technologies aéronautiques ?",
+      "question_id": "s6-q3",
+      "prompt": "Quel énoncé traduit le mieux la responsabilité du mécanicien aéronautique ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
+          "text": "Il garantit la sécurité des appareils et des passagers.",
+          "is_correct": true,
+          "explanation": "La sécurité est une finalité essentielle de son intervention : un moteur bien entretenu contribue à la sécurité de l’appareil et des personnes."
+        },
+        {
+          "id": "B",
+          "text": "Il garantit uniquement le confort des passagers en cabine.",
+          "is_correct": false,
+          "explanation": "Le texte met l’accent sur la sécurité, pas sur le confort en cabine."
+        },
+        {
+          "id": "C",
+          "text": "Il garantit seulement la rapidité commerciale des vols.",
+          "is_correct": false,
+          "explanation": "La priorité donnée dans le métier est la sûreté de fonctionnement, pas la vitesse d’exploitation."
+        },
+        {
+          "id": "D",
+          "text": "Il garantit la sécurité sans jamais intervenir sur les moteurs.",
+          "is_correct": false,
+          "explanation": "La sécurité est assurée précisément par l’entretien, l’inspection et la réparation des moteurs."
+        },
+        {
+          "id": "E",
+          "text": "Il garantit la sécurité en remplaçant tous les avions après chaque vol.",
+          "is_correct": false,
+          "explanation": "Le support parle de maintenance des moteurs, pas de remplacement systématique des appareils entiers."
+        }
+      ],
+      "coverage_label": "Mécanicien moteur / mécanicien aéronautique",
+      "learning_objective": "Relier la maintenance moteur à la sécurité des vols.",
+      "correction_summary": "La bonne affirmation relie directement la maintenance à la sécurité des appareils et des passagers. Le piège est de déplacer la réponse vers le confort, la rapidité ou des actions irréalistes.",
+      "course_clarification": "Dans l’aéronautique, la maintenance sert à éviter les incidents et à maintenir l’appareil en état sûr. La sécurité des personnes dépend donc du bon état technique des équipements.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s6-q4",
+      "prompt": "Quel énoncé correspond aux exigences d’évolution du métier ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il peut conserver les mêmes méthodes toute sa carrière sans formation supplémentaire.",
+          "is_correct": false,
+          "explanation": "Le métier évolue avec les technologies ; rester à jour est donc nécessaire."
+        },
+        {
+          "id": "B",
+          "text": "Il n’a pas besoin de suivre les évolutions techniques des moteurs.",
+          "is_correct": false,
+          "explanation": "La veille technique est explicitement demandée pour suivre les changements de technologies et de matériels."
+        },
+        {
+          "id": "C",
+          "text": "Il se forme une seule fois au début de sa carrière puis n’apprend plus rien.",
+          "is_correct": false,
+          "explanation": "La formation continue est au contraire attendue régulièrement, pas seulement au départ."
+        },
+        {
+          "id": "D",
+          "text": "Il travaille sans jamais actualiser ses connaissances en maintenance.",
+          "is_correct": false,
+          "explanation": "L’actualisation des connaissances fait partie du métier, car les moteurs et leurs techniques changent."
+        },
+        {
+          "id": "E",
           "text": "Il doit assurer une veille technique et se former régulièrement.",
           "is_correct": true,
-          "explanation": "C’est exact : l’évolution des technologies impose de rester informé et de mettre à jour ses compétences."
-        },
-        {
-          "id": "B",
-          "text": "Il peut conserver les mêmes méthodes toute sa carrière sans se tenir informé.",
-          "is_correct": false,
-          "explanation": "C’est faux : les technologies évoluent, donc l’adaptation et l’actualisation des connaissances sont nécessaires."
-        },
-        {
-          "id": "C",
-          "text": "Il n’a pas besoin de formation une fois le métier appris.",
-          "is_correct": false,
-          "explanation": "C’est faux : une formation régulière est explicitement nécessaire pour suivre les évolutions techniques."
-        },
-        {
-          "id": "D",
-          "text": "Il travaille sans aucune documentation technique.",
-          "is_correct": false,
-          "explanation": "C’est faux : la veille technique suppose justement de consulter et d’exploiter des informations techniques actualisées."
-        },
-        {
-          "id": "E",
-          "text": "Il se spécialise uniquement dans la cuisine de bord des avions.",
-          "is_correct": false,
-          "explanation": "C’est faux : cette activité n’a aucun lien avec la maintenance des moteurs aéronautiques."
+          "explanation": "L’évolution constante des technologies impose de suivre les nouveautés et de mettre à jour ses compétences tout au long de la carrière."
         }
       ],
-      "coverage_label": "Veille technique et formation",
-      "learning_objective": "Comprendre pourquoi la veille technique est indispensable en maintenance aéronautique.",
-      "correction_summary": "Le raisonnement consiste à relier l’évolution rapide des technologies à la nécessité d’apprendre en continu. La bonne réponse parle de veille technique et de formation régulière. Une confusion fréquente est de penser qu’un savoir acquis une fois suffit durablement.",
-      "course_clarification": "En maintenance aéronautique, il faut suivre l’évolution des matériels, des procédures et des outils pour rester compétent et travailler en sécurité.",
+      "coverage_label": "Mécanicien moteur / mécanicien aéronautique",
+      "learning_objective": "Identifier l’importance de la veille technique et de la formation continue.",
+      "correction_summary": "La bonne réponse insiste sur la veille technique et la formation régulière. Le piège est de croire qu’une formation initiale suffit alors que la technologie évolue constamment.",
+      "course_clarification": "La veille technique consiste à suivre les évolutions utiles à l’activité. Elle sert à maintenir des pratiques de maintenance adaptées aux moteurs récents.",
       "source_refs": []
     },
     {
-      "question_id": "s6_q4",
-      "prompt": "Quelle connaissance technique est attendue chez ce professionnel ?",
+      "question_id": "s6-q5",
+      "prompt": "Quel énoncé correspond le mieux aux connaissances et qualités attendues ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il connaît uniquement le nom commercial des compagnies aériennes.",
+          "text": "Il connaît seulement les moteurs automobiles et n’a pas besoin d’observer en détail.",
           "is_correct": false,
-          "explanation": "C’est faux : la compétence demandée porte sur les moteurs et leur maintenance, pas sur les compagnies."
+          "explanation": "Le métier porte sur les moteurs d’aéronefs, pas sur les moteurs automobiles, et l’observation minutieuse est importante."
         },
         {
           "id": "B",
-          "text": "Il maîtrise seulement le vocabulaire des bagages et de l’embarquement.",
+          "text": "Il n’a besoin que d’une connaissance théorique, sans entretien ni suivi des moteurs.",
           "is_correct": false,
-          "explanation": "C’est faux : ces notions relèvent du service commercial ou passager, pas du métier décrit ici."
+          "explanation": "La compétence attendue couvre aussi l’entretien, pas seulement la théorie."
         },
         {
           "id": "C",
-          "text": "Il ignore le fonctionnement des moteurs, car seule la pratique manuelle compte.",
-          "is_correct": false,
-          "explanation": "C’est faux : il faut à la fois des gestes techniques et une vraie connaissance du fonctionnement des moteurs."
+          "text": "Il connaît différents types de moteurs d’aéronefs, leur fonctionnement et leur entretien, avec patience et sens de l’observation.",
+          "is_correct": true,
+          "explanation": "Le support associe une connaissance technique large des moteurs à deux qualités essentielles : la patience et l’observation."
         },
         {
           "id": "D",
-          "text": "Il s’occupe uniquement de la peinture extérieure des appareils.",
+          "text": "La patience est inutile, car la maintenance doit toujours être rapide et approximative.",
           "is_correct": false,
-          "explanation": "C’est faux : l’activité mise en avant concerne les moteurs, leur fonctionnement et leur entretien."
+          "explanation": "La patience fait partie des qualités mises en avant, car l’inspection demande du soin et de la précision."
         },
         {
           "id": "E",
-          "text": "Il connaît les différents types de moteurs d’aéronefs, leur fonctionnement et leur entretien.",
-          "is_correct": true,
-          "explanation": "C’est exact : la maîtrise des moteurs, de leur fonctionnement et de leur entretien fait partie des connaissances attendues."
+          "text": "Le sens de l’observation est un défaut dans ce métier.",
+          "is_correct": false,
+          "explanation": "Le sens de l’observation est au contraire présenté comme une qualité essentielle pour repérer les anomalies."
         }
       ],
-      "coverage_label": "Connaissance des moteurs d’aéronefs",
-      "learning_objective": "Identifier les connaissances techniques nécessaires sur les moteurs d’aéronefs.",
-      "correction_summary": "Il faut reconnaître que le métier ne se réduit pas à une manipulation manuelle : il exige aussi de comprendre les différents moteurs, leur fonctionnement et leur entretien. Une erreur fréquente est de confondre maintenance moteur et tâches purement esthétiques ou commerciales.",
-      "course_clarification": "La connaissance technique attendue porte sur les types de moteurs d’aéronefs, leur fonctionnement et les opérations d’entretien associées.",
-      "source_refs": []
-    },
-    {
-      "question_id": "s6_q5",
-      "prompt": "Quelles qualités humaines sont mises en avant pour exercer ce métier ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La rapidité d’exécution sans vérification est la qualité principale.",
-          "is_correct": false,
-          "explanation": "C’est faux : la précipitation est risquée en maintenance, alors que l’attention et la précision sont recherchées."
-        },
-        {
-          "id": "B",
-          "text": "L’improvisation est plus importante que l’attention aux détails.",
-          "is_correct": false,
-          "explanation": "C’est faux : le métier repose sur des contrôles minutieux, pas sur l’improvisation."
-        },
-        {
-          "id": "C",
-          "text": "La patience et le sens de l’observation sont essentiels.",
-          "is_correct": true,
-          "explanation": "C’est exact : inspecter finement un moteur demande de la patience et une observation attentive."
-        },
-        {
-          "id": "D",
-          "text": "L’indifférence aux petites anomalies facilite le travail.",
-          "is_correct": false,
-          "explanation": "C’est faux : repérer de petites anomalies est justement indispensable pour éviter des problèmes plus graves."
-        },
-        {
-          "id": "E",
-          "text": "L’absence de concentration est un atout pour inspecter un moteur.",
-          "is_correct": false,
-          "explanation": "C’est faux : l’inspection demande au contraire une forte concentration et un bon sens de l’observation."
-        }
-      ],
-      "coverage_label": "Qualités professionnelles",
-      "learning_objective": "Reconnaître les qualités personnelles attendues en maintenance moteur.",
-      "correction_summary": "La bonne réponse relie la nature du travail à deux qualités précises : patience et observation. Le piège classique consiste à valoriser la vitesse ou l’improvisation, alors que l’inspection d’un moteur exige surtout rigueur et vigilance.",
-      "course_clarification": "Pour inspecter un moteur avec fiabilité, il faut être patient et très observateur afin de repérer la moindre anomalie.",
+      "coverage_label": "Mécanicien moteur / mécanicien aéronautique",
+      "learning_objective": "Reconnaître les connaissances techniques et les qualités personnelles attendues.",
+      "correction_summary": "La bonne réponse réunit la connaissance des moteurs, de leur fonctionnement et de leur entretien, ainsi que patience et observation. Le piège est de réduire le métier à la seule théorie ou de nier l’importance du regard minutieux.",
+      "course_clarification": "Un moteur d’aéronef est un ensemble technique qui demande une bonne compréhension de son fonctionnement et de son entretien. La patience et l’observation aident à repérer les défauts faibles et à travailler avec précision.",
       "source_refs": []
     }
   ],

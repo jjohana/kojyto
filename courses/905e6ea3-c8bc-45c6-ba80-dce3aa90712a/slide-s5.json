@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "s5-q1",
-      "prompt": "Quelle affirmation décrit correctement la mission du pilote de ligne ?",
+      "question_id": "s5_q1",
+      "prompt": "Parmi les affirmations suivantes, laquelle correspond au rôle du pilote de ligne ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il se limite à tenir les commandes de l’avion pendant le vol.",
+          "text": "Le pilote de ligne se limite à faire décoller et atterrir l’avion sans autre responsabilité.",
           "is_correct": false,
-          "explanation": "Faux : son rôle dépasse le simple pilotage et inclut plusieurs tâches avant, pendant et après le vol."
+          "explanation": "Le rôle est plus large que le simple pilotage ; il inclut aussi la préparation du vol, la surveillance et la gestion de la communication."
         },
         {
           "id": "B",
-          "text": "Il intervient uniquement en cas de panne technique.",
+          "text": "Le pilote de ligne n’a pas à tenir compte de la sécurité des passagers.",
           "is_correct": false,
-          "explanation": "Faux : il agit aussi pour préparer le vol, surveiller les paramètres et communiquer avec les acteurs du trafic aérien."
+          "explanation": "La sécurité des passagers fait partie intégrante de sa mission, et non une tâche secondaire ou optionnelle."
         },
         {
           "id": "C",
-          "text": "Il remplace l’équipage de cabine pour le service aux passagers.",
+          "text": "Le pilote de ligne ne travaille qu’avec les commandes de vol et n’intervient pas sur l’organisation du vol.",
           "is_correct": false,
-          "explanation": "Faux : cette mission relève de l’équipage de cabine, pas du pilote de ligne."
+          "explanation": "Il intervient aussi dans l’organisation du vol, notamment par la planification et l’établissement du plan de vol."
         },
         {
           "id": "D",
-          "text": "Il assure la sécurité de l’avion et des passagers.",
+          "text": "Le pilote de ligne assure la sécurité de l’avion et de ses passagers.",
           "is_correct": true,
-          "explanation": "Vrai : la sécurité de l’avion et des passagers est la responsabilité centrale du pilote de ligne."
+          "explanation": "C’est l’idée centrale présentée pour ce métier : la sécurité de l’appareil et des passagers est sa responsabilité principale."
         },
         {
           "id": "E",
-          "text": "Il ne participe pas à la sécurité en vol.",
+          "text": "Le pilote de ligne n’a jamais à réagir en situation d’urgence.",
           "is_correct": false,
-          "explanation": "Faux : la sécurité fait justement partie de ses responsabilités principales."
+          "explanation": "Il doit au contraire être capable de réagir rapidement en situation d’urgence, car cela fait partie de ses responsabilités."
         }
       ],
       "coverage_label": "Responsabilités du pilote de ligne",
-      "learning_objective": "Identifier la responsabilité principale du pilote de ligne.",
-      "correction_summary": "La bonne réponse est celle qui relie directement le pilote de ligne à la sécurité. L’erreur fréquente consiste à réduire son métier à la conduite de l’avion, alors qu’il a une mission plus large de protection des personnes et de l’appareil.",
-      "course_clarification": "Le pilote de ligne n’est pas seulement un conducteur d’avion : il est responsable de la sécurité globale du vol, de l’appareil et des passagers.",
+      "learning_objective": "Identifier la mission principale du pilote de ligne et distinguer cette responsabilité d’un simple acte de pilotage.",
+      "correction_summary": "La bonne réponse est celle qui relie le pilote de ligne à la sécurité de l’avion et des passagers. Le piège consiste à réduire son rôle au seul maniement des commandes.",
+      "course_clarification": "Le pilote de ligne ne se contente pas de piloter. Il participe à la sécurité globale du vol, ce qui implique des décisions, de la vigilance et une gestion complète de l’opération.",
       "source_refs": []
     },
     {
-      "question_id": "s5-q2",
-      "prompt": "Quelle affirmation correspond à une tâche du pilote de ligne avant le départ ?",
+      "question_id": "s5_q2",
+      "prompt": "Quelle affirmation décrit correctement la préparation du vol par le pilote de ligne ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il répare les moteurs avant chaque décollage.",
+          "text": "Il rédige le rapport détaillé uniquement avant le décollage.",
           "is_correct": false,
-          "explanation": "Faux : la réparation des moteurs relève du mécanicien aéronautique, pas du pilote de ligne."
+          "explanation": "Le rapport détaillé est rédigé après chaque vol, pas avant le départ."
         },
         {
           "id": "B",
           "text": "Il planifie le vol et établit le plan de vol.",
           "is_correct": true,
-          "explanation": "Vrai : la préparation du vol comprend la planification et la rédaction du plan de vol."
+          "explanation": "La préparation du vol comprend bien la planification et la rédaction du plan de vol, qui structurent l’organisation du trajet."
         },
         {
           "id": "C",
-          "text": "Il annonce les consignes de sécurité à l’atelier de maintenance.",
+          "text": "Il remplace l’équipage de cabine pendant la phase de préparation.",
           "is_correct": false,
-          "explanation": "Faux : ces consignes concernent l’équipage et les passagers, pas un atelier de maintenance."
+          "explanation": "Aucune indication ne va dans ce sens ; l’équipage conserve ses fonctions propres et le pilote coordonne le vol."
         },
         {
           "id": "D",
-          "text": "Il décide du trajet sans tenir compte des contraintes de vol.",
+          "text": "Il n’a pas besoin de plan de vol dès lors que la météo est favorable.",
           "is_correct": false,
-          "explanation": "Faux : la planification doit tenir compte de nombreux paramètres, notamment météo, circulation aérienne et performance."
+          "explanation": "Le plan de vol fait partie des tâches prévues, indépendamment du fait que la météo soit favorable ou non."
         },
         {
           "id": "E",
-          "text": "Il n’a aucune préparation à faire avant le vol.",
+          "text": "Il n’intervient jamais dans l’organisation du trajet aérien.",
           "is_correct": false,
-          "explanation": "Faux : la préparation du vol fait partie de ses missions essentielles."
+          "explanation": "C’est faux car la planification du vol et l’établissement du plan de vol font précisément partie de ses responsabilités."
         }
       ],
       "coverage_label": "Préparation du vol",
-      "learning_objective": "Repérer la tâche de planification réalisée avant le vol.",
-      "correction_summary": "La réponse attendue associe le pilote de ligne à la préparation du vol et au plan de vol. Une confusion classique consiste à croire que son travail commence seulement au décollage, alors qu’une partie importante se fait avant le départ.",
-      "course_clarification": "Le plan de vol est le document qui organise le trajet et les conditions du vol. Le pilote le prépare avant le départ pour sécuriser l’opération.",
+      "learning_objective": "Reconnaître les tâches de préparation du vol, en particulier la planification et le plan de vol.",
+      "correction_summary": "La bonne réponse porte sur la planification du vol et l’établissement du plan de vol. Le piège est de confondre la préparation avec des tâches d’après-vol ou avec une simple conduite de l’avion.",
+      "course_clarification": "Le plan de vol organise le trajet et les conditions du vol. Cette préparation permet d’anticiper les contraintes et de sécuriser l’opération avant le départ.",
       "source_refs": []
     },
     {
-      "question_id": "s5-q3",
-      "prompt": "Quelle affirmation décrit correctement le travail du pilote de ligne pendant le vol ?",
+      "question_id": "s5_q3",
+      "prompt": "Quelle affirmation correspond aux tâches réalisées pendant le vol ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
           "text": "Il vérifie la météo et surveille les systèmes en vol.",
           "is_correct": true,
-          "explanation": "Vrai : pendant le vol, il suit les conditions météo et contrôle le fonctionnement des systèmes de l’avion."
+          "explanation": "Pendant le vol, le pilote suit les conditions météo et contrôle le fonctionnement des systèmes pour garantir la sécurité du trajet."
         },
         {
           "id": "B",
-          "text": "Il prépare uniquement les documents administratifs après l’atterrissage.",
+          "text": "Il surveille uniquement le carburant et ignore les autres systèmes de l’avion.",
           "is_correct": false,
-          "explanation": "Faux : la préparation administrative n’est pas sa seule activité et cette proposition ne décrit pas le travail en vol."
+          "explanation": "La surveillance concerne les systèmes en vol dans leur ensemble, pas seulement le carburant."
         },
         {
           "id": "C",
-          "text": "Il s’occupe exclusivement du carburant dans la soute.",
+          "text": "Il n’a plus besoin de regarder la météo une fois l’avion en l’air.",
           "is_correct": false,
-          "explanation": "Faux : cette tâche ne résume pas son rôle en vol et n’est pas formulée dans les missions décrites."
+          "explanation": "La météo reste un élément à vérifier pendant le vol, car les conditions peuvent évoluer."
         },
         {
           "id": "D",
-          "text": "Il n’a pas à surveiller les instruments de bord.",
+          "text": "Il ne communique jamais avec l’équipage pendant le vol.",
           "is_correct": false,
-          "explanation": "Faux : la surveillance des systèmes fait partie de ses responsabilités en vol."
+          "explanation": "La communication avec l’équipage fait partie du rôle du pilote, y compris pendant l’exécution du vol."
         },
         {
           "id": "E",
-          "text": "Il ne tient compte ni de la météo ni des systèmes de l’avion.",
+          "text": "Il attend la fin du vol pour surveiller les systèmes de l’avion.",
           "is_correct": false,
-          "explanation": "Faux : la météo et l’état des systèmes sont précisément des éléments qu’il doit surveiller."
+          "explanation": "La surveillance des systèmes se fait en vol, car elle sert à détecter rapidement tout problème."
         }
       ],
       "coverage_label": "Surveillance en vol",
-      "learning_objective": "Identifier les actions de surveillance réalisées pendant le vol.",
-      "correction_summary": "La bonne réponse regroupe deux tâches complémentaires : observer la météo et surveiller les systèmes. L’erreur fréquente consiste à penser que le pilotage se réduit à garder le cap, alors qu’il faut en permanence contrôler l’environnement et l’état de l’appareil.",
-      "course_clarification": "En vol, le pilote de ligne doit rester attentif aux conditions extérieures et aux instruments pour maintenir un vol sûr.",
+      "learning_objective": "Repérer les actions de vigilance menées pendant le vol, notamment la météo et les systèmes de bord.",
+      "correction_summary": "La réponse juste associe le vol à la vérification de la météo et à la surveillance des systèmes. Le piège est de déplacer cette vigilance avant ou après le vol, alors qu’elle est continue pendant le trajet.",
+      "course_clarification": "En vol, le pilote observe l’environnement et le fonctionnement de l’avion. Cette surveillance permet d’anticiper les incidents et d’agir vite si une situation évolue.",
       "source_refs": []
     },
     {
-      "question_id": "s5-q4",
-      "prompt": "Quelle affirmation correspond à la communication du pilote de ligne ?",
+      "question_id": "s5_q4",
+      "prompt": "Quelle affirmation décrit correctement l’après-vol ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il communique uniquement avec les passagers pendant le vol.",
+          "text": "Il rédige ce rapport avant de vérifier la météo du départ.",
           "is_correct": false,
-          "explanation": "Faux : les échanges essentiels concernent aussi les contrôleurs aériens et l’équipage."
+          "explanation": "Le rapport intervient après le vol, alors que la vérification météo appartient à la phase de préparation ou de surveillance en vol."
         },
         {
           "id": "B",
-          "text": "Il remplit seulement un rapport oral sans aucune communication pendant le vol.",
+          "text": "Il n’a aucun compte rendu à faire une fois l’avion posé.",
           "is_correct": false,
-          "explanation": "Faux : la communication en vol est continue et opérationnelle, pas limitée à un rapport oral."
+          "explanation": "Le rapport détaillé après chaque vol est explicitement demandé, donc un compte rendu existe bien."
         },
         {
           "id": "C",
-          "text": "Il n’échange jamais avec d’autres professionnels du transport aérien.",
+          "text": "Il rédige le rapport uniquement en situation d’urgence, et jamais après un vol normal.",
           "is_correct": false,
-          "explanation": "Faux : il travaille justement en lien avec les contrôleurs aériens et les membres d’équipage."
+          "explanation": "Le support indique un rapport après chaque vol, sans réserver cette tâche aux seuls cas d’urgence."
         },
         {
           "id": "D",
-          "text": "Il communique principalement avec le service comptable de la compagnie.",
+          "text": "Le rapport détaillé remplace la planification du vol.",
           "is_correct": false,
-          "explanation": "Faux : ce n’est pas la communication opérationnelle décrite pour la conduite du vol."
+          "explanation": "Le rapport d’après-vol n’a pas la même fonction que le plan de vol : l’un rend compte du vol réalisé, l’autre prépare le vol à venir."
         },
         {
           "id": "E",
-          "text": "Il communique avec les contrôleurs aériens et l’équipage.",
+          "text": "Il rédige un rapport détaillé après chaque vol.",
           "is_correct": true,
-          "explanation": "Vrai : la communication avec les contrôleurs aériens et l’équipage fait partie de ses missions."
+          "explanation": "La rédaction d’un rapport détaillé fait partie des tâches prévues après le vol, afin de laisser une trace utile de l’opération."
         }
       ],
-      "coverage_label": "Communication en vol",
-      "learning_objective": "Reconnaître les interlocuteurs du pilote de ligne.",
-      "correction_summary": "La bonne réponse met en avant les échanges avec les contrôleurs aériens et l’équipage. Une confusion fréquente consiste à croire que le pilote agit seul, alors qu’il coordonne son action avec plusieurs acteurs pour sécuriser le vol.",
-      "course_clarification": "Le pilote de ligne travaille en coordination avec le contrôle aérien et avec l’équipage pour assurer un vol fluide et sécurisé.",
+      "coverage_label": "Après le vol",
+      "learning_objective": "Distinguer la tâche d’après-vol et la placer au bon moment dans la succession des responsabilités.",
+      "correction_summary": "La bonne réponse identifie le rapport détaillé rédigé après chaque vol. Le piège est de le confondre avec la préparation ou avec une formalité réservée aux incidents.",
+      "course_clarification": "Le rapport après vol sert à garder une trace de l’opération et à faciliter le suivi. Il complète les tâches de préparation et de conduite du vol.",
       "source_refs": []
     },
     {
-      "question_id": "s5-q5",
-      "prompt": "Quelle affirmation indique une condition d’accès au métier de pilote de ligne ?",
+      "question_id": "s5_q5",
+      "prompt": "Quelle affirmation est correcte concernant l’accès au métier de pilote de ligne ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Aucune formation n’est requise si l’on sait déjà conduire un avion léger.",
+          "text": "Une licence ATPL n’est pas nécessaire si le pilote a déjà piloté un avion léger.",
           "is_correct": false,
-          "explanation": "Faux : une formation spécialisée est nécessaire et la conduite d’un avion léger ne suffit pas."
+          "explanation": "Le support mentionne explicitement la nécessité de la licence européenne ATPL, sans exception liée à une expérience sur avion léger."
         },
         {
           "id": "B",
-          "text": "Une simple autorisation verbale permet d’exercer immédiatement.",
+          "text": "Une simple formation générale suffit pour exercer ce métier sans autre exigence.",
           "is_correct": false,
-          "explanation": "Faux : l’exercice du métier exige une licence et une formation reconnues."
+          "explanation": "La formation doit être spécialisée et s’accompagner de la licence ATPL, donc une formation générale ne suffit pas."
         },
         {
           "id": "C",
           "text": "L’obtention de la licence européenne ATPL et une formation spécialisée sont nécessaires.",
           "is_correct": true,
-          "explanation": "Vrai : la licence européenne ATPL et une formation spécialisée sont indiquées comme nécessaires pour exercer ce métier."
+          "explanation": "L’accès au métier repose sur une licence européenne ATPL et sur une formation spécialisée, qui sont toutes deux requises."
         },
         {
           "id": "D",
-          "text": "La licence ATPL est facultative pour piloter un avion de ligne.",
+          "text": "Aucune licence n’est demandée pour devenir pilote de ligne.",
           "is_correct": false,
-          "explanation": "Faux : la licence ATPL est explicitement donnée comme nécessaire."
+          "explanation": "C’est contraire à l’exigence indiquée : la licence européenne ATPL est nécessaire."
         },
         {
           "id": "E",
-          "text": "Un diplôme de mécanicien moteur remplace la qualification de pilote de ligne.",
+          "text": "La formation spécialisée remplace la licence européenne ATPL.",
           "is_correct": false,
-          "explanation": "Faux : ce sont deux métiers différents avec des exigences distinctes."
+          "explanation": "Les deux conditions sont distinctes et nécessaires ; l’une ne remplace pas l’autre."
         }
       ],
-      "coverage_label": "Accès au métier de pilote de ligne",
-      "learning_objective": "Identifier les conditions de qualification pour devenir pilote de ligne.",
-      "correction_summary": "La bonne réponse associe la licence européenne ATPL à une formation spécialisée. La confusion fréquente consiste à penser qu’une expérience de pilotage suffit, alors que l’accès au métier est réglementé et demande une qualification précise.",
-      "course_clarification": "Pour exercer comme pilote de ligne, une licence ATPL et une formation spécialisée sont nécessaires : ce sont les bases de la qualification professionnelle.",
+      "coverage_label": "Accès au métier",
+      "learning_objective": "Vérifier les conditions d’accès au métier de pilote de ligne, notamment la licence ATPL et la formation spécialisée.",
+      "correction_summary": "La bonne réponse associe la licence européenne ATPL à une formation spécialisée. Le piège consiste à croire qu’une expérience de pilotage ou une formation générale suffirait à elle seule.",
+      "course_clarification": "L’ATPL est la licence européenne attendue pour ce métier. Elle s’ajoute à une formation spécialisée, ce qui garantit un niveau de préparation adapté aux responsabilités du pilote de ligne.",
       "source_refs": []
     }
   ],

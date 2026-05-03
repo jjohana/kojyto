@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S5-4-Q1",
-      "prompt": "Sur la page ECAM ELECTRIC AC, quelle affirmation décrit correctement les informations affichées ?",
+      "prompt": "Au sujet du panneau AC GENERATION, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Elle affiche uniquement la température cabine et l’altitude de croisière.",
+          "text": "Il sert uniquement à afficher la température des IDG 1 et IDG 2.",
           "is_correct": false,
-          "explanation": "Ces paramètres ne correspondent pas à une page dédiée à l’alimentation électrique AC."
+          "explanation": "Les températures IDG peuvent apparaître sur la page ECAM AC, mais le panneau AC GENERATION n’est pas limité à un affichage de température. Il comporte aussi des commandes et des indicateurs liés à la source de secours."
         },
         {
           "id": "B",
-          "text": "Elle sert seulement à surveiller les circuits hydrauliques.",
+          "text": "Il commande la distribution du réseau DC sans fonction de surveillance.",
           "is_correct": false,
-          "explanation": "Le synoptique présenté concerne l’électricité AC, pas l’hydraulique."
+          "explanation": "Le panneau visé concerne la génération AC et la source de secours, pas la seule distribution DC. La surveillance est au contraire explicitement intégrée au rôle du panneau."
         },
         {
           "id": "C",
-          "text": "Elle ne comporte aucun état de source ni aucune indication de connexion.",
+          "text": "Il ne comporte aucun indicateur, seulement des sélecteurs.",
           "is_correct": false,
-          "explanation": "Le principe même de la page est de présenter les sources et leur état de connexion au réseau."
+          "explanation": "La présence d’« indicateurs » fait partie de sa définition. Le panneau n’est donc pas réduit à des commandes sans retour visuel."
         },
         {
           "id": "D",
-          "text": "La page montre les sources AC et leur connexion au réseau.",
+          "text": "Il contient des P/BSW et des indicateurs pour commander et surveiller la source de secours EMER GEN / CSM/G.",
           "is_correct": true,
-          "explanation": "La page ECAM AC sert à visualiser les sources AC disponibles et la manière dont elles sont reliées au réseau électrique."
+          "explanation": "Le panneau AC GENERATION est bien le panneau de commande et d’indication associé à la source de secours. Les P/BSW et les voyants servent à piloter et surveiller cette fonction, pas à gérer directement l’ensemble de l’électricité de bord."
         },
         {
           "id": "E",
-          "text": "Elle remplace les commandes physiques du panneau AC GENERATION.",
+          "text": "La source de secours associée est l’APU GEN.",
           "is_correct": false,
-          "explanation": "La page ECAM affiche et surveille les paramètres, mais elle ne remplace pas le rôle des commandes du panneau."
+          "explanation": "La source de secours mentionnée est EMER GEN / CSM/G, pas l’APU GEN. L’APU GEN appartient à une autre source de génération électrique."
         }
       ],
-      "coverage_label": "ECAM ELEC AC : indications et surveillance",
-      "learning_objective": "Identifier le rôle de la page ECAM AC dans la surveillance des sources et du réseau.",
-      "correction_summary": "La bonne réponse est celle qui relie la page ECAM AC aux sources et à leur connexion réseau. Le piège est de confondre affichage de surveillance et commandes physiques.",
-      "course_clarification": "La page ECAM AC présente les sources d’alimentation électrique alternative et leur état. Elle sert à lire des informations de surveillance, pas à déduire des lois de fonctionnement non indiquées.",
+      "coverage_label": "Panneau AC GENERATION",
+      "learning_objective": "Identifier la fonction du panneau AC GENERATION et la source de secours qu’il commande/surveille.",
+      "correction_summary": "La bonne réponse associe le panneau AC GENERATION à la commande et à la surveillance de la source de secours EMER GEN / CSM/G. Le piège consiste à le confondre avec un simple panneau d’affichage ou avec l’APU GEN.",
+      "course_clarification": "P/BSW signifie Pushbutton Switch. Sur ce panneau, les commandes et voyants servent à agir sur la génération de secours et à en suivre l’état.",
       "source_refs": []
     },
     {
       "question_id": "S5-4-Q2",
-      "prompt": "À propos du panneau **AC GENERATION**, quelle proposition est correcte ?",
+      "prompt": "Que signifie l’abréviation P/BSW ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il ne comporte que des voyants sans aucune commande.",
+          "text": "P/BSW signifie Power Bus Switch.",
           "is_correct": false,
-          "explanation": "Le panneau comporte à la fois des commandes et des voyants, pas seulement des indicateurs lumineux."
+          "explanation": "Cette expansion ne correspond pas à la définition fournie. Le terme retenu est Pushbutton Switch, pas Power Bus Switch."
         },
         {
           "id": "B",
-          "text": "Il contient des P/BSW et des indicateurs de commande et de surveillance.",
+          "text": "P/BSW signifie Pushbutton Switch.",
           "is_correct": true,
-          "explanation": "Le panneau AC GENERATION est explicitement décrit comme regroupant des P/BSW et des indicateurs pour commander et surveiller la source de secours."
+          "explanation": "L’abréviation donnée est explicitement définie ainsi. Il faut la lire comme un poussoir/interrupteur de commande."
         },
         {
           "id": "C",
-          "text": "Il sert uniquement au réglage du frein de parc.",
+          "text": "P/BSW signifie Pushbutton Warning.",
           "is_correct": false,
-          "explanation": "Cette fonction n’a aucun lien avec la génération électrique AC."
+          "explanation": "Le mot warning ne fait pas partie de l’abréviation. L’acronyme désigne un type de bouton poussoir, pas un avertissement."
         },
         {
           "id": "D",
-          "text": "Il pilote directement les circuits carburant du poste de pilotage.",
+          "text": "P/BSW signifie Primary Bus Selector Widget.",
           "is_correct": false,
-          "explanation": "Le panneau décrit concerne l’électricité AC, pas la gestion carburant."
+          "explanation": "Cette formulation invente une extension qui ne correspond pas à la notation du support. L’acronyme est plus simple : Pushbutton Switch."
         },
         {
           "id": "E",
-          "text": "Il est réservé à la lecture des températures moteur.",
+          "text": "P/BSW signifie Panel Breaker Switch.",
           "is_correct": false,
-          "explanation": "Même si des températures peuvent apparaître ailleurs sur l’ECAM, ce panneau est dédié à la commande et surveillance électrique."
+          "explanation": "Cette interprétation mélange une idée de panneau et de disjoncteur, mais elle ne correspond pas à l’abréviation donnée. Il faut conserver exactement la signification fournie."
         }
       ],
-      "coverage_label": "Panneau AC GENERATION et commandes P/BSW",
-      "learning_objective": "Reconnaître la fonction du panneau AC GENERATION et sa nature commande/indication.",
-      "correction_summary": "La bonne affirmation associe le panneau AC GENERATION à des P/BSW et à des indicateurs. Le principal piège est de le réduire à un simple afficheur ou de lui attribuer une autre fonction avion.",
-      "course_clarification": "P/BSW signifie Pushbutton Switch : un organe de commande poussoir. Sur ce panneau, les éléments servent à agir sur une source de secours et à en suivre l’état.",
+      "coverage_label": "P/BSW",
+      "learning_objective": "Reconnaître la signification exacte de l’acronyme P/BSW.",
+      "correction_summary": "P/BSW correspond à Pushbutton Switch. Le piège est de proposer une expansion plausible en anglais mais différente de la définition attendue.",
+      "course_clarification": "Un pushbutton switch est un bouton-poussoir de commande. Dans ce contexte, l’abréviation doit être mémorisée telle quelle pour identifier les organes du panneau.",
       "source_refs": []
     },
     {
       "question_id": "S5-4-Q3",
-      "prompt": "Que signifie l’acronyme **P/BSW** dans le contexte du panneau AC GENERATION ?",
+      "prompt": "Quelle proposition décrit correctement la page ECAM ELEC AC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Pushbutton Switch.",
+          "text": "Elle montre les sources AC et la manière dont elles sont connectées au réseau.",
           "is_correct": true,
-          "explanation": "L’acronyme est donné directement sous cette forme : P/BSW correspond à Pushbutton Switch."
+          "explanation": "La page ECAM AC sert précisément à visualiser les sources AC et leurs liaisons avec le réseau électrique. Elle donne donc une vue de surveillance et de connexion des alimentations AC."
         },
         {
           "id": "B",
-          "text": "Power Bus Switching Wire.",
+          "text": "Elle est dédiée uniquement aux circuits carburant et à leur pression.",
           "is_correct": false,
-          "explanation": "Cette expansion ne correspond pas à la notation retenue dans le support."
+          "explanation": "La page présentée concerne l’électricité AC, pas le carburant. Les grandeurs affichées sont électriques, comme les tensions, fréquences et températures d’IDG."
         },
         {
           "id": "C",
-          "text": "Primary Battery System Warning.",
+          "text": "Elle affiche seulement les paramètres de l’électricité DC.",
           "is_correct": false,
-          "explanation": "Cette interprétation ne correspond ni à l’acronyme ni à la fonction du panneau."
+          "explanation": "La page visée est la page ECAM ELEC AC, donc orientée AC. Les paramètres DC relèvent d’une autre partie de l’affichage."
         },
         {
           "id": "D",
-          "text": "Pilot Backup Switch Window.",
+          "text": "Elle ne présente pas les sources externes EXT A et EXT B.",
           "is_correct": false,
-          "explanation": "Ce n’est pas la signification de P/BSW dans le domaine électrique décrit ici."
+          "explanation": "EXT A et EXT B figurent bien parmi les éléments affichés. Dire qu’elles sont absentes contredit la liste donnée sur la page."
         },
         {
           "id": "E",
-          "text": "Pushbutton Safety Warning.",
+          "text": "Elle montre uniquement les disjoncteurs du compartiment avionique.",
           "is_correct": false,
-          "explanation": "L’acronyme donné renvoie à un interrupteur-poussoir, pas à un avertissement de sécurité."
+          "explanation": "Les disjoncteurs surveillés relèvent d’un autre affichage dédié. La page ECAM AC montre surtout les sources AC et leur état de connexion au réseau."
         }
       ],
-      "coverage_label": "Acronymes du panneau AC GENERATION",
-      "learning_objective": "Connaître l’expansion exacte de l’acronyme P/BSW.",
-      "correction_summary": "La seule bonne réponse est l’extension anglaise exacte de P/BSW. Le piège classique est de proposer une expansion plausible mais non conforme à la notation du support.",
-      "course_clarification": "Un P/BSW est un **Pushbutton Switch**, c’est-à-dire un bouton-poussoir de commande. Dans le panneau électrique, ce type d’organe sert à activer, couper ou sélectionner une fonction.",
+      "coverage_label": "Page ECAM ELEC AC",
+      "learning_objective": "Lire la fonction générale de la page ECAM AC et reconnaître ce qu’elle surveille.",
+      "correction_summary": "La page ECAM AC sert à visualiser les sources AC et leur connexion au réseau. Le piège consiste à la confondre avec une page dédiée au DC, au carburant ou aux disjoncteurs.",
+      "course_clarification": "Sur ECAM, la page AC est une page de surveillance. Elle aide à lire l’état des alimentations AC et des liaisons réseau, pas à piloter directement des systèmes sans rapport.",
       "source_refs": []
     },
     {
       "question_id": "S5-4-Q4",
-      "prompt": "À propos des valeurs affichées sur le synoptique ECAM, quelle affirmation est exacte ?",
+      "prompt": "Quelle proposition correspond au panneau EMER ELEC PWR ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "GEN 1 est affiché à 77 °C et GEN 2 à 76 °C.",
+          "text": "Il ne contient que des commandes GEN 1 et GEN 2.",
           "is_correct": false,
-          "explanation": "Les températures 77 °C et 76 °C correspondent aux IDG, pas aux groupes GEN 1 et GEN 2."
+          "explanation": "GEN 1 et GEN 2 appartiennent à l’affichage des sources AC, pas à ce panneau d’urgence. Le panneau EMER ELEC PWR comporte d’autres commandes spécifiques."
         },
         {
           "id": "B",
-          "text": "GEN 1 est affiché à 28 VDC uniquement.",
+          "text": "Le levier rouge est associé à OFF, pas à AUTO.",
           "is_correct": false,
-          "explanation": "La valeur 28 VDC n’est pas celle affichée pour GEN 1 sur cette page AC."
+          "explanation": "Le texte associé indique un levier rouge lié à AUTO. Remplacer AUTO par OFF contredit l’identification fournie."
         },
         {
           "id": "C",
-          "text": "GEN 2 est affiché sans tension ni fréquence, seulement avec un état OFF.",
+          "text": "Il comporte les commandes BUS TIE et GALLEY.",
           "is_correct": false,
-          "explanation": "Le synoptique donne des valeurs chiffrées de surveillance pour GEN 2, pas seulement un état OFF."
+          "explanation": "BUS TIE et GALLEY figurent sur le panneau ELEC, pas sur EMER ELEC PWR. Les fonctions ne sont pas à confondre entre les deux panneaux."
         },
         {
           "id": "D",
-          "text": "Les deux groupes GEN ont la même fréquence de 50 HZ.",
+          "text": "Il sert à piloter EXT A et EXT B.",
           "is_correct": false,
-          "explanation": "La fréquence indiquée est 400 HZ, pas 50 HZ."
+          "explanation": "EXT A et EXT B sont des éléments de la page/panneau ELEC AC, mais ne constituent pas les commandes du panneau EMER ELEC PWR. Ce dernier est dédié à la génération électrique d’urgence."
         },
         {
           "id": "E",
-          "text": "GEN 1 est affiché à 62% / 115 V / 400 HZ et GEN 2 à 62% / 115 V / 400 HZ.",
+          "text": "Il comprend notamment EMER GEN TEST, LAND RECOVERY, ON, EMER GEN, MAN ON et un levier rouge associé à AUTO.",
           "is_correct": true,
-          "explanation": "Les valeurs indiquées pour GEN 1 et GEN 2 sont bien celles qui apparaissent sur la page : 62% / 115 V / 400 HZ pour chacun."
+          "explanation": "Ces libellés sont ceux visibles sur le panneau EMER ELEC PWR. Le levier rouge associé à AUTO fait partie de ce sous-ensemble de commande de la génération électrique d’urgence."
         }
       ],
-      "coverage_label": "Lecture des paramètres ECAM AC",
-      "learning_objective": "Lire correctement les valeurs associées à GEN 1 et GEN 2 sur le synoptique ECAM.",
-      "correction_summary": "La bonne réponse reprend les valeurs exactes de GEN 1 et GEN 2. Le piège est de confondre ces valeurs avec celles des IDG ou avec une fréquence standard différente.",
-      "course_clarification": "Sur l’affichage AC, certains paramètres sont chiffrés pour surveiller l’état de génération. Ici, GEN 1 et GEN 2 affichent chacun 62% / 115 V / 400 HZ.",
+      "coverage_label": "EMER ELEC PWR",
+      "learning_objective": "Identifier les commandes et indications du panneau EMER ELEC PWR.",
+      "correction_summary": "Le panneau EMER ELEC PWR regroupe des commandes dédiées à la génération électrique d’urgence, dont EMER GEN TEST et MAN ON. Le piège est de le confondre avec le panneau ELEC ou avec les sources externes AC.",
+      "course_clarification": "Ce panneau sert à la logique de secours électrique. Les libellés doivent être reconnus tels qu’ils apparaissent sur le synoptique pour éviter les confusions entre panneaux voisins.",
       "source_refs": []
     },
     {
       "question_id": "S5-4-Q5",
-      "prompt": "À propos du panneau **EMER ELEC PWR**, quelle proposition est correcte ?",
+      "prompt": "Quelle affirmation correspond aux commandes et voyants du panneau ELEC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il ne comporte que le voyant COMMERCIAL.",
+          "text": "Le panneau ne comporte que trois voyants : ON, OFF et TEST.",
           "is_correct": false,
-          "explanation": "Le panneau mentionné regroupe plusieurs commandes et indications, pas un seul voyant commercial."
+          "explanation": "Le panneau comporte bien davantage d’éléments que trois voyants simples. La liste donnée dans le support est nettement plus riche."
         },
         {
           "id": "B",
-          "text": "Il sert uniquement à commander les volets hypersustentateurs.",
+          "text": "Il contient la commande EMER GEN TEST.",
           "is_correct": false,
-          "explanation": "Ce panneau concerne l’alimentation électrique d’urgence, pas les volets."
+          "explanation": "EMER GEN TEST appartient au panneau EMER ELEC PWR, pas au panneau ELEC. Mélanger les deux panneaux conduit à une mauvaise identification des commandes."
         },
         {
           "id": "C",
-          "text": "Il comprend notamment EMER GEN TEST, LAND RECOVERY, ON, EMER GEN, MAN ON et un levier rouge associé à AUTO.",
+          "text": "On y trouve notamment FAULT, OFF, AUTO, A/THR, BUS TIE, AC ESS FEED, GEN, APU GEN, EXT A, EXT B, GALLEY et COMMERCIAL.",
           "is_correct": true,
-          "explanation": "Les commandes et indications citées sont bien celles visibles sur le panneau EMER ELEC PWR."
+          "explanation": "La liste correspond aux commandes et voyants visibles sur le panneau ELEC. Elle regroupe des fonctions de commande et d’indication liées à la gestion électrique et aux alimentations associées."
         },
         {
           "id": "D",
-          "text": "Il remplace le panneau ELEC principal pour la totalité des fonctions AC.",
+          "text": "Il ne comporte pas de fonction A/THR.",
           "is_correct": false,
-          "explanation": "Il s’agit d’un panneau dédié à l’alimentation électrique d’urgence, pas d’un remplacement complet du panneau ELEC principal."
+          "explanation": "A/THR figure explicitement parmi les éléments mentionnés sur le panneau ELEC. Dire le contraire contredit l’inventaire fourni."
         },
         {
           "id": "E",
-          "text": "Il ne possède aucun lien avec la génération électrique de secours.",
+          "text": "Il est uniquement un affichage sans aucune commande ni voyant.",
           "is_correct": false,
-          "explanation": "Au contraire, il est précisément associé à la génération électrique d’urgence, avec EMER GEN et des commandes associées."
+          "explanation": "Le panneau est précisément un ensemble de commandes et d’indications. Il ne s’agit pas d’un simple écran passif."
         }
       ],
-      "coverage_label": "EMER ELEC PWR et source de secours",
-      "learning_objective": "Identifier les commandes du panneau EMER ELEC PWR et leur lien avec la génération de secours.",
-      "correction_summary": "La bonne réponse énumère les commandes réellement présentes sur le panneau EMER ELEC PWR. Le piège est de lui attribuer une fonction générale sur tout le système électrique ou sur une autre famille d’équipements.",
-      "course_clarification": "Le panneau EMER ELEC PWR regroupe des commandes liées à l’alimentation électrique d’urgence. Le levier rouge associé à AUTO et les fonctions EMER GEN/TEST servent à la gestion de cette source de secours.",
+      "coverage_label": "Panneau ELEC",
+      "learning_objective": "Reconnaître les principales commandes et indications du panneau ELEC.",
+      "correction_summary": "La bonne réponse est la liste des commandes et voyants présents sur le panneau ELEC. Le piège consiste à confondre ce panneau avec un simple affichage ou avec le panneau EMER ELEC PWR.",
+      "course_clarification": "Les libellés visibles sur le panneau doivent être identifiés sans les déplacer vers un autre sous-système. Cela aide à associer chaque commande à son rôle de gestion ou d’indication.",
       "source_refs": []
     }
   ],

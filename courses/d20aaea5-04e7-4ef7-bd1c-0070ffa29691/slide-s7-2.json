@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S7-2-Q1",
-      "prompt": "Quel énoncé décrit correctement le rôle d’un inverseur de poussée ?",
+      "prompt": "À propos du but de l’inverseur de poussée, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il augmente la portance de l’aile pour réduire la vitesse d’approche.",
+          "text": "Il sert à augmenter la portance pendant l’arrondi.",
           "is_correct": false,
-          "explanation": "L’inverseur agit sur la trajectoire des gaz de la propulsion, pas sur la génération de portance par l’aile."
+          "explanation": "L’inverseur agit sur la poussée, pas sur la portance. Son effet recherché est le freinage, pas le soutien aérodynamique."
         },
         {
           "id": "B",
-          "text": "Il sert à augmenter la vitesse maximale de croisière.",
+          "text": "Il remplace les freins sur piste dans toutes les situations.",
           "is_correct": false,
-          "explanation": "Son usage est lié au freinage après l’atterrissage, pas à l’amélioration des performances en croisière."
+          "explanation": "Il peut soulager les freins, mais ne les remplace pas : le freinage principal reste assuré par les freins de roues."
         },
         {
           "id": "C",
-          "text": "Il remplace les freins de roues dans toutes les phases de roulage.",
+          "text": "Il est pris en compte dans les calculs de distance d’atterrissage homologués.",
           "is_correct": false,
-          "explanation": "Les freins restent nécessaires ; l’inverseur ne fait qu’apporter une aide au freinage, surtout quand les freins sont moins efficaces."
+          "explanation": "Le support précise au contraire qu’il n’est pas pris en compte dans ces calculs, car il n’est pas homologué pour cela."
         },
         {
           "id": "D",
-          "text": "Il crée une poussée négative afin de fournir une force de freinage pendant l’atterrissage.",
+          "text": "Il crée une poussée négative pour obtenir une force de freinage et réduire la distance nécessaire à l’atterrissage.",
           "is_correct": true,
-          "explanation": "La fonction recherchée est bien d’orienter une partie de l’effort propulsif vers l’avant pour freiner l’avion. Cela réduit la distance d’atterrissage et soulage les freins."
+          "explanation": "C’est exactement le rôle indiqué : la poussée est orientée de façon à freiner l’avion au roulage et à l’atterrissage."
         },
         {
           "id": "E",
-          "text": "Il n’est utile que sur piste sèche et très adhérente.",
+          "text": "Il agit principalement en croisière pour diminuer la consommation.",
           "is_correct": false,
-          "explanation": "Il est justement intéressant quand l’adhérence est dégradée, par exemple sous la pluie, la neige ou le givre."
+          "explanation": "L’inverseur de poussée est destiné aux phases d’atterrissage ou de décélération, pas à la croisière."
         }
       ],
-      "coverage_label": "Rôle de l’inverseur de poussée",
-      "learning_objective": "Identifier la fonction de freinage de l’inverseur et son intérêt opérationnel.",
-      "correction_summary": "La bonne idée est la création d’une poussée négative pour freiner. Le piège consiste à confondre cet organe avec un dispositif de portance ou de roulage.",
-      "course_clarification": "L’inverseur de poussée dévie le jet pour produire une force opposée au mouvement. Il aide surtout à l’atterrissage, quand la vitesse est encore élevée et que les freins sont moins efficaces.",
+      "coverage_label": "Inverseur de poussée : rôle",
+      "learning_objective": "Identifier la fonction principale d’un inverseur de poussée et son effet sur le freinage à l’atterrissage.",
+      "correction_summary": "La bonne réponse décrit une poussée négative utilisée pour freiner l’avion et réduire la distance d’atterrissage. Le piège consiste à confondre cet organe avec un dispositif de portance ou avec les freins eux-mêmes.",
+      "course_clarification": "Un inverseur de poussée modifie la direction du jet pour produire un effort opposé au mouvement. Il aide au freinage, surtout quand la vitesse est encore élevée et que les freins sont moins efficaces.",
       "source_refs": []
     },
     {
       "question_id": "S7-2-Q2",
-      "prompt": "Quelle relation correspond à la poussée inverse d’un turboréacteur simple flux ?",
+      "prompt": "Quelle expression correspond à la poussée inverse notée \\(T_{REV}\\) ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\(TREV = Qma\\,(V''5 - Vo)\\)",
+          "text": "\\(T_{REV} = Q_{ma}(V''_5 - V_o)\\).",
           "is_correct": false,
-          "explanation": "Cette écriture ne correspond pas à la relation fournie : elle manque le signe négatif global et inverse la structure de la somme des vitesses."
+          "explanation": "Le signe et la combinaison des termes sont incorrects : la poussée inverse est dirigée vers l’avant et s’écrit avec un signe négatif global."
         },
         {
           "id": "B",
-          "text": "\u0016TREV = - Qma\\,(V''5 + Vo)\\)",
+          "text": "\\(T_{REV} = -Q_{ma}(V''_5 + V_o)\\).",
           "is_correct": true,
-          "explanation": "La formule donnée traduit une poussée orientée vers l’avant : le signe négatif apparaît parce que le jet est dévié pour produire un freinage."
+          "explanation": "La formule donnée dans le support comporte bien un signe négatif et la somme des vitesses \\(V''_5\\) et \\(V_o\\)."
         },
         {
           "id": "C",
-          "text": "\\(TREV = Qma\\,(Vo - V''5)\\)",
+          "text": "\\(T_{REV} = Q_{ma}(V''_5 + V_o)\\).",
           "is_correct": false,
-          "explanation": "La relation correcte ne s’écrit pas comme une différence simple entre les deux vitesses ; la poussée inverse est la somme des termes prise avec un signe opposé."
+          "explanation": "L’absence du signe négatif contredit l’idée même de poussée inverse, qui est une force de freinage."
         },
         {
           "id": "D",
-          "text": "\\(TREV\\) est toujours positive dans le repère avion.",
+          "text": "\\(T_{REV} = -Q_{ma}(V''_5 - V_o)\\).",
           "is_correct": false,
-          "explanation": "La poussée inverse est justement une poussée négative dans le sens de l’avancement, d’où son effet de freinage."
+          "explanation": "La différence des vitesses n’apparaît pas dans la relation donnée ; le support impose une somme \\((V''_5 + V_o)\\)."
         },
         {
           "id": "E",
-          "text": "\\(TREV\\) ne dépend pas de la vitesse avion \\(Vo\\).",
+          "text": "\\(T_{REV} = -V_o(V''_5 + Q_{ma})\\).",
           "is_correct": false,
-          "explanation": "La vitesse avion intervient explicitement dans l’expression et elle influence l’intensité de la poussée inverse."
+          "explanation": "Cette écriture mélange les grandeurs et ne respecte pas la relation fournie, où \\(Q_{ma}\\) multiplie la somme des vitesses."
         }
       ],
-      "coverage_label": "Loi de poussée inverse",
-      "learning_objective": "Lire correctement l’expression de la poussée inverse et interpréter son signe.",
-      "correction_summary": "La relation à retenir est la forme négative avec la somme des vitesses. Le piège principal est d’oublier le signe de freinage ou de remplacer la somme par une différence.",
-      "course_clarification": "\\(Qma\\) représente le débit massique d’air et \\(Vo\\) la vitesse de l’avion. La poussée inverse résulte d’un jet orienté vers l’avant, donc opposé au sens de déplacement.",
+      "coverage_label": "Poussée inverse : formule",
+      "learning_objective": "Reconnaître la relation de la poussée inverse et lire correctement le signe et les variables de la formule.",
+      "correction_summary": "La bonne formule est \\(T_{REV} = -Q_{ma}(V''_5 + V_o)\\). Le piège principal consiste à oublier le signe négatif ou à remplacer la somme par une différence.",
+      "course_clarification": "\\(Q_{ma}\\) représente le débit massique d’air et \\(V_o\\) la vitesse de l’avion. Le signe négatif traduit une force opposée au sens de déplacement.",
       "source_refs": []
     },
     {
       "question_id": "S7-2-Q3",
-      "prompt": "À propos des ordres de grandeur et des limites d’utilisation, quel énoncé est exact ?",
+      "prompt": "Dans le cas d’un turboréacteur simple flux, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La poussée inverse peut atteindre environ 50 % de la poussée maximale normale.",
+          "text": "Des demi-coquilles ou des volets, manœuvrés par vérins hydrauliques ou pneumatiques, dévient les gaz vers l’avant.",
           "is_correct": true,
-          "explanation": "L’ordre de grandeur indiqué est bien d’environ la moitié de la poussée maximale, ce qui donne une idée de son efficacité sans la confondre avec la poussée nominale."
+          "explanation": "C’est le principe décrit pour le simple flux : des éléments mobiles modifient la direction du jet pour produire la poussée inverse."
         },
         {
           "id": "B",
-          "text": "La poussée inverse augmente quand la vitesse d’atterrissage diminue en dessous de 60 kt.",
+          "text": "La poussée inverse est obtenue par une hélice à pas variable.",
           "is_correct": false,
-          "explanation": "Le document indique au contraire qu’elle doit diminuer avec \\(Vo\\), et qu’en dessous de 60 kt on atteint une zone à risque."
+          "explanation": "Le dispositif décrit concerne un turboréacteur simple flux, pas une hélice. La réversion est assurée par des volets ou demi-coquilles."
         },
         {
           "id": "C",
-          "text": "Sous 60 kt, il existe un risque d’ingestion de gaz chauds et de pompage.",
+          "text": "Les gaz sont déviés vers l’arrière afin d’augmenter la poussée propulsive.",
           "is_correct": false,
-          "explanation": "Cette formulation est bien vraie, mais elle ne répond pas à l’item si l’on cherche l’énoncé exact unique parmi plusieurs propositions ; ici il faut repérer une seule affirmation vraie."
+          "explanation": "En mode inverse, le jet est détourné vers l’avant pour freiner l’avion, pas vers l’arrière pour propulser."
         },
         {
           "id": "D",
-          "text": "La poussée inverse vaut typiquement 14 % de la poussée maximale à 200 kt.",
+          "text": "Les éléments mobiles sont placés uniquement à l’intérieur du compresseur.",
           "is_correct": false,
-          "explanation": "Le pourcentage de 14 % est associé à une vitesse inférieure à 60 kt, pas à une vitesse élevée comme 200 kt."
+          "explanation": "Le support les situe dans la rallonge de tuyère, pas dans le compresseur."
         },
         {
           "id": "E",
-          "text": "Elle ne doit jamais être utilisée à l’atterrissage.",
+          "text": "Les grilles latérales et déviatrices de jets restent visibles en position rentrée.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : elle est précisément prévue pour aider au freinage à l’atterrissage, dans les limites de vitesse prévues."
+          "explanation": "En position rentrée, ces éléments sont masqués ; c’est précisément indiqué pour le simple flux."
         }
       ],
-      "coverage_label": "Ordres de grandeur et limites",
-      "learning_objective": "Connaître les ordres de grandeur de la poussée inverse et la limite de vitesse associée.",
-      "correction_summary": "L’ordre de grandeur retenu est d’environ 50 % de la poussée maximale, mais l’usage doit décroître quand la vitesse baisse. Le piège est de négliger le risque de pompage et d’ingestion de gaz chauds à basse vitesse.",
-      "course_clarification": "La poussée inverse n’est pas utilisée de façon identique à toutes les vitesses. En dessous d’environ 60 kt, la marge de sécurité se dégrade et le risque aérodynamique augmente.",
+      "coverage_label": "Cas des GTR simple flux",
+      "learning_objective": "Identifier le principe mécanique d’inversion sur un turboréacteur simple flux.",
+      "correction_summary": "La bonne réponse décrit les demi-coquilles ou volets actionnés pour dévier les gaz vers l’avant. Le piège est de confondre ce mécanisme avec un autre type de propulsion ou avec un organe interne du moteur.",
+      "course_clarification": "Sur un simple flux, l’inversion repose sur une déviation du jet de gaz. Les pièces mobiles se déploient en phase reverse et se rétractent en masquant les grilles de déviation.",
       "source_refs": []
     },
     {
       "question_id": "S7-2-Q4",
-      "prompt": "Concernant un GTR simple flux, quel énoncé décrit correctement le principe de l’inverseur de poussée ?",
+      "prompt": "À propos des turboréacteurs double flux à fort taux de dilution, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le dispositif agit uniquement sur le flux secondaire autour du cœur du moteur.",
+          "text": "L’inverseur est supprimé sur le flux secondaire pour privilégier le flux primaire.",
           "is_correct": false,
-          "explanation": "Le flux secondaire concerne les architectures double flux ; le simple flux utilise une seule veine principale."
+          "explanation": "C’est l’inverse de ce qui est indiqué. Le support parle d’une poussée essentiellement fournie par le flux secondaire."
         },
         {
           "id": "B",
-          "text": "Les gaz sont accélérés vers l’arrière pour produire une poussée inverse plus forte.",
+          "text": "Le système d’inversion doit obligatoirement agir sur le flux primaire et sur le flux secondaire de façon identique.",
           "is_correct": false,
-          "explanation": "La poussée inverse vient d’une déviation vers l’avant, pas d’une accélération vers l’arrière."
+          "explanation": "Le document explique justement qu’on peut supprimer l’inverseur sur le flux primaire dans les moteurs à fort taux de dilution."
         },
         {
           "id": "C",
-          "text": "Le dispositif est situé dans la nacelle et ne masque jamais de grilles lorsqu’il est rentré.",
+          "text": "Cette suppression augmente la masse, diminue la fiabilité et alourdit l’entretien.",
           "is_correct": false,
-          "explanation": "Le support indique au contraire que ces éléments sont dans la rallonge et masquent des grilles latérales et déviatrices de jets en position rentrée."
+          "explanation": "Les avantages donnés sont au contraire une fiabilité accrue, une masse réduite et un coût d’entretien diminué."
         },
         {
           "id": "D",
-          "text": "La poussée inverse est obtenue sans aucune pièce mobile.",
+          "text": "Cette suppression impose une vitesse d’utilisation plus élevée pour éviter tout risque.",
           "is_correct": false,
-          "explanation": "Le principe repose au contraire sur des organes mobiles, comme des volets ou demi-coquilles actionnés par vérins."
+          "explanation": "Le support indique l’idée inverse : la vitesse d’utilisation peut être réduite sans risque d’ingestion de gaz chauds."
         },
         {
           "id": "E",
-          "text": "Des demi-coquilles ou volets manœuvrés par vérins dévient les gaz vers l’avant.",
+          "text": "L’inverseur est supprimé sur le flux primaire, car la poussée est surtout fournie par le flux secondaire.",
           "is_correct": true,
-          "explanation": "C’est le principe décrit pour le simple flux : on modifie la direction du jet afin qu’il produise une composante de freinage."
+          "explanation": "C’est l’idée clé du document : dans un fort taux de dilution, le flux secondaire fournit l’essentiel de la poussée, donc l’inversion sur le primaire peut être supprimée."
         }
       ],
-      "coverage_label": "Principe en simple flux",
-      "learning_objective": "Reconnaître l’architecture et les organes mécaniques utilisés dans un inverseur simple flux.",
-      "correction_summary": "En simple flux, des volets ou demi-coquilles dévient le jet vers l’avant. Le piège consiste à confondre ce principe avec l’architecture double flux ou avec un dispositif sans pièce mobile.",
-      "course_clarification": "Un turboréacteur simple flux possède une seule veine de gaz principale. La poussée inverse est obtenue par déviation mécanique du jet, et non par une modification abstraite de la propulsion.",
+      "coverage_label": "Cas des GTR double flux",
+      "learning_objective": "Comprendre pourquoi l’inversion est réservée au flux secondaire dans les moteurs double flux à fort taux de dilution.",
+      "correction_summary": "La bonne réponse associe le fort taux de dilution à une poussée essentiellement fournie par le flux secondaire, ce qui justifie la suppression de l’inverseur sur le primaire. Le piège est de renverser le rôle des deux flux.",
+      "course_clarification": "Dans un double flux, le flux secondaire contourne le cœur du moteur et fournit une grande part de la poussée. Supprimer un inverseur inutile réduit la masse, améliore la fiabilité et diminue l’entretien.",
       "source_refs": []
     },
     {
       "question_id": "S7-2-Q5",
-      "prompt": "Pour un GTR double flux à fort taux de dilution, quelle proposition est correcte ?",
+      "prompt": "Quelle affirmation donne un ordre de grandeur et une limite d’utilisation corrects pour la poussée inverse ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La suppression de l’inverseur sur le flux primaire augmente la masse et le coût d’entretien.",
+          "text": "Pour \\(V_o < 60\\) kt, \\(T_{REV}\\) vaut environ 50 % de \\(T_u\\) maxi et le risque principal est l’excès de portance.",
           "is_correct": false,
-          "explanation": "Le document indique l’inverse : la suppression réduit la masse et diminue le coût d’entretien."
+          "explanation": "Le 50 % est associé à un ordre de grandeur global, mais le support précise qu’à basse vitesse on est plutôt autour de 14 % de \\(T_u\\) maxi."
         },
         {
           "id": "B",
-          "text": "La suppression de l’inverseur sur le flux primaire dégrade la fiabilité du système.",
+          "text": "La poussée inverse doit augmenter quand \\(V_o\\) diminue, sans limite particulière.",
           "is_correct": false,
-          "explanation": "La fiabilité est donnée comme un avantage de cette suppression, pas comme une dégradation."
+          "explanation": "Le document indique au contraire qu’elle doit diminuer avec \\(V_o\\) et qu’une limite de vitesse est liée à un risque de pompage."
         },
         {
           "id": "C",
-          "text": "La poussée du flux secondaire est privilégiée, et l’inverseur sur le flux primaire peut être supprimé.",
+          "text": "Pour \\(V_o < 60\\) kt, \\(T_{REV}\\) est de l’ordre de 14 % de \\(T_u\\) maxi et il faut diminuer la poussée inverse à basse vitesse à cause du risque de gaz chauds et de pompage.",
           "is_correct": true,
-          "explanation": "L’idée est d’exploiter surtout le flux secondaire, qui fournit l’essentiel de la poussée dans ces architectures à fort taux de dilution."
+          "explanation": "Le support donne bien cet ordre de grandeur et précise qu’en dessous de 60 kt il existe un risque d’ingestion de gaz chauds et de pompage."
         },
         {
           "id": "D",
-          "text": "La suppression de l’inverseur sur le flux primaire augmente le risque d’ingestion de gaz chauds à basse vitesse.",
+          "text": "Sous 60 kt, il n’existe aucun risque particulier si la poussée inverse reste maximale.",
           "is_correct": false,
-          "explanation": "L’un des avantages annoncés est justement une vitesse d’utilisation réduite sans risque d’ingestion de gaz chauds."
+          "explanation": "Le support mentionne explicitement un risque d’ingestion de gaz chauds et de pompage en dessous de cette vitesse."
         },
         {
           "id": "E",
-          "text": "Le système oblige à inverser simultanément tous les flux pour conserver l’efficacité.",
+          "text": "L’ordre de grandeur de \\(T_{REV}\\) dépend uniquement du type de frein de roue et pas de la vitesse avion.",
           "is_correct": false,
-          "explanation": "Le principe décrit est au contraire une simplification : l’inversion peut être réservée au flux secondaire seul, avec des gains de masse et de maintenance."
+          "explanation": "La vitesse avion intervient directement dans l’évolution de la poussée inverse, puisque le document relie \\(T_{REV}\\) à \\(V_o\\)."
         }
       ],
-      "coverage_label": "Double flux à fort taux de dilution",
-      "learning_objective": "Distinguer l’intérêt de réserver l’inversion au flux secondaire et ses bénéfices associés.",
-      "correction_summary": "Sur les moteurs à fort taux de dilution, la poussée vient surtout du flux secondaire, d’où la suppression de l’inverseur primaire. Le piège est d’attribuer à cette suppression des effets contraires aux gains annoncés.",
-      "course_clarification": "Dans un double flux, le flux secondaire contourne le cœur et fournit une part importante de la poussée. Réduire le nombre d’inverseurs simplifie le système et améliore plusieurs critères d’exploitation.",
+      "coverage_label": "Poussée inverse : ordres de grandeur et limites",
+      "learning_objective": "Lire les ordres de grandeur de la poussée inverse et repérer la limite d’utilisation à basse vitesse.",
+      "correction_summary": "La bonne réponse associe \\(V_o < 60\\) kt à une poussée inverse d’environ 14 % de \\(T_u\\) maxi et à un risque de gaz chauds/pompage. Le piège consiste à retenir le chiffre global de 50 % sans tenir compte de la baisse à basse vitesse.",
+      "course_clarification": "La poussée inverse n’est pas constante : elle doit être adaptée à la vitesse de l’avion. En dessous d’un certain seuil, l’usage trop important de la reverse peut provoquer une ingestion de gaz chauds et du pompage.",
       "source_refs": []
     }
   ],

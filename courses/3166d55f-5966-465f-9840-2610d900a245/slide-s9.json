@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S9-Q1",
-      "prompt": "Dans un mouvement rectiligne uniformément accéléré (MRUA), quelle affirmation est correcte ?",
+      "question_id": "S9-6.2-Q1",
+      "prompt": "Quelle affirmation décrit correctement un MRUA ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La vitesse reste constante au cours du temps.",
-          "is_correct": false,
-          "explanation": "Une vitesse constante caractérise un MRU, pas un MRUA. Ici, la vitesse change justement parce que l’accélération est constante et non nulle en général."
-        },
-        {
-          "id": "B",
           "text": "La trajectoire est nécessairement circulaire.",
           "is_correct": false,
-          "explanation": "Le MRUA est un mouvement **rectiligne** : la trajectoire est une droite, pas un cercle."
+          "explanation": "Un MRUA est rectiligne, donc la trajectoire n’est pas circulaire."
+        },
+        {
+          "id": "B",
+          "text": "La vitesse est constante pendant tout le mouvement.",
+          "is_correct": false,
+          "explanation": "Si l’accélération est constante et non nulle, la vitesse varie avec le temps ; elle n’est donc pas constante."
         },
         {
           "id": "C",
-          "text": "La position varie forcément de façon linéaire avec le temps.",
+          "text": "L’accélération dépend du temps selon une loi linéaire.",
           "is_correct": false,
-          "explanation": "La position suit une loi du second degré en fonction du temps, à cause du terme en \\\\(t^2\\\\)."
+          "explanation": "Dans un MRUA, l’accélération est constante : elle ne dépend pas du temps."
         },
         {
           "id": "D",
-          "text": "L’accélération reste constante au cours du temps.",
+          "text": "Le mouvement est rectiligne et l’accélération y est constante.",
           "is_correct": true,
-          "explanation": "C’est la définition du MRUA : l’accélération ne varie pas. Cela implique une évolution régulière de la vitesse."
+          "explanation": "C’est la définition du MRUA : la trajectoire est une droite et l’accélération ne varie pas au cours du temps."
         },
         {
           "id": "E",
-          "text": "L’accélération dépend de la position initiale \\\\(x_0\\\\).",
+          "text": "La position du point reste immobile.",
           "is_correct": false,
-          "explanation": "Dans le modèle MRUA, l’accélération est une donnée constante du mouvement ; elle n’est pas déterminée par la position initiale."
+          "explanation": "Un mouvement suppose une variation de position ; l’immobilité correspond à une vitesse nulle sur tout l’intervalle."
         }
       ],
       "coverage_label": "Mouvement rectiligne uniformément accéléré (MRUA)",
-      "learning_objective": "Identifier la propriété fondamentale du MRUA.",
-      "correction_summary": "La bonne réponse est celle qui décrit une accélération constante. Le piège classique consiste à confondre MRUA et MRU, où la vitesse est constante.",
-      "course_clarification": "Le MRUA est un mouvement rectiligne à accélération constante. Cette constance entraîne une variation régulière de la vitesse au cours du temps.",
+      "learning_objective": "Identifier la définition d’un MRUA et distinguer accélération constante, vitesse constante et trajectoire rectiligne.",
+      "correction_summary": "La bonne réponse rappelle les deux caractéristiques du MRUA : trajectoire rectiligne et accélération constante. Le piège classique consiste à confondre vitesse constante et accélération constante.",
+      "course_clarification": "Dans un MRUA, l’accélération garde la même valeur au cours du temps. La vitesse peut donc augmenter ou diminuer régulièrement, mais la trajectoire reste une droite.",
       "source_refs": []
     },
     {
-      "question_id": "S9-Q2",
-      "prompt": "On considère la loi horaire de la vitesse en MRUA. Quelle affirmation est correcte ?",
+      "question_id": "S9-6.2-Q2",
+      "prompt": "Quelle expression donne la vitesse en fonction du temps dans un MRUA ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\\\(v(t)=v_0+at^2\\\\).",
+          "text": "\\(v(t)=v_0+\\frac12at^2\\).",
           "is_correct": false,
-          "explanation": "Le temps apparaît au premier degré dans la loi de vitesse du MRUA. Le terme en \\\\(t^2\\\\) concerne la position, pas la vitesse."
+          "explanation": "Le terme en \\(t^2\\) appartient à la loi de position, pas à la loi de vitesse."
         },
         {
           "id": "B",
-          "text": "\\\\(v(t)=v_0+at\\\\).",
+          "text": "\\(v(t)=v_0+at\\).",
           "is_correct": true,
-          "explanation": "C’est la loi horaire de la vitesse en MRUA : la vitesse évolue linéairement avec le temps sous l’effet d’une accélération constante."
+          "explanation": "C’est la loi horaire de la vitesse en MRUA : la vitesse varie linéairement avec le temps à partir de la vitesse initiale \\(v_0\\)."
         },
         {
           "id": "C",
-          "text": "\\\\(v(t)=x_0+v_0t+\\tfrac12at^2\\\\).",
+          "text": "\\(v(t)=x_0+v_0t+\\frac12at^2\\).",
           "is_correct": false,
-          "explanation": "Cette expression correspond à la position \\\\(x(t)\\\\), pas à la vitesse."
+          "explanation": "Cette expression correspond à la position \\(x(t)\\), pas à la vitesse."
         },
         {
           "id": "D",
-          "text": "\\\\(v(t)=v_0-at\\\\) uniquement si l’accélération est constante.",
+          "text": "\\(v(t)=v_0-at\\) pour tout MRUA.",
           "is_correct": false,
-          "explanation": "Le signe dépend du sens choisi pour l’axe, pas de la constante de l’accélération. La forme générale reste \\\\(v(t)=v_0+at\\\\)."
+          "explanation": "Le signe dépend du choix de l’axe et du sens de l’accélération ; il n’est pas toujours négatif."
         },
         {
           "id": "E",
-          "text": "La vitesse ne peut pas dépendre du temps si l’accélération est constante.",
+          "text": "\\(v(t)=a\\,x(t)\\).",
           "is_correct": false,
-          "explanation": "Au contraire, une accélération constante signifie que la vitesse varie avec le temps de manière affine."
+          "explanation": "La vitesse n’est pas proportionnelle à la position dans la loi du MRUA ; la relation correcte relie \\(v\\) au temps."
         }
       ],
       "coverage_label": "Mouvement rectiligne uniformément accéléré (MRUA)",
-      "learning_objective": "Reconnaître et utiliser la loi horaire de la vitesse.",
-      "correction_summary": "La bonne formule est \\\\(v(t)=v_0+at\\\\). Le piège est de permuter la formule de vitesse avec celle de position ou d’ajouter un terme en \\\\(t^2\\\\).",
-      "course_clarification": "En MRUA, la vitesse dépend linéairement du temps. Le paramètre \\\\(v_0\\\\) est la vitesse à l’instant initial et \\\\(a\\\\) mesure la variation de vitesse par unité de temps.",
+      "learning_objective": "Reconnaître et utiliser la loi horaire de la vitesse en MRUA.",
+      "correction_summary": "La bonne formule est \\(v(t)=v_0+at\\). Le principal piège est de confondre la loi de vitesse avec celle de position, qui contient un terme en \\(t^2\\).",
+      "course_clarification": "\\(v_0\\) est la vitesse à l’instant initial \\(t=0\\). L’accélération constante \\(a\\) fait varier la vitesse de façon linéaire au cours du temps.",
       "source_refs": []
     },
     {
-      "question_id": "S9-Q3",
-      "prompt": "À propos de la loi horaire de la position en MRUA, quelle affirmation est correcte ?",
+      "question_id": "S9-6.2-Q3",
+      "prompt": "Quelle expression donne la position en fonction du temps dans un MRUA ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\\\(x(t)=x_0+v_0t+\\tfrac12at^2\\\\).",
+          "text": "\\(x(t)=x_0+v_0t+\\frac12at^2\\).",
           "is_correct": true,
-          "explanation": "C’est la loi horaire de la position en MRUA. Elle combine la position initiale, l’effet de la vitesse initiale et la contribution de l’accélération."
+          "explanation": "C’est la loi horaire de la position en MRUA : elle combine la position initiale, la contribution de la vitesse initiale et le terme d’accélération en \\(t^2\\)."
         },
         {
           "id": "B",
-          "text": "\\\\(x(t)=x_0+at\\\\).",
+          "text": "\\(x(t)=x_0+at\\).",
           "is_correct": false,
-          "explanation": "Cette expression oublie la vitesse initiale et le terme quadratique lié à l’accélération ; elle ne décrit pas le MRUA."
+          "explanation": "Cette expression oublie la vitesse initiale et le terme quadratique dû à l’accélération constante."
         },
         {
           "id": "C",
-          "text": "\\\\(x(t)=v_0+at\\\\).",
+          "text": "\\(x(t)=v_0+at\\).",
           "is_correct": false,
-          "explanation": "Cette formule donne une vitesse, pas une position."
+          "explanation": "Cette écriture mélange une grandeur de position avec des termes de vitesse ; la dimension n’est pas celle d’une position."
         },
         {
           "id": "D",
-          "text": "Le terme \\\\(\\tfrac12at^2\\\\) n’apparaît que si la vitesse est constante.",
+          "text": "\\(x(t)=x_0+v_0t+at^2\\).",
           "is_correct": false,
-          "explanation": "Le terme en \\\\(t^2\\\\) vient précisément de l’accélération constante. Si la vitesse était constante, on retrouverait un terme linéaire seulement."
+          "explanation": "Le coefficient du terme en \\(t^2\\) doit être \\(\\frac12 a\\), pas \\(a\\) seul."
         },
         {
           "id": "E",
-          "text": "La position varie toujours linéairement avec le temps en MRUA.",
+          "text": "\\(x(t)=x_0+\\frac12v_0t^2+at\\).",
           "is_correct": false,
-          "explanation": "La présence du terme en \\\\(t^2\\\\) montre que la position n’est pas linéaire en général : la courbe est parabolique."
+          "explanation": "La vitesse initiale intervient linéairement en \\(t\\), pas au carré, et l’accélération intervient avec \\(t^2\\)."
         }
       ],
       "coverage_label": "Mouvement rectiligne uniformément accéléré (MRUA)",
-      "learning_objective": "Appliquer la loi horaire de la position.",
-      "correction_summary": "La bonne expression contient un terme constant, un terme en \\\\(t\\\\) et un terme en \\\\(t^2\\\\). Le piège est de confondre la loi de position avec celle de vitesse.",
-      "course_clarification": "La position initiale \\\\(x_0\\\\) fixe le point de départ. La vitesse initiale \\\\(v_0\\\\) crée la partie linéaire, et l’accélération constante ajoute la courbure de la trajectoire temporelle.",
+      "learning_objective": "Choisir la bonne loi horaire de la position en MRUA et repérer le rôle de chaque terme.",
+      "correction_summary": "La bonne loi est \\(x(t)=x_0+v_0t+\\frac12at^2\\). L’erreur fréquente consiste à permuter les rôles de \\(v_0\\) et de \\(a\\) ou à oublier le facteur \\(\\frac12\\).",
+      "course_clarification": "\\(x_0\\) est la position initiale. Le terme en \\(t\\) traduit le mouvement dû à la vitesse initiale, et le terme en \\(t^2\\) traduit l’effet de l’accélération constante.",
       "source_refs": []
     },
     {
-      "question_id": "S9-Q4",
-      "prompt": "Si l’accélération est constante et positive, quelle affirmation est correcte sur l’évolution de la vitesse ?",
+      "question_id": "S9-6.2-Q4",
+      "prompt": "Pour un MRUA avec \\(a>0\\), quelle affirmation est correcte sur l’évolution de la vitesse ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La vitesse augmente de plus en plus vite au sens où sa dérivée augmente elle-même.",
+          "text": "La vitesse reste constante puisque l’accélération est constante.",
           "is_correct": false,
-          "explanation": "La dérivée de la vitesse est l’accélération, qui est constante ici. Elle n’augmente donc pas elle-même."
+          "explanation": "Une accélération constante n’implique pas une vitesse constante ; elle implique au contraire une variation régulière de la vitesse."
         },
         {
           "id": "B",
-          "text": "La vitesse est nécessairement nulle à tout instant.",
+          "text": "La vitesse varie de façon exponentielle.",
           "is_correct": false,
-          "explanation": "Une accélération constante n’implique pas une vitesse nulle ; elle indique seulement que la vitesse change à taux constant."
+          "explanation": "La loi horaire du MRUA est affine en \\(t\\), pas exponentielle."
         },
         {
           "id": "C",
-          "text": "La position est alors une fonction affine du temps.",
+          "text": "La vitesse diminue toujours quand \\(a>0\\).",
           "is_correct": false,
-          "explanation": "La position est une fonction quadratique du temps en MRUA, pas affine."
+          "explanation": "Si \\(a>0\\), le terme \\(at\\) augmente avec le temps, donc la vitesse augmente et ne diminue pas."
         },
         {
           "id": "D",
-          "text": "L’accélération varie proportionnellement au temps.",
+          "text": "L’accélération dépend de la vitesse instantanée.",
           "is_correct": false,
-          "explanation": "C’est l’inverse du MRUA : ici l’accélération est constante, donc indépendante du temps."
+          "explanation": "Dans le MRUA, l’accélération est constante et ne dépend pas de la vitesse ; c’est la vitesse qui dépend de l’accélération."
         },
         {
           "id": "E",
           "text": "La vitesse augmente linéairement avec le temps.",
           "is_correct": true,
-          "explanation": "Avec \\\\(v(t)=v_0+at\\\\) et \\\\(a>0\\\\), la vitesse croît de façon régulière et linéaire au cours du temps."
+          "explanation": "Avec \\(v(t)=v_0+at\\) et \\(a>0\\), la vitesse croît d’une quantité proportionnelle à \\(t\\)."
         }
       ],
       "coverage_label": "Mouvement rectiligne uniformément accéléré (MRUA)",
-      "learning_objective": "Interpréter l’effet du signe de l’accélération sur la vitesse.",
-      "correction_summary": "Avec une accélération positive constante, la vitesse croît linéairement. Le piège est de croire que « constante » signifie « vitesse constante » ou « accélération qui augmente ».",
-      "course_clarification": "Le signe de \\\\(a\\\\) dépend du sens choisi pour l’axe. Une accélération positive dans ce repère signifie que la vitesse augmente avec le temps dans ce même repère.",
+      "learning_objective": "Interpréter le signe de l’accélération constante sur l’évolution de la vitesse.",
+      "correction_summary": "Avec \\(a>0\\), la vitesse augmente régulièrement et la relation est linéaire en temps. Le piège est de croire qu’« accélération constante » veut dire « vitesse constante ».",
+      "course_clarification": "Le signe de \\(a\\) indique le sens de la variation de vitesse par rapport à l’axe choisi. Une accélération positive produit une augmentation de \\(v\\) si l’axe est orienté dans le même sens.",
       "source_refs": []
     },
     {
-      "question_id": "S9-Q5",
-      "prompt": "À propos du modèle MRUA, quelle affirmation est correcte ?",
+      "question_id": "S9-6.2-Q5",
+      "prompt": "Quelle affirmation est correcte à propos du graphe de la vitesse en fonction du temps dans un MRUA ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il impose une trajectoire courbe par définition.",
+          "text": "Le graphe \\(v(t)\\) est une parabole.",
           "is_correct": false,
-          "explanation": "Le MRUA est un mouvement rectiligne : la trajectoire est une droite."
+          "explanation": "La parabole correspond à la position \\(x(t)\\), pas à la vitesse."
         },
         {
           "id": "B",
-          "text": "Il s’applique uniquement quand l’accélération est nulle.",
+          "text": "Le graphe \\(v(t)\\) passe toujours par l’origine.",
           "is_correct": false,
-          "explanation": "Si \\\\(a=0\\\\), on retombe sur un MRU. Le MRUA concerne une accélération constante, pas nulle nécessairement."
+          "explanation": "Le graphe passe par \\((0, v_0)\\) ; il ne passe par l’origine que si \\(v_0=0\\)."
         },
         {
           "id": "C",
-          "text": "Il sert à décrire des phases où la variation de vitesse est régulière.",
+          "text": "Le graphe \\(v(t)\\) est une droite de pente \\(a\\).",
           "is_correct": true,
-          "explanation": "Le MRUA modélise précisément les situations où l’accélération est constante, donc où la vitesse évolue de manière régulière."
+          "explanation": "Comme \\(v(t)=v_0+at\\), la représentation de \\(v\\) en fonction de \\(t\\) est affine : la pente vaut \\(a\\) et l’ordonnée à l’origine vaut \\(v_0\\)."
         },
         {
           "id": "D",
-          "text": "Il décrit toujours un mouvement circulaire uniforme.",
+          "text": "La pente du graphe \\(v(t)\\) vaut toujours zéro.",
           "is_correct": false,
-          "explanation": "Le mouvement circulaire uniforme est un autre modèle, avec une vitesse de norme constante mais une accélération normale non nulle."
+          "explanation": "La pente est égale à l’accélération \\(a\\), donc elle n’est nulle que si \\(a=0\\)."
         },
         {
           "id": "E",
-          "text": "Il ne permet pas d’écrire une loi de position.",
+          "text": "L’ordonnée à l’origine du graphe \\(v(t)\\) vaut \\(a\\).",
           "is_correct": false,
-          "explanation": "Au contraire, le MRUA fournit une loi de position explicite : \\\\(x(t)=x_0+v_0t+\\tfrac12at^2\\\\)."
+          "explanation": "L’ordonnée à l’origine est la vitesse initiale \\(v_0\\), tandis que \\(a\\) fixe la pente de la droite."
         }
       ],
       "coverage_label": "Mouvement rectiligne uniformément accéléré (MRUA)",
-      "learning_objective": "Relier le MRUA à son domaine d’utilisation physique.",
-      "correction_summary": "Le MRUA s’emploie quand la vitesse varie régulièrement, c’est-à-dire sous accélération constante. Le piège est d’y associer une trajectoire courbe ou le mouvement circulaire.",
-      "course_clarification": "Ce modèle simplifie l’étude des phases où l’évolution de la vitesse est régulière. Il reste limité aux mouvements rectilignes avec accélération constante.",
+      "learning_objective": "Lire l’expression géométrique de la loi de vitesse et relier pente, ordonnée à l’origine et paramètres physiques.",
+      "correction_summary": "Le graphe de \\(v(t)\\) est une droite de pente \\(a\\) et d’ordonnée à l’origine \\(v_0\\). Le piège est d’inverser le rôle de \\(a\\) et de \\(v_0\\).",
+      "course_clarification": "Une fonction affine en temps donne une droite sur le graphique vitesse-temps. La pente mesure l’accélération, et l’intersection avec l’axe des vitesses donne la vitesse initiale.",
       "source_refs": []
     }
   ],

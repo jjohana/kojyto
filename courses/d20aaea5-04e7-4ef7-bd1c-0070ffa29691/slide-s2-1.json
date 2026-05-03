@@ -5,91 +5,217 @@
   "questions": [
     {
       "question_id": "S2-1-Q1",
-      "prompt": "À propos de la consommation horaire \\(Ch\\), quelles affirmations sont exactes ?",
+      "prompt": "À quoi correspond la consommation horaire \\(Ch\\) d’un turboréacteur ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\(Ch\\) est la masse de carburant nécessaire pour produire une poussée de 1 newton pendant une heure.",
+          "text": "C’est la masse de carburant nécessaire pour fournir une poussée de 1 newton pendant une heure.",
           "is_correct": false,
           "explanation": "Cette définition correspond à la consommation spécifique \\(Csp\\), pas à la consommation horaire."
         },
         {
           "id": "B",
-          "text": "\\(Ch\\) s’exprime uniquement en newtons.",
+          "text": "Elle est directement lue comme une poussée sur l’affichage moteur.",
           "is_correct": false,
-          "explanation": "Le newton est une unité de force, alors que \\(Ch\\) est une masse de carburant par unité de temps, donc plutôt en kg/h ou lb/h."
+          "explanation": "L’affichage de type Fuel Flow donne le débit de carburant, donc une consommation, pas une poussée."
         },
         {
           "id": "C",
-          "text": "\\(Ch\\) est directement obtenue à partir du débit carburant \\(Qmc\\) en multipliant par 3600 quand \\(Qmc\\) est en kg/s.",
+          "text": "Elle s’exprime uniquement en newtons (N).",
           "is_correct": false,
-          "explanation": "La relation \\(Ch = Qmc \\times 3600\\) est juste, mais ici l’affirmation mélange une bonne relation avec une proposition qui prétend définir \\(Ch\\) comme une poussée ; une seule affirmation doit être vraie."
+          "explanation": "\\(Ch\\) est une masse de carburant par unité de temps, donc on l’exprime en \\(kg/h\\) ou \\(lb/h\\), pas en newtons."
         },
         {
           "id": "D",
-          "text": "\\(Ch\\) correspond à la masse de carburant consommée en 1 heure à un régime donné.",
+          "text": "C’est la masse de carburant consommée en 1 heure à un régime donné.",
           "is_correct": true,
-          "explanation": "La consommation horaire est bien définie comme une masse de carburant rapportée à une durée d’une heure pour un régime donné."
+          "explanation": "La consommation horaire \\(Ch\\) mesure bien une masse de carburant rapportée à une durée d’une heure, pour un régime moteur fixé."
         },
         {
           "id": "E",
-          "text": "\\(Ch\\) sert à comparer les turboréacteurs entre eux sur la base de la poussée délivrée.",
+          "text": "Elle ne dépend pas du régime moteur.",
           "is_correct": false,
-          "explanation": "La comparaison des moteurs entre eux repose sur la consommation spécifique \\(Csp\\), qui rapporte le carburant à la poussée. \\(Ch\\) dépend seulement du débit carburant."
+          "explanation": "La consommation horaire est donnée pour un régime moteur précis ; elle varie avec le fonctionnement du turboréacteur."
         }
       ],
       "coverage_label": "Consommation horaire",
-      "learning_objective": "Identifier la définition de \\(Ch\\) et la distinguer de la consommation spécifique.",
-      "correction_summary": "La seule affirmation vraie est celle qui donne la définition de \\(Ch\\) comme masse de carburant consommée en une heure. Le piège classique consiste à confondre \\(Ch\\) avec \\(Csp\\), qui rapporte le carburant à la poussée.",
-      "course_clarification": "\\(Ch\\) mesure un débit de carburant ramené à l’heure. Il renseigne sur la quantité brûlée, sans intégrer la poussée produite.",
+      "learning_objective": "Identifier la consommation horaire comme un débit de carburant exprimé par unité de temps.",
+      "correction_summary": "La bonne réponse décrit \\(Ch\\) comme une masse de carburant consommée en une heure. Le piège classique consiste à la confondre avec la consommation spécifique, qui rapporte la consommation à la poussée.",
+      "course_clarification": "\\(Ch\\) est un indicateur de consommation au sens strict : il mesure combien de carburant est brûlé pendant 1 heure. En pratique, il est associé au débitmètre (Fuel Flow) au poste de pilotage.",
       "source_refs": []
     },
     {
-      "question_id": "S2-1-Q4",
-      "prompt": "À propos de la relation entre consommation spécifique, poussée et consommation horaire, quelles affirmations sont exactes ?",
+      "question_id": "S2-1-Q2",
+      "prompt": "Quelle relation relie la consommation horaire \\(Ch\\) au débit massique \\(Qmc\\) ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Si \\(Tu\\) augmente à \\(Ch\\) constant, alors \\(Csp\\) diminue.",
+          "text": "\\(Ch = Qmc(kg/s) \\div 3600\\).",
           "is_correct": false,
-          "explanation": "Comme \\(Csp = Tu/Ch\\), une augmentation de \\(Tu\\) à \\(Ch\\) constant fait augmenter \\(Csp\\), pas diminuer."
+          "explanation": "Diviser par 3600 ferait l’inverse de la conversion demandée ; on obtiendrait une valeur beaucoup trop petite."
         },
         {
           "id": "B",
-          "text": "\\(Csp\\) est l’inverse de \\(Ch/Tu\\).",
-          "is_correct": false,
-          "explanation": "Cette écriture est mathématiquement équivalente à \\(Tu/Ch\\), mais elle n’est pas formulée comme une affirmation distincte vraie dans le sens attendu ici."
+          "text": "\\(Ch = Qmc(kg/s) \\times 3600\\).",
+          "is_correct": true,
+          "explanation": "La formule convertit un débit en \\(kg/s\\) en une masse consommée par heure : on multiplie par 3600 pour passer de la seconde à l’heure."
         },
         {
           "id": "C",
-          "text": "La poussée \\(Tu\\) est au numérateur de la formule.",
+          "text": "\\(Ch = Qmc(kg/h) \\times 60\\).",
           "is_correct": false,
-          "explanation": "Oui, et c’est précisément ce qui fait que \\(Csp\\) varie avec la poussée ; cependant cette proposition ne doit pas être retenue comme seule bonne réponse supplémentaire."
+          "explanation": "Le support donne une relation avec \\(Qmc\\) en \\(kg/s\\), pas en \\(kg/h\\), et le facteur correct pour passer à l’heure est 3600."
         },
         {
           "id": "D",
-          "text": "Une diminution de \\(Ch\\) à \\(Tu\\) constant entraîne une hausse de \\(Csp\\).",
+          "text": "\\(Ch = Qmc(kg/s) \\times 60\\).",
           "is_correct": false,
-          "explanation": "La relation impose bien une hausse de \\(Csp\\) si \\(Ch\\) diminue. Mais dans ce QCM à une seule réponse vraie, cette conséquence n’est pas la réponse attendue."
+          "explanation": "Multiplier par 60 ne convertit que des minutes, pas des heures. La bonne conversion secondes → heures impose 3600."
         },
         {
           "id": "E",
-          "text": "La relation donnée est \\(Csp = \\dfrac{Tu}{Ch}\\).",
-          "is_correct": true,
-          "explanation": "La formule est explicitement fournie : la consommation spécifique est reliée à la poussée \\(Tu\\) et à la consommation horaire \\(Ch\\) par ce rapport."
+          "text": "\\(Ch = Qmc(kg/s) - 3600\\).",
+          "is_correct": false,
+          "explanation": "Il s’agit d’une conversion d’unités par multiplication, pas d’une soustraction."
         }
       ],
-      "coverage_label": "Relation Csp = Tu / Ch",
-      "learning_objective": "Interpréter le sens de variation de \\(Csp\\) à partir de la formule.",
-      "correction_summary": "La relation correcte est \\(Csp = Tu/Ch\\). Le piège majeur est d’inverser les dépendances : \\(Csp\\) augmente quand la poussée augmente à consommation horaire constante, ou quand \\(Ch\\) diminue à poussée constante.",
-      "course_clarification": "Cette formule relie un indicateur de rendement à deux grandeurs mesurables. Elle permet de raisonner sur l’effet d’une variation de poussée ou de débit carburant.",
+      "coverage_label": "Relation entre débit carburant et consommation horaire",
+      "learning_objective": "Appliquer la conversion entre débit massique en \\(kg/s\\) et consommation horaire en \\(kg/h\\).",
+      "correction_summary": "Il faut multiplier \\(Qmc\\) par 3600 pour obtenir \\(Ch\\). Le piège est d’inverser la conversion ou d’utiliser un facteur 60 au lieu de 3600.",
+      "course_clarification": "\\(Qmc\\) est un débit massique en \\(kg/s\\). Comme une heure contient 3600 secondes, la consommation horaire s’obtient en multipliant par 3600.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S2-1-Q3",
+      "prompt": "Quelle affirmation est correcte à propos de la consommation spécifique \\(Csp\\) ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle permet de comparer les turboréacteurs entre eux en rapportant la consommation à la poussée fournie.",
+          "is_correct": true,
+          "explanation": "La consommation spécifique est justement un indicateur comparatif : elle relie la quantité de carburant consommée à la poussée produite."
+        },
+        {
+          "id": "B",
+          "text": "Elle correspond au débit carburant brut mesuré en \\(kg/s\\) au poste de pilotage.",
+          "is_correct": false,
+          "explanation": "Le débit carburant brut est lié à \\(Ch\\), pas à \\(Csp\\). \\(Csp\\) est un rapport avec la poussée."
+        },
+        {
+          "id": "C",
+          "text": "Elle mesure la puissance calorifique du carburant.",
+          "is_correct": false,
+          "explanation": "La puissance calorifique est notée \\(Pc\\) et dépend du pouvoir calorifique du carburant, pas de la poussée."
+        },
+        {
+          "id": "D",
+          "text": "Elle donne la masse d’air externe froid aspirée par le moteur.",
+          "is_correct": false,
+          "explanation": "Cette grandeur n’a rien à voir avec \\(Csp\\) ; elle concerne le débit d’air et éventuellement le taux de dilution."
+        },
+        {
+          "id": "E",
+          "text": "Elle est indépendante de toute notion de poussée.",
+          "is_correct": false,
+          "explanation": "C’est faux : la définition même de \\(Csp\\) est basée sur la poussée disponible."
+        }
+      ],
+      "coverage_label": "Consommation spécifique",
+      "learning_objective": "Reconnaître le rôle comparatif de \\(Csp\\) comme consommation rapportée à la poussée.",
+      "correction_summary": "La bonne réponse est celle qui relie \\(Csp\\) à la comparaison des moteurs à poussée donnée. Le piège est de la confondre avec un simple débit carburant ou avec une puissance thermique.",
+      "course_clarification": "\\(Csp\\) est un indicateur rapporté à la poussée : plus il est faible, moins il faut de carburant pour obtenir la même poussée. C’est pourquoi il sert à comparer les turboréacteurs entre eux.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S2-1-Q4",
+      "prompt": "Quelles unités sont usuelles pour la consommation spécifique \\(Csp\\) ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "\\(kg/s\\) ou \\(lb/s\\).",
+          "is_correct": false,
+          "explanation": "Ces unités décrivent un débit massique, pas une consommation spécifique rapportée à la poussée."
+        },
+        {
+          "id": "B",
+          "text": "\\(N\\) ou \\(lbf\\).",
+          "is_correct": false,
+          "explanation": "Ces unités mesurent une poussée, pas une consommation spécifique."
+        },
+        {
+          "id": "C",
+          "text": "\\(W\\) ou \\(hp\\).",
+          "is_correct": false,
+          "explanation": "Ces unités correspondent à une puissance, pas à une masse de carburant rapportée à une poussée."
+        },
+        {
+          "id": "D",
+          "text": "\\(kg\\) ou \\(lb\\).",
+          "is_correct": false,
+          "explanation": "Une consommation spécifique n’est pas une masse seule : elle doit intégrer une durée et une poussée."
+        },
+        {
+          "id": "E",
+          "text": "\\(kg/h.daN\\) ou \\(lb/h.Lbf\\).",
+          "is_correct": true,
+          "explanation": "Ce sont les unités indiquées pour exprimer une consommation rapportée à la poussée, en système métrique ou anglo-saxon."
+        }
+      ],
+      "coverage_label": "Unités de consommation spécifique",
+      "learning_objective": "Choisir les unités correctes de \\(Csp\\) et ne pas les confondre avec celles d’un débit ou d’une poussée.",
+      "correction_summary": "Les unités attendues sont \\(kg/h.daN\\) ou \\(lb/h.Lbf\\). Le piège est de choisir des unités de débit, de poussée ou de puissance qui ne traduisent pas un rapport à la poussée.",
+      "course_clarification": "Le terme \\(kg/h.daN\\) se lit « kilogrammes par heure et par daN ». Il indique qu’on rapporte une masse de carburant consommée en une heure à une unité de poussée.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S2-1-Q5",
+      "prompt": "Si \\(Qmc = 3{,}2\\ \\mathrm{kg/s}\\), quelle valeur de \\(Ch\\) est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "\\(Ch = 320\\ \\mathrm{kg/h}\\).",
+          "is_correct": false,
+          "explanation": "Cette valeur ignore la conversion de secondes en heures ; elle est trop faible d’un facteur 36."
+        },
+        {
+          "id": "B",
+          "text": "\\(Ch = 1\\,920\\ \\mathrm{kg/h}\\).",
+          "is_correct": false,
+          "explanation": "Le calcul correct donne 11\\,520 \\(kg/h\\), donc 1\\,920 \\(kg/h\\) reste nettement trop faible."
+        },
+        {
+          "id": "C",
+          "text": "\\(Ch = 11\\,520\\ \\mathrm{kg/h}\\).",
+          "is_correct": true,
+          "explanation": "On applique la relation \\(Ch = Qmc \\times 3600\\) : \\(3{,}2 \\times 3600 = 11\\,520\\)."
+        },
+        {
+          "id": "D",
+          "text": "\\(Ch = 3{,}2\\ \\mathrm{kg/h}\\).",
+          "is_correct": false,
+          "explanation": "On a gardé l’unité de départ sans convertir le débit en consommation horaire ; la valeur est donc fausse."
+        },
+        {
+          "id": "E",
+          "text": "\\(Ch = 11\\,520\\ \\mathrm{kg/s}\\).",
+          "is_correct": false,
+          "explanation": "Le résultat numérique 11\\,520 est correct, mais l’unité est fausse : après conversion, la consommation horaire s’exprime en \\(kg/h\\)."
+        }
+      ],
+      "coverage_label": "Calcul de consommation horaire",
+      "learning_objective": "Calculer \\(Ch\\) à partir d’un débit massique en \\(kg/s\\) en appliquant la conversion horaire.",
+      "correction_summary": "Il faut multiplier par 3600 et conserver l’unité \\(kg/h\\). Le piège principal est de garder l’unité initiale en secondes ou d’oublier la conversion temporelle.",
+      "course_clarification": "Un débit de \\(3{,}2\\ \\mathrm{kg/s}\\) signifie 3,2 kilogrammes brûlés chaque seconde. Sur une heure complète, cela donne \\(3{,}2 \\times 3600 = 11\\,520\\ \\mathrm{kg/h}\\).",
       "source_refs": []
     }
   ],
   "subpart_id": "S2",
   "anchor_slide_id": "S2-1",
-  "question_count_target": 2,
+  "question_count_target": 5,
   "title": "QCM - Consommation horaire et consommation spécifique"
 }

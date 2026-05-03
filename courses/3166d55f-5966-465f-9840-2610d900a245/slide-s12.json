@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S12-Q1",
-      "prompt": "À propos des équations horaires et de la trajectoire d’un point, quelles affirmations sont correctes ?",
+      "question_id": "S12Q1",
+      "prompt": "Pour \\(x(t)=4t\\) et \\(y(t)=t^2\\), quelle équation de trajectoire relie correctement \\(y\\) à \\(x\\) ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La trajectoire s’obtient en gardant le temps comme paramètre principal sans aucune transformation.",
+          "text": "\\(y=4x^2\\)",
           "is_correct": false,
-          "explanation": "Pour obtenir l’équation de trajectoire, il faut au contraire éliminer le paramètre temps \\(t\\). Conserver \\(t\\) ne donne pas directement la relation entre \\(x\\) et \\(y\\)."
+          "explanation": "Cette expression résulte d’une mauvaise substitution : le coefficient doit être divisé par \\(16\\), pas multiplié par \\(4\\)."
         },
         {
           "id": "B",
-          "text": "La trajectoire est toujours une droite dès que les coordonnées dépendent du temps.",
+          "text": "\\(y=\\dfrac{x^2}{4}\\)",
           "is_correct": false,
-          "explanation": "Une dépendance au temps ne suffit pas à imposer une trajectoire rectiligne. La forme dépend des fonctions \\(x(t)\\) et \\(y(t)\\)."
+          "explanation": "Le passage de \\(t\\) à \\(x\\) donne \\(t=x/4\\), donc le carré fournit \\(x^2/16\\), et non \\(x^2/4\\)."
         },
         {
           "id": "C",
-          "text": "La trajectoire est l’ensemble des positions successives du point dans le temps.",
+          "text": "\\(y=16x^2\\)",
           "is_correct": false,
-          "explanation": "Cette phrase décrit la trajectoire elle-même, mais elle ne correspond pas à l’assertion correcte sur les équations horaires : elles donnent la position en fonction du temps."
+          "explanation": "Cette forme inverse complètement le rôle du facteur 4 : ici, le temps est divisé par 4 avant d’être au carré, ce qui réduit le coefficient."
         },
         {
           "id": "D",
-          "text": "Les équations horaires donnent les coordonnées du point, par exemple \\(x(t)\\) et \\(y(t)\\), en fonction du temps.",
+          "text": "\\(y=\\dfrac{x^2}{16}\\)",
           "is_correct": true,
-          "explanation": "C’est la définition exacte des équations horaires : elles décrivent la position du point au cours du temps par des fonctions de \\(t\\)."
+          "explanation": "On isole d’abord \\(t\\) à partir de \\(x=4t\\), donc \\(t=x/4\\). En remplaçant dans \\(y=t^2\\), on obtient bien \\(y=(x/4)^2=x^2/16\\)."
         },
         {
           "id": "E",
-          "text": "L’équation de trajectoire s’écrit directement sous la forme \\(t = x + y\\) dans tous les cas.",
+          "text": "\\(y=x/16\\)",
           "is_correct": false,
-          "explanation": "Il n’existe pas de forme universelle comme \\(t = x + y\\). L’expression dépend des lois horaires particulières et se trouve après élimination de \\(t\\)."
+          "explanation": "La relation entre \\(x\\) et \\(y\\) est quadratique, car \\(y=t^2\\). Une relation linéaire ne correspond pas à ces équations horaires."
         }
       ],
       "coverage_label": "Équations horaires et trajectoires",
-      "learning_objective": "Reconnaître le rôle des équations horaires et distinguer leur écriture de l’équation de trajectoire.",
-      "correction_summary": "La bonne idée est que les équations horaires décrivent \\(x(t)\\) et \\(y(t)\\), puis on élimine \\(t\\) pour obtenir une relation entre \\(x\\) et \\(y\\). Le piège classique est de confondre description paramétrique du mouvement et équation de la courbe.",
-      "course_clarification": "Les équations horaires sont des fonctions du temps. L’équation de trajectoire relie directement les coordonnées spatiales. En pratique, on passe de l’une à l’autre en supprimant le paramètre \\(t\\).",
+      "learning_objective": "Éliminer le paramètre temps pour obtenir l’équation cartésienne d’une trajectoire simple.",
+      "correction_summary": "On élimine \\(t\\) avec \\(t=x/4\\), puis on remplace dans \\(y=t^2\\). Le piège est d’oublier de mettre au carré le facteur \\(1/4\\).",
+      "course_clarification": "Les équations horaires donnent les coordonnées en fonction du temps. Pour obtenir la trajectoire, on écrit une relation directe entre \\(x\\) et \\(y\\) en supprimant \\(t\\).",
       "source_refs": []
     },
     {
-      "question_id": "S12-Q2",
-      "prompt": "Pour relier \\(y\\) à \\(x\\) à partir des équations horaires, quelles affirmations sont correctes ?",
+      "question_id": "S12Q2",
+      "prompt": "Quelle relation donne la pente de la trajectoire à partir des dérivées temporelles ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La relation cherchée garde nécessairement \\(t\\) sous la forme \\(y = f(x,t)\\).",
+          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dy}{dt}\\times\\dfrac{dx}{dt}\\)",
           "is_correct": false,
-          "explanation": "L’objectif est précisément d’écrire une relation entre \\(x\\) et \\(y\\) sans \\(t\\). Une expression avec \\(t\\) n’est pas encore l’équation de trajectoire."
+          "explanation": "On ne multiplie pas les deux dérivées temporelles : la pente locale s’obtient par un quotient, pas par un produit."
         },
         {
           "id": "B",
-          "text": "Il faut éliminer le paramètre \\(t\\) pour obtenir une relation entre \\(y\\) et \\(x\\).",
+          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}\\)",
           "is_correct": true,
-          "explanation": "C’est la méthode demandée : on supprime \\(t\\) pour exprimer la trajectoire sous une forme cartésienne reliant les coordonnées."
+          "explanation": "La règle de la chaîne relie la dérivée de \\(y\\) par rapport à \\(x\\) aux dérivées par rapport au temps. On divise bien la variation verticale par la variation horizontale instantanée."
         },
         {
           "id": "C",
-          "text": "L’élimination de \\(t\\) transforme toujours une courbe en mouvement rectiligne.",
+          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dx/dt}{dy/dt}\\)",
           "is_correct": false,
-          "explanation": "Éliminer \\(t\\) ne change pas la nature géométrique de la trajectoire ; cela permet seulement de l’écrire autrement."
+          "explanation": "Cette écriture inverse le rapport. Elle donnerait l’inverse de la pente, pas la pente de la trajectoire."
         },
         {
           "id": "D",
-          "text": "On doit d’abord calculer la vitesse moyenne avant de chercher l’équation de trajectoire.",
+          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dy}{dt}+\\dfrac{dx}{dt}\\)",
           "is_correct": false,
-          "explanation": "La vitesse moyenne n’intervient pas dans cette démarche. Ici, on manipule directement les lois horaires pour isoler \\(x\\) et \\(y\\)."
+          "explanation": "La pente n’est pas une somme de vitesses de variation. La relation correcte est un rapport entre les deux dérivées."
         },
         {
           "id": "E",
-          "text": "L’équation de trajectoire est obtenue en remplaçant \\(x\\) et \\(y\\) par des constantes fixes indépendantes du mouvement.",
+          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{d^2y}{dt^2}\\)",
           "is_correct": false,
-          "explanation": "Les coordonnées ne sont pas arbitrairement fixées : elles résultent des fonctions horaires. Les remplacer par des constantes ferait perdre l’information sur le mouvement."
+          "explanation": "La dérivée seconde par rapport au temps mesure une accélération, pas la pente de la trajectoire dans le plan."
         }
       ],
       "coverage_label": "Équations horaires et trajectoires",
-      "learning_objective": "Savoir obtenir une équation de trajectoire par élimination du temps.",
-      "correction_summary": "La méthode correcte consiste à supprimer \\(t\\) entre les deux lois horaires. Le piège est de croire qu’il faut une grandeur cinématique supplémentaire ou qu’on garde encore \\(t\\) dans la relation finale.",
-      "course_clarification": "On parle d’élimination du paramètre temps quand on remplace \\(t\\) à l’aide d’une équation pour l’introduire dans l’autre. On obtient alors une courbe dans le plan, décrite par une relation entre \\(x\\) et \\(y\\).",
+      "learning_objective": "Appliquer la règle de la chaîne pour relier la pente spatiale aux dérivées temporelles.",
+      "correction_summary": "La pente instantanée s’écrit \\(\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}\\). Le piège est de confondre ce quotient avec un produit, une somme ou une dérivée seconde.",
+      "course_clarification": "Quand \\(x\\) et \\(y\\) dépendent tous deux du temps, la dérivée \\(dy/dx\\) se calcule en passant par \\(t\\). Cette relation sert à lire la pente locale de la trajectoire à un instant donné.",
       "source_refs": []
     },
     {
-      "question_id": "S12-Q3",
-      "prompt": "À propos de la règle de la chaîne appliquée à une trajectoire paramétrée, quelles affirmations sont correctes ?",
+      "question_id": "S12Q3",
+      "prompt": "Pour \\(x(t)=R\\cos(\\omega t)\\) et \\(y(t)=R\\sin(\\omega t)\\), quelle équation cartésienne de trajectoire est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La pente de la trajectoire peut s’écrire \\(\\dfrac{dy}{dx} = \\dfrac{dy/dt}{dx/dt}\\).",
+          "text": "\\(x^2+y^2=R^2\\)",
           "is_correct": true,
-          "explanation": "C’est exactement la règle de la chaîne utilisée pour une courbe paramétrée par le temps, à condition que \\(dx/dt \\neq 0\\)."
+          "explanation": "En élevant au carré puis en additionnant, on obtient \\(R^2\\cos^2(\\omega t)+R^2\\sin^2(\\omega t)=R^2\\). La trajectoire est donc un cercle de rayon \\(R\\)."
         },
         {
           "id": "B",
-          "text": "On a toujours \\(\\dfrac{dy}{dx} = \\dfrac{dx/dt}{dy/dt}\\).",
+          "text": "\\(x^2-y^2=R^2\\)",
           "is_correct": false,
-          "explanation": "Le rapport est inversé. La bonne expression est \\(\\dfrac{dy/dt}{dx/dt}\\), pas l’inverse."
+          "explanation": "Cette relation correspond à une hyperbole de type algébrique, pas à la combinaison trigonométrique \\(\\cos^2+\\sin^2=1\\)."
         },
         {
           "id": "C",
-          "text": "Cette relation donne la pente de la trajectoire à tout instant.",
+          "text": "\\(x+y=R\\)",
           "is_correct": false,
-          "explanation": "La phrase est vraie sur le fond, mais elle n’est pas fausse ? Ici elle correspond précisément à la propriété attendue, donc elle ne doit pas être cochée comme fausse. Le piège consiste à confondre la pente avec une quantité sans lien avec la tangente."
+          "explanation": "Les coordonnées ne vérifient pas une relation linéaire ici ; elles sont liées par des fonctions trigonométriques périodiques."
         },
         {
           "id": "D",
-          "text": "La règle de la chaîne ne s’applique qu’aux fonctions trigonométriques.",
+          "text": "\\(x^2+y^2=\\omega^2\\)",
           "is_correct": false,
-          "explanation": "Elle s’applique à toute fonction dérivable composée avec le temps. La forme donnée ici est un cas général pour les coordonnées d’un point mobile."
+          "explanation": "Le rayon du cercle dépend de \\(R\\), pas de \\(\\omega\\). La pulsation \\(\\omega\\) joue sur la vitesse angulaire, pas sur la taille de la trajectoire."
         },
         {
           "id": "E",
-          "text": "Si \\(dx/dt = 0\\), le rapport \\(\\dfrac{dy/dt}{dx/dt}\\) est défini et donne directement la pente.",
+          "text": "\\(y=\\dfrac{x^2}{R}\\)",
           "is_correct": false,
-          "explanation": "Quand \\(dx/dt = 0\\), le rapport n’est pas défini. Cela correspond à une tangente verticale éventuelle, et il faut traiter ce cas avec précaution."
+          "explanation": "Cette forme est parabolique, alors que les expressions en sinus et cosinus donnent une trajectoire circulaire."
         }
       ],
       "coverage_label": "Équations horaires et trajectoires",
-      "learning_objective": "Interpréter la règle de la chaîne pour obtenir la pente d’une trajectoire paramétrée.",
-      "correction_summary": "La formule utile est \\(\\dfrac{dy}{dx} = \\dfrac{dy/dt}{dx/dt}\\). Le principal piège est d’inverser le rapport ou d’oublier que cette écriture exige \\(dx/dt \\neq 0\\).",
-      "course_clarification": "Pour une courbe paramétrée par \\(t\\), la pente locale se déduit du rapport des dérivées temporelles. Cette écriture sert à étudier l’orientation instantanée de la trajectoire.",
+      "learning_objective": "Reconnaître la trajectoire circulaire obtenue à partir d’une paramétrisation trigonométrique.",
+      "correction_summary": "On élimine \\(t\\) en utilisant \\(\\cos^2+\\sin^2=1\\), ce qui donne un cercle de rayon \\(R\\). Le piège est de confondre le rôle de \\(R\\) et celui de \\(\\omega\\).",
+      "course_clarification": "Une paramétrisation en cosinus et sinus décrit un point qui tourne autour de l’origine. L’équation cartésienne obtenue est celle d’un cercle, ici de rayon \\(R\\).",
       "source_refs": []
     },
     {
-      "question_id": "S12-Q4",
-      "prompt": "Pour les équations \\(x(t)=4t\\) et \\(y(t)=t^2\\), quelles affirmations sont correctes ?",
+      "question_id": "S12Q4",
+      "prompt": "Que représentent \\(x(t)\\) et \\(y(t)\\) dans une description paramétrique du mouvement ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La trajectoire obtenue est une droite passant par l’origine.",
+          "text": "Ce sont les composantes de la vitesse en fonction du temps.",
           "is_correct": false,
-          "explanation": "L’équation \\(y = x^2/16\\) est une parabole, pas une droite. La forme quadratique confirme la courbure."
+          "explanation": "Les composantes de vitesse s’écrivent à partir des dérivées \\(dx/dt\\) et \\(dy/dt\\), pas sous la forme des coordonnées elles-mêmes."
         },
         {
           "id": "B",
-          "text": "On trouve \\(y = 4x^2\\) après élimination du temps.",
+          "text": "Ce sont les distances parcourues sur la trajectoire.",
           "is_correct": false,
-          "explanation": "Cette expression est incorrecte : en remplaçant \\(t\\) par \\(x/4\\), on obtient bien \\(x^2/16\\)."
+          "explanation": "Les coordonnées ne sont pas une longueur curviligne. Elles repèrent la position dans un repère, pas la distance totale parcourue."
         },
         {
           "id": "C",
-          "text": "Le point vérifie \\(x = 4y\\) pour tous les instants.",
+          "text": "Elles donnent directement l’équation de la trajectoire sans élimination de \\(t\\).",
           "is_correct": false,
-          "explanation": "À partir de \\(x=4t\\) et \\(y=t^2\\), on n’obtient pas \\(x=4y\\). Les deux grandeurs n’évoluent pas linéairement l’une par rapport à l’autre."
+          "explanation": "Pour obtenir la trajectoire sous forme \\(y=f(x)\\) ou une relation entre \\(x\\) et \\(y\\), il faut justement éliminer le paramètre \\(t\\)."
         },
         {
           "id": "D",
-          "text": "La trajectoire est circulaire car \\(x\\) dépend linéairement de \\(t\\).",
+          "text": "Elles sont indépendantes du temps.",
           "is_correct": false,
-          "explanation": "Une dépendance linéaire de \\(x(t)\\) ne suffit pas à produire un cercle. Ici, la relation finale \\(y=x^2/16\\) est parabole."
+          "explanation": "Une équation horaire dépend par définition du temps. Si \\(x\\) et \\(y\\) ne dépendaient pas de \\(t\\), il n’y aurait pas de mouvement décrit."
         },
         {
           "id": "E",
-          "text": "L’élimination de \\(t\\) conduit à \\(y(x)=\\dfrac{x^2}{16}\\).",
+          "text": "Ce sont les coordonnées du point en fonction du temps.",
           "is_correct": true,
-          "explanation": "On a \\(t = x/4\\), puis \\(y = t^2 = (x/4)^2 = x^2/16\\). C’est l’équation cartésienne de la trajectoire."
+          "explanation": "Les équations horaires donnent la position du point à chaque instant sous la forme \\(x(t)\\) et \\(y(t)\\). Elles décrivent donc des coordonnées dépendantes du temps."
         }
       ],
       "coverage_label": "Équations horaires et trajectoires",
-      "learning_objective": "Savoir éliminer le temps dans un exemple simple et reconnaître la forme de la trajectoire.",
-      "correction_summary": "En isolant \\(t\\) dans \\(x=4t\\), on obtient \\(t=x/4\\), puis \\(y=x^2/16\\). Le piège est de confondre une loi horaire simple avec une trajectoire droite ou circulaire.",
-      "course_clarification": "L’équation finale décrit une parabole dans le plan. Une loi horaire linéaire pour une coordonnée n’impose pas à elle seule une trajectoire rectiligne.",
+      "learning_objective": "Identifier le sens physique des équations horaires d’un point mobile.",
+      "correction_summary": "\\(x(t)\\) et \\(y(t)\\) sont les coordonnées du point au cours du temps. Le piège est de les confondre avec la vitesse ou avec l’équation finale de la trajectoire.",
+      "course_clarification": "Une équation horaire relie une grandeur géométrique à l’instant \\(t\\). Elle sert ensuite à retrouver la trajectoire en supprimant le temps.",
       "source_refs": []
     },
     {
-      "question_id": "S12-Q5",
-      "prompt": "Pour les équations \\(x(t)=R\\cos(\\omega t)\\) et \\(y(t)=R\\sin(\\omega t)\\), quelles affirmations sont correctes ?",
+      "question_id": "S12Q5",
+      "prompt": "À l’instant \\(t=2\\) pour \\(x(t)=4t\\) et \\(y(t)=t^2\\), quelle est la pente \\(\\mathrm{d}y/\\mathrm{d}x\\) ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La trajectoire est un cercle de rayon \\(R\\).",
+          "text": "\\(\\dfrac{1}{2}\\)",
           "is_correct": false,
-          "explanation": "Cette affirmation est vraie sur le fond ; elle n’est donc pas fausse. Le cercle est bien défini par \\(x^2+y^2=R^2\\)."
+          "explanation": "Cette valeur ne correspond pas au quotient des dérivées temporelles à \\(t=2\\). Le bon calcul donne \\(4/4\\), soit 1."
         },
         {
           "id": "B",
-          "text": "La relation obtenue est \\(x^2 - y^2 = R^2\\).",
+          "text": "2",
           "is_correct": false,
-          "explanation": "Le signe correct est un **plus** entre \\(x^2\\) et \\(y^2\\), car les termes en \\(\\cos^2\\) et \\(\\sin^2\\) s’additionnent."
+          "explanation": "La pente n’est pas la valeur de \\(t\\) ni une simple lecture de la coordonnée. Il faut utiliser le rapport \\((dy/dt)/(dx/dt)\\)."
         },
         {
           "id": "C",
-          "text": "En éliminant \\(t\\), on obtient \\(x^2 + y^2 = R^2\\).",
+          "text": "1",
           "is_correct": true,
-          "explanation": "En élevant au carré puis en additionnant, on utilise \\(\\cos^2(\\omega t)+\\sin^2(\\omega t)=1\\), d’où \\(x^2+y^2=R^2\\)."
+          "explanation": "On calcule \\(dy/dt=2t\\) et \\(dx/dt=4\\). À \\(t=2\\), on a \\(dy/dt=4\\), donc \\(dy/dx=4/4=1\\)."
         },
         {
           "id": "D",
-          "text": "La trajectoire est une parabole si \\(\\omega\\) est constant.",
+          "text": "4",
           "is_correct": false,
-          "explanation": "La constance de \\(\\omega\\) n’impose pas une parabole. Ici, la combinaison sinus/cosinus conduit à une trajectoire circulaire."
+          "explanation": "Le nombre 4 apparaît dans \\(dx/dt\\) et dans \\(dy/dt\\) à \\(t=2\\), mais la pente est leur quotient, pas l’un des deux séparément."
         },
         {
           "id": "E",
-          "text": "Le rayon du cercle dépend de \\(\\omega\\) uniquement.",
+          "text": "0",
           "is_correct": false,
-          "explanation": "Dans \\(x^2+y^2=R^2\\), le rayon est \\(R\\). La pulsation \\(\\omega\\) règle l’évolution temporelle, pas le rayon de la trajectoire."
+          "explanation": "La pente n’est pas nulle ici, car \\(y\\) varie encore avec \\(x\\) à cet instant. Le quotient des dérivées vaut 1."
         }
       ],
       "coverage_label": "Équations horaires et trajectoires",
-      "learning_objective": "Reconnaître la trajectoire circulaire associée aux fonctions sinus et cosinus et éliminer le temps correctement.",
-      "correction_summary": "La bonne manipulation consiste à utiliser l’identité \\(\\cos^2+\\sin^2=1\\), ce qui donne \\(x^2+y^2=R^2\\). Le piège est de confondre le rôle de \\(\\omega\\) avec celui de \\(R\\).",
-      "course_clarification": "Une équation du type \\(x=R\\cos(\\omega t)\\), \\(y=R\\sin(\\omega t)\\) décrit un point sur un cercle. Le paramètre \\(R\\) fixe le rayon, tandis que \\(\\omega\\) fixe la vitesse angulaire.",
+      "learning_objective": "Calculer la pente instantanée d’une trajectoire à partir d’équations horaires simples.",
+      "correction_summary": "On applique \\(dy/dx=(dy/dt)/(dx/dt)\\) puis on évalue à \\(t=2\\). Le piège est de confondre la pente avec une coordonnée ou avec une dérivée prise isolément.",
+      "course_clarification": "La pente instantanée indique l’inclinaison locale de la trajectoire. Elle se déduit des variations de \\(x\\) et \\(y\\) par rapport au temps, puis par quotient.",
       "source_refs": []
     }
   ],

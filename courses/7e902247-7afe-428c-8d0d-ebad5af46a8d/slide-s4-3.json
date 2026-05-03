@@ -5,217 +5,175 @@
   "questions": [
     {
       "question_id": "S4-3-Q1",
-      "prompt": "Concernant l’alimentation de secours du réseau AC liée à la logique DC, quelle affirmation est exacte ?",
+      "prompt": "Quel énoncé décrit correctement le rôle du STATIC INVERTER en secours ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le STATIC INVERTER est alimenté directement par les IDGs.",
+          "text": "Le STATIC INVERTER convertit le DC SYSTEM en DC pour maintenir l’alimentation des batteries.",
           "is_correct": false,
-          "explanation": "Faux : les IDGs alimentent le AC SYSTEM, mais le schéma de secours montre le STATIC INVERTER alimenté par les batteries, pas directement par les IDGs."
+          "explanation": "Il ne sert pas à convertir du DC en DC : son rôle est de fournir de l’AC à partir des batteries en situation de secours."
         },
         {
           "id": "B",
-          "text": "Le STATIC INVERTER produit normalement le DC SYSTEM à partir du réseau AC principal.",
+          "text": "Le STATIC INVERTER remplace les IDGs pendant l’alimentation normale du système AC.",
           "is_correct": false,
-          "explanation": "Faux : son rôle visible ici est lié au secours AC Essential, pas à une production normale du DC SYSTEM."
+          "explanation": "Les IDGs assurent l’alimentation AC normale en vol ; le STATIC INVERTER n’intervient qu’en secours quand les autres sources AC ne sont pas disponibles."
         },
         {
           "id": "C",
-          "text": "Le STATIC INVERTER remplace les TR 1 et TR 2 dans l’alimentation normale du DC SYSTEM.",
+          "text": "Le STATIC INVERTER est commandé et surveillé par le GAPCU.",
           "is_correct": false,
-          "explanation": "Faux : les transformer rectifier TR 1 et TR 2 participent à l’alimentation du DC SYSTEM, tandis que le STATIC INVERTER a un rôle de secours AC."
+          "explanation": "Le GAPCU est associé à l’APU et à la gestion auxiliaire, pas au pilotage du STATIC INVERTER dans la logique décrite ici."
         },
         {
           "id": "D",
-          "text": "Le STATIC INVERTER peut fournir une partie du réseau AC Essential quand aucune autre source AC n’est disponible.",
+          "text": "Quand aucune autre source AC n’est disponible, le STATIC INVERTER, alimenté par les batteries, peut fournir une partie du réseau appelée AC Essential electrical system network.",
           "is_correct": true,
-          "explanation": "Vrai : le schéma indique que, sans autre source AC disponible, l’énergie issue des batteries alimente le STATIC INVERTER, qui fournit une partie du réseau AC appelée AC Essential electrical system network."
+          "explanation": "C’est exactement la logique de secours indiquée : les batteries alimentent le STATIC INVERTER, qui alimente une partie du réseau AC essentiel quand les autres sources AC sont indisponibles."
         },
         {
           "id": "E",
-          "text": "Le STATIC INVERTER alimente l’EMER GEN lorsqu’une panne AC apparaît.",
+          "text": "Le STATIC INVERTER alimente directement l’APU STARTER.",
           "is_correct": false,
-          "explanation": "Faux : l’EMER GEN est une autre source associée à l’AC SYSTEM ; il n’est pas alimenté par le STATIC INVERTER sur le schéma."
+          "explanation": "L’APU STARTER est alimenté via l’APU TR / APU BATTERY, pas par le STATIC INVERTER."
         }
       ],
-      "coverage_label": "STATIC INVERTER et alimentation de secours",
-      "learning_objective": "Identifier le rôle du STATIC INVERTER dans l’alimentation de secours du réseau AC.",
-      "correction_summary": "La bonne lecture consiste à distinguer la source d’énergie et la fonction du convertisseur : les batteries alimentent le STATIC INVERTER, qui fournit ensuite une partie du réseau AC Essential si les autres sources AC sont indisponibles. L’erreur fréquente est de confondre ce secours AC avec l’alimentation normale du DC SYSTEM.",
-      "course_clarification": "Le STATIC INVERTER convertit l’énergie des batteries en AC. Il intervient en secours pour une partie du réseau AC Essential, pas pour remplacer les TR dans l’alimentation normale du DC SYSTEM.",
+      "coverage_label": "STATIC INVERTER",
+      "learning_objective": "Identifier la fonction de secours du STATIC INVERTER et sa dépendance aux batteries.",
+      "correction_summary": "La bonne idée est que le STATIC INVERTER prend le relais en secours pour alimenter une partie du réseau AC essentiel, à partir des batteries. Le piège classique consiste à lui attribuer un rôle normal de conversion DC/DC ou de remplacement des IDGs.",
+      "course_clarification": "Un inverter statique transforme une alimentation continue en alternative. Ici, il n’agit que lorsque les autres sources AC ne sont pas disponibles, et il ne couvre qu’une partie du réseau AC essentiel.",
       "source_refs": []
     },
     {
       "question_id": "S4-3-Q2",
-      "prompt": "À propos des batteries et de l’acronyme BCL, quelle affirmation est correcte ?",
+      "prompt": "Quelle relation est correcte pour les BATTERY 1, BATTERY 2 et l’APU BATTERY ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "BCL signifie Battery Control Link.",
+          "text": "Les BATTERY 1 et BATTERY 2 alimentent directement le AC SYSTEM sans conversion.",
           "is_correct": false,
-          "explanation": "Faux : cette expansion ne correspond pas à l’abréviation indiquée sur le schéma."
+          "explanation": "Les batteries relèvent de la logique DC ; elles n’alimentent pas directement le réseau AC comme source principale."
         },
         {
           "id": "B",
-          "text": "BCL signifie Battery Charge Limiter.",
+          "text": "Les BATTERY 1 et BATTERY 2 sont connectées à la distribution DC via les BCLs et les circuits associés.",
           "is_correct": true,
-          "explanation": "Vrai : l’abréviation BCL est explicitement donnée et doit être conservée telle quelle."
+          "explanation": "Le schéma place bien les batteries dans la logique de distribution DC, avec les BCLs comme éléments associés à leur liaison au réseau."
         },
         {
           "id": "C",
-          "text": "Les BATTERY 1 et 2 alimentent directement le AC SYSTEM en fonctionnement normal.",
+          "text": "Le BCL signifie Battery Control Line.",
           "is_correct": false,
-          "explanation": "Faux : les batteries sont liées à la distribution DC et au STATIC INVERTER pour le secours, pas à une alimentation normale directe du AC SYSTEM."
+          "explanation": "L’abréviation à conserver est BCL = Battery Charge Limiter, et non Battery Control Line."
         },
         {
           "id": "D",
-          "text": "Les batteries n’ont aucun lien avec la logique d’alimentation DC.",
+          "text": "Les BCL sont des générateurs intégrés aux moteurs.",
           "is_correct": false,
-          "explanation": "Faux : le schéma montre au contraire BATTERY 1 et 2 intégrées à la distribution DC via les BCL et les circuits associés."
+          "explanation": "Les BCL ne sont pas des générateurs : ce sont des éléments de limitation/gestion de charge liés aux batteries."
         },
         {
           "id": "E",
-          "text": "Le BCL est un convertisseur placé entre l’APU GEN et l’AC SYSTEM.",
+          "text": "L’APU BATTERY n’est pas reliée à la distribution DC.",
           "is_correct": false,
-          "explanation": "Faux : le BCL concerne les batteries ; il n’est pas un convertisseur entre l’APU GEN et l’AC SYSTEM."
+          "explanation": "L’APU BATTERY apparaît au contraire dans la logique DC et les circuits associés, avec une liaison au système de distribution."
         }
       ],
-      "coverage_label": "BCL et batteries",
-      "learning_objective": "Reconnaître le rôle du BCL et situer les batteries dans la distribution électrique.",
-      "correction_summary": "Il faut reconnaître l’acronyme BCL et ne pas le confondre avec un convertisseur ou une source d’AC. Les batteries restent des éléments de la logique DC, reliées à la distribution via les BCL et les circuits associés.",
-      "course_clarification": "BCL veut dire Battery Charge Limiter. Les BATTERY 1 et 2 appartiennent à la logique DC et interviennent aussi dans le secours via le STATIC INVERTER.",
+      "coverage_label": "BATTERY 1, BATTERY 2 et BCL",
+      "learning_objective": "Relier les batteries au réseau DC et mémoriser la signification de BCL.",
+      "correction_summary": "Les batteries appartiennent à la chaîne DC et passent par les BCLs et les circuits associés. Le piège est de les confondre avec une source AC ou avec un composant de génération.",
+      "course_clarification": "BCL signifie Battery Charge Limiter. Il s’agit d’un élément de gestion de charge lié aux batteries, pas d’un générateur ni d’un transformateur.",
       "source_refs": []
     },
     {
       "question_id": "S4-3-Q3",
-      "prompt": "Concernant l’EMER GEN et son contrôle, quelle affirmation est exacte ?",
+      "prompt": "Quel bloc de commande supervise l’EMER GEN ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L’EMER GEN est contrôlé et surveillé par l’EMER GEN GCU.",
+          "text": "L’EMER GEN est commandé et surveillé par l’EMER GEN GCU.",
           "is_correct": true,
-          "explanation": "Vrai : le schéma associe explicitement l’EMER GEN à l’EMER GEN GCU, qui assure la commande et la surveillance."
+          "explanation": "Le schéma indique explicitement un bloc dédié, l’EMER GEN GCU, pour la commande et la surveillance de l’EMER GEN."
         },
         {
           "id": "B",
-          "text": "L’EMER GEN est contrôlé par le GAPCU comme l’APU GEN.",
+          "text": "L’EMER GEN est commandé par le GAPCU.",
           "is_correct": false,
-          "explanation": "Faux : le GAPCU est lié à l’APU GEN ; l’EMER GEN possède son propre contrôleur, l’EMER GEN GCU."
+          "explanation": "Le GAPCU est le bloc associé à l’APU et à la gestion auxiliaire, pas au contrôle de l’EMER GEN."
         },
         {
           "id": "C",
-          "text": "L’EMER GEN alimente directement les batteries sans passer par le DC SYSTEM.",
+          "text": "L’EMER GEN est contrôlé par un des GCUs moteur sans bloc dédié.",
           "is_correct": false,
-          "explanation": "Faux : le schéma le relie au AC SYSTEM et à la logique de secours, pas à une alimentation directe des batteries."
+          "explanation": "Le document montre un contrôleur spécifique à l’EMER GEN : l’EMER GEN GCU, distinct des GCUs moteur."
         },
         {
           "id": "D",
-          "text": "L’EMER GEN n’apparaît jamais dans la logique d’alimentation de secours.",
+          "text": "L’EMER GEN est un transformateur-rectifier de type TR ESS.",
           "is_correct": false,
-          "explanation": "Faux : il fait précisément partie des éléments de secours représentés dans l’architecture."
+          "explanation": "L’EMER GEN n’est pas un TR ; c’est une source/groupe de secours relié à sa propre logique de contrôle."
         },
         {
           "id": "E",
-          "text": "L’EMER GEN remplace les IDGs en fonctionnement normal.",
+          "text": "L’EMER GEN n’apparaît pas dans la logique d’alimentation DC.",
           "is_correct": false,
-          "explanation": "Faux : les IDGs sont les générateurs entraînés par les moteurs ; l’EMER GEN est une source associée au secours."
+          "explanation": "Au contraire, il est intégré à la logique d’alimentation DC et des circuits associés sur le schéma."
         }
       ],
-      "coverage_label": "EMER GEN et commande",
-      "learning_objective": "Identifier le rôle du contrôleur EMER GEN GCU dans la chaîne d’alimentation de secours.",
-      "correction_summary": "Le point clé est de relier chaque source à son unité de commande. L’EMER GEN n’est pas piloté par le GAPCU ; il est associé à son propre EMER GEN GCU. La confusion fréquente vient du fait que plusieurs blocs de contrôle apparaissent sur le même schéma.",
-      "course_clarification": "L’EMER GEN est une source de secours reliée au AC SYSTEM. Sa commande et sa surveillance sont assurées par l’EMER GEN GCU.",
-      "source_refs": []
-    },
-    {
-      "question_id": "S4-3-Q4",
-      "prompt": "À propos de l’APU STARTER et de l’alimentation associée, quelle affirmation est exacte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "L’APU STARTER est alimenté uniquement par les IDGs moteur.",
-          "is_correct": false,
-          "explanation": "Faux : les IDGs alimentent le AC SYSTEM ; ils ne sont pas indiqués comme source directe du STARTER de l’APU."
-        },
-        {
-          "id": "B",
-          "text": "L’APU STARTER est relié au BCL avant toute alimentation.",
-          "is_correct": false,
-          "explanation": "Faux : le schéma relie le STARTER à l’APU TR / APU BATTERY, pas à une chaîne passant par le BCL."
-        },
-        {
-          "id": "C",
-          "text": "L’APU STARTER fonctionne sans aucune source électrique associée.",
-          "is_correct": false,
-          "explanation": "Faux : un starter a besoin d’une alimentation électrique ; ici elle vient des éléments APU TR / APU BATTERY."
-        },
-        {
-          "id": "D",
-          "text": "L’APU STARTER alimente directement le DC SYSTEM.",
-          "is_correct": false,
-          "explanation": "Faux : le STARTER consomme de l’énergie pour lancer l’APU ; il n’est pas une source d’alimentation du DC SYSTEM."
-        },
-        {
-          "id": "E",
-          "text": "L’APU STARTER est alimenté via l’APU TR / APU BATTERY.",
-          "is_correct": true,
-          "explanation": "Vrai : le schéma indique explicitement que le STARTER de l’APU est alimenté depuis l’APU TR et/ou l’APU BATTERY."
-        }
-      ],
-      "coverage_label": "APU STARTER et alimentation associée",
-      "learning_objective": "Lire la liaison entre l’APU STARTER, l’APU TR et l’APU BATTERY.",
-      "correction_summary": "Il faut distinguer l’organe qui consomme l’énergie pour démarrer l’APU et les sources qui l’alimentent. L’erreur classique est d’inverser le sens de la chaîne énergétique ou de confondre starter et générateur.",
-      "course_clarification": "L’APU STARTER reçoit son alimentation depuis l’APU TR / APU BATTERY. Il sert au démarrage de l’APU, pas à l’alimentation du DC SYSTEM.",
+      "coverage_label": "EMER GEN GCU",
+      "learning_objective": "Associer l’EMER GEN à son unité de commande dédiée et le distinguer des autres blocs de contrôle.",
+      "correction_summary": "L’EMER GEN possède son propre contrôleur, l’EMER GEN GCU. Le piège est de le confondre avec le GAPCU ou avec un GCU moteur.",
+      "course_clarification": "GCU signifie Generator Control Unit. Ici, l’EMER GEN GCU est la logique dédiée au groupe de secours, distincte des autres unités de contrôle.",
       "source_refs": []
     },
     {
       "question_id": "S4-3-Q5",
-      "prompt": "Dans la chaîne d’alimentation du DC SYSTEM, quelle affirmation est correcte ?",
+      "prompt": "Que signifie l’acronyme BCL ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Les IDGs alimentent directement le DC SYSTEM sans conversion.",
+          "text": "BCL signifie Battery Control Line.",
           "is_correct": false,
-          "explanation": "Faux : les IDGs alimentent le AC SYSTEM ; la conversion vers le DC passe par des convertisseurs comme les TR."
+          "explanation": "Cette expansion est incorrecte : la forme attendue est Battery Charge Limiter."
         },
         {
           "id": "B",
-          "text": "L’APU GEN est un convertisseur DC placé avant les batteries.",
+          "text": "BCL signifie Backup Conversion Link.",
           "is_correct": false,
-          "explanation": "Faux : l’APU GEN est une source AC associée au AC SYSTEM, pas un convertisseur DC placé avant les batteries."
+          "explanation": "Cette signification n’apparaît pas dans la nomenclature du système ; elle ne correspond pas à la légende du document."
         },
         {
           "id": "C",
-          "text": "Les TR 1, TR 2, TR ESS et APU TR participent à l’alimentation du DC SYSTEM.",
+          "text": "BCL signifie Battery Charge Limiter.",
           "is_correct": true,
-          "explanation": "Vrai : le schéma de génération DC montre ces transformer rectifier comme éléments participant à l’alimentation du DC SYSTEM."
+          "explanation": "L’acronyme à conserver est bien BCL = Battery Charge Limiter, comme indiqué dans la légende."
         },
         {
           "id": "D",
-          "text": "Le DC SYSTEM n’est lié à aucune source issue du réseau AC.",
+          "text": "BCL désigne un transformateur-rectifier.",
           "is_correct": false,
-          "explanation": "Faux : le DC SYSTEM est alimenté à partir de plusieurs éléments liés au AC SYSTEM, dont les TR."
+          "explanation": "Un transformateur-rectifier est noté TR, pas BCL. BCL est lié à la gestion de charge des batteries."
         },
         {
           "id": "E",
-          "text": "L’EMER GEN remplace les BCL pour charger les batteries.",
+          "text": "BCL désigne l’unité de contrôle de l’EMER GEN.",
           "is_correct": false,
-          "explanation": "Faux : l’EMER GEN et les BCL n’ont pas ce rôle d’interchangeabilité ; le BCL reste lié à la charge des batteries."
+          "explanation": "L’unité de contrôle de l’EMER GEN est l’EMER GEN GCU ; BCL concerne les batteries."
         }
       ],
-      "coverage_label": "Architecture DC et TR",
-      "learning_objective": "Identifier les convertisseurs et sources qui participent à l’alimentation du DC SYSTEM.",
-      "correction_summary": "La lecture attendue consiste à suivre la chaîne d’énergie : les sources AC alimentent des convertisseurs comme les TR, qui participent ensuite à l’alimentation du DC SYSTEM. La confusion fréquente est de croire que les IDGs ou l’APU GEN alimentent directement le DC alors qu’ils relèvent d’abord du réseau AC.",
-      "course_clarification": "Le DC SYSTEM reçoit son énergie via des éléments comme TR 1, TR 2, TR ESS et APU TR. Les IDGs et l’APU GEN appartiennent au réseau AC en amont.",
+      "coverage_label": "BCL",
+      "learning_objective": "Connaître l’abréviation BCL et éviter les confusions avec les autres blocs du système électrique.",
+      "correction_summary": "BCL veut dire Battery Charge Limiter. Le piège est de confondre cette abréviation avec un contrôleur, un convertisseur ou un générateur.",
+      "course_clarification": "Un acronyme doit être lu avec sa fonction réelle dans le schéma. Ici, BCL est lié à la limitation de charge des batteries, pas à la génération d’énergie.",
       "source_refs": []
     }
   ],
   "subpart_id": "S4",
   "anchor_slide_id": "S4-3",
-  "question_count_target": 5,
+  "question_count_target": 4,
   "title": "QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN"
 }

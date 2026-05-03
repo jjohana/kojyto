@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S4-1-Q1",
-      "prompt": "À propos du taux de dilution d’un réacteur, quelle affirmation est correcte ?",
+      "prompt": "Quel énoncé définit correctement le taux de dilution d’un turbopropulseur ou d’un turboréacteur à double flux ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le taux de dilution s’écrit \\(T = \\dfrac{Q_{mi}}{Q_{me}}\\).",
+          "text": "Le taux de dilution s’écrit \\(T = Q_{mi}/Q_{me}\\).",
           "is_correct": false,
-          "explanation": "Faux : cette écriture inverse le rapport. Elle échange flux chaud et flux froid, donc elle ne correspond pas à la définition attendue."
+          "explanation": "Le rapport est inversé. Ici, on mettrait le flux chaud au numérateur, alors que la définition demande le flux froid sur le flux chaud."
         },
         {
           "id": "B",
-          "text": "Le taux de dilution compare la pression totale à l’entrée et à la sortie de la tuyère.",
+          "text": "Le taux de dilution compare la pression totale du flux froid à celle du flux chaud.",
           "is_correct": false,
-          "explanation": "Faux : cette grandeur n’est pas un rapport de pressions. Elle compare deux débits de masse, pas des pressions."
+          "explanation": "Le taux de dilution porte sur des **débits massiques**, pas sur les pressions. La pression totale intervient dans d’autres bilans, mais pas dans cette définition."
         },
         {
           "id": "C",
-          "text": "Le taux de dilution est défini comme un rapport de température entre le flux froid et le flux chaud.",
+          "text": "Le taux de dilution s’exprime en newtons.",
           "is_correct": false,
-          "explanation": "Faux : les températures ne servent pas à définir ce ratio. Ici, seule la comparaison des débits de masse est pertinente."
+          "explanation": "Un rapport de débits est sans dimension. Il ne s’exprime donc pas en unité de force comme le newton."
         },
         {
           "id": "D",
-          "text": "Le taux de dilution s’écrit \\(T = \\dfrac{Q_{me}}{Q_{mi}}\\), soit le rapport du flux froid sur le flux chaud.",
+          "text": "Le taux de dilution s’écrit \\(T = Q_{me}/Q_{mi} =\\) flux froid / flux chaud.",
           "is_correct": true,
-          "explanation": "Vrai : la notation donnée relie bien le débit de masse externe (flux froid) au débit interne (flux chaud). C’est l’écriture à reconnaître pour interpréter un by-pass ratio."
+          "explanation": "C’est la définition attendue : on compare le débit massique du flux secondaire (froid) au débit massique du flux primaire (chaud). Cette écriture relie directement le rapport de dilution aux deux veines d’air."
         },
         {
           "id": "E",
-          "text": "Un taux de dilution supérieur à 1 signifie forcément un moteur à faible dilution.",
+          "text": "Quand \\(T < 1\\), le flux froid dépasse toujours le flux chaud.",
           "is_correct": false,
-          "explanation": "Faux : un taux supérieur à 1 correspond au contraire à une forte dilution, typique des moteurs subsoniques modernes."
+          "explanation": "C’est l’inverse : si \\(T < 1\\), le débit du flux froid est inférieur à celui du flux chaud. Le piège est de confondre inférieur et supérieur."
         }
       ],
-      "coverage_label": "Taux de dilution",
-      "learning_objective": "Identifier l’expression du by-pass ratio et distinguer les grandeurs utilisées dans sa définition.",
-      "correction_summary": "Le raisonnement attendu consiste à reconnaître que le taux de dilution compare deux débits de masse : le flux froid sur le flux chaud. L’erreur la plus fréquente consiste à inverser le rapport ou à le confondre avec une grandeur de pression ou de température.",
-      "course_clarification": "Le taux de dilution, ou by-pass ratio, mesure la part d’air qui contourne le générateur de gaz par rapport à l’air qui le traverse. Il s’écrit \\(T = \\dfrac{Q_{me}}{Q_{mi}}\\), avec le flux froid au numérateur et le flux chaud au dénominateur.",
+      "coverage_label": "Taux de dilution (By-pass Ratio)",
+      "learning_objective": "Identifier la définition du by-pass ratio et lire correctement le rapport entre flux froid et flux chaud.",
+      "correction_summary": "La bonne réponse est la définition \\(T = Q_{me}/Q_{mi}\\). Le piège principal est d’inverser le rapport ou de confondre ce rapport de débits avec une grandeur de pression ou de force.",
+      "course_clarification": "Le by-pass ratio mesure la part d’air qui contourne le cœur du moteur par rapport à celle qui le traverse. C’est une grandeur sans dimension : plus elle est grande, plus le flux froid domine.",
       "source_refs": []
     },
     {
       "question_id": "S4-1-Q2",
-      "prompt": "Quel classement associe correctement un moteur à son taux de dilution ?",
+      "prompt": "Parmi les propositions suivantes, laquelle correspond à un exemple subsonique à faible taux de dilution ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le Trent 1000 a un taux de dilution voisin de 0,3.",
+          "text": "Le PW4168 monté sur A330 est donné avec \\(T \\approx 0{,}3\\).",
           "is_correct": false,
-          "explanation": "Faux : 0,3 correspond à un moteur à faible dilution comme le Conway ou le M88, pas au Trent 1000."
+          "explanation": "Le PW4168 est un moteur à fort taux de dilution, avec une valeur voisine de 5, pas 0,3. Le piège est de confondre faible et fort taux de dilution."
         },
         {
           "id": "B",
-          "text": "Le PW4168 monté sur A330 a un taux de dilution voisin de 5.",
+          "text": "Le Rolls Royce Conway, monté sur B707 et DC8, est donné avec \\(T = 0{,}3\\).",
           "is_correct": true,
-          "explanation": "Vrai : cet exemple appartient aux moteurs à forte dilution, avec une valeur donnée autour de 5."
+          "explanation": "C’est l’exemple subsonique à faible taux de dilution cité avec la valeur \\(T = 0{,}3\\). Le couple avion-moteur et la valeur numérique correspondent exactement."
         },
         {
           "id": "C",
-          "text": "Le GE90-115B a un taux de dilution voisin de 0,34.",
+          "text": "Le SNECMA M88 du Rafale est un exemple subsonique à faible taux de dilution.",
           "is_correct": false,
-          "explanation": "Faux : 0,34 correspond au F404-GE402. Le GE90-115B est au contraire un moteur à forte dilution, autour de 9."
+          "explanation": "Le M88 est bien à faible taux de dilution, mais il est donné comme exemple **supersonique**, pas subsonique. La classification par domaine de vol est donc fausse ici."
         },
         {
           "id": "D",
-          "text": "Le PW307D sur Falcon 8X a un taux de dilution voisin de 11.",
+          "text": "Le F404-GE402 du F18 Hornet est donné avec \\(T = 0{,}9\\) en exemple subsonique.",
           "is_correct": false,
-          "explanation": "Faux : 11 correspond au Trent 1000. Le PW307D est donné autour de 4."
+          "explanation": "La valeur \\(T = 0{,}9\\) ne correspond pas à ce moteur : le F404-GE402 est cité en exemple supersonique à faible dilution avec \\(T = 0{,}34\\)."
         },
         {
           "id": "E",
-          "text": "Le PW JT8D a un taux de dilution voisin de 5.",
+          "text": "Le GE90-115B du B777 est un exemple subsonique à faible taux de dilution avec \\(T \\approx 0{,}3\\).",
           "is_correct": false,
-          "explanation": "Faux : le PW JT8D est cité avec un taux de dilution faible, autour de 0,9."
+          "explanation": "Le GE90-115B est au contraire un moteur à fort taux de dilution, autour de 9. La valeur 0,3 ne lui correspond pas du tout."
         }
       ],
-      "coverage_label": "Exemples de moteurs et taux de dilution",
-      "learning_objective": "Associer un moteur d’exemple à sa classe de taux de dilution.",
-      "correction_summary": "Il faut comparer chaque moteur à la valeur numérique indiquée. La confusion fréquente consiste à permuter les moteurs à faible dilution et les moteurs à forte dilution, alors que les ordres de grandeur sont très différents.",
-      "course_clarification": "Les moteurs à faible dilution ont un by-pass ratio inférieur à 1, tandis que les moteurs de transport modernes ont souvent un by-pass ratio nettement supérieur à 1. Les exemples donnés permettent surtout de mémoriser des ordres de grandeur.",
+      "coverage_label": "Exemples de moteurs à faible taux de dilution",
+      "learning_objective": "Reconnaître un moteur subsonique à faible taux de dilution et associer correctement l’exemple à sa valeur de \\(T\\).",
+      "correction_summary": "La bonne réponse est le Rolls Royce Conway avec \\(T = 0,3\\). Le piège est de mélanger les exemples subsoniques, supersoniques et les moteurs à fort taux de dilution.",
+      "course_clarification": "Un faible taux de dilution caractérise ici certains moteurs subsoniques et supersoniques. Il faut mémoriser à la fois le domaine de vol et la valeur de \\(T\\) associée à chaque exemple.",
       "source_refs": []
     },
     {
       "question_id": "S4-1-Q3",
-      "prompt": "Quel couple moteur–valeur de taux de dilution est correctement associé à une application supersonique ?",
+      "prompt": "Parmi les propositions suivantes, laquelle correspond à un exemple subsonique à fort taux de dilution ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le SNECMA M88 du Rafale est donné avec un taux de dilution de 0,3.",
+          "text": "Le Trent 1000, monté sur A350 et B787, est donné avec \\(T \\approx 11\\).",
           "is_correct": true,
-          "explanation": "Vrai : c’est l’exemple supersonique à faible dilution explicitement cité avec la valeur 0,3."
+          "explanation": "C’est l’exemple subsonique à fort taux de dilution cité avec la plus grande valeur, environ 11. L’association moteur-avion et l’ordre de grandeur sont corrects."
         },
         {
           "id": "B",
-          "text": "Le Rolls-Royce Conway du B707 est donné avec un taux de dilution de 11.",
+          "text": "Le PW JT8D du B727, Caravelle 12 et MD80 est donné avec \\(T \\approx 5\\).",
           "is_correct": false,
-          "explanation": "Faux : 11 correspond au Trent 1000. Le Conway est au contraire donné autour de 0,3."
+          "explanation": "Le JT8D est un moteur à faible taux de dilution, avec \\(T = 0{,}9\\), pas 5. Le piège est de lui attribuer une valeur typique d’un moteur moderne à fort taux de dilution."
         },
         {
           "id": "C",
-          "text": "Le Kuznetsov NK144 du Tu-144 est donné avec un taux de dilution de 5.",
+          "text": "Le Kuznetsov NK144 du Tu-144 est donné avec \\(T \\approx 11\\).",
           "is_correct": false,
-          "explanation": "Faux : le NK144 est un moteur supersonique à faible dilution, autour de 0,6."
+          "explanation": "Le NK144 est bien cité comme moteur supersonique à faible dilution, mais sa valeur est \\(T = 0{,}6\\), pas 11."
         },
         {
           "id": "D",
-          "text": "Le General Electric F404-GE402 du F18 Hornet est donné avec un taux de dilution de 0,9.",
+          "text": "Le Rolls Royce Conway du B707 et DC8 est un exemple subsonique à fort taux de dilution avec \\(T \\approx 4\\).",
           "is_correct": false,
-          "explanation": "Faux : 0,9 correspond au PW JT8D. Le F404-GE402 est donné autour de 0,34."
+          "explanation": "Le Conway est un exemple subsonique à faible dilution, avec \\(T = 0{,}3\\). La valeur 4 correspond à un autre type de moteur, pas à lui."
         },
         {
           "id": "E",
-          "text": "Le PW4168 de l’A330 est un exemple de moteur supersonique à faible dilution.",
+          "text": "Le SNECMA M88 du Rafale est donné avec \\(T \\approx 9\\).",
           "is_correct": false,
-          "explanation": "Faux : le PW4168 est un moteur de transport subsonique à forte dilution, autour de 5."
+          "explanation": "Le M88 est à faible dilution avec \\(T = 0{,}3\\). La valeur 9 est associée à un moteur comme le GE90-115B, pas au M88."
         }
       ],
-      "coverage_label": "Moteurs supersoniques à faible dilution",
-      "learning_objective": "Identifier un moteur supersonique à faible taux de dilution et sa valeur caractéristique.",
-      "correction_summary": "Le raisonnement attendu repose sur l’association entre l’application supersonique et le faible taux de dilution. L’erreur classique consiste à attribuer à un moteur les valeurs d’un autre exemple voisin ou à confondre les familles subsoniques et supersoniques.",
-      "course_clarification": "Les moteurs supersoniques cités ont tous un taux de dilution inférieur à 1. Dans les exemples donnés, le M88 est à 0,3, le F404-GE402 à 0,34 et le NK144 à 0,6.",
+      "coverage_label": "Exemples de moteurs à fort taux de dilution",
+      "learning_objective": "Associer un moteur subsonique à fort taux de dilution à sa valeur de \\(T\\) et éviter les confusions avec les moteurs à faible dilution.",
+      "correction_summary": "La bonne réponse est le Trent 1000 avec \\(T \\approx 11\\). Le principal piège consiste à permuter les valeurs entre moteurs anciens à faible dilution et turbofans modernes à fort taux de dilution.",
+      "course_clarification": "Un fort taux de dilution signifie qu’une grande partie de l’air contourne le cœur du moteur. Les moteurs modernes de transport civil ont des valeurs de \\(T\\) nettement supérieures à 1.",
       "source_refs": []
     },
     {
       "question_id": "S4-1-Q4",
-      "prompt": "À propos des relations de puissance d’un turbopropulseur, quelle affirmation est correcte ?",
+      "prompt": "Quelle expression donne correctement la puissance sur l’arbre d’un turbopropulseur ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La relation entre puissance et traction de l’hélice est \\(P = T \\times V_0 \\times \\eta_h\\).",
+          "text": "La puissance sur l’arbre s’écrit \\(P = C \\times 60 / (2\\pi N_h)\\).",
           "is_correct": false,
-          "explanation": "Faux : la relation donnée est \\(P \\times \\eta_h = T \\times V_0\\). Le rendement se place donc de l’autre côté de l’égalité."
+          "explanation": "Cette écriture inverse la relation correcte. Elle ferait décroître la puissance quand la vitesse de rotation augmente, ce qui ne correspond pas à la formule donnée."
         },
         {
           "id": "B",
-          "text": "La puissance sur l’arbre est indépendante du couple.",
+          "text": "La puissance sur l’arbre s’écrit \\(P = C \\times N_h\\) sans facteur de conversion.",
           "is_correct": false,
-          "explanation": "Faux : le couple est une grandeur déterminante de la puissance transmise par l’hélice."
+          "explanation": "Le produit \\(C \\times N_h\\) ne suffit pas, car il manque le passage des tours/minute aux unités cohérentes de puissance. Le facteur \\(2\\pi/60\\) est indispensable."
         },
         {
           "id": "C",
-          "text": "La vitesse de rotation de l’hélice doit être exprimée en tours par minute sans conversion dans la formule.",
+          "text": "La puissance sur l’arbre dépend directement du rayon de l’hélice et non du couple.",
           "is_correct": false,
-          "explanation": "Faux : la formule comporte le facteur \\(60\\) pour convertir les tours par minute en tours par seconde dans l’expression de la puissance."
+          "explanation": "La relation donnée relie la puissance au **couple** et à la vitesse de rotation, pas au rayon. Le rayon n’apparaît pas dans cette formule."
         },
         {
           "id": "D",
-          "text": "L’hélice fournit une poussée mais ne délivre jamais de puissance.",
+          "text": "La puissance sur l’arbre s’exprime en degrés par seconde.",
           "is_correct": false,
-          "explanation": "Faux : l’hélice transforme la puissance mécanique en traction. Elle est bien associée à une puissance sur l’arbre."
+          "explanation": "La puissance s’exprime en watts. Les degrés par seconde sont une unité de vitesse angulaire, pas de puissance."
         },
         {
           "id": "E",
-          "text": "La puissance sur l’arbre vérifie \\(P = C \\times \\dfrac{2\\pi N_h}{60}\\).",
+          "text": "La puissance sur l’arbre s’écrit \\(P = C \\times 2\\pi N_h / 60\\).",
           "is_correct": true,
-          "explanation": "Vrai : la puissance dépend du couple sur l’arbre et de la vitesse de rotation de l’hélice, avec cette écriture exacte."
+          "explanation": "C’est la relation demandée : la puissance dépend du couple \\(C\\) et de la vitesse de rotation \\(N_h\\). Le facteur \\(2\\pi/60\\) assure la conversion de tours par minute en radians par seconde."
         }
       ],
-      "coverage_label": "Puissance d’un turbopropulseur",
-      "learning_objective": "Lire et utiliser la formule reliant couple, vitesse de rotation et puissance sur l’arbre.",
-      "correction_summary": "Il faut reconnaître que la puissance sur l’arbre dépend du couple et de la vitesse de rotation. Une confusion fréquente consiste à mélanger la relation de puissance propulsive \\(P\\eta_h = TV_0\\) avec la formule de puissance mécanique \\(P = C\\,2\\pi N_h/60\\).",
-      "course_clarification": "Dans un turbopropulseur, l’hélice transforme la puissance mécanique fournie sur l’arbre en traction. La relation \\(P = C \\times \\dfrac{2\\pi N_h}{60}\\) relie directement le couple et la vitesse de rotation à la puissance.",
+      "coverage_label": "Puissance sur l’arbre (SHP)",
+      "learning_objective": "Écrire et utiliser la formule reliant puissance, couple et vitesse de rotation de l’hélice.",
+      "correction_summary": "La bonne formule est \\(P = C \\times 2\\pi N_h / 60\\). Le piège principal est d’oublier le facteur de conversion ou de remplacer le couple par une autre grandeur.",
+      "course_clarification": "Le turbopropulseur transmet une puissance mécanique à l’hélice. Cette puissance dépend du couple sur l’arbre et de la vitesse de rotation de l’hélice.",
       "source_refs": []
     },
     {
       "question_id": "S4-1-Q5",
-      "prompt": "À propos de l’ESHP et de la consommation spécifique d’un turbopropulseur, quelle affirmation est correcte ?",
+      "prompt": "Quelle affirmation est correcte à propos de la puissance totale équivalente et de la consommation spécifique ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Pour le PW120, 2 000 SHP et 250 lb de poussée résiduelle donnent 1 900 ESHP.",
+          "text": "1 SHP fournit environ 2,5 N de poussée résiduelle.",
           "is_correct": false,
-          "explanation": "Faux : le calcul correct est \\(2000 + 250/2{,}5 = 2100\\) ESHP."
+          "explanation": "L’ordre de grandeur et l’unité sont faux. La relation donnée est \\(1\\) SHP \\(\\approx 2{,}5\\) **lb** de poussée résiduelle, pas des newtons."
         },
         {
           "id": "B",
-          "text": "La consommation spécifique s’écrit \\(C_{sp} = \\dfrac{P}{C_h}\\).",
+          "text": "La puissance totale équivalente s’écrit \\(ESHP = SHP + Jet\\ Thrust \\times 2{,}5\\).",
           "is_correct": false,
-          "explanation": "Faux : l’écriture correcte est l’inverse, soit \\(C_{sp} = \\dfrac{C_h}{P}\\)."
+          "explanation": "Le terme correct est une division par 2,5, pas une multiplication. La formule sert à convertir la poussée résiduelle en équivalent puissance."
         },
         {
           "id": "C",
-          "text": "La puissance totale équivalente s’écrit \\(\\mathrm{ESHP} = \\mathrm{SHP} + \\dfrac{\\text{Jet Thrust}}{2{,}5}\\).",
+          "text": "Pour le PW120, \\(2000\\) SHP et \\(250\\) lb de poussée résiduelle donnent \\(ESHP = 2100\\).",
           "is_correct": true,
-          "explanation": "Vrai : la poussée résiduelle est convertie en puissance équivalente avec le facteur 2,5 indiqué."
+          "explanation": "Le calcul est exact : \\(ESHP = SHP + Jet\\ Thrust/2{,}5 = 2000 + 250/2{,}5 = 2100\\). C’est l’exemple numérique donné pour montrer comment intégrer la poussée résiduelle."
         },
         {
           "id": "D",
-          "text": "La consommation spécifique est exprimée uniquement en newtons par heure.",
+          "text": "La consommation spécifique s’écrit \\(Csp = P/Ch\\).",
           "is_correct": false,
-          "explanation": "Faux : les unités données sont du type \\(\\mathrm{kg/h.W}\\) ou \\(\\mathrm{lb/h.SHP}\\), pas des newtons par heure."
+          "explanation": "La formule est inversée. La consommation spécifique est définie par \\(Csp = Ch/P\\), c’est-à-dire la masse de carburant nécessaire par unité de puissance."
         },
         {
           "id": "E",
-          "text": "Le PW127F est cité avec une consommation spécifique de 0,459 lb/h.SHP au décollage.",
+          "text": "Le PW127F est donné avec une consommation spécifique de \\(0{,}459\\) kg/h.W au décollage.",
           "is_correct": false,
-          "explanation": "Faux : la valeur donnée est 0,459 lb.h.SHP au Take Off, pas une écriture inversée ni une autre unité."
+          "explanation": "L’exemple fourni est \\(0{,}459\\) **lb.h.SHP** au Take Off. L’unité et l’écriture sont donc différentes de celles proposées ici."
         }
       ],
-      "coverage_label": "ESHP et consommation spécifique",
-      "learning_objective": "Utiliser la formule de l’ESHP et reconnaître l’expression de la consommation spécifique.",
-      "correction_summary": "Le raisonnement attendu consiste à convertir la poussée résiduelle en puissance équivalente avec le facteur 2,5, puis à distinguer clairement puissance et consommation spécifique. La confusion fréquente est d’inverser la formule de \\(C_{sp}\\) ou de mal lire l’unité associée au résultat.",
-      "course_clarification": "L’ESHP additionne la puissance sur l’arbre et l’équivalent de la poussée résiduelle. La consommation spécifique compare la masse de carburant consommée à la puissance fournie, ce qui permet de comparer des turbopropulseurs entre eux.",
+      "coverage_label": "Puissance totale équivalente (ESHP) et consommation spécifique",
+      "learning_objective": "Calculer une ESHP à partir d’une poussée résiduelle et reconnaître la définition de la consommation spécifique.",
+      "correction_summary": "La bonne réponse est le calcul du PW120 : \\(2000 + 250/2{,}5 = 2100\\) ESHP. Le piège principal est de confondre SHP et ESHP ou d’inverser la formule de consommation spécifique.",
+      "course_clarification": "L’ESHP ajoute à la puissance sur l’arbre l’effet d’une poussée résiduelle des gaz. La consommation spécifique compare la masse de carburant consommée à la puissance fournie ; plus elle est faible, plus le moteur est efficient.",
       "source_refs": []
     }
   ],

@@ -5,217 +5,175 @@
   "questions": [
     {
       "question_id": "S1-1-Q1",
-      "prompt": "Quelle affirmation décrit correctement l’alimentation du AC SYSTEM en vol ?",
+      "prompt": "Quelle source alimente principalement le **AC SYSTEM** en vol ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le AC SYSTEM est alimenté principalement par les batteries.",
+          "text": "Le **AC SYSTEM** en vol est alimenté principalement par les batteries.",
           "is_correct": false,
-          "explanation": "Faux : les batteries servent à d’autres fonctions et à des alimentations de secours, pas à l’alimentation principale du AC SYSTEM en vol."
+          "explanation": "Les batteries n’alimentent pas l’AC en régime normal de vol ; elles interviennent dans l’alimentation de secours via d’autres équipements."
         },
         {
           "id": "B",
-          "text": "Le AC SYSTEM est alimenté principalement par les TR 1 et TR 2.",
+          "text": "Le **AC SYSTEM** en vol est alimenté principalement par l’**APU GEN** uniquement.",
           "is_correct": false,
-          "explanation": "Faux : les Transformer Rectifier alimentent surtout le réseau DC à partir de l’AC."
+          "explanation": "L’APU GEN peut alimenter le réseau AC, mais il n’est pas présenté comme la source principale en vol."
         },
         {
           "id": "C",
-          "text": "Le AC SYSTEM est alimenté principalement par l’EMER GEN en fonctionnement normal.",
+          "text": "Le **AC SYSTEM** en vol est alimenté principalement par les **EXT PWR A** et **EXT PWR B**.",
           "is_correct": false,
-          "explanation": "Faux : l’EMER GEN est une source de secours, pas la source principale en vol."
+          "explanation": "Les sources externes concernent l’alimentation au sol, pas l’alimentation principale en vol."
         },
         {
           "id": "D",
-          "text": "Le AC SYSTEM est alimenté principalement par les IDG des moteurs.",
+          "text": "Le **AC SYSTEM** en vol est alimenté principalement par les **IDG** des moteurs.",
           "is_correct": true,
-          "explanation": "Vrai : la source principale en vol est constituée par les Integrated Drive Generators entraînés par les moteurs."
+          "explanation": "Le schéma indique que l’alimentation AC en vol provient d’abord des Integrated Drive Generators entraînés par les moteurs."
         },
         {
           "id": "E",
-          "text": "Le AC SYSTEM est alimenté principalement par l’APU TR.",
+          "text": "Le **AC SYSTEM** en vol est alimenté principalement par le **STATIC INVERTER**.",
           "is_correct": false,
-          "explanation": "Faux : l’APU TR concerne la conversion vers le DC, alors que la source AC de l’APU est le GEN."
+          "explanation": "Le static inverter appartient à l’architecture de secours et ne constitue pas la source principale d’alimentation AC en vol."
         }
       ],
-      "coverage_label": "Sources d’alimentation AC en vol",
-      "learning_objective": "Identifier la source principale du AC SYSTEM en vol.",
-      "correction_summary": "La bonne réponse est celle qui relie directement l’alimentation en vol aux IDG moteurs. Les confusions fréquentes viennent des sources de secours ou de conversion DC, qui ne jouent pas le rôle principal.",
-      "course_clarification": "En vol, l’alimentation AC principale vient des IDG des moteurs. Les batteries, les TR et l’EMER GEN interviennent dans d’autres rôles ou en secours.",
+      "coverage_label": "Sources AC en vol",
+      "learning_objective": "Identifier la source principale d’alimentation du réseau AC en vol.",
+      "correction_summary": "La source principale en vol est l’IDG entraîné par le moteur. Piège classique : confondre alimentation normale en vol et alimentation de secours ou au sol.",
+      "course_clarification": "Un **IDG** est un générateur entraîné par moteur. L’**APU GEN** peut aussi alimenter le réseau AC, mais il ne remplace pas la fonction principale des IDG en vol.",
       "source_refs": []
     },
     {
       "question_id": "S1-1-Q2",
-      "prompt": "À propos des Integrated Drive Generators, quelle affirmation est correcte ?",
+      "prompt": "Comment est implanté un **IDG** sur l’avion ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il y a un seul IDG pour l’ensemble des moteurs.",
+          "text": "Il y a un seul **IDG** pour l’ensemble de l’avion.",
           "is_correct": false,
-          "explanation": "Faux : la génération AC en vol est organisée avec un IDG associé à chaque moteur."
+          "explanation": "Le schéma montre deux IDG, chacun dédié à un moteur ; l’architecture n’est donc pas centralisée sur un seul IDG."
         },
         {
           "id": "B",
-          "text": "Il y a un IDG par moteur.",
+          "text": "Il y a un **IDG par moteur**, directement connecté au **gearbox pad** du moteur correspondant.",
           "is_correct": true,
-          "explanation": "Vrai : le schéma indique une répartition un IDG pour chaque moteur."
+          "explanation": "Le cartouche du schéma précise qu’un IDG est associé à chaque moteur et raccordé directement au pad de boîte de transmission du moteur concerné."
         },
         {
           "id": "C",
-          "text": "Chaque IDG est associé au générateur de l’APU.",
+          "text": "Chaque **IDG** est directement connecté au **train avant** de l’avion.",
           "is_correct": false,
-          "explanation": "Faux : l’IDG appartient à la chaîne moteur, alors que l’APU possède son propre GEN."
+          "explanation": "Le lien mécanique visé est le moteur via le gearbox pad, pas le train avant."
         },
         {
           "id": "D",
-          "text": "Chaque IDG alimente uniquement le DC SYSTEM.",
+          "text": "Chaque **IDG** est entraîné par l’**APU** lorsque l’avion est en vol.",
           "is_correct": false,
-          "explanation": "Faux : l’IDG alimente d’abord le réseau AC ; le DC est obtenu ensuite via conversion."
+          "explanation": "L’APU possède son propre générateur ; les IDG sont, eux, entraînés par les moteurs."
         },
         {
           "id": "E",
-          "text": "Chaque IDG est une source de secours utilisée seulement au sol.",
+          "text": "Chaque **IDG** est branché sur le **DC SYSTEM** sans passer par le réseau AC.",
           "is_correct": false,
-          "explanation": "Faux : l’IDG est une source principale d’alimentation AC en vol, pas une simple source au sol."
+          "explanation": "L’IDG produit de l’AC et alimente le réseau AC ; le DC est une autre partie de l’architecture électrique."
         }
       ],
-      "coverage_label": "IDG et répartition par moteur",
-      "learning_objective": "Relier chaque IDG au moteur correspondant.",
-      "correction_summary": "La réponse correcte repose sur l’association un moteur = un IDG. L’erreur classique consiste à confondre cette architecture avec une source unique pour tout l’avion ou avec l’APU.",
-      "course_clarification": "Un IDG est un générateur entraîné par le moteur. L’architecture indiquée est simple : un IDG par moteur.",
+      "coverage_label": "Implantation des IDG",
+      "learning_objective": "Lire l’implantation mécanique et fonctionnelle d’un IDG sur un moteur.",
+      "correction_summary": "Un IDG est associé à chaque moteur et raccordé au gearbox pad du moteur correspondant. Le piège est de le confondre avec une source unique ou avec l’APU.",
+      "course_clarification": "Un **gearbox pad** est un point de prise sur la boîte de transmission moteur. L’IDG y est lié mécaniquement pour produire l’électricité AC à partir de l’énergie moteur.",
       "source_refs": []
     },
     {
       "question_id": "S1-1-Q3",
-      "prompt": "Quelle liaison mécanique est correcte pour un IDG moteur ?",
+      "prompt": "Quel bloc assure la commande et la surveillance d’un **IDG** moteur ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Chaque IDG est directement connecté au gearbox pad du moteur correspondant.",
+          "text": "Chaque **IDG** est contrôlé et surveillé par sa **GCU** associée.",
           "is_correct": true,
-          "explanation": "Vrai : le texte précise une connexion directe sur le gearbox pad du moteur associé."
+          "explanation": "Le document associe explicitement chaque IDG à sa Generator Control Unit, qui assure la commande et la surveillance."
         },
         {
           "id": "B",
-          "text": "Chaque IDG est directement connecté à la batterie principale.",
+          "text": "Chaque **IDG** est contrôlé et surveillé par la **GAPCU** associée.",
           "is_correct": false,
-          "explanation": "Faux : la batterie n’est pas la liaison mécanique de l’IDG."
+          "explanation": "La GAPCU est associée à l’APU, pas aux IDG moteur."
         },
         {
           "id": "C",
-          "text": "Chaque IDG est directement connecté au panneau de puissance externe.",
+          "text": "Chaque **IDG** est contrôlé et surveillé par le **BCL** associé.",
           "is_correct": false,
-          "explanation": "Faux : le panneau de puissance externe concerne une autre source d’alimentation."
+          "explanation": "Le BCL concerne la gestion de charge batterie dans l’architecture DC, pas le pilotage des IDG."
         },
         {
           "id": "D",
-          "text": "Chaque IDG est directement connecté au train avant.",
+          "text": "Chaque **IDG** est contrôlé et surveillé par l’**EMER GCU** associée.",
           "is_correct": false,
-          "explanation": "Faux : le train avant n’a aucun lien avec l’entraînement mécanique de l’IDG."
+          "explanation": "L’EMER GCU est liée au générateur de secours, pas aux générateurs entraînés par les moteurs."
         },
         {
           "id": "E",
-          "text": "Chaque IDG est directement connecté au static inverter.",
+          "text": "Chaque **IDG** est contrôlé et surveillé directement par l’**AC SYSTEM**, sans unité dédiée.",
           "is_correct": false,
-          "explanation": "Faux : le static inverter est lié à la conversion ou au secours AC, pas à l’entraînement de l’IDG."
+          "explanation": "Le schéma montre au contraire une unité dédiée de contrôle et de surveillance pour chaque IDG."
         }
       ],
-      "coverage_label": "Connexion mécanique des IDG",
-      "learning_objective": "Reconnaître le point d’entraînement mécanique d’un IDG.",
-      "correction_summary": "Il faut repérer le lien mécanique exact : l’IDG est monté sur le moteur et raccordé au gearbox pad correspondant. Les autres propositions mélangent alimentation électrique et implantation mécanique.",
-      "course_clarification": "Le gearbox pad est le point de prise de mouvement du moteur pour entraîner l’IDG. Ce n’est ni une source électrique ni un élément de distribution.",
+      "coverage_label": "Commande et surveillance des IDG",
+      "learning_objective": "Associer correctement l’organe de contrôle à un IDG moteur.",
+      "correction_summary": "La bonne unité est la GCU, une par IDG. Piège fréquent : attribuer à l’APU ou au secours un rôle de contrôle des générateurs moteur.",
+      "course_clarification": "Une **GCU** est une Generator Control Unit. Elle commande et surveille le générateur associé afin d’assurer un fonctionnement normal et protégé.",
       "source_refs": []
     },
     {
       "question_id": "S1-1-Q4",
-      "prompt": "Quel bloc contrôle et surveille les IDG des moteurs ?",
+      "prompt": "Que montre le schéma à propos de l’**APU** et de son générateur ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Chaque IDG est contrôlé et surveillé par la GAPCU.",
+          "text": "L’**APU** ne possède aucun générateur électrique.",
           "is_correct": false,
-          "explanation": "Faux : la GAPCU est associée à l’APU, pas aux IDG moteur."
+          "explanation": "L’APU est explicitement reliée à un bloc **GEN**, donc l’affirmation est contraire au schéma."
         },
         {
           "id": "B",
-          "text": "Chaque IDG est contrôlé et surveillé par la BCL.",
+          "text": "L’**APU GEN** alimente uniquement le **DC SYSTEM**.",
           "is_correct": false,
-          "explanation": "Faux : la Battery Charge Limiter n’est pas le bloc de commande des IDG."
+          "explanation": "Le générateur de l’APU est représenté sur la partie AC ; le DC relève d’autres convertisseurs et sources."
         },
         {
           "id": "C",
-          "text": "Chaque IDG est contrôlé et surveillé par le static inverter.",
+          "text": "L’**APU GEN** est contrôlé par la **GCU** de chaque moteur.",
           "is_correct": false,
-          "explanation": "Faux : le static inverter convertit l’énergie électrique, il ne pilote pas les IDG."
+          "explanation": "Les GCU associées aux moteurs pilotent les IDG, alors que l’APU est associée à la GAPCU."
         },
         {
           "id": "D",
-          "text": "Chaque IDG est contrôlé et surveillé par le TR 1.",
+          "text": "L’**APU GEN** n’est utilisable qu’avec les moteurs arrêtés en vol.",
           "is_correct": false,
-          "explanation": "Faux : un TR convertit l’AC en DC, il n’assure pas la commande des IDG."
+          "explanation": "Le document ne réserve pas l’APU GEN à cette situation ; il le présente comme une source AC disponible à bord, sans cette restriction."
         },
         {
           "id": "E",
-          "text": "Chaque IDG est contrôlé et surveillé par sa GCU associée.",
+          "text": "L’**APU** possède un **GEN** capable d’alimenter le **AC SYSTEM**.",
           "is_correct": true,
-          "explanation": "Vrai : la Generator Control Unit associée assure le contrôle et la surveillance de l’IDG."
+          "explanation": "Le schéma indique clairement que l’APU dispose d’un générateur AC qui peut alimenter le réseau AC de bord."
         }
       ],
-      "coverage_label": "Contrôle des IDG par GCU",
-      "learning_objective": "Associer l’IDG moteur à sa GCU.",
-      "correction_summary": "La bonne association est IDG moteur ↔ GCU. La confusion fréquente vient de la ressemblance entre les acronymes de commande : la GAPCU concerne l’APU, pas les moteurs.",
-      "course_clarification": "La GCU est l’unité de contrôle et de surveillance liée à un IDG moteur. Elle gère la partie commande du générateur entraîné par le moteur.",
-      "source_refs": []
-    },
-    {
-      "question_id": "S1-1-Q5",
-      "prompt": "Quelle affirmation est correcte au sujet de l’APU dans la génération AC ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "L’APU ne possède aucun générateur électrique.",
-          "is_correct": false,
-          "explanation": "Faux : l’APU est justement représenté avec un GEN."
-        },
-        {
-          "id": "B",
-          "text": "L’APU alimente directement le DC SYSTEM sans passer par l’AC SYSTEM.",
-          "is_correct": false,
-          "explanation": "Faux : la génération décrite ici est d’abord AC ; l’alimentation DC relève ensuite des convertisseurs."
-        },
-        {
-          "id": "C",
-          "text": "L’APU possède un générateur (GEN) capable d’alimenter le AC SYSTEM.",
-          "is_correct": true,
-          "explanation": "Vrai : le schéma indique clairement un GEN associé à l’APU, relié au AC SYSTEM."
-        },
-        {
-          "id": "D",
-          "text": "L’APU est contrôlé par la GCU des moteurs.",
-          "is_correct": false,
-          "explanation": "Faux : la commande associée à l’APU est la GAPCU, pas la GCU moteur."
-        },
-        {
-          "id": "E",
-          "text": "L’APU est relié au AC SYSTEM uniquement par les TR 1 et TR 2.",
-          "is_correct": false,
-          "explanation": "Faux : les TR sont des convertisseurs liés au DC ; le GEN de l’APU est la source AC reliée au réseau."
-        }
-      ],
-      "coverage_label": "APU GEN et GAPCU",
-      "learning_objective": "Identifier le rôle AC de l’APU et son bloc de commande associé.",
-      "correction_summary": "La réponse correcte combine deux idées : l’APU possède un GEN et ce générateur peut alimenter le AC SYSTEM. L’erreur classique est de mélanger l’APU avec les TR ou avec la GCU des moteurs.",
-      "course_clarification": "L’APU fournit une source AC via son GEN. Le bloc associé à cette chaîne est la GAPCU, alors que les GCU sont liées aux générateurs des moteurs.",
+      "coverage_label": "Générateur APU",
+      "learning_objective": "Identifier la fonction AC du générateur APU et son rôle dans l’architecture électrique.",
+      "correction_summary": "L’APU dispose bien d’un générateur AC capable d’alimenter le réseau. Le piège est de le confondre avec une source DC ou de lui attribuer la commande des moteurs.",
+      "course_clarification": "**APU** signifie unité de puissance auxiliaire. Son générateur, noté **GEN**, appartient à la chaîne d’alimentation AC et peut contribuer à alimenter le réseau de bord.",
       "source_refs": []
     }
   ],
   "subpart_id": "S1",
   "anchor_slide_id": "S1-1",
-  "question_count_target": 5,
+  "question_count_target": 4,
   "title": "QCM - Génération AC en vol : panorama des sources"
 }

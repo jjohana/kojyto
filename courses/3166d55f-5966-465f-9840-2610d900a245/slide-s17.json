@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S17_Q1",
-      "prompt": "Parmi les affirmations suivantes sur le déploiement du train d’atterrissage, laquelle est exacte ?",
+      "question_id": "S17-Q1",
+      "prompt": "Quelle affirmation décrit correctement le déploiement du train d’atterrissage ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le déploiement du train d’atterrissage est toujours une translation pure.",
+          "text": "Le déploiement du train d’atterrissage est toujours un mouvement purement rectiligne.",
           "is_correct": false,
-          "explanation": "Faux : la translation pure ne suffit pas à décrire le mécanisme indiqué, qui peut aussi comporter une rotation."
+          "explanation": "Un mouvement purement rectiligne ne suffit pas à décrire l’ouverture ou le repli d’un train, car un pivotement est souvent présent."
         },
         {
           "id": "B",
-          "text": "Le déploiement du train d’atterrissage est toujours une rotation pure autour d’un axe fixe.",
+          "text": "Le déploiement du train d’atterrissage est toujours un mouvement purement de rotation autour d’un axe fixe.",
           "is_correct": false,
-          "explanation": "Faux : le mouvement peut inclure une translation, donc il n’est pas limité à une rotation seule."
+          "explanation": "La rotation seule ne décrit pas toute la cinématique du train, puisque des pièces peuvent aussi se translater pendant le mécanisme."
         },
         {
           "id": "C",
-          "text": "La modélisation cinématique est inutile pour décrire ce type de mouvement.",
+          "text": "Le déploiement du train d’atterrissage se mesure principalement à l’aide de la vitesse angulaire des pales d’hélice.",
           "is_correct": false,
-          "explanation": "Faux : la modélisation est précisément nécessaire pour décrire correctement un mouvement composé."
+          "explanation": "La vitesse angulaire des pales concerne l’hélice, pas le train d’atterrissage. Ici, on étudie le mouvement d’un mécanisme de sortie/rentrée du train."
         },
         {
           "id": "D",
           "text": "Le déploiement du train d’atterrissage peut combiner une translation et une rotation.",
           "is_correct": true,
-          "explanation": "Vrai : la mise en position du train ne se réduit pas à un simple glissement ; le mouvement peut associer un déplacement rectiligne et un pivotement."
+          "explanation": "Le train ne se contente pas forcément d’un simple glissement : selon le mécanisme, certaines parties se déplacent en translation tandis que d’autres pivotent en rotation. C’est précisément l’idée mise en avant ici."
         },
         {
           "id": "E",
-          "text": "Ce mouvement ne peut pas être représenté graphiquement au cours du temps.",
+          "text": "Le déploiement du train d’atterrissage ne nécessite jamais de modélisation géométrique du mouvement.",
           "is_correct": false,
-          "explanation": "Faux : toute évolution temporelle de position, vitesse ou angle peut être représentée par des courbes."
+          "explanation": "Une modélisation du mouvement est nécessaire pour distinguer les translations, les rotations et leurs enchaînements."
         }
       ],
-      "coverage_label": "Déploiement du train d’atterrissage",
-      "learning_objective": "Identifier qu’un mécanisme aéronautique peut combiner translation et rotation.",
-      "correction_summary": "Le raisonnement attendu consiste à reconnaître un mouvement composé. L’erreur fréquente est de vouloir réduire le mécanisme à une seule translation ou à une seule rotation.",
-      "course_clarification": "Un mouvement réel peut associer plusieurs types de déplacement. Ici, la position du train s’étudie comme une combinaison de translation et de rotation.",
+      "coverage_label": "Applications aéronautiques typiques — train d’atterrissage",
+      "learning_objective": "Identifier la nature composite du mouvement du train d’atterrissage.",
+      "correction_summary": "La bonne réponse associe bien translation et rotation. Le piège consiste à réduire le mécanisme à un seul type de mouvement.",
+      "course_clarification": "Un mécanisme de train d’atterrissage peut comporter plusieurs solides en mouvement. Pour l’analyser correctement, il faut repérer les parties en translation et celles en rotation.",
       "source_refs": []
     },
     {
-      "question_id": "S17_Q2",
-      "prompt": "Parmi les affirmations suivantes sur la vitesse de montée d’un avion pendant le décollage, laquelle est exacte ?",
+      "question_id": "S17-Q2",
+      "prompt": "Quelle affirmation est correcte à propos de la vitesse de montée d’un avion pendant le décollage ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L’aire sous la courbe d’altitude en fonction du temps donne directement la vitesse verticale.",
+          "text": "La vitesse de montée correspond à l’aire sous la courbe de hauteur en fonction du temps.",
           "is_correct": false,
-          "explanation": "Faux : l’aire sous une courbe de position donne un résultat de type intégral, pas la vitesse."
+          "explanation": "L’aire sous une courbe de position ne donne pas la vitesse ; elle n’a pas cette interprétation en cinématique."
         },
         {
           "id": "B",
-          "text": "La pente de la courbe d’altitude en fonction du temps donne la vitesse verticale.",
+          "text": "La vitesse de montée s’obtient comme la dérivée de la hauteur par rapport au temps.",
           "is_correct": true,
-          "explanation": "Vrai : la vitesse est la dérivée de la position, donc la pente de la courbe d’altitude donne la vitesse de montée."
+          "explanation": "Si la hauteur est notée par exemple \\\\(z(t)\\\\), alors la vitesse verticale de montée est \\\\(v_z(t)=\\frac{dz}{dt}\\\\). C’est une application directe de la cinématique."
         },
         {
           "id": "C",
-          "text": "La vitesse de montée s’exprime naturellement en rad/s.",
+          "text": "La vitesse de montée est toujours une grandeur angulaire exprimée en rad/s.",
           "is_correct": false,
-          "explanation": "Faux : le rad/s correspond à une vitesse angulaire, alors qu’une vitesse de montée est une grandeur linéaire en m/s."
+          "explanation": "La montée d’un avion relève d’une vitesse linéaire, liée à une variation de position, et non d’une vitesse angulaire."
         },
         {
           "id": "D",
-          "text": "La dérivée de la vitesse par rapport au temps donne la position.",
+          "text": "La vitesse de montée se calcule en dérivant la vitesse par rapport à la position uniquement, sans utiliser le temps.",
           "is_correct": false,
-          "explanation": "Faux : la dérivée de la vitesse donne l’accélération, pas la position."
+          "explanation": "La définition usuelle de la vitesse de montée passe par la variation de hauteur au cours du temps. Une dérivation par rapport à la position seule ne donne pas cette grandeur."
         },
         {
           "id": "E",
-          "text": "La vitesse de montée ne dépend jamais du temps.",
+          "text": "La vitesse de montée ne peut pas être représentée graphiquement à partir d’une courbe de hauteur.",
           "is_correct": false,
-          "explanation": "Faux : pendant le décollage, la vitesse peut varier et doit justement être suivie en fonction du temps."
+          "explanation": "Une courbe de hauteur permet justement d’obtenir la vitesse par sa pente, donc elle se prête à une représentation graphique exploitable."
         }
       ],
-      "coverage_label": "Vitesse de montée au décollage",
-      "learning_objective": "Relier une courbe d’altitude à la vitesse verticale pendant la montée.",
-      "correction_summary": "Il faut identifier la vitesse comme la pente d’une courbe de position. La confusion la plus fréquente est de confondre pente, aire et dérivée seconde.",
-      "course_clarification": "Pour une position verticale notée en fonction du temps, la pente de la courbe donne la vitesse verticale, et la pente de la vitesse donne l’accélération.",
+      "coverage_label": "Applications aéronautiques typiques — vitesse de montée",
+      "learning_objective": "Relier la vitesse de montée à une dérivation de la position verticale.",
+      "correction_summary": "La bonne relation est celle de la dérivée temporelle de la hauteur. Le piège classique est de confondre vitesse, aire sous la courbe et grandeur angulaire.",
+      "course_clarification": "En cinématique, une vitesse instantanée se lit comme une pente. Pour une montée, on suit la hauteur en fonction du temps et on dérive cette position pour obtenir la vitesse.",
       "source_refs": []
     },
     {
-      "question_id": "S17_Q3",
-      "prompt": "Parmi les affirmations suivantes sur le suivi de trajectoire d’un drone par GPS, laquelle est exacte ?",
+      "question_id": "S17-Q3",
+      "prompt": "Quelle affirmation décrit correctement le suivi de trajectoire d’un drone par capteurs GPS ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Les capteurs GPS fournissent des positions qui permettent de reconstruire la trajectoire du drone.",
+          "text": "Le suivi de trajectoire d’un drone via GPS sert à reconstituer sa position au cours du temps.",
           "is_correct": true,
-          "explanation": "Vrai : un suivi de trajectoire repose d’abord sur des positions mesurées au cours du temps, puis sur leur exploitation."
+          "explanation": "Le GPS fournit des positions successives, ce qui permet de tracer la trajectoire et d’analyser le mouvement du drone dans le temps."
         },
         {
           "id": "B",
-          "text": "Le GPS mesure directement la vitesse angulaire des hélices.",
+          "text": "Le suivi de trajectoire par GPS mesure directement la vitesse angulaire des pales du drone.",
           "is_correct": false,
-          "explanation": "Faux : le GPS sert au positionnement et non à la mesure de la vitesse angulaire d’une pièce tournante."
+          "explanation": "La vitesse angulaire des pales concerne la rotation des hélices, pas la trajectoire spatiale suivie par le drone."
         },
         {
           "id": "C",
-          "text": "Une seule mesure de position suffit pour connaître toute la trajectoire.",
+          "text": "Le suivi de trajectoire par GPS donne uniquement l’accélération normale des pales.",
           "is_correct": false,
-          "explanation": "Faux : une trajectoire est une évolution dans le temps ; une seule position ne donne qu’un point, pas le chemin suivi."
+          "explanation": "Le GPS ne vise pas les contraintes internes des pales ; il sert à localiser le drone et à suivre sa position."
         },
         {
           "id": "D",
-          "text": "Le suivi de trajectoire ne nécessite aucune représentation graphique.",
+          "text": "Le suivi de trajectoire par GPS supprime toute nécessité de repère spatial.",
           "is_correct": false,
-          "explanation": "Faux : les positions mesurées sont souvent visualisées par des courbes ou des tracés pour interpréter le mouvement."
+          "explanation": "Au contraire, il faut un repère pour interpréter les coordonnées fournies par les capteurs et tracer la trajectoire."
         },
         {
           "id": "E",
-          "text": "La trajectoire d’un drone est forcément circulaire.",
+          "text": "Le suivi de trajectoire par GPS ne permet jamais de représenter graphiquement le mouvement.",
           "is_correct": false,
-          "explanation": "Faux : la trajectoire peut être rectiligne, courbe ou complexe selon la manœuvre effectuée."
+          "explanation": "Des positions relevées par GPS peuvent être représentées sur un graphique ou sur une carte pour visualiser le trajet."
         }
       ],
-      "coverage_label": "Suivi de trajectoire d’un drone",
-      "learning_objective": "Comprendre le rôle des mesures GPS dans la reconstruction d’une trajectoire.",
-      "correction_summary": "Le bon raisonnement consiste à relier mesure de position, évolution temporelle et tracé de trajectoire. L’erreur fréquente est de confondre position instantanée et trajectoire complète.",
-      "course_clarification": "Le GPS donne des positions successives. En les ordonnant dans le temps, on obtient la trajectoire et on peut ensuite étudier vitesse et accélération.",
+      "coverage_label": "Applications aéronautiques typiques — drone et GPS",
+      "learning_objective": "Associer les mesures GPS à la reconstitution d’une trajectoire.",
+      "correction_summary": "Le GPS sert ici à reconstruire la position du drone dans le temps. Le piège consiste à confondre localisation de trajectoire et mesures de rotation des hélices.",
+      "course_clarification": "Un capteur GPS fournit des positions successives dans un repère. En reliant ces positions, on obtient la trajectoire et on peut ensuite dériver les données si besoin.",
       "source_refs": []
     },
     {
-      "question_id": "S17_Q4",
-      "prompt": "Parmi les affirmations suivantes sur les pales d’hélice, laquelle est exacte ?",
+      "question_id": "S17-Q4",
+      "prompt": "Quelle affirmation est correcte pour les pales d’hélice ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Pour une pale de rayon \\(R\\), la vitesse linéaire au bout vaut \\(v=\\omega/R\\).",
+          "text": "La relation correcte entre vitesse linéaire et vitesse angulaire est \\\\(v=\\omega/R\\\\).",
           "is_correct": false,
-          "explanation": "Faux : diviser par \\(R\\) donne une unité incohérente pour une vitesse linéaire ; la relation correcte est \\(v=\\omega R\\)."
+          "explanation": "La vitesse linéaire augmente avec le rayon ; elle n’est donc pas divisée par \\\\(R\\\\) mais multipliée par \\\\(R\\\\)."
         },
         {
           "id": "B",
-          "text": "L’accélération normale d’un point de la pale s’écrit \\(a_n=\\alpha R\\).",
+          "text": "L’accélération normale au bout de la pale vérifie \\\\(a_n=\\alpha R\\\\).",
           "is_correct": false,
-          "explanation": "Faux : \\(\\alpha R\\) correspond à l’accélération tangentielle \\(a_t\\), tandis que l’accélération normale vaut \\(a_n=\\omega^2R\\)."
+          "explanation": "\n\\\\(\\alpha R\\\\) donne l’accélération tangentielle, pas l’accélération normale. L’accélération normale dépend de \\\\(\\omega\\\\) au carré."
         },
         {
           "id": "C",
+          "text": "L’accélération normale au bout de la pale est dirigée vers l’extérieur du cercle.",
+          "is_correct": false,
+          "explanation": "L’accélération normale est centripète : elle est dirigée vers le centre de rotation, et non vers l’extérieur."
+        },
+        {
+          "id": "D",
           "text": "La vitesse angulaire s’exprime en m/s.",
           "is_correct": false,
-          "explanation": "Faux : la vitesse angulaire s’exprime en rad/s, pas en m/s."
-        },
-        {
-          "id": "D",
-          "text": "L’accélération normale est dirigée vers le centre de rotation.",
-          "is_correct": false,
-          "explanation": "Faux : cette proposition est vraie physiquement, mais ici elle n’est pas la seule correcte si l’on vérifie l’ensemble ; pour cette question, l’énoncé exact attendu est la relation \\(v=\\omega R\\)."
+          "explanation": "La vitesse angulaire s’exprime en rad/s. Le m/s correspond à une vitesse linéaire."
         },
         {
           "id": "E",
-          "text": "Pour une pale de rayon \\(R\\), la vitesse linéaire au bout vaut \\(v=\\omega R\\).",
+          "text": "Une mesure de vitesse angulaire permet d’évaluer la vitesse linéaire au bout de la pale avec la relation \\\\(v=\\omega R\\\\).",
           "is_correct": true,
-          "explanation": "Vrai : la vitesse tangentielle d’un point situé à la distance \\(R\\) de l’axe est proportionnelle à \\(\\omega\\) et à \\(R\\)."
+          "explanation": "Pour un point situé à la distance \\\\(R\\\\) de l’axe, la vitesse linéaire est proportionnelle à la vitesse angulaire : \\\\(v=\\omega R\\\\). C’est la relation clé pour relier rotation et mouvement linéaire."
         }
       ],
-      "coverage_label": "Grandeurs angulaires et hélice",
-      "learning_objective": "Utiliser la relation entre vitesse angulaire et vitesse linéaire au bout d’une pale.",
-      "correction_summary": "Le calcul attendu relie la rotation à la vitesse tangentielle par \\(v=\\omega R\\). La confusion fréquente vient du mélange entre vitesse angulaire, vitesse linéaire et accélération normale.",
-      "course_clarification": "Dans un mouvement circulaire, \\(\\omega\\) décrit la rotation, \\(v\\) est la vitesse au bord, et \\(a_n\\) pointe vers le centre.",
+      "coverage_label": "Applications aéronautiques typiques — pales d’hélice",
+      "learning_objective": "Utiliser la relation entre vitesse angulaire, vitesse linéaire et accélération normale.",
+      "correction_summary": "La relation correcte est \\\\(v=\\omega R\\\\), et elle permet ensuite d’estimer les effets mécaniques sur la pale. Le piège principal est de confondre accélération tangentielle et accélération normale.",
+      "course_clarification": "Pour une rotation, la vitesse d’un point dépend de son rayon. L’accélération normale est liée au changement de direction du mouvement et pointe vers le centre.",
       "source_refs": []
     },
     {
-      "question_id": "S17_Q5",
-      "prompt": "Parmi les affirmations suivantes sur l’étude cinématique de ces situations aéronautiques, laquelle est exacte ?",
+      "question_id": "S17-Q5",
+      "prompt": "Quelle affirmation résume correctement la logique des applications aéronautiques typiques en cinématique ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La modélisation est inutile si des capteurs fournissent des mesures.",
+          "text": "Chaque situation se limite à une observation visuelle sans calcul ni graphique.",
           "is_correct": false,
-          "explanation": "Faux : les mesures doivent être interprétées à l’aide d’un modèle pour relier positions, vitesses et accélérations."
+          "explanation": "L’observation seule ne suffit pas : l’exploitation cinématique demande des grandeurs calculées et des représentations graphiques."
         },
         {
           "id": "B",
-          "text": "La dérivation sert uniquement à calculer une aire sous une courbe.",
+          "text": "Chaque situation repose uniquement sur une vitesse angulaire, sans position ni accélération.",
           "is_correct": false,
-          "explanation": "Faux : dériver permet d’obtenir une vitesse à partir d’une position ou une accélération à partir d’une vitesse ; l’aire relève de l’intégration."
+          "explanation": "Les applications aéronautiques citées ne se réduisent pas à \\\\(\\omega\\\\) : il faut aussi modéliser les positions et dériver les grandeurs pour obtenir vitesse et accélération."
         },
         {
           "id": "C",
-          "text": "Chaque situation combine modélisation, dérivation et représentation graphique.",
+          "text": "Chaque situation combine la modélisation, la dérivation et la représentation graphique.",
           "is_correct": true,
-          "explanation": "Vrai : l’analyse commence par un modèle, se poursuit par des dérivées pour obtenir vitesse ou accélération, puis s’appuie sur des courbes."
+          "explanation": "L’analyse d’un mouvement commence par un modèle de position, se poursuit par la dérivation pour obtenir vitesse et accélération, puis s’appuie sur des graphes pour interpréter les résultats."
         },
         {
           "id": "D",
-          "text": "La représentation graphique n’apporte aucune information sur l’évolution temporelle.",
+          "text": "Chaque situation exclut la dérivation, car les données expérimentales sont directement finales.",
           "is_correct": false,
-          "explanation": "Faux : une courbe permet précisément de lire des variations, des pentes et parfois des aires utiles au calcul."
+          "explanation": "La dérivation est au contraire essentielle pour passer de la position à la vitesse puis à l’accélération."
         },
         {
           "id": "E",
-          "text": "Les quatre applications mentionnées relèvent uniquement de la statique.",
+          "text": "Chaque situation ne peut pas être représentée par des courbes de position ou de vitesse.",
           "is_correct": false,
-          "explanation": "Faux : il s’agit de mouvements, donc de cinématique, pas d’un problème de statique."
+          "explanation": "Les courbes de position et de vitesse sont précisément des outils centraux pour lire la cinématique et exploiter des mesures."
         }
       ],
-      "coverage_label": "Triptyque modélisation-dérivation-représentation",
-      "learning_objective": "Identifier les trois étapes communes à l’analyse cinématique d’une situation aéronautique.",
-      "correction_summary": "Il faut repérer la démarche commune : construire un modèle, dériver pour obtenir les grandeurs utiles, puis lire ou produire des graphiques. L’erreur fréquente est d’isoler la mesure sans interprétation.",
-      "course_clarification": "Une situation de mouvement se traite en trois temps : modèle du déplacement, calcul des dérivées, puis lecture des courbes pour interpréter le comportement.",
+      "coverage_label": "Applications aéronautiques typiques — démarche cinématique",
+      "learning_objective": "Reconnaître la démarche globale d’analyse cinématique appliquée à l’aéronautique.",
+      "correction_summary": "La bonne réponse met ensemble modèle, dérivation et graphique. Le piège est de croire qu’une seule étape suffit alors que l’analyse complète en nécessite trois.",
+      "course_clarification": "En cinématique, on part d’une position ou d’un modèle du mouvement. On en déduit les vitesses et accélérations, puis on vérifie l’évolution avec des courbes.",
       "source_refs": []
     }
   ],

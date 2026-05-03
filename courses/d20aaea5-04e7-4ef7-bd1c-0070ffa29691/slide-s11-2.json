@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S11-2-Q1",
-      "prompt": "Concernant le rôle du freinage et l’adhérence, quelle affirmation est correcte ?",
+      "prompt": "Quel énoncé décrit correctement le rôle du dispositif de freinage d’un aéronef ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le freinage a pour effet principal d’augmenter la distance de roulement à l’atterrissage.",
+          "text": "Le freinage a pour fonction principale d’augmenter la distance de roulement à l’atterrissage.",
           "is_correct": false,
-          "explanation": "Faux : le freinage sert au contraire à réduire la distance de roulement après le toucher des roues."
+          "explanation": "C’est l’inverse : le freinage sert à diminuer la distance de roulement, pas à l’allonger."
         },
         {
           "id": "B",
-          "text": "Le coefficient d’adhérence ne dépend pas du revêtement de piste.",
+          "text": "Le freinage ne sert qu’au stationnement et n’intervient pas pendant les évolutions au sol.",
           "is_correct": false,
-          "explanation": "Faux : le revêtement de piste influence directement l’adhérence disponible entre le pneu et la piste."
+          "explanation": "Le freinage intervient aussi pour les évolutions au sol, le décollage court et la rentrée des trains."
         },
         {
           "id": "C",
-          "text": "La température du pneu n’a aucune influence sur l’adhérence.",
+          "text": "Le freinage n’a aucun effet lors de la rentrée des trains.",
           "is_correct": false,
-          "explanation": "Faux : la température du pneu fait partie des paramètres qui modifient le coefficient d’adhérence."
+          "explanation": "Le document indique au contraire un freinage lors de la rentrée des trains, lié à l’effet gyroscopique."
         },
         {
           "id": "D",
-          "text": "Le freinage absorbe l’énergie cinétique de l’aéronef.",
+          "text": "Le freinage absorbe l’énergie cinétique et réduit notamment la distance de roulement à l’atterrissage.",
           "is_correct": true,
-          "explanation": "Vrai : le freinage transforme l’énergie cinétique en chaleur dans les freins, ce qui ralentit l’aéronef."
+          "explanation": "Le freinage transforme l’énergie cinétique en chaleur dans les freins, ce qui permet de ralentir l’avion et de diminuer la distance parcourue au sol après le posé."
         },
         {
           "id": "E",
-          "text": "Le freinage ne sert qu’au parking et n’a pas d’intérêt à l’atterrissage.",
+          "text": "Le freinage remplace l’adhérence du pneu et rend la piste sans importance.",
           "is_correct": false,
-          "explanation": "Faux : le freinage sert aussi à arrêter l’avion après l’atterrissage et à d’autres phases de roulage."
+          "explanation": "Le freinage reste limité par l’adhérence disponible ; l’état de la piste conserve donc une influence directe."
         }
       ],
-      "coverage_label": "Rôle du freinage et adhérence",
-      "learning_objective": "Identifier le rôle du freinage et les facteurs qui influencent l’adhérence pneu-piste.",
-      "correction_summary": "La bonne réponse reprend l’idée essentielle : le freinage dissipe l’énergie cinétique. Une confusion fréquente consiste à croire qu’il agit seulement sur le confort ou le parking, alors qu’il intervient surtout pour réduire la distance d’arrêt. L’adhérence dépend bien de plusieurs paramètres, dont l’état de la piste, la vitesse et l’état du pneu.",
-      "course_clarification": "Le freinage convertit l’énergie de mouvement en chaleur. L’adhérence disponible limite l’intensité du freinage utilisable sans blocage des roues. Plus l’adhérence est faible, plus le risque de glissement augmente.",
+      "coverage_label": "Dispositif de freinage",
+      "learning_objective": "Identifier la fonction globale du freinage et ses principaux effets opérationnels.",
+      "correction_summary": "La bonne réponse est celle qui relie le freinage à l’absorption d’énergie cinétique et à la réduction de la distance de roulement. Les pièges consistent à inverser l’effet recherché ou à limiter le freinage à un seul usage.",
+      "course_clarification": "Le freinage sert à ralentir l’aéronef au sol et à maîtriser ses déplacements. Son efficacité dépend de l’adhérence disponible entre pneu et piste.",
       "source_refs": []
     },
     {
       "question_id": "S11-2-Q2",
-      "prompt": "À propos des freins à disques et de leur sécurité thermique, quelle affirmation est correcte ?",
+      "prompt": "Quel énoncé est exact au sujet du système anti-patinage / anti-skid ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Les freins à disques sont adaptés en priorité aux avions légers.",
+          "text": "Le système anti-skid augmente volontairement la pression hydraulique dès que les roues ralentissent.",
           "is_correct": false,
-          "explanation": "Faux : cette adaptation caractérise les freins à tambours, pas les freins à disques."
+          "explanation": "Le but est de moduler ou réduire la pression pour empêcher le blocage, pas de l’augmenter systématiquement."
         },
         {
           "id": "B",
-          "text": "Les freins à disques sont équipés d’un bouchon fusible pour éviter l’éclatement en cas d’échauffement excessif.",
+          "text": "Des génératrices tachymétriques envoient un signal électrique selon la vitesse des roues pour réguler la pression hydraulique de freinage.",
           "is_correct": true,
-          "explanation": "Vrai : le bouchon fusible sert de protection thermique et limite le risque d’éclatement lié à une surchauffe."
+          "explanation": "Le principe décrit repose sur la mesure de vitesse de roue, puis sur l’ajustement de la pression hydraulique afin d’éviter le blocage."
         },
         {
           "id": "C",
-          "text": "Les freins à disques n’utilisent aucune pièce mobile.",
+          "text": "Le système anti-skid agit uniquement quand l’avion est en vol.",
           "is_correct": false,
-          "explanation": "Faux : ils comportent des disques fixes et mobiles, avec des éléments de pression et de friction."
+          "explanation": "Il intervient lorsque l’avion est au sol, pendant le freinage ou à l’atterrissage si les roues risquent de se bloquer."
         },
         {
           "id": "D",
-          "text": "La plaque de couple n’intervient pas dans la transmission des efforts de freinage.",
+          "text": "Le système anti-skid commande directement l’orientation de la roue avant.",
           "is_correct": false,
-          "explanation": "Faux : la plaque de couple fait partie de l’ensemble qui participe à la reprise des efforts dans le frein à disque."
+          "explanation": "L’anti-skid concerne le freinage des roues, pas la direction du train avant."
         },
         {
           "id": "E",
-          "text": "Le refroidissement efficace est un inconvénient des freins à disques.",
+          "text": "Le système anti-skid supprime totalement le besoin d’adhérence pneu-piste.",
           "is_correct": false,
-          "explanation": "Faux : le refroidissement efficace est au contraire un avantage des freins à disques."
+          "explanation": "Il limite le blocage des roues, mais il ne supprime pas la nécessité d’une adhérence suffisante entre pneu et piste."
         }
       ],
-      "coverage_label": "Freins à disques et sécurité thermique",
-      "learning_objective": "Reconnaître le rôle du bouchon fusible et les éléments caractéristiques d’un frein à disques.",
-      "correction_summary": "La réponse juste met l’accent sur la sécurité thermique : le bouchon fusible protège contre une surchauffe dangereuse. Une erreur fréquente consiste à confondre les avantages des freins à disques avec ceux des freins à tambours, ou à oublier le rôle des pièces de structure qui transmettent les efforts.",
-      "course_clarification": "Le frein à disques associe des éléments de frottement et des éléments de reprise des efforts. Le bouchon fusible est une protection qui évite une montée en pression trop importante lors d’un échauffement anormal.",
+      "coverage_label": "Système anti-patinage / anti-skid",
+      "learning_objective": "Comprendre le principe de mesure et de régulation du freinage anti-patinage.",
+      "correction_summary": "La bonne affirmation décrit la chaîne vitesse de roue → signal tachymétrique → régulation de la pression hydraulique. Le piège principal est d’inverser l’action du système en le faisant augmenter le freinage au lieu de le moduler.",
+      "course_clarification": "L’anti-skid évite le blocage des roues en freinage brusque ou si la vitesse de roue devient trop élevée. Il agit sur la pression hydraulique des freins à partir d’une mesure de vitesse de roue.",
       "source_refs": []
     },
     {
       "question_id": "S11-2-Q3",
-      "prompt": "À propos du frein de parking et des circuits de secours, quelle affirmation est correcte ?",
+      "prompt": "Quelle proposition décrit correctement le frein de parking ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le frein de parking est mis en pression de façon autonome par électropompe.",
+          "text": "Le frein de parking est mis en pression de manière autonome par électropompe.",
           "is_correct": true,
-          "explanation": "Vrai : le frein de parking dispose d’une mise en pression autonome grâce à une électropompe."
+          "explanation": "Le point clé est l’autonomie de la mise en pression : le frein de parking dispose de son propre moyen de pressurisation."
         },
         {
           "id": "B",
-          "text": "L’accumulateur de frein de parking sert à créer la pression initiale du circuit normal.",
+          "text": "Le frein de parking ne peut fonctionner que si le pilote appuie en permanence sur les pédales.",
           "is_correct": false,
-          "explanation": "Faux : l’accumulateur sert à maintenir la pression du frein de parking, pas à créer la pression initiale du freinage normal."
+          "explanation": "Le frein de parking est justement conçu pour maintenir l’avion immobilisé sans action continue sur les pédales."
         },
         {
           "id": "C",
-          "text": "Le circuit de secours dépend du circuit hydraulique principal pour fonctionner.",
+          "text": "L’accumulateur de frein de parking sert à augmenter la vitesse de roulement de l’avion.",
           "is_correct": false,
-          "explanation": "Faux : le circuit de secours est totalement indépendant du freinage normal."
+          "explanation": "L’accumulateur sert au maintien de la pression, pas à accélérer l’aéronef."
         },
         {
           "id": "D",
-          "text": "Le circuit de secours ne fonctionne jamais en parallèle du freinage normal.",
+          "text": "Le frein de parking est un circuit de secours totalement indépendant qui fonctionne en parallèle en cas de panne du freinage normal.",
           "is_correct": false,
-          "explanation": "Faux : il fonctionne en parallèle en cas de panne du freinage normal."
+          "explanation": "Cette description correspond aux circuits freins secours, pas au frein de parking."
         },
         {
           "id": "E",
-          "text": "Le frein de parking agit uniquement par l’énergie musculaire du pilote.",
+          "text": "Le frein de parking est commandé uniquement par le système anti-skid.",
           "is_correct": false,
-          "explanation": "Faux : la mise en pression est autonome, ce qui distingue ce dispositif d’un simple actionnement musculaire."
+          "explanation": "L’anti-skid régule le freinage pour éviter le blocage des roues ; il ne constitue pas la commande du frein de parking."
         }
       ],
-      "coverage_label": "Frein de parking et circuit de secours",
-      "learning_objective": "Distinguer le fonctionnement du frein de parking et celui du circuit de secours.",
-      "correction_summary": "La bonne réponse porte sur l’autonomie du frein de parking grâce à l’électropompe. Une confusion classique est de mélanger le rôle de l’accumulateur, qui maintient la pression, avec celui d’une source de pression. Le circuit de secours, lui, est indépendant et prend le relais en parallèle en cas de panne.",
-      "course_clarification": "Le frein de parking conserve une pression hydraulique sans action continue sur les pédales. Le circuit de secours est conçu pour assurer une fonction de freinage même si le système principal est défaillant.",
+      "coverage_label": "Frein de parking",
+      "learning_objective": "Distinguer le mode de fonctionnement du frein de parking et le rôle de l’accumulateur.",
+      "correction_summary": "La bonne réponse insiste sur la mise en pression autonome par électropompe. Le piège classique est de confondre le frein de parking avec un circuit de secours ou avec la simple action sur les pédales.",
+      "course_clarification": "Le frein de parking sert à maintenir l’aéronef immobile au sol. L’accumulateur aide au maintien de la pression une fois le frein de parking mis en œuvre.",
       "source_refs": []
     },
     {
       "question_id": "S11-2-Q4",
-      "prompt": "Concernant le système anti-patinage, quelle affirmation est correcte ?",
+      "prompt": "Quelle affirmation est juste au sujet du repérage des pneumatiques en France ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le système anti-patinage augmente volontairement le blocage des roues à l’atterrissage.",
+          "text": "M désigne la largeur, N le diamètre de jante et A le diamètre extérieur.",
           "is_correct": false,
-          "explanation": "Faux : son objectif est précisément d’éviter le blocage des roues."
+          "explanation": "Les lettres ne correspondent pas à ces grandeurs ; l’association correcte est M = diamètre extérieur, N = largeur, A = diamètre de jante."
         },
         {
           "id": "B",
-          "text": "Le système anti-patinage agit uniquement quand l’avion est déjà arrêté au parking.",
+          "text": "En France, les trois cotes M, N et A sont exprimées en pouces.",
           "is_correct": false,
-          "explanation": "Faux : il agit pendant les phases de roulage et de freinage, notamment à l’atterrissage ou lors d’un freinage brusque."
+          "explanation": "Le document précise que M et N sont en millimètres, tandis que A est en pouces."
         },
         {
           "id": "C",
-          "text": "Le système anti-patinage commande directement la poussée des réacteurs.",
+          "text": "À l’étranger, les cotes sont exprimées en millimètres selon le même format qu’en France.",
           "is_correct": false,
-          "explanation": "Faux : il agit sur la pression hydraulique de freinage, pas sur la poussée propulsive."
+          "explanation": "Le document indique l’inverse : à l’étranger, toutes les cotes sont en pouces."
         },
         {
           "id": "D",
-          "text": "Le système anti-patinage n’utilise aucun capteur de vitesse de roue.",
+          "text": "L’exemple 750 × 230 - 15 correspond à une notation où 750 représente le diamètre de jante.",
           "is_correct": false,
-          "explanation": "Faux : le principe repose justement sur la mesure de la vitesse des roues."
+          "explanation": "Dans l’exemple donné, 750 correspond au diamètre extérieur M, et non au diamètre de jante."
         },
         {
           "id": "E",
-          "text": "Des génératrices tachymétriques envoient un signal en fonction de la vitesse des roues pour réguler la pression hydraulique.",
+          "text": "M désigne le diamètre extérieur, N la largeur et A le diamètre de jante ; M et N sont exprimés en millimètres et A en pouces.",
           "is_correct": true,
-          "explanation": "Vrai : le signal lié à la vitesse des roues permet d’ajuster la pression de freinage et d’éviter le blocage."
+          "explanation": "Le codage indiqué associe trois dimensions précises : diamètre extérieur, largeur et diamètre de jante, avec des unités différentes selon la lettre."
         }
       ],
-      "coverage_label": "Système anti-patinage",
-      "learning_objective": "Interpréter le principe de régulation du système anti-patinage.",
-      "correction_summary": "La bonne réponse décrit la chaîne fonctionnelle : mesure de vitesse des roues, envoi d’un signal et régulation de la pression hydraulique. L’erreur fréquente consiste à croire que l’anti-patinage agit sur la traction ou qu’il n’intervient qu’après l’arrêt, alors qu’il protège les roues pendant le freinage.",
-      "course_clarification": "L’anti-patinage limite le glissement excessif des roues. Quand la vitesse mesurée devient incompatible avec le freinage demandé, la pression hydraulique est modulée pour éviter le blocage.",
+      "coverage_label": "Dimensions des pneumatiques",
+      "learning_objective": "Lire correctement la notation dimensionnelle d’un pneumatique et associer chaque lettre à la bonne grandeur.",
+      "correction_summary": "La bonne réponse associe chaque lettre à la bonne dimension et rappelle les unités utilisées en France. Le principal piège est d’inverser M, N et A ou d’attribuer les mauvaises unités.",
+      "course_clarification": "La notation permet d’identifier la taille du pneu et de la jante. Elle sert au choix et au montage correct du pneumatique sur l’aéronef.",
       "source_refs": []
     },
     {
       "question_id": "S11-2-Q5",
-      "prompt": "À propos des pneumatiques et de leur surveillance, quelle affirmation est correcte ?",
+      "prompt": "Quel énoncé correspond à la surveillance des freins et des pneumatiques ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le BTMS surveille la pression hydraulique des amortisseurs.",
+          "text": "Une température excessive des freins n’est signalée que par une baisse de pression des pneus.",
           "is_correct": false,
-          "explanation": "Faux : la pression hydraulique des amortisseurs est surveillée par l’OPMS."
+          "explanation": "La surveillance de la température des freins est distincte de la pression des pneus ; les signaux d’alerte ne se limitent pas à la pression."
         },
         {
           "id": "B",
-          "text": "Le pneu radial présente une surface de contact importante et constante.",
+          "text": "Le BTMS surveille la pression des pneus, tandis que le TPMS surveille la température des freins.",
           "is_correct": false,
-          "explanation": "Faux : cette caractéristique appartient au pneu radial, donc la phrase est vraie sur le fond ; pour être fausse ici, il faudrait l’attribuer au pneu diagonal. Cette proposition est donc incorrectement formulée et ne doit pas être retenue comme juste dans un QCM bien rédigé."
+          "explanation": "Les sigles sont inversés dans cette proposition : TPMS concerne la pression des pneus et BTMS la température des freins."
         },
         {
           "id": "C",
-          "text": "Le TPMS surveille la pression des pneus.",
+          "text": "Une élévation excessive de la température des freins est signalée par un voyant sur le panneau de contrôle, un voyant BRAKES HOT sur le panneau central d’alarme et un gong mono-coup.",
           "is_correct": true,
-          "explanation": "Vrai : le TPMS signifie Tire Pressure Monitoring System et concerne la pression des pneus."
+          "explanation": "Les trois signaux mentionnés sont ceux indiqués pour une surchauffe des freins : alarme visuelle locale, alarme centrale et alarme sonore."
         },
         {
           "id": "D",
-          "text": "En France, M correspond à la largeur et N au diamètre extérieur.",
+          "text": "L’OPMS surveille la température des freins au lieu de la pression hydraulique des amortisseurs.",
           "is_correct": false,
-          "explanation": "Faux : c’est l’inverse, M correspond au diamètre extérieur et N à la largeur."
+          "explanation": "L’OPMS correspond à la pression hydraulique des amortisseurs, pas à la température des freins."
         },
         {
           "id": "E",
-          "text": "Le pneu diagonal possède une surface de contact importante et constante.",
+          "text": "Aucun gong n’est associé à une surchauffe des freins.",
           "is_correct": false,
-          "explanation": "Faux : cette caractéristique décrit le pneu radial ; le pneu diagonal subit davantage de déformations de contact."
+          "explanation": "Le document mentionne explicitement un gong mono-coup en cas d’élévation excessive de la température des freins."
         }
       ],
-      "coverage_label": "Pneumatiques et surveillance",
-      "learning_objective": "Associer chaque sigle de surveillance et distinguer pneu radial et pneu diagonal.",
-      "correction_summary": "La bonne réponse identifie correctement le TPMS, dédié à la pression des pneus. Une confusion fréquente consiste à mélanger TPMS, BTMS et OPMS, ou à confondre les propriétés du pneu radial et du pneu diagonal. La lecture attentive des sigles et des caractéristiques techniques permet d’éviter l’erreur.",
-      "course_clarification": "Le TPMS contrôle la pression des pneumatiques. Le pneu radial conserve une surface de contact plus stable, tandis que le pneu diagonal se déforme davantage. Les sigles de surveillance sont distincts : TPMS pour les pneus, BTMS pour les freins, OPMS pour les amortisseurs.",
+      "coverage_label": "Surveillance des paramètres de freinage et pneumatiques",
+      "learning_objective": "Identifier les fonctions des sigles TPMS, BTMS et OPMS et reconnaître les signaux d’alerte de surchauffe des freins.",
+      "correction_summary": "La bonne réponse rassemble les trois alertes prévues en cas de freins trop chauds. Le piège principal consiste à confondre les sigles de surveillance ou à oublier l’alarme sonore.",
+      "course_clarification": "TPMS surveille la pression des pneus, BTMS la température des freins et OPMS la pression hydraulique des amortisseurs. Une surchauffe des freins déclenche des alarmes visuelles et sonores.",
       "source_refs": []
     }
   ],

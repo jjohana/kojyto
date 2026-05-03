@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S5-2-Q1",
-      "prompt": "Choisir l’affirmation correcte sur l’indication GEN 1 affichée sur l’ECAM.",
+      "prompt": "Quelles affirmations décrivent correctement les indications de GEN 1 et GEN 2 sur la page ECAM AC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "GEN 1 est affiché avec 77 °C.",
+          "text": "GEN 1 affiche 77 °C au lieu d'une valeur électrique.",
           "is_correct": false,
-          "explanation": "Faux : 77 °C correspond à IDG 1, pas à GEN 1."
+          "explanation": "77 °C correspond à l’indication d’IDG 1, pas à GEN 1. GEN 1 est affiché avec des grandeurs électriques et de régime, pas avec une température seule."
         },
         {
           "id": "B",
-          "text": "GEN 1 est affiché avec 27,8 V.",
+          "text": "GEN 2 affiche 27,8 V en haut à gauche de l’écran.",
           "is_correct": false,
-          "explanation": "Faux : 27,8 V apparaît en haut à gauche du synoptique, ce n’est pas la valeur de GEN 1."
+          "explanation": "27,8 V apparaît sur le synoptique électrique, mais ce n’est pas l’indication de GEN 2. GEN 2 est affiché avec 62% / 115 V / 400 HZ."
         },
         {
           "id": "C",
-          "text": "GEN 1 est affiché comme une source de service au sol uniquement.",
+          "text": "GEN 1 et GEN 2 sont affichés comme des paramètres de température.",
           "is_correct": false,
-          "explanation": "Faux : GEN 1 est une source AC surveillée, pas un intitulé de service au sol."
+          "explanation": "GEN 1 et GEN 2 ne sont pas des paramètres thermiques sur cet écran. Les températures visibles concernent les IDG, pas les générateurs eux-mêmes."
         },
         {
           "id": "D",
-          "text": "GEN 1 est affiché avec 62 % / 115 V / 400 HZ.",
+          "text": "GEN 1 et GEN 2 affichent chacun 62% / 115 V / 400 HZ.",
           "is_correct": true,
-          "explanation": "Vrai : la valeur visible pour GEN 1 est bien 62 %, 115 V et 400 HZ sur la page ECAM AC."
+          "explanation": "Les deux sources sont présentées avec les mêmes valeurs de surveillance : pourcentage, tension et fréquence. La lecture attendue associe bien ces trois grandeurs à GEN 1 et à GEN 2."
         },
         {
           "id": "E",
-          "text": "GEN 1 n’est pas surveillé sur la page ECAM AC.",
+          "text": "GEN 1 est affiché sans valeur numérique associée.",
           "is_correct": false,
-          "explanation": "Faux : GEN 1 fait partie des paramètres explicitement surveillés sur la page."
+          "explanation": "L’affichage donne précisément des valeurs numériques pour GEN 1. La présence de 62% / 115 V / 400 HZ fait partie de l’information à lire."
         }
       ],
-      "coverage_label": "Affichage GEN 1",
-      "learning_objective": "Lire correctement la valeur associée à GEN 1 sur l’ECAM.",
-      "correction_summary": "La bonne lecture consiste à associer GEN 1 à ses trois valeurs affichées : 62 %, 115 V et 400 HZ. La confusion fréquente consiste à mélanger cette indication avec la température d’un IDG ou avec une autre donnée du synoptique.",
-      "course_clarification": "GEN 1 est un paramètre de surveillance de la page ECAM AC. Les trois grandeurs affichées ensemble indiquent l’état électrique du générateur.",
+      "coverage_label": "Surveillance des sources : GEN 1, GEN 2 et APU GEN",
+      "learning_objective": "Identifier les valeurs associées à GEN 1 et GEN 2 sur l’ECAM.",
+      "correction_summary": "Les deux générateurs principaux sont affichés avec les mêmes valeurs : 62% / 115 V / 400 HZ. Le piège consiste à confondre ces indications avec les températures des IDG ou avec d’autres zones de l’écran.",
+      "course_clarification": "Sur la page ECAM AC, GEN 1 et GEN 2 sont des sources surveillées. Les valeurs affichées servent à lire leur état électrique et leur régime, pas à décrire une température.",
       "source_refs": []
     },
     {
       "question_id": "S5-2-Q2",
-      "prompt": "Choisir l’affirmation correcte sur l’indication GEN 2 affichée sur l’ECAM.",
+      "prompt": "Quelles affirmations décrivent correctement la place de APU GEN dans l’affichage ECAM AC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "GEN 2 est affiché avec 76 °C.",
+          "text": "APU GEN est regroupé avec EXT A et EXT B dans une seule indication.",
           "is_correct": false,
-          "explanation": "Faux : 76 °C correspond à IDG 2, pas à GEN 2."
+          "explanation": "EXT A et EXT B sont affichés séparément de APU GEN. L’écran distingue les différentes sources au lieu de les fusionner dans une seule étiquette."
         },
         {
           "id": "B",
-          "text": "GEN 2 est affiché avec 62 % / 115 V / 400 HZ.",
+          "text": "APU GEN reste une source distincte dans l’affichage.",
           "is_correct": true,
-          "explanation": "Vrai : GEN 2 présente les mêmes valeurs que GEN 1 sur l’affichage, soit 62 %, 115 V et 400 HZ."
+          "explanation": "APU GEN apparaît comme une source à part entière, au même titre que les autres sources listées sur la page. Il ne se confond pas avec GEN 1 ou GEN 2."
         },
         {
           "id": "C",
-          "text": "GEN 2 est absent de l’affichage ECAM AC.",
+          "text": "APU GEN remplace GEN 2 sur la ligne de surveillance principale.",
           "is_correct": false,
-          "explanation": "Faux : GEN 2 figure explicitement parmi les paramètres surveillés."
+          "explanation": "GEN 2 reste affiché en propre sur la page. APU GEN ne prend pas la place de GEN 2 dans la liste des indications visibles."
         },
         {
           "id": "D",
-          "text": "GEN 2 est affiché comme APU GEN.",
+          "text": "APU GEN est indiqué comme une température en degrés Celsius.",
           "is_correct": false,
-          "explanation": "Faux : APU GEN est une source distincte, différente de GEN 2."
+          "explanation": "Les températures visibles concernent les IDG, pas APU GEN. APU GEN est une source électrique, pas une mesure thermique."
         },
         {
           "id": "E",
-          "text": "GEN 2 est affiché avec 27,8 V et 400 HZ sans tension AC.",
+          "text": "APU GEN n’apparaît pas dans la liste des sources affichées.",
           "is_correct": false,
-          "explanation": "Faux : l’indication visible pour GEN 2 associe 115 V à 400 HZ, pas 27,8 V."
+          "explanation": "APU GEN est bien visible parmi les indications de sources. L’affichage le distingue explicitement dans la zone de surveillance."
         }
       ],
-      "coverage_label": "Affichage GEN 2",
-      "learning_objective": "Identifier la valeur affichée pour GEN 2 sur la page de surveillance.",
-      "correction_summary": "Il faut lire GEN 2 comme une indication AC complète : pourcentage, tension et fréquence. L’erreur classique consiste à reprendre une température IDG ou une valeur générique du synoptique au lieu de l’étiquette GEN 2.",
-      "course_clarification": "GEN 2 est surveillé au même titre que GEN 1. L’affichage donne directement 62 % / 115 V / 400 HZ.",
+      "coverage_label": "Surveillance des sources : GEN 1, GEN 2 et APU GEN",
+      "learning_objective": "Reconnaître APU GEN comme une source affichée séparément sur l’ECAM.",
+      "correction_summary": "APU GEN est bien affiché comme une source distincte. Le piège est de le confondre avec les générateurs de moteur ou de croire qu’il n’apparaît pas sur l’écran.",
+      "course_clarification": "APU GEN désigne la génération électrique issue de l’APU. Sur l’ECAM, cette source est affichée séparément pour faciliter la surveillance des alimentations AC.",
       "source_refs": []
     },
     {
       "question_id": "S5-2-Q3",
-      "prompt": "Choisir l’affirmation correcte sur APU GEN dans l’affichage ECAM.",
+      "prompt": "Quelles affirmations décrivent correctement la fonction de la page ECAM AC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "APU GEN apparaît comme une source distincte dans l’affichage.",
+          "text": "La page ECAM AC montre les sources AC et leur connexion au réseau.",
           "is_correct": true,
-          "explanation": "Vrai : APU GEN est bien présenté séparément de GEN 1 et GEN 2 sur la page."
+          "explanation": "C’est précisément la fonction annoncée pour cette page : visualiser les sources AC et la manière dont elles sont reliées au réseau électrique."
         },
         {
           "id": "B",
-          "text": "APU GEN est la même indication que GEN 1.",
+          "text": "La page ECAM AC sert uniquement à afficher les pannes des disjoncteurs.",
           "is_correct": false,
-          "explanation": "Faux : GEN 1 et APU GEN sont deux sources différentes dans l’affichage."
+          "explanation": "La surveillance des disjoncteurs relève d’une autre page dédiée au CBMU. Ici, l’écran principal concerne les sources AC et leur connexion au réseau."
         },
         {
           "id": "C",
-          "text": "APU GEN correspond à une température mesurée en °C.",
+          "text": "La page ECAM AC ne présente aucun paramètre de surveillance.",
           "is_correct": false,
-          "explanation": "Faux : APU GEN est une source électrique affichée, pas une température."
+          "explanation": "Plusieurs paramètres sont justement surveillés sur cet écran, comme GEN 1, GEN 2, APU GEN et les IDG. L’écran n’est donc pas seulement un schéma décoratif."
         },
         {
           "id": "D",
-          "text": "APU GEN n’apparaît pas sur la page ECAM AC.",
+          "text": "La page ECAM AC affiche uniquement les réseaux de service au sol.",
           "is_correct": false,
-          "explanation": "Faux : APU GEN est explicitement visible dans le synoptique."
+          "explanation": "Le réseau de service au sol concerne un autre schéma. La page ECAM AC vise d’abord les sources AC de l’avion et leur distribution."
         },
         {
           "id": "E",
-          "text": "APU GEN désigne le réseau de service au sol.",
+          "text": "La page ECAM AC est dédiée aux circuits breakers de l’avionique.",
           "is_correct": false,
-          "explanation": "Faux : le réseau de service au sol est traité par un autre schéma, pas par APU GEN."
+          "explanation": "Les circuits breakers sont surveillés par la CBMU et la page C/B ECAM. La page ECAM AC traite de l’électricité AC, pas des disjoncteurs avioniques."
         }
       ],
-      "coverage_label": "APU GEN",
-      "learning_objective": "Reconnaître APU GEN comme une source affichée distincte des autres générateurs.",
-      "correction_summary": "L’idée attendue est simple : APU GEN est une source à part dans la surveillance AC. La confusion fréquente consiste à le prendre pour une simple variante de GEN 1 ou GEN 2, alors qu’il est affiché séparément.",
-      "course_clarification": "APU GEN n’est pas une valeur numérique mais une source AC identifiée à part sur l’écran.",
+      "coverage_label": "ECAM ELEC AC : indications et surveillance",
+      "learning_objective": "Identifier la fonction générale de la page ECAM AC.",
+      "correction_summary": "La page sert à visualiser les sources AC et leurs connexions au réseau. Le piège principal consiste à la confondre avec une page de disjoncteurs ou de maintenance.",
+      "course_clarification": "ECAM désigne l’affichage de surveillance en cockpit. La page ELEC AC regroupe les indications utiles pour suivre l’alimentation AC et la répartition des sources.",
       "source_refs": []
     },
     {
       "question_id": "S5-2-Q4",
-      "prompt": "Choisir l’affirmation correcte sur les températures IDG affichées sur l’ECAM.",
+      "prompt": "Quelles affirmations donnent correctement les valeurs visibles pour les IDG sur la page ECAM AC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "IDG 1 est affiché à 62 % et IDG 2 à 62 %.",
+          "text": "IDG 1 affiche 62% / 115 V / 400 HZ.",
           "is_correct": false,
-          "explanation": "Faux : 62 % correspond aux indications de GEN 1 et GEN 2, pas aux IDG."
+          "explanation": "62% / 115 V / 400 HZ correspond aux générateurs affichés, pas aux IDG. Les IDG sont ici associés à une température en degrés Celsius."
         },
         {
           "id": "B",
-          "text": "IDG 1 et IDG 2 sont affichés en volts.",
+          "text": "IDG 2 affiche 27,8 V.",
           "is_correct": false,
-          "explanation": "Faux : les IDG sont ici surveillés en température, exprimée en °C."
+          "explanation": "27,8 V apparaît dans le synoptique général, mais ce n’est pas la valeur attribuée à IDG 2. IDG 2 est affiché à 76 °C."
         },
         {
           "id": "C",
-          "text": "IDG 2 est affiché à 115 V.",
+          "text": "IDG 1 et IDG 2 ont exactement la même température affichée.",
           "is_correct": false,
-          "explanation": "Faux : 115 V correspond à l’indication électrique des générateurs, pas à IDG 2."
+          "explanation": "Les deux valeurs sont différentes : 77 °C pour IDG 1 et 76 °C pour IDG 2. La lecture correcte doit donc distinguer les deux."
         },
         {
           "id": "D",
-          "text": "IDG 1 et IDG 2 ne font pas partie des paramètres surveillés.",
+          "text": "IDG 2 est affiché comme une source externe EXT B.",
           "is_correct": false,
-          "explanation": "Faux : les IDG 1 et IDG 2 figurent parmi les paramètres les plus importants surveillés."
+          "explanation": "EXT B est une autre source de l’écran. IDG 2 correspond à un groupe différent et ne doit pas être confondu avec une alimentation externe."
         },
         {
           "id": "E",
-          "text": "IDG 1 est affiché à 77 °C et IDG 2 à 76 °C.",
+          "text": "IDG 1 affiche 77 °C et IDG 2 affiche 76 °C.",
           "is_correct": true,
-          "explanation": "Vrai : ces deux températures apparaissent clairement sur la page ECAM AC."
+          "explanation": "Les deux températures sont bien visibles et distinctes sur l’écran. Elles constituent des paramètres de surveillance des IDG."
         }
       ],
-      "coverage_label": "Températures IDG",
-      "learning_objective": "Lire les températures associées à IDG 1 et IDG 2 sur le synoptique.",
-      "correction_summary": "Il faut associer les IDG à des températures et non aux valeurs électriques des générateurs. La confusion la plus fréquente est de mélanger les lignes GEN 1 / GEN 2 avec les lignes IDG 1 / IDG 2.",
-      "course_clarification": "Un IDG est suivi ici par sa température : IDG 1 à 77 °C et IDG 2 à 76 °C.",
+      "coverage_label": "Surveillance des sources : GEN 1, GEN 2 et APU GEN",
+      "learning_objective": "Lire correctement les températures affichées pour IDG 1 et IDG 2.",
+      "correction_summary": "Les températures à retenir sont 77 °C pour IDG 1 et 76 °C pour IDG 2. Le piège classique est de mélanger ces valeurs avec celles des générateurs électriques.",
+      "course_clarification": "Un IDG est surveillé ici par sa température affichée. La lecture correcte consiste à associer chaque valeur à son repère : IDG 1 ou IDG 2.",
       "source_refs": []
     },
     {
       "question_id": "S5-2-Q5",
-      "prompt": "Choisir l’affirmation correcte sur le panneau AC GENERATION et la source de secours.",
+      "prompt": "Quelles affirmations localisent correctement les indications visibles sur l’écran ECAM ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le panneau AC GENERATION sert uniquement à afficher la température des IDG.",
+          "text": "Les indications GEN 1 et GEN 2 apparaissent uniquement sur le panneau EMER ELEC PWR.",
           "is_correct": false,
-          "explanation": "Faux : ce panneau comprend des P/BSW et des indicateurs liés à la source de secours, pas seulement des températures."
+          "explanation": "Le panneau EMER ELEC PWR concerne la génération électrique d’urgence. Les indications GEN 1 et GEN 2 sont visibles sur la page ECAM principale, pas uniquement sur ce panneau."
         },
         {
           "id": "B",
-          "text": "Le panneau AC GENERATION ne comporte aucun indicateur.",
+          "text": "Les indications de source sont placées dans le panneau FWD CABIN C/B PANEL.",
           "is_correct": false,
-          "explanation": "Faux : des indicateurs sont explicitement mentionnés avec les P/BSW."
+          "explanation": "Le FWD CABIN C/B PANEL concerne un autre schéma, lié à la gestion des disjoncteurs ou du maintien du bus. Il ne porte pas l’affichage principal des sources AC."
         },
         {
           "id": "C",
-          "text": "Le panneau AC GENERATION contient des P/BSW et des indicateurs pour commander et surveiller la source de secours EMER GEN / CSM/G.",
+          "text": "Les indications GEN 1, APU GEN et GEN 2 apparaissent sur l’écran noir central.",
           "is_correct": true,
-          "explanation": "Vrai : le texte associé au panneau indique bien cette fonction de commande et de surveillance."
+          "explanation": "Le synoptique principal montré sur l’écran central contient bien ces indications de sources. Elles sont lisibles dans la zone centrale de l’ECAM."
         },
         {
           "id": "D",
-          "text": "EMER GEN / CSM/G désigne la surveillance de GEN 1 et GEN 2 uniquement.",
+          "text": "Les indications GEN 1 et GEN 2 sont absentes de l’écran noir central.",
           "is_correct": false,
-          "explanation": "Faux : EMER GEN / CSM/G correspond à la source de secours, distincte des générateurs principaux."
+          "explanation": "GEN 1 et GEN 2 sont explicitement visibles sur l’écran central. Leur absence serait contraire à l’organisation de la page ECAM AC."
         },
         {
           "id": "E",
-          "text": "Le panneau AC GENERATION commande le réseau de service au sol sans lien avec l’électricité de secours.",
+          "text": "APU GEN est affiché sur le panneau de maintenance au sol.",
           "is_correct": false,
-          "explanation": "Faux : le texte relie ce panneau à la source de secours, pas au réseau de service au sol."
+          "explanation": "Le panneau de maintenance au sol concerne le réseau de service au sol, pas l’affichage des sources AC sur la page ECAM. APU GEN reste une indication de l’écran principal."
         }
       ],
-      "coverage_label": "Panneau AC GENERATION",
-      "learning_objective": "Identifier le rôle du panneau AC GENERATION et la surveillance de la source de secours.",
-      "correction_summary": "La bonne réponse relie le panneau AC GENERATION à des P/BSW et à des indicateurs dédiés à la source de secours EMER GEN / CSM/G. L’erreur fréquente consiste à confondre cette fonction avec l’affichage des générateurs principaux ou avec un autre réseau électrique.",
-      "course_clarification": "Les P/BSW sont des commandes de type pushbutton switch. Sur ce panneau, ils servent à la commande et à la surveillance de la source de secours EMER GEN / CSM/G.",
+      "coverage_label": "ECAM ELEC AC : indications et position sur l’écran",
+      "learning_objective": "Repérer l’emplacement des indications de sources sur l’ECAM.",
+      "correction_summary": "Les sources principales sont lues sur l’écran noir central de l’ECAM. Le piège consiste à les chercher sur d’autres panneaux techniques, qui ont d’autres fonctions.",
+      "course_clarification": "L’écran central regroupe les indications essentielles de l’électricité AC. Les panneaux latéraux ou inférieurs peuvent commander ou surveiller d’autres fonctions, mais ils ne remplacent pas cette zone de lecture.",
       "source_refs": []
     }
   ],

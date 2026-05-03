@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S18-Q1",
-      "prompt": "À propos des relations entre position, vitesse et accélération en mouvement rectiligne, quelle affirmation est correcte ?",
+      "question_id": "S18_Q1",
+      "prompt": "Quelle affirmation relie correctement la vitesse et l'accélération à la position en mouvement rectiligne ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L’accélération instantanée s’écrit \\(a=\\dfrac{dx}{dt}\\).",
+          "text": "\\(v = \\dfrac{d^2x}{dt^2}\\) et \\(a = \\dfrac{dx}{dt}\\).",
           "is_correct": false,
-          "explanation": "\\(\\dfrac{dx}{dt}\\) est la vitesse, pas l’accélération. L’accélération est la dérivée de la vitesse par rapport au temps."
+          "explanation": "Les rôles sont inversés : \\(\\dfrac{dx}{dt}\\) donne la vitesse, pas l'accélération, et \\(\\dfrac{d^2x}{dt^2}\\) donne l'accélération, pas la vitesse."
         },
         {
           "id": "B",
-          "text": "L’accélération instantanée s’écrit \\(a=\\dfrac{dt}{dx}\\).",
+          "text": "\\(a = \\dfrac{d^2v}{dt^2}\\).",
           "is_correct": false,
-          "explanation": "L’inverse de \\(\\dfrac{dx}{dt}\\) n’a pas le sens d’une accélération. L’accélération est reliée à une dérivation temporelle, pas à un simple inverse."
+          "explanation": "L'accélération est la dérivée première de la vitesse, pas sa dérivée seconde. La dérivée seconde de \\(v\\) correspondrait à une variation de l'accélération."
         },
         {
           "id": "C",
-          "text": "La vitesse instantanée s’écrit \\(v=\\dfrac{d^2x}{dt^2}\\).",
+          "text": "\\(v = \\dfrac{dx}{dt^2}\\).",
           "is_correct": false,
-          "explanation": "\\(\\dfrac{d^2x}{dt^2}\\) est la dérivée seconde de la position, donc l’accélération, pas la vitesse."
+          "explanation": "L'écriture \\(dt^2\\) au dénominateur n'a pas le sens de la dérivation temporelle ici. La bonne écriture est \\(\\dfrac{dx}{dt}\\)."
         },
         {
           "id": "D",
-          "text": "La vitesse instantanée s’écrit \\(v=\\dfrac{dx}{dt}\\).",
+          "text": "\u0011v = \\(\\dfrac{dx}{dt}\\) et \\(a = \\dfrac{dv}{dt} = \\dfrac{d^2x}{dt^2}\\).",
           "is_correct": true,
-          "explanation": "C’est la définition de la vitesse instantanée : elle correspond à la dérivée de la position par rapport au temps."
+          "explanation": "La vitesse instantanée est la dérivée de la position par rapport au temps, et l'accélération est la dérivée de la vitesse, donc la dérivée seconde de la position."
         },
         {
           "id": "E",
-          "text": "L’accélération s’écrit \\(a=\\dfrac{dx}{dt^2}\\).",
+          "text": "\\(a = \\dfrac{dv}{dx}\\).",
           "is_correct": false,
-          "explanation": "Cette écriture n’est pas une relation cinématique correcte. L’accélération est \\(\\dfrac{dv}{dt}\\) ou \\(\\dfrac{d^2x}{dt^2}\\)."
+          "explanation": "Cette dérivée mesure comment la vitesse varie avec la position, pas avec le temps. L'accélération est définie par rapport au temps."
         }
       ],
-      "coverage_label": "v = dx/dt ; a = dv/dt = d²x/dt²",
-      "learning_objective": "Identifier les définitions différentielles de la vitesse et de l’accélération en mouvement rectiligne.",
-      "correction_summary": "La bonne relation est \\(v=dx/dt\\). Le piège classique consiste à confondre vitesse et accélération : l’accélération est la dérivée de \\(v\\) ou la dérivée seconde de \\(x\\).",
-      "course_clarification": "En cinématique, on relie les grandeurs par dérivation temporelle. La vitesse décrit la variation de la position, et l’accélération décrit la variation de la vitesse.",
+      "coverage_label": "Formulaire récapitulatif",
+      "learning_objective": "Identifier les dérivées temporelles qui définissent la vitesse et l'accélération.",
+      "correction_summary": "La bonne relation est \\(v=dx/dt\\) puis \\(a=dv/dt=d^2x/dt^2\\). Le piège classique consiste à permuter vitesse et accélération ou à confondre dérivée temporelle et dérivée par rapport à la position.",
+      "course_clarification": "La vitesse instantanée traduit la variation de la position au cours du temps. L'accélération traduit la variation de la vitesse au cours du temps. Ces deux grandeurs sont des dérivées successives de \\(x(t)\\).",
       "source_refs": []
     },
     {
-      "question_id": "S18-Q2",
-      "prompt": "Pour un mouvement à accélération constante, quelle relation est exacte ?",
+      "question_id": "S18_Q2",
+      "prompt": "Quelle expression donne la position \\(x(t)\\) pour une accélération constante ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\(x=x_0+v_0t+at^2\\).",
+          "text": "\\(x = x_0 + v_0t - \\tfrac12 at^2\\).",
           "is_correct": false,
-          "explanation": "Le terme en \\(t^2\\) doit être multiplié par \\(\\tfrac12 a\\), pas par \\(a\\) seul."
+          "explanation": "Le signe devant le terme en \\(at^2\\) n'est pas systématiquement négatif. Avec l'écriture du formulaire, le terme correct est bien \\(+\\tfrac12 at^2\\)."
         },
         {
           "id": "B",
-          "text": "\\(x=x_0+v_0t+\\tfrac12 at^2\\).",
+          "text": "\\(x = x_0 + v_0t + \\tfrac12 at^2\\).",
           "is_correct": true,
-          "explanation": "C’est l’expression de la position en mouvement rectiligne uniformément accéléré, avec position initiale, vitesse initiale et accélération constantes."
+          "explanation": "C'est la relation de position standard quand l'accélération est constante, avec la position initiale \\(x_0\\) et la vitesse initiale \\(v_0\\)."
         },
         {
           "id": "C",
-          "text": "\\(v^2-v_0^2=2a(x-x_0)\\) est valable seulement si \\(a\\) varie avec le temps.",
+          "text": "\\(x = x_0 + at + \\tfrac12 v_0t^2\\).",
           "is_correct": false,
-          "explanation": "Cette relation est justement utilisée quand l’accélération est constante. Si \\(a\\) varie, elle n’est plus directement applicable."
+          "explanation": "Les rôles de \\(v_0\\) et \\(a\\) sont échangés : la vitesse initiale multiplie \\(t\\), tandis que l'accélération multiplie \\(t^2/2\\)."
         },
         {
           "id": "D",
-          "text": "\\(v=v_0+at^2\\).",
+          "text": "\\(x = x_0 + v_0 + \\tfrac12 at^2\\).",
           "is_correct": false,
-          "explanation": "La vitesse varie linéairement avec le temps quand l’accélération est constante : c’est \\(v=v_0+at\\), pas avec \\(t^2\\)."
+          "explanation": "La vitesse initiale doit être multipliée par le temps \\(t\\). Sans ce facteur, l'expression n'a pas la bonne dimension de longueur."
         },
         {
           "id": "E",
-          "text": "\\(x=x_0+v_0t+\\tfrac12 v_0t^2\\).",
+          "text": "\\(x = x_0 + v_0t + at^2\\).",
           "is_correct": false,
-          "explanation": "Le coefficient du terme en \\(t^2\\) dépend de l’accélération, pas de la vitesse initiale."
+          "explanation": "Le coefficient du terme quadratique est faux : il doit être \\(\\tfrac12 a t^2\\), pas \\(a t^2\\)."
         }
       ],
-      "coverage_label": "x = x₀ + v₀t + ½at² ; v² - v₀² = 2a(x - x₀)",
-      "learning_objective": "Reconnaître l’expression correcte du mouvement rectiligne uniformément accéléré et éviter les confusions sur les coefficients.",
-      "correction_summary": "La bonne formule est \\(x=x_0+v_0t+\\tfrac12 at^2\\). Le piège est d’oublier le facteur \\(\\tfrac12\\) ou d’utiliser une relation valable pour un autre terme que l’accélération constante.",
-      "course_clarification": "Ces relations s’appliquent quand l’accélération est constante. Elles permettent de passer de la position à la vitesse sans intégrer explicitement à chaque fois.",
+      "coverage_label": "Formulaire récapitulatif",
+      "learning_objective": "Reconnaître la loi horaire en mouvement rectiligne uniformément accéléré.",
+      "correction_summary": "La position s'écrit \\(x=x_0+v_0t+\\tfrac12at^2\\). Le piège principal est d'oublier le facteur \\(\\tfrac12\\) ou d'inverser les rôles de \\(v_0\\) et \\(a\\).",
+      "course_clarification": "Cette relation s'emploie quand l'accélération reste constante. Elle combine la position initiale, l'effet linéaire de la vitesse initiale et l'effet quadratique de l'accélération.",
       "source_refs": []
     },
     {
-      "question_id": "S18-Q3",
-      "prompt": "Dans un mouvement circulaire de rayon \\(R\\), quelle relation est correcte entre grandeurs angulaires et linéaires ?",
+      "question_id": "S18_Q3",
+      "prompt": "Quelle relation relie correctement vitesse et position quand l'accélération est constante ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\(v=\\omega R\\).",
+          "text": "\\(v^2 - v_0^2 = 2a(x - x_0)\\).",
           "is_correct": true,
-          "explanation": "La vitesse linéaire au bord d’un mouvement de rotation est proportionnelle à la vitesse angulaire et au rayon."
+          "explanation": "C'est la relation de Torricelli : elle relie directement vitesse et déplacement sans passer par le temps, à condition que l'accélération soit constante."
         },
         {
           "id": "B",
-          "text": "\\(v=\\alpha R\\).",
+          "text": "\\(v^2 + v_0^2 = 2a(x - x_0)\\).",
           "is_correct": false,
-          "explanation": "\\(\\alpha\\) est l’accélération angulaire, pas la vitesse. La relation avec la vitesse linéaire utilise \\(\\omega\\), pas \\(\\alpha\\)."
+          "explanation": "Le signe entre \\(v^2\\) et \\(v_0^2\\) est incorrect. La relation correcte fait apparaître une différence, pas une somme."
         },
         {
           "id": "C",
-          "text": "\\(a_n=\\alpha R\\).",
+          "text": "\\(v - v_0 = 2a(x - x_0)\\).",
           "is_correct": false,
-          "explanation": "\\(\\alpha R\\) donne l’accélération tangentielle \\(a_t\\), pas l’accélération normale."
+          "explanation": "Cette écriture oublie le carré sur les vitesses. La bonne relation concerne les carrés des vitesses."
         },
         {
           "id": "D",
-          "text": "\\(a_n=\\omega R\\).",
+          "text": "\\(v^2 - v_0^2 = a(x - x_0)\\).",
           "is_correct": false,
-          "explanation": "\\(\\omega R\\) est une vitesse linéaire, pas une accélération normale. L’accélération normale dépend de \\(\\omega^2\\) ou de \\(v^2/R\\)."
+          "explanation": "Le coefficient est faux : la relation correcte comporte un facteur \\(2a\\), pas seulement \\(a\\)."
         },
         {
           "id": "E",
-          "text": "\\(a_t=\\omega^2R\\).",
+          "text": "\\(v^2 - v_0^2 = 2(x - x_0)\\).",
           "is_correct": false,
-          "explanation": "\\(\\omega^2R\\) correspond à l’accélération normale \\(a_n\\). L’accélération tangentielle est liée à \\(\\alpha\\)."
+          "explanation": "L'accélération manque dans l'expression, alors qu'elle intervient directement dans la relation entre vitesse et déplacement."
         }
       ],
-      "coverage_label": "v = ωR ; a_t = αR ; a_n = ω²R = v²/R",
-      "learning_objective": "Associer correctement vitesse, accélération tangentielle et accélération normale aux grandeurs angulaires.",
-      "correction_summary": "La relation exacte est \\(v=\\omega R\\). Le piège principal est de permuter \\(\\omega\\) et \\(\\alpha\\), ou de confondre accélération tangentielle et normale.",
-      "course_clarification": "Dans un mouvement circulaire, \\(\\omega\\) mesure la rapidité de rotation. \\(a_t\\) traduit la variation de la vitesse, tandis que \\(a_n\\) traduit la courbure de la trajectoire vers le centre.",
+      "coverage_label": "Formulaire récapitulatif",
+      "learning_objective": "Utiliser la relation \\(v^2-v_0^2=2a(x-x_0)\\) pour un mouvement à accélération constante.",
+      "correction_summary": "La bonne identité est \\(v^2-v_0^2=2a(x-x_0)\\). Le piège courant consiste à oublier le carré sur les vitesses ou à perdre le facteur 2.",
+      "course_clarification": "Cette formule est utile quand on connaît le déplacement et l'accélération mais pas le temps. Elle permet de relier directement l'état initial et l'état final du mouvement.",
       "source_refs": []
     },
     {
-      "question_id": "S18-Q4",
-      "prompt": "Quelle égalité est correcte pour l’accélération normale dans un mouvement circulaire ?",
+      "question_id": "S18_Q4",
+      "prompt": "Dans un mouvement circulaire de rayon \\(R\\), quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\(a_n=\\dfrac{R}{v^2}\\).",
+          "text": "\\(a_n = \\omega R\\).",
           "is_correct": false,
-          "explanation": "Cette écriture est l’inverse de la bonne relation. Elle ne décrit pas une accélération."
+          "explanation": "\\(\\omega R\\) donne la vitesse linéaire \\(v\\), pas l'accélération normale."
         },
         {
           "id": "B",
-          "text": "\\(a_n=\\dfrac{v}{R}\\).",
+          "text": "\\(a_t = \\omega^2R\\).",
           "is_correct": false,
-          "explanation": "\\(\\dfrac{v}{R}\\) a les dimensions d’une vitesse angulaire, pas d’une accélération."
+          "explanation": "\\(\\omega^2R\\) correspond à l'accélération normale, tandis que l'accélération tangentielle vaut \\(a_t = \\alpha R\\)."
         },
         {
           "id": "C",
-          "text": "\\(a_n=vR\\).",
+          "text": "\\(v = \\alpha R\\).",
           "is_correct": false,
-          "explanation": "Multiplier une vitesse par une longueur ne donne pas l’accélération normale attendue."
+          "explanation": "La vitesse linéaire est liée à la vitesse angulaire \\(\\omega\\), pas à l'accélération angulaire \\(\\alpha\\)."
         },
         {
           "id": "D",
-          "text": "\\(a_n=\\alpha R\\).",
+          "text": "\\(a_t = \\omega R\\).",
           "is_correct": false,
-          "explanation": "\\(\\alpha R\\) correspond à l’accélération tangentielle, pas à l’accélération normale dirigée vers le centre."
+          "explanation": "\\(\\omega R\\) n'est pas une accélération tangentielle ; c'est l'expression de la vitesse linéaire."
         },
         {
           "id": "E",
-          "text": "\\(a_n=\\dfrac{v^2}{R}\\).",
+          "text": "\\(a_n = \\dfrac{v^2}{R}\\).",
           "is_correct": true,
-          "explanation": "C’est l’expression de l’accélération normale en fonction de la vitesse linéaire et du rayon de courbure."
+          "explanation": "L'accélération normale dépend de la vitesse au carré et du rayon : elle pointe vers le centre du cercle."
         }
       ],
-      "coverage_label": "v = ωR ; a_t = αR ; a_n = ω²R = v²/R",
-      "learning_objective": "Choisir la formule correcte de l’accélération normale en fonction de la vitesse linéaire et du rayon.",
-      "correction_summary": "La bonne relation est \\(a_n=v^2/R\\). Le piège est de confondre cette accélération centripète avec l’accélération tangentielle \\(a_t=\\alpha R\\).",
-      "course_clarification": "L’accélération normale est liée au changement de direction de la vitesse. Elle pointe vers le centre de rotation et augmente quand la vitesse augmente ou quand le rayon diminue.",
+      "coverage_label": "Formulaire récapitulatif",
+      "learning_objective": "Distinguer vitesse linéaire, accélération tangentielle et accélération normale en rotation.",
+      "correction_summary": "La relation correcte pour l'accélération normale est \\(a_n=v^2/R\\), avec aussi \\(v=\\omega R\\) et \\(a_t=\\alpha R\\). Le piège est de confondre les grandeurs angulaires avec les grandeurs linéaires.",
+      "course_clarification": "En rotation, la vitesse angulaire \\(\\omega\\) s'exprime en rad/s et l'accélération angulaire \\(\\alpha\\) en rad/s². L'accélération normale est dirigée vers le centre, tandis que l'accélération tangentielle agit le long de la trajectoire.",
       "source_refs": []
     },
     {
-      "question_id": "S18-Q5",
-      "prompt": "À propos de la dérivation d’un quotient de fonctions dépendant du temps, quelle relation est correcte ?",
+      "question_id": "S18_Q5",
+      "prompt": "Quelle écriture est correcte pour la dérivée de \\(y\\) par rapport à \\(x\\) lorsque \\(x\\) et \\(y\\) dépendent du temps ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dx/dt}{dy/dt}\\).",
+          "text": "\\(\\dfrac{dy}{dx} = \\dfrac{dx/dt}{dy/dt}\\).",
           "is_correct": false,
-          "explanation": "Le rapport est inversé. Il faut diviser \\(dy/dt\\) par \\(dx/dt\\), pas l’inverse."
+          "explanation": "Le quotient est inversé. Il faut diviser la dérivée de \\(y\\) par celle de \\(x\\), et non l'inverse."
         },
         {
           "id": "B",
-          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dy}{dt}+\\dfrac{dx}{dt}\\).",
+          "text": "\\(\\dfrac{dy}{dx} = \\dfrac{dy}{dt} + \\dfrac{dx}{dt}\\).",
           "is_correct": false,
-          "explanation": "Une dérivée de quotient ou de changement de variable ne se transforme pas en somme des dérivées."
+          "explanation": "Une somme de dérivées n'a pas le bon sens ici. La relation correcte est un quotient de dérivées temporelles."
         },
         {
           "id": "C",
-          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}\\).",
+          "text": "\\(\\dfrac{dy}{dx} = \\dfrac{dy/dt}{dx/dt}\\).",
           "is_correct": true,
-          "explanation": "Quand \\(x\\) et \\(y\\) dépendent toutes deux du temps, la dérivée de \\(y\\) par rapport à \\(x\\) s’obtient par le rapport des dérivées temporelles, si \\(dx/dt\\neq 0\\)."
+          "explanation": "Quand \\(x\\) et \\(y\\) sont paramétrés par le temps, la dérivée par rapport à \\(x\\) s'obtient en divisant les dérivées temporelles, tant que \\(dx/dt \\neq 0\\)."
         },
         {
           "id": "D",
-          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dy}{dt}\\times\\dfrac{dx}{dt}\\).",
+          "text": "\\(\\dfrac{dy}{dx} = \\dfrac{d^2y}{dt^2}\\).",
           "is_correct": false,
-          "explanation": "Le produit des dérivées temporelles ne donne pas la dérivée de \\(y\\) par rapport à \\(x\\)."
+          "explanation": "La dérivée seconde de \\(y\\) par rapport au temps ne donne pas la dérivée de \\(y\\) par rapport à \\(x\\). Les variables de dérivation sont différentes."
         },
         {
           "id": "E",
-          "text": "\\(\\dfrac{dy}{dx}=\\dfrac{dy}{dt}\\) dans tous les cas.",
+          "text": "\\(\\dfrac{dy}{dx} = \\dfrac{dy}{dt}\\,\\dfrac{dx}{dt}\\).",
           "is_correct": false,
-          "explanation": "Les dérivées par rapport à \\(t\\) et par rapport à \\(x\\) sont différentes. Elles ne coïncident que dans des cas particuliers très spécifiques, pas en général."
+          "explanation": "Le produit des deux dérivées temporelles ne donne pas \\(dy/dx\\). Il faut au contraire former le rapport \\(\\frac{dy/dt}{dx/dt}\\)."
         }
       ],
-      "coverage_label": "dy/dx = (dy/dt)/(dx/dt)",
-      "learning_objective": "Appliquer la règle de changement de variable temporelle pour calculer une dérivée par rapport à une autre grandeur.",
-      "correction_summary": "La relation correcte est \\(dy/dx=(dy/dt)/(dx/dt)\\), sous réserve que \\(dx/dt\\neq 0\\). Le piège fréquent est d’inverser le rapport ou de confondre dérivation et multiplication.",
-      "course_clarification": "Quand deux grandeurs dépendent du temps, on peut relier leur variation l’une par rapport à l’autre via le temps. Cette écriture est utile pour passer d’une description paramétrée à une dérivée directe.",
+      "coverage_label": "Formulaire récapitulatif",
+      "learning_objective": "Appliquer la règle \\(dy/dx=(dy/dt)/(dx/dt)\\) pour une courbe paramétrée par le temps.",
+      "correction_summary": "La bonne écriture est \\(\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}\\). Le piège principal est d'inverser le quotient ou de remplacer la relation par un produit.",
+      "course_clarification": "Cette relation sert quand une trajectoire est décrite par le temps. Elle permet de passer d'une variation temporelle à une variation spatiale en utilisant le paramètre commun \\(t\\).",
       "source_refs": []
     }
   ],

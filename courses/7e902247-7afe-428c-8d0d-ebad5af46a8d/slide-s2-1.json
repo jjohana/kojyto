@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S2-1-Q1",
-      "prompt": "À propos de l’alimentation du réseau AC au sol, quelles affirmations sont exactes ?",
+      "prompt": "Quelle affirmation décrit correctement l’acronyme **EXT PWR** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Au sol, seules les sources moteur alimentent le AC SYSTEM.",
+          "text": "EXT PWR désigne un générateur entraîné par un moteur.",
           "is_correct": false,
-          "explanation": "Les sources moteur alimentent aussi le réseau AC, mais l’alimentation externe existe également au sol."
+          "explanation": "Un générateur entraîné par moteur correspond à une source de génération moteur, pas à une puissance externe."
         },
         {
           "id": "B",
-          "text": "EXT PWR A désigne un générateur intégré entraîné par le moteur gauche.",
+          "text": "EXT PWR désigne l’APU GEN.",
           "is_correct": false,
-          "explanation": "EXT PWR signifie External Power : il s’agit d’une puissance externe de sol, pas d’un IDG moteur."
+          "explanation": "L’APU GEN est la source électrique de l’APU, distincte de l’alimentation externe."
         },
         {
           "id": "C",
-          "text": "EXT PWR B correspond au générateur de l’APU.",
+          "text": "EXT PWR désigne une batterie de bord.",
           "is_correct": false,
-          "explanation": "Le générateur de l’APU est une source différente ; EXT PWR B est l’autre source externe de sol."
+          "explanation": "Les batteries appartiennent à la chaîne DC et ne correspondent pas à la puissance externe raccordée au sol."
         },
         {
           "id": "D",
-          "text": "Le réseau AC peut être alimenté au sol par EXT PWR A et/ou EXT PWR B.",
+          "text": "EXT PWR signifie **External Power**.",
           "is_correct": true,
-          "explanation": "C’est exactement l’architecture indiquée pour l’alimentation externe au sol : une source A, une source B, ou les deux selon la configuration disponible."
+          "explanation": "L’abréviation est explicitement donnée : EXT PWR est la puissance externe. C’est le sens à retenir pour identifier l’alimentation sol."
         },
         {
           "id": "E",
-          "text": "Les sources externes ne peuvent pas intervenir sur le réseau AC.",
+          "text": "EXT PWR désigne une alimentation disponible uniquement en vol.",
           "is_correct": false,
-          "explanation": "Elles sont justement prévues pour alimenter le AC SYSTEM au sol."
+          "explanation": "La puissance externe concerne l’alimentation au sol ; elle n’est pas définie comme une source réservée au vol."
         }
       ],
-      "coverage_label": "Alimentation AC au sol : EXT PWR A et EXT PWR B",
-      "learning_objective": "Identifier les deux sources externes de sol capables d’alimenter le réseau AC.",
-      "correction_summary": "La seule affirmation juste est celle qui associe l’alimentation AC au sol à EXT PWR A et/ou EXT PWR B. Le piège classique consiste à confondre ces sources externes avec les IDG moteur ou le générateur APU.",
-      "course_clarification": "EXT PWR signifie External Power. Au sol, ces sources apportent une alimentation externe au AC SYSTEM, sans modifier la définition des autres sources de génération.",
+      "coverage_label": "EXT PWR",
+      "learning_objective": "Reconnaître la signification de l’acronyme EXT PWR.",
+      "correction_summary": "La bonne réponse est la définition de l’acronyme : EXT PWR = External Power. Le piège consiste à confondre cette source externe avec l’APU, les batteries ou les générateurs moteurs.",
+      "course_clarification": "EXT PWR désigne la puissance fournie depuis le sol par un équipement externe raccordé à l’avion. Cette source sert à alimenter le réseau AC sans utiliser les moteurs ni l’APU.",
       "source_refs": []
     },
     {
       "question_id": "S2-1-Q2",
-      "prompt": "Concernant la place de EXT PWR A et EXT PWR B dans l’architecture AC, quelles affirmations sont exactes ?",
+      "prompt": "Quelle affirmation est correcte à propos de l’alimentation du **AC SYSTEM** au sol ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "EXT PWR A remplace définitivement les IDG dès qu’il est disponible.",
+          "text": "Au sol, le **AC SYSTEM** ne peut être alimenté que par les IDG moteurs.",
           "is_correct": false,
-          "explanation": "La présence d’une alimentation externe ne supprime pas la logique des autres sources ; elle ajoute une possibilité d’alimentation au réseau AC."
+          "explanation": "Les IDG alimentent la génération AC liée aux moteurs, mais l’alimentation au sol peut aussi venir des sources externes EXT PWR."
         },
         {
           "id": "B",
-          "text": "EXT PWR A et EXT PWR B sont en parallèle des sources moteur et de l’APU.",
+          "text": "Au sol, le **AC SYSTEM** peut être alimenté par **EXT PWR A** et/ou **EXT PWR B**.",
           "is_correct": true,
-          "explanation": "Le schéma place les sources externes au même niveau d’architecture que les autres sources AC, avec un raccordement parallèle au AC SYSTEM."
+          "explanation": "Le schéma indique bien deux sources externes possibles au sol, utilisables séparément ou ensemble selon la configuration disponible."
         },
         {
           "id": "C",
-          "text": "EXT PWR B est une source DC qui alimente directement les batteries.",
+          "text": "Au sol, le **AC SYSTEM** ne peut être alimenté que par l’APU GEN.",
           "is_correct": false,
-          "explanation": "EXT PWR concerne l’alimentation AC ; la liaison directe aux batteries relève de l’architecture DC, pas de cette source."
+          "explanation": "L’APU GEN est une autre source AC, mais le document montre aussi l’option EXT PWR A et/ou B au sol."
         },
         {
           "id": "D",
-          "text": "Les sources externes sont intégrées au circuit de génération en vol sans distinction.",
+          "text": "Au sol, le **AC SYSTEM** ne peut pas recevoir d’alimentation externe.",
           "is_correct": false,
-          "explanation": "La logique d’alimentation externe reste distincte de la génération en vol : les sources AC de sol ne sont pas la même chose que la production en vol par les moteurs."
+          "explanation": "C’est l’inverse de l’information du schéma : l’alimentation externe au sol est précisément prévue par EXT PWR A et B."
         },
         {
           "id": "E",
-          "text": "Les sources externes ne peuvent jamais être raccordées au AC SYSTEM.",
+          "text": "Au sol, le **AC SYSTEM** est alimenté uniquement en vol.",
           "is_correct": false,
-          "explanation": "Le raccordement au AC SYSTEM est précisément leur fonction au sol."
+          "explanation": "L’alimentation en vol par les IDG ne supprime pas l’existence d’une alimentation au sol par EXT PWR."
         }
       ],
-      "coverage_label": "Alimentation AC au sol : EXT PWR A et EXT PWR B",
-      "learning_objective": "Lire la position fonctionnelle des sources externes dans le schéma de génération AC.",
-      "correction_summary": "La bonne idée est que les sources externes s’ajoutent en parallèle aux autres sources AC. Le piège est de les confondre avec une substitution permanente ou avec une source DC.",
-      "course_clarification": "En architecture électrique, des sources en parallèle peuvent alimenter un même réseau selon la configuration autorisée. Ici, EXT PWR A et B sont des sources de sol raccordées au AC SYSTEM.",
+      "coverage_label": "Alimentation AC au sol",
+      "learning_objective": "Identifier les sources externes disponibles au sol pour alimenter le réseau AC.",
+      "correction_summary": "La bonne réponse est l’utilisation possible de EXT PWR A et/ou EXT PWR B au sol. Le piège est de croire que seules les sources moteur ou l’APU peuvent alimenter le réseau AC.",
+      "course_clarification": "Le réseau AC peut recevoir de la puissance depuis le sol via deux prises externes. L’expression \"A et/ou B\" signifie qu’une seule source ou les deux peuvent être utilisées selon la disponibilité.",
       "source_refs": []
     },
     {
       "question_id": "S2-1-Q3",
-      "prompt": "À propos du panneau de contrôle de puissance externe, quelles affirmations sont exactes ?",
+      "prompt": "Quelle proposition décrit correctement la place de **EXT PWR A** et **EXT PWR B** dans l’architecture d’alimentation AC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le panneau de contrôle de puissance externe donne accès à deux réceptacles EXT PWR.",
+          "text": "**EXT PWR A** et **EXT PWR B** sont en parallèle des sources moteur et de l’APU.",
           "is_correct": true,
-          "explanation": "Le texte associé au schéma indique explicitement deux réceptacles pour le raccordement de la puissance sol."
+          "explanation": "Le schéma place les sources externes au même niveau d’architecture que les autres sources AC, afin qu’elles puissent alimenter le réseau AC selon la disponibilité."
         },
         {
           "id": "B",
-          "text": "Le panneau ne sert qu’à commander la ventilation avionique.",
+          "text": "**EXT PWR A** et **EXT PWR B** sont montées en série avec les sources moteur.",
           "is_correct": false,
-          "explanation": "La commande de ventilation est une autre fonction du panneau ; ici, il s’agit du contrôle de puissance externe."
+          "explanation": "Une connexion en série ne correspond pas au schéma présenté : les sources sont organisées comme des sources alternatives en parallèle."
         },
         {
           "id": "C",
-          "text": "Le panneau remplace les Generator Control Units (GCUs).",
+          "text": "**EXT PWR A** et **EXT PWR B** remplacent définitivement les sources moteur.",
           "is_correct": false,
-          "explanation": "Les GCUs contrôlent et surveillent les générateurs concernés ; le panneau externe sert au raccordement et à l’accès aux sources de sol."
+          "explanation": "Les sources externes ne remplacent pas les générateurs moteurs ; elles offrent une autre possibilité d’alimentation, surtout au sol."
         },
         {
           "id": "D",
-          "text": "Un seul réceptacle EXT PWR est prévu pour toute l’alimentation externe.",
+          "text": "**EXT PWR A** et **EXT PWR B** sont indépendantes du **AC SYSTEM**.",
           "is_correct": false,
-          "explanation": "Le support indique deux réceptacles distincts, ce qui permet de relier EXT PWR A et/ou EXT PWR B."
+          "explanation": "Leur rôle est justement d’alimenter le AC SYSTEM ; elles ne sont donc pas indépendantes de ce réseau."
         },
         {
           "id": "E",
-          "text": "Le panneau externe n’a aucun lien avec l’alimentation AC au sol.",
+          "text": "**EXT PWR A** et **EXT PWR B** ne sont utilisables qu’en vol.",
           "is_correct": false,
-          "explanation": "Son rôle est précisément lié à l’accès aux sources de puissance externe pour alimenter le système AC au sol."
+          "explanation": "Le document les présente comme des sources externes disponibles au sol, pas comme des sources de génération en vol."
         }
       ],
-      "coverage_label": "Panneau de puissance externe",
-      "learning_objective": "Associer le panneau externe à ses deux réceptacles et à son rôle fonctionnel.",
-      "correction_summary": "La seule proposition correcte est celle qui relie le panneau à deux réceptacles EXT PWR. Le piège consiste à lui attribuer d’autres fonctions de bord ou à oublier le pluriel des réceptacles.",
-      "course_clarification": "Un réceptacle est le point de raccordement de la puissance sol. Le panneau de puissance externe sert donc à permettre la connexion de l’EXT PWR au réseau de bord.",
+      "coverage_label": "Architecture AC",
+      "learning_objective": "Situer les sources externes par rapport aux autres sources de génération AC.",
+      "correction_summary": "La bonne réponse est la mise en parallèle des sources externes avec les sources moteur et l’APU. Le piège fréquent est de confondre architecture parallèle et alimentation en série ou exclusive.",
+      "course_clarification": "Des sources en parallèle peuvent, selon la configuration, alimenter le même réseau. Ici, EXT PWR vient compléter les autres sources AC sans les modifier dans leur principe de fonctionnement.",
       "source_refs": []
     },
     {
       "question_id": "S2-1-Q4",
-      "prompt": "À propos de l’emplacement du panneau de puissance externe, quelles affirmations sont exactes ?",
+      "prompt": "Quelle affirmation est correcte au sujet du **panneau de contrôle de puissance externe** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le panneau est situé dans la dérive de l’avion.",
+          "text": "Le panneau de contrôle de puissance externe donne accès à un seul réceptacle **EXT PWR**.",
           "is_correct": false,
-          "explanation": "La localisation indiquée est près du train avant, pas sur la dérive."
+          "explanation": "Le schéma mentionne deux réceptacles, pas un seul, pour le raccordement de la puissance externe."
         },
         {
           "id": "B",
-          "text": "NLG signifie Nose Landing Gear.",
+          "text": "Le panneau de contrôle de puissance externe sert uniquement à la génération en vol.",
           "is_correct": false,
-          "explanation": "Cette affirmation est fausse dans le cadre demandé : NLG signifie bien Nose Landing Gear, donc la proposition est formulée comme si elle était incorrecte. Elle ne peut pas être retenue comme vraie ici puisqu’elle contredit la structure attendue de l’item, qui cherche une seule affirmation juste."
+          "explanation": "Sa fonction est liée au raccordement de la puissance sol, pas à la génération en vol par les moteurs."
         },
         {
           "id": "C",
-          "text": "Le panneau est placé exclusivement à l’intérieur du cockpit.",
+          "text": "Le panneau de contrôle de puissance externe n’a aucun lien avec l’alimentation électrique.",
           "is_correct": false,
-          "explanation": "Le visuel et le libellé montrent un panneau externe près du train avant, pas un panneau strictement en cockpit."
+          "explanation": "Le panneau est précisément associé à l’accès à la puissance externe utilisée pour alimenter le réseau AC."
         },
         {
           "id": "D",
-          "text": "Le panneau n’est pas lié à l’accès à l’alimentation externe.",
+          "text": "Le panneau de contrôle de puissance externe commande les réceptacles de carburant.",
           "is_correct": false,
-          "explanation": "Il est justement présenté comme le panneau de contrôle de puissance externe permettant l’accès aux sources de sol."
+          "explanation": "Il s’agit d’un élément électrique, dédié à la puissance externe, et non à un circuit carburant."
         },
         {
           "id": "E",
-          "text": "Le panneau visible est situé près du train avant, NLG.",
+          "text": "Le panneau de contrôle de puissance externe donne accès à deux réceptacles **EXT PWR**.",
           "is_correct": true,
-          "explanation": "Le document indique explicitement la zone NOSE LANDING GEAR (NLG) pour ce panneau externe."
+          "explanation": "Le document indique explicitement que ce panneau permet le raccordement de la puissance sol via deux réceptacles EXT PWR."
         }
       ],
       "coverage_label": "Panneau de puissance externe",
-      "learning_objective": "Identifier l’emplacement du panneau externe et son lien avec le NLG.",
-      "correction_summary": "La bonne réponse situe le panneau près du NLG. Le piège est de le déplacer vers des zones internes de l’avion ou de dissocier son emplacement de sa fonction.",
-      "course_clarification": "NLG veut dire Nose Landing Gear, c’est le train avant. Le panneau externe associé s’y trouve pour faciliter le raccordement de la puissance sol.",
+      "learning_objective": "Identifier le rôle du panneau de contrôle de puissance externe.",
+      "correction_summary": "La bonne réponse est que le panneau donne accès à deux réceptacles EXT PWR. Le piège est de réduire ce panneau à un simple affichage alors qu’il sert au raccordement de la puissance sol.",
+      "course_clarification": "Un réceptacle est une prise de connexion pour l’alimentation externe. Le panneau permet donc l’accès à ces points de raccordement afin d’alimenter l’AC SYSTEM depuis le sol.",
       "source_refs": []
     },
     {
       "question_id": "S2-1-Q5",
-      "prompt": "Sur la logique d’alimentation AC au sol, quelles affirmations sont exactes ?",
+      "prompt": "Quelle affirmation est correcte concernant l’emplacement du panneau externe visible sur le schéma ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "En vol, le AC SYSTEM est alimenté par les EXT PWR A et B.",
+          "text": "Le panneau externe visible est situé dans le cockpit.",
           "is_correct": false,
-          "explanation": "En vol, l’alimentation principale représentée est assurée par les IDG moteur ; les EXT PWR sont une solution de sol."
+          "explanation": "Le document le montre à l’extérieur, près du train avant, et non dans le poste de pilotage."
         },
         {
           "id": "B",
-          "text": "EXT PWR A et B sont des générateurs entraînés par chaque moteur.",
+          "text": "Le panneau externe visible est situé sur le bord d’attaque de l’aile gauche.",
           "is_correct": false,
-          "explanation": "Cette description correspond aux IDG moteur, pas aux puissances externes."
+          "explanation": "Aucune indication ne place ce panneau sur une aile ; il est montré près du NLG."
         },
         {
           "id": "C",
-          "text": "La logique d’alimentation externe reste distincte de la génération en vol.",
+          "text": "Le panneau externe visible est situé près du **train avant (NLG)**.",
           "is_correct": true,
-          "explanation": "Le support sépare bien l’EXT PWR de la génération en vol par les moteurs ; ce sont deux logiques d’alimentation différentes."
+          "explanation": "Le schéma place clairement le panneau de contrôle de puissance externe à proximité du Nose Landing Gear, soit le train avant."
         },
         {
           "id": "D",
-          "text": "La présence de l’alimentation externe supprime le rôle de l’APU en toutes phases.",
+          "text": "Le panneau externe visible est situé dans la soute arrière.",
           "is_correct": false,
-          "explanation": "L’APU reste une source AC distincte ; l’EXT PWR s’ajoute comme possibilité d’alimentation au sol."
+          "explanation": "La localisation indiquée est au niveau du train avant, pas dans une soute."
         },
         {
           "id": "E",
-          "text": "EXT PWR ne peut pas alimenter le AC SYSTEM au sol.",
+          "text": "Le panneau externe visible est situé près de la dérive.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : l’alimentation externe est précisément prévue pour alimenter le AC SYSTEM au sol."
+          "explanation": "La dérive n’est pas l’emplacement montré ; le repère visuel est le NLG."
         }
       ],
-      "coverage_label": "Alimentation AC au sol : EXT PWR A et EXT PWR B",
-      "learning_objective": "Distinguer l’alimentation externe au sol de la génération AC en vol.",
-      "correction_summary": "L’idée clé est la séparation entre la logique de sol et la logique de vol. Le piège fréquent consiste à attribuer à EXT PWR le rôle des IDG moteur ou à le confondre avec l’APU.",
-      "course_clarification": "La génération en vol repose sur les sources entraînées par les moteurs. Au sol, EXT PWR A et/ou B offrent une alimentation externe du AC SYSTEM, sans devenir des sources de génération en vol.",
+      "coverage_label": "NLG / panneau externe",
+      "learning_objective": "Repérer la position du panneau de puissance externe sur l’avion.",
+      "correction_summary": "La bonne réponse situe le panneau près du train avant, identifié par NLG. Le piège consiste à le chercher dans une zone de cabine ou sur une autre partie de la cellule.",
+      "course_clarification": "NLG signifie Nose Landing Gear, le train avant. Ici, le panneau de puissance externe est associé à cette zone pour faciliter le raccordement de l’alimentation sol.",
       "source_refs": []
     }
   ],

@@ -4,218 +4,50 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S2-3-Q1",
-      "prompt": "Concernant le panneau de puissance externe et son implantation, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Le panneau externe est installé dans le cockpit, au niveau du poste de pilotage.",
-          "is_correct": false,
-          "explanation": "Le panneau n’est pas décrit dans le cockpit mais à proximité du train avant."
-        },
-        {
-          "id": "B",
-          "text": "Le panneau externe commande uniquement l’APU et n’a pas de lien avec l’alimentation AC.",
-          "is_correct": false,
-          "explanation": "Le panneau est associé au raccordement de puissance externe vers le AC SYSTEM, pas seulement à l’APU."
-        },
-        {
-          "id": "C",
-          "text": "Le panneau externe se trouve obligatoirement au-dessus de l’aile gauche.",
-          "is_correct": false,
-          "explanation": "Aucune implantation sur l’aile n’est indiquée ; la position donnée est près du NLG."
-        },
-        {
-          "id": "D",
-          "text": "Le panneau externe de contrôle de puissance est situé près du NLG.",
-          "is_correct": true,
-          "explanation": "Le support place explicitement le panneau près du Nose Landing Gear (NLG), donc près du train avant."
-        },
-        {
-          "id": "E",
-          "text": "Le panneau externe est réservé à la génération DC et n’intervient pas sur le réseau AC.",
-          "is_correct": false,
-          "explanation": "Les éléments fournis relient ce panneau à l’alimentation du AC SYSTEM au sol."
-        }
-      ],
-      "coverage_label": "Raccordement au AC SYSTEM et implantation près du NLG",
-      "learning_objective": "Identifier l’emplacement du panneau de puissance externe et le relier à la fonction d’alimentation AC au sol.",
-      "correction_summary": "La bonne réponse est celle qui situe le panneau près du NLG. Le piège consiste à confondre son emplacement avec le cockpit, l’aile ou un usage limité au DC.",
-      "course_clarification": "NLG signifie Nose Landing Gear, donc le train avant. Le panneau externe sert au raccordement de la puissance sol vers le réseau AC principal.",
-      "source_refs": []
-    },
-    {
-      "question_id": "S2-3-Q2",
-      "prompt": "À propos des sources externes d’alimentation AC au sol, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Le réseau AC au sol ne peut être alimenté que par l’APU GEN.",
-          "is_correct": false,
-          "explanation": "L’APU GEN est une autre source, mais le support précise aussi l’usage possible de EXT PWR A et B."
-        },
-        {
-          "id": "B",
-          "text": "Le réseau AC peut être alimenté par EXT PWR A et/ou EXT PWR B au sol.",
-          "is_correct": true,
-          "explanation": "Le texte indique explicitement deux sources externes possibles : EXT PWR A et/ou EXT PWR B."
-        },
-        {
-          "id": "C",
-          "text": "EXT PWR A et EXT PWR B sont des sources internes aux moteurs.",
-          "is_correct": false,
-          "explanation": "Les sources externes sont de la puissance sol, distinctes des sources moteur."
-        },
-        {
-          "id": "D",
-          "text": "Une seule source externe existe et elle s’appelle EXT PWR.",
-          "is_correct": false,
-          "explanation": "Le support distingue deux sources, A et B, et non une source unique indifférenciée."
-        },
-        {
-          "id": "E",
-          "text": "Les sources externes ne peuvent jamais alimenter le AC SYSTEM.",
-          "is_correct": false,
-          "explanation": "Au contraire, elles peuvent alimenter le AC SYSTEM au sol."
-        }
-      ],
-      "coverage_label": "Alimentation AC au sol : external power A et B",
-      "learning_objective": "Reconnaître les deux possibilités d’alimentation externe du réseau AC au sol.",
-      "correction_summary": "La réponse correcte rappelle que le réseau AC peut recevoir EXT PWR A, EXT PWR B, ou les deux selon la configuration. Le piège est de confondre ces sources avec l’APU ou les moteurs.",
-      "course_clarification": "EXT PWR signifie External Power, la puissance fournie depuis le sol. Elle alimente directement le AC SYSTEM sans passer par les moteurs.",
-      "source_refs": []
-    },
-    {
-      "question_id": "S2-3-Q3",
-      "prompt": "Sur le schéma d’alimentation AC, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "EXT PWR A et B sont reliées au AC SYSTEM en parallèle des sources moteur et APU.",
-          "is_correct": true,
-          "explanation": "Le schéma montre les sources externes raccordées au même réseau que les IDGs moteur et le générateur APU."
-        },
-        {
-          "id": "B",
-          "text": "EXT PWR A et B remplacent définitivement les IDGs dès qu’elles sont disponibles.",
-          "is_correct": false,
-          "explanation": "Le raccordement est en parallèle, donc il ne supprime pas la présence des autres sources."
-        },
-        {
-          "id": "C",
-          "text": "Le AC SYSTEM est alimenté uniquement par l’APU GEN en configuration au sol.",
-          "is_correct": false,
-          "explanation": "L’APU GEN n’est qu’une des sources possibles ; le schéma inclut aussi les IDGs et les sources externes."
-        },
-        {
-          "id": "D",
-          "text": "Les sources externes sont branchées en série avec les moteurs.",
-          "is_correct": false,
-          "explanation": "Le schéma les relie en parallèle au réseau, pas en série."
-        },
-        {
-          "id": "E",
-          "text": "Les GCUs pilotent directement la distribution des batteries vers le AC SYSTEM au lieu des sources AC.",
-          "is_correct": false,
-          "explanation": "Les GCUs surveillent et contrôlent les générateurs concernés ; l’affirmation mélange la logique AC et celle des batteries."
-        }
-      ],
-      "coverage_label": "Raccordement au AC SYSTEM et implantation près du NLG",
-      "learning_objective": "Lire correctement l’architecture de raccordement des sources AC sur le schéma.",
-      "correction_summary": "La bonne réponse est celle qui décrit un raccordement en parallèle entre sources moteur, APU et puissance externe. Le principal piège est d’imaginer une substitution ou un montage en série.",
-      "course_clarification": "Un montage en parallèle permet à plusieurs sources d’alimenter le même réseau. Ici, EXT PWR A et B s’ajoutent aux autres sources AC possibles.",
-      "source_refs": []
-    },
-    {
       "question_id": "S2-3-Q4",
-      "prompt": "À propos du panneau de contrôle de puissance externe, quelle affirmation est correcte ?",
+      "prompt": "Quelle affirmation associe correctement les acronymes ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le panneau ne permet qu’un seul branchement EXT PWR à la fois parce qu’il n’existe qu’un réceptacle.",
+          "text": "NLG signifie Nose Light Guide.",
           "is_correct": false,
-          "explanation": "Le document mentionne deux réceptacles, pas un seul."
+          "explanation": "Faux : NLG correspond à Nose Landing Gear, pas à un système d’éclairage."
         },
         {
           "id": "B",
-          "text": "Le panneau sert uniquement à tester les voyants et n’intervient pas dans le raccordement.",
+          "text": "AC SYSTEM signifie Air Control System.",
           "is_correct": false,
-          "explanation": "Le panneau est bien l’interface d’accès au raccordement de la puissance externe."
+          "explanation": "Faux : ici AC SYSTEM renvoie au réseau électrique alternatif principal, pas à un système de contrôle d’air."
         },
         {
           "id": "C",
-          "text": "Le raccordement de puissance sol se fait sans réceptacle dédié.",
+          "text": "NLG désigne le générateur de l’APU.",
           "is_correct": false,
-          "explanation": "Le texte parle explicitement de réceptacles EXT PWR pour la connexion."
+          "explanation": "Faux : le générateur de l’APU est APU GEN, alors que NLG concerne le train avant."
         },
         {
           "id": "D",
-          "text": "Les réceptacles EXT PWR sont réservés à l’alimentation en vol.",
+          "text": "AC SYSTEM désigne le circuit de batterie principal.",
           "is_correct": false,
-          "explanation": "L’usage décrit concerne la puissance sol, donc au sol, pas en vol."
+          "explanation": "Faux : le circuit de batterie relève d’une autre partie de l’architecture électrique, pas du réseau AC principal."
         },
         {
           "id": "E",
-          "text": "Le panneau donne accès à deux réceptacles EXT PWR pour le raccordement de la puissance sol.",
-          "is_correct": true,
-          "explanation": "Le support précise qu’il existe deux réceptacles EXT PWR accessibles depuis ce panneau."
-        }
-      ],
-      "coverage_label": "Alimentation AC au sol : external power A et B",
-      "learning_objective": "Identifier la fonction du panneau externe et le nombre d’entrées de raccordement prévues.",
-      "correction_summary": "La bonne affirmation retient l’existence de deux réceptacles EXT PWR accessibles depuis le panneau. Le piège consiste à réduire cette interface à un simple panneau de test ou à un seul connecteur.",
-      "course_clarification": "Un réceptacle est une prise de raccordement. Ici, le panneau externe permet la connexion de la puissance sol au réseau électrique de l’avion.",
-      "source_refs": []
-    },
-    {
-      "question_id": "S2-3-Q5",
-      "prompt": "Parmi les affirmations suivantes, laquelle est correcte concernant les acronymes et la fonction du réseau ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "NLG signifie Nose Left Generator.",
-          "is_correct": false,
-          "explanation": "Cette expansion est fausse ; NLG renvoie au train avant."
-        },
-        {
-          "id": "B",
-          "text": "AC SYSTEM désigne uniquement l’APU et ses commandes.",
-          "is_correct": false,
-          "explanation": "AC SYSTEM est le réseau AC principal, pas un organe isolé comme l’APU."
-        },
-        {
-          "id": "C",
           "text": "NLG signifie Nose Landing Gear et AC SYSTEM désigne le réseau AC principal.",
           "is_correct": true,
-          "explanation": "Les acronymes sont donnés explicitement : NLG = Nose Landing Gear et AC SYSTEM = réseau AC principal."
-        },
-        {
-          "id": "D",
-          "text": "EXT PWR signifie Engine Power.",
-          "is_correct": false,
-          "explanation": "EXT PWR veut dire External Power, c’est-à-dire la puissance externe fournie au sol."
-        },
-        {
-          "id": "E",
-          "text": "Le réseau AC principal est alimenté uniquement par les batteries.",
-          "is_correct": false,
-          "explanation": "Les batteries concernent surtout des architectures de secours ou des circuits associés ; elles ne constituent pas la source principale décrite ici."
+          "explanation": "Vrai : les acronymes sont donnés explicitement et correspondent au train avant et au réseau AC principal."
         }
       ],
-      "coverage_label": "Raccordement au AC SYSTEM et implantation près du NLG",
-      "learning_objective": "Maîtriser les acronymes essentiels et relier le panneau externe au réseau AC principal.",
-      "correction_summary": "La bonne réponse associe correctement NLG au train avant et AC SYSTEM au réseau AC principal. Le piège classique est de fabriquer des sigles proches mais faux ou de confondre le réseau AC avec une source unique.",
-      "course_clarification": "Les acronymes servent à identifier rapidement les organes du schéma. Retenir leur sens exact aide à lire le raccordement entre la puissance externe, le panneau et le réseau AC.",
+      "coverage_label": "Acronymes NLG et AC SYSTEM",
+      "learning_objective": "Lire correctement les acronymes liés au train avant et au réseau AC.",
+      "correction_summary": "La confusion la plus courante vient d’une lecture approximative des sigles. Ici, il faut retenir deux repères simples : NLG pour le train avant et AC SYSTEM pour le réseau AC principal.",
+      "course_clarification": "Un acronyme doit être lu avec sa signification exacte dans le contexte de l’avion. NLG ne désigne pas une fonction électrique, mais la zone du Nose Landing Gear.",
       "source_refs": []
     }
   ],
   "subpart_id": "S2",
   "anchor_slide_id": "S2-3",
-  "question_count_target": 5,
+  "question_count_target": 1,
   "title": "QCM - Raccordement au AC SYSTEM et implantation près du NLG"
 }

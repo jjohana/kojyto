@@ -5,170 +5,170 @@
   "questions": [
     {
       "question_id": "s11_s12_q2",
-      "prompt": "À propos de la relation entre employeur et salarié, quelle proposition est correcte ?",
+      "prompt": "Quel énoncé décrit correctement la place du salarié dans l’organisation ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le salarié dépend uniquement de ses collègues pour obtenir sa rémunération.",
+          "text": "Le salarié travaille sans lien avec la hiérarchie ni avec ses collègues.",
           "is_correct": false,
-          "explanation": "La rémunération dépend du lien avec l’employeur, pas seulement des collègues."
+          "explanation": "L’organisation du travail implique au contraire des liens avec la hiérarchie, les collègues et les processus internes."
         },
         {
           "id": "B",
-          "text": "Elle repose sur des intérêts mutuels et sur le respect des obligations contractuelles.",
+          "text": "Le salarié occupe une fonction précise dans l’organisation et interagit avec la hiérarchie, les collègues et les processus.",
           "is_correct": true,
-          "explanation": "Le lien de travail fonctionne dans les deux sens : chacun attend quelque chose de l’autre, et le contrat fixe les obligations de chacun."
+          "explanation": "La place du salarié n’est pas isolée : elle est définie par une fonction, des relations de travail et une intégration dans l’organisation."
         },
         {
           "id": "C",
-          "text": "L’employeur n’attend du salarié que la présence physique, sans objectif de production.",
+          "text": "Le salarié n’a pas de fonction précise dans l’organisation.",
           "is_correct": false,
-          "explanation": "Le salarié apporte ses compétences et son temps pour contribuer aux objectifs de l’entreprise."
+          "explanation": "Le support insiste sur une fonction clairement identifiée, opérationnelle ou stratégique."
         },
         {
           "id": "D",
-          "text": "La relation de travail exclut toute obligation contractuelle.",
+          "text": "Le salarié remplace les processus de l’entreprise par son initiative personnelle.",
           "is_correct": false,
-          "explanation": "Le support insiste au contraire sur le respect des obligations contractuelles dans la relation employeur-salarié."
+          "explanation": "Les processus structurent le travail ; le salarié s’y intègre, il ne les remplace pas."
         },
         {
           "id": "E",
-          "text": "Le salarié n’a aucun intérêt personnel dans cette relation.",
+          "text": "Le salarié agit uniquement à titre individuel, sans intégration dans l’organisation.",
           "is_correct": false,
-          "explanation": "Le texte précise qu’il poursuit aussi ses propres objectifs, comme le salaire, le développement et la reconnaissance."
+          "explanation": "Le travail salarié se déroule dans une organisation collective avec des règles, une hiérarchie et des interactions."
         }
       ],
-      "coverage_label": "Relation employeur-salarié",
-      "learning_objective": "Comprendre la logique d’interdépendance et d’intérêts mutuels dans la relation de travail.",
-      "correction_summary": "La relation de travail est fondée sur un échange et sur des obligations réciproques. Le piège est de réduire cette relation à un simple lien d’autorité sans intérêt partagé.",
-      "course_clarification": "L’employeur a besoin du travail du salarié pour atteindre ses objectifs. Le salarié dépend de l’entreprise pour sa rémunération, son développement et sa place dans l’organisation.",
+      "coverage_label": "Individu dans l’organisation",
+      "learning_objective": "Identifier la fonction du salarié et ses relations avec la hiérarchie, les collègues et les processus.",
+      "correction_summary": "La réponse correcte décrit le salarié comme un acteur intégré à l’organisation. Le piège consiste à le présenter comme autonome et sans coordination avec le reste de l’entreprise.",
+      "course_clarification": "Une fonction précise correspond au poste occupé et aux missions associées. Cette fonction s’insère dans une structure collective avec des règles et une hiérarchie.",
       "source_refs": []
     },
     {
       "question_id": "s11_s12_q3",
-      "prompt": "Quel énoncé correspond au rôle du salarié dans l’organisation ?",
+      "prompt": "Quel énoncé décrit correctement l’interdépendance entre employeur et salarié ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il apporte ses compétences et son temps pour atteindre les objectifs de l’entreprise.",
+          "text": "La relation repose sur des intérêts mutuels et sur le respect des obligations contractuelles.",
           "is_correct": true,
-          "explanation": "C’est exactement l’idée donnée : le salarié contribue aux objectifs de l’entreprise par son travail et ses compétences."
+          "explanation": "L’employeur et le salarié sont liés par un contrat : chacun attend quelque chose de l’autre et chacun doit respecter ses engagements."
         },
         {
           "id": "B",
-          "text": "Il ne poursuit que des objectifs collectifs et aucun objectif personnel.",
+          "text": "L’employeur dépend du salarié, mais le salarié n’a aucun besoin de l’entreprise.",
           "is_correct": false,
-          "explanation": "Le texte précise aussi des objectifs personnels : salaire, développement et reconnaissance."
+          "explanation": "La relation est réciproque : le salarié dépend aussi de l’entreprise pour sa rémunération et son développement."
         },
         {
           "id": "C",
-          "text": "Il n’occupe jamais de fonction précise dans l’organisation.",
+          "text": "La relation repose uniquement sur la bonne volonté, sans obligations contractuelles.",
           "is_correct": false,
-          "explanation": "Au contraire, le salarié occupe une fonction précise, qui peut être opérationnelle ou stratégique."
+          "explanation": "Le lien de travail est encadré par un contrat, donc par des obligations précises pour les deux parties."
         },
         {
           "id": "D",
-          "text": "Il travaille en dehors de toute hiérarchie et sans interaction avec les autres acteurs.",
+          "text": "Le salarié dépend de l’entreprise uniquement pour son matériel de travail, pas pour sa rémunération.",
           "is_correct": false,
-          "explanation": "La place du salarié implique des relations avec la hiérarchie, les collègues et les processus de l’entreprise."
+          "explanation": "Le support mentionne explicitement la rémunération comme élément central de cette dépendance."
         },
         {
           "id": "E",
-          "text": "Il agit uniquement pour son intérêt personnel sans lien avec les objectifs de l’entreprise.",
+          "text": "L’employeur et le salarié poursuivent des intérêts contradictoires et sans point commun.",
           "is_correct": false,
-          "explanation": "Le support insiste sur une double logique : contribution à l’entreprise et poursuite d’objectifs personnels."
+          "explanation": "Le texte insiste au contraire sur des intérêts mutuels, c’est-à-dire partagés et complémentaires."
         }
       ],
-      "coverage_label": "Individu dans l’organisation",
-      "learning_objective": "Identifier la contribution du salarié et ses objectifs dans l’entreprise.",
-      "correction_summary": "Le salarié n’est pas seulement un exécutant : il met ses compétences au service de l’entreprise tout en recherchant aussi des bénéfices personnels. Le piège est d’oublier cette double dimension.",
-      "course_clarification": "Le salarié fournit du temps, des compétences et un travail utile à l’entreprise. En retour, il attend une rémunération, une progression et une reconnaissance professionnelle.",
+      "coverage_label": "Interdépendance employeur-salarié",
+      "learning_objective": "Comprendre la logique d’échange et de dépendance réciproque dans la relation de travail.",
+      "correction_summary": "La bonne réponse met en avant l’intérêt mutuel et le contrat. Le piège est de réduire la relation à un seul sens ou à une simple entente informelle.",
+      "course_clarification": "L’employeur attend du travail et des compétences ; le salarié attend une rémunération et des perspectives. Le contrat encadre cet échange et fixe les obligations de chacun.",
       "source_refs": []
     },
     {
       "question_id": "s11_s12_q4",
-      "prompt": "À propos de la place du salarié dans l’organisation, quelle affirmation est juste ?",
+      "prompt": "Quel énoncé correspond aux objectifs personnels du salarié mentionnés dans la partie ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il travaille sans aucune coordination avec d’autres personnes.",
+          "text": "Le salarié recherche uniquement des primes exceptionnelles et jamais de salaire fixe.",
           "is_correct": false,
-          "explanation": "Le texte mentionne explicitement des interactions avec les collègues et la hiérarchie."
+          "explanation": "Le salaire est bien cité comme objectif central, pas seulement des primes ponctuelles."
         },
         {
           "id": "B",
-          "text": "Il est toujours placé uniquement dans une fonction stratégique, jamais opérationnelle.",
+          "text": "Le salarié poursuit uniquement les objectifs de production de l’entreprise.",
           "is_correct": false,
-          "explanation": "La fonction peut être opérationnelle ou stratégique ; les deux sont possibles."
+          "explanation": "Le texte ajoute des objectifs propres au salarié, au-delà des objectifs de l’entreprise."
         },
         {
           "id": "C",
-          "text": "Son rôle est indépendant des processus de l’entreprise.",
+          "text": "Le salarié vise seulement la réduction des coûts de l’entreprise.",
           "is_correct": false,
-          "explanation": "Au contraire, il s’intègre aux processus de l’entreprise, donc son activité s’inscrit dans un cadre organisé."
+          "explanation": "La réduction des coûts n’est pas présentée comme un objectif personnel du salarié."
         },
         {
           "id": "D",
-          "text": "Sa place dans l’organisation n’a aucun effet sur ses relations de travail.",
+          "text": "Le salarié recherche seulement une autorisation de travailler en horaires décalés.",
           "is_correct": false,
-          "explanation": "La fonction occupée détermine justement les relations avec la hiérarchie, les collègues et les procédures à suivre."
+          "explanation": "Les objectifs cités sont le salaire, le développement et la reconnaissance, pas l’organisation horaire."
         },
         {
           "id": "E",
-          "text": "Il occupe une fonction précise et interagit avec la hiérarchie, les collègues et les processus de l’entreprise.",
+          "text": "Le salarié recherche notamment un salaire, du développement et de la reconnaissance.",
           "is_correct": true,
-          "explanation": "La place du salarié ne se limite pas à une tâche isolée : elle s’inscrit dans une organisation avec des relations internes et des procédures."
+          "explanation": "Ces trois éléments sont explicitement cités comme objectifs personnels du salarié en plus de sa contribution à l’entreprise."
         }
       ],
-      "coverage_label": "Rôle et place du salarié",
-      "learning_objective": "Lire la fonction du salarié comme une place précise dans une organisation hiérarchisée et structurée.",
-      "correction_summary": "Le salarié s’insère dans une fonction identifiée et dans un réseau de relations professionnelles. Le piège est de le voir comme une personne isolée alors qu’il travaille dans une organisation structurée.",
-      "course_clarification": "Une fonction précise signifie une mission identifiée dans l’entreprise. Cette fonction implique des échanges avec la hiérarchie, les collègues et les procédures internes.",
+      "coverage_label": "Individu dans l’organisation",
+      "learning_objective": "Repérer les objectifs personnels du salarié en plus de sa contribution à l’entreprise.",
+      "correction_summary": "La bonne réponse reprend les trois objectifs explicitement cités : salaire, développement et reconnaissance. Le piège consiste à confondre ces objectifs avec ceux de l’entreprise ou avec des avantages secondaires.",
+      "course_clarification": "Le salarié n’est pas seulement producteur de travail ; il poursuit aussi des attentes personnelles. Elles concernent sa rémunération, sa progression et sa valorisation.",
       "source_refs": []
     },
     {
       "question_id": "s11_s12_q5",
-      "prompt": "Parmi les affirmations suivantes sur le contrat de travail, laquelle est correcte ?",
+      "prompt": "Quel énoncé définit correctement le contrat de travail ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Un CDI est un contrat réservé aux missions ponctuelles ou au remplacement.",
+          "text": "Le contrat de travail est une relation sans valeur juridique.",
           "is_correct": false,
-          "explanation": "Les missions ponctuelles ou le remplacement correspondent au CDD, pas au CDI."
+          "explanation": "Au contraire, il s’agit d’un lien juridique qui produit des droits et des obligations."
         },
         {
           "id": "B",
-          "text": "Les mentions obligatoires peuvent être absentes si les deux parties sont d’accord.",
+          "text": "Le contrat de travail n’indique jamais la fonction du salarié.",
           "is_correct": false,
-          "explanation": "Le texte exige des mentions obligatoires : identité des parties, fonction, salaire, horaires et durée."
+          "explanation": "La fonction fait partie des mentions obligatoires indiquées dans la partie consacrée au contrat."
         },
         {
           "id": "C",
           "text": "Le contrat de travail est un lien juridique entre salarié et employeur.",
           "is_correct": true,
-          "explanation": "La définition donnée est celle d’un lien juridique qui encadre la relation de travail."
+          "explanation": "Cette définition est donnée explicitement : le contrat crée un cadre juridique entre les deux parties."
         },
         {
           "id": "D",
-          "text": "La rupture du contrat ne peut se faire que par licenciement.",
+          "text": "Le contrat de travail concerne seulement les pièces techniques et la maintenance.",
           "is_correct": false,
-          "explanation": "Plusieurs formes de rupture sont citées : démission, licenciement, rupture conventionnelle et fin de CDD."
+          "explanation": "Le contrat porte sur la relation de travail, pas sur un domaine technique particulier."
         },
         {
           "id": "E",
-          "text": "L’intérim est présenté comme un CDI stable et protecteur.",
+          "text": "Le contrat de travail ne peut jamais être rompu.",
           "is_correct": false,
-          "explanation": "L’intérim figure parmi les contrats spécifiques, distincts du CDI."
+          "explanation": "La rupture est possible sous plusieurs formes, par exemple démission, licenciement, rupture conventionnelle ou fin de CDD."
         }
       ],
-      "coverage_label": "Le contrat de travail",
-      "learning_objective": "Identifier la définition, les types et les mentions essentielles d’un contrat de travail.",
-      "correction_summary": "Le contrat de travail est un lien juridique qui précise les conditions de la relation de travail. Le piège est de confondre les types de contrat ou d’oublier les mentions obligatoires.",
-      "course_clarification": "Un contrat de travail fixe les règles essentielles de la relation entre salarié et employeur. Il peut prendre plusieurs formes : CDI, CDD, apprentissage, alternance ou intérim, avec des règles de rupture différentes.",
+      "coverage_label": "Contrat de travail",
+      "learning_objective": "Définir le contrat de travail et distinguer son rôle juridique des simples modalités d’organisation du travail.",
+      "correction_summary": "La bonne réponse retient la définition juridique du contrat de travail. Le piège consiste à le confondre avec une simple relation de fait ou à oublier qu’il peut être rompu.",
+      "course_clarification": "Le contrat de travail organise la relation entre salarié et employeur. Il fixe un cadre juridique avec des droits, des devoirs et des informations essentielles comme la fonction, le salaire et les horaires.",
       "source_refs": []
     }
   ],

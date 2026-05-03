@@ -1,6 +1,6 @@
 {
   "site_build_version": 10,
-  "cache_token": "10-7ed177a9c886",
+  "cache_token": "10-c55dc79f99c7",
   "viewer_mode": "user",
   "page_count": 41,
   "slide_count": 20,
@@ -344,7 +344,7 @@
       "kind": "quiz",
       "badge": "QCM S19",
       "title": "QCM - Erreurs fréquentes à éviter",
-      "subtitle": "2 questions - correction immédiate",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s19.html",
       "json_href": "slide-s19.json"
     },

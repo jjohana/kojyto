@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S11-3-Q1",
-      "prompt": "Concernant le système **anti-skid**, quelle affirmation est exacte ?",
+      "prompt": "Quelle affirmation décrit correctement le système anti-patinage (anti-skid) ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il applique automatiquement le freinage maximal sans tenir compte de la vitesse des roues.",
+          "text": "Il augmente volontairement la pression hydraulique jusqu’au blocage complet des roues pour raccourcir la distance d’arrêt.",
           "is_correct": false,
-          "explanation": "L’anti-skid ne cherche pas à freiner au maximum, mais à moduler la pression pour éviter le blocage. Un freinage maximal non régulé irait contre son principe."
+          "explanation": "Le principe recherché est l’inverse : la régulation de pression sert à éviter le blocage, pas à le provoquer."
         },
         {
           "id": "B",
-          "text": "Il est commandé par les inverseurs de poussée pour choisir un taux de décélération.",
+          "text": "Il agit uniquement lorsque l’avion est en vol et ne sert pas au sol.",
           "is_correct": false,
-          "explanation": "La sélection du taux de décélération en fonction des inverseurs de poussée concerne le système anti brake, pas l’anti-skid. Les deux systèmes ont des fonctions différentes."
+          "explanation": "Le système intervient au contraire lorsque l’avion est au sol, notamment pendant le freinage et à l’atterrissage."
         },
         {
           "id": "C",
-          "text": "Il utilise des génératrices tachymétriques qui mesurent la vitesse des roues pour piloter la pression hydraulique.",
+          "text": "Il remplace les freins mécaniques par une commande de poussée des moteurs.",
           "is_correct": false,
-          "explanation": "Les génératrices tachymétriques appartiennent bien au principe de l’anti-skid, mais elles n’agissent pas seules : elles envoient un signal permettant de réguler la pression hydraulique. Ici, l’affirmation inverse ou simplifie de façon incorrecte."
+          "explanation": "L’anti-skid régule le freinage hydraulique des roues ; il ne remplace pas le système de freinage par la poussée moteur."
         },
         {
           "id": "D",
           "text": "Il évite le blocage des roues lorsque l’avion est au sol, lors d’un freinage brusque ou si la vitesse des roues est trop élevée à l’atterrissage.",
           "is_correct": true,
-          "explanation": "Le rôle de l’anti-skid est bien de prévenir le blocage des roues dans ces situations critiques. Il agit donc comme une protection contre le dérapage pendant le freinage."
+          "explanation": "C’est exactement la fonction de l’anti-skid : empêcher le blocage des roues dans les situations de freinage critique au roulage et à l’atterrissage."
         },
         {
           "id": "E",
-          "text": "Il sert uniquement à augmenter l’adhérence du pneu sur piste mouillée.",
+          "text": "Il mesure la température des freins grâce à des sondes BTMS.",
           "is_correct": false,
-          "explanation": "L’anti-skid n’augmente pas directement l’adhérence du pneu. Il agit sur le freinage pour éviter le blocage, quelle que soit la condition de piste."
+          "explanation": "La surveillance de température des freins relève du BTMS, alors que l’anti-skid agit sur le freinage pour éviter le blocage des roues."
         }
       ],
-      "coverage_label": "Système anti-patinage / anti-skid",
-      "learning_objective": "Identifier le rôle et le principe de fonctionnement de l’anti-skid.",
-      "correction_summary": "La bonne réponse décrit la prévention du blocage des roues dans les phases de freinage. Le piège fréquent est de confondre régulation du freinage et augmentation de l’adhérence.",
-      "course_clarification": "L’anti-skid compare la vitesse des roues à l’aide de génératrices tachymétriques. Si une roue tend à se bloquer, la pression hydraulique de freinage est modulée pour conserver le roulage.",
+      "coverage_label": "Système anti-patinage / anti skid",
+      "learning_objective": "Identifier la fonction de l’anti-skid et ses conditions d’action.",
+      "correction_summary": "La bonne réponse est celle qui rappelle l’objectif de l’anti-skid : empêcher le blocage des roues au sol et à l’atterrissage. Le piège classique consiste à confondre cette régulation avec un système de freinage plus fort ou avec la surveillance de température.",
+      "course_clarification": "L’anti-skid compare la vitesse de rotation des roues et ajuste la pression hydraulique de freinage. Son rôle est la sécurité d’adhérence, pas l’augmentation maximale du freinage.",
       "source_refs": []
     },
     {
       "question_id": "S11-3-Q2",
-      "prompt": "À propos du **système anti brake**, quelle affirmation est exacte ?",
+      "prompt": "Quelle affirmation correspond au système anti brake ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il évite le blocage des roues grâce à des génératrices tachymétriques.",
+          "text": "Il empêche le blocage des roues en modulant la pression hydraulique selon la vitesse de rotation des roues.",
           "is_correct": false,
-          "explanation": "Cette description correspond à l’anti-skid. L’anti brake n’a pas pour fonction de mesurer la vitesse de roue pour éviter le blocage."
+          "explanation": "Cette description correspond à l’anti-skid, pas à l’anti brake."
         },
         {
           "id": "B",
           "text": "Il réalise un freinage automatique avec un taux de décélération sélectionné par le pilote en fonction des inverseurs de poussée.",
           "is_correct": true,
-          "explanation": "Le système anti brake est bien un freinage automatique lié au choix du taux de décélération par le pilote en fonction des inverseurs de poussée."
+          "explanation": "Le système anti brake est défini par un freinage automatique dont le taux de décélération est choisi en lien avec l’utilisation des inverseurs de poussée."
         },
         {
           "id": "C",
-          "text": "Il nécessite l’action continue du pilote sur les pédales jusqu’à immobilisation.",
+          "text": "Il impose une action continue du pilote sur les pédales dès le contact avec la piste.",
           "is_correct": false,
-          "explanation": "Le système agit sans intervention sur les pédales après l’impact. L’absence d’action continue sur les pédales est précisément un point clé."
+          "explanation": "Le texte précise au contraire une action automatique sans intervention sur les pédales jusqu’à l’immobilisation."
         },
         {
           "id": "D",
-          "text": "Il s’arrête automatiquement avant le toucher pour éviter toute décélération au sol.",
+          "text": "Il n’agit qu’avant l’impact pour préparer l’atterrissage, puis se désactive au toucher des roues.",
           "is_correct": false,
-          "explanation": "Le freinage anti brake commence immédiatement après l’impact, pas avant. L’objectif est au contraire d’appliquer le freinage dès la prise de contact."
+          "explanation": "Le freinage est appliqué immédiatement après l’impact et reste actif jusqu’à l’arrêt."
         },
         {
           "id": "E",
-          "text": "Il remplace le frein de parking par un maintien autonome de la pression.",
+          "text": "Il sert uniquement à la surveillance de la pression des pneus par TPMS.",
           "is_correct": false,
-          "explanation": "Le maintien autonome de la pression est le rôle de l’accumulateur de frein de parking. L’anti brake est un dispositif de freinage automatique à l’atterrissage."
+          "explanation": "Le TPMS concerne la pression des pneus ; l’anti brake est un dispositif de freinage automatique."
         }
       ],
       "coverage_label": "Système anti brake",
-      "learning_objective": "Distinguer le fonctionnement de l’anti brake de celui des autres aides au freinage.",
-      "correction_summary": "La bonne réponse associe le freinage automatique à un taux de décélération choisi selon les inverseurs de poussée. Le piège est de le confondre avec l’anti-skid ou avec le frein de parking.",
-      "course_clarification": "L’anti brake agit juste après l’impact et jusqu’à l’immobilisation. Il n’exige pas d’action sur les pédales pendant cette phase.",
+      "learning_objective": "Distinguer le freinage automatique anti brake de l’anti-skid et des systèmes de surveillance.",
+      "correction_summary": "La bonne affirmation décrit un freinage automatique déclenché après l’impact, sans action sur les pédales. Le piège consiste à le confondre avec l’anti-skid, qui régule le blocage des roues.",
+      "course_clarification": "L’anti brake automatise le freinage à l’atterrissage selon une décélération choisie par le pilote. Il ne mesure pas la vitesse des roues et ne sert pas à la surveillance.",
       "source_refs": []
     },
     {
       "question_id": "S11-3-Q3",
-      "prompt": "Sur les **pneumatiques**, quelle affirmation est exacte ?",
+      "prompt": "Quelle affirmation distingue correctement un pneumatique radial ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le pneumatique radial possède une carcasse souple disposée radialement et ceinturée métalliquement, avec une surface de contact importante et constante.",
+          "text": "Sa carcasse est souple, disposée radialement et ceinturée métalliquement, avec une surface de contact importante et constante.",
           "is_correct": true,
-          "explanation": "C’est la définition attendue du pneu radial. Sa structure limite les variations de la surface de contact au sol."
+          "explanation": "C’est la définition attendue du pneu radial : structure radiale, ceinture métallique et empreinte au sol stable."
         },
         {
           "id": "B",
-          "text": "Le pneumatique diagonal présente une carcasse radialement disposée et une surface de contact constante.",
+          "text": "Sa carcasse est formée de nappes croisées superposées, ce qui donne une forte déformation de la surface de contact.",
           "is_correct": false,
-          "explanation": "La structure décrite ici correspond au pneu radial, pas au pneu diagonal. Le pneu diagonal est constitué de nappes croisées."
+          "explanation": "Cette description correspond au pneu diagonal, pas au pneu radial."
         },
         {
           "id": "C",
-          "text": "Le pneu diagonal garde une surface de contact constante quelle que soit la flexion des flancs.",
+          "text": "La bande de roulement subit toutes les flexions des flancs à chaque appui.",
           "is_correct": false,
-          "explanation": "Au contraire, la bande de roulement du pneu diagonal subit les flexions des flancs, ce qui entraîne une déformation importante de la surface de contact."
+          "explanation": "Cette caractéristique est associée au pneu diagonal ; le pneu radial garde une surface de contact plus constante."
         },
         {
           "id": "D",
-          "text": "Le pneu radial est fait de nappes croisées superposées sans ceinture métallique.",
+          "text": "Sa surface de contact est faible et varie fortement avec la charge.",
           "is_correct": false,
-          "explanation": "Cette description correspond au principe du pneu diagonal. Le radial se distingue précisément par la disposition radiale et la ceinture métallique."
+          "explanation": "Le pneu radial est justement apprécié pour une surface de contact importante et relativement constante."
         },
         {
           "id": "E",
-          "text": "Le pneu diagonal est réservé aux avions pressurisés car il résiste mieux aux variations de température.",
+          "text": "Il est défini en France par M et N en pouces, alors que A est en millimètres.",
           "is_correct": false,
-          "explanation": "Aucune telle règle n’est donnée ici. Le choix entre diagonal et radial dépend de la structure et du comportement mécanique du pneu, pas d’une réserve à un type d’avion précis."
+          "explanation": "Les unités sont inversées dans cette proposition : en France, M et N sont en millimètres et A en pouces."
         }
       ],
-      "coverage_label": "Pneumatiques : diagonal et radial",
-      "learning_objective": "Reconnaître la structure et le comportement d’un pneu diagonal et d’un pneu radial.",
-      "correction_summary": "La bonne réponse décrit le pneu radial avec sa carcasse souple et sa surface de contact stable. Le piège classique consiste à inverser les caractéristiques du radial et du diagonal.",
-      "course_clarification": "Le pneu diagonal utilise des nappes croisées, ce qui favorise les déformations de la bande de roulement. Le pneu radial est ceinturé et offre un contact au sol plus régulier.",
+      "coverage_label": "Pneumatique radial",
+      "learning_objective": "Reconnaître la structure et l’intérêt d’un pneu radial par opposition au pneu diagonal.",
+      "correction_summary": "La bonne réponse met en avant la carcasse radiale, la ceinture métallique et l’empreinte constante au sol. Le piège est de reprendre les caractéristiques du pneu diagonal, qui repose sur des nappes croisées.",
+      "course_clarification": "Le pneu radial limite les variations de contact avec la piste et améliore la stabilité du comportement. Le pneu diagonal se déforme davantage sous l’effort.",
       "source_refs": []
     },
     {
       "question_id": "S11-3-Q4",
-      "prompt": "À propos des **dimensions et de l’usure des pneumatiques**, quelle affirmation est exacte ?",
+      "prompt": "Quelle affirmation sur les dimensions et l’état des pneumatiques est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "À l’étranger, M, N et A sont exprimés en millimètres comme en France.",
+          "text": "En France, M est le diamètre de jante et A la largeur du pneu, tous deux en millimètres.",
           "is_correct": false,
-          "explanation": "À l’étranger, toutes les cotes sont en pouces. La différence d’unité est un point important de lecture de dimensionnement."
+          "explanation": "La proposition inverse les significations : M désigne le diamètre extérieur, N la largeur et A le diamètre de jante."
         },
         {
           "id": "B",
-          "text": "Un pneu surgonflé correspond à un pneu sous-chargé en pression.",
+          "text": "À l’étranger, seules M et N sont exprimés en pouces, tandis que A reste en millimètres.",
           "is_correct": false,
-          "explanation": "Le surgonflage signifie au contraire une pression trop élevée. Le sous-gonflage est l’état opposé."
+          "explanation": "La règle donnée est l’inverse : à l’étranger, toutes les cotes sont en pouces."
         },
         {
           "id": "C",
-          "text": "Le méplat est associé à une coupure de la bande de roulement.",
+          "text": "Un pneu sous-gonflé correspond à un méplat provoqué par un atterrissage dur.",
           "is_correct": false,
-          "explanation": "Le méplat est un défaut lié à un atterrissage dur. La coupure est un autre défaut distinct du méplat."
+          "explanation": "Le sous-gonflage est un état de gonflage ; le méplat est un défaut, et le support le rattache à un atterrissage dur."
         },
         {
           "id": "D",
-          "text": "La charge statique dépend uniquement de la largeur du pneu, pas de son affaissement ni de sa pression.",
+          "text": "La charge statique dépend uniquement de la couleur du pneu et ne dépend pas de la pression de gonflement.",
           "is_correct": false,
-          "explanation": "La charge statique est liée au taux d’affaissement du pneu et à la pression de gonflement. La largeur seule ne suffit pas à caractériser son comportement."
+          "explanation": "La charge statique est liée au taux d’affaissement du pneu et à la pression de gonflement ; la couleur n’a aucun rôle."
         },
         {
           "id": "E",
-          "text": "En France, M et N sont exprimés en millimètres et A en pouces ; M désigne le diamètre extérieur, N la largeur et A le diamètre de jante.",
+          "text": "En France, M et N sont exprimés en millimètres et A en pouces.",
           "is_correct": true,
-          "explanation": "C’est exactement la notation donnée : M et N en millimètres, A en pouces, avec M pour le diamètre extérieur, N pour la largeur et A pour le diamètre de jante."
+          "explanation": "C’est la convention indiquée : M et N en millimètres, A en pouces, par exemple pour une notation du type 750 × 230 - 15."
         }
       ],
-      "coverage_label": "Dimensions et usure des pneumatiques",
-      "learning_objective": "Lire une désignation de pneu et relier les états d’usure aux paramètres physiques du pneu.",
-      "correction_summary": "La bonne réponse associe correctement M, N et A ainsi que leurs unités. Le piège est de confondre les dimensions, les unités et les défauts d’usure.",
-      "course_clarification": "La désignation du pneu permet de lire ses dimensions principales. L’usure est reliée à la pression de gonflage et à la déflexion, ce qui aide à repérer un sous-gonflage ou un surgonflage.",
+      "coverage_label": "Dimensions des pneumatiques",
+      "learning_objective": "Lire une désignation de pneumatique et relier l’état du pneu à sa pression ou à ses défauts.",
+      "correction_summary": "La bonne réponse porte sur la convention d’écriture des dimensions en France. Le piège consiste à inverser les unités ou à confondre un état de gonflage avec un défaut visible.",
+      "course_clarification": "M désigne le diamètre extérieur, N la largeur et A le diamètre de jante dans la notation utilisée ici. Un pneu sous-gonflé, correct ou surgonflé se juge par son état de gonflage ; un méplat ou une coupure sont des défauts.",
       "source_refs": []
     },
     {
       "question_id": "S11-3-Q5",
-      "prompt": "Concernant le **shimmy, la dirigibilité et la surveillance**, quelle affirmation est exacte ?",
+      "prompt": "Quelle affirmation sur le shimmy, la dirigibilité et la surveillance est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La dirigibilité correspond à la surveillance de la température des freins par un affichage cabine.",
+          "text": "La dirigibilité correspond au blocage définitif de la roue avant pendant tout le roulage.",
           "is_correct": false,
-          "explanation": "La dirigibilité concerne l’orientation de la roue avant, parfois des roues principales. La température des freins relève du BTMS."
+          "explanation": "La dirigibilité est l’orientation de la roue avant, parfois des roues principales ; elle ne signifie pas un blocage permanent."
         },
         {
           "id": "B",
-          "text": "Le TPMS surveille la pression des pneus, le BTMS la température des freins et l’OPMS la pression hydraulique des amortisseurs.",
+          "text": "Le rappel dans l’axe laisse la dirigibilité active au décollage et à l’atterrissage pour faciliter les virages serrés.",
           "is_correct": false,
-          "explanation": "Cette affirmation est correcte sur le fond, mais ici elle est présentée comme fausse ? Non : attention, il faut conserver une seule proposition vraie. Cette phrase doit donc être considérée comme la seule vraie si elle est formulée exactement ainsi."
+          "explanation": "Au décollage et à l’atterrissage, la dirigibilité est coupée pour garder la roue avant dans l’axe de l’avion."
         },
         {
           "id": "C",
-          "text": "Le shimmy est un phénomène vibratoire observé sur les roues libres à une certaine vitesse, et il peut être corrigé par un anti-shimmy à vérin à double ressorts ou hydraulique.",
+          "text": "Le shimmy est un phénomène vibratoire observé sur les roues libres à une certaine vitesse, et l’anti-shimmy peut reposer sur un vérin à double ressorts ou un vérin hydraulique.",
           "is_correct": true,
-          "explanation": "Le shimmy est bien une vibration parasite de la roue libre, et la solution donnée est l’anti-shimmy avec vérin à double ressorts ou vérin hydraulique."
+          "explanation": "Le shimmy est bien décrit comme une vibration des roues libres, et la solution mentionnée est un dispositif anti-shimmy de type vérin à double ressorts ou hydraulique."
         },
         {
           "id": "D",
-          "text": "Le rappel dans l’axe du train avant laisse la dirigibilité active au décollage et à l’atterrissage pour aider le pilote à braquer la roue avant.",
+          "text": "Le TPMS surveille la température des freins, tandis que le BTMS surveille la pression des pneus.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : la dirigibilité est coupée au décollage et à l’atterrissage pour garder la roue avant dans l’axe de l’avion."
+          "explanation": "Les rôles sont inversés dans cette proposition : le TPMS suit la pression des pneus et le BTMS la température des freins."
         },
         {
           "id": "E",
-          "text": "Un excès de température des freins est signalé uniquement par le voyant rouge de train non sorti.",
+          "text": "Une surchauffe des freins est signalée uniquement par une baisse de la pression hydraulique des amortisseurs.",
           "is_correct": false,
-          "explanation": "L’alerte de température des freins se fait par un voyant sur le panneau de contrôle, le voyant BRAKES HOT sur le panneau central d’alarme et un gong mono-coup. Le voyant de train non sorti n’a pas ce rôle."
+          "explanation": "L’alerte de température excessive passe par un voyant sur le panneau de contrôle, le message BRAKES HOT sur le panneau central d’alarme et un gong mono-coup."
         }
       ],
       "coverage_label": "Shimmy, dirigibilité et surveillance",
-      "learning_objective": "Relier les phénomènes vibratoires, la commande de roue avant et les systèmes de surveillance embarqués.",
-      "correction_summary": "La bonne réponse associe correctement le shimmy à sa solution et distingue la dirigibilité des fonctions de surveillance. Le piège est de mélanger commande de roue, alertes de frein et systèmes de monitoring.",
-      "course_clarification": "Le shimmy est une vibration de roue à certaines vitesses. La surveillance embarquée sépare la pression des pneus, la température des freins et la pression hydraulique des amortisseurs.",
+      "learning_objective": "Identifier le shimmy, le rôle de la dirigibilité et les alertes de surveillance associées.",
+      "correction_summary": "La bonne réponse relie le shimmy à une vibration des roues libres et à un dispositif anti-shimmy. Le piège principal est de confondre les fonctions de TPMS, BTMS et OPMS ou de croire que la dirigibilité reste active pendant les phases où elle est coupée.",
+      "course_clarification": "La dirigibilité sert à orienter la roue avant, parfois les roues principales, à partir des commandes de pilotage. Le rappel dans l’axe maintient la roue avant alignée au décollage et à l’atterrissage ; les surveillances TPMS, BTMS et OPMS suivent respectivement la pression des pneus, la température des freins et la pression hydraulique des amortisseurs.",
       "source_refs": []
     }
   ],

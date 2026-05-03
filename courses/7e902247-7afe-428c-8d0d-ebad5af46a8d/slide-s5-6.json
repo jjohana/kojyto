@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S5-6_Q1",
-      "prompt": "À propos du panneau **EMER ELEC PWR**, quelle affirmation est correcte ?",
+      "question_id": "S5-6-Q1",
+      "prompt": "Quelle affirmation est exacte au sujet du panneau **EMER ELEC PWR** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il ne comporte aucun organe de test, seulement des commandes de mise en service.",
+          "text": "Le panneau EMER ELEC PWR regroupe principalement FAULT, OFF, AUTO, BUS TIE et AC ESS FEED.",
           "is_correct": false,
-          "explanation": "Le panneau inclut précisément une fonction de test avec **EMER GEN TEST** ; il n’est donc pas limité à l’activation."
+          "explanation": "Ces repères appartiennent au panneau ELEC, pas au panneau EMER ELEC PWR. Ici, les commandes affichées concernent directement la génération électrique d’urgence."
         },
         {
           "id": "B",
-          "text": "Le levier rouge est associé à la commande **ON**.",
+          "text": "Le panneau EMER ELEC PWR sert à commander la distribution des charges AC normales du réseau principal.",
           "is_correct": false,
-          "explanation": "Le levier rouge est associé à **AUTO**, pas à ON. C’est un piège classique entre la position automatique et la mise en marche."
+          "explanation": "La fonction montrée est la commande de la source de secours, pas la gestion générale des charges AC du réseau principal."
         },
         {
           "id": "C",
-          "text": "La désignation à conserver pour la source de secours est **TR 2**.",
+          "text": "Le panneau EMER ELEC PWR est dédié au réseau de service au sol.",
           "is_correct": false,
-          "explanation": "**TR 2** appartient à un autre repérage du schéma électrique. La source de secours doit être identifiée comme **CSM/G**."
+          "explanation": "Le réseau de service au sol relève d’un autre schéma fonctionnel. Le panneau EMER ELEC PWR concerne la génération électrique d’urgence."
         },
         {
           "id": "D",
-          "text": "Il comporte une commande **EMER GEN TEST** destinée au test de la génération électrique d’urgence.",
+          "text": "Le panneau EMER ELEC PWR comprend EMER GEN TEST, LAND RECOVERY, ON, EMER GEN et MAN ON.",
           "is_correct": true,
-          "explanation": "Cette commande figure bien parmi les éléments du panneau et sert à vérifier le fonctionnement de la génération d’urgence."
+          "explanation": "Ces commandes sont bien celles indiquées sur le panneau de génération électrique d’urgence. Elles servent à tester, activer et remettre en configuration la source de secours."
         },
         {
           "id": "E",
-          "text": "Ce panneau concerne la commande de la génération électrique d’urgence.",
+          "text": "Le panneau EMER ELEC PWR est un panneau de surveillance des disjoncteurs C/B.",
           "is_correct": false,
-          "explanation": "La formulation inverse la réalité du panneau : il est bien dédié à la **génération électrique d’urgence**."
+          "explanation": "La surveillance des C/B est associée à un autre ensemble fonctionnel, avec CBMU et la page C/B ECAM. Le panneau EMER ELEC PWR n’a pas cette mission."
         }
       ],
-      "coverage_label": "Panneau EMER ELEC PWR",
-      "learning_objective": "Identifier les fonctions principales du panneau de commande de secours et la commande de test associée.",
-      "correction_summary": "La bonne réponse est celle qui relie le panneau à la génération d’urgence et au test **EMER GEN TEST**. Le piège consiste à confondre les fonctions de secours avec les autres repérages du synoptique.",
-      "course_clarification": "Le panneau **EMER ELEC PWR** regroupe des commandes liées à la source électrique de secours. **EMER GEN TEST** sert au test, tandis que la fonction **AUTO** est associée au levier rouge.",
+      "coverage_label": "Panneau EMER ELEC PWR : test et commande de secours",
+      "learning_objective": "Identifier les commandes présentes sur le panneau de génération électrique d’urgence.",
+      "correction_summary": "La bonne réponse est celle qui reprend les commandes réellement visibles sur le panneau EMER ELEC PWR. Le piège consiste à confondre ce panneau avec le panneau ELEC ou avec des fonctions de surveillance plus générales.",
+      "course_clarification": "Le panneau EMER ELEC PWR sert à tester et piloter la source électrique de secours. Les libellés à reconnaître sont EMER GEN TEST, LAND RECOVERY, ON, EMER GEN et MAN ON.",
       "source_refs": []
     },
     {
-      "question_id": "S5-6_Q2",
-      "prompt": "Sur le panneau **EMER ELEC PWR**, quelle affirmation est exacte ?",
+      "question_id": "S5-6-Q2",
+      "prompt": "Quelle affirmation est exacte à propos du petit levier repéré sur le panneau **EMER ELEC PWR** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le levier rouge est associé à la position **MAN ON**.",
+          "text": "Un levier rouge est associé à BUS TIE.",
           "is_correct": false,
-          "explanation": "**MAN ON** est une autre indication du panneau, mais elle n’est pas liée au levier rouge décrit dans le support."
+          "explanation": "BUS TIE appartient au panneau ELEC, mais le levier rouge du panneau EMER ELEC PWR est associé à AUTO, pas à BUS TIE."
         },
         {
           "id": "B",
-          "text": "Le levier rouge est associé à la position **AUTO**.",
+          "text": "Un levier rouge est associé à AUTO.",
           "is_correct": true,
-          "explanation": "Le document indique explicitement qu’un levier rouge est associé à **AUTO** sur ce panneau."
+          "explanation": "Le panneau montre bien un levier rouge lié à la position AUTO. C’est un repère visuel important pour reconnaître la remise en mode automatique."
         },
         {
           "id": "C",
-          "text": "La commande **LAND RECOVERY** sert à identifier la source de secours sous l’appellation **CSM/G**.",
+          "text": "Le levier visible sur ce panneau est bleu.",
           "is_correct": false,
-          "explanation": "**LAND RECOVERY** est une commande distincte ; l’appellation **CSM/G** désigne la source de secours, pas cette commande."
+          "explanation": "La couleur indiquée est rouge, pas bleue. La couleur aide justement à identifier rapidement cette commande de secours."
         },
         {
           "id": "D",
-          "text": "Le panneau ne comporte aucune indication de mode automatique.",
+          "text": "Le levier rouge est associé à MAN ON.",
           "is_correct": false,
-          "explanation": "La présence du levier rouge associé à **AUTO** montre justement qu’un mode automatique est prévu sur ce panneau."
+          "explanation": "MAN ON est un autre libellé du panneau, mais le levier rouge est explicitement associé à AUTO."
         },
         {
           "id": "E",
-          "text": "La commande **EMER GEN TEST** correspond à la remise en configuration automatique.",
+          "text": "Le panneau EMER ELEC PWR ne comporte aucun levier distinctif.",
           "is_correct": false,
-          "explanation": "Le terme **TEST** indique une fonction de vérification, pas une remise en configuration automatique."
+          "explanation": "Un levier rouge est bien mentionné sur le panneau. Il fait partie des indices visuels à mémoriser."
         }
       ],
-      "coverage_label": "Panneau EMER ELEC PWR",
-      "learning_objective": "Associer correctement la commande automatique du panneau à son repérage visuel.",
-      "correction_summary": "La bonne affirmation relie le levier rouge à **AUTO**. Le principal piège est de confondre les libellés **AUTO**, **ON** et **MAN ON**.",
-      "course_clarification": "**AUTO** indique une logique automatique de fonctionnement. Sur ce panneau, le repérage important est le levier rouge associé à ce mode, à distinguer des commandes de test ou de mise en marche manuelle.",
+      "coverage_label": "Panneau EMER ELEC PWR : test et commande de secours",
+      "learning_objective": "Reconnaître l’association du levier rouge avec la position AUTO.",
+      "correction_summary": "La bonne réponse associe explicitement le levier rouge à AUTO. Le piège est de confondre ce repère avec un autre libellé du panneau ou avec un simple voyant.",
+      "course_clarification": "AUTO désigne ici la configuration automatique de la source de secours. Le levier rouge est un repère visuel associé à cette position.",
       "source_refs": []
     },
     {
-      "question_id": "S5-6_Q3",
-      "prompt": "Quelle affirmation décrit correctement la source de secours associée au panneau ?",
+      "question_id": "S5-6-Q3",
+      "prompt": "Quelle affirmation est exacte concernant la source de secours mentionnée avec le panneau de génération d’urgence ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La source de secours est désignée **CSM/G**.",
+          "text": "CSM/G reste la désignation à conserver pour la source de secours.",
           "is_correct": true,
-          "explanation": "Le repérage à conserver pour la source de secours est bien **CSM/G**."
+          "explanation": "La désignation à retenir est bien CSM/G. C’est le terme à conserver pour identifier la source de secours."
         },
         {
           "id": "B",
-          "text": "La source de secours est désignée **APU GEN**.",
+          "text": "La source de secours est désignée APU GEN.",
           "is_correct": false,
-          "explanation": "**APU GEN** correspond à une autre source AC du synoptique, pas à la source de secours mentionnée pour ce panneau."
+          "explanation": "APU GEN est une autre source AC affichée sur la page, mais ce n’est pas la désignation de la source de secours."
         },
         {
           "id": "C",
-          "text": "La source de secours est désignée **EXT B**.",
+          "text": "La source de secours est désignée EXT A.",
           "is_correct": false,
-          "explanation": "**EXT B** est une autre origine d’alimentation, mais ce n’est pas la désignation de la source de secours du panneau."
+          "explanation": "EXT A correspond à une alimentation externe, pas à la source de secours du panneau EMER ELEC PWR."
         },
         {
           "id": "D",
-          "text": "La source de secours est désignée **IDG 1**.",
+          "text": "La source de secours est désignée IDG 1.",
           "is_correct": false,
-          "explanation": "**IDG 1** est un générateur entraîné par moteur, avec ses propres paramètres de surveillance. Ce n’est pas la source de secours demandée."
+          "explanation": "IDG 1 est une source/générateur surveillé sur la page ECAM AC, mais ce n’est pas le nom de la source de secours."
         },
         {
           "id": "E",
-          "text": "La source de secours est désignée **GEN 2**.",
+          "text": "La source de secours est désignée TR 2.",
           "is_correct": false,
-          "explanation": "**GEN 2** est un autre générateur affiché sur l’ECAM, mais il ne correspond pas à la source de secours indiquée ici."
+          "explanation": "TR 2 est un repère du réseau électrique, pas la désignation de la source de secours."
         }
       ],
-      "coverage_label": "Source de secours CSM/G",
-      "learning_objective": "Reconnaître la désignation exacte de la source de secours et la distinguer des autres sources AC.",
-      "correction_summary": "La seule désignation correcte est **CSM/G**. Le piège consiste à confondre la source de secours avec les autres sources affichées sur la page ECAM.",
-      "course_clarification": "**CSM/G** est la désignation à conserver pour la source de secours. Il ne faut pas la remplacer par une autre source AC comme **GEN 2**, **APU GEN** ou **EXT B**.",
+      "coverage_label": "Panneau EMER ELEC PWR : test et commande de secours",
+      "learning_objective": "Identifier la désignation correcte de la source de secours.",
+      "correction_summary": "La réponse correcte conserve la désignation CSM/G. Le piège consiste à confondre cette source avec une autre source AC ou avec un élément de conversion/distribution.",
+      "course_clarification": "CSM/G est l’appellation à retenir pour la source de secours. Les autres sigles de la page renvoient à des sources ou à des éléments de distribution différents.",
       "source_refs": []
     },
     {
-      "question_id": "S5-6_Q4",
-      "prompt": "À propos des commandes visibles sur le panneau **EMER ELEC PWR**, quelle affirmation est correcte ?",
+      "question_id": "S5-6-Q4",
+      "prompt": "Quelle affirmation est exacte au sujet de la page ECAM **ELEC AC** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le panneau comprend uniquement des voyants, sans aucune commande.",
+          "text": "La page ECAM AC montre uniquement les sources DC et leur tension de batterie.",
           "is_correct": false,
-          "explanation": "Le panneau ne se limite pas à des voyants : il comporte plusieurs commandes clairement identifiées."
+          "explanation": "La page visée concerne l’électricité AC, pas une visualisation limitée au DC ou à la batterie."
         },
         {
           "id": "B",
-          "text": "Le panneau comprend les commandes **BUS TIE** et **AC ESS FEED** comme organes principaux.",
+          "text": "La page ECAM AC sert uniquement à régler la température des IDG.",
           "is_correct": false,
-          "explanation": "**BUS TIE** et **AC ESS FEED** appartiennent au panneau ELEC, pas au panneau **EMER ELEC PWR**."
+          "explanation": "Les températures d’IDG peuvent être affichées, mais la page ne sert pas uniquement à un réglage thermique."
         },
         {
           "id": "C",
-          "text": "Le panneau comprend les repères **GEN 1** et **GEN 2** comme commandes dédiées.",
+          "text": "La page ECAM AC ne présente aucune liaison avec le réseau électrique.",
           "is_correct": false,
-          "explanation": "**GEN 1** et **GEN 2** sont des sources affichées sur la page ECAM AC ; ce ne sont pas les commandes citées pour ce petit panneau de secours."
+          "explanation": "Au contraire, l’un des rôles essentiels de la page est justement de montrer comment les sources AC sont connectées au réseau."
         },
         {
           "id": "D",
-          "text": "Le panneau ne comporte pas de commande **ON**.",
+          "text": "La page ECAM AC est dédiée au réseau de service au sol MAINT BUS.",
           "is_correct": false,
-          "explanation": "La commande **ON** est bien mentionnée parmi les éléments du panneau de génération électrique d’urgence."
+          "explanation": "Le réseau de service au sol relève d’un autre schéma. La page ECAM AC affichée ici concerne les sources AC et leur connexion au réseau."
         },
         {
           "id": "E",
-          "text": "Le panneau comprend notamment **EMER GEN TEST**, **LAND RECOVERY**, **ON**, **EMER GEN** et **MAN ON**.",
+          "text": "La page ECAM AC montre les sources AC et la manière dont elles sont connectées au réseau.",
           "is_correct": true,
-          "explanation": "Ces libellés sont explicitement listés parmi les commandes et indications du panneau."
+          "explanation": "C’est précisément la fonction décrite pour la page ECAM AC : visualiser les sources AC et leurs liaisons au réseau électrique."
         }
       ],
-      "coverage_label": "Commandes du panneau EMER ELEC PWR",
-      "learning_objective": "Lister et reconnaître les principales commandes du panneau de secours sans les confondre avec celles du panneau ELEC.",
-      "correction_summary": "La bonne réponse est la liste des commandes effectivement présentes sur le panneau. Le principal piège est de mélanger ce panneau avec le panneau **ELEC** plus général.",
-      "course_clarification": "Ce panneau regroupe des commandes de secours, dont **EMER GEN TEST**, **LAND RECOVERY** et **MAN ON**. Les commandes du panneau **ELEC** ne doivent pas être attribuées ici.",
+      "coverage_label": "ECAM ELEC AC : indications, surveillance et commandes de génération AC",
+      "learning_objective": "Lire la fonction générale de la page ECAM AC et distinguer affichage de surveillance et réseau électrique.",
+      "correction_summary": "La bonne réponse décrit la page comme un outil de visualisation des sources AC et de leurs connexions. Le piège est de la réduire à une seule valeur affichée ou de la confondre avec un autre réseau.",
+      "course_clarification": "ECAM AC est une page de surveillance électrique. Elle aide à voir quelles sources AC alimentent le réseau et comment elles sont raccordées.",
       "source_refs": []
     },
     {
-      "question_id": "S5-6_Q5",
-      "prompt": "Parmi les propositions suivantes, quelle affirmation est correcte sur la fonction du panneau ?",
+      "question_id": "S5-6-Q5",
+      "prompt": "Quelle affirmation est exacte à propos des valeurs affichées sur la page ECAM **ELEC AC** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il sert à surveiller les paramètres **GEN 1**, **GEN 2** et **IDG 1** affichés sur la page ECAM AC.",
+          "text": "GEN 2 est affiché à 77% / 115 V / 400 HZ.",
           "is_correct": false,
-          "explanation": "La page ECAM AC affiche ces paramètres, mais le petit panneau **EMER ELEC PWR** n’est pas l’organe principal de cette surveillance."
+          "explanation": "GEN 2 est affiché à 62% / 115 V / 400 HZ, pas à 77%. Le pourcentage est donc erroné."
         },
         {
           "id": "B",
-          "text": "Il permet d’alimenter le réseau de service au sol via **MAINT BUS ON**.",
+          "text": "IDG 1 est affiché à 77 V.",
           "is_correct": false,
-          "explanation": "**MAINT BUS ON** appartient au schéma du **GROUND SERVICE NETWORK** et non au panneau de génération d’urgence."
+          "explanation": "Pour IDG 1, la valeur indiquée est une température : 77 °C. L’unité V est donc fausse ici."
         },
         {
           "id": "C",
-          "text": "Il sert à commander la génération électrique d’urgence.",
+          "text": "GEN 1 est affiché à 62% / 115 V / 400 HZ.",
           "is_correct": true,
-          "explanation": "La fonction principale du panneau est bien la commande de la génération électrique d’urgence."
+          "explanation": "La valeur donnée pour GEN 1 est bien celle-ci. Elle associe un pourcentage, une tension et une fréquence."
         },
         {
           "id": "D",
-          "text": "Il commande les disjoncteurs surveillés par le **CBMU**.",
+          "text": "APU GEN est affiché à 62% / 230 V / 400 HZ.",
           "is_correct": false,
-          "explanation": "Le **CBMU** concerne la surveillance des disjoncteurs et leur remontée sur l’ECAM, ce qui est indépendant de ce panneau de secours."
+          "explanation": "La page montre bien APU GEN, mais les valeurs 230 V ne correspondent pas aux exemples fournis. Il faut lire exactement les unités et les chiffres affichés."
         },
         {
           "id": "E",
-          "text": "Il est dédié à la distribution de charge **AC & DC CONTACTORS**.",
+          "text": "IDG 2 est affiché à 67 °C.",
           "is_correct": false,
-          "explanation": "La gestion des contacteurs **AC & DC** relève du schéma de distribution, pas du panneau **EMER ELEC PWR**."
+          "explanation": "IDG 2 est affiché à 76 °C. La température donnée dans cette proposition est donc incorrecte."
         }
       ],
-      "coverage_label": "Fonction du panneau EMER ELEC PWR",
-      "learning_objective": "Distinguer la fonction du panneau de secours des autres organes électriques visibles dans le support.",
-      "correction_summary": "La fonction correcte est la commande de la génération électrique d’urgence. Le piège consiste à attribuer à ce panneau des fonctions appartenant à d’autres schémas ou pages ECAM.",
-      "course_clarification": "Le panneau **EMER ELEC PWR** est centré sur l’urgence électrique. Il ne doit pas être confondu avec les dispositifs de surveillance ECAM, de service au sol ou de gestion des contacteurs.",
+      "coverage_label": "ECAM ELEC AC : indications, surveillance et commandes de génération AC",
+      "learning_objective": "Interpréter les valeurs de surveillance affichées sur la page ECAM AC.",
+      "correction_summary": "La bonne réponse reprend exactement l’affichage de GEN 1. Le piège principal est de mélanger les chiffres, les unités ou les éléments surveillés.",
+      "course_clarification": "Les valeurs affichées servent à surveiller l’état des sources AC. On lit ici des pourcentages, des tensions en volts, des fréquences en hertz et des températures en degrés Celsius.",
       "source_refs": []
     }
   ],

@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S3-2-Q1",
-      "prompt": "Quel énoncé décrit correctement l’alimentation du STATIC INVERTER en situation dégradée ?",
+      "prompt": "Quelle affirmation décrit correctement l’alimentation du STATIC INVERTER ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le STATIC INVERTER est alimenté directement par l’APU GEN.",
+          "text": "Le STATIC INVERTER est alimenté par l’APU GEN.",
           "is_correct": false,
-          "explanation": "L’APU GEN alimente le réseau AC général lorsqu’il est disponible, mais il n’est pas la source montrée pour le STATIC INVERTER sur cette séquence."
+          "explanation": "L’APU GEN alimente le réseau AC lorsqu’il est disponible, mais il ne constitue pas l’alimentation du STATIC INVERTER sur la page étudiée."
         },
         {
           "id": "B",
-          "text": "Le STATIC INVERTER transforme du courant alternatif en courant continu pour charger les batteries.",
+          "text": "Le STATIC INVERTER est alimenté par les IDG des moteurs.",
           "is_correct": false,
-          "explanation": "Le rôle visé ici est l’inverse : l’onduleur fournit de l’AC à partir des batteries, il ne sert pas à recharger les batteries."
+          "explanation": "Les IDG alimentent le AC SYSTEM en fonctionnement normal, tandis que le STATIC INVERTER est présenté comme une solution alimentée par les batteries."
         },
         {
           "id": "C",
-          "text": "Les batteries alimentent directement l’AC SYSTEM sans organe intermédiaire.",
+          "text": "Le STATIC INVERTER est alimenté par l’EMER GEN.",
           "is_correct": false,
-          "explanation": "La chaîne comporte un organe intermédiaire, le STATIC INVERTER, qui prend l’énergie des batteries avant de la fournir au réseau AC essentiel."
+          "explanation": "L’EMER GEN est un autre moyen d’alimentation de secours, distinct du STATIC INVERTER. Le schéma ne montre pas l’EMER GEN comme source du STATIC INVERTER."
         },
         {
           "id": "D",
           "text": "BATTERY 1 et BATTERY 2 alimentent le STATIC INVERTER.",
           "is_correct": true,
-          "explanation": "C’est le trajet indiqué : les deux batteries fournissent l’énergie au STATIC INVERTER quand l’alimentation de secours est sollicitée."
+          "explanation": "Le schéma relie directement BATTERY 1 et BATTERY 2 au STATIC INVERTER. Les batteries constituent donc la source d’alimentation de cet équipement en situation de secours."
         },
         {
           "id": "E",
-          "text": "Les batteries ne participent jamais à l’alimentation du réseau électrique de secours.",
+          "text": "Le STATIC INVERTER est alimenté par l’EXTERNAL POWER A & B.",
           "is_correct": false,
-          "explanation": "C’est contraire au schéma : en situation dégradée, elles sont précisément la source qui permet d’alimenter le STATIC INVERTER."
+          "explanation": "L’alimentation externe sert à fournir le AC system au sol, mais elle n’est pas la source du STATIC INVERTER sur le schéma de secours."
         }
       ],
-      "coverage_label": "Alimentation du STATIC INVERTER",
-      "learning_objective": "Identifier la chaîne d’alimentation batteries → STATIC INVERTER en mode dégradé.",
-      "correction_summary": "La bonne réponse est celle qui relie BATTERY 1 et BATTERY 2 au STATIC INVERTER. Le piège consiste à confondre l’alimentation de secours par batteries avec les sources normales comme l’APU GEN ou les IDG.",
-      "course_clarification": "Le STATIC INVERTER est un convertisseur qui permet d’obtenir de l’AC à partir des batteries. Cette architecture n’est utilisée que dans une situation dégradée, quand les autres sources AC ne sont pas disponibles.",
+      "coverage_label": "Batteries et STATIC INVERTER",
+      "learning_objective": "Identifier la source d’alimentation du STATIC INVERTER dans la chaîne de secours.",
+      "correction_summary": "La bonne affirmation est celle qui relie BATTERY 1 et BATTERY 2 au STATIC INVERTER. Les autres propositions confondent cette chaîne avec les sources AC normales ou externes.",
+      "course_clarification": "Le STATIC INVERTER convertit l’énergie fournie par les batteries pour alimenter une partie du réseau AC. Il intervient quand les sources AC normales ne sont pas disponibles.",
       "source_refs": []
     },
     {
       "question_id": "S3-2-Q2",
-      "prompt": "Quelle proposition décrit le plus précisément le rôle du STATIC INVERTER ?",
+      "prompt": "Quelle affirmation est exacte concernant le rôle du STATIC INVERTER ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le STATIC INVERTER remplace en permanence les IDG en vol normal.",
+          "text": "Le STATIC INVERTER fournit tout le réseau AC principal.",
           "is_correct": false,
-          "explanation": "En vol normal, les IDG alimentent le système AC ; le STATIC INVERTER n’intervient que dans une logique de secours."
+          "explanation": "Le schéma ne lui attribue qu’une partie du réseau AC, pas l’ensemble du AC system. Le réseau principal reste associé aux sources AC normales."
         },
         {
           "id": "B",
           "text": "Le STATIC INVERTER peut fournir une partie du AC system.",
           "is_correct": true,
-          "explanation": "Le schéma indique qu’il alimente une portion du système AC, et non forcément l’ensemble du réseau."
+          "explanation": "Le texte du support indique explicitement que le STATIC INVERTER peut alimenter une partie du AC system. C’est donc un équipement de secours et non une source de puissance totale."
         },
         {
           "id": "C",
-          "text": "Le STATIC INVERTER commande et surveille l’EMER GEN.",
+          "text": "Le STATIC INVERTER alimente uniquement le DC system.",
           "is_correct": false,
-          "explanation": "Cette fonction est attribuée à l’EMER GEN GCU, pas au STATIC INVERTER."
+          "explanation": "Le rôle décrit est lié au réseau AC, pas au réseau DC. La transformation assurée par l’inverter concerne l’alimentation AC essentielle."
         },
         {
           "id": "D",
-          "text": "Le STATIC INVERTER alimente directement les moteurs de l’avion.",
+          "text": "Le STATIC INVERTER ne peut alimenter aucune partie du réseau électrique.",
           "is_correct": false,
-          "explanation": "Le rôle décrit concerne le réseau électrique AC, pas l’alimentation mécanique des moteurs."
+          "explanation": "Cette phrase contredit directement la fonction indiquée sur le schéma. Le STATIC INVERTER a bien un rôle utile, en particulier pour le réseau AC essentiel."
         },
         {
           "id": "E",
-          "text": "Le STATIC INVERTER est la source principale du réseau AC quand les moteurs tournent.",
+          "text": "Le STATIC INVERTER sert uniquement à démarrer l’APU.",
           "is_correct": false,
-          "explanation": "Quand les moteurs fournissent de l’énergie, ce sont les IDG qui assurent l’alimentation AC principale."
+          "explanation": "Aucun élément du schéma ne rattache le STATIC INVERTER au démarrage de l’APU. Sa fonction présentée est l’alimentation d’une partie du réseau AC."
         }
       ],
-      "coverage_label": "Rôle du STATIC INVERTER",
-      "learning_objective": "Distinguer le rôle de secours du STATIC INVERTER de celui des sources normales AC.",
-      "correction_summary": "Le STATIC INVERTER fournit une partie du AC system, en mode dégradé. Il ne remplace ni les IDG ni l’EMER GEN dans leur fonction propre.",
-      "course_clarification": "Un inverter convertit l’énergie disponible pour produire de l’AC. Ici, il sert à maintenir une partie du réseau AC quand les alimentations normales ne sont plus présentes.",
+      "coverage_label": "Batteries et STATIC INVERTER",
+      "learning_objective": "Reconnaître la fonction du STATIC INVERTER dans l’architecture électrique AC.",
+      "correction_summary": "Le STATIC INVERTER ne couvre pas tout le réseau AC et ne concerne pas le DC system. Il fournit seulement une partie du AC system en situation dégradée.",
+      "course_clarification": "Un inverter statique convertit une alimentation disponible pour produire de l’AC. Ici, il prend le relais sur une partie du réseau AC lorsque les autres sources ne sont plus disponibles.",
       "source_refs": []
     },
     {
       "question_id": "S3-2-Q3",
-      "prompt": "Quelle expression correspond au réseau alimenté par le STATIC INVERTER ?",
+      "prompt": "Quelle affirmation correspond au réseau visé par l’alimentation de secours ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "AC Essential electrical system network.",
+          "text": "La partie visée est l’AC Essential electrical system network.",
           "is_correct": true,
-          "explanation": "C’est le nom exact du réseau partiellement alimenté par le STATIC INVERTER dans la configuration dégradée."
+          "explanation": "Le support nomme explicitement le réseau alimenté dans ce cas : l’AC Essential electrical system network. C’est la partie du réseau AC conservée en mode dégradé."
         },
         {
           "id": "B",
-          "text": "DC Essential electrical system network.",
+          "text": "La partie visée est le DC system.",
           "is_correct": false,
-          "explanation": "La question porte sur un réseau AC, pas DC. Le qualificatif essentiel existe ici pour la partie alternative du système."
+          "explanation": "Le texte parle d’un réseau AC essentiel, pas du système DC. Le sigle AC dans l’intitulé est déterminant."
         },
         {
           "id": "C",
-          "text": "AC Primary electrical system network.",
+          "text": "La partie visée est l’AC Main electrical system network.",
           "is_correct": false,
-          "explanation": "Le document distingue le réseau AC essentiel du réseau AC général ; la dénomination « Primary » ne correspond pas à cette formulation."
+          "explanation": "Le schéma distingue le réseau AC général du réseau AC essentiel. L’appellation correcte est bien AC Essential electrical system network."
         },
         {
           "id": "D",
-          "text": "Emergency fuel electrical system network.",
+          "text": "La partie visée est le réseau d’alimentation externe au sol.",
           "is_correct": false,
-          "explanation": "Cette expression ne désigne pas le réseau électrique décrit ; elle mélange un thème électrique avec une notion carburant sans rapport ici."
+          "explanation": "L’alimentation externe concerne une autre situation de fonctionnement. Ici, il s’agit de la partie essentielle alimentée par batteries et inverter en secours."
         },
         {
           "id": "E",
-          "text": "AC Main landing gear network.",
+          "text": "La partie visée est le réseau d’éclairage de piste.",
           "is_correct": false,
-          "explanation": "Il s’agit d’un terme sans lien avec la distribution électrique montrée ; le piège est de confondre un sous-système aéronef avec le réseau AC visé."
+          "explanation": "Aucun élément du support ne rattache cette architecture à l’éclairage de piste. La cible est un sous-réseau électrique AC essentiel."
         }
       ],
       "coverage_label": "AC Essential electrical system network",
-      "learning_objective": "Reconnaître la dénomination exacte du réseau AC essentiel alimenté en secours.",
-      "correction_summary": "La bonne réponse est le nom exact du réseau : AC Essential electrical system network. Le piège classique est de le confondre avec un réseau DC ou avec le réseau AC général.",
-      "course_clarification": "Le réseau AC essentiel est une partie du système AC conservée en situation dégradée. Il est alimenté quand les sources normales ont disparu et qu’il faut préserver les fonctions indispensables.",
+      "learning_objective": "Nommer correctement le réseau AC alimenté en situation dégradée.",
+      "correction_summary": "Le réseau concerné est l’AC Essential electrical system network. Le piège classique consiste à confondre ce réseau essentiel avec le réseau AC général ou avec le DC system.",
+      "course_clarification": "Le réseau AC essentiel regroupe les fonctions prioritaires maintenues quand les sources normales ne sont plus disponibles. Il sert à conserver une alimentation minimale utile au fonctionnement de l’avion.",
       "source_refs": []
     },
     {
       "question_id": "S3-2-Q4",
-      "prompt": "Dans la logique de secours présentée, quelle affirmation est correcte à propos des sources AC normales ?",
+      "prompt": "Quelle affirmation caractérise la situation d’alimentation par batteries ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Les croix rouges indiquent que ces sources sont toutes disponibles et prioritaires.",
+          "text": "L’alimentation par batteries correspond à la configuration normale de vol.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : la croix rouge indique qu’elles ne sont pas utilisées ou ne sont pas disponibles dans la situation montrée."
+          "explanation": "La configuration normale de vol repose sur les sources AC habituelles, comme les IDG. Les batteries et le STATIC INVERTER apparaissent ici comme solution dégradée."
         },
         {
           "id": "B",
-          "text": "EXTERNAL POWER A & B sont les seules sources encore actives sur le schéma de secours.",
+          "text": "L’alimentation par batteries est utilisée seulement quand l’EXTERNAL POWER A est disponible.",
           "is_correct": false,
-          "explanation": "Le schéma de secours met au contraire en avant leur indisponibilité, pas leur activation."
+          "explanation": "L’EXTERNAL POWER A est une autre source possible, mais elle n’est pas la condition d’emploi du système batteries/inverter. Au contraire, le secours par batteries intervient quand les autres sources manquent."
         },
         {
           "id": "C",
-          "text": "L’APU est la seule source qui alimente le STATIC INVERTER dans cette configuration.",
+          "text": "L’alimentation par batteries remplace exclusivement l’APU GEN en fonctionnement normal.",
           "is_correct": false,
-          "explanation": "Le STATIC INVERTER est alimenté par les batteries ; l’APU n’est pas la source de cette chaîne de secours."
+          "explanation": "Le texte ne limite pas cette fonction au remplacement de l’APU GEN. Il décrit un cas plus large où aucune autre source AC n’est disponible."
         },
         {
           "id": "D",
-          "text": "Les IDG restent la source utilisée pour le réseau AC essentiel lorsque les autres sources tombent en panne.",
+          "text": "L’alimentation par batteries est une alimentation principale permanente du AC system.",
           "is_correct": false,
-          "explanation": "Les IDG sont des sources normales d’alimentation AC, mais la logique de secours décrite intervient précisément quand elles ne sont plus disponibles."
+          "explanation": "Le schéma ne présente pas les batteries comme source principale permanente. Elles alimentent le STATIC INVERTER dans une logique de secours."
         },
         {
           "id": "E",
-          "text": "Les croix rouges signalent l’indisponibilité de IDG/ENG, EXTERNAL POWER A & B et APU.",
+          "text": "L’alimentation par batteries correspond à une situation dégradée.",
           "is_correct": true,
-          "explanation": "Le schéma met explicitement ces sources hors jeu par des croix rouges pour montrer le passage à l’alimentation de secours."
+          "explanation": "Le support présente cette alimentation comme une solution de secours, utilisée quand les autres sources AC ne sont plus disponibles. Elle correspond donc bien à une situation dégradée."
         }
       ],
-      "coverage_label": "Indisponibilité des sources normales",
-      "learning_objective": "Interpréter les croix rouges et comprendre la transition vers l’alimentation de secours.",
-      "correction_summary": "Les croix rouges marquent l’indisponibilité des sources normales : IDG/ENG, EXTERNAL POWER A & B et APU. Le piège est de lire ces marques comme un signe de disponibilité alors qu’elles signalent l’inverse.",
-      "course_clarification": "La situation représentée est dégradée : les alimentations habituelles ne sont plus disponibles. Le schéma met donc en évidence la chaîne de secours batteries → STATIC INVERTER → réseau AC essentiel.",
+      "coverage_label": "Situation dégradée",
+      "learning_objective": "Interpréter le statut opérationnel de l’alimentation par batteries.",
+      "correction_summary": "L’alimentation par batteries n’est pas la configuration normale : elle intervient en mode dégradé. Le piège est de la confondre avec une source principale ou avec une simple alimentation externe.",
+      "course_clarification": "Une situation dégradée signifie qu’une solution de secours prend le relais parce que les sources normales ne sont pas disponibles. Ici, les batteries soutiennent le STATIC INVERTER pour maintenir une partie du réseau AC.",
       "source_refs": []
     },
     {
       "question_id": "S3-2-Q5",
-      "prompt": "Quelle phrase décrit correctement la logique d’alimentation du réseau AC essentiel ?",
+      "prompt": "Quelle affirmation est correcte à propos de la disponibilité des autres sources AC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le réseau AC essentiel est alimenté uniquement par l’EMER GEN GCU.",
+          "text": "Le static inverter fonctionne seulement quand les IDG, l’APU GEN et l’EXT PWR sont tous disponibles.",
           "is_correct": false,
-          "explanation": "Le GCU commande et surveille l’EMER GEN ; il n’alimente pas à lui seul le réseau."
+          "explanation": "Le texte indique l’inverse : le STATIC INVERTER est utilisé quand ces autres sources ne sont pas disponibles. Leur disponibilité n’est donc pas la condition d’activation du secours."
         },
         {
           "id": "B",
-          "text": "Le STATIC INVERTER sert à alimenter l’EXTERNAL POWER A au sol.",
+          "text": "L’EMER GEN empêche toujours le static inverter d’alimenter le réseau AC essentiel.",
           "is_correct": false,
-          "explanation": "L’EXTERNAL POWER est une source externe distincte ; le STATIC INVERTER n’a pas pour fonction de la fournir."
+          "explanation": "Le support ne dit pas cela. Il précise que si aucune autre source AC n’est disponible, le static inverter peut alimenter une partie du réseau AC essentiel."
         },
         {
           "id": "C",
-          "text": "Quand aucune autre source AC n’est disponible, les batteries peuvent alimenter un STATIC INVERTER qui fournit une partie du AC system.",
+          "text": "Si aucune autre source AC n’est disponible, un static inverter alimenté par les batteries peut fournir une partie du AC system.",
           "is_correct": true,
-          "explanation": "C’est exactement la logique de secours décrite : absence des autres sources, batteries actives, puis alimentation partielle du réseau AC via l’inverter."
+          "explanation": "C’est la phrase clé du support : l’absence de IDG, APU GEN, EXT PWR et EMER GEN ouvre la voie à l’alimentation de secours par le STATIC INVERTER alimenté par batteries."
         },
         {
           "id": "D",
-          "text": "Les batteries n’interviennent que pour la distribution DC et jamais pour l’AC.",
+          "text": "L’EXT PWR A & B est la seule source utilisée en cas de panne des moteurs.",
           "is_correct": false,
-          "explanation": "Ici, les batteries participent bien à l’alimentation d’un équipement fournissant de l’AC via le STATIC INVERTER."
+          "explanation": "L’EXT PWR concerne l’alimentation externe au sol et ne constitue pas la seule solution en cas de perte des moteurs. Le schéma de secours met en avant le STATIC INVERTER alimenté par batteries."
         },
         {
           "id": "E",
-          "text": "Le réseau AC essentiel n’existe que lorsque l’APU GEN fonctionne normalement.",
+          "text": "Les batteries alimentent directement les IDG des moteurs.",
           "is_correct": false,
-          "explanation": "Le réseau AC essentiel est précisément destiné à rester disponible quand les sources normales, dont l’APU GEN, ne sont plus là."
+          "explanation": "Les IDG sont des générateurs entraînés par les moteurs, pas des récepteurs alimentés par les batteries. La chaîne correcte passe par le STATIC INVERTER."
         }
       ],
-      "coverage_label": "Logique d’alimentation de secours du réseau AC",
-      "learning_objective": "Expliquer la chaîne complète de secours reliant les batteries au réseau AC essentiel.",
-      "correction_summary": "La bonne logique est : absence des sources AC normales, batteries actives, STATIC INVERTER, puis alimentation partielle du AC Essential electrical system network. Le piège principal est de confondre le rôle du GCU, du STATIC INVERTER et des sources externes.",
-      "course_clarification": "La chaîne de secours ne cherche pas à alimenter tout le réseau AC, seulement une partie essentielle. L’EMER GEN et son GCU appartiennent à la logique de secours, mais la question du STATIC INVERTER concerne la solution alimentée par batteries.",
+      "coverage_label": "Logique de secours AC",
+      "learning_objective": "Comprendre la condition de déclenchement de l’alimentation par batteries via le STATIC INVERTER.",
+      "correction_summary": "La bonne réponse combine l’absence des autres sources AC et l’alimentation du STATIC INVERTER par les batteries. Le principal piège est d’inverser la logique : ce n’est pas une alimentation normale mais une solution de dernier recours.",
+      "course_clarification": "Le système de secours intervient quand les sources AC habituelles ne sont plus disponibles. Il permet de maintenir une partie du réseau AC essentiel avec l’énergie fournie par les batteries.",
       "source_refs": []
     }
   ],

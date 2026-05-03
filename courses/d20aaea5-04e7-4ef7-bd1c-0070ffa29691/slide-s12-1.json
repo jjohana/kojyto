@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S12-1-Q1",
-      "prompt": "Parmi les affirmations suivantes, une seule est exacte.",
+      "question_id": "S12-1_Q1",
+      "prompt": "Parmi les propositions suivantes, laquelle décrit correctement les fonctions principales d’un train d’atterrissage ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le train d’atterrissage sert principalement à augmenter la portance en vol.",
+          "text": "Augmenter la portance en croisière.",
           "is_correct": false,
-          "explanation": "Faux : l’augmentation de portance relève de l’aile, pas du train d’atterrissage."
+          "explanation": "Le train d’atterrissage n’a pas pour fonction d’augmenter la portance ; cette fonction relève de l’aile."
         },
         {
           "id": "B",
-          "text": "Le train d’atterrissage remplace les ailes pour assurer la sustentation.",
+          "text": "Produire la poussée nécessaire au décollage.",
           "is_correct": false,
-          "explanation": "Faux : le train n’assure pas la sustentation, il intervient au sol."
+          "explanation": "La poussée est fournie par la propulsion, pas par le train d’atterrissage."
         },
         {
           "id": "C",
-          "text": "Le train d’atterrissage sert uniquement à absorber l’énergie électrique produite pendant le vol.",
+          "text": "Assurer le guidage aérodynamique de l’avion en vol.",
           "is_correct": false,
-          "explanation": "Faux : cette fonction n’existe pas pour le train d’atterrissage."
+          "explanation": "Le train d’atterrissage intervient au sol, pas comme organe de guidage aérodynamique en vol."
         },
         {
           "id": "D",
-          "text": "Le train d’atterrissage assure la prise de contact avec le sol, le roulage et le freinage.",
+          "text": "Assurer la prise de contact avec le sol, le roulage et le freinage.",
           "is_correct": true,
-          "explanation": "Vrai : ce sont des fonctions essentielles du train d’atterrissage, qui supporte l’aéronef au sol et participe à sa conduite sur piste."
+          "explanation": "Cette formulation reprend les fonctions principales attendues : supporter l’arrivée au sol, permettre le déplacement au sol et aider au freinage."
         },
         {
           "id": "E",
-          "text": "Le train d’atterrissage n’a aucun rôle dans le freinage de l’aéronef.",
+          "text": "Transformer l’énergie chimique du carburant en énergie mécanique.",
           "is_correct": false,
-          "explanation": "Faux : le freinage fait partie de ses fonctions principales au sol."
+          "explanation": "Cette transformation est assurée par le groupe propulsif, pas par le train d’atterrissage."
         }
       ],
-      "coverage_label": "Fonctions du train d’atterrissage",
-      "learning_objective": "Identifier les fonctions principales d’un train d’atterrissage.",
-      "correction_summary": "La bonne réponse regroupe les rôles au sol : contact avec la piste, roulage et freinage. Une confusion fréquente consiste à attribuer au train une fonction aérodynamique ; en réalité, il ne produit pas la portance, il permet surtout le support et les déplacements au sol.",
-      "course_clarification": "Le train d’atterrissage est l’ensemble qui permet à l’aéronef d’être supporté au sol, de rouler et de freiner. La portance vient de l’aile, pas du train.",
+      "coverage_label": "Fonctions principales d’un train d’atterrissage",
+      "learning_objective": "Identifier les fonctions essentielles du train d’atterrissage au sol.",
+      "correction_summary": "La bonne proposition regroupe les rôles de contact avec le sol, roulage et freinage. Les autres réponses décrivent la propulsion, l’aérodynamique ou la portance, qui ne relèvent pas du train.",
+      "course_clarification": "Le train d’atterrissage sert à soutenir l’avion au sol et à permettre ses déplacements au sol. Il participe aussi à l’absorption des efforts à l’atterrissage et au freinage.",
       "source_refs": []
     },
     {
-      "question_id": "S12-1-Q2",
-      "prompt": "Parmi les affirmations suivantes, une seule est exacte.",
+      "question_id": "S12-1_Q2",
+      "prompt": "Sur un train classique, où se trouve le centre de gravité indiqué par la question ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Sur un train classique, le centre de gravité se trouve sur le train auxiliaire.",
+          "text": "Sur l’avant de la voilure.",
           "is_correct": false,
-          "explanation": "Faux : le train auxiliaire ne porte pas le centre de gravité dans cette configuration."
+          "explanation": "L’avant de la voilure n’est pas l’emplacement demandé pour le centre de gravité dans cette configuration."
         },
         {
           "id": "B",
-          "text": "Sur un train classique, le centre de gravité se trouve sur les trains principaux.",
+          "text": "Sur les trains principaux.",
           "is_correct": true,
-          "explanation": "Vrai : la répartition du poids est assurée de manière à faire porter le centre de gravité par les trains principaux."
+          "explanation": "La réponse attendue place le centre de gravité au niveau des trains principaux pour un train classique."
         },
         {
           "id": "C",
-          "text": "Sur un train classique, le centre de gravité est placé au-dessus de la dérive.",
+          "text": "Sur l’arrière de la voilure.",
           "is_correct": false,
-          "explanation": "Faux : la dérive n’est pas la zone de référence pour la position du centre de gravité."
+          "explanation": "L’arrière de la voilure est également incorrect ici : le point visé est lié aux trains principaux."
         },
         {
           "id": "D",
-          "text": "Sur un train classique, le centre de gravité est situé obligatoirement à l’avant du fuselage.",
+          "text": "Dans le nez de l’avion uniquement.",
           "is_correct": false,
-          "explanation": "Faux : la position du centre de gravité dépend de l’équilibrage de l’aéronef, pas d’une règle liée à l’avant du fuselage."
+          "explanation": "Le nez de l’avion correspond au train avant sur un train tricycle, pas à la réponse donnée pour un train classique."
         },
         {
           "id": "E",
-          "text": "La position du centre de gravité n’a aucun lien avec la stabilité au sol.",
+          "text": "Entre les deux ailes, au niveau de la cabine.",
           "is_correct": false,
-          "explanation": "Faux : la position du centre de gravité est directement liée à la stabilité et à la répartition des charges."
+          "explanation": "Cette localisation ne correspond pas à la réponse attendue pour le train classique."
         }
       ],
-      "coverage_label": "Centre de gravité sur train classique",
-      "learning_objective": "Repérer la position du centre de gravité dans la configuration de train classique.",
-      "correction_summary": "La réponse attendue place le centre de gravité sur les trains principaux. L’erreur la plus courante consiste à confondre la position du centre de gravité avec la présence du train auxiliaire ou avec une zone du fuselage, alors qu’il s’agit d’un problème d’équilibrage sur les appuis principaux.",
-      "course_clarification": "Dans un train classique, la charge de l’aéronef est reprise principalement par les trains principaux. Le centre de gravité doit donc être considéré par rapport à ces appuis.",
+      "coverage_label": "Centre de gravité sur un train classique",
+      "learning_objective": "Reconnaître la position du centre de gravité associée au train classique.",
+      "correction_summary": "La bonne réponse situe le centre de gravité sur les trains principaux. Les distracteurs déplacent ce repère vers le nez, la voilure ou la cabine, ce qui ne correspond pas à l’énoncé visé.",
+      "course_clarification": "Le centre de gravité est le point où s’applique le poids de l’avion. Dans cette question, la localisation recherchée est celle associée aux trains principaux.",
       "source_refs": []
     },
     {
-      "question_id": "S12-1-Q3",
-      "prompt": "Parmi les affirmations suivantes, une seule est exacte.",
+      "question_id": "S12-1_Q3",
+      "prompt": "Quelle définition correspond à la **voie** sur un aéronef ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La voie est la largeur entre deux pneus principaux.",
+          "text": "La distance séparant les trains principaux.",
           "is_correct": true,
-          "explanation": "Vrai : la voie correspond à l’écartement latéral entre les deux roues ou trains principaux selon la définition donnée."
+          "explanation": "La voie correspond bien à l’écartement entre les trains principaux."
         },
         {
           "id": "B",
-          "text": "La voie est la distance entre le train auxiliaire et le train principal.",
+          "text": "La distance entre le fuselage et les trains principaux.",
           "is_correct": false,
-          "explanation": "Faux : cette distance correspond à une autre grandeur géométrique, pas à la voie."
+          "explanation": "Cette distance décrit un autre repère géométrique, pas la voie."
         },
         {
           "id": "C",
-          "text": "La voie est la distance entre les deux ailes de l’aéronef.",
+          "text": "La distance séparant le train auxiliaire du train principal.",
           "is_correct": false,
-          "explanation": "Faux : cela ne décrit pas la voie du train d’atterrissage."
+          "explanation": "Cette définition correspond à l’empattement, pas à la voie."
         },
         {
           "id": "D",
-          "text": "La voie est l’angle formé par le train principal avec l’axe longitudinal.",
+          "text": "La largeur entre deux pneus principaux.",
           "is_correct": false,
-          "explanation": "Faux : la voie est une distance, pas un angle."
+          "explanation": "La voie ne se définit pas par la largeur entre deux pneus, mais par l’écartement des trains principaux."
         },
         {
           "id": "E",
-          "text": "La voie désigne la longueur du fuselage entre le nez et la dérive.",
+          "text": "L’angle formé par la verticale et la droite reliant le centre de gravité au centre des roues.",
           "is_correct": false,
-          "explanation": "Faux : cette description n’a aucun rapport avec la géométrie du train d’atterrissage."
+          "explanation": "Cette formulation définit l’angle de garde, pas la voie."
         }
       ],
-      "coverage_label": "Voie du train d’atterrissage",
-      "learning_objective": "Définir correctement la voie d’un aéronef.",
-      "correction_summary": "La voie est un écartement latéral, pas une distance avant-arrière ni un angle. La confusion la plus fréquente consiste à la mélanger avec l’empattement, qui correspond à une autre distance entre trains.",
-      "course_clarification": "La voie mesure l’écartement entre les appuis principaux d’un aéronef. C’est une grandeur de largeur, utile pour décrire la stabilité latérale au sol.",
+      "coverage_label": "Voie",
+      "learning_objective": "Distinguer la voie des autres grandeurs géométriques du train d’atterrissage.",
+      "correction_summary": "La voie est l’écartement entre les trains principaux. Le piège classique consiste à la confondre avec l’empattement ou avec une mesure liée au fuselage.",
+      "course_clarification": "La voie est une distance latérale, liée à l’écartement du train. Elle renseigne sur la stabilité latérale au sol.",
       "source_refs": []
     },
     {
-      "question_id": "S12-1-Q4",
-      "prompt": "Parmi les affirmations suivantes, une seule est exacte.",
+      "question_id": "S12-1_Q4",
+      "prompt": "Quelle définition correspond à l’**angle de garde** ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L’empattement est la largeur entre deux pneus principaux.",
+          "text": "L’angle que fait l’horizontale avec la droite joignant le centre de gravité de l’avion.",
           "is_correct": false,
-          "explanation": "Faux : cette largeur correspond à la voie, pas à l’empattement."
+          "explanation": "Cette formulation ne donne pas la bonne référence géométrique : l’angle de garde est défini à partir de la verticale et du train principal."
         },
         {
           "id": "B",
-          "text": "L’empattement est la distance entre le fuselage et les trains principaux.",
+          "text": "L’angle que fait le train principal avec la corde du profil de l’aile.",
           "is_correct": false,
-          "explanation": "Faux : ce n’est pas la définition donnée pour l’empattement."
+          "explanation": "Cette phrase décrit un autre type d’angle géométrique, sans lien avec l’angle de garde demandé ici."
         },
         {
           "id": "C",
-          "text": "L’empattement est l’angle que fait la verticale avec la droite reliant le centre de gravité au train principal.",
+          "text": "L’angle entre les deux pneus d’un même train principal.",
           "is_correct": false,
-          "explanation": "Faux : cette définition correspond à l’angle de garde, pas à l’empattement."
+          "explanation": "Aucun angle de ce type n’est utilisé pour définir l’angle de garde."
         },
         {
           "id": "D",
-          "text": "L’empattement est la distance entre les deux ailes.",
+          "text": "L’angle entre le fuselage et l’horizontale au sol.",
           "is_correct": false,
-          "explanation": "Faux : cette grandeur n’a pas de lien avec l’empattement du train d’atterrissage."
+          "explanation": "Cette notion concerne l’assiette ou une géométrie de position, pas l’angle de garde."
         },
         {
           "id": "E",
-          "text": "L’empattement est la distance séparant les trains principaux.",
+          "text": "L’angle que fait la verticale avec la droite joignant le centre de gravité de l’avion au centre des roues du train principal.",
           "is_correct": true,
-          "explanation": "Vrai : la définition attendue ici est la distance entre les trains principaux."
-        }
-      ],
-      "coverage_label": "Empattement du train d’atterrissage",
-      "learning_objective": "Distinguer l’empattement des autres grandeurs géométriques du train.",
-      "correction_summary": "La bonne réponse donne une distance entre trains principaux. La confusion classique est de mélanger empattement, voie et angle de garde : l’empattement est une distance longitudinale, alors que la voie est une largeur et l’angle de garde est un angle.",
-      "course_clarification": "L’empattement décrit l’écartement avant-arrière entre les trains principaux dans la définition retenue ici. Il faut le distinguer de la voie, qui est latérale.",
-      "source_refs": []
-    },
-    {
-      "question_id": "S12-1-Q5",
-      "prompt": "Parmi les affirmations suivantes, une seule est exacte.",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "L’angle de garde est la distance entre les trains principaux.",
-          "is_correct": false,
-          "explanation": "Faux : il s’agit d’une distance, donc pas d’un angle."
-        },
-        {
-          "id": "B",
-          "text": "L’angle de garde est la largeur entre deux pneus principaux.",
-          "is_correct": false,
-          "explanation": "Faux : cette description correspond à la voie."
-        },
-        {
-          "id": "C",
-          "text": "L’angle de garde est l’angle que fait la verticale avec la droite joignant le centre de gravité de l’avion au centre des roues du train principal.",
-          "is_correct": true,
-          "explanation": "Vrai : c’est la définition donnée pour l’angle de garde."
-        },
-        {
-          "id": "D",
-          "text": "L’angle de garde est l’angle entre le train principal et la corde du profil de l’aile.",
-          "is_correct": false,
-          "explanation": "Faux : cette proposition ne correspond pas à la définition attendue."
-        },
-        {
-          "id": "E",
-          "text": "L’angle de garde sert uniquement à déterminer la pression de gonflage d’un amortisseur.",
-          "is_correct": false,
-          "explanation": "Faux : le gonflage d’un amortisseur dépend d’autres conditions, et l’angle de garde ne se réduit pas à ce rôle."
+          "explanation": "C’est exactement la définition attendue de l’angle de garde."
         }
       ],
       "coverage_label": "Angle de garde",
-      "learning_objective": "Reconnaître la définition de l’angle de garde.",
-      "correction_summary": "La réponse correcte est celle qui relie le centre de gravité, le centre des roues du train principal et la verticale. L’erreur la plus fréquente est de confondre cet angle avec une distance géométrique comme la voie ou l’empattement.",
-      "course_clarification": "L’angle de garde est un angle géométrique lié à la position du centre de gravité par rapport au train principal. Il se lit avec la verticale et la droite qui relie ces points de référence.",
+      "learning_objective": "Interpréter correctement la définition géométrique de l’angle de garde.",
+      "correction_summary": "L’angle de garde est défini par la verticale et la droite reliant le centre de gravité au centre des roues du train principal. Les autres propositions déplacent la référence angulaire vers l’horizontale, l’aile ou le fuselage.",
+      "course_clarification": "L’angle de garde relie la position du centre de gravité au train principal. Il sert à caractériser la stabilité au sol et la marge vis-à-vis du basculement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S12-1_Q5",
+      "prompt": "Quel est le but premier du freinage lors de l’atterrissage et des évolutions au sol ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Répartir de façon homogène le poids au sol.",
+          "is_correct": false,
+          "explanation": "La répartition du poids est une fonction générale du train d’atterrissage, pas le but premier du freinage."
+        },
+        {
+          "id": "B",
+          "text": "Éviter l’augmentation de la pression hydraulique interne du train.",
+          "is_correct": false,
+          "explanation": "Cette formulation ne correspond pas à la fonction du freinage ; elle ne décrit ni l’arrêt ni le roulage."
+        },
+        {
+          "id": "C",
+          "text": "Réduire la distance de freinage après l’atterrissage et faciliter les évolutions au sol.",
+          "is_correct": true,
+          "explanation": "La réponse attendue associe bien le freinage à la diminution de la distance d’arrêt et à l’aide au roulage."
+        },
+        {
+          "id": "D",
+          "text": "Augmenter la portance au moment du toucher des roues.",
+          "is_correct": false,
+          "explanation": "Le freinage agit sur la vitesse au sol, pas sur la portance aérodynamique."
+        },
+        {
+          "id": "E",
+          "text": "Supprimer toute nécessité de roulage après le contact avec le sol.",
+          "is_correct": false,
+          "explanation": "Après l’atterrissage, le roulage reste nécessaire pour dégager la piste et manœuvrer ; le freinage ne supprime pas ce besoin."
+        }
+      ],
+      "coverage_label": "Freinage",
+      "learning_objective": "Identifier l’objectif principal du freinage à l’atterrissage et au roulage.",
+      "correction_summary": "Le freinage sert d’abord à réduire la distance d’arrêt après l’atterrissage et à aider les évolutions au sol. Le piège consiste à le confondre avec la répartition des charges ou avec des effets aérodynamiques.",
+      "course_clarification": "Le freinage agit sur l’énergie cinétique de l’avion lorsqu’il est au sol. Il complète le roulage en permettant un arrêt plus court et une meilleure maîtrise des déplacements.",
       "source_refs": []
     }
   ],

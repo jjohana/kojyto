@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "s20-q1",
+      "question_id": "s20_q1",
       "prompt": "Quelle affirmation décrit correctement le rôle de la qualité en entreprise aéronautique ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La qualité sert uniquement à réduire les coûts de production, sans lien avec la conformité.",
+          "text": "La qualité sert uniquement à améliorer l’apparence des pièces sans lien avec la conformité.",
           "is_correct": false,
-          "explanation": "La maîtrise des coûts peut être un effet secondaire, mais l’objectif principal est la conformité aux normes et la sécurité des produits et services."
+          "explanation": "La qualité ne se limite pas à l’aspect visuel. Elle vise d’abord la conformité aux exigences, aux normes et aux règles de sécurité applicables."
         },
         {
           "id": "B",
-          "text": "La qualité concerne seulement l’apparence du produit fini, pas les règles à respecter.",
+          "text": "La qualité concerne seulement la fin de fabrication, jamais le contrôle pendant la production.",
           "is_correct": false,
-          "explanation": "En aéronautique, la qualité porte aussi sur les exigences réglementaires, la traçabilité et les procédures, pas seulement sur l’aspect visuel."
+          "explanation": "Le contrôle en cours de production fait justement partie des outils qualité. La maîtrise de la conformité se fait tout au long du processus, pas seulement au produit fini."
         },
         {
           "id": "C",
-          "text": "La qualité remplace les contrôles réglementaires imposés par les autorités aéronautiques.",
+          "text": "La qualité remplace les obligations réglementaires parce qu’une procédure interne suffit à elle seule.",
           "is_correct": false,
-          "explanation": "Les contrôles qualité ne remplacent pas les exigences réglementaires ; ils servent justement à vérifier qu’elles sont respectées."
+          "explanation": "Une procédure interne ne remplace pas les règles externes. La qualité organise la conformité aux normes et aux exigences réglementaires, elle ne les annule pas."
         },
         {
           "id": "D",
-          "text": "La qualité vise à garantir le respect des normes, des attentes des clients et des standards réglementaires stricts.",
+          "text": "La qualité garantit le respect des normes, des attentes des clients et des standards réglementaires stricts.",
           "is_correct": true,
-          "explanation": "C’est l’idée centrale : la qualité ne se limite pas à « bien faire », elle sert à assurer la conformité aux exigences techniques, clients et réglementaires."
+          "explanation": "C’est le rôle central de la qualité : assurer la conformité aux exigences techniques, contractuelles et réglementaires. En aéronautique, le niveau d’exigence est particulièrement élevé car la sécurité des vols est en jeu."
         },
         {
           "id": "E",
-          "text": "La qualité ne s’applique qu’aux clients, pas aux pièces ni aux procédés de fabrication.",
+          "text": "La qualité n’a pas de lien avec les attentes du client ni avec les standards réglementaires.",
           "is_correct": false,
-          "explanation": "La qualité concerne aussi les produits, les pièces, les procédés et les documents de production, pas seulement la satisfaction client."
+          "explanation": "C’est l’inverse de la définition attendue. La qualité prend bien en compte les attentes du client et les contraintes réglementaires strictes."
         }
       ],
-      "coverage_label": "Rôle de la qualité",
-      "learning_objective": "Identifier la fonction de la qualité comme garantie de conformité aux normes, aux clients et à la réglementation.",
-      "correction_summary": "La bonne réponse est celle qui relie la qualité à la conformité globale. Le piège consiste à réduire la qualité à un simple contrôle visuel ou à une logique de coût.",
-      "course_clarification": "La qualité regroupe les actions qui évitent les écarts aux exigences. En aéronautique, elle protège à la fois la conformité du produit et la sécurité des opérations.",
+      "coverage_label": "Qualité en entreprise aéronautique",
+      "learning_objective": "Identifier la fonction de la qualité comme garantie de conformité aux normes, aux attentes clients et aux exigences réglementaires.",
+      "correction_summary": "La bonne réponse est l’affirmation qui relie la qualité à la conformité, aux attentes clients et aux standards réglementaires. Le piège consiste à réduire la qualité à un simple contrôle visuel ou à une action de fin de chaîne.",
+      "course_clarification": "La qualité sert à maîtriser la conformité d’un produit ou d’un service. En aéronautique, elle doit répondre à la fois aux exigences du client et aux règles réglementaires.",
       "source_refs": []
     },
     {
-      "question_id": "s20-q2",
-      "prompt": "À propos des normes et certifications, quelle proposition est exacte ?",
+      "question_id": "s20_q2",
+      "prompt": "Quelle affirmation sur les normes qualité est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "ISO 9001 est un système de management de la qualité général, utilisable dans de nombreux secteurs.",
+          "text": "ISO 9001 est une norme spécifique à la maintenance aéronautique.",
           "is_correct": false,
-          "explanation": "ISO 9001 n’est pas propre à l’aéronautique ; c’est une norme générale de management de la qualité."
+          "explanation": "ISO 9001 est une norme générale de management de la qualité, pas une norme réservée à la maintenance aéronautique."
         },
         {
           "id": "B",
-          "text": "EN 9100 / AS9100 correspondent à un système de management de la qualité spécifique à l’aéronautique.",
+          "text": "EN 9100 / AS9100 est un système de management de la qualité spécifique à l’aéronautique.",
           "is_correct": true,
-          "explanation": "Ces référentiels sont bien dédiés à l’aéronautique et à la maîtrise de la qualité dans ce secteur."
+          "explanation": "EN 9100 et AS9100 sont bien les références qualité adaptées au secteur aéronautique. Elles reprennent une logique de management de la qualité orientée vers les exigences du domaine."
         },
         {
           "id": "C",
-          "text": "EASA Part 145 et Part 21 désignent des règles de maintenance et de production aéronautique certifiée.",
+          "text": "EN 9100 / AS9100 est une norme générale utilisable dans tous les secteurs sans adaptation.",
           "is_correct": false,
-          "explanation": "Ces références concernent bien la maintenance et la production aéronautique, donc l’idée est correcte ; mais ici l’énoncé mélange deux éléments à vérifier séparément. Pour cette affirmation, l’énoncé n’est pas faux sur le fond."
+          "explanation": "Cette formulation correspond plutôt à une norme généraliste. EN 9100 / AS9100 est au contraire spécifique à l’aéronautique."
         },
         {
           "id": "D",
-          "text": "EN 9100 / AS9100 sont des normes réservées à la maintenance des avions uniquement.",
+          "text": "AS9100 concerne uniquement la sécurité incendie des ateliers.",
           "is_correct": false,
-          "explanation": "Le support les présente comme un système de management qualité aéronautique, pas comme une norme limitée à la seule maintenance."
+          "explanation": "AS9100 ne traite pas seulement la sécurité incendie. Elle porte sur un système de management de la qualité adapté à l’aéronautique."
         },
         {
           "id": "E",
-          "text": "ISO 9001 est une certification réservée aux entreprises de fabrication de moteurs d’avion.",
+          "text": "ISO 9001 remplace automatiquement les exigences aéronautiques spécifiques comme EN 9100 / AS9100.",
           "is_correct": false,
-          "explanation": "ISO 9001 est un référentiel général et ne se limite pas à un type d’activité ou à un seul sous-secteur."
+          "explanation": "ISO 9001 est une base générale, mais elle ne remplace pas les exigences spécifiques du secteur aéronautique quand elles sont requises."
         }
       ],
-      "coverage_label": "Normes et certifications",
-      "learning_objective": "Distinguer EN 9100/AS9100, ISO 9001 et EASA Part 145/Part 21.",
-      "correction_summary": "La bonne réponse porte sur EN 9100 / AS9100 comme norme qualité aéronautique spécifique. Le piège courant est de confondre ISO 9001, généraliste, avec les référentiels dédiés à l’aéronautique.",
-      "course_clarification": "Une norme de management de la qualité fixe des exigences d’organisation et de maîtrise des processus. Les références EASA Part 145 / Part 21 concernent la maintenance et la production aéronautique certifiée.",
+      "coverage_label": "Qualité en entreprise aéronautique",
+      "learning_objective": "Distinguer une norme générale de qualité d’une norme spécifique à l’aéronautique.",
+      "correction_summary": "La bonne réponse est celle qui associe EN 9100 / AS9100 à l’aéronautique. Le piège est de confondre une norme générale comme ISO 9001 avec une norme sectorielle.",
+      "course_clarification": "ISO 9001 fixe un cadre général de management de la qualité. EN 9100 / AS9100 ajoute des exigences adaptées aux activités aéronautiques.",
       "source_refs": []
     },
     {
-      "question_id": "s20-q3",
-      "prompt": "Concernant le contrôle en cours de production, quelle affirmation est correcte ?",
+      "question_id": "s20_q3",
+      "prompt": "Quelle affirmation sur les certifications EASA est exacte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il peut inclure des inspections visuelles, des tests non destructifs et des vérifications dimensionnelles.",
+          "text": "EASA Part 145 et Part 21 concernent la maintenance et la production aéronautique certifiée.",
           "is_correct": true,
-          "explanation": "Ce sont bien les trois exemples d’outils cités pour contrôler la conformité pendant la fabrication."
+          "explanation": "C’est bien l’usage indiqué : Part 145 est liée à la maintenance et Part 21 à la production/certification aéronautique. Elles encadrent des activités soumises à des règles strictes."
         },
         {
           "id": "B",
-          "text": "Il se fait uniquement après la livraison finale du produit.",
+          "text": "EASA Part 145 est une norme de décoration des cabines passagers.",
           "is_correct": false,
-          "explanation": "Le contrôle en cours de production intervient pendant la fabrication, afin de détecter les écarts avant la fin du processus."
+          "explanation": "Part 145 ne concerne pas l’aménagement esthétique des cabines. Elle s’applique aux activités de maintenance aéronautique certifiée."
         },
         {
           "id": "C",
-          "text": "Il interdit toute vérification des dimensions des pièces.",
+          "text": "EASA Part 21 est une règle réservée au transport commercial des passagers.",
           "is_correct": false,
-          "explanation": "Les vérifications dimensionnelles font au contraire partie des moyens de contrôle mentionnés."
+          "explanation": "Part 21 n’est pas une règle de transport commercial. Elle est liée à la production et à la certification dans le domaine aéronautique."
         },
         {
           "id": "D",
-          "text": "Il repose seulement sur l’avis de l’opérateur, sans outil de mesure.",
+          "text": "EASA Part 145 et Part 21 sont des procédures de gestion des plannings de vol.",
           "is_correct": false,
-          "explanation": "La qualité industrielle repose sur des contrôles concrets et documentés, pas uniquement sur une appréciation subjective."
+          "explanation": "Ces références ne portent pas sur l’organisation des vols. Elles encadrent des activités techniques certifiées en maintenance et production."
         },
         {
           "id": "E",
-          "text": "Il remplace la traçabilité des pièces dans les ateliers.",
+          "text": "EASA Part 145 interdit toute certification en maintenance aéronautique.",
           "is_correct": false,
-          "explanation": "Le contrôle vérifie la conformité ; la traçabilité conserve l’historique de la pièce. Ce sont deux fonctions complémentaires."
+          "explanation": "C’est l’inverse : Part 145 est justement associée à la maintenance aéronautique certifiée, donc à un cadre d’autorisation et de conformité."
         }
       ],
-      "coverage_label": "Contrôle en cours de production",
-      "learning_objective": "Reconnaître les principaux moyens de contrôle utilisés pendant la production.",
-      "correction_summary": "La bonne réponse cite les trois formes de contrôle attendues : visuel, non destructif et dimensionnel. Le piège est de croire que le contrôle n’a lieu qu’en fin de chaîne ou qu’il repose seulement sur l’observation.",
-      "course_clarification": "Un test non destructif vérifie une pièce sans l’abîmer. Le contrôle en cours de production permet de repérer un défaut tôt, avant qu’il ne se propage à toute une série.",
+      "coverage_label": "Qualité en entreprise aéronautique",
+      "learning_objective": "Associer correctement Part 145 à la maintenance et Part 21 à la production/certification aéronautique.",
+      "correction_summary": "La bonne réponse relie Part 145 à la maintenance et Part 21 à la production aéronautique certifiée. Le piège consiste à leur attribuer des fonctions sans rapport avec les activités techniques réglementées.",
+      "course_clarification": "Les références EASA encadrent des activités aéronautiques certifiées. Elles garantissent que les interventions et les productions respectent des exigences de conformité strictes.",
       "source_refs": []
     },
     {
-      "question_id": "s20-q4",
-      "prompt": "Sur la traçabilité des pièces, quelle proposition est exacte ?",
+      "question_id": "s20_q4",
+      "prompt": "Quelle affirmation décrit correctement un contrôle en cours de production ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Elle se limite au nom commercial de la pièce, sans autre information.",
+          "text": "Le contrôle en cours de production consiste uniquement à signer les documents administratifs.",
           "is_correct": false,
-          "explanation": "Une simple appellation commerciale ne permet pas de remonter à l’origine ni au parcours de fabrication."
+          "explanation": "Le contrôle qualité ne se limite pas à l’administratif. Il comprend aussi des vérifications techniques concrètes sur la pièce ou le procédé."
         },
         {
           "id": "B",
-          "text": "Elle sert à empêcher toute identification de la pièce après assemblage.",
+          "text": "Les tests non destructifs détruisent volontairement la pièce contrôlée.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : la traçabilité sert justement à identifier et suivre la pièce tout au long de sa vie industrielle."
+          "explanation": "Un test non destructif est justement conçu pour vérifier sans dégrader la pièce. Le mot “non destructif” exclut la destruction de l’élément contrôlé."
         },
         {
           "id": "C",
-          "text": "Elle remplace les contrôles de conformité effectués pendant la production.",
+          "text": "Les inspections visuelles sont interdites pendant la fabrication aéronautique.",
           "is_correct": false,
-          "explanation": "La traçabilité complète le contrôle ; elle ne le remplace pas, car elle ne vérifie pas directement la conformité physique."
+          "explanation": "Les inspections visuelles font au contraire partie des contrôles courants. Elles permettent de repérer des défauts apparents ou des écarts visibles."
         },
         {
           "id": "D",
-          "text": "Elle n’est utile que pour les produits finis, jamais pour les composants.",
+          "text": "Le contrôle en cours de production n’a pas pour but de détecter les écarts avant la fin de fabrication.",
           "is_correct": false,
-          "explanation": "La traçabilité est particulièrement importante pour les pièces et composants, afin de pouvoir remonter à leur origine et à leur lot."
+          "explanation": "C’est l’inverse de son objectif. Il sert précisément à repérer les écarts tôt pour éviter de fabriquer des pièces non conformes."
         },
         {
           "id": "E",
-          "text": "Elle exige une documentation complète sur la provenance, le lot et le processus.",
+          "text": "Les vérifications dimensionnelles font partie du contrôle en cours de production.",
           "is_correct": true,
-          "explanation": "La traçabilité consiste bien à pouvoir retrouver l’origine de la pièce, son lot et les étapes de transformation."
+          "explanation": "Les vérifications dimensionnelles servent à contrôler des cotes et des tolérances pendant la fabrication. Elles permettent de détecter rapidement une dérive avant la fin du processus."
         }
       ],
-      "coverage_label": "Traçabilité des pièces",
-      "learning_objective": "Comprendre les informations nécessaires à une traçabilité efficace.",
-      "correction_summary": "La bonne réponse est celle qui relie la traçabilité à l’origine, au lot et au processus. Le piège est de la réduire à une simple étiquette ou à un suivi uniquement en fin de chaîne.",
-      "course_clarification": "La traçabilité permet de retrouver l’histoire d’une pièce. En cas d’écart, elle aide à localiser rapidement les pièces concernées et à limiter les impacts.",
+      "coverage_label": "Qualité en entreprise aéronautique",
+      "learning_objective": "Reconnaître les outils de contrôle utilisés pendant la production et leur fonction.",
+      "correction_summary": "La bonne réponse est celle qui associe le contrôle en cours de production aux vérifications dimensionnelles. Le piège est de confondre contrôle technique, contrôle documentaire et contrôle final.",
+      "course_clarification": "Le contrôle en cours de production vérifie la conformité pendant la fabrication. Il peut prendre la forme d’une inspection visuelle, d’un test non destructif ou d’une mesure dimensionnelle.",
       "source_refs": []
     },
     {
-      "question_id": "s20-q5",
-      "prompt": "À propos de la gestion des non-conformités et de l’amélioration continue, quelle affirmation est correcte ?",
+      "question_id": "s20_q5",
+      "prompt": "Quelle affirmation est correcte au sujet de la traçabilité et des non-conformités ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Une non-conformité doit être ignorée si elle ne bloque pas immédiatement la production.",
+          "text": "La gestion des non-conformités consiste seulement à ignorer le défaut s’il est mineur.",
           "is_correct": false,
-          "explanation": "Même sans blocage immédiat, une non-conformité doit être traitée car elle peut créer un risque de sécurité ou de qualité."
+          "explanation": "Une non-conformité ne doit pas être ignorée. Elle doit être identifiée, analysée puis traitée pour corriger le problème et éviter sa répétition."
         },
         {
           "id": "B",
-          "text": "Les audits internes, les retours d’expérience et la formation continue participent à l’amélioration continue.",
+          "text": "La traçabilité se limite au nom du client final, sans information sur le processus.",
           "is_correct": false,
-          "explanation": "Cette affirmation est vraie sur le fond ; elle correspond à la logique d’amélioration continue. Cependant, pour cette question, la seule réponse attendue est l’énoncé sur la gestion complète des non-conformités."
+          "explanation": "La traçabilité va bien plus loin qu’un simple nom de client. Elle inclut la provenance, le lot et le processus de fabrication ou de traitement."
         },
         {
           "id": "C",
-          "text": "La gestion des non-conformités comprend l’identification, l’analyse, la correction et la prévention.",
+          "text": "La traçabilité des pièces documente la provenance, le lot et le processus.",
           "is_correct": true,
-          "explanation": "C’est bien la chaîne d’actions attendue : repérer le problème, comprendre sa cause, corriger puis éviter sa répétition."
+          "explanation": "La traçabilité doit permettre de retracer l’origine d’une pièce, son lot et les étapes de traitement. C’est indispensable pour comprendre l’historique d’un élément et agir en cas de problème."
         },
         {
           "id": "D",
-          "text": "La prévention consiste à chercher les causes pour éviter que le problème se reproduise.",
+          "text": "L’amélioration continue exclut les audits internes et la formation continue.",
           "is_correct": false,
-          "explanation": "Cette phrase décrit bien la prévention ; mais l’énoncé n’est pas le seul point demandé et ne couvre pas l’ensemble de la gestion des non-conformités."
+          "explanation": "Audits internes, retours d’expérience et formation continue font justement partie des moyens d’amélioration continue. Les exclure contredit la logique du dispositif."
         },
         {
           "id": "E",
-          "text": "L’amélioration continue interdit tout retour d’expérience après incident.",
+          "text": "La correction d’une non-conformité supprime le besoin d’analyse et de prévention.",
           "is_correct": false,
-          "explanation": "Le retour d’expérience est au contraire un outil de progrès : il permet d’apprendre d’un incident pour améliorer les pratiques."
+          "explanation": "Corriger ne suffit pas : il faut aussi analyser la cause et prévenir la réapparition. Sinon le même défaut peut revenir plus tard."
         }
       ],
-      "coverage_label": "Non-conformités et amélioration continue",
-      "learning_objective": "Identifier les étapes de traitement d’une non-conformité et les leviers d’amélioration continue.",
-      "correction_summary": "La bonne réponse doit réunir identification, analyse, correction et prévention. Le piège est d’oublier que le traitement ne s’arrête pas à la correction immédiate : il faut aussi éviter la récidive.",
-      "course_clarification": "Une non-conformité est un écart par rapport à une exigence. L’amélioration continue repose sur les audits, l’expérience du terrain et la formation pour réduire durablement ces écarts.",
+      "coverage_label": "Qualité en entreprise aéronautique",
+      "learning_objective": "Identifier les éléments de la traçabilité et la logique de traitement d’une non-conformité.",
+      "correction_summary": "La bonne réponse associe la traçabilité à la provenance, au lot et au processus. Le piège est de croire qu’une correction ponctuelle suffit sans analyse ni prévention.",
+      "course_clarification": "La traçabilité permet de remonter l’historique d’une pièce. La gestion des non-conformités suit une logique complète : identifier, analyser, corriger et prévenir.",
       "source_refs": []
     }
   ],

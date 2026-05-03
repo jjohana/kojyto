@@ -5,217 +5,175 @@
   "questions": [
     {
       "question_id": "S4-5-Q1",
-      "prompt": "Quels éléments appartiennent aux blocs de contrôle visibles autour de la génération DC ?",
+      "prompt": "Quels blocs de contrôle sont visibles sur le schéma de génération DC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Les IDGs sont des blocs de contrôle visibles.",
+          "text": "On voit seulement des BCLs et aucun GCU.",
           "is_correct": false,
-          "explanation": "Non. Les IDGs sont des sources de génération AC, pas des unités de contrôle ; elles sont surveillées par les GCUs."
+          "explanation": "Les BCLs apparaissent aussi, mais ils ne remplacent pas les blocs de contrôle. Les GCUs et le GAPCU sont bien présents sur le schéma."
         },
         {
           "id": "B",
-          "text": "Le DC SYSTEM est lui-même un bloc de contrôle.",
+          "text": "Le schéma ne montre aucun bloc de contrôle.",
           "is_correct": false,
-          "explanation": "Non. Le DC SYSTEM est un réseau de distribution/alimmentation, pas une unité de commande."
+          "explanation": "Plusieurs unités de contrôle sont visibles, notamment les GCUs et l’EMER GEN GCU. L’assertion contredit directement la légende du schéma."
         },
         {
           "id": "C",
-          "text": "Le NLG fait partie des blocs de contrôle électriques.",
+          "text": "Les unités visibles sont uniquement TR 1, TR 2 et TR ESS.",
           "is_correct": false,
-          "explanation": "Non. Le NLG correspond au train avant et n’est pas une unité de contrôle de la génération électrique."
+          "explanation": "TR 1, TR 2 et TR ESS sont des convertisseurs, pas des blocs de contrôle. Ils participent à l’alimentation DC, mais ne correspondent pas aux unités de supervision demandées."
         },
         {
           "id": "D",
-          "text": "Les GCUs figurent parmi les blocs de contrôle visibles.",
+          "text": "On voit les GCUs, l’EMER GEN GCU et le GAPCU.",
           "is_correct": true,
-          "explanation": "Oui. Les Generator Control Units (GCUs) sont explicitement repérées comme blocs de contrôle associés à la génération électrique."
+          "explanation": "Le schéma identifie explicitement ces trois familles de blocs de contrôle. Ils encadrent la supervision des sources liées au réseau AC/DC."
         },
         {
           "id": "E",
-          "text": "L’AC SYSTEM est un bloc de contrôle visible au même titre qu’un GCU.",
+          "text": "Le STATIC INVERTER est un bloc de contrôle visible au même titre qu’un GCU.",
           "is_correct": false,
-          "explanation": "Non. L’AC SYSTEM est un réseau électrique, pas un organe de contrôle."
+          "explanation": "Le STATIC INVERTER est un élément de conversion/alimentation, pas une unité de contrôle. Le schéma distingue clairement conversion d’énergie et supervision."
         }
       ],
       "coverage_label": "Blocs de contrôle et interfaces avec le DC SYSTEM",
-      "learning_objective": "Identifier les unités de contrôle associées à la génération électrique visible sur le schéma.",
-      "correction_summary": "Les blocs de contrôle visibles sont les GCUs, l’EMER GEN GCU et le GAPCU. Piège classique : confondre les sources ou les réseaux électriques avec les unités de commande.",
-      "course_clarification": "Un bloc de contrôle pilote ou surveille une source. Ici, les GCUs et le GAPCU sont des unités de supervision, alors que l’AC SYSTEM et le DC SYSTEM sont des réseaux.",
+      "learning_objective": "Identifier les unités de contrôle visibles sur le schéma et les distinguer des éléments de conversion ou de distribution.",
+      "correction_summary": "Les blocs de contrôle à repérer sont les GCUs, l’EMER GEN GCU et le GAPCU. Le piège consiste à confondre ces unités de supervision avec les TR, les batteries ou le STATIC INVERTER.",
+      "course_clarification": "Un GCU commande et surveille une source de génération. Le GAPCU gère la partie liée à l’APU et aux puissances auxiliaires. Les TR et le STATIC INVERTER convertissent ou redistribuent l’énergie, ils ne jouent pas le même rôle que les blocs de contrôle.",
       "source_refs": []
     },
     {
       "question_id": "S4-5-Q2",
-      "prompt": "Quelle affirmation décrit correctement le lien entre le réseau AC et l’alimentation DC ?",
+      "prompt": "Quel ensemble participe à l’alimentation du DC SYSTEM via une conversion depuis le réseau AC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le DC SYSTEM alimente directement les IDGs moteur.",
+          "text": "Les IDGs alimentent directement le DC SYSTEM sans conversion.",
           "is_correct": false,
-          "explanation": "Non. Les IDGs appartiennent à la génération AC et alimentent le AC SYSTEM, pas l’inverse."
+          "explanation": "Les IDGs alimentent d’abord le AC SYSTEM. Une conversion est nécessaire avant d’obtenir une alimentation DC via les TR."
         },
         {
           "id": "B",
-          "text": "Le AC SYSTEM alimente plusieurs convertisseurs et sources qui participent à la génération DC.",
+          "text": "TR 1, TR 2 et TR ESS participent à l’alimentation du DC SYSTEM.",
           "is_correct": true,
-          "explanation": "Oui. Le schéma montre que le réseau AC alimente des éléments comme les TR, l’EMER GEN ou l’APU TR, qui interviennent ensuite dans la génération DC."
+          "explanation": "Les transformer rectifier convertissent l’énergie issue du réseau AC pour alimenter le DC SYSTEM. Les trois blocs cités sont bien indiqués comme faisant partie de cette chaîne d’alimentation."
         },
         {
           "id": "C",
-          "text": "Les sources AC et DC sont totalement indépendantes sur ce schéma.",
+          "text": "Le GEN de l’APU est un transformateur-redresseur.",
           "is_correct": false,
-          "explanation": "Non. Le point central du schéma est justement l’interconnexion entre réseau AC, convertisseurs et alimentation DC."
+          "explanation": "Le GEN de l’APU est un générateur AC, pas un TR. Il fournit de l’énergie au réseau AC, qui peut ensuite être convertie vers le DC SYSTEM."
         },
         {
           "id": "D",
-          "text": "Les TR sont des sources mécaniques entraînées par les moteurs.",
+          "text": "TR 1, TR 2 et TR ESS fournissent l’énergie au AC SYSTEM.",
           "is_correct": false,
-          "explanation": "Non. Un TR (Transformer Rectifier) convertit l’alternatif en continu ; ce n’est pas une source mécanique."
+          "explanation": "Leur rôle est lié à l’alimentation DC à partir du réseau AC, pas à l’alimentation primaire du AC SYSTEM. L’assertion inverse les fonctions."
         },
         {
           "id": "E",
-          "text": "L’APU GEN alimente directement les batteries sans passer par aucun autre circuit.",
+          "text": "Les batteries ne sont pas reliées à la distribution DC.",
           "is_correct": false,
-          "explanation": "Non. Le schéma relie l’APU GEN au AC SYSTEM ; les batteries sont intégrées via les circuits et la logique de distribution, pas par une liaison directe simplifiée."
+          "explanation": "Les batteries sont intégrées à la logique de distribution DC via les BCLs et les circuits associés. Elles ne peuvent donc pas être exclues du schéma DC."
         }
       ],
-      "coverage_label": "Blocs de contrôle et interfaces avec le DC SYSTEM",
-      "learning_objective": "Comprendre comment les sources AC contribuent indirectement à l’alimentation du DC SYSTEM.",
-      "correction_summary": "Le réseau AC sert d’entrée à plusieurs convertisseurs qui alimentent le DC SYSTEM. Piège fréquent : inverser le sens des liaisons ou confondre conversion et production.",
-      "course_clarification": "Le passage de l’AC vers le DC se fait par des convertisseurs comme les TR. La logique du schéma associe donc production, conversion et distribution dans une même architecture.",
+      "coverage_label": "TR et alimentation du DC SYSTEM",
+      "learning_objective": "Associer les TR à leur fonction de conversion AC vers DC et repérer leur place dans l’architecture de génération DC.",
+      "correction_summary": "TR 1, TR 2 et TR ESS sont les éléments à identifier pour la conversion vers le DC SYSTEM. Le piège classique est de confondre les sources AC primaires avec les convertisseurs DC.",
+      "course_clarification": "Un TR, pour Transformer Rectifier, transforme du courant alternatif en courant continu. Il constitue une interface entre le réseau AC et la distribution DC. Cette conversion permet d’alimenter les charges DC à partir de sources AC.",
       "source_refs": []
     },
     {
       "question_id": "S4-5-Q3",
-      "prompt": "À propos des sources et convertisseurs reliés au DC SYSTEM, quelle proposition est exacte ?",
+      "prompt": "Comment sont reliées les BATTERY 1 et 2 à la distribution DC ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "TR 1, TR 2 et TR ESS participent à l’alimentation du DC SYSTEM.",
+          "text": "Les BATTERY 1 et 2 sont connectées à la distribution DC via les BCLs et les circuits associés.",
           "is_correct": true,
-          "explanation": "Oui. Ces transformer rectifier figurent parmi les éléments qui fournissent ou participent à l’alimentation du DC SYSTEM."
+          "explanation": "Le schéma place les batteries dans la chaîne DC au travers des BCLs, qui encadrent leur charge et leur liaison au réseau."
         },
         {
           "id": "B",
-          "text": "Le STATIC INVERTER transforme le DC en AC pour alimenter le DC SYSTEM.",
+          "text": "Les BATTERY 1 et 2 alimentent directement le AC SYSTEM sans interface.",
           "is_correct": false,
-          "explanation": "Non. Un inverter fait l’inverse d’un redresseur : il produit de l’AC à partir d’une source DC, ici pour un réseau AC essentiel en secours."
+          "explanation": "Les batteries sont associées à la logique DC, pas à une alimentation directe du AC SYSTEM. L’interface représentée est celle des BCLs et des circuits DC."
         },
         {
           "id": "C",
-          "text": "L’EMER GEN est absent de la logique d’alimentation DC.",
+          "text": "Les BATTERY 1 et 2 sont reliées uniquement aux IDGs.",
           "is_correct": false,
-          "explanation": "Non. L’EMER GEN est intégré au schéma de génération DC et relié au DC SYSTEM."
+          "explanation": "Les IDGs appartiennent à la génération AC. Les batteries apparaissent dans la partie DC du schéma, avec les BCLs."
         },
         {
           "id": "D",
-          "text": "L’APU TR est un organe de contrôle des moteurs.",
+          "text": "Les BATTERY 1 et 2 alimentent le DC SYSTEM sans aucun bloc intermédiaire.",
           "is_correct": false,
-          "explanation": "Non. L’APU TR est un convertisseur lié à l’APU ; ce n’est pas un organe de contrôle moteur."
+          "explanation": "Le schéma montre au contraire une liaison via les BCLs. Ces blocs sont utiles pour la gestion de la charge et l’intégration au réseau DC."
         },
         {
           "id": "E",
-          "text": "Les TR 1, 2 et ESS sont des batteries de secours.",
+          "text": "Les BATTERY 1 et 2 sont alimentées par le GAPCU comme source principale.",
           "is_correct": false,
-          "explanation": "Non. Les TR sont des Transformer Rectifier, donc des convertisseurs AC/DC, et non des batteries."
+          "explanation": "Le GAPCU est un bloc de contrôle, pas une source d’énergie. Il supervise certaines fonctions, mais n’alimente pas les batteries comme source principale."
         }
       ],
-      "coverage_label": "Blocs de contrôle et interfaces avec le DC SYSTEM",
-      "learning_objective": "Reconnaître le rôle des TR, du STATIC INVERTER et de l’EMER GEN dans la génération électrique.",
-      "correction_summary": "Les TR 1, 2 et ESS participent bien à l’alimentation du DC SYSTEM. Le piège principal est de confondre un redresseur, un inverseur et une batterie.",
-      "course_clarification": "Un TR convertit l’AC en DC. Un STATIC INVERTER assure l’opération inverse, en fournissant de l’AC à partir d’une source continue.",
-      "source_refs": []
-    },
-    {
-      "question_id": "S4-5-Q4",
-      "prompt": "Quelle affirmation est correcte au sujet des batteries et de leur intégration dans la génération DC ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Les BCL sont des transformateurs-redresseurs.",
-          "is_correct": false,
-          "explanation": "Non. Les BCL sont des Battery Charge Limiter : ils limitent et gèrent la charge des batteries, ils ne redressent pas l’AC."
-        },
-        {
-          "id": "B",
-          "text": "L’APU BATTERY est isolée de toute distribution électrique.",
-          "is_correct": false,
-          "explanation": "Non. L’APU BATTERY est intégrée à la logique d’alimentation DC et aux circuits associés."
-        },
-        {
-          "id": "C",
-          "text": "Les BATTERY 1 et 2 alimentent directement l’AC SYSTEM en régime normal.",
-          "is_correct": false,
-          "explanation": "Non. Les batteries appartiennent à la logique DC ; l’alimentation directe du AC SYSTEM par les batteries n’est pas l’architecture décrite ici."
-        },
-        {
-          "id": "D",
-          "text": "Les BCL servent uniquement à commander les IDGs.",
-          "is_correct": false,
-          "explanation": "Non. Les BCL concernent les batteries, pas les IDGs."
-        },
-        {
-          "id": "E",
-          "text": "BATTERY 1 et BATTERY 2 sont connectées à la distribution DC via les BCLs.",
-          "is_correct": true,
-          "explanation": "Oui. Le schéma place les batteries dans la logique DC avec les Battery Charge Limiter (BCL), qui encadrent leur liaison à la distribution."
-        }
-      ],
-      "coverage_label": "Blocs de contrôle et interfaces avec le DC SYSTEM",
-      "learning_objective": "Expliquer le rôle des batteries et des BCL dans la distribution DC.",
-      "correction_summary": "Les BATTERY 1, 2 et l’APU BATTERY s’insèrent dans la logique DC via les BCL et les circuits associés. Le piège est de confondre les BCL avec un convertisseur ou avec une commande des générateurs AC.",
-      "course_clarification": "Un BCL protège et gère la charge d’une batterie. Il n’assure pas la génération principale, mais son intégration correcte dans le réseau DC.",
+      "coverage_label": "Batteries et BCL",
+      "learning_objective": "Décrire la liaison des batteries à la distribution DC et reconnaître le rôle des BCLs.",
+      "correction_summary": "Les batteries 1 et 2 sont raccordées à la distribution DC via les BCLs. Le piège consiste à leur attribuer une alimentation directe du AC SYSTEM ou un rôle de source primaire indépendante.",
+      "course_clarification": "BCL signifie Battery Charge Limiter. Ce bloc limite et organise les échanges de charge des batteries avec le réseau DC. Il ne s’agit pas d’un convertisseur principal comme un TR.",
       "source_refs": []
     },
     {
       "question_id": "S4-5-Q5",
-      "prompt": "Quel enchaînement correspond le mieux à l’alimentation de l’APU STARTER ?",
+      "prompt": "Quel élément est alimenté par les batteries et peut fournir une partie du réseau AC Essential electrical system network lorsque aucune autre source AC n’est disponible ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L’APU STARTER est alimenté directement par l’IDG de l’engin.",
+          "text": "Le TR ESS est alimenté par les batteries et fournit directement le réseau AC Essential electrical system network.",
           "is_correct": false,
-          "explanation": "Non. L’IDG est lié à la génération AC des moteurs ; il n’alimente pas directement le starter de l’APU sur ce schéma."
+          "explanation": "TR ESS est un transformateur-redresseur, pas l’élément décrit comme alimenté par les batteries pour ce mode de secours AC. L’assertion mélange deux fonctions distinctes."
         },
         {
           "id": "B",
-          "text": "L’APU STARTER fonctionne sans aucune source électrique dédiée.",
+          "text": "Le GEN de l’APU est alimenté par les batteries pour le réseau AC Essential electrical system network.",
           "is_correct": false,
-          "explanation": "Non. Un starter a besoin d’une alimentation électrique ; ici, elle est fournie par l’APU TR et/ou l’APU BATTERY."
+          "explanation": "Le GEN de l’APU est une source AC, mais le lien décrit avec les batteries et le réseau essentiel concerne le STATIC INVERTER. Le schéma ne donne pas ce rôle au GEN de l’APU."
         },
         {
           "id": "C",
-          "text": "L’APU STARTER est alimenté via l’APU TR et l’APU BATTERY.",
+          "text": "Le STATIC INVERTER est alimenté par les batteries et peut alimenter une partie du réseau AC Essential electrical system network.",
           "is_correct": true,
-          "explanation": "Oui. Le schéma indique explicitement cette chaîne d’alimentation : APU TR / APU BATTERY vers le STARTER de l’APU."
+          "explanation": "La description associe directement le STATIC INVERTER aux batteries dans le scénario de secours. Il prend alors le relais pour une partie du réseau AC essentiel."
         },
         {
           "id": "D",
-          "text": "L’APU STARTER est relié uniquement au DC SYSTEM sans autre intermédiaire.",
+          "text": "Le STATIC INVERTER alimente le DC SYSTEM en fonctionnement normal.",
           "is_correct": false,
-          "explanation": "Non. La chaîne de puissance mentionnée passe par l’APU TR et l’APU BATTERY, ce qui est plus précis qu’une liaison directe au DC SYSTEM."
+          "explanation": "Le STATIC INVERTER est présenté comme solution de secours pour une partie du réseau AC, pas comme source normale du DC SYSTEM. L’assertion inverse sa fonction."
         },
         {
           "id": "E",
-          "text": "Le GAPCU est l’organe qui alimente mécaniquement l’APU STARTER.",
+          "text": "L’EMER GEN GCU alimente directement le réseau AC Essential electrical system network.",
           "is_correct": false,
-          "explanation": "Non. Le GAPCU est une unité de contrôle et de gestion ; il n’est pas une source mécanique d’entraînement."
+          "explanation": "L’EMER GEN GCU commande et surveille l’EMER GEN, mais n’est pas lui-même la source d’énergie. Il ne faut pas confondre l’unité de contrôle avec l’organe alimentant le réseau."
         }
       ],
-      "coverage_label": "Blocs de contrôle et interfaces avec le DC SYSTEM",
-      "learning_objective": "Lire correctement la chaîne d’alimentation de l’APU STARTER et distinguer source, conversion et contrôle.",
-      "correction_summary": "L’APU STARTER est alimenté via l’APU TR et l’APU BATTERY. Le piège consiste à attribuer son alimentation à une source AC générale ou à une unité de contrôle.",
-      "course_clarification": "La chaîne d’alimentation peut comporter une source, un convertisseur et un organe de stockage. Ici, l’APU BATTERY et l’APU TR jouent ce rôle de support énergétique pour le démarrage.",
+      "coverage_label": "Alimentation de secours et STATIC INVERTER",
+      "learning_objective": "Identifier le rôle du STATIC INVERTER dans l’alimentation de secours et le distinguer des convertisseurs et unités de contrôle.",
+      "correction_summary": "Le STATIC INVERTER, alimenté par les batteries, peut fournir une partie du réseau AC essentiel quand aucune autre source AC n’est disponible. Le piège est de lui attribuer un rôle de source principale ou de le confondre avec un TR ou un GCU.",
+      "course_clarification": "Un inverter convertit une alimentation continue en alimentation alternative. Ici, il sert de solution de secours pour maintenir une partie des fonctions AC essentielles. Il n’est utilisé que dans une configuration dégradée.",
       "source_refs": []
     }
   ],
   "subpart_id": "S4",
   "anchor_slide_id": "S4-5",
-  "question_count_target": 5,
+  "question_count_target": 4,
   "title": "QCM - Blocs de contrôle et interfaces avec le DC SYSTEM"
 }

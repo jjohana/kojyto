@@ -4,213 +4,213 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S7-1-Q1",
-      "prompt": "Concernant l’inverseur de poussée, quelle affirmation est correcte ?",
+      "question_id": "S7-Q1",
+      "prompt": "Quel est le but principal de l’inverseur de poussée ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il sert uniquement à augmenter la vitesse d’approche avant l’arrondi.",
+          "text": "Il sert principalement à augmenter la vitesse de l’avion pendant la phase de roulage après l’atterrissage.",
           "is_correct": false,
-          "explanation": "L’inverseur n’a pas pour rôle d’augmenter la vitesse ; il intervient après l’atterrissage pour freiner."
+          "explanation": "C’est faux : l’inverseur n’est pas destiné à accélérer, mais à freiner en réduisant l’énergie cinétique de l’avion."
         },
         {
           "id": "B",
-          "text": "Il remplace les freins de roues pendant toute la phase de roulage.",
+          "text": "Il remplace les trains d’atterrissage en assurant l’arrêt complet de l’avion sans autre système de freinage.",
           "is_correct": false,
-          "explanation": "Il complète le freinage au sol, mais ne se substitue pas aux freins de roues sur toute la phase de roulage."
+          "explanation": "C’est faux : l’inverseur aide au freinage, mais ne remplace pas les freins ni les autres dispositifs d’arrêt."
         },
         {
           "id": "C",
-          "text": "Il est utilisé pour augmenter la portance pendant la phase de descente.",
+          "text": "Il augmente la portance de l’aile au sol pour prolonger la phase de vol après le toucher.",
           "is_correct": false,
-          "explanation": "La portance dépend surtout de l’aile et de la vitesse, pas de l’inverseur de poussée."
+          "explanation": "C’est faux : au sol, l’objectif est le freinage, pas l’augmentation de la portance."
         },
         {
           "id": "D",
           "text": "Il crée une poussée négative pour produire une force de freinage et réduire la distance nécessaire à l’atterrissage.",
           "is_correct": true,
-          "explanation": "La fonction recherchée est bien d’inverser l’effet propulsif pour freiner l’avion après le toucher des roues. Cette action contribue à raccourcir la distance d’atterrissage."
+          "explanation": "C’est exactement l’objectif recherché : la poussée est orientée en sens opposé au mouvement pour aider au freinage à l’atterrissage."
         },
         {
           "id": "E",
-          "text": "Il agit en créant une poussée positive plus importante vers l’avant.",
+          "text": "Il sert uniquement à réduire le bruit de la tuyère pendant la croisière.",
           "is_correct": false,
-          "explanation": "Le principe est l’inverse : la poussée est orientée de manière à s’opposer au mouvement de l’avion."
+          "explanation": "C’est faux : la réduction du bruit relève d’un autre traitement ; l’inverseur de poussée est lié au freinage à l’atterrissage."
         }
       ],
-      "coverage_label": "But de l’inverseur de poussée",
-      "learning_objective": "Identifier la fonction principale de l’inverseur de poussée et son effet sur la distance d’atterrissage.",
-      "correction_summary": "La bonne réponse est celle qui relie l’inverseur à une poussée négative utilisée pour freiner. Le piège consiste à confondre freinage aérodynamique et augmentation de poussée.",
-      "course_clarification": "La poussée inverse produit une force opposée au déplacement. Elle aide à ralentir l’avion après l’atterrissage et participe à la réduction de la distance d’arrêt.",
+      "coverage_label": "L’inverseur de poussée",
+      "learning_objective": "Identifier la fonction aérodynamique de l’inverseur de poussée à l’atterrissage.",
+      "correction_summary": "La bonne réponse décrit une poussée orientée vers l’avant de l’avion pour freiner au sol. Le piège classique consiste à confondre cette fonction avec l’accélération, la portance ou le traitement acoustique.",
+      "course_clarification": "La poussée inverse agit comme une force de freinage supplémentaire après le toucher. Elle complète les freins de roue en réduisant la distance d’arrêt.",
       "source_refs": []
     },
     {
-      "question_id": "S7-1-Q2",
-      "prompt": "À propos du rôle de l’inverseur de poussée au sol, quelle affirmation est correcte ?",
+      "question_id": "S7-Q2",
+      "prompt": "Dans quelle situation l’inverseur de poussée est-il particulièrement utile ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Il devient inutile sur piste humide ou enneigée car l’adhérence y est meilleure.",
+          "text": "Il est utile uniquement sur piste sèche et parfaitement adhérente, car il devient inutile ailleurs.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : sur piste peu adhérente, l’inverseur aide justement au freinage."
+          "explanation": "C’est faux : son intérêt est justement renforcé lorsque l’adhérence est dégradée."
         },
         {
           "id": "B",
-          "text": "Il soulage les freins quand ils sont les moins efficaces, notamment à vitesse élevée et avec un poids apparent faible.",
+          "text": "Il aide au freinage lorsque l’état de la piste n’offre pas une adhérence optimale, par exemple sur piste mouillée, enneigée ou givrée.",
           "is_correct": true,
-          "explanation": "Au moment du toucher des roues, les freins sont moins efficaces qu’à basse vitesse ; l’inverseur prend alors une part du freinage."
+          "explanation": "C’est vrai : le document cite explicitement les pistes peu adhérentes, où l’inverseur complète efficacement le freinage."
         },
         {
           "id": "C",
-          "text": "Il augmente l’efficacité des freins uniquement quand l’avion roule très lentement.",
+          "text": "Il n’a aucun intérêt au moment où la vitesse de l’avion est élevée et le poids apparent faible.",
           "is_correct": false,
-          "explanation": "Son intérêt principal est au début du freinage, lorsque la vitesse est encore élevée et que les freins sont moins efficaces."
+          "explanation": "C’est faux : le support précise qu’il soulage les freins quand ils sont les moins efficaces, c’est-à-dire à forte vitesse et avec faible poids apparent."
         },
         {
           "id": "D",
-          "text": "Il ne sert qu’en vol, avant le contact avec la piste.",
+          "text": "Il sert à augmenter l’adhérence mécanique entre le pneu et la piste.",
           "is_correct": false,
-          "explanation": "L’inverseur est un dispositif de freinage au sol ; il n’a pas pour fonction principale d’agir en vol."
+          "explanation": "C’est faux : il agit par aérodynamique sur la poussée, pas en améliorant le frottement roue-piste."
         },
         {
           "id": "E",
-          "text": "Il supprime tout besoin de freinage mécanique sur la piste.",
+          "text": "Il doit être utilisé uniquement avant le toucher des roues et jamais pendant le roulage.",
           "is_correct": false,
-          "explanation": "Les freins mécaniques restent nécessaires ; l’inverseur ne fait que les soulager et compléter le freinage."
+          "explanation": "C’est faux : son rôle est lié au freinage après l’atterrissage, donc pendant la phase de décélération au sol."
         }
       ],
-      "coverage_label": "Rôle au sol et conditions d’utilisation",
-      "learning_objective": "Expliquer quand l’inverseur aide le freinage et pourquoi il est utile sur piste peu adhérente.",
-      "correction_summary": "La bonne affirmation décrit le soulagement des freins au moment où ils sont les moins efficaces. Le piège est de confondre aide au freinage et remplacement complet des freins.",
-      "course_clarification": "L’efficacité des freins dépend de la vitesse et de l’adhérence. L’inverseur est particulièrement utile quand la piste est mouillée, enneigée ou givrée.",
+      "coverage_label": "L’inverseur de poussée",
+      "learning_objective": "Reconnaître les conditions d’utilisation où l’inverseur de poussée apporte le plus d’aide au freinage.",
+      "correction_summary": "La bonne réponse associe l’inverseur aux pistes peu adhérentes et aux phases où les freins sont moins efficaces. Le piège consiste à penser qu’il ne serait utile que sur piste sèche ou qu’il agirait sur l’adhérence elle-même.",
+      "course_clarification": "L’inverseur ne modifie pas la piste ni les pneus : il ajoute une force de freinage aérodynamique. Son intérêt augmente quand le freinage classique est moins performant.",
       "source_refs": []
     },
     {
-      "question_id": "S7-1-Q3",
-      "prompt": "À propos de la prise en compte des inverseurs de poussée dans les calculs réglementaires, quelle affirmation est correcte ?",
+      "question_id": "S7-Q3",
+      "prompt": "Quelle affirmation est correcte à propos de l’utilisation réglementaire des inverseurs de poussée ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Ils sont utilisables dans toutes les configurations d’atterrissage, mais ne sont pas pris en compte dans les calculs de distance d’atterrissage et d’accélération/arrêt car ils ne sont pas homologués.",
+          "text": "Ils sont utilisables dans toutes les configurations d’atterrissage, mais ils ne sont pas pris en compte dans les calculs de distance d’atterrissage et d’accélération/arrêt car ils ne sont pas homologués.",
           "is_correct": true,
-          "explanation": "La remarque importante est double : l’usage est possible à l’atterrissage, mais les calculs réglementaires ne les intègrent pas."
+          "explanation": "C’est la formulation du support : leur utilisation est admise, mais ils sont exclus des calculs réglementaires parce qu’ils ne sont pas homologués."
         },
         {
           "id": "B",
-          "text": "Ils ne peuvent être utilisés qu’en cas d’atterrissage de nuit.",
+          "text": "Ils ne peuvent être utilisés qu’en cas d’atterrissage d’urgence sur piste enneigée.",
           "is_correct": false,
-          "explanation": "Aucune restriction de ce type n’est indiquée ; la limitation mentionnée concerne l’homologation et les calculs, pas l’heure d’atterrissage."
+          "explanation": "C’est faux : ils sont utilisables dans toutes les configurations d’atterrissage, pas seulement en cas d’urgence."
         },
         {
           "id": "C",
-          "text": "Ils sont systématiquement intégrés dans tous les calculs de distance car ils améliorent toujours l’arrêt.",
+          "text": "Ils sont intégrés dans tous les calculs de distance d’atterrissage car ils sont homologués comme freins principaux.",
           "is_correct": false,
-          "explanation": "Le document précise au contraire qu’ils ne sont pas pris en compte dans ces calculs."
+          "explanation": "C’est faux : le support précise au contraire qu’ils ne sont pas pris en compte dans ces calculs car ils ne sont pas homologués."
         },
         {
           "id": "D",
-          "text": "Ils sont interdits dès qu’une piste est sèche.",
+          "text": "Ils remplacent les freins de roue dans les calculs de certification d’arrêt.",
           "is_correct": false,
-          "explanation": "Aucune interdiction liée à l’état sec de la piste n’est indiquée ; leur usage dépend de la configuration et des procédures."
+          "explanation": "C’est faux : ils ne remplacent pas les freins de roue et ne sont pas comptés dans les distances réglementaires."
         },
         {
           "id": "E",
-          "text": "Ils ne peuvent être installés que sur des avions légers.",
+          "text": "Ils sont interdits dès qu’un avion touche la piste avec une vitesse élevée.",
           "is_correct": false,
-          "explanation": "Le texte traite de leur utilisation sur des réacteurs d’aéronef, sans restriction à l’aviation légère."
+          "explanation": "C’est faux : le document ne pose pas une telle interdiction ; il indique seulement leur exclusion des calculs d’arrêt."
         }
       ],
-      "coverage_label": "Prise en compte réglementaire",
-      "learning_objective": "Distinguer l’usage opérationnel de l’inverseur de poussée et sa non-prise en compte dans certains calculs.",
-      "correction_summary": "La bonne réponse rappelle qu’il peut être utilisé à l’atterrissage sans être intégré aux calculs de distance d’arrêt. Le piège est de croire qu’un dispositif utilisable en opération est forcément homologué pour le calcul.",
-      "course_clarification": "Un dispositif peut être disponible à l’utilisation sans être retenu dans un calcul réglementaire. Ici, la non-prise en compte vient de l’absence d’homologation mentionnée.",
+      "coverage_label": "L’inverseur de poussée",
+      "learning_objective": "Distinguer l’usage opérationnel de l’inverseur de poussée et son statut dans les calculs de distance.",
+      "correction_summary": "La bonne réponse combine deux idées : utilisation possible à l’atterrissage, mais absence des calculs réglementaires d’arrêt. Le piège est de confondre disponibilité opérationnelle et prise en compte homologuée.",
+      "course_clarification": "Un équipement peut être utilisable sans être retenu dans les distances réglementaires. Ici, l’exclusion vient du fait qu’il n’est pas homologué pour ces calculs.",
       "source_refs": []
     },
     {
-      "question_id": "S7-1-Q4",
-      "prompt": "Pour un GTR simple flux équipé d’un inverseur de poussée, quelle affirmation est correcte ?",
+      "question_id": "S7-Q4",
+      "prompt": "Pour un turboréacteur simple flux, quel principe décrit le mieux l’inverseur de poussée ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le flux est inversé uniquement par une augmentation de la pression cabine.",
+          "text": "Un simple changement de la forme de l’aile suffit à inverser la direction des gaz.",
           "is_correct": false,
-          "explanation": "La pression cabine n’intervient pas dans le principe de l’inverseur de poussée ; ce sont des éléments mécaniques qui dévient le jet."
+          "explanation": "C’est faux : l’inversion concerne la tuyère et ses organes mobiles, pas la géométrie de l’aile."
         },
         {
           "id": "B",
-          "text": "Les gaz sont déviés vers l’arrière pour augmenter la poussée propulsive.",
+          "text": "Les gaz sont déviés vers l’arrière afin d’augmenter la poussée positive au roulage.",
           "is_correct": false,
-          "explanation": "Le but est exactement inverse : le jet est redirigé vers l’avant pour freiner."
+          "explanation": "C’est faux : l’inverseur cherche l’effet opposé, à savoir une force de freinage liée à une déviation vers l’avant."
         },
         {
           "id": "C",
-          "text": "Le dispositif supprime toute sortie de gaz au niveau de la tuyère.",
+          "text": "Le dispositif agit uniquement en fermant les trains d’atterrissage pour freiner l’avion.",
           "is_correct": false,
-          "explanation": "Le jet n’est pas supprimé ; il est orienté différemment pour produire l’effet de freinage."
+          "explanation": "C’est faux : le freinage par inverseur est aérodynamique et se fait au niveau du flux moteur, pas des trains."
         },
         {
           "id": "D",
-          "text": "Le principe repose sur un ralentissement de l’aile et non du flux moteur.",
+          "text": "Le flux moteur est supprimé sans aucune pièce mobile ni vérin.",
           "is_correct": false,
-          "explanation": "L’élément concerné est le flux du moteur, pas l’aile."
+          "explanation": "C’est faux : le document mentionne des demi-coquilles ou des volets actionnés par vérins, donc des organes mobiles."
         },
         {
           "id": "E",
-          "text": "Des demi-coquilles ou des volets manœuvrés par vérins dévient les gaz vers l’avant.",
+          "text": "Des demi-coquilles ou des volets manœuvrés par vérins hydrauliques ou pneumatiques dévient les gaz vers l’avant.",
           "is_correct": true,
-          "explanation": "Le principe décrit pour le simple flux repose bien sur des organes mobiles qui redirigent le jet vers l’avant afin de créer la poussée inverse."
+          "explanation": "C’est exact : le support décrit ce mécanisme pour les GTR simple flux, avec une déviation du jet vers l’avant."
         }
       ],
-      "coverage_label": "Principe sur GTR simple flux",
-      "learning_objective": "Reconnaître l’architecture mécanique d’un inverseur de poussée sur un turboréacteur simple flux.",
-      "correction_summary": "La bonne réponse décrit des volets ou demi-coquilles déviant les gaz vers l’avant. Le piège est de confondre cette déviation avec une simple réduction de puissance.",
-      "course_clarification": "Sur un simple flux, l’inversion est réalisée par des organes mobiles situés dans la rallonge. Leur rôle est de détourner le jet propulsif pour générer une force opposée au mouvement.",
+      "coverage_label": "Cas des GTR simple flux",
+      "learning_objective": "Identifier les organes et le sens de déviation des gaz dans un inverseur de poussée simple flux.",
+      "correction_summary": "La bonne réponse associe bien les demi-coquilles ou volets aux vérins et à une déviation vers l’avant. Le piège est de confondre cette action avec des dispositifs externes à la tuyère ou avec une simple suppression du flux.",
+      "course_clarification": "Sur un simple flux, l’inversion passe par des éléments mobiles placés dans la rallonge de tuyère. Leur action transforme la poussée vers l’arrière en poussée inverse.",
       "source_refs": []
     },
     {
-      "question_id": "S7-1-Q5",
-      "prompt": "À propos de la relation de poussée inverse, quelle affirmation est correcte ?",
+      "question_id": "S7-Q5",
+      "prompt": "Quelle expression donne correctement la poussée inverse ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le signe de \\(T_{REV}\\) est positif car l’inverseur ajoute de la propulsion.",
+          "text": "TREV = Qma\\,(V''5 - Vo)",
           "is_correct": false,
-          "explanation": "La poussée inverse est au contraire négative : elle sert à freiner et non à propulser."
+          "explanation": "C’est faux : le signe est incorrect et la différence des vitesses ne correspond pas à la formule donnée."
         },
         {
           "id": "B",
-          "text": "La poussée inverse ne dépend pas de la vitesse avion \\(V_0\\).",
+          "text": "TREV = +Qma\\,(V''5 + Vo)",
           "is_correct": false,
-          "explanation": "La formule montre explicitement la présence de \\(V_0\\) ; la vitesse avion intervient donc dans la valeur de la poussée inverse."
+          "explanation": "C’est faux : la poussée inverse est définie avec un signe négatif, puisque la force produite s’oppose au sens de déplacement."
         },
         {
           "id": "C",
-          "text": "La relation s’écrit : \\(T_{REV} = Q_{ma}(-V''_5 - V_0) = -Q_{ma}(V''_5 + V_0)\\).",
+          "text": "\u0000TREV = -Qma\\,(V''5 + Vo)",
           "is_correct": true,
-          "explanation": "C’est l’écriture donnée : la poussée inverse est négative car elle s’oppose au mouvement et s’exprime avec la somme des vitesses."
+          "explanation": "C’est la relation écrite dans le support : la poussée inverse est négative et dépend de la somme des vitesses concernées, multipliée par le débit massique d’air."
         },
         {
           "id": "D",
-          "text": "Si \\(Q_{ma}\\) augmente, la valeur absolue de \\(T_{REV}\\) diminue systématiquement.",
+          "text": "TREV = -Qma\\,(V''5 - Vo)",
           "is_correct": false,
-          "explanation": "À vitesse de jet donnée, augmenter \\(Q_{ma}\\) augmente l’intensité de la poussée inverse, donc sa valeur absolue."
+          "explanation": "C’est faux : le support présente une somme des vitesses, pas une différence, dans l’expression de la poussée inverse."
         },
         {
           "id": "E",
-          "text": "Le terme \\(-V''_5 - V_0\\) signifie que la poussée inverse est toujours orientée vers l’arrière du réacteur.",
+          "text": "TREV = Qma\\,(Vo + V''5)",
           "is_correct": false,
-          "explanation": "La formule traduit une force opposée au déplacement, donc orientée de façon à freiner l’avion ; il ne faut pas la lire comme une simple direction géométrique du réacteur."
+          "explanation": "C’est faux : il manque le signe négatif qui traduit la nature freinante de la poussée inverse."
         }
       ],
-      "coverage_label": "Formule de la poussée inverse",
-      "learning_objective": "Lire correctement la formule de poussée inverse et interpréter son signe et ses variables.",
-      "correction_summary": "La bonne réponse restitue exactement la formule et son signe négatif. Le piège majeur est d’oublier que la poussée inverse dépend à la fois du débit massique et de la vitesse avion.",
-      "course_clarification": "Dans cette écriture, \\(Q_{ma}\\) est lié au débit massique, \\(V''_5\\) à la vitesse du jet inversé et \\(V_0\\) à la vitesse de l’avion. La somme des vitesses explique l’effet freinant.",
+      "coverage_label": "Poussée inverse",
+      "learning_objective": "Lire et appliquer la convention de signe de la formule de poussée inverse.",
+      "correction_summary": "La bonne formule comporte un signe moins devant le produit. Le piège le plus fréquent est d’oublier ce signe ou d’écrire une différence au lieu d’une somme des vitesses.",
+      "course_clarification": "La poussée inverse est une force orientée en sens opposé à la propulsion normale. Le signe négatif indique précisément cette action de freinage.",
       "source_refs": []
     }
   ],

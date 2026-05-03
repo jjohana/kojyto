@@ -1,6 +1,6 @@
 {
   "site_build_version": 10,
-  "cache_token": "10-88874902e318",
+  "cache_token": "10-719ed3871de9",
   "viewer_mode": "user",
   "page_count": 39,
   "slide_count": 20,
@@ -20,7 +20,7 @@
       "kind": "quiz",
       "badge": "QCM s1_s2",
       "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »",
-      "subtitle": "3 questions - correction immédiate",
+      "subtitle": "2 questions - correction immédiate",
       "href": "slide-s1-s2.html",
       "json_href": "slide-s1-s2.json"
     },
@@ -38,7 +38,7 @@
       "kind": "quiz",
       "badge": "QCM s3",
       "title": "QCM - Découverte des métiers de l’aéronautique",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "4 questions - correction immédiate",
       "href": "slide-s3.html",
       "json_href": "slide-s3.json"
     },
@@ -326,7 +326,7 @@
       "kind": "quiz",
       "badge": "QCM s21",
       "title": "QCM - Interaction entre santé, sécurité et qualité",
-      "subtitle": "4 questions - correction immédiate",
+      "subtitle": "3 questions - correction immédiate",
       "href": "slide-s21.html",
       "json_href": "slide-s21.json"
     },

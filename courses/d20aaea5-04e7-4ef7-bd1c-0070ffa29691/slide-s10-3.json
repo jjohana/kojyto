@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S10-3-Q1",
-      "prompt": "À propos du verrouillage du train en position haute, quelle affirmation est correcte ?",
+      "prompt": "À propos de la cinématique de descente du train, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le train est verrouillé en position haute par une griffe mécanique identique à celle du verrouillage bas.",
+          "text": "Le train verrouillé haut l’est par une griffe mécanique placée en position basse.",
           "is_correct": false,
-          "explanation": "La griffe sert au verrouillage mécanique train bas ; elle ne caractérise pas le verrouillage haut."
+          "explanation": "La griffe sert au verrouillage mécanique du train en position basse, pas au verrouillage haut. Ici, on confond donc les organes et les positions."
         },
         {
           "id": "B",
-          "text": "Le verrouillage haut se fait uniquement par la pression des pneus sur le sol.",
+          "text": "La descente commence par le déverrouillage du train avant l’ouverture des trappes.",
           "is_correct": false,
-          "explanation": "Le verrouillage haut est un mécanisme de retenue du train rentré, sans lien avec les pneus au sol."
+          "explanation": "La séquence correcte commence par l’ouverture et la descente des trappes, puis vient le déverrouillage du crochet. Inverser ces deux étapes ne correspond pas à la cinématique décrite."
         },
         {
           "id": "C",
-          "text": "Le boîtier d’accrochage intervient seulement après la sortie complète du train pour bloquer la position basse.",
+          "text": "Le verrouillage mécanique bas est assuré par le boîtier d’accrochage.",
           "is_correct": false,
-          "explanation": "Le boîtier d’accrochage est associé à la position haute, pas au verrouillage bas."
+          "explanation": "Le boîtier d’accrochage concerne la position haute. En position basse, le verrouillage mécanique est assuré par la contrefiche et la griffe."
         },
         {
           "id": "D",
-          "text": "Le train est verrouillé en position haute par un boîtier d’accrochage, avec le galet engagé dans le crochet.",
+          "text": "Le train verrouillé haut l’est par un boîtier d’accrochage, avec le galet engagé dans le crochet.",
           "is_correct": true,
-          "explanation": "C’est exact : la position haute est confirmée par le boîtier d’accrochage, qui maintient le galet dans le crochet."
+          "explanation": "Le maintien en position haute est assuré par le boîtier d’accrochage : le galet reste pris dans le crochet. C’est l’organe de verrouillage indiqué pour l’état train haut."
         },
         {
           "id": "E",
-          "text": "Le verrouillage haut est assuré par le déverrouillage hydraulique de la contrefiche.",
+          "text": "Les trappes se verrouillent avant la descente du train.",
           "is_correct": false,
-          "explanation": "Le déverrouillage hydraulique concerne l’ouverture du verrou, pas le maintien du train en position haute."
+          "explanation": "Les trappes doivent d’abord s’ouvrir pour permettre la sortie du train. Leur verrouillage intervient après la manœuvre de sortie et le verrouillage final en position basse."
         }
       ],
-      "coverage_label": "Verrouillage du train en position haute",
-      "learning_objective": "Identifier l’organe qui maintient le train rentré et comprendre son rôle dans la cinématique.",
-      "correction_summary": "Le raisonnement attendu consiste à relier chaque état du train à son organe de maintien : boîtier d’accrochage pour le haut, griffe et contrefiche pour le bas. L’erreur fréquente consiste à inverser verrouillage haut et verrouillage bas.",
-      "course_clarification": "Le train rentré est maintenu par un boîtier d’accrochage. Le verrouillage bas correspond à un autre mécanisme, lié à la contrefiche et à la griffe.",
+      "coverage_label": "Cinématique de descente des trains d’atterrissage",
+      "learning_objective": "Identifier l’ordre des phases de sortie du train et distinguer les organes de verrouillage haut et bas.",
+      "correction_summary": "La bonne affirmation décrit le maintien en position haute par le boîtier d’accrochage. Le piège principal consiste à inverser les organes ou l’ordre des étapes : trappes, déverrouillage, descente, puis verrouillage bas.",
+      "course_clarification": "La position haute est maintenue par un boîtier d’accrochage. La sortie suit une séquence précise : ouverture des trappes, déverrouillage du crochet, descente du train, puis verrouillage mécanique bas par la contrefiche.",
       "source_refs": []
     },
     {
       "question_id": "S10-3-Q2",
-      "prompt": "Concernant la commande normale et la commande de secours des trains, quelle affirmation est correcte ?",
+      "prompt": "Concernant la commande normale des trains d’atterrissage, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La commande de secours permet indifféremment la rentrée et la sortie du train.",
+          "text": "Le levier de commande comporte trois positions distinctes.",
           "is_correct": false,
-          "explanation": "Le secours ne fonctionne que dans le sens sortie ; il ne sert pas à rentrer les trains."
+          "explanation": "Le document décrit un levier à deux positions seulement. Ajouter une troisième position est contraire au fonctionnement indiqué."
         },
         {
           "id": "B",
-          "text": "Le levier de commande normale comporte deux positions et agit sur le sélecteur de train, avec un cran pour chaque position.",
+          "text": "En manœuvre normale, le levier de commande comporte deux positions et agit sur le sélecteur de train ; un cran correspond à chaque position.",
           "is_correct": true,
-          "explanation": "C’est la description attendue : la commande normale est un levier à deux positions, chacune maintenue par un cran."
+          "explanation": "La commande normale est bien un levier à deux positions situé sur la planche de bord. Chaque position correspond à un cran net et le levier agit sur le sélecteur de train."
         },
         {
           "id": "C",
-          "text": "Le levier de commande normale est à trois positions afin de gérer haut, neutre et bas.",
+          "text": "Le levier de commande est situé sur la console centrale et non sur la planche de bord.",
           "is_correct": false,
-          "explanation": "La commande normale décrite comporte deux positions seulement, pas trois."
+          "explanation": "L’emplacement donné est la planche de bord. La console centrale n’est pas la localisation retenue ici."
         },
         {
           "id": "D",
-          "text": "La commande de secours dépend du même circuit que la commande normale et n’est donc pas indépendante.",
+          "text": "La commande normale agit directement sur le vérin de manœuvre sans passer par un sélecteur.",
           "is_correct": false,
-          "explanation": "Le secours est justement prévu comme système indépendant pour pallier une défaillance de la manœuvre normale."
+          "explanation": "Le levier agit sur le sélecteur de train, pas directement sur le vérin. Le sélecteur fait partie de la chaîne de commande."
         },
         {
           "id": "E",
-          "text": "Le secours agit exclusivement par déverrouillage manuel du levier, sans possibilité hydraulique.",
+          "text": "Un même cran peut laisser le levier entre deux positions sans verrouillage franc.",
           "is_correct": false,
-          "explanation": "Selon les configurations, un circuit hydraulique de secours peut aussi assurer la sortie des trains."
+          "explanation": "Chaque position correspond à un cran, donc à une position nettement définie. L’idée d’une position intermédiaire libre contredit la description."
         }
       ],
-      "coverage_label": "Commande normale et commande de secours",
-      "learning_objective": "Distinguer la commande normale de la commande de secours et repérer le sens d’action du secours.",
-      "correction_summary": "Il faut distinguer la commande normale, pilotée par un levier à deux positions, du secours, qui reste limité à la sortie des trains. La confusion fréquente consiste à croire que le secours peut aussi rentrer le train ou qu’il reproduit exactement la commande normale.",
-      "course_clarification": "La commande normale pilote le sélecteur de train par deux positions. La commande de secours est indépendante et ne sert qu’à sortir les trains.",
+      "coverage_label": "Commande normale des trains d’atterrissage",
+      "learning_objective": "Reconnaître la structure de la commande normale et son lien avec le sélecteur de train.",
+      "correction_summary": "La bonne réponse retient un levier à deux positions, avec un cran par position, agissant sur le sélecteur. Le piège est de confondre ce levier avec une commande directe du vérin ou avec un dispositif à plusieurs positions.",
+      "course_clarification": "La commande normale se fait par un levier à deux positions sur la planche de bord. Il commande le sélecteur de train, ce qui permet de passer clairement de la position rentrée à la position sortie.",
       "source_refs": []
     },
     {
       "question_id": "S10-3-Q3",
-      "prompt": "À propos de la sécurité au sol des trains, quelle affirmation est correcte ?",
+      "prompt": "À propos de la commande de secours des trains, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le levier est verrouillé mécaniquement pour empêcher la rentrée quand un amortisseur est comprimé.",
+          "text": "Le secours permet la sortie des trains et ne fonctionne que dans le sens sortie.",
           "is_correct": true,
-          "explanation": "C’est exact : la sécurité au sol interdit le passage sur rentrée tant qu’un amortisseur est comprimé."
+          "explanation": "La commande de secours est indépendante et sert à obtenir la sortie du train en cas de défaillance du circuit normal. Elle est limitée au sens sortie, et ne sert pas à rentrer le train."
         },
         {
           "id": "B",
-          "text": "Le déverrouillage au sol est obtenu uniquement par la pression hydraulique de descente.",
+          "text": "Le secours permet la rentrée des trains en cas de panne du circuit normal.",
           "is_correct": false,
-          "explanation": "Le texte mentionne un déverrouillage électrique possible par solénoïde, pas une simple pression hydraulique."
+          "explanation": "Le secours ne fonctionne que dans le sens sortie. La rentrée n’est pas assurée par ce dispositif."
         },
         {
           "id": "C",
-          "text": "Les broches de sécurité sont placées uniquement sur les roues et jamais sur les dispositifs de verrouillage.",
+          "text": "Le secours agit seulement sur le verrouillage des trappes et pas sur les trains.",
           "is_correct": false,
-          "explanation": "Les broches sont placées sur les dispositifs de verrouillage bas, et parfois aussi sur les trappes."
+          "explanation": "Le dispositif de secours est destiné à la sortie des trains. Réduire son rôle aux seules trappes ne correspond pas à sa fonction."
         },
         {
           "id": "D",
-          "text": "Le verrouillage au sol autorise la rentrée dès qu’un amortisseur est comprimé.",
+          "text": "Le secours est nécessairement identique sur tous les avions.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : un amortisseur comprimé bloque la rentrée pour éviter une manœuvre au sol dangereuse."
+          "explanation": "Le texte précise qu’il peut être hydraulique ou comporter un déverrouillage manuel selon les avions. Il n’existe donc pas une solution unique imposée partout."
         },
         {
           "id": "E",
-          "text": "Le dispositif de sécurité au sol agit seulement en vol et n’a aucun rôle au roulage.",
+          "text": "Le secours remplace toujours le levier de commande normal par une commande électrique.",
           "is_correct": false,
-          "explanation": "Ce verrouillage est précisément destiné à protéger les opérations au sol, pas les phases de vol."
+          "explanation": "La commande de secours peut être hydraulique ou manuelle selon l’installation. Elle ne se réduit pas à un remplacement systématique par une commande électrique."
         }
       ],
-      "coverage_label": "Sécurité au sol du train",
-      "learning_objective": "Reconnaître la fonction du verrouillage au sol et son lien avec les amortisseurs et les broches de sécurité.",
-      "correction_summary": "La bonne lecture consiste à associer l’état comprimé d’un amortisseur à une interdiction de rentrée. L’erreur classique est de confondre sécurité au sol et manœuvre en vol, ou de croire que les broches agissent sur les roues elles-mêmes.",
-      "course_clarification": "Au sol, la rentrée est interdite si un amortisseur est comprimé. Des broches peuvent bloquer mécaniquement les dispositifs de verrouillage bas pendant le tractage ou l’immobilisation.",
+      "coverage_label": "Commande sortie train secours",
+      "learning_objective": "Distinguer la fonction et les limites de la commande de secours du train.",
+      "correction_summary": "La bonne affirmation rappelle que le secours sert à sortir les trains et uniquement dans ce sens. Le piège principal est de lui attribuer une fonction de rentrée ou de le confondre avec la commande normale.",
+      "course_clarification": "La commande de secours est indépendante de la commande normale. Elle permet de sortir le train en cas de défaillance, mais ne prévoit pas la rentrée par ce moyen.",
       "source_refs": []
     },
     {
       "question_id": "S10-3-Q4",
-      "prompt": "Dans la cinématique de descente du train, quelle affirmation est correcte ?",
+      "prompt": "Pour la sécurité des trains au sol, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La descente du train commence avant l’ouverture des trappes.",
+          "text": "Au sol, le levier est verrouillé mécaniquement pour interdire la sortie lorsqu’un amortisseur est détendu.",
           "is_correct": false,
-          "explanation": "Les trappes doivent s’ouvrir d’abord pour libérer le passage du train."
+          "explanation": "La condition citée n’est pas la bonne : le verrouillage vise l’interdiction de la rentrée quand un amortisseur est comprimé. La détente de l’amortisseur n’est pas le critère décrit."
         },
         {
           "id": "B",
-          "text": "Le verrouillage bas est assuré d’abord par le boîtier d’accrochage, puis par la griffe.",
+          "text": "Le déverrouillage au sol est uniquement hydraulique et jamais électrique.",
           "is_correct": false,
-          "explanation": "Le boîtier d’accrochage concerne la position haute ; le verrouillage bas relève de la contrefiche et de la griffe."
+          "explanation": "Le document mentionne au contraire un déverrouillage électrique possible par solénoïde. Dire qu’il est uniquement hydraulique est donc faux."
         },
         {
           "id": "C",
-          "text": "Le crochet reste verrouillé pendant toute la descente pour guider le train.",
+          "text": "La sécurité au sol s’active seulement en vol.",
           "is_correct": false,
-          "explanation": "Le crochet doit être déverrouillé avant la descente effective du train."
+          "explanation": "Elle concerne précisément la situation au sol, lorsque l’avion est posé. L’énoncé inverse donc totalement le contexte d’utilisation."
         },
         {
           "id": "D",
-          "text": "La sortie des trappes intervient après le verrouillage mécanique bas.",
+          "text": "Le verrouillage au sol empêche aussi systématiquement la sortie des volets.",
           "is_correct": false,
-          "explanation": "Le verrouillage bas n’intervient qu’après la descente du train ; les trappes sont ouvertes avant cette phase."
+          "explanation": "Le dispositif décrit concerne la commande du train d’atterrissage, pas les volets. Ajouter les volets introduit un autre système sans rapport ici."
         },
         {
           "id": "E",
-          "text": "Les trappes s’ouvrent, puis le crochet est déverrouillé avant la descente du train.",
+          "text": "Au sol, le levier est verrouillé mécaniquement pour interdire la rentrée lorsqu’un amortisseur est comprimé.",
           "is_correct": true,
-          "explanation": "C’est bien l’ordre indiqué : ouverture et descente des trappes, puis déverrouillage du crochet, puis descente du train."
+          "explanation": "La sécurité au sol bloque la rentrée si un amortisseur est comprimé. Cette logique évite de rentrer le train alors que l’avion est encore posé sur un train chargé."
         }
       ],
-      "coverage_label": "Cinématique de descente du train",
-      "learning_objective": "Reconstituer l’ordre des actions lors de la sortie du train et distinguer les rôles des trappes, du crochet et du verrouillage bas.",
-      "correction_summary": "Le raisonnement attendu repose sur l’ordre des événements : ouverture des trappes, déverrouillage, descente, puis verrouillage bas. La confusion fréquente est d’inverser la phase de libération et la phase de verrouillage final.",
-      "course_clarification": "La descente du train suit une séquence précise : trappes ouvertes, crochet libéré, train descendu, puis verrouillage bas par la contrefiche.",
+      "coverage_label": "Sécurité des trains au sol",
+      "learning_objective": "Expliquer la condition de verrouillage au sol et le rôle éventuel du solénoïde.",
+      "correction_summary": "La bonne réponse associe le verrouillage au sol à la compression d’un amortisseur, pour empêcher la rentrée. Le piège est de confondre la condition de sécurité avec une interdiction de sortie ou avec un autre système de bord.",
+      "course_clarification": "Quand un amortisseur est comprimé, la rentrée est mécaniquement interdite. Selon l’installation, un solénoïde peut permettre un déverrouillage électrique.",
       "source_refs": []
     },
     {
       "question_id": "S10-3-Q5",
-      "prompt": "À propos des mécanismes de manœuvre du train, quelle affirmation est correcte ?",
+      "prompt": "Lors de l’immobilisation au sol ou du tractage, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le vérin de manœuvre sert uniquement au verrouillage haut du train.",
+          "text": "Les broches de sécurité se placent sur le verrouillage haut pour autoriser la rentrée.",
           "is_correct": false,
-          "explanation": "Le vérin de manœuvre sert à la remontée et à la descente du train, pas seulement au verrouillage haut."
+          "explanation": "Ces broches servent au contraire à immobiliser le train en position basse. Elles ne sont pas destinées à autoriser la rentrée."
         },
         {
           "id": "B",
-          "text": "La contrefiche ne sert qu’à l’ouverture des trappes et n’intervient pas dans le verrouillage bas.",
+          "text": "Les broches de sécurité ne sont utilisées qu’en vol pour améliorer l’aérodynamique.",
           "is_correct": false,
-          "explanation": "La contrefiche participe au verrouillage mécanique en position basse."
+          "explanation": "Elles sont utilisées au sol ou lors du tractage. L’idée d’un usage en vol est incompatible avec leur fonction de sécurité mécanique."
         },
         {
           "id": "C",
-          "text": "Le verrouillage mécanique train bas peut être assuré par une contrefiche articulée ou télescopique, avec griffe et déverrouillage hydraulique.",
+          "text": "Des broches de sécurité peuvent être placées sur les dispositifs de verrouillage bas pour bloquer mécaniquement les trains.",
           "is_correct": true,
-          "explanation": "C’est exact : le document associe le verrouillage bas à la contrefiche, à la griffe et au déverrouillage hydraulique."
+          "explanation": "Le document précise que, au sol ou lors du tractage, les broches de sécurité se placent sur les dispositifs de verrouillage bas. Leur rôle est bien de bloquer mécaniquement les trains dans cette position."
         },
         {
           "id": "D",
-          "text": "Le déverrouillage hydraulique concerne le maintien du train rentré en position haute.",
+          "text": "Les broches de sécurité remplacent définitivement le vérin de manœuvre.",
           "is_correct": false,
-          "explanation": "Le déverrouillage hydraulique est lié au verrouillage mécanique de la position basse, pas au maintien en position haute."
+          "explanation": "Le vérin de manœuvre reste l’organe de déplacement du train. Les broches sont seulement des dispositifs de blocage temporaire, pas un remplacement du vérin."
         },
         {
           "id": "E",
-          "text": "La griffe est utilisée pour confirmer la position haute du train dans le boîtier d’accrochage.",
+          "text": "Les broches de sécurité sont posées uniquement sur les roues et jamais sur les trains.",
           "is_correct": false,
-          "explanation": "La griffe intervient dans le verrouillage bas ; la position haute est confirmée par le boîtier d’accrochage."
+          "explanation": "La sécurité concerne les dispositifs de verrouillage du train, pas les roues seules. Les broches sont donc associées au train d’atterrissage lui-même."
         }
       ],
-      "coverage_label": "Mécanismes de manœuvre et verrouillage bas",
-      "learning_objective": "Associer le rôle du vérin, de la contrefiche et de la griffe au verrouillage mécanique train bas.",
-      "correction_summary": "La bonne réponse s’appuie sur la distinction entre les organes de manœuvre et les organes de verrouillage. L’erreur fréquente est de mélanger la fonction du vérin de manœuvre avec celle de la contrefiche ou d’inverser les positions hautes et basses.",
-      "course_clarification": "Le vérin de manœuvre assure la cinématique, tandis que la contrefiche et la griffe assurent le verrouillage en position basse. Le train rentré, lui, est maintenu par le boîtier d’accrochage.",
+      "coverage_label": "Broches de sécurité des trains",
+      "learning_objective": "Identifier le rôle des broches de sécurité et leur emplacement sur les dispositifs de verrouillage bas.",
+      "correction_summary": "La bonne réponse décrit un blocage mécanique des trains par broches sur le verrouillage bas, au sol ou au tractage. Le piège est de les confondre avec un organe de manœuvre ou de les placer sur le verrouillage haut.",
+      "course_clarification": "Au sol, les broches de sécurité empêchent tout mouvement intempestif du train. Elles sont posées sur les dispositifs de verrouillage bas, parfois aussi sur les trappes.",
       "source_refs": []
     }
   ],

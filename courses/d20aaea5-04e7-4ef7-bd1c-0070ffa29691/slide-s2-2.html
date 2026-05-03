@@ -1559,6 +1559,19 @@ html[data-embed="1"] .review-card {
 }
 </style>
   
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]],
+      },
+      svg: {
+        fontCache: "global",
+      },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  
 </head>
 <body class="viewer-user page-quiz">
   <div class="page-shell with-site-nav">
@@ -1593,7 +1606,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S1-1</strong>
           <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>3 questions - correction immédiate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1625,7 +1638,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S1-3</strong>
           <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immédiate</span>
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
@@ -1641,7 +1654,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>2 questions - correction immédiate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1657,7 +1670,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-2</strong>
           <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>3 questions - correction immédiate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1689,7 +1702,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S3-2</strong>
           <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>3 questions - correction immédiate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1769,7 +1782,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S5-1</strong>
           <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immédiate</span>
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
@@ -1801,7 +1814,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S5-3</strong>
           <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
           
-          <span>5 questions - correction immédiate</span>
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
@@ -1897,7 +1910,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S8-2</strong>
           <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immédiate</span>
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
@@ -2107,7 +2120,7 @@ html[data-embed="1"] .review-card {
             </p>
           </div>
           <div class="quiz-meta">
-            <span class="meta-pill">3 questions</span>
+            <span class="meta-pill">5 questions</span>
             
           </div>
         </section>
@@ -2123,7 +2136,7 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S2-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S2-2-Q1", "prompt": "À propos de la consommation horaire d’un turboréacteur, quelle proposition est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle s’exprime nécessairement en newtons par heure.", "is_correct": false, "explanation": "Le newton est une unité de force, pas de masse de carburant. Les unités usuelles de Ch sont kg/h ou lb/h."}, {"id": "B", "text": "Elle est égale à la poussée divisée par le débit de carburant.", "is_correct": false, "explanation": "Cette écriture correspond à une logique de consommation spécifique, pas à la consommation horaire. Ch est liée au débit carburant par Ch = Qmc × 3600."}, {"id": "C", "text": "Elle est lue au poste de pilotage grâce au débitmètre Fuel Flow.", "is_correct": false, "explanation": "Le Fuel Flow permet de connaître le débit carburant, donc d’en déduire la consommation horaire. La consommation horaire n’est pas un affichage de poussée."}, {"id": "D", "text": "Elle correspond à la masse de carburant consommée en 1 heure à un régime donné.", "is_correct": true, "explanation": "La consommation horaire Ch est bien définie comme une masse de carburant consommée pendant une heure, pour un régime donné. C’est un indicateur directement lié au débit carburant."}, {"id": "E", "text": "Elle ne dépend jamais du régime moteur.", "is_correct": false, "explanation": "La consommation horaire est donnée à un régime donné : elle varie donc avec le fonctionnement moteur. Dire qu’elle est indépendante du régime est contraire à la définition."}], "coverage_label": "Consommation horaire", "learning_objective": "Identifier la définition de Ch, son lien avec le débit carburant et son mode de lecture au cockpit.", "correction_summary": "La bonne proposition décrit Ch comme une masse de carburant consommée en 1 heure. Le piège consiste à la confondre avec une grandeur rapportée à la poussée ou avec une force.", "course_clarification": "Ch est une grandeur de consommation absolue. Elle se déduit du débit massique carburant : \nCh = Qmc × 3600.", "source_refs": []}, {"question_id": "S2-2-Q2", "prompt": "À propos de la relation entre consommation horaire et débit massique carburant, quelle proposition est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La relation donnée est Ch = Tu / 3600.", "is_correct": false, "explanation": "Tu est la poussée, pas un débit de carburant. La division par 3600 ne correspond pas à la définition de Ch."}, {"id": "B", "text": "La relation donnée est Ch = Qmc(kg/s) × 3600.", "is_correct": true, "explanation": "La formule du support convertit un débit massique exprimé en kg/s en consommation horaire en kg/h par multiplication par 3600."}, {"id": "C", "text": "Si Qmc est en kg/s, alors Ch s’obtient en kg/h en divisant par 3600.", "is_correct": false, "explanation": "C’est l’inverse : 1 heure contient 3600 secondes, donc on multiplie par 3600 pour passer de kg/s à kg/h."}, {"id": "D", "text": "Qmc désigne ici la poussée utile du moteur.", "is_correct": false, "explanation": "Qmc est le débit massique de carburant. La poussée utile est notée Tu dans les formules du support."}, {"id": "E", "text": "Ch est directement une puissance mécanique exprimée en watts.", "is_correct": false, "explanation": "Ch est une consommation de carburant, pas une puissance. La puissance s’exprime en watts, alors que Ch s’exprime en kg/h ou lb/h."}], "coverage_label": "Relation Ch et débit carburant", "learning_objective": "Appliquer la conversion entre kg/s et kg/h et lire correctement la formule de Ch.", "correction_summary": "La bonne relation est une conversion d’unités : on multiplie le débit massique en kg/s par 3600 pour obtenir Ch en kg/h. Le piège fréquent est d’inverser la conversion ou de confondre Qmc avec la poussée.", "course_clarification": "Qmc est un débit massique de carburant. La multiplication par 3600 traduit simplement le passage de la seconde à l’heure.", "source_refs": []}, {"question_id": "S2-2-Q4", "prompt": "À propos des valeurs repères de consommation spécifique citées, quelle proposition est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le CFM56-5A1 est donné à 0,84 lb/h.lbf pour 17 500 lbf.", "is_correct": false, "explanation": "Cette valeur correspond au PW JT4 sur le support, pas au CFM56-5A1. Le CFM56-5A1 est associé à 0,33 lb/h.lbf pour 25 000 lbf."}, {"id": "B", "text": "Le GE90-90 est donné à 0,33 lb/h.lbf pour 25 000 lbf.", "is_correct": false, "explanation": "Cette association est celle du CFM56-5A1, pas du GE90-90. Le GE90-90 est donné à 0,45 lb/h.lbf pour 90 000 lbf."}, {"id": "C", "text": "La consommation spécifique sert à comparer des moteurs de même architecture uniquement.", "is_correct": false, "explanation": "Le document dit qu’elle permet de comparer les turboréacteurs entre eux de manière générale. Elle n’est pas limitée aux moteurs d’une seule architecture."}, {"id": "D", "text": "Une valeur de Csp plus élevée signifie automatiquement une meilleure efficacité.", "is_correct": false, "explanation": "C’est l’inverse de l’interprétation habituelle : à poussée comparable, une consommation spécifique plus faible traduit en général une meilleure efficacité."}, {"id": "E", "text": "Le Safran M88 est donné à 1,8 kg/h.daN au décollage, avec ou sans PC.", "is_correct": true, "explanation": "Le document indique bien 1,8 kg/h.daN au décollage dans les deux cas cités : à sec pour 5 000 daN et avec PC pour 7 500 daN."}], "coverage_label": "Valeurs repères de Csp", "learning_objective": "Associer correctement les exemples de moteurs à leurs valeurs repères de Csp.", "correction_summary": "La bonne proposition reprend fidèlement la valeur du M88 indiquée au décollage. Le piège principal est d’échanger les couples moteur-valeur, très proches visuellement.", "course_clarification": "Les exemples servent de repères numériques. Ils ne se mélangent pas : chaque moteur est associé à sa propre valeur de Csp et à sa poussée indiquée.", "source_refs": []}], "subpart_id": "S2", "anchor_slide_id": "S2-2", "question_count_target": 3, "title": "QCM - Repères de consommation et surveillance moteur"}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S2-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S2-2-Q1", "prompt": "Quelle affirmation décrit correctement la consommation horaire \\(Ch\\) ?", "difficulty": "easy", "options": [{"id": "A", "text": "\\(Ch\\) est la masse de carburant consommée en 1 minute à régime donné.", "is_correct": false, "explanation": "La définition porte sur 1 heure, pas sur 1 minute. Changer l'unité de temps change la grandeur et fausse complètement la valeur."}, {"id": "B", "text": "\\(Ch\\) s'exprime en daN par heure.", "is_correct": false, "explanation": "Ch est une masse de carburant par unité de temps, donc une unité du type kg/h ou lb/h, pas une unité de poussée."}, {"id": "C", "text": "\\(Ch = Tu / Ch\\).", "is_correct": false, "explanation": "Cette écriture ne correspond à aucune relation donnée : elle mélange la poussée et la consommation horaire de manière circulaire."}, {"id": "D", "text": "\\(Ch = Qmc\\,(kg/s) \\times 3600\\).", "is_correct": true, "explanation": "La consommation horaire est bien la masse de carburant consommée en une heure ; on convertit donc un débit massique exprimé en kg/s en kg/h par multiplication par 3600."}, {"id": "E", "text": "\\(Ch\\) correspond directement à la poussée utile fournie par le moteur.", "is_correct": false, "explanation": "La poussée est une force, alors que Ch mesure une consommation de carburant. Les deux grandeurs sont liées mais ne sont pas identiques."}], "coverage_label": "Consommation horaire", "learning_objective": "Identifier la définition de \\(Ch\\) et sa relation avec le débit massique de carburant.", "correction_summary": "La bonne relation est \\(Ch = Qmc \\times 3600\\) avec \\(Qmc\\) en kg/s. Le piège est de confondre une grandeur horaire avec la poussée ou avec une autre unité de temps.", "course_clarification": "La consommation horaire mesure une masse de carburant par heure. Elle se lit au poste de pilotage grâce au débitmètre (Fuel Flow).", "source_refs": []}, {"question_id": "S2-2-Q2", "prompt": "Quelle affirmation définit correctement la consommation spécifique \\(Csp\\) ?", "difficulty": "easy", "options": [{"id": "A", "text": "\\(Csp\\) est la masse de carburant consommée en 1 heure, sans lien avec la poussée.", "is_correct": false, "explanation": "Cette formulation décrit une consommation horaire, pas une consommation spécifique. La notion de poussée est indispensable dans \\(Csp\\)."}, {"id": "B", "text": "\\(Csp\\) est la masse de carburant nécessaire pour fournir une poussée de 1 newton pendant une heure.", "is_correct": true, "explanation": "C'est exactement la définition donnée : la consommation spécifique rapporte la masse de carburant à la poussée produite pendant une heure."}, {"id": "C", "text": "\\(Csp\\) s'exprime en kg/s.", "is_correct": false, "explanation": "Les unités usuelles sont des masses par heure et par unité de poussée, par exemple kg/h.daN ou lb/h.lbf, pas kg/s."}, {"id": "D", "text": "\\(Csp\\) ne permet pas de comparer les turboréacteurs entre eux.", "is_correct": false, "explanation": "Au contraire, \\(Csp\\) sert précisément à comparer les turboréacteurs entre eux en normalisant la consommation par la poussée."}, {"id": "E", "text": "\\(Csp = Ch / Tu\\).", "is_correct": false, "explanation": "La relation donnée est l'inverse : \\(Csp = Tu / Ch\\). Inverser les termes change le sens physique de l'indicateur."}], "coverage_label": "Consommation spécifique", "learning_objective": "Définir \\(Csp\\), connaître ses unités usuelles et sa fonction de comparaison.", "correction_summary": "La bonne définition relie la masse de carburant à la poussée fournie pendant une heure. Le piège principal est de confondre \\(Csp\\) avec \\(Ch\\) ou d'inverser la relation entre les grandeurs.", "course_clarification": "La consommation spécifique normalise la consommation par la poussée. Elle permet de comparer des moteurs de tailles et de poussées différentes.", "source_refs": []}, {"question_id": "S2-2-Q3", "prompt": "Quelle valeur repère correspond au Safran M88 au décollage, à sec ?", "difficulty": "easy", "options": [{"id": "A", "text": "À sec, \\(Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(5000\\ \\mathrm{daN}\\).", "is_correct": true, "explanation": "C'est la valeur repère indiquée pour le M88 au décollage à sec : consommation spécifique de 1,8 kg/h.daN associée à 5000 daN de poussée."}, {"id": "B", "text": "À sec, \\(Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(7500\\ \\mathrm{daN}\\).", "is_correct": false, "explanation": "La poussée de 7500 daN correspond à la version avec postcombustion, pas à la configuration à sec."}, {"id": "C", "text": "À sec, \\(Csp = 0{,}33\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(25\\,000\\ \\mathrm{lbf}\\).", "is_correct": false, "explanation": "Cette valeur repère correspond au CFM56-5A1, pas au M88."}, {"id": "D", "text": "À sec, \\(Csp = 0{,}84\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(17\\,500\\ \\mathrm{lbf}\\).", "is_correct": false, "explanation": "Cette valeur repère correspond au PW JT4, pas au M88."}, {"id": "E", "text": "Au décollage, la poussée de référence est \\(90\\,000\\ \\mathrm{lbf}\\).", "is_correct": false, "explanation": "La valeur de 90 000 lbf est associée au GE90-90, pas au Safran M88."}], "coverage_label": "Valeurs repères de Csp", "learning_objective": "Reconnaître les ordres de grandeur associés au Safran M88 au décollage.", "correction_summary": "La valeur repère à retenir pour le M88 à sec est 1,8 kg/h.daN pour 5000 daN. Le piège classique est de mélanger cette valeur avec la configuration avec postcombustion ou avec un autre moteur.", "course_clarification": "Pour le M88, deux repères sont donnés : à sec pour 5000 daN, et avec postcombustion pour 7500 daN. La même valeur de Csp est annoncée dans les deux cas.", "source_refs": []}, {"question_id": "S2-2-Q4", "prompt": "Quels repères de surveillance moteur sont affichés au cockpit sur l'illustration ?", "difficulty": "easy", "options": [{"id": "A", "text": "N2, EPR et RPM.", "is_correct": false, "explanation": "Ces indications ne sont pas celles mises en avant sur l'illustration fournie."}, {"id": "B", "text": "TAS, altitude et cap compas.", "is_correct": false, "explanation": "Ces paramètres de navigation ne correspondent pas à l'affichage moteur présenté."}, {"id": "C", "text": "Pression hydraulique, quantité carburant et incidence.", "is_correct": false, "explanation": "L'image montre des repères moteurs, pas un tableau complet des systèmes hydrauliques ou aérodynamiques."}, {"id": "D", "text": "Aucun débit carburant n'est visible sur l'affichage.", "is_correct": false, "explanation": "Le repère FF est précisément l'indication du fuel flow, donc le débit carburant est bien affiché."}, {"id": "E", "text": "N1, EGT et FF.", "is_correct": true, "explanation": "Ces trois repères sont explicitement visibles sur l'affichage moteur : N1 pour un régime, EGT pour la température des gaz, et FF pour le débit carburant."}], "coverage_label": "Affichage moteur de référence", "learning_objective": "Identifier les indications moteur N1, EGT et FF sur un affichage cockpit.", "correction_summary": "Les trois repères à retenir sont N1, EGT et FF. Le piège est de confondre ces indications moteur avec des instruments de navigation ou d'autres systèmes de bord.", "course_clarification": "N1 renseigne le régime d'un ensemble tournant, EGT la température des gaz, et FF le débit carburant. Ensemble, ils servent à surveiller le fonctionnement moteur.", "source_refs": []}, {"question_id": "S2-2-Q5", "prompt": "Quelle affirmation est exacte à propos de l'intérêt de la consommation spécifique ?", "difficulty": "easy", "options": [{"id": "A", "text": "La consommation spécifique mesure uniquement la température EGT.", "is_correct": false, "explanation": "EGT est un indicateur de surveillance thermique, pas une définition de la consommation spécifique."}, {"id": "B", "text": "La consommation spécifique est identique à la consommation horaire \\(Ch\\).", "is_correct": false, "explanation": "\\(Ch\\) mesure une masse de carburant par heure, alors que \\(Csp\\) rapporte cette consommation à la poussée fournie."}, {"id": "C", "text": "La consommation spécifique sert à comparer les turboréacteurs entre eux.", "is_correct": true, "explanation": "C'est précisément le rôle de \\(Csp\\) : mettre en relation la consommation et la poussée pour comparer des moteurs différents sur une base commune."}, {"id": "D", "text": "La consommation spécifique ne dépend pas de la poussée du moteur.", "is_correct": false, "explanation": "La définition de \\(Csp\\) inclut justement la poussée ; elle normalise la consommation par cette grandeur."}, {"id": "E", "text": "La consommation spécifique s'exprime en watts.", "is_correct": false, "explanation": "Le watt est une unité de puissance, alors que \\(Csp\\) s'exprime en kg/h.daN ou en lb/h.lbf."}], "coverage_label": "Comparaison des turboréacteurs", "learning_objective": "Expliquer pourquoi \\(Csp\\) est un indicateur pertinent pour comparer des moteurs.", "correction_summary": "La consommation spécifique est un indicateur comparatif : elle relie carburant consommé et poussée produite. Le piège est de la confondre avec un indicateur de température, de puissance ou avec la consommation horaire brute.", "course_clarification": "En ramenant la consommation à la poussée, \\(Csp\\) permet de comparer des moteurs de architectures et de tailles différentes. Plus \\(Csp\\) est faible, plus le moteur est économe à poussée donnée.", "source_refs": []}], "subpart_id": "S2", "anchor_slide_id": "S2-2", "question_count_target": 5, "title": "QCM - Repères de consommation et surveillance moteur"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2132,7 +2145,7 @@ html[data-embed="1"] .review-card {
       const isMaster = viewerMode === "master";
       const nextHref = app.dataset.nextHref || "";
       const homeHref = app.dataset.homeHref || "index.html";
-      const quizStateToken = "a95ccf10ab2b";
+      const quizStateToken = "7a0885bac132";
       const storageScope = window.location.pathname.replace(/\/+/g, "/");
       const storageKey = "static-quiz::" + viewerMode + "::" + storageScope + "::" + quiz.quiz_id + "::" + quizStateToken;
       const finalQuizDrawCount = 25;

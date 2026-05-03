@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S8-Q1",
-      "prompt": "Quelle affirmation décrit correctement l’énergie utilisée pour manœuvrer un inverseur de poussée ?",
+      "prompt": "Choisir l’unique affirmation correcte sur l’énergie utilisée pour manœuvrer un inverseur de poussée.",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L’énergie de manœuvre est forcément uniquement hydraulique.",
+          "text": "La manœuvre de l’inverseur est forcément uniquement hydraulique.",
           "is_correct": false,
-          "explanation": "L’hydraulique n’est qu’une possibilité parmi d’autres. Le système peut aussi utiliser du pneumatique ou de l’électrique."
+          "explanation": "Faux : l’énergie n’est pas limitée à l’hydraulique ; elle peut aussi être pneumatique ou électrique."
         },
         {
           "id": "B",
-          "text": "La commande reverse n’est pas liée à la commande de poussée.",
+          "text": "La manœuvre de l’inverseur se fait toujours sans énergie auxiliaire, uniquement par la poussée du réacteur.",
           "is_correct": false,
-          "explanation": "La commande reverse est couplée à la commande de poussée, ce qui impose des logiques de sécurité et de séquence entre les deux."
+          "explanation": "Faux : un dispositif de commande motorisé est nécessaire pour déplacer l’inverseur."
         },
         {
           "id": "C",
-          "text": "Le passage en poussée inverse est autorisé quelle que soit la position de la manette des gaz.",
+          "text": "La manœuvre de l’inverseur n’utilise jamais d’énergie pneumatique.",
           "is_correct": false,
-          "explanation": "Le passage en poussée inverse n’est possible que si la manette des gaz est sur RALENTI."
+          "explanation": "Faux : l’énergie pneumatique fait partie des solutions possibles."
         },
         {
           "id": "D",
-          "text": "L’énergie de manœuvre peut être pneumatique, hydraulique ou électrique.",
+          "text": "La manœuvre de l’inverseur peut être assurée par une énergie pneumatique, hydraulique ou électrique.",
           "is_correct": true,
-          "explanation": "Les inverseurs peuvent être actionnés par l’un de ces trois types d’énergie selon l’architecture retenue. La nature de l’énergie n’est donc pas unique."
+          "explanation": "Vrai : les trois sources d’énergie sont possibles pour actionner l’inverseur."
         },
         {
           "id": "E",
-          "text": "La présence d’une énergie électrique exclut toute autre solution de commande.",
+          "text": "La manœuvre de l’inverseur n’utilise que l’énergie électrique.",
           "is_correct": false,
-          "explanation": "Une solution électrique n’exclut pas les autres familles d’actionnement. Le système peut être pneumatique, hydraulique ou électrique selon le cas."
+          "explanation": "Faux : l’électrique n’est qu’une possibilité parmi d’autres, pas l’unique énergie."
         }
       ],
-      "coverage_label": "Commandes, contrôles, sécurités et limitations",
-      "learning_objective": "Identifier les familles d’énergie possibles pour l’actionnement d’un inverseur de poussée.",
-      "correction_summary": "La seule proposition correcte est celle qui cite les trois énergies possibles. Le piège consiste à croire qu’un inverseur est toujours commandé par un seul type d’énergie.",
-      "course_clarification": "L’énergie de manœuvre désigne l’énergie qui déplace physiquement l’inverseur. Elle peut être pneumatique, hydraulique ou électrique selon l’installation.",
+      "coverage_label": "Énergie de manœuvre de l’inverseur",
+      "learning_objective": "Identifier les différentes sources d’énergie possibles pour actionner un inverseur de poussée.",
+      "correction_summary": "Le raisonnement attendu consiste à reconnaître qu’un inverseur peut être commandé par plusieurs énergies de manœuvre. L’erreur fréquente est de réduire le système à une seule technologie, alors que le principe général admet pneumatique, hydraulique ou électrique.",
+      "course_clarification": "L’énergie de manœuvre désigne l’énergie qui déplace physiquement l’inverseur. Selon l’architecture, ce déplacement peut être obtenu par un circuit pneumatique, hydraulique ou électrique.",
       "source_refs": []
     },
     {
       "question_id": "S8-Q2",
-      "prompt": "Parmi les conditions suivantes, laquelle permet le passage en poussée inverse ?",
+      "prompt": "Choisir l’unique affirmation correcte sur les conditions de mise en poussée inverse.",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le passage en poussée inverse est possible avec la manette des gaz en forte poussée.",
+          "text": "Le passage en poussée inverse est possible dès que la manette des gaz est sur plein gaz.",
           "is_correct": false,
-          "explanation": "Une forte poussée positive ne permet pas l’activation de la reverse. La manette doit d’abord être ramenée sur RALENTI."
+          "explanation": "Faux : la commande doit être au ralenti, pas en forte poussée."
         },
         {
           "id": "B",
-          "text": "Le passage en poussée inverse n’est possible que si la manette des gaz est sur RALENTI.",
+          "text": "Le passage en poussée inverse est possible seulement si la manette des gaz est sur RALENTI, le train principal est comprimé et les inverseurs sont sortis.",
           "is_correct": true,
-          "explanation": "La position RALENTI est une condition de sécurité imposée avant l’activation de la poussée inverse."
+          "explanation": "Vrai : ces trois conditions de sécurité doivent être réunies avant la mise en reverse."
         },
         {
           "id": "C",
-          "text": "La condition de train principal comprimé fait partie des sécurités de base.",
+          "text": "Le passage en poussée inverse est autorisé en vol dès que le pilote actionne la manette d’inversion.",
           "is_correct": false,
-          "explanation": "Cette proposition serait vraie si elle indiquait que le train principal doit être comprimé ; ici, elle nie la condition de sécurité."
+          "explanation": "Faux : la condition de train principal comprimé exclut cette situation en vol normal."
         },
         {
           "id": "D",
-          "text": "La mise en reverse est possible uniquement si les inverseurs sont déjà sortis.",
+          "text": "Le passage en poussée inverse est possible même si les inverseurs sont rentrés.",
           "is_correct": false,
-          "explanation": "Cette condition est nécessaire pour engager la reverse : si les inverseurs ne sont pas sortis, la mise en reverse n’est pas autorisée."
+          "explanation": "Faux : la mise en reverse n’est admise que si les inverseurs sont déjà sortis."
         },
         {
           "id": "E",
-          "text": "Le retour en poussée positive se fait en conservant la manette d’inversion sur la position reverse.",
+          "text": "Le passage en poussée inverse ne dépend pas de la position de la manette des gaz.",
           "is_correct": false,
-          "explanation": "Le retour en poussée positive exige au contraire de ramener la manette d’inversion sur NEUTRE puis d’augmenter la poussée si les inverseurs sont rentrés."
+          "explanation": "Faux : la position sur RALENTI est une condition de base."
         }
       ],
-      "coverage_label": "Sécurités de base",
-      "learning_objective": "Vérifier les conditions d’autorisation du passage en poussée inverse.",
-      "correction_summary": "La reverse n’est autorisée que si les conditions de sécurité sont réunies, en particulier manette sur RALENTI. Le piège fréquent est d’oublier que la commande est verrouillée par plusieurs interverrouillages.",
-      "course_clarification": "Les interverrouillages empêchent une sélection de reverse dans une configuration dangereuse. Ils combinent notamment la position RALENTI, l’état du train principal et l’état de sortie des inverseurs.",
+      "coverage_label": "Conditions de mise en reverse",
+      "learning_objective": "Vérifier les interverrouillages nécessaires avant l’activation de la poussée inverse.",
+      "correction_summary": "Il faut repérer les trois verrouillages de base : gaz au ralenti, train principal comprimé, inverseurs sortis. La confusion classique consiste à croire qu’une simple action sur la commande suffit, alors qu’un ensemble de conditions doit être validé pour éviter une fausse manœuvre.",
+      "course_clarification": "La reverse n’est autorisée que dans une configuration de sol sécurisée. Les verrouillages empêchent une activation inadaptée en vol ou avec une configuration mécanique non prête.",
       "source_refs": []
     },
     {
       "question_id": "S8-Q3",
-      "prompt": "Quelle séquence décrit correctement le retour vers la poussée positive ?",
+      "prompt": "Choisir l’unique affirmation correcte sur le retour en poussée positive.",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
           "text": "Le retour en poussée positive se fait en ramenant la manette d’inversion sur NEUTRE puis en augmentant la poussée si les inverseurs sont rentrés.",
           "is_correct": true,
-          "explanation": "La séquence correcte commence par le retour de la manette d’inversion sur NEUTRE, puis l’augmentation de poussée n’est possible que si les inverseurs sont bien rentrés."
+          "explanation": "Vrai : la séquence de retour passe par NEUTRE, puis par une augmentation de poussée seulement après rentrée et verrouillage des inverseurs."
         },
         {
           "id": "B",
-          "text": "Le retour en poussée positive se fait en augmentant d’abord la poussée puis en revenant ensuite sur NEUTRE.",
+          "text": "Le retour en poussée positive se fait en gardant la manette d’inversion en position arrière maximale.",
           "is_correct": false,
-          "explanation": "L’ordre est inversé : la remise sur NEUTRE précède l’augmentation de poussée."
+          "explanation": "Faux : la manette doit être ramenée sur NEUTRE, pas maintenue en position reverse."
         },
         {
           "id": "C",
-          "text": "La poussée positive peut être augmentée même si l’inverseur n’est pas verrouillé en position normale.",
+          "text": "Le retour en poussée positive exige d’augmenter d’abord la poussée puis de rentrer les inverseurs.",
           "is_correct": false,
-          "explanation": "L’augmentation de la poussée positive est interdite tant que l’inverseur n’est pas revenu en position normale verrouillée."
+          "explanation": "Faux : l’ordre est inversé ; il faut d’abord remettre la commande sur NEUTRE et vérifier la rentrée des inverseurs."
         },
         {
           "id": "D",
-          "text": "La réduction automatique de la poussée intervient si l’inverseur revient vers la position rentrée pendant la poussée inverse.",
+          "text": "Le retour en poussée positive est autorisé même si les inverseurs ne sont pas revenus en position normale verrouillée.",
           "is_correct": false,
-          "explanation": "Cette réduction est bien prévue, mais l’affirmation est formulée à l’envers : elle nie le mécanisme au lieu de l’énoncer correctement."
+          "explanation": "Faux : l’augmentation de poussée positive n’est permise que si les inverseurs sont rentrés et verrouillés."
         },
         {
           "id": "E",
-          "text": "Le retour vers la poussée positive impose de garder la reverse engagée jusqu’à la fin de la remise de gaz.",
+          "text": "Le retour en poussée positive consiste à couper totalement la commande de poussée.",
           "is_correct": false,
-          "explanation": "Il faut au contraire sortir de la position reverse en ramenant la manette sur NEUTRE avant de réaugmenter la poussée."
+          "explanation": "Faux : on revient à la poussée positive, on ne coupe pas la commande."
         }
       ],
       "coverage_label": "Retour en poussée positive",
-      "learning_objective": "Expliquer la séquence de retour de la poussée inverse vers la poussée positive.",
-      "correction_summary": "Le retour correct passe par NEUTRE, puis par l’augmentation de poussée si l’inverseur est rentré et verrouillé. Le piège est de confondre l’ordre des actions ou d’ignorer le verrouillage mécanique.",
-      "course_clarification": "La position NEUTRE coupe la logique de reverse. La remontée de poussée n’est autorisée qu’avec un inverseur revenu en position normale verrouillée.",
+      "learning_objective": "Interpréter correctement la séquence de sortie de reverse vers la poussée positive.",
+      "correction_summary": "Le point clé est l’ordre des actions : NEUTRE, puis vérification de la rentrée des inverseurs, puis augmentation de poussée. L’erreur fréquente est d’inverser ces étapes et de croire qu’on peut remettre de la poussée avant le verrouillage mécanique.",
+      "course_clarification": "La remise en poussée positive n’est sûre que si l’inverseur est revenu en position normale verrouillée. Le système bloque l’augmentation de poussée tant que cette condition n’est pas remplie.",
       "source_refs": []
     },
     {
       "question_id": "S8-Q4",
-      "prompt": "Quelles protections automatiques sont prévues en cas de manœuvre anormale de l’inverseur ?",
+      "prompt": "Choisir l’unique affirmation correcte sur la sécurité SOL/VOL et les réductions automatiques de poussée.",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "En cas de sortie intempestive en vol, la poussée est automatiquement augmentée pour stabiliser l’avion.",
+          "text": "En vol, le relais SOL/VOL autorise systématiquement la manœuvre reverse sans restriction.",
           "is_correct": false,
-          "explanation": "La réaction prévue est l’inverse : la poussée est réduite automatiquement, pas augmentée."
+          "explanation": "Faux : en vol, il interdit au contraire l’alimentation nécessaire à la commande de reverse."
         },
         {
           "id": "B",
-          "text": "En vol, le relais SOL/VOL empêche l’alimentation électrique de la vanne d’isolement.",
+          "text": "Si un inverseur sort intempestivement en vol, la poussée augmente automatiquement pour stabiliser l’avion.",
           "is_correct": false,
-          "explanation": "Cette affirmation inverse le fonctionnement : le relais SOL/VOL interdit bien l’alimentation électrique en vol, ce qui empêche l’alimentation pneumatique du mécanisme."
+          "explanation": "Faux : la poussée est automatiquement réduite, pas augmentée."
         },
         {
           "id": "C",
-          "text": "Une rentrée sans commande préalable de l’inverseur ne déclenche aucune action automatique.",
+          "text": "Si l’inverseur revient vers la position rentrée pendant la poussée inverse, la poussée reste inchangée.",
           "is_correct": false,
-          "explanation": "Une telle rentrée non commandée provoque au contraire une réduction automatique de la poussée."
+          "explanation": "Faux : une réduction automatique de la poussée est prévue dans ce cas."
         },
         {
           "id": "D",
-          "text": "Le mécanisme d’interdiction supprime toute limitation de sécurité en cas d’anomalie.",
+          "text": "Le relais SOL/VOL n’agit que sur les freins de roues et pas sur la commande inverseur.",
           "is_correct": false,
-          "explanation": "Le mécanisme d’interdiction sert à autoriser certaines évolutions de commande, mais ne supprime pas les protections automatiques contre les manœuvres anormales."
+          "explanation": "Faux : il agit sur l’alimentation liée à la commande de l’inverseur en vol."
         },
         {
           "id": "E",
-          "text": "Si les inverseurs sortent intempestivement en vol ou rentrent sans commande préalable, la poussée est automatiquement réduite.",
+          "text": "En vol, le relais SOL/VOL interdit l’alimentation électrique de la vanne d’isolement et bloque l’alimentation pneumatique du mécanisme d’entraînement lors d’une commande reverse.",
           "is_correct": true,
-          "explanation": "La réduction automatique de poussée limite le risque de déséquilibre ou de surcouple lors d’une manœuvre non commandée."
+          "explanation": "Vrai : le relais SOL/VOL empêche l’activation du mécanisme en vol pour éviter une sortie intempestive de reverse."
         }
       ],
-      "coverage_label": "Protections automatiques",
-      "learning_objective": "Reconnaître les réactions automatiques du système en cas de commande ou de mouvement intempestif.",
-      "correction_summary": "La bonne réponse est la réduction automatique de poussée en cas d’anomalie de l’inverseur. Le piège consiste à confondre protection et renforcement de la poussée.",
-      "course_clarification": "Le système surveille les positions et réagit automatiquement si l’inverseur se déplace sans la logique attendue. En vol, la fonction SOL/VOL ajoute une barrière électrique et pneumatique.",
+      "coverage_label": "Sécurité SOL/VOL",
+      "learning_objective": "Comprendre le rôle du relais SOL/VOL et la logique de réduction automatique de poussée.",
+      "correction_summary": "La bonne lecture consiste à distinguer l’autorisation au sol et le blocage en vol. La confusion la plus fréquente est de penser que toute commande actionnée par le pilote reste disponible ; ici, le relais SOL/VOL coupe l’alimentation pour empêcher une commande dangereuse.",
+      "course_clarification": "Le relais SOL/VOL sert d’interverrouillage entre la situation au sol et la situation en vol. Il protège la cellule et le moteur contre une commande de reverse non autorisée pendant le vol.",
       "source_refs": []
     },
     {
       "question_id": "S8-Q5",
-      "prompt": "Quelles limitations opérationnelles de la reverse sont correctes ?",
+      "prompt": "Choisir l’unique affirmation correcte sur les limitations d’utilisation du reverse et leurs raisons.",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le jet dévié ne peut jamais soulever de cailloux ou de corps étrangers.",
+          "text": "Le reverse est utilisable à très faible vitesse sans aucune restriction de temps.",
           "is_correct": false,
-          "explanation": "Le flux dévié peut au contraire soulever des cailloux ou d’autres éléments, qui risquent ensuite d’être aspirés par le moteur."
+          "explanation": "Faux : une vitesse minimale fixée existe, et une durée maximale d’utilisation est aussi limitée."
         },
         {
           "id": "B",
-          "text": "La durée maximale d’utilisation est limitée pour éviter l’échauffement du dispositif et des structures voisines.",
+          "text": "Le reverse n’a aucune influence thermique sur le dispositif ni sur les structures voisines.",
           "is_correct": false,
-          "explanation": "Cette affirmation nie la limitation alors qu’elle constitue précisément un motif de restriction d’emploi."
+          "explanation": "Faux : la durée d’utilisation est limitée justement pour éviter l’échauffement du dispositif et de l’environnement proche."
         },
         {
           "id": "C",
-          "text": "La reverse est inutilisable en dessous d’une vitesse avion fixée pour éviter l’ingestion des gaz chauds.",
+          "text": "Le reverse est inutilisable en dessous d’une vitesse avion fixée afin d’éviter l’ingestion des gaz chauds et les projections de cailloux aspirés par le moteur.",
           "is_correct": true,
-          "explanation": "À basse vitesse, l’utilisation de la reverse est interdite pour éviter l’ingestion des gaz chauds et les effets indésirables associés."
+          "explanation": "Vrai : la limite de vitesse évite des risques d’ingestion de gaz chauds et de débris soulevés par le jet dévié."
         },
         {
           "id": "D",
-          "text": "La reverse peut être utilisée sans limite de durée dès lors que l’avion est au sol.",
+          "text": "Le reverse est limité uniquement pour économiser le carburant.",
           "is_correct": false,
-          "explanation": "Le fait d’être au sol ne supprime pas la limitation de durée. Un temps maximal d’utilisation est imposé pour éviter l’échauffement."
+          "explanation": "Faux : la limitation vise la sécurité et la protection thermique, pas seulement la consommation."
         },
         {
           "id": "E",
-          "text": "L’échauffement concerné ne touche jamais les structures voisines comme le mât ou la voilure.",
+          "text": "Le reverse est utilisé en permanence au décollage, quelle que soit la vitesse avion.",
           "is_correct": false,
-          "explanation": "L’échauffement peut concerner le dispositif d’inversion et l’environnement voisin, notamment les structures proches du réacteur."
+          "explanation": "Faux : son emploi dépend d’une vitesse avion minimale et d’une situation opérationnelle adaptée."
         }
       ],
-      "coverage_label": "Limitations d’utilisation",
-      "learning_objective": "Identifier les raisons opérationnelles qui limitent l’usage de la poussée inverse.",
-      "correction_summary": "La reverse est limitée par la vitesse minimale d’emploi et par une durée maximale d’utilisation. Le piège principal est d’oublier les risques d’ingestion de corps étrangers et d’échauffement des structures.",
-      "course_clarification": "La reverse n’est pas un mode utilisable en permanence. Elle reste soumise à des contraintes de vitesse et de temps pour préserver la sécurité et l’intégrité des équipements.",
+      "coverage_label": "Limitations d’utilisation du reverse",
+      "learning_objective": "Relier les limitations de reverse aux risques opérationnels qu’elles préviennent.",
+      "correction_summary": "Il faut associer chaque limitation à son risque : vitesse minimale pour éviter les effets du jet et l’ingestion de gaz chauds, et durée maximale pour limiter l’échauffement. L’erreur fréquente est de voir ces limites comme arbitraires, alors qu’elles protègent le moteur et la structure.",
+      "course_clarification": "Les limitations de reverse répondent à trois risques principaux : ingestion de gaz chauds, projection de débris et échauffement des équipements ou des zones voisines. Elles ne sont pas décoratives, elles protègent le système et l’avion.",
       "source_refs": []
     }
   ],

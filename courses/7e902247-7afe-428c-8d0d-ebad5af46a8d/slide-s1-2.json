@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S1-2-Q1",
-      "prompt": "Concernant l’implantation d’un **IDG** sur un moteur, quelles affirmations sont correctes ?",
+      "prompt": "Quel énoncé décrit correctement l’implantation d’un IDG sur les moteurs ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Un seul IDG alimente simultanément les deux moteurs.",
+          "text": "Un seul IDG alimente les deux moteurs.",
           "is_correct": false,
-          "explanation": "La répartition décrite est individuelle : un IDG par moteur, pas une source unique commune aux deux moteurs."
+          "explanation": "Cette affirmation est fausse : la représentation montre deux IDG distincts, chacun rattaché à un moteur. Il n’y a pas d’IDG commun aux deux moteurs."
         },
         {
           "id": "B",
-          "text": "L’IDG est placé sur le train avant de l’avion.",
+          "text": "Chaque moteur est associé à deux IDG.",
           "is_correct": false,
-          "explanation": "Le train avant n’est pas le point d’implantation de l’IDG ; il s’agit d’un équipement lié au moteur et à son gearbox pad."
+          "explanation": "Le document indique au contraire un seul IDG par moteur. Ajouter un second IDG sur le même moteur contredit directement l’implantation représentée."
         },
         {
           "id": "C",
-          "text": "L’IDG est connecté directement au gearbox pad du moteur correspondant.",
+          "text": "L’IDG est associé uniquement à l’APU.",
           "is_correct": false,
-          "explanation": "Cette proposition est inexacte car elle mélange l’implantation et la liaison mécanique ; la connexion directe au gearbox pad fait partie de l’architecture correcte, mais l’énoncé ici affirme une autre localisation générale qui n’est pas formulée correctement."
+          "explanation": "L’APU possède bien son propre générateur, mais l’IDG est lié aux moteurs. Confondre IDG moteur et générateur APU est le piège classique."
         },
         {
           "id": "D",
-          "text": "Un IDG est associé à chaque moteur.",
+          "text": "Chaque moteur est associé à un seul IDG.",
           "is_correct": true,
-          "explanation": "L’architecture indiquée prévoit un IDG par moteur, donc chaque moteur possède sa propre source de génération AC entraînée mécaniquement."
+          "explanation": "Le schéma indique explicitement qu’il y a un IDG par moteur. L’implantation est donc en paire moteur/IDG, sans partage entre deux moteurs."
         },
         {
           "id": "E",
-          "text": "L’IDG est uniquement une source de puissance hydraulique.",
+          "text": "L’IDG n’est pas lié au moteur correspondant.",
           "is_correct": false,
-          "explanation": "Un IDG est un **Integrated Drive Generator** : c’est un ensemble de génération électrique, pas une source hydraulique."
+          "explanation": "C’est l’inverse qui est montré : l’IDG est monté sur le moteur et relié à lui mécaniquement. Dire qu’il n’est pas lié au moteur contredit la liaison représentée."
         }
       ],
-      "coverage_label": "IDG : implantation sur moteur et liaison mécanique",
-      "learning_objective": "Identifier qu’il existe un IDG par moteur et relier l’IDG au moteur correspondant.",
-      "correction_summary": "La bonne idée à retenir est qu’il y a un IDG par moteur. Le piège est de confondre une implantation générale sur l’avion avec la connexion mécanique au moteur.",
-      "course_clarification": "IDG signifie **Integrated Drive Generator**. Il est monté sur le moteur correspondant et participe à la génération électrique AC.",
+      "coverage_label": "Implantation d’un IDG sur moteur",
+      "learning_objective": "Identifier qu’il existe un IDG par moteur et comprendre l’association moteur/IDG.",
+      "correction_summary": "La bonne réponse est l’énoncé qui associe un IDG à chaque moteur. Le piège consiste à confondre une architecture unifiée avec une architecture répartie par moteur.",
+      "course_clarification": "Un IDG est une source de génération électrique dédiée à un moteur. L’architecture visée est symétrique : un moteur, un IDG.",
       "source_refs": []
     },
     {
       "question_id": "S1-2-Q2",
-      "prompt": "À propos de la liaison mécanique de l’IDG avec le moteur, quelles affirmations sont correctes ?",
+      "prompt": "Quelle affirmation décrit correctement la liaison mécanique entre l’IDG et le moteur ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "L’IDG est entraîné par le moteur via cette liaison mécanique.",
+          "text": "Chaque IDG est relié au train d’atterrissage principal.",
           "is_correct": false,
-          "explanation": "L’idée d’entraînement par le moteur est vraie, mais l’énoncé est faux ici parce qu’il inverse la logique attendue : il ne s’agit pas d’une liaison sans transmission de couple, mais d’une génération entraînée par le moteur via la connexion mécanique."
+          "explanation": "Cette liaison n’apparaît pas sur le schéma et ne correspond pas à la fonction de l’IDG. Le raccordement est moteur/gearbox pad, pas train d’atterrissage."
         },
         {
           "id": "B",
           "text": "Chaque IDG est directement connecté au gearbox pad du moteur correspondant.",
           "is_correct": true,
-          "explanation": "Le point clé est la connexion directe au **gearbox pad** du moteur correspondant ; c’est l’interface mécanique indiquée par le schéma."
+          "explanation": "Le cartouche du schéma précise cette connexion directe. Le gearbox pad est le point d’interface mécanique du moteur utilisé pour entraîner l’IDG."
         },
         {
           "id": "C",
-          "text": "La liaison se fait uniquement par un câble électrique de puissance.",
+          "text": "Chaque IDG est connecté au cockpit par un faisceau électrique direct.",
           "is_correct": false,
-          "explanation": "Le fonctionnement demandé est mécanique : le moteur entraîne l’IDG physiquement. Un simple câble électrique ne peut pas assurer l’entraînement."
+          "explanation": "La question porte sur la liaison mécanique, pas sur une connexion de commande au cockpit. Le schéma montre une connexion mécanique au moteur, pas un câblage direct vers le cockpit."
         },
         {
           "id": "D",
-          "text": "Le gearbox pad est la zone de fixation et d’entraînement de l’IDG sur le moteur.",
+          "text": "Chaque IDG est directement connecté au réservoir de carburant.",
           "is_correct": false,
-          "explanation": "Le gearbox pad est bien le point de connexion mentionné, mais l’énoncé est ici trop général et n’insiste pas sur la connexion directe propre à l’architecture demandée."
+          "explanation": "Le carburant n’est pas l’organe d’interface mécanique de l’IDG. La connexion correcte est au gearbox pad du moteur correspondant."
         },
         {
           "id": "E",
-          "text": "L’IDG fonctionne sans aucune liaison avec le moteur.",
+          "text": "L’IDG n’est pas connecté directement au moteur.",
           "is_correct": false,
-          "explanation": "C’est l’inverse du principe recherché : l’IDG est justement entraîné par le moteur pour produire l’énergie AC."
+          "explanation": "Cette formulation est contraire au schéma, qui montre une connexion directe entre l’IDG et le gearbox pad du moteur."
         }
       ],
-      "coverage_label": "IDG : implantation sur moteur et liaison mécanique",
-      "learning_objective": "Comprendre le rôle de la liaison mécanique entre le moteur et l’IDG, en particulier le gearbox pad.",
-      "correction_summary": "La liaison importante est mécanique et directe entre l’IDG et le gearbox pad du moteur correspondant. Le piège classique est de confondre une alimentation électrique avec l’entraînement mécanique.",
-      "course_clarification": "Le **gearbox pad** est le point de prise mécanique sur le moteur. Cette liaison permet au moteur d’entraîner l’IDG pour produire l’électricité AC.",
+      "coverage_label": "Liaison mécanique au gearbox pad",
+      "learning_objective": "Reconnaître le point de connexion mécanique de l’IDG sur le moteur.",
+      "correction_summary": "La bonne réponse désigne le gearbox pad du moteur correspondant. Le piège est de confondre une liaison mécanique de prise de mouvement avec une connexion électrique ou une autre partie de l’avion.",
+      "course_clarification": "Le gearbox pad est le point du moteur utilisé pour prendre la puissance mécanique. L’IDG y est fixé et entraîné directement par le moteur.",
       "source_refs": []
     },
     {
       "question_id": "S1-2-Q3",
-      "prompt": "Sur la fonction de génération de l’IDG, quelles affirmations sont correctes ?",
+      "prompt": "Quelle affirmation décrit correctement l’entraînement de l’IDG ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La génération électrique est entraînée par le moteur via la liaison mécanique.",
+          "text": "La génération de l’IDG est entraînée par le moteur via la liaison mécanique.",
           "is_correct": true,
-          "explanation": "C’est le principe fonctionnel essentiel : le moteur fournit l’énergie mécanique qui permet à l’IDG de générer l’électricité."
+          "explanation": "Le texte du schéma indique que les IDG sont engine driven. Cela signifie que le moteur fournit l’énergie mécanique nécessaire à la génération électrique."
         },
         {
           "id": "B",
-          "text": "L’IDG transforme directement l’énergie chimique du carburant en électricité sans moteur.",
+          "text": "La génération de l’IDG est entraînée par la batterie de bord.",
           "is_correct": false,
-          "explanation": "La conversion directe carburant-électricité n’est pas l’architecture décrite ; l’IDG dépend de l’entraînement mécanique du moteur."
+          "explanation": "La batterie peut alimenter certains équipements, mais elle n’entraîne pas mécaniquement l’IDG. L’IDG est entraîné par le moteur, pas par une source électrique."
         },
         {
           "id": "C",
-          "text": "La génération est indépendante de toute rotation mécanique.",
+          "text": "La génération de l’IDG est entraînée uniquement par l’APU.",
           "is_correct": false,
-          "explanation": "Une génération entraînée par moteur suppose justement une rotation mécanique ; sans entraînement, la production ne peut pas être assurée."
+          "explanation": "L’APU possède son propre générateur, distinct des IDG des moteurs. L’IDG moteur n’est pas entraîné par l’APU sur le schéma considéré."
         },
         {
           "id": "D",
-          "text": "Le moteur sert uniquement à refroidir l’IDG.",
+          "text": "La génération de l’IDG n’est pas entraînée par le moteur.",
           "is_correct": false,
-          "explanation": "Le moteur ne joue pas un simple rôle thermique ; il fournit l’énergie mécanique nécessaire au fonctionnement du générateur."
+          "explanation": "C’est l’inverse de l’architecture représentée : l’IDG est précisément un générateur entraîné par moteur. La négation explicite rend cette proposition fausse."
         },
         {
           "id": "E",
-          "text": "L’IDG produit une énergie électrique destinée au système AC.",
+          "text": "La génération de l’IDG est entraînée par le système de freinage.",
           "is_correct": false,
-          "explanation": "L’idée de production pour le système AC est juste, mais l’affirmation est considérée fausse ici car elle ne porte pas sur le mécanisme demandé et mélange fonction et destination."
+          "explanation": "Le système de freinage n’a aucun rôle dans l’entraînement de l’IDG. La puissance mécanique vient du moteur via la liaison au gearbox pad."
         }
       ],
-      "coverage_label": "IDG : implantation sur moteur et liaison mécanique",
-      "learning_objective": "Relier l’entraînement mécanique par le moteur à la production d’énergie électrique AC.",
-      "correction_summary": "L’IDG est un générateur entraîné par le moteur : la mécanique du moteur est la source de son fonctionnement. Le piège est de chercher une production autonome ou purement électrique.",
-      "course_clarification": "Un générateur convertit une énergie mécanique en énergie électrique. Ici, l’énergie mécanique vient du moteur auquel l’IDG est raccordé.",
+      "coverage_label": "Entraînement moteur de l’IDG",
+      "learning_objective": "Comprendre que l’IDG est une génération entraînée mécaniquement par le moteur.",
+      "correction_summary": "L’élément clé est l’entraînement par le moteur. Le piège consiste à remplacer cette chaîne mécanique par une source électrique ou par un autre système de l’avion.",
+      "course_clarification": "Un générateur entraîné par moteur transforme une puissance mécanique en puissance électrique. Ici, la chaîne est : moteur \u001f gearbox pad \u001f IDG.",
       "source_refs": []
     },
     {
       "question_id": "S1-2-Q4",
-      "prompt": "À propos des acronymes liés à cette architecture, quelles affirmations sont correctes ?",
+      "prompt": "Quelle proposition donne correctement la signification des sigles ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "GEN signifie Generator.",
+          "text": "IDG signifie Internal Drive Gear et GEN signifie General Electric Network.",
           "is_correct": false,
-          "explanation": "Cette proposition est correcte en soi, mais elle est fausse ici car l’assertion du QCM doit isoler une seule réponse vraie ; la formulation porte sur l’ensemble des acronymes et ne correspond pas à l’unique définition demandée."
+          "explanation": "Ces développements ne correspondent pas à la légende. Les sigles doivent être lus selon leur signification officielle dans le schéma."
         },
         {
           "id": "B",
-          "text": "GCU signifie Ground and Auxiliary Power Control Unit.",
+          "text": "IDG signifie Integrated Drive Generator et GEN signifie Ground Equipment Node.",
           "is_correct": false,
-          "explanation": "Cette définition est celle de **GAPCU**, pas de GCU. GCU désigne la Generator Control Unit."
+          "explanation": "La première partie est correcte, mais GEN ne signifie pas cela. La légende indique simplement Generator."
         },
         {
           "id": "C",
-          "text": "GAPCU signifie Generator Control Unit.",
+          "text": "IDG signifie Independent Drive Group et GEN signifie Generator.",
           "is_correct": false,
-          "explanation": "C’est l’inversion classique : **GAPCU** correspond à **Ground and Auxiliary Power Control Unit**, tandis que **GCU** est la Generator Control Unit."
+          "explanation": "GEN est bien correctement développé ici, mais IDG ne veut pas dire Independent Drive Group. Le sigle exact est Integrated Drive Generator."
         },
         {
           "id": "D",
-          "text": "IDG signifie Intermittent Drive Generator.",
+          "text": "IDG signifie Integrated Drive Generator et GEN ne signifie pas Generator.",
           "is_correct": false,
-          "explanation": "L’acronyme ne contient pas de terme d’‘intermittent’ ; la forme correcte est bien **Integrated Drive Generator**."
+          "explanation": "Cette négation explicite est fausse : la légende associe bien GEN à Generator. Il faut retenir les deux développements exacts."
         },
         {
           "id": "E",
-          "text": "IDG signifie Integrated Drive Generator.",
+          "text": "IDG signifie Integrated Drive Generator et GEN signifie Generator.",
           "is_correct": true,
-          "explanation": "L’abréviation est explicitement donnée : **IDG** correspond à **Integrated Drive Generator**."
+          "explanation": "La légende du schéma donne exactement ces deux définitions. Il faut conserver les acronymes tels qu’ils apparaissent sur la figure."
         }
       ],
-      "coverage_label": "IDG : implantation sur moteur et liaison mécanique",
-      "learning_objective": "Reconnaître les acronymes IDG et GEN sans les confondre avec GCU ou GAPCU.",
-      "correction_summary": "L’acronyme à retenir ici est **IDG = Integrated Drive Generator**. Le piège principal est de confondre les sigles voisins GCU et GAPCU.",
-      "course_clarification": "**GEN** signifie **Generator**. **GCU** et **GAPCU** sont des unités de contrôle distinctes ; il faut les distinguer de l’IDG lui-même.",
+      "coverage_label": "Acronymes IDG et GEN",
+      "learning_objective": "Restituer la signification exacte des sigles IDG et GEN.",
+      "correction_summary": "La bonne réponse reprend les développements exacts de la légende. Le piège consiste à inventer des sigles proches mais faux, ou à nier la définition donnée par le schéma.",
+      "course_clarification": "IDG désigne l’ensemble entraîné par le moteur. GEN est l’abréviation générique de generator, c’est-à-dire générateur.",
       "source_refs": []
     },
     {
       "question_id": "S1-2-Q5",
-      "prompt": "En lisant le schéma de génération AC, quelles affirmations sont correctes ?",
+      "prompt": "Quelle affirmation est correcte à propos de la surveillance et du contrôle de l’IDG ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le générateur de l’APU alimente aussi le AC SYSTEM.",
+          "text": "Chaque IDG est contrôlé et surveillé par la GAPCU.",
           "is_correct": false,
-          "explanation": "Cette idée est bien présente dans le schéma, mais l’assertion est fausse ici car elle n’est pas la seule affirmation correcte attendue dans une question à réponse unique."
+          "explanation": "La GAPCU concerne l’APU, pas les IDG moteur. Mélanger GCU et GAPCU revient à attribuer le mauvais bloc de commande à la mauvaise source."
         },
         {
           "id": "B",
-          "text": "Les GCUs sont reliées aux IDGs moteur.",
+          "text": "Chaque IDG n’est ni contrôlé ni surveillé par une unité dédiée.",
           "is_correct": false,
-          "explanation": "Le schéma indique effectivement des GCUs associées aux IDGs, mais l’énoncé reste faux ici car il ne précise pas la relation de contrôle et de surveillance, essentielle pour être exact."
+          "explanation": "Cette affirmation est fausse car le schéma montre explicitement une GCU associée à chaque IDG. Le contrôle n’est pas laissé sans unité dédiée."
         },
         {
           "id": "C",
-          "text": "Les IDGs sont associés aux moteurs et alimentent le AC SYSTEM.",
+          "text": "Chaque IDG est contrôlé et surveillé par sa Generator Control Unit (GCU) associée.",
           "is_correct": true,
-          "explanation": "Le schéma montre bien les IDGs reliés aux moteurs et envoyant l’énergie vers le **AC SYSTEM**."
+          "explanation": "Le schéma précise que chaque IDG est relié à sa GCU correspondante. La GCU assure à la fois le contrôle et la surveillance de l’IDG."
         },
         {
           "id": "D",
-          "text": "Le GAPCU est relié à l’APU.",
+          "text": "Chaque IDG est contrôlé par le cockpit sans unité intermédiaire.",
           "is_correct": false,
-          "explanation": "C’est une lecture correcte du schéma, mais l’assertion est fausse dans ce QCM car elle ne se distingue pas suffisamment de la fonction de contrôle/surveillance demandée."
+          "explanation": "Le schéma met en évidence une GCU entre l’IDG et la logique de contrôle. Il ne montre pas un pilotage direct depuis le cockpit."
         },
         {
           "id": "E",
-          "text": "Le AC SYSTEM n’est alimenté que par l’APU GEN.",
+          "text": "Chaque IDG est contrôlé par son APU GEN.",
           "is_correct": false,
-          "explanation": "Le schéma montre au contraire plusieurs sources possibles : les IDGs des moteurs et le générateur de l’APU peuvent alimenter le AC SYSTEM."
+          "explanation": "L’APU GEN est une autre source d’énergie AC. Il n’assure pas le contrôle des IDG moteurs, qui dépend de la GCU associée."
         }
       ],
-      "coverage_label": "IDG : implantation sur moteur et liaison mécanique",
-      "learning_objective": "Lire un schéma de génération AC et situer l’IDG par rapport au moteur et au système AC.",
-      "correction_summary": "L’idée centrale est que les IDGs des moteurs alimentent le AC SYSTEM, et que l’APU dispose aussi d’un générateur. Le piège est de réduire l’alimentation AC à une seule source.",
-      "course_clarification": "Le **AC SYSTEM** reçoit l’énergie électrique des sources représentées sur le schéma. Les blocs de contrôle associés permettent la supervision de ces sources, sans changer le fait que l’IDG reste lié au moteur.",
+      "coverage_label": "Contrôle GCU des IDG",
+      "learning_objective": "Associer correctement l’IDG à sa Generator Control Unit (GCU).",
+      "correction_summary": "La bonne réponse relie chaque IDG à sa GCU correspondante. Le principal piège est de confondre la GCU des moteurs avec la GAPCU de l’APU.",
+      "course_clarification": "La GCU est l’unité qui gère un générateur moteur. La GAPCU est l’unité de commande liée à l’APU, ce qui évite de les intervertir.",
       "source_refs": []
     }
   ],

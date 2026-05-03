@@ -5,212 +5,212 @@
   "questions": [
     {
       "question_id": "S7-4-Q1",
-      "prompt": "À propos des **AC & DC CONTACTORS**, quelle affirmation est correcte ?",
+      "prompt": "Quel énoncé décrit correctement le trajet de l’énergie entre les blocs de distribution de charge ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Ils ne servent qu’à alimenter la génération d’urgence.",
+          "text": "DC LOAD DISTRIBUTION et AC LOAD DISTRIBUTION distribuent l’énergie vers les contacteurs AC & DC SYSTEM.",
           "is_correct": false,
-          "explanation": "La génération d’urgence relève d’un autre sous-ensemble ; ici, les contacteurs sont liés à la distribution vers les charges, pas à la seule source d’urgence."
+          "explanation": "L’architecture montrée est l’inverse : ce sont les contacteurs qui alimentent les blocs de distribution, pas l’inverse."
         },
         {
           "id": "B",
-          "text": "Ils mesurent directement la tension de chaque bus.",
+          "text": "AC & DC SYSTEM alimente directement les charges finales sans passer par des contacteurs.",
           "is_correct": false,
-          "explanation": "La mesure et la surveillance sont assurées par d’autres unités ou fonctions de monitoring ; les contacteurs commandent la distribution, ils ne sont pas des capteurs de tension."
+          "explanation": "Le schéma relie explicitement le système aux contacteurs puis aux distributions de charge, ce qui exclut une alimentation directe des charges finales."
         },
         {
           "id": "C",
-          "text": "Ils remplacent les disjoncteurs dans le compartiment avionique.",
+          "text": "Les contacteurs AC & DC SYSTEM ne servent qu’à la surveillance des disjoncteurs.",
           "is_correct": false,
-          "explanation": "Les contacteurs et les disjoncteurs ont des fonctions différentes : les premiers distribuent l’énergie, les seconds protègent et peuvent être surveillés par le CBMU."
+          "explanation": "La surveillance des disjoncteurs relève du CBMU ; les contacteurs assurent la distribution de l’énergie vers les charges."
         },
         {
           "id": "D",
-          "text": "Ils distribuent l’énergie vers **DC LOAD DISTRIBUTION** et **AC LOAD DISTRIBUTION**.",
+          "text": "Les contacteurs AC & DC SYSTEM distribuent l’énergie vers DC LOAD DISTRIBUTION et AC LOAD DISTRIBUTION.",
           "is_correct": true,
-          "explanation": "Le synoptique montre bien les contacteurs AC & DC SYSTEM en amont des deux blocs de distribution de charges. Leur rôle est d’acheminer l’énergie vers les réseaux de charges finale AC et DC."
+          "explanation": "Les contacteurs se trouvent entre le système AC/DC et les blocs de distribution de charge : ils acheminent l’énergie vers les réseaux DC et AC."
         },
         {
           "id": "E",
-          "text": "Ils alimentent uniquement le réseau AC sans lien avec le réseau DC.",
+          "text": "AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION ne reçoivent aucune énergie du bloc AC & DC CONTACTORS.",
           "is_correct": false,
-          "explanation": "Le schéma relie explicitement les contacteurs aux deux côtés, AC et DC, donc l’affirmation est trop restrictive et contredit le bloc de distribution double."
+          "explanation": "Le synoptique montre au contraire une liaison de sortie des contacteurs vers ces deux blocs de distribution."
         }
       ],
       "coverage_label": "AC & DC CONTACTORS : distribution vers les charges",
-      "learning_objective": "Identifier la fonction de distribution des contacteurs vers les réseaux de charges AC et DC.",
-      "correction_summary": "La bonne réponse est celle qui relie les contacteurs aux blocs de distribution de charges AC et DC. Le piège consiste à confondre distribution, protection et surveillance.",
-      "course_clarification": "Les contacteurs sont des organes de commutation qui orientent l’énergie vers les réseaux de charge. Ici, ils alimentent les blocs **DC LOAD DISTRIBUTION** et **AC LOAD DISTRIBUTION**.",
+      "learning_objective": "Identifier le sens de circulation de l’énergie entre AC & DC SYSTEM, les contacteurs et les réseaux AC/DC de distribution.",
+      "correction_summary": "La bonne relation est : AC & DC SYSTEM → AC & DC CONTACTORS → AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION. Le piège classique consiste à inverser le sens de distribution ou à confondre contacteurs et charges.",
+      "course_clarification": "Un contacteur est un organe de commutation qui autorise ou coupe l’alimentation d’un circuit. Ici, il sert de relais entre la source et les réseaux de charge AC et DC.",
       "source_refs": []
     },
     {
       "question_id": "S7-4-Q2",
-      "prompt": "Concernant le **CBMU**, quelle affirmation est exacte ?",
+      "prompt": "Quel rôle est attribué aux Electrical Contactor Management Units (ECMU) ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le **CBMU** commande les contacteurs **AC & DC SYSTEM**.",
+          "text": "Les ECMU surveillent l’état des C/Bs et des RCCBs.",
           "is_correct": false,
-          "explanation": "La gestion des contacteurs est confiée aux **ECMU** ; le CBMU est dédié à la surveillance des disjoncteurs et des RCCBs."
+          "explanation": "Cette surveillance est celle du CBMU, pas des ECMU."
         },
         {
           "id": "B",
-          "text": "Le **CBMU** surveille l’état des **C/Bs** et des **RCCBs**.",
+          "text": "Les Electrical Contactor Management Units (ECMU) pilotent la gestion des contacteurs électriques.",
           "is_correct": true,
-          "explanation": "Le texte associé au schéma indique explicitement que le Circuit Breaker Monitoring Unit surveille l’état des disjoncteurs et des RCCBs."
+          "explanation": "Le schéma associe explicitement les ECMU à la gestion des contacteurs, ce qui correspond à leur fonction de commande."
         },
         {
           "id": "C",
-          "text": "Le **CBMU** est uniquement relié à la page ECAM des sources AC.",
+          "text": "Les ECMU indiquent sur la page C/B ECAM les C/B surveillés déclenchés ou tirés manuellement.",
           "is_correct": false,
-          "explanation": "Le schéma mentionne une page **C/B ECAM** spécifique pour l’affichage des disjoncteurs surveillés, pas la page AC sources."
+          "explanation": "L’indication sur la page C/B ECAM est assurée par le CBMU, qui remonte les défauts ou retraits manuels des disjoncteurs surveillés."
         },
         {
           "id": "D",
-          "text": "Le **CBMU** n’affiche jamais un disjoncteur déclenché sur l’ECAM.",
+          "text": "Les ECMU sont situées dans le compartiment avionique et correspondent aux C/B 28 VDC et 115 VAC.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : il indique sur l’ECAM tout C/B surveillé déclenché ou tiré manuellement."
+          "explanation": "Les C/B 28 VDC et 115 VAC sont les disjoncteurs surveillés ; ce ne sont pas des ECMU."
         },
         {
           "id": "E",
-          "text": "Le **CBMU** surveille seulement les équipements du poste de pilotage.",
+          "text": "Les ECMU remplacent la page ECAM dédiée aux disjoncteurs.",
           "is_correct": false,
-          "explanation": "Le schéma place les **C/Bs** dans le compartiment avionique ; la surveillance ne se limite pas à une zone de cockpit."
+          "explanation": "La page C/B ECAM reste le support d’affichage des statuts de disjoncteurs ; les ECMU n’ont pas ce rôle d’affichage."
         }
       ],
-      "coverage_label": "CBMU et C/B ECAM PAGE",
-      "learning_objective": "Reconnaître le rôle du CBMU dans la surveillance des disjoncteurs et RCCBs.",
-      "correction_summary": "La bonne affirmation décrit la surveillance des C/Bs et des RCCBs par le CBMU. Le piège classique est d’attribuer au CBMU la gestion des contacteurs, qui relève des ECMU.",
-      "course_clarification": "Le **CBMU** est une unité de surveillance. Il remonte les états des disjoncteurs et signale sur l’ECAM les cas déclenchés ou tirés manuellement.",
+      "coverage_label": "Contactor Management et Circuit Breakers : supervision par CBMU et ECMU",
+      "learning_objective": "Distinguer la fonction de gestion des contacteurs assurée par les ECMU de la surveillance des disjoncteurs assurée par le CBMU.",
+      "correction_summary": "Les ECMU commandent les contacteurs électriques. Le piège est de leur attribuer la surveillance des C/Bs ou l’affichage ECAM, qui relèvent du CBMU.",
+      "course_clarification": "ECMU signifie Electrical Contactor Management Unit. Elle agit sur la commande des contacteurs, tandis que le suivi des disjoncteurs est confié à une autre unité dédiée.",
       "source_refs": []
     },
     {
       "question_id": "S7-4-Q3",
-      "prompt": "À propos des **ECMU**, quelle proposition est correcte ?",
+      "prompt": "Quel énoncé décrit correctement la fonction du CBMU ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Les **Electrical Contactor Management Units (ECMU)** pilotent la gestion des contacteurs électriques.",
+          "text": "Le Circuit Breaker Monitoring Unit (CBMU) surveille l’état des C/Bs et des RCCBs.",
           "is_correct": true,
-          "explanation": "Le schéma et le texte associent les **ECMU** à la gestion des contacteurs, ce qui correspond à leur rôle de commande."
+          "explanation": "La fonction du CBMU est précisément la surveillance des disjoncteurs et des RCCBs, avec remontée de leur état."
         },
         {
           "id": "B",
-          "text": "Les **ECMU** surveillent l’état des **C/Bs** et des **RCCBs** sur la page ECAM.",
+          "text": "Le CBMU distribue l’énergie vers AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION.",
           "is_correct": false,
-          "explanation": "Cette fonction est celle du **CBMU** ; les ECMU sont liés aux contacteurs, pas à la surveillance des disjoncteurs."
+          "explanation": "La distribution d’énergie est assurée par les contacteurs AC & DC SYSTEM, pas par le CBMU."
         },
         {
           "id": "C",
-          "text": "Les **ECMU** sont situées dans le compartiment avionique avec les disjoncteurs 28 VDC et 115 VAC.",
+          "text": "Le CBMU pilote directement les contacteurs électriques.",
           "is_correct": false,
-          "explanation": "Le compartiment avionique est associé aux **C/Bs** surveillés ; le document ne place pas les ECMU dans ce bloc de surveillance."
+          "explanation": "La gestion des contacteurs est attribuée aux ECMU, pas au CBMU."
         },
         {
           "id": "D",
-          "text": "Les **ECMU** alimentent directement les charges finales sans passer par les contacteurs.",
+          "text": "Le CBMU surveille uniquement les générateurs AC et ne concerne pas les disjoncteurs.",
           "is_correct": false,
-          "explanation": "Le synoptique montre au contraire les ECMU reliées au bloc **AC & DC CONTACTORS**, qui assure l’intermédiation avant distribution des charges."
+          "explanation": "Le schéma indique au contraire une surveillance des C/Bs et des RCCBs, pas des générateurs."
         },
         {
           "id": "E",
-          "text": "Les **ECMU** affichent le statut des disjoncteurs déclenchés sur la page **C/B ECAM**.",
+          "text": "Le CBMU n’est relié à aucune page ECAM.",
           "is_correct": false,
-          "explanation": "L’affichage des statuts de disjoncteurs sur la page ECAM est une fonction du CBMU, pas des ECMU."
+          "explanation": "Le bloc CBMU est relié à la page C/B ECAM, qui affiche les disjoncteurs et leurs statuts."
         }
       ],
-      "coverage_label": "Electrical Contactor Management Units (ECMU)",
-      "learning_objective": "Distinguer la fonction des ECMU de celle du CBMU.",
-      "correction_summary": "La bonne réponse attribue aux ECMU la gestion des contacteurs électriques. Le piège est de confondre gestion des contacteurs et surveillance des disjoncteurs.",
-      "course_clarification": "Les **ECMU** sont des unités de gestion des contacteurs. Elles interviennent en amont de la distribution des charges, tandis que le **CBMU** surveille les protections.",
+      "coverage_label": "Contactor Management et Circuit Breakers : supervision par CBMU et ECMU",
+      "learning_objective": "Reconnaître la mission du CBMU dans la surveillance des disjoncteurs et des RCCBs.",
+      "correction_summary": "Le CBMU est l’unité de surveillance des C/Bs et des RCCBs. Le piège fréquent consiste à lui attribuer la commande des contacteurs ou la distribution d’énergie.",
+      "course_clarification": "CBMU signifie Circuit Breaker Monitoring Unit. Il reçoit les informations d’état des disjoncteurs surveillés et les reporte sur la page C/B ECAM.",
       "source_refs": []
     },
     {
       "question_id": "S7-4-Q4",
-      "prompt": "Dans le schéma du réseau, quelle affirmation est juste au sujet des **C/Bs** surveillés ?",
+      "prompt": "Quel énoncé sur l’affichage des disjoncteurs surveillés est exact ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Les **C/Bs** surveillés sont toujours de couleur rouge.",
+          "text": "Les C/B surveillés sont généralement de couleur rouge.",
           "is_correct": false,
-          "explanation": "Le document indique la couleur verte, pas rouge. Le rouge n’est pas la couleur retenue pour qualifier les C/B surveillés."
+          "explanation": "La couleur indiquée pour les C/B surveillés est le vert, pas le rouge."
         },
         {
           "id": "B",
-          "text": "Le **CBMU** n’indique que les C/Bs de l’AC system et ignore le DC system.",
+          "text": "Les C/B surveillés sont généralement de couleur bleue.",
           "is_correct": false,
-          "explanation": "Le schéma parle de **C/Bs** surveillés de façon générale, avec des liaisons vers 28 VDC et 115 VAC ; la surveillance n’est pas limitée à l’AC."
+          "explanation": "Aucune indication de couleur bleue n’est donnée pour les C/B surveillés."
         },
         {
           "id": "C",
-          "text": "Les **C/Bs** surveillés ne peuvent jamais être tirés manuellement.",
+          "text": "Les C/B surveillés sont toujours de couleur noire.",
           "is_correct": false,
-          "explanation": "Au contraire, le CBMU signale aussi les C/Bs surveillés **tirés manuellement** sur la page ECAM."
+          "explanation": "Le synoptique ne retient pas le noir comme code de couleur des C/B surveillés ; la convention mentionnée est le vert."
         },
         {
           "id": "D",
-          "text": "La couleur des C/Bs surveillés n’a aucun lien avec leur état d’affichage.",
+          "text": "La couleur des C/B surveillés n’est jamais indiquée.",
           "is_correct": false,
-          "explanation": "Le document associe bien une convention de couleur aux C/Bs surveillés ; il ne s’agit donc pas d’un détail sans signification."
+          "explanation": "Au contraire, une convention de couleur est donnée pour repérer les C/B surveillés."
         },
         {
           "id": "E",
-          "text": "Les **C/Bs** surveillés sont généralement de couleur verte.",
+          "text": "Les C/B surveillés sont généralement de couleur verte.",
           "is_correct": true,
-          "explanation": "La mention associée au schéma précise que les disjoncteurs surveillés sont habituellement représentés en vert."
+          "explanation": "Le support précise cette convention de couleur pour les disjoncteurs surveillés."
         }
       ],
-      "coverage_label": "C/B ECAM PAGE et codage des états",
-      "learning_objective": "Retenir la convention visuelle associée aux disjoncteurs surveillés.",
-      "correction_summary": "La bonne affirmation porte sur la couleur verte des C/Bs surveillés. Le piège est de mélanger la convention de couleur avec l’état fonctionnel ou avec un autre réseau électrique.",
-      "course_clarification": "Dans le synoptique, la couleur aide à repérer les éléments surveillés. Ici, les **C/Bs** surveillés sont généralement indiqués en **vert**.",
+      "coverage_label": "Contactor Management et Circuit Breakers : supervision par CBMU et ECMU",
+      "learning_objective": "Mémoriser la convention de couleur associée aux C/B surveillés.",
+      "correction_summary": "Les C/B surveillés sont généralement verts. Le piège est de confondre cette convention avec d’autres couleurs d’état qui ne sont pas indiquées ici.",
+      "course_clarification": "La couleur sert à identifier rapidement un état ou un type d’élément sur un synoptique. Ici, le vert signale les disjoncteurs surveillés.",
       "source_refs": []
     },
     {
       "question_id": "S7-4-Q5",
-      "prompt": "À propos des liaisons entre les blocs du schéma, quelle affirmation est correcte ?",
+      "prompt": "Quel énoncé décrit correctement la page C/B ECAM et son contenu ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Le **CBMU** est relié uniquement aux contacteurs **AC & DC SYSTEM**.",
+          "text": "La page C/B ECAM affiche uniquement les sources AC et les valeurs des générateurs.",
           "is_correct": false,
-          "explanation": "Les liaisons du CBMU portent sur les disjoncteurs et la page ECAM des C/Bs, pas sur la commande des contacteurs."
+          "explanation": "L’affichage des sources AC et des générateurs appartient à la page AC, pas à la page C/B ECAM."
         },
         {
           "id": "B",
-          "text": "Le **CBMU** est relié au bloc **AC LOAD DISTRIBUTION** pour distribuer les charges.",
+          "text": "La page C/B ECAM commande directement les contacteurs AC & DC SYSTEM.",
           "is_correct": false,
-          "explanation": "La distribution des charges passe par les contacteurs et les blocs de distribution, tandis que le CBMU reste un organe de surveillance."
+          "explanation": "La commande des contacteurs relève des ECMU ; la page ECAM sert à l’affichage et au suivi, pas à la commande directe."
         },
         {
           "id": "C",
-          "text": "Le **CBMU** est relié aux disjoncteurs **28 VDC** et **115 VAC** situés dans le compartiment avionique.",
+          "text": "La page C/B ECAM liste les disjoncteurs et leurs statuts.",
           "is_correct": true,
-          "explanation": "Le schéma montre explicitement une liaison entre le CBMU et les disjoncteurs 28 VDC / 115 VAC du compartiment avionique."
+          "explanation": "Le schéma associe le CBMU à la page C/B ECAM, qui affiche la liste des disjoncteurs et leur état."
         },
         {
           "id": "D",
-          "text": "Le **CBMU** se trouve dans le circuit de génération électrique principale comme un générateur.",
+          "text": "La page C/B ECAM n’est reliée à aucun système de surveillance.",
           "is_correct": false,
-          "explanation": "Le CBMU n’est pas une source d’énergie ; c’est une unité de monitoring liée aux protections et à leur affichage."
+          "explanation": "La page est précisément reliée au CBMU, qui remonte les états des disjoncteurs surveillés."
         },
         {
           "id": "E",
-          "text": "Le **CBMU** remplace les **ECMU** dans la gestion des contacteurs.",
+          "text": "La page C/B ECAM ne peut pas indiquer qu’un C/B surveillé a été tiré manuellement.",
           "is_correct": false,
-          "explanation": "Les ECMU gèrent les contacteurs et le CBMU surveille les C/Bs et RCCBs ; les deux fonctions sont distinctes."
+          "explanation": "Le CBMU indique justement sur cette page tout C/B surveillé déclenché ou tiré manuellement."
         }
       ],
-      "coverage_label": "Liaison CBMU - disjoncteurs - ECAM",
-      "learning_objective": "Interpréter les liaisons fonctionnelles du schéma entre surveillance des disjoncteurs et distribution électrique.",
-      "correction_summary": "La bonne réponse identifie la liaison du CBMU aux disjoncteurs 28 VDC et 115 VAC du compartiment avionique. Le piège est de le confondre avec un organe de commande ou de distribution.",
-      "course_clarification": "Le **CBMU** est connecté au réseau de surveillance des protections et à la page **C/B ECAM**. La distribution d’énergie, elle, passe par les **AC & DC CONTACTORS** vers les charges.",
+      "coverage_label": "Contactor Management et Circuit Breakers : supervision par CBMU et ECMU",
+      "learning_objective": "Interpréter le rôle de la page C/B ECAM dans l’affichage des statuts de disjoncteurs.",
+      "correction_summary": "La page C/B ECAM sert à lister les disjoncteurs et leurs statuts, en lien avec le CBMU. Le piège est de la confondre avec la page AC dédiée aux sources électriques.",
+      "course_clarification": "ECAM est une interface de visualisation des systèmes. La page C/B ECAM présente l’état des disjoncteurs surveillés et signale les déclenchements ou retraits manuels.",
       "source_refs": []
     }
   ],

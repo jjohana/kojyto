@@ -46,90 +46,6 @@
       "source_refs": []
     },
     {
-      "question_id": "S2-1-Q2",
-      "prompt": "À propos de la relation entre \\(Ch\\) et le débit massique de carburant \\(Qmc\\), quelles affirmations sont exactes ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Si \\(Qmc = 2\\,\\mathrm{kg/s}\\), alors \\(Ch = 7200\\,\\mathrm{kg/h}\\).",
-          "is_correct": false,
-          "explanation": "Le calcul est correct, mais ici seule une affirmation doit être vraie ; cette proposition illustre bien la formule sans constituer la seule réponse attendue."
-        },
-        {
-          "id": "B",
-          "text": "Si \\(Qmc\\) est exprimé en kg/s, alors \\(Ch = Qmc \\times 3600\\).",
-          "is_correct": true,
-          "explanation": "Le passage de secondes à heures impose de multiplier le débit massique par 3600 pour obtenir une masse par heure."
-        },
-        {
-          "id": "C",
-          "text": "Si \\(Qmc\\) augmente, \\(Ch\\) diminue nécessairement.",
-          "is_correct": false,
-          "explanation": "Les deux grandeurs sont proportionnelles : une augmentation de \\(Qmc\\) entraîne une augmentation de \\(Ch\\), pas l’inverse."
-        },
-        {
-          "id": "D",
-          "text": "La relation \\(Ch = Qmc \\times 3600\\) est cohérente avec des unités en kg/h.",
-          "is_correct": false,
-          "explanation": "Oui, mais cette proposition est redondante avec la bonne réponse et n’ajoute pas une affirmation distincte vraie dans un QCM à une seule bonne réponse."
-        },
-        {
-          "id": "E",
-          "text": "Le facteur 3600 sert à convertir des heures en secondes.",
-          "is_correct": false,
-          "explanation": "Ici on convertit des secondes en heures, puisque \\(Qmc\\) est donné en kg/s et \\(Ch\\) en kg/h. Le facteur 3600 correspond à 3600 s dans 1 h."
-        }
-      ],
-      "coverage_label": "Relation Ch = Qmc × 3600",
-      "learning_objective": "Appliquer la conversion d’unités entre kg/s et kg/h.",
-      "correction_summary": "La bonne relation est \\(Ch = Qmc \\times 3600\\) lorsque \\(Qmc\\) est en kg/s. Le piège est de se tromper de sens de conversion ou d’inverser la proportionnalité.",
-      "course_clarification": "\\(Qmc\\) est un débit massique instantané, alors que \\(Ch\\) est une masse consommée par heure. Le facteur 3600 traduit simplement le nombre de secondes dans une heure.",
-      "source_refs": []
-    },
-    {
-      "question_id": "S2-1-Q3",
-      "prompt": "À propos de la consommation spécifique \\(Csp\\), quelles affirmations sont exactes ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "\\(Csp\\) est la masse de carburant nécessaire pour fournir une poussée de 1 newton pendant une heure.",
-          "is_correct": true,
-          "explanation": "C’est la définition donnée : la consommation spécifique rapporte la consommation de carburant à la poussée fournie pendant une durée d’une heure."
-        },
-        {
-          "id": "B",
-          "text": "\\(Csp\\) est identique à la consommation horaire \\(Ch\\).",
-          "is_correct": false,
-          "explanation": "\\(Ch\\) est un débit de carburant, tandis que \\(Csp\\) rapporte ce carburant à la poussée. Les deux indicateurs n’ont donc pas le même sens physique."
-        },
-        {
-          "id": "C",
-          "text": "\\(Csp\\) s’exprime typiquement en kg/h.daN ou en lb/h.Lbf.",
-          "is_correct": false,
-          "explanation": "Cette écriture d’unités est justement celle associée à \\(Csp\\), mais une seule affirmation doit être vraie et la question cherche ici une définition, pas seulement l’unité."
-        },
-        {
-          "id": "D",
-          "text": "\\(Csp\\) permet de comparer les turboréacteurs entre eux.",
-          "is_correct": false,
-          "explanation": "Cette propriété est correcte en soi, mais elle décrit l’usage de \\(Csp\\) plutôt que sa définition. La comparaison est possible parce que l’indicateur rapporte la consommation à la poussée."
-        },
-        {
-          "id": "E",
-          "text": "\\(Csp\\) dépend uniquement du débit carburant et jamais de la poussée.",
-          "is_correct": false,
-          "explanation": "C’est l’inverse de la définition : \\(Csp\\) met justement en relation le carburant consommé et la poussée fournie."
-        }
-      ],
-      "coverage_label": "Consommation spécifique",
-      "learning_objective": "Reconnaître la définition et le rôle de \\(Csp\\).",
-      "correction_summary": "La bonne affirmation donne la définition de \\(Csp\\) comme carburant nécessaire pour produire une poussée donnée pendant une heure. Le piège est de le confondre avec \\(Ch\\), qui ne rapporte pas la consommation à la poussée.",
-      "course_clarification": "\\(Csp\\) est un indicateur de performance propulsive. Plus il est faible, plus le moteur consomme peu de carburant pour produire une même poussée.",
-      "source_refs": []
-    },
-    {
       "question_id": "S2-1-Q4",
       "prompt": "À propos de la relation entre consommation spécifique, poussée et consommation horaire, quelles affirmations sont exactes ?",
       "difficulty": "easy",
@@ -170,52 +86,10 @@
       "correction_summary": "La relation correcte est \\(Csp = Tu/Ch\\). Le piège majeur est d’inverser les dépendances : \\(Csp\\) augmente quand la poussée augmente à consommation horaire constante, ou quand \\(Ch\\) diminue à poussée constante.",
       "course_clarification": "Cette formule relie un indicateur de rendement à deux grandeurs mesurables. Elle permet de raisonner sur l’effet d’une variation de poussée ou de débit carburant.",
       "source_refs": []
-    },
-    {
-      "question_id": "S2-1-Q5",
-      "prompt": "À propos des unités et des valeurs repères de consommation spécifique, quelles affirmations sont exactes ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Pour le Safran M88 au décollage, la valeur à sec indiquée est \\(1{,}8\\,\\mathrm{kg/h.daN}\\) pour \\(5000\\,\\mathrm{daN}\\).",
-          "is_correct": false,
-          "explanation": "La valeur est bien citée, mais elle n’est pas la seule affirmation correcte dans ce QCM et ne doit pas être prise comme réponse unique supplémentaire."
-        },
-        {
-          "id": "B",
-          "text": "La consommation spécifique s’exprime en watts, comme une puissance.",
-          "is_correct": false,
-          "explanation": "Le watt mesure une puissance, alors que \\(Csp\\) est un rapport entre carburant consommé et poussée. Les unités ne sont donc pas celles d’une puissance."
-        },
-        {
-          "id": "C",
-          "text": "Une unité usuelle de \\(Csp\\) est \\(\\mathrm{kg/h.daN}\\).",
-          "is_correct": true,
-          "explanation": "L’unité \\(\\mathrm{kg/h.daN}\\) est bien donnée pour exprimer une masse de carburant par heure et par décanewton de poussée."
-        },
-        {
-          "id": "D",
-          "text": "L’unité \\(\\mathrm{lb/h.Lbf}\\) est cohérente avec la consommation spécifique.",
-          "is_correct": false,
-          "explanation": "Cette unité est bien donnée dans le support, mais elle n’est pas la seule réponse attendue ici. Elle confirme simplement l’expression de \\(Csp\\) en système anglo-saxon."
-        },
-        {
-          "id": "E",
-          "text": "\\(Csp\\) s’exprime en kilogrammes par seconde.",
-          "is_correct": false,
-          "explanation": "Les kilogrammes par seconde correspondent à un débit massique comme \\(Qmc\\), pas à une consommation spécifique rapportée à la poussée."
-        }
-      ],
-      "coverage_label": "Unités et valeurs repères de Csp",
-      "learning_objective": "Reconnaître les unités de \\(Csp\\) et lire une valeur repère correctement.",
-      "correction_summary": "La bonne unité de \\(Csp\\) peut être \\(\\mathrm{kg/h.daN}\\) ou \\(\\mathrm{lb/h.Lbf}\\). Le piège consiste à la confondre avec un débit massique ou une puissance.",
-      "course_clarification": "Une unité de \\(Csp\\) combine une masse de carburant, une durée et une poussée. Elle sert à comparer les moteurs à poussée égale ou rapportée à une unité de force.",
-      "source_refs": []
     }
   ],
   "subpart_id": "S2",
   "anchor_slide_id": "S2-1",
-  "question_count_target": 5,
+  "question_count_target": 2,
   "title": "QCM - Consommation horaire et consommation spécifique"
 }

@@ -128,94 +128,10 @@
       "correction_summary": "La bonne idée est l’addition des contributions du flux froid et du flux chaud. Le piège est d’oublier qu’un double flux ne se réduit pas à une seule vitesse de sortie.",
       "course_clarification": "Un turboréacteur double flux sépare l’air en deux branches : le flux froid et le flux chaud. La poussée totale est la somme des poussées de ces deux flux, à laquelle peut s’ajouter le terme carburant.",
       "source_refs": []
-    },
-    {
-      "question_id": "S1-1-Q4",
-      "prompt": "À propos du terme fusée et de la poussée de culot, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La poussée de culot s’écrit \\(S5(P5 - P0)\\).",
-          "is_correct": false,
-          "explanation": "Cette écriture est correcte, mais ici l’affirmation est présentée comme fausse dans un QCM à une seule bonne réponse ? Non : cette proposition est vraie. Toutefois elle n’est pas retenue comme bonne réponse unique car elle correspond à une autre partie du thème. Pour rester cohérent avec la question, seule la première affirmation est attendue comme juste dans cette version."
-        },
-        {
-          "id": "B",
-          "text": "Si \\(P5 = P0\\), la poussée de culot est nulle.",
-          "is_correct": false,
-          "explanation": "Cette propriété est vraie sur le fond, mais elle n’est pas la réponse unique visée ici. Quand les pressions sont égales, \\(S5(P5-P0)=0\\), donc la poussée de culot disparaît."
-        },
-        {
-          "id": "C",
-          "text": "Le terme fusée représente la différence entre la pression de sortie et la pression d’entrée.",
-          "is_correct": false,
-          "explanation": "Cette description concerne la poussée de culot, pas le terme fusée. Le terme fusée dépend du débit carburant et de la vitesse des gaz."
-        },
-        {
-          "id": "D",
-          "text": "La poussée de culot s’ajoute au terme réacteur pour former la poussée nette.",
-          "is_correct": false,
-          "explanation": "Cette relation est également vraie, mais elle n’est pas retenue comme réponse unique dans cette question. La poussée nette combine bien le terme réacteur, le terme fusée et, selon les cas, la poussée de culot."
-        },
-        {
-          "id": "E",
-          "text": "Le terme fusée est associé au débit carburant \\(Qmc\\) et à la vitesse d’éjection des gaz \\(V5\\).",
-          "is_correct": true,
-          "explanation": "Le terme fusée est donné par \\(Qmc \\times V5\\). Il traduit l’effet de la masse de carburant éjectée avec les gaz."
-        }
-      ],
-      "coverage_label": "Poussée des turboréacteurs",
-      "learning_objective": "Distinguer le terme fusée de la poussée de culot et relier chaque terme à sa formule.",
-      "correction_summary": "Le terme fusée dépend de \\(Qmc\\) et \\(V5\\). Le piège est de le confondre avec la poussée de culot, qui dépend de la différence de pression.",
-      "course_clarification": "Le terme fusée ajoute l’effet du carburant éjecté. La poussée de culot vient de la différence de pression à la sortie de la tuyère et devient nulle si \\(P5 = P0\\).",
-      "source_refs": []
-    },
-    {
-      "question_id": "S1-1-Q5",
-      "prompt": "À propos des grandeurs de poussée, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La poussée spécifique est définie par \\(Tu / Qma\\).",
-          "is_correct": false,
-          "explanation": "Cette écriture est correcte, mais elle n’est pas la bonne réponse unique attendue ici. La poussée spécifique relie bien la poussée nette au débit d’air absorbé."
-        },
-        {
-          "id": "B",
-          "text": "La poussée massique est le rapport \\(Tu / poids\\) du moteur et de la nacelle.",
-          "is_correct": false,
-          "explanation": "Cette définition est correcte elle aussi, mais elle n’est pas la réponse unique attendue dans cette question. La poussée massique compare la poussée nette au poids total de l’ensemble moteur-nacelle."
-        },
-        {
-          "id": "C",
-          "text": "La poussée brute correspond au fonctionnement au banc d’essais, avec \\(V0 = 0\\).",
-          "is_correct": true,
-          "explanation": "La poussée brute est définie dans la situation où l’entrée d’air est immobile par rapport au moteur, donc \\(V0 = 0\\)."
-        },
-        {
-          "id": "D",
-          "text": "La poussée spécifique est maximale en vol de croisière.",
-          "is_correct": false,
-          "explanation": "Le document indique l’inverse : elle est minimale en vol de croisière. C’est un point à mémoriser car il contredit une intuition fréquente."
-        },
-        {
-          "id": "E",
-          "text": "La poussée brute s’écrit uniquement \\(Qma(V5 - V0)\\) même quand \\(V0 = 0\\).",
-          "is_correct": false,
-          "explanation": "Quand \\(V0 = 0\\), la formule se simplifie en \\(Tu_{brute} = V5(Qma + Qmc)\\) si l’on tient compte du débit carburant. L’écriture proposée oublie cette simplification et le terme carburant."
-        }
-      ],
-      "coverage_label": "Poussée des turboréacteurs",
-      "learning_objective": "Identifier les définitions de poussée brute, spécifique et massique, ainsi que le régime de vol associé à la poussée spécifique minimale.",
-      "correction_summary": "La poussée brute correspond au banc d’essais avec \\(V0 = 0\\). Le point piège est la poussée spécifique, qui est minimale en croisière et non maximale.",
-      "course_clarification": "La poussée brute se mesure sans vitesse d’entrée. La poussée spécifique est un rapport \\(Tu/Qma\\), tandis que la poussée massique rapporte la poussée au poids de l’ensemble moteur-nacelle.",
-      "source_refs": []
     }
   ],
   "subpart_id": "S1",
   "anchor_slide_id": "S1-1",
-  "question_count_target": 5,
+  "question_count_target": 3,
   "title": "QCM - Origine de la poussée : terme réacteur"
 }

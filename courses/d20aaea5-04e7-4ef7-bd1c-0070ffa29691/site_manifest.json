@@ -1,6 +1,6 @@
 {
   "site_build_version": 10,
-  "cache_token": "10-c9f1d4ccddc2",
+  "cache_token": "10-8f7542289cc8",
   "viewer_mode": "user",
   "page_count": 61,
   "slide_count": 30,
@@ -20,7 +20,7 @@
       "kind": "quiz",
       "badge": "QCM S1-1",
       "title": "QCM - Origine de la poussée : terme réacteur",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "3 questions - correction immédiate",
       "href": "slide-s1-1.html",
       "json_href": "slide-s1-1.json"
     },
@@ -74,7 +74,7 @@
       "kind": "quiz",
       "badge": "QCM S2-1",
       "title": "QCM - Consommation horaire et consommation spécifique",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "2 questions - correction immédiate",
       "href": "slide-s2-1.html",
       "json_href": "slide-s2-1.json"
     },
@@ -92,7 +92,7 @@
       "kind": "quiz",
       "badge": "QCM S2-2",
       "title": "QCM - Repères de consommation et surveillance moteur",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "3 questions - correction immédiate",
       "href": "slide-s2-2.html",
       "json_href": "slide-s2-2.json"
     },
@@ -128,7 +128,7 @@
       "kind": "quiz",
       "badge": "QCM S3-2",
       "title": "QCM - Puissance thermique réelle et puissance propulsive",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "3 questions - correction immédiate",
       "href": "slide-s3-2.html",
       "json_href": "slide-s3-2.json"
     },

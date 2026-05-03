@@ -4,90 +4,6 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "s1_s2_q1",
-      "prompt": "À propos de la page de couverture, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Le logo central correspond à l’acronyme IAAG, sans autre texte associé.",
-          "is_correct": false,
-          "explanation": "Le logo n’est pas seul : il est accompagné de l’intitulé « Institut Aéronautique Amaury de la Grange »."
-        },
-        {
-          "id": "B",
-          "text": "La page de couverture est sur fond bleu foncé intégral, sans zone blanche.",
-          "is_correct": false,
-          "explanation": "Le fond est blanc, avec seulement un bandeau horizontal bleu foncé au milieu."
-        },
-        {
-          "id": "C",
-          "text": "La mention « Présentée par: Wijdane Gaougaou » apparaît à gauche du bandeau.",
-          "is_correct": false,
-          "explanation": "Cette mention est placée à droite, dans un encadré bleu plus sombre."
-        },
-        {
-          "id": "D",
-          "text": "Le titre principal visible est « Économie-Gestion Bac Pro Aéronautique ».",
-          "is_correct": true,
-          "explanation": "Le bandeau et la couverture affichent bien ce titre, qui identifie la matière et le niveau du support."
-        },
-        {
-          "id": "E",
-          "text": "Aucun filigrane n’est visible sur cette page.",
-          "is_correct": false,
-          "explanation": "Un filigrane diagonal répété « IAAG - Institut Aéronautique Amaury de la Grange » recouvre la page."
-        }
-      ],
-      "coverage_label": "Couverture du support",
-      "learning_objective": "Identifier les éléments textuels et visuels de la page de couverture.",
-      "correction_summary": "La bonne réponse reprend le titre exact affiché sur la couverture. Le piège consiste à confondre le fond blanc avec le bandeau bleu et à mal placer la mention de présentation.",
-      "course_clarification": "Une couverture sert à identifier rapidement un support. Ici, il faut repérer le titre, le nom de la présentatrice et le logo IAAG, ainsi que le filigrane répété.",
-      "source_refs": []
-    },
-    {
-      "question_id": "s1_s2_q2",
-      "prompt": "À propos de la diapositive de présentation du module, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La diapositive contient six encadrés colorés organisés en deux rangées de trois.",
-          "is_correct": false,
-          "explanation": "Cette organisation en deux rangées de trois correspond bien à la page, donc l’affirmation est fausse si elle dit le contraire."
-        },
-        {
-          "id": "B",
-          "text": "Le module présenté s’intitule « L’individu dans l’organisation ».",
-          "is_correct": true,
-          "explanation": "Le titre centré de la diapositive annonce explicitement ce module."
-        },
-        {
-          "id": "C",
-          "text": "Le thème « Rémunération et parcours professionnels » fait partie des thèmes annoncés.",
-          "is_correct": false,
-          "explanation": "Ce thème figure bien parmi les six encadrés ; l’affirmation est donc fausse car elle nie une information présente."
-        },
-        {
-          "id": "D",
-          "text": "Le sommaire annonce uniquement des notions de mécanique aéronautique, sans aspect social ou juridique.",
-          "is_correct": false,
-          "explanation": "Le sommaire inclut aussi les droits et devoirs du salarié, le contrat de travail, la santé-sécurité-qualité et la rémunération."
-        },
-        {
-          "id": "E",
-          "text": "La page montre un tableau chiffré détaillé sur les salaires du secteur.",
-          "is_correct": false,
-          "explanation": "Aucun tableau ni donnée chiffrée n’apparaît : la page présente seulement un titre et des encadrés thématiques."
-        }
-      ],
-      "coverage_label": "Présentation du module",
-      "learning_objective": "Reconnaître le titre du module et la structure générale du sommaire.",
-      "correction_summary": "La bonne affirmation est celle qui reprend le nom du module. Le piège consiste à confondre une simple page de sommaire avec un tableau ou une liste de chiffres absents ici.",
-      "course_clarification": "Le module rassemble plusieurs thèmes liés à la place de la personne dans l’entreprise. La diapositive sert surtout à annoncer ces thèmes, pas à les développer.",
-      "source_refs": []
-    },
-    {
       "question_id": "s1_s2_q3",
       "prompt": "Parmi les métiers présentés, quelle affirmation est correcte ?",
       "difficulty": "easy",
@@ -216,6 +132,6 @@
   ],
   "subpart_id": "s1_s2",
   "anchor_slide_id": "s1_s2",
-  "question_count_target": 5,
+  "question_count_target": 3,
   "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »"
 }

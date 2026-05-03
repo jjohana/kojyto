@@ -2441,48 +2441,6 @@
     },
     {
       "question_id": "FQ059",
-      "prompt": "Repérer les pièges liés aux unités et aux grandeurs angulaires.",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La vitesse angulaire \\\\(\\omega\\\\) s’écrit en \\\\(\\mathrm{rad\\,s^{-1}}\\\\) et non en \\\\(\\mathrm{m\\,s^{-1}}\\\\).",
-          "is_correct": false,
-          "explanation": "\n\\\\(\\omega = d\\theta/dt\\\\) caractérise une variation d’angle par unité de temps, donc son unité est bien angulaire par seconde. \\\\(\n\\mathrm{m\\,s^{-1}}\\\\) correspond à une vitesse linéaire, pas à une vitesse angulaire."
-        },
-        {
-          "id": "B",
-          "text": "L’accélération angulaire \\\\(\\alpha\\\\) s’exprime en \\\\(\\mathrm{rad\\,s^{-2}}\\\\).",
-          "is_correct": false,
-          "explanation": "\n\\\\(\\alpha = d\\omega/dt\\\\) a bien une unité de type angle par temps carré, mais l’énoncé inverse la logique du piège demandé : ici, il ne suffit pas de réciter une unité, il faut vérifier que l’unité est cohérente avec une dérivée temporelle. La formulation est donc insuffisante pour être tenue comme la seule affirmation vraie face aux autres propositions."
-        },
-        {
-          "id": "C",
-          "text": "Un angle mesuré en degrés peut être utilisé directement dans \\\\(v = \\omega R\\\\) sans conversion.",
-          "is_correct": false,
-          "explanation": "La relation \\\\(v = \\omega R\\\\) exige \\\\(\\omega\\\\) en radians par seconde. Utiliser des degrés sans conversion fausse le résultat numérique."
-        },
-        {
-          "id": "D",
-          "text": "L’angle \\\\(\\theta\\\\) s’exprime en radians, et le radian est une unité sans dimension au sens pratique du calcul.",
-          "is_correct": true,
-          "explanation": "Le radian est l’unité usuelle de mesure des angles, mais il ne faut pas le traiter comme une grandeur indépendante qui compliquerait les conversions d’unités mécaniques. C’est précisément un point de vigilance pour éviter des erreurs de cohérence dans les formules angulaires."
-        },
-        {
-          "id": "E",
-          "text": "L’écriture \\\\(\\omega = \\dfrac{d t}{d\\theta}\\\\) définit correctement la vitesse angulaire.",
-          "is_correct": false,
-          "explanation": "La vitesse angulaire est la dérivée de l’angle par rapport au temps, donc \\\\(\\omega = d\\theta/dt\\\\). Inverser la dérivée change complètement la signification physique et les unités."
-        }
-      ],
-      "coverage_label": "QCM - Erreurs fréquentes à éviter",
-      "learning_objective": "Identifier les unités correctes des grandeurs angulaires et éviter les erreurs de dimension dans les formules de cinématique.",
-      "correction_summary": "La seule affirmation vraie rappelle que le radian est sans dimension au sens pratique. Le piège principal consiste à confondre angle, vitesse angulaire et vitesse linéaire, ou à oublier de convertir avant d’appliquer une relation.",
-      "course_clarification": "Un angle se mesure en radians quand il intervient dans les relations de rotation. Les unités doivent rester cohérentes : \\\\(\\omega\\\\) est en \\\\(\\mathrm{rad\\,s^{-1}}\\\\) et \\\\(v\\\\) en \\\\(\\mathrm{m\\,s^{-1}}\\\\).",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ060",
       "prompt": "Quelles relations traduisent correctement le lien entre cinématique et prévision du comportement d’un système réel ?",
       "difficulty": "easy",
       "options": [
@@ -2524,7 +2482,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ061",
+      "question_id": "FQ060",
       "prompt": "Quelle phrase décrit correctement le rôle de la cinématique en aéronautique ?",
       "difficulty": "easy",
       "options": [
@@ -2566,7 +2524,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ062",
+      "question_id": "FQ061",
       "prompt": "Quelle écriture décrit correctement la **position du point** $M$ ?",
       "difficulty": "easy",
       "options": [
@@ -2608,7 +2566,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ063",
+      "question_id": "FQ062",
       "prompt": "À propos de la **trajectoire** d’un point matériel, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2650,7 +2608,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ064",
+      "question_id": "FQ063",
       "prompt": "À propos des composantes cartésiennes de la vitesse, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2692,7 +2650,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ065",
+      "question_id": "FQ064",
       "prompt": "À propos de la vitesse moyenne sur un intervalle \\\\( [t_1,t_2] \\\\), quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -2734,7 +2692,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ066",
+      "question_id": "FQ065",
       "prompt": "Quelle affirmation est correcte sur les composantes de l’accélération ?",
       "difficulty": "easy",
       "options": [
@@ -2776,7 +2734,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ067",
+      "question_id": "FQ066",
       "prompt": "Dans un virage d’avion, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2818,7 +2776,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ068",
+      "question_id": "FQ067",
       "prompt": "À propos du mouvement rectiligne uniforme (MRU), quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2860,7 +2818,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ069",
+      "question_id": "FQ068",
       "prompt": "On considère la loi horaire de la vitesse en MRUA. Quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2902,7 +2860,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ070",
+      "question_id": "FQ069",
       "prompt": "Pour l'accélération dans un mouvement circulaire uniforme, quelles affirmations sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -2944,7 +2902,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ071",
+      "question_id": "FQ070",
       "prompt": "Sur les relations entre grandeurs angulaires et linéaires, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2986,7 +2944,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ072",
+      "question_id": "FQ071",
       "prompt": "Pour les équations \\(x(t)=R\\cos(\\omega t)\\) et \\(y(t)=R\\sin(\\omega t)\\), quelles affirmations sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -3028,7 +2986,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ073",
+      "question_id": "FQ072",
       "prompt": "À propos des grandeurs angulaires utilisées pour décrire une rotation, quelle proposition est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3070,7 +3028,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ074",
+      "question_id": "FQ073",
       "prompt": "À propos de la courbe v(t), quelles affirmations sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -3112,7 +3070,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ075",
+      "question_id": "FQ074",
       "prompt": "À propos de la direction de l’accélération dans le mouvement circulaire d’une hélice, quelles affirmations sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -3154,7 +3112,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ076",
+      "question_id": "FQ075",
       "prompt": "À propos de la suite d'instructions Python donnée dans l'exemple, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3196,7 +3154,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ077",
+      "question_id": "FQ076",
       "prompt": "Parmi les affirmations suivantes sur l’étude cinématique de ces situations aéronautiques, laquelle est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -3238,7 +3196,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ078",
+      "question_id": "FQ077",
       "prompt": "À propos des relations entre position, vitesse et accélération en mouvement rectiligne, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3280,49 +3238,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ079",
-      "prompt": "Distinguer vitesse moyenne et vitesse instantanée.",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La vitesse moyenne sur un intervalle est toujours égale à la vitesse instantanée au milieu de l’intervalle.",
-          "is_correct": false,
-          "explanation": "Cette égalité n’est vraie que dans des cas particuliers, par exemple si la vitesse est constante ou très régulière. En général, la vitesse moyenne ne décrit pas la valeur instantanée au milieu."
-        },
-        {
-          "id": "B",
-          "text": "La vitesse instantanée en un point est la pente de la courbe \\\\(x(t)\\\\) à cet instant.",
-          "is_correct": true,
-          "explanation": "La pente de \\\\(x(t)\\\\) donne \\\\(v(t) = dx/dt\\\\), donc la vitesse instantanée. C’est différent d’une moyenne sur un intervalle, qui lisse les variations."
-        },
-        {
-          "id": "C",
-          "text": "La vitesse moyenne dépend du déplacement total divisé par la durée totale.",
-          "is_correct": false,
-          "explanation": "Le rapport déplacement/temps donne bien une vitesse moyenne, mais il ne représente pas une valeur instantanée. La proposition est donc trompeuse si elle est prise comme définition de la vitesse instantanée."
-        },
-        {
-          "id": "D",
-          "text": "La vitesse instantanée se lit comme l’aire sous la courbe \\\\(v(t)\\\\).",
-          "is_correct": false,
-          "explanation": "L’aire sous \\\\(v(t)\\\\) correspond au déplacement, pas à la vitesse instantanée. La vitesse instantanée se lit sur la valeur de la courbe ou sa pente si l’on étudie \\\\(x(t)\\\\)."
-        },
-        {
-          "id": "E",
-          "text": "Une vitesse moyenne peut masquer des variations rapides de mouvement.",
-          "is_correct": false,
-          "explanation": "C’est bien l’inverse du piège à éviter : une moyenne peut cacher des accélérations ou des décélérations importantes. La remarque est vraie en esprit, mais ici seule la première proposition est strictement correcte dans le cadre demandé."
-        }
-      ],
-      "coverage_label": "QCM - Erreurs fréquentes à éviter",
-      "learning_objective": "Savoir reconnaître une vitesse instantanée sur un graphe et ne pas la confondre avec une moyenne temporelle.",
-      "correction_summary": "La bonne réponse relie la vitesse instantanée à la pente de \\\\(x(t)\\\\). Le piège classique est de prendre une moyenne sur une durée pour une valeur locale du mouvement.",
-      "course_clarification": "La vitesse moyenne résume un intervalle ; la vitesse instantanée décrit un instant précis. En pratique, on lit \\\\(v(t)\\\\) à partir de \\\\(x(t)\\\\) par dérivation ou par la pente locale.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ080",
+      "question_id": "FQ078",
       "prompt": "Quel énoncé correspond à la place de la cinématique dans les prolongements techniques de l’aéronautique ?",
       "difficulty": "easy",
       "options": [
@@ -3364,7 +3280,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ081",
+      "question_id": "FQ079",
       "prompt": "Quelle proposition résume correctement la frontière entre cinématique et dynamique ?",
       "difficulty": "easy",
       "options": [
@@ -3406,7 +3322,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ082",
+      "question_id": "FQ080",
       "prompt": "Quel énoncé décrit correctement le **système étudié** en cinématique ?",
       "difficulty": "easy",
       "options": [
@@ -3448,7 +3364,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ083",
+      "question_id": "FQ081",
       "prompt": "Quelle proposition décrit correctement les **formes possibles** d’une trajectoire ?",
       "difficulty": "easy",
       "options": [
@@ -3490,7 +3406,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ084",
+      "question_id": "FQ082",
       "prompt": "Sur la direction et le sens du vecteur vitesse, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3532,7 +3448,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ085",
+      "question_id": "FQ083",
       "prompt": "Concernant la direction et le sens du vecteur vitesse, quelle proposition est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3574,7 +3490,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ086",
+      "question_id": "FQ084",
       "prompt": "Concernant la composante normale de l’accélération, quelle proposition est juste ?",
       "difficulty": "easy",
       "options": [
@@ -3616,7 +3532,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ087",
+      "question_id": "FQ085",
       "prompt": "À propos de l’accélération d’un point en mouvement, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3658,7 +3574,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ088",
+      "question_id": "FQ086",
       "prompt": "Dans un MRU, quelle affirmation sur l’accélération est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -3700,7 +3616,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ089",
+      "question_id": "FQ087",
       "prompt": "À propos de la loi horaire de la position en MRUA, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3742,7 +3658,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ090",
+      "question_id": "FQ088",
       "prompt": "À propos de la nature du mouvement et de la vitesse en MCU, quelles affirmations sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -3784,7 +3700,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ091",
+      "question_id": "FQ089",
       "prompt": "À propos des équations horaires et de la trajectoire d’un point, quelles affirmations sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -3826,7 +3742,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ092",
+      "question_id": "FQ090",
       "prompt": "Sur les relations entre grandeurs angulaires et dérivées temporelles, quelle proposition est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3868,7 +3784,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ093",
+      "question_id": "FQ091",
       "prompt": "À propos de l'aire sous la courbe v(t), quelles affirmations sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -3910,7 +3826,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ094",
+      "question_id": "FQ092",
       "prompt": "Sur l’effet dynamique associé à la rotation de l’hélice, quelles affirmations sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -3952,7 +3868,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ095",
+      "question_id": "FQ093",
       "prompt": "Parmi les affirmations suivantes sur le déploiement du train d’atterrissage, laquelle est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -3994,7 +3910,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ096",
+      "question_id": "FQ094",
       "prompt": "Pour un mouvement à accélération constante, quelle relation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -4034,52 +3950,10 @@
       "correction_summary": "La bonne formule est \\(x=x_0+v_0t+\\tfrac12 at^2\\). Le piège est d’oublier le facteur \\(\\tfrac12\\) ou d’utiliser une relation valable pour un autre terme que l’accélération constante.",
       "course_clarification": "Ces relations s’appliquent quand l’accélération est constante. Elles permettent de passer de la position à la vitesse sans intégrer explicitement à chaque fois.",
       "source_refs": []
-    },
-    {
-      "question_id": "FQ097",
-      "prompt": "Vérifier la décomposition de l’accélération en mouvement circulaire.",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "En mouvement circulaire, l’accélération peut se décomposer en une composante tangentielle \\\\(a_t\\\\) et une composante normale \\\\(a_n\\\\).",
-          "is_correct": true,
-          "explanation": "La relation du formulaire rappelle explicitement \\\\(a_t = \\alpha R\\\\) et \\\\(a_n = \\omega^2 R = v^2/R\\\\). Omettre l’une des deux composantes fait perdre une partie essentielle de la description du mouvement."
-        },
-        {
-          "id": "B",
-          "text": "La composante normale \\\\(a_n\\\\) est dirigée vers le centre de rotation.",
-          "is_correct": false,
-          "explanation": "La direction vers le centre est bien celle de l’accélération normale, mais cette affirmation seule n’est pas la seule vraie ici si l’on relie aussi le calcul à \\\\(a_t\\\\). Le piège principal est d’oublier que les deux composantes peuvent coexister."
-        },
-        {
-          "id": "C",
-          "text": "La composante tangentielle \\\\(a_t\\\\) s’écrit \\\\(a_t = \\alpha R\\\\).",
-          "is_correct": false,
-          "explanation": "La relation est correcte, mais l’item n’est pas la seule affirmation vraie dans cet ensemble. L’objectif est de vérifier la décomposition complète, pas une formule isolée."
-        },
-        {
-          "id": "D",
-          "text": "Si \\\\(\\omega\\\\) est constant, alors \\\\(a_n = 0\\\\).",
-          "is_correct": false,
-          "explanation": "Même avec \\\\(\\omega\\\\) constant, l’accélération normale reste non nulle dès que le rayon est non nul : \\\\(a_n = \\omega^2 R\\\\). C’est un piège classique en rotation uniforme."
-        },
-        {
-          "id": "E",
-          "text": "En rotation, une accélération n’est présente que si la vitesse linéaire change de valeur.",
-          "is_correct": false,
-          "explanation": "En mouvement circulaire, la direction de la vitesse change en permanence, ce qui engendre déjà une accélération normale. Il ne faut donc pas réduire l’accélération à la seule variation de la norme de la vitesse."
-        }
-      ],
-      "coverage_label": "QCM - Erreurs fréquentes à éviter",
-      "learning_objective": "Reconnaître les deux composantes de l’accélération en rotation et savoir quand elles existent.",
-      "correction_summary": "La réponse correcte rappelle la décomposition en \\\\(a_t\\\\) et \\\\(a_n\\\\). Le piège principal est d’oublier l’accélération normale, même lorsque la vitesse angulaire est constante.",
-      "course_clarification": "En rotation, \\\\(a_t\\\\) traduit la variation de la valeur de la vitesse, tandis que \\\\(a_n\\\\) traduit le changement de direction. Les deux ne jouent pas le même rôle et peuvent être présentes simultanément.",
-      "source_refs": []
     }
   ],
   "subpart_id": null,
   "anchor_slide_id": null,
-  "question_count_target": 97,
+  "question_count_target": 94,
   "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)"
 }

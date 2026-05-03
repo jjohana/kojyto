@@ -4,48 +4,6 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "s11_s12_q1",
-      "prompt": "Quelle affirmation décrit correctement la fonction de la page d’ouverture « Droits et devoirs du salarié / Contrat de travail » ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Elle présente un tableau comparant plusieurs types de contrats de travail.",
-          "is_correct": false,
-          "explanation": "Aucun tableau comparatif n’est visible sur cette page d’ouverture ; elle sert surtout à annoncer le thème."
-        },
-        {
-          "id": "B",
-          "text": "Elle détaille les procédures de maintenance aéronautique et les essais moteurs.",
-          "is_correct": false,
-          "explanation": "Ces éléments relèvent d’autres pages du support, pas de la page d’ouverture sur les droits et devoirs du salarié."
-        },
-        {
-          "id": "C",
-          "text": "Elle expose déjà les sanctions possibles en cas de faute disciplinaire.",
-          "is_correct": false,
-          "explanation": "La page d’ouverture ne développe pas encore les règles disciplinaires ; elle prépare seulement la transition vers la relation de travail."
-        },
-        {
-          "id": "D",
-          "text": "Elle sert de page de titre pour annoncer la partie sur les droits et devoirs du salarié et le contrat de travail.",
-          "is_correct": true,
-          "explanation": "La page d’ouverture a bien une fonction d’introduction : elle présente le thème général avant d’entrer dans les contenus détaillés."
-        },
-        {
-          "id": "E",
-          "text": "Elle contient un schéma technique sur les relations hiérarchiques dans l’entreprise.",
-          "is_correct": false,
-          "explanation": "La page est décrite comme une page de titre sans schéma ni illustration technique."
-        }
-      ],
-      "coverage_label": "Page d’ouverture",
-      "learning_objective": "Identifier le rôle d’une page de titre ou d’ouverture dans une partie du programme.",
-      "correction_summary": "La bonne idée est celle d’une page de titre qui annonce le thème. Le piège consiste à lui attribuer des contenus détaillés qui appartiennent aux pages suivantes.",
-      "course_clarification": "Une page d’ouverture présente le sujet et prépare la lecture. Elle n’apporte pas encore les règles complètes : elle introduit la transition vers la relation salarié-entreprise.",
-      "source_refs": []
-    },
-    {
       "question_id": "s11_s12_q2",
       "prompt": "À propos de la relation entre employeur et salarié, quelle proposition est correcte ?",
       "difficulty": "easy",
@@ -216,6 +174,6 @@
   ],
   "subpart_id": "s11_s12",
   "anchor_slide_id": "s11_s12",
-  "question_count_target": 5,
+  "question_count_target": 4,
   "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »"
 }

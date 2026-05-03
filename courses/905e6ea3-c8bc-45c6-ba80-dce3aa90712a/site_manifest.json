@@ -1,10 +1,10 @@
 {
   "site_build_version": 10,
-  "cache_token": "10-51ae31e1e76a",
+  "cache_token": "10-88874902e318",
   "viewer_mode": "user",
-  "page_count": 41,
+  "page_count": 39,
   "slide_count": 20,
-  "quiz_count": 21,
+  "quiz_count": 19,
   "pages": [
     {
       "page_id": "s1_s2",
@@ -20,7 +20,7 @@
       "kind": "quiz",
       "badge": "QCM s1_s2",
       "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "3 questions - correction immédiate",
       "href": "slide-s1-s2.html",
       "json_href": "slide-s1-s2.json"
     },
@@ -182,7 +182,7 @@
       "kind": "quiz",
       "badge": "QCM s11_s12",
       "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »",
-      "subtitle": "5 questions - correction immédiate",
+      "subtitle": "4 questions - correction immédiate",
       "href": "slide-s11-s12.html",
       "json_href": "slide-s11-s12.json"
     },
@@ -250,15 +250,6 @@
       "json_href": "s16.json"
     },
     {
-      "page_id": "slide::s16",
-      "kind": "quiz",
-      "badge": "QCM s16",
-      "title": "QCM - TP – L’individu dans l’organisation",
-      "subtitle": "5 questions - correction immédiate",
-      "href": "slide-s16.html",
-      "json_href": "slide-s16.json"
-    },
-    {
       "page_id": "s17",
       "kind": "slide",
       "badge": "s17",
@@ -266,15 +257,6 @@
       "subtitle": "Repérer l’entrée dans la partie consacrée aux exigences de santé, sécurité et qualité.",
       "href": "s17.html",
       "json_href": "s17.json"
-    },
-    {
-      "page_id": "slide::s17",
-      "kind": "quiz",
-      "badge": "QCM s17",
-      "title": "QCM - Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »",
-      "subtitle": "5 questions - correction immédiate",
-      "href": "slide-s17.html",
-      "json_href": "slide-s17.json"
     },
     {
       "page_id": "s18",

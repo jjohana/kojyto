@@ -89,44 +89,44 @@
     },
     {
       "question_id": "FQ003",
-      "prompt": "À propos de la consommation spécifique \\(Csp\\), quelles affirmations sont exactes ?",
+      "prompt": "À propos de la consommation horaire \\(Ch\\), quelles affirmations sont exactes ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "\\(Csp\\) est la masse de carburant nécessaire pour fournir une poussée de 1 newton pendant une heure.",
-          "is_correct": true,
-          "explanation": "C’est la définition donnée : la consommation spécifique rapporte la consommation de carburant à la poussée fournie pendant une durée d’une heure."
+          "text": "\\(Ch\\) est la masse de carburant nécessaire pour produire une poussée de 1 newton pendant une heure.",
+          "is_correct": false,
+          "explanation": "Cette définition correspond à la consommation spécifique \\(Csp\\), pas à la consommation horaire."
         },
         {
           "id": "B",
-          "text": "\\(Csp\\) est identique à la consommation horaire \\(Ch\\).",
+          "text": "\\(Ch\\) s’exprime uniquement en newtons.",
           "is_correct": false,
-          "explanation": "\\(Ch\\) est un débit de carburant, tandis que \\(Csp\\) rapporte ce carburant à la poussée. Les deux indicateurs n’ont donc pas le même sens physique."
+          "explanation": "Le newton est une unité de force, alors que \\(Ch\\) est une masse de carburant par unité de temps, donc plutôt en kg/h ou lb/h."
         },
         {
           "id": "C",
-          "text": "\\(Csp\\) s’exprime typiquement en kg/h.daN ou en lb/h.Lbf.",
+          "text": "\\(Ch\\) est directement obtenue à partir du débit carburant \\(Qmc\\) en multipliant par 3600 quand \\(Qmc\\) est en kg/s.",
           "is_correct": false,
-          "explanation": "Cette écriture d’unités est justement celle associée à \\(Csp\\), mais une seule affirmation doit être vraie et la question cherche ici une définition, pas seulement l’unité."
+          "explanation": "La relation \\(Ch = Qmc \\times 3600\\) est juste, mais ici l’affirmation mélange une bonne relation avec une proposition qui prétend définir \\(Ch\\) comme une poussée ; une seule affirmation doit être vraie."
         },
         {
           "id": "D",
-          "text": "\\(Csp\\) permet de comparer les turboréacteurs entre eux.",
-          "is_correct": false,
-          "explanation": "Cette propriété est correcte en soi, mais elle décrit l’usage de \\(Csp\\) plutôt que sa définition. La comparaison est possible parce que l’indicateur rapporte la consommation à la poussée."
+          "text": "\\(Ch\\) correspond à la masse de carburant consommée en 1 heure à un régime donné.",
+          "is_correct": true,
+          "explanation": "La consommation horaire est bien définie comme une masse de carburant rapportée à une durée d’une heure pour un régime donné."
         },
         {
           "id": "E",
-          "text": "\\(Csp\\) dépend uniquement du débit carburant et jamais de la poussée.",
+          "text": "\\(Ch\\) sert à comparer les turboréacteurs entre eux sur la base de la poussée délivrée.",
           "is_correct": false,
-          "explanation": "C’est l’inverse de la définition : \\(Csp\\) met justement en relation le carburant consommé et la poussée fournie."
+          "explanation": "La comparaison des moteurs entre eux repose sur la consommation spécifique \\(Csp\\), qui rapporte le carburant à la poussée. \\(Ch\\) dépend seulement du débit carburant."
         }
       ],
       "coverage_label": "QCM - Consommation horaire et consommation spécifique",
-      "learning_objective": "Reconnaître la définition et le rôle de \\(Csp\\).",
-      "correction_summary": "La bonne affirmation donne la définition de \\(Csp\\) comme carburant nécessaire pour produire une poussée donnée pendant une heure. Le piège est de le confondre avec \\(Ch\\), qui ne rapporte pas la consommation à la poussée.",
-      "course_clarification": "\\(Csp\\) est un indicateur de performance propulsive. Plus il est faible, plus le moteur consomme peu de carburant pour produire une même poussée.",
+      "learning_objective": "Identifier la définition de \\(Ch\\) et la distinguer de la consommation spécifique.",
+      "correction_summary": "La seule affirmation vraie est celle qui donne la définition de \\(Ch\\) comme masse de carburant consommée en une heure. Le piège classique consiste à confondre \\(Ch\\) avec \\(Csp\\), qui rapporte le carburant à la poussée.",
+      "course_clarification": "\\(Ch\\) mesure un débit de carburant ramené à l’heure. Il renseigne sur la quantité brûlée, sans intégrer la poussée produite.",
       "source_refs": []
     },
     {
@@ -173,44 +173,44 @@
     },
     {
       "question_id": "FQ005",
-      "prompt": "À propos des grandeurs de poussée, quelle affirmation est correcte ?",
+      "prompt": "Dans l’exemple numérique, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La poussée spécifique est définie par \\(Tu / Qma\\).",
+          "text": "Avec les mêmes données, la poussée vaut \\(3\\,000\\,N\\).",
           "is_correct": false,
-          "explanation": "Cette écriture est correcte, mais elle n’est pas la bonne réponse unique attendue ici. La poussée spécifique relie bien la poussée nette au débit d’air absorbé."
+          "explanation": "Le résultat est dix fois plus grand : \\(30\\,000\\,N\\). La valeur \\(3\\,000\\) correspond à une erreur de calcul ou d’unité."
         },
         {
           "id": "B",
-          "text": "La poussée massique est le rapport \\(Tu / poids\\) du moteur et de la nacelle.",
-          "is_correct": false,
-          "explanation": "Cette définition est correcte elle aussi, mais elle n’est pas la réponse unique attendue dans cette question. La poussée massique compare la poussée nette au poids total de l’ensemble moteur-nacelle."
+          "text": "Avec \\(Qma = 75\\,kg/s\\), \\(V0 = 250\\,m/s\\) et \\(V5 = 650\\,m/s\\), la poussée vaut \\(30\\,000\\,N\\).",
+          "is_correct": true,
+          "explanation": "On applique directement \\(Tu = Qma(V5 - V0) = 75 \\times (650 - 250) = 75 \\times 400 = 30\\,000\\,N\\)."
         },
         {
           "id": "C",
-          "text": "La poussée brute correspond au fonctionnement au banc d’essais, avec \\(V0 = 0\\).",
-          "is_correct": true,
-          "explanation": "La poussée brute est définie dans la situation où l’entrée d’air est immobile par rapport au moteur, donc \\(V0 = 0\\)."
+          "text": "La différence de vitesse à utiliser est \\(250 - 650 = -400\\,m/s\\).",
+          "is_correct": false,
+          "explanation": "La vitesse de sortie est supérieure à la vitesse d’entrée, donc la différence correcte est \\(650 - 250 = 400\\,m/s\\). Le signe négatif ferait apparaître une poussée dans le mauvais sens."
         },
         {
           "id": "D",
-          "text": "La poussée spécifique est maximale en vol de croisière.",
+          "text": "Le résultat de l’exemple s’écrit \\(30\\,000\\,kg\\).",
           "is_correct": false,
-          "explanation": "Le document indique l’inverse : elle est minimale en vol de croisière. C’est un point à mémoriser car il contredit une intuition fréquente."
+          "explanation": "Le kilogramme mesure une masse, pas une force. Ici, le calcul donne une poussée, donc une unité de newton."
         },
         {
           "id": "E",
-          "text": "La poussée brute s’écrit uniquement \\(Qma(V5 - V0)\\) même quand \\(V0 = 0\\).",
+          "text": "La conversion en daN donne \\(30\\,000\\,daN\\).",
           "is_correct": false,
-          "explanation": "Quand \\(V0 = 0\\), la formule se simplifie en \\(Tu_{brute} = V5(Qma + Qmc)\\) si l’on tient compte du débit carburant. L’écriture proposée oublie cette simplification et le terme carburant."
+          "explanation": "Comme \\(1\\,daN = 10\\,N\\), \\(30\\,000\\,N\\) correspondent à \\(3\\,000\\,daN\\), pas à \\(30\\,000\\,daN\\)."
         }
       ],
       "coverage_label": "QCM - Origine de la poussée : terme réacteur",
-      "learning_objective": "Identifier les définitions de poussée brute, spécifique et massique, ainsi que le régime de vol associé à la poussée spécifique minimale.",
-      "correction_summary": "La poussée brute correspond au banc d’essais avec \\(V0 = 0\\). Le point piège est la poussée spécifique, qui est minimale en croisière et non maximale.",
-      "course_clarification": "La poussée brute se mesure sans vitesse d’entrée. La poussée spécifique est un rapport \\(Tu/Qma\\), tandis que la poussée massique rapporte la poussée au poids de l’ensemble moteur-nacelle.",
+      "learning_objective": "Réaliser un calcul simple de poussée à partir du débit massique et des vitesses.",
+      "correction_summary": "Le calcul correct donne \\(30\\,000\\,N\\), soit \\(3\\,000\\,daN\\). Le piège classique est l’erreur de différence de vitesses ou de conversion d’unité.",
+      "course_clarification": "On applique la formule sans autre correction : \\(Tu = Qma(V5 - V0)\\). La conversion \\(N\\) vers \\(daN\\) se fait en divisant par 10.",
       "source_refs": []
     },
     {
@@ -1433,44 +1433,44 @@
     },
     {
       "question_id": "FQ035",
-      "prompt": "À propos du terme réacteur, quelle affirmation est correcte ?",
+      "prompt": "Concernant la poussée d’un turboréacteur double flux, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "La poussée diminue quand la vitesse de sortie augmente, quelle que soit la vitesse d’entrée.",
-          "is_correct": false,
-          "explanation": "La vitesse de sortie intervient par la différence \\(V5 - V0\\). Si \\(V5\\) augmente à \\(V0\\) fixé, la poussée augmente au lieu de diminuer."
+          "text": "La poussée totale est la somme des poussées du flux froid et du flux chaud.",
+          "is_correct": true,
+          "explanation": "Le double flux additionne les contributions de chaque flux. La poussée totale résulte donc des deux termes, froid et chaud."
         },
         {
           "id": "B",
-          "text": "Le terme réacteur dépend uniquement du débit carburant injecté dans le moteur.",
+          "text": "La poussée totale ne dépend que du flux chaud.",
           "is_correct": false,
-          "explanation": "Le débit carburant intervient dans le terme fusée, pas dans l’expression du terme réacteur. Le terme réacteur est lié au débit d’air et aux vitesses d’entrée et de sortie."
+          "explanation": "Le flux froid contribue aussi à la poussée. Le double flux se distingue justement par la prise en compte des deux branches."
         },
         {
           "id": "C",
-          "text": "L’expression du terme réacteur s’écrit \\(Tu = Qma(V0 - V5)\\).",
+          "text": "Le flux froid et le flux chaud sont traités par une seule vitesse de sortie unique dans la formule.",
           "is_correct": false,
-          "explanation": "Le bon signe est \\(V5 - V0\\), car la poussée vient de l’augmentation de quantité de mouvement vers l’arrière. Inverser l’ordre des vitesses change le sens de la force."
+          "explanation": "La formule distingue deux vitesses de sortie, \\(V5''\\) pour le flux froid et \\(V5'\\) pour le flux chaud. Les deux flux ne sortent donc pas avec la même vitesse dans l’écriture donnée."
         },
         {
           "id": "D",
-          "text": "La poussée est proportionnelle au débit massique d’air et à l’écart de vitesse entre la sortie et l’entrée du moteur.",
-          "is_correct": true,
-          "explanation": "C’est exactement la relation donnée par le terme réacteur : \\(Tu = Qma(V5 - V0)\\). Plus le débit d’air et l’augmentation de vitesse sont grands, plus la poussée augmente."
+          "text": "La poussée totale d’un double flux s’écrit uniquement \\(Qma(V5 - V0)\\).",
+          "is_correct": false,
+          "explanation": "Cette écriture ne correspond qu’au terme réacteur simple. Le double flux demande la somme des contributions de chaque flux, avec des débits et des vitesses distincts."
         },
         {
           "id": "E",
-          "text": "La poussée s’exprime en kilogrammes puisque l’on parle d’un débit massique.",
+          "text": "Le débit carburant n’intervient jamais dans l’expression de la poussée d’un double flux.",
           "is_correct": false,
-          "explanation": "Le débit massique s’exprime en \\(kg/s\\), mais la poussée est une force. Son unité est le newton \\(N\\), éventuellement le daN."
+          "explanation": "Le terme fusée \\(Qmc \\times V5\\) est ajouté à la poussée nette. Il intervient donc aussi dans l’écriture donnée pour le double flux."
         }
       ],
       "coverage_label": "QCM - Origine de la poussée : terme réacteur",
-      "learning_objective": "Identifier l’expression de base de la poussée et interpréter le rôle du débit massique et des vitesses.",
-      "correction_summary": "La bonne relation est \\(Tu = Qma(V5 - V0)\\). Le piège principal consiste à confondre débit massique et force, ou à inverser l’ordre des vitesses.",
-      "course_clarification": "Le terme réacteur traduit la variation de quantité de mouvement de l’air entre l’entrée et la sortie. \\(Qma\\) est un débit massique en \\(kg/s\\), tandis que \\(Tu\\) est une force en newtons.",
+      "learning_objective": "Reconnaître la structure additive de la poussée dans un turboréacteur double flux.",
+      "correction_summary": "La bonne idée est l’addition des contributions du flux froid et du flux chaud. Le piège est d’oublier qu’un double flux ne se réduit pas à une seule vitesse de sortie.",
+      "course_clarification": "Un turboréacteur double flux sépare l’air en deux branches : le flux froid et le flux chaud. La poussée totale est la somme des poussées de ces deux flux, à laquelle peut s’ajouter le terme carburant.",
       "source_refs": []
     },
     {
@@ -2525,44 +2525,44 @@
     },
     {
       "question_id": "FQ061",
-      "prompt": "À propos de la consommation spécifique Csp, quelle proposition est correcte ?",
+      "prompt": "À propos des valeurs repères de consommation spécifique citées, quelle proposition est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Elle représente la masse de carburant nécessaire pour fournir une poussée de 1 newton pendant une heure.",
-          "is_correct": true,
-          "explanation": "Csp est définie comme une masse de carburant rapportée à une poussée unitaire sur une durée d’une heure. C’est précisément ce qui permet de comparer des moteurs entre eux."
+          "text": "Le CFM56-5A1 est donné à 0,84 lb/h.lbf pour 17 500 lbf.",
+          "is_correct": false,
+          "explanation": "Cette valeur correspond au PW JT4 sur le support, pas au CFM56-5A1. Le CFM56-5A1 est associé à 0,33 lb/h.lbf pour 25 000 lbf."
         },
         {
           "id": "B",
-          "text": "Elle s’exprime en kg/h.daN ou en lb/h.lbf.",
+          "text": "Le GE90-90 est donné à 0,33 lb/h.lbf pour 25 000 lbf.",
           "is_correct": false,
-          "explanation": "Cette proposition est vraie sur les unités, mais elle n’est pas la seule correcte ici ; or la question demande une seule affirmation vraie. Ici, la bonne réponse vise la définition, pas seulement l’unité."
+          "explanation": "Cette association est celle du CFM56-5A1, pas du GE90-90. Le GE90-90 est donné à 0,45 lb/h.lbf pour 90 000 lbf."
         },
         {
           "id": "C",
-          "text": "Elle est égale à Ch / Tu.",
+          "text": "La consommation spécifique sert à comparer des moteurs de même architecture uniquement.",
           "is_correct": false,
-          "explanation": "La relation donnée est l’inverse : Csp = Tu / Ch dans le support fourni. Confondre le sens du rapport change complètement l’interprétation physique."
+          "explanation": "Le document dit qu’elle permet de comparer les turboréacteurs entre eux de manière générale. Elle n’est pas limitée aux moteurs d’une seule architecture."
         },
         {
           "id": "D",
-          "text": "Elle mesure uniquement la quantité de carburant consommée par minute.",
+          "text": "Une valeur de Csp plus élevée signifie automatiquement une meilleure efficacité.",
           "is_correct": false,
-          "explanation": "Csp n’est pas une consommation horaire brute ni une consommation par minute. Elle rapporte la consommation à la poussée fournie."
+          "explanation": "C’est l’inverse de l’interprétation habituelle : à poussée comparable, une consommation spécifique plus faible traduit en général une meilleure efficacité."
         },
         {
           "id": "E",
-          "text": "Elle ne permet pas de comparer des turboréacteurs entre eux.",
-          "is_correct": false,
-          "explanation": "C’est faux : l’un des intérêts majeurs de Csp est justement la comparaison des turboréacteurs à poussée différente."
+          "text": "Le Safran M88 est donné à 1,8 kg/h.daN au décollage, avec ou sans PC.",
+          "is_correct": true,
+          "explanation": "Le document indique bien 1,8 kg/h.daN au décollage dans les deux cas cités : à sec pour 5 000 daN et avec PC pour 7 500 daN."
         }
       ],
       "coverage_label": "QCM - Repères de consommation et surveillance moteur",
-      "learning_objective": "Reconnaître la définition de Csp, son rôle comparatif et éviter la confusion avec Ch.",
-      "correction_summary": "La bonne réponse est la définition de Csp comme consommation rapportée à une poussée unitaire pendant une heure. Le piège est de la prendre pour une consommation brute ou d’inverser le rapport avec Ch.",
-      "course_clarification": "Csp est une grandeur de performance propulsive. Elle sert à comparer des moteurs en ramenant la consommation à la poussée fournie.",
+      "learning_objective": "Associer correctement les exemples de moteurs à leurs valeurs repères de Csp.",
+      "correction_summary": "La bonne proposition reprend fidèlement la valeur du M88 indiquée au décollage. Le piège principal est d’échanger les couples moteur-valeur, très proches visuellement.",
+      "course_clarification": "Les exemples servent de repères numériques. Ils ne se mélangent pas : chaque moteur est associé à sa propre valeur de Csp et à sa poussée indiquée.",
       "source_refs": []
     },
     {
@@ -2609,48 +2609,6 @@
     },
     {
       "question_id": "FQ063",
-      "prompt": "À propos des unités et des valeurs repères de consommation spécifique, quelles affirmations sont exactes ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Pour le Safran M88 au décollage, la valeur à sec indiquée est \\(1{,}8\\,\\mathrm{kg/h.daN}\\) pour \\(5000\\,\\mathrm{daN}\\).",
-          "is_correct": false,
-          "explanation": "La valeur est bien citée, mais elle n’est pas la seule affirmation correcte dans ce QCM et ne doit pas être prise comme réponse unique supplémentaire."
-        },
-        {
-          "id": "B",
-          "text": "La consommation spécifique s’exprime en watts, comme une puissance.",
-          "is_correct": false,
-          "explanation": "Le watt mesure une puissance, alors que \\(Csp\\) est un rapport entre carburant consommé et poussée. Les unités ne sont donc pas celles d’une puissance."
-        },
-        {
-          "id": "C",
-          "text": "Une unité usuelle de \\(Csp\\) est \\(\\mathrm{kg/h.daN}\\).",
-          "is_correct": true,
-          "explanation": "L’unité \\(\\mathrm{kg/h.daN}\\) est bien donnée pour exprimer une masse de carburant par heure et par décanewton de poussée."
-        },
-        {
-          "id": "D",
-          "text": "L’unité \\(\\mathrm{lb/h.Lbf}\\) est cohérente avec la consommation spécifique.",
-          "is_correct": false,
-          "explanation": "Cette unité est bien donnée dans le support, mais elle n’est pas la seule réponse attendue ici. Elle confirme simplement l’expression de \\(Csp\\) en système anglo-saxon."
-        },
-        {
-          "id": "E",
-          "text": "\\(Csp\\) s’exprime en kilogrammes par seconde.",
-          "is_correct": false,
-          "explanation": "Les kilogrammes par seconde correspondent à un débit massique comme \\(Qmc\\), pas à une consommation spécifique rapportée à la poussée."
-        }
-      ],
-      "coverage_label": "QCM - Consommation horaire et consommation spécifique",
-      "learning_objective": "Reconnaître les unités de \\(Csp\\) et lire une valeur repère correctement.",
-      "correction_summary": "La bonne unité de \\(Csp\\) peut être \\(\\mathrm{kg/h.daN}\\) ou \\(\\mathrm{lb/h.Lbf}\\). Le piège consiste à la confondre avec un débit massique ou une puissance.",
-      "course_clarification": "Une unité de \\(Csp\\) combine une masse de carburant, une durée et une poussée. Elle sert à comparer les moteurs à poussée égale ou rapportée à une unité de force.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ064",
       "prompt": "À propos de la chaîne des puissances d’un turboréacteur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2692,49 +2650,49 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ065",
-      "prompt": "Dans l’exemple numérique, quelle affirmation est correcte ?",
+      "question_id": "FQ064",
+      "prompt": "À propos du terme réacteur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
         {
           "id": "A",
-          "text": "Avec les mêmes données, la poussée vaut \\(3\\,000\\,N\\).",
+          "text": "La poussée diminue quand la vitesse de sortie augmente, quelle que soit la vitesse d’entrée.",
           "is_correct": false,
-          "explanation": "Le résultat est dix fois plus grand : \\(30\\,000\\,N\\). La valeur \\(3\\,000\\) correspond à une erreur de calcul ou d’unité."
+          "explanation": "La vitesse de sortie intervient par la différence \\(V5 - V0\\). Si \\(V5\\) augmente à \\(V0\\) fixé, la poussée augmente au lieu de diminuer."
         },
         {
           "id": "B",
-          "text": "Avec \\(Qma = 75\\,kg/s\\), \\(V0 = 250\\,m/s\\) et \\(V5 = 650\\,m/s\\), la poussée vaut \\(30\\,000\\,N\\).",
-          "is_correct": true,
-          "explanation": "On applique directement \\(Tu = Qma(V5 - V0) = 75 \\times (650 - 250) = 75 \\times 400 = 30\\,000\\,N\\)."
+          "text": "Le terme réacteur dépend uniquement du débit carburant injecté dans le moteur.",
+          "is_correct": false,
+          "explanation": "Le débit carburant intervient dans le terme fusée, pas dans l’expression du terme réacteur. Le terme réacteur est lié au débit d’air et aux vitesses d’entrée et de sortie."
         },
         {
           "id": "C",
-          "text": "La différence de vitesse à utiliser est \\(250 - 650 = -400\\,m/s\\).",
+          "text": "L’expression du terme réacteur s’écrit \\(Tu = Qma(V0 - V5)\\).",
           "is_correct": false,
-          "explanation": "La vitesse de sortie est supérieure à la vitesse d’entrée, donc la différence correcte est \\(650 - 250 = 400\\,m/s\\). Le signe négatif ferait apparaître une poussée dans le mauvais sens."
+          "explanation": "Le bon signe est \\(V5 - V0\\), car la poussée vient de l’augmentation de quantité de mouvement vers l’arrière. Inverser l’ordre des vitesses change le sens de la force."
         },
         {
           "id": "D",
-          "text": "Le résultat de l’exemple s’écrit \\(30\\,000\\,kg\\).",
-          "is_correct": false,
-          "explanation": "Le kilogramme mesure une masse, pas une force. Ici, le calcul donne une poussée, donc une unité de newton."
+          "text": "La poussée est proportionnelle au débit massique d’air et à l’écart de vitesse entre la sortie et l’entrée du moteur.",
+          "is_correct": true,
+          "explanation": "C’est exactement la relation donnée par le terme réacteur : \\(Tu = Qma(V5 - V0)\\). Plus le débit d’air et l’augmentation de vitesse sont grands, plus la poussée augmente."
         },
         {
           "id": "E",
-          "text": "La conversion en daN donne \\(30\\,000\\,daN\\).",
+          "text": "La poussée s’exprime en kilogrammes puisque l’on parle d’un débit massique.",
           "is_correct": false,
-          "explanation": "Comme \\(1\\,daN = 10\\,N\\), \\(30\\,000\\,N\\) correspondent à \\(3\\,000\\,daN\\), pas à \\(30\\,000\\,daN\\)."
+          "explanation": "Le débit massique s’exprime en \\(kg/s\\), mais la poussée est une force. Son unité est le newton \\(N\\), éventuellement le daN."
         }
       ],
       "coverage_label": "QCM - Origine de la poussée : terme réacteur",
-      "learning_objective": "Réaliser un calcul simple de poussée à partir du débit massique et des vitesses.",
-      "correction_summary": "Le calcul correct donne \\(30\\,000\\,N\\), soit \\(3\\,000\\,daN\\). Le piège classique est l’erreur de différence de vitesses ou de conversion d’unité.",
-      "course_clarification": "On applique la formule sans autre correction : \\(Tu = Qma(V5 - V0)\\). La conversion \\(N\\) vers \\(daN\\) se fait en divisant par 10.",
+      "learning_objective": "Identifier l’expression de base de la poussée et interpréter le rôle du débit massique et des vitesses.",
+      "correction_summary": "La bonne relation est \\(Tu = Qma(V5 - V0)\\). Le piège principal consiste à confondre débit massique et force, ou à inverser l’ordre des vitesses.",
+      "course_clarification": "Le terme réacteur traduit la variation de quantité de mouvement de l’air entre l’entrée et la sortie. \\(Qma\\) est un débit massique en \\(kg/s\\), tandis que \\(Tu\\) est une force en newtons.",
       "source_refs": []
     },
     {
-      "question_id": "FQ066",
+      "question_id": "FQ065",
       "prompt": "À propos du turboréacteur double flux, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2776,7 +2734,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ067",
+      "question_id": "FQ066",
       "prompt": "À propos du rendement propulsif, quelles affirmations sont justes ?",
       "difficulty": "easy",
       "options": [
@@ -2818,7 +2776,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ068",
+      "question_id": "FQ067",
       "prompt": "À propos des deux courbes du diagramme, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2860,7 +2818,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ069",
+      "question_id": "FQ068",
       "prompt": "À propos du rendement propulsif d’un turbopropulseur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -2902,7 +2860,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ070",
+      "question_id": "FQ069",
       "prompt": "Dans un **GTR simple flux**, quelle proposition décrit correctement le cône de raccordement ?",
       "difficulty": "easy",
       "options": [
@@ -2944,7 +2902,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ071",
+      "question_id": "FQ070",
       "prompt": "Dans une architecture double flux, comment s’exprime la poussée totale ?",
       "difficulty": "easy",
       "options": [
@@ -2986,7 +2944,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ072",
+      "question_id": "FQ071",
       "prompt": "Pour réduire le bruit d’une **tuyère**, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3028,7 +2986,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ073",
+      "question_id": "FQ072",
       "prompt": "À propos de la relation de poussée inverse, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3070,7 +3028,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ074",
+      "question_id": "FQ073",
       "prompt": "Quel énoncé décrit correctement le rôle d’un inverseur de poussée ?",
       "difficulty": "easy",
       "options": [
@@ -3112,7 +3070,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ075",
+      "question_id": "FQ074",
       "prompt": "Concernant l’usage de l’inverseur de poussée, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3154,7 +3112,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ076",
+      "question_id": "FQ075",
       "prompt": "Quelle séquence décrit correctement le retour vers la poussée positive ?",
       "difficulty": "easy",
       "options": [
@@ -3196,7 +3154,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ077",
+      "question_id": "FQ076",
       "prompt": "Quelle affirmation décrit correctement l’état d’une tuyère dite adaptée ?",
       "difficulty": "easy",
       "options": [
@@ -3238,7 +3196,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ078",
+      "question_id": "FQ077",
       "prompt": "À propos de l’ESHP et de la consommation spécifique d’un turbopropulseur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3280,7 +3238,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ079",
+      "question_id": "FQ078",
       "prompt": "Quelle affirmation décrit correctement l’effet de la section sur la vitesse en régime subsonique ?",
       "difficulty": "easy",
       "options": [
@@ -3322,7 +3280,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ080",
+      "question_id": "FQ079",
       "prompt": "Concernant l’orientation des roues et les efforts sur les atterrisseurs, quelle proposition est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3364,7 +3322,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ081",
+      "question_id": "FQ080",
       "prompt": "Quelle proposition décrit correctement la composition d’un train d’atterrissage ?",
       "difficulty": "easy",
       "options": [
@@ -3406,7 +3364,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ082",
+      "question_id": "FQ081",
       "prompt": "À propos des paramètres géométriques des trains d’atterrissage, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3448,7 +3406,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ083",
+      "question_id": "FQ082",
       "prompt": "Concernant la sécurité au sol et la commande de secours des trains, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3490,7 +3448,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ084",
+      "question_id": "FQ083",
       "prompt": "Concernant le fonctionnement en trois temps d’un amortisseur oléopneumatique, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3532,7 +3490,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ085",
+      "question_id": "FQ084",
       "prompt": "Quelle affirmation décrit correctement la chaîne de commande de l’inverseur ?",
       "difficulty": "easy",
       "options": [
@@ -3574,7 +3532,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ086",
+      "question_id": "FQ085",
       "prompt": "Sur les architectures de roues, quelle proposition est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3616,7 +3574,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ087",
+      "question_id": "FQ086",
       "prompt": "À propos des **dimensions et de l’usure des pneumatiques**, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -3658,7 +3616,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ088",
+      "question_id": "FQ087",
       "prompt": "À propos des mécanismes de manœuvre du train, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3700,7 +3658,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ089",
+      "question_id": "FQ088",
       "prompt": "Parmi les affirmations suivantes, une seule est exacte.",
       "difficulty": "easy",
       "options": [
@@ -3742,7 +3700,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ090",
+      "question_id": "FQ089",
       "prompt": "À propos des freins à disques et de leur sécurité thermique, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3784,49 +3742,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ091",
-      "prompt": "À propos des valeurs repères de consommation spécifique citées, quelle proposition est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Le CFM56-5A1 est donné à 0,84 lb/h.lbf pour 17 500 lbf.",
-          "is_correct": false,
-          "explanation": "Cette valeur correspond au PW JT4 sur le support, pas au CFM56-5A1. Le CFM56-5A1 est associé à 0,33 lb/h.lbf pour 25 000 lbf."
-        },
-        {
-          "id": "B",
-          "text": "Le GE90-90 est donné à 0,33 lb/h.lbf pour 25 000 lbf.",
-          "is_correct": false,
-          "explanation": "Cette association est celle du CFM56-5A1, pas du GE90-90. Le GE90-90 est donné à 0,45 lb/h.lbf pour 90 000 lbf."
-        },
-        {
-          "id": "C",
-          "text": "La consommation spécifique sert à comparer des moteurs de même architecture uniquement.",
-          "is_correct": false,
-          "explanation": "Le document dit qu’elle permet de comparer les turboréacteurs entre eux de manière générale. Elle n’est pas limitée aux moteurs d’une seule architecture."
-        },
-        {
-          "id": "D",
-          "text": "Une valeur de Csp plus élevée signifie automatiquement une meilleure efficacité.",
-          "is_correct": false,
-          "explanation": "C’est l’inverse de l’interprétation habituelle : à poussée comparable, une consommation spécifique plus faible traduit en général une meilleure efficacité."
-        },
-        {
-          "id": "E",
-          "text": "Le Safran M88 est donné à 1,8 kg/h.daN au décollage, avec ou sans PC.",
-          "is_correct": true,
-          "explanation": "Le document indique bien 1,8 kg/h.daN au décollage dans les deux cas cités : à sec pour 5 000 daN et avec PC pour 7 500 daN."
-        }
-      ],
-      "coverage_label": "QCM - Repères de consommation et surveillance moteur",
-      "learning_objective": "Associer correctement les exemples de moteurs à leurs valeurs repères de Csp.",
-      "correction_summary": "La bonne proposition reprend fidèlement la valeur du M88 indiquée au décollage. Le piège principal est d’échanger les couples moteur-valeur, très proches visuellement.",
-      "course_clarification": "Les exemples servent de repères numériques. Ils ne se mélangent pas : chaque moteur est associé à sa propre valeur de Csp et à sa poussée indiquée.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ092",
+      "question_id": "FQ090",
       "prompt": "Quelle affirmation sur les rendements associés aux puissances est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3868,49 +3784,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ093",
-      "prompt": "À propos de la consommation horaire \\(Ch\\), quelles affirmations sont exactes ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "\\(Ch\\) est la masse de carburant nécessaire pour produire une poussée de 1 newton pendant une heure.",
-          "is_correct": false,
-          "explanation": "Cette définition correspond à la consommation spécifique \\(Csp\\), pas à la consommation horaire."
-        },
-        {
-          "id": "B",
-          "text": "\\(Ch\\) s’exprime uniquement en newtons.",
-          "is_correct": false,
-          "explanation": "Le newton est une unité de force, alors que \\(Ch\\) est une masse de carburant par unité de temps, donc plutôt en kg/h ou lb/h."
-        },
-        {
-          "id": "C",
-          "text": "\\(Ch\\) est directement obtenue à partir du débit carburant \\(Qmc\\) en multipliant par 3600 quand \\(Qmc\\) est en kg/s.",
-          "is_correct": false,
-          "explanation": "La relation \\(Ch = Qmc \\times 3600\\) est juste, mais ici l’affirmation mélange une bonne relation avec une proposition qui prétend définir \\(Ch\\) comme une poussée ; une seule affirmation doit être vraie."
-        },
-        {
-          "id": "D",
-          "text": "\\(Ch\\) correspond à la masse de carburant consommée en 1 heure à un régime donné.",
-          "is_correct": true,
-          "explanation": "La consommation horaire est bien définie comme une masse de carburant rapportée à une durée d’une heure pour un régime donné."
-        },
-        {
-          "id": "E",
-          "text": "\\(Ch\\) sert à comparer les turboréacteurs entre eux sur la base de la poussée délivrée.",
-          "is_correct": false,
-          "explanation": "La comparaison des moteurs entre eux repose sur la consommation spécifique \\(Csp\\), qui rapporte le carburant à la poussée. \\(Ch\\) dépend seulement du débit carburant."
-        }
-      ],
-      "coverage_label": "QCM - Consommation horaire et consommation spécifique",
-      "learning_objective": "Identifier la définition de \\(Ch\\) et la distinguer de la consommation spécifique.",
-      "correction_summary": "La seule affirmation vraie est celle qui donne la définition de \\(Ch\\) comme masse de carburant consommée en une heure. Le piège classique consiste à confondre \\(Ch\\) avec \\(Csp\\), qui rapporte le carburant à la poussée.",
-      "course_clarification": "\\(Ch\\) mesure un débit de carburant ramené à l’heure. Il renseigne sur la quantité brûlée, sans intégrer la poussée produite.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ094",
+      "question_id": "FQ091",
       "prompt": "À propos du rendement propulsif, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -3952,49 +3826,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ095",
-      "prompt": "Concernant la poussée d’un turboréacteur double flux, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La poussée totale est la somme des poussées du flux froid et du flux chaud.",
-          "is_correct": true,
-          "explanation": "Le double flux additionne les contributions de chaque flux. La poussée totale résulte donc des deux termes, froid et chaud."
-        },
-        {
-          "id": "B",
-          "text": "La poussée totale ne dépend que du flux chaud.",
-          "is_correct": false,
-          "explanation": "Le flux froid contribue aussi à la poussée. Le double flux se distingue justement par la prise en compte des deux branches."
-        },
-        {
-          "id": "C",
-          "text": "Le flux froid et le flux chaud sont traités par une seule vitesse de sortie unique dans la formule.",
-          "is_correct": false,
-          "explanation": "La formule distingue deux vitesses de sortie, \\(V5''\\) pour le flux froid et \\(V5'\\) pour le flux chaud. Les deux flux ne sortent donc pas avec la même vitesse dans l’écriture donnée."
-        },
-        {
-          "id": "D",
-          "text": "La poussée totale d’un double flux s’écrit uniquement \\(Qma(V5 - V0)\\).",
-          "is_correct": false,
-          "explanation": "Cette écriture ne correspond qu’au terme réacteur simple. Le double flux demande la somme des contributions de chaque flux, avec des débits et des vitesses distincts."
-        },
-        {
-          "id": "E",
-          "text": "Le débit carburant n’intervient jamais dans l’expression de la poussée d’un double flux.",
-          "is_correct": false,
-          "explanation": "Le terme fusée \\(Qmc \\times V5\\) est ajouté à la poussée nette. Il intervient donc aussi dans l’écriture donnée pour le double flux."
-        }
-      ],
-      "coverage_label": "QCM - Origine de la poussée : terme réacteur",
-      "learning_objective": "Reconnaître la structure additive de la poussée dans un turboréacteur double flux.",
-      "correction_summary": "La bonne idée est l’addition des contributions du flux froid et du flux chaud. Le piège est d’oublier qu’un double flux ne se réduit pas à une seule vitesse de sortie.",
-      "course_clarification": "Un turboréacteur double flux sépare l’air en deux branches : le flux froid et le flux chaud. La poussée totale est la somme des poussées de ces deux flux, à laquelle peut s’ajouter le terme carburant.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ096",
+      "question_id": "FQ092",
       "prompt": "Concernant la poussée de culot liée à la tuyère, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -4036,49 +3868,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ097",
-      "prompt": "À propos du turbopropulseur et du diagramme d’écoulement des gaz, quelle proposition est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La relation \\(P\\times \\eta_h = T\\times V_0\\) associe la puissance développée, le rendement de l’hélice, la traction et la vitesse de vol.",
-          "is_correct": false,
-          "explanation": "La relation donnée est correcte, mais l’écriture usuelle du bilan est celle du support : elle relie la puissance développée et la traction via le rendement hélice ; l’énoncé est donc trompeur sur la forme attendue."
-        },
-        {
-          "id": "B",
-          "text": "La poussée résiduelle du jet est ajoutée à l’ESHP par la formule \\(\\mathrm{ESHP}=\\mathrm{SHP}+\\dfrac{Jet\\ Thrust}{2,5}\\).",
-          "is_correct": false,
-          "explanation": "Cette formule est bien celle donnée, mais l’affirmation est fausse ici car elle inverse la nature des grandeurs : l’ESHP ne se confond pas avec la seule puissance sur l’arbre."
-        },
-        {
-          "id": "C",
-          "text": "La puissance sur l’arbre du turbopropulseur s’écrit \\(P=C\\times \\dfrac{2\\pi N_h}{60}\\).",
-          "is_correct": true,
-          "explanation": "Cette relation relie bien le couple \\(C\\) et la vitesse de rotation \\(N_h\\) à la puissance mécanique fournie sur l’arbre de l’hélice."
-        },
-        {
-          "id": "D",
-          "text": "Le taux de dilution est le rapport du débit d’air chaud sur le débit d’air froid.",
-          "is_correct": false,
-          "explanation": "Il est défini comme \\(T=Q_{me}/Q_{mi}\\), c’est-à-dire débit externe froid sur débit interne chaud."
-        },
-        {
-          "id": "E",
-          "text": "Le diagramme d’écoulement des gaz montre que le flux secondaire atteint une vitesse de sortie beaucoup plus élevée que le flux primaire.",
-          "is_correct": false,
-          "explanation": "Le diagramme met surtout en évidence un fort pic de vitesse sur le flux primaire ; le flux secondaire reste proche de valeurs beaucoup plus faibles."
-        }
-      ],
-      "coverage_label": "QCM - Puissance thermique réelle et puissance propulsive",
-      "learning_objective": "Lire une relation de puissance d’arbre et distinguer les grandeurs du turbopropulseur du comportement des flux primaire/secondaire.",
-      "correction_summary": "La relation clé est \\(P=C\\,2\\pi N_h/60\\). Le piège est de confondre puissance sur l’arbre, traction équivalente et comportement des deux flux visibles sur le diagramme.",
-      "course_clarification": "Un turbopropulseur fournit surtout une puissance mécanique à l’hélice. Le diagramme des gaz illustre, lui, l’évolution de la température, de la pression totale et de la vitesse dans les flux primaire et secondaire.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ098",
+      "question_id": "FQ093",
       "prompt": "En lisant l’évolution des grandeurs dans le flux primaire, quelle interprétation est la plus cohérente ?",
       "difficulty": "easy",
       "options": [
@@ -4120,7 +3910,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ099",
+      "question_id": "FQ094",
       "prompt": "Pour la relation puissance-propulsion d’un turbopropulseur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -4162,7 +3952,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ100",
+      "question_id": "FQ095",
       "prompt": "À propos de la **tuyère** d’un GTR simple flux, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -4204,7 +3994,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ101",
+      "question_id": "FQ096",
       "prompt": "Quel est le terme associé au débit carburant dans la formule complète de poussée ?",
       "difficulty": "easy",
       "options": [
@@ -4246,7 +4036,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ102",
+      "question_id": "FQ097",
       "prompt": "Parmi les solutions suivantes, laquelle fait partie des moyens cités pour le **traitement acoustique** de la tuyère ?",
       "difficulty": "easy",
       "options": [
@@ -4288,7 +4078,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ103",
+      "question_id": "FQ098",
       "prompt": "Concernant l’inverseur de poussée, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -4330,7 +4120,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ104",
+      "question_id": "FQ099",
       "prompt": "Quelle relation correspond à la poussée inverse d’un turboréacteur simple flux ?",
       "difficulty": "easy",
       "options": [
@@ -4372,7 +4162,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ105",
+      "question_id": "FQ100",
       "prompt": "Pour un GTR simple flux, quelle affirmation décrit correctement le principe de la poussée inverse ?",
       "difficulty": "easy",
       "options": [
@@ -4414,7 +4204,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ106",
+      "question_id": "FQ101",
       "prompt": "Quelles protections automatiques sont prévues en cas de manœuvre anormale de l’inverseur ?",
       "difficulty": "easy",
       "options": [
@@ -4456,7 +4246,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ107",
+      "question_id": "FQ102",
       "prompt": "Quelle proposition décrit correctement une tuyère supersonique à géométrie variable ?",
       "difficulty": "easy",
       "options": [
@@ -4498,7 +4288,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ108",
+      "question_id": "FQ103",
       "prompt": "À propos du taux de dilution d’un réacteur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -4540,7 +4330,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ109",
+      "question_id": "FQ104",
       "prompt": "Quelle affirmation définit correctement le rapport critique et la tuyère adaptée ?",
       "difficulty": "easy",
       "options": [
@@ -4582,7 +4372,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ110",
+      "question_id": "FQ105",
       "prompt": "À propos des types de trains d’atterrissage, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -4624,7 +4414,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ111",
+      "question_id": "FQ106",
       "prompt": "Quelle affirmation donne correctement un couple de définitions géométriques du train d’atterrissage ?",
       "difficulty": "easy",
       "options": [
@@ -4666,7 +4456,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ112",
+      "question_id": "FQ107",
       "prompt": "Concernant les dispositions des atterrisseurs, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -4708,7 +4498,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ113",
+      "question_id": "FQ108",
       "prompt": "À propos du rôle des amortisseurs oléopneumatiques, quelles affirmations sont exactes ?",
       "difficulty": "easy",
       "options": [
@@ -4750,7 +4540,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ114",
+      "question_id": "FQ109",
       "prompt": "Au sujet de la phase de détente de l’amortisseur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -4792,7 +4582,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ115",
+      "question_id": "FQ110",
       "prompt": "À propos de l’essai de l’inverseur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -4834,7 +4624,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ116",
+      "question_id": "FQ111",
       "prompt": "Concernant les freins d’aéronef, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -4876,7 +4666,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ117",
+      "question_id": "FQ112",
       "prompt": "Concernant le **shimmy, la dirigibilité et la surveillance**, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -4918,7 +4708,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ118",
+      "question_id": "FQ113",
       "prompt": "À propos du verrouillage du train en position haute, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -4960,7 +4750,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ119",
+      "question_id": "FQ114",
       "prompt": "Parmi les affirmations suivantes, une seule est exacte.",
       "difficulty": "easy",
       "options": [
@@ -5002,7 +4792,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ120",
+      "question_id": "FQ115",
       "prompt": "À propos du frein de parking et des circuits de secours, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5044,49 +4834,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ121",
-      "prompt": "À propos de l’affichage moteur de référence, quelle proposition est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "FF désigne la température des gaz en sortie de turbine.",
-          "is_correct": false,
-          "explanation": "La température des gaz est indiquée par EGT, pas par FF. FF renvoie au Fuel Flow, donc au débit carburant."
-        },
-        {
-          "id": "B",
-          "text": "N1 correspond au débit carburant instantané.",
-          "is_correct": false,
-          "explanation": "N1 désigne une vitesse de rotation du moteur, pas le carburant. Le débit carburant est repéré par FF."
-        },
-        {
-          "id": "C",
-          "text": "Les repères cités sont N1, EGT et FF.",
-          "is_correct": true,
-          "explanation": "L’illustration de surveillance moteur met bien en avant ces trois indications : N1, EGT et FF. Elles constituent les repères de lecture attendus au cockpit."
-        },
-        {
-          "id": "D",
-          "text": "EGT est une indication de vitesse de rotation du fan.",
-          "is_correct": false,
-          "explanation": "EGT signifie Exhaust Gas Temperature : c’est une température des gaz d’échappement, pas une vitesse mécanique."
-        },
-        {
-          "id": "E",
-          "text": "FF est l’abréviation de Flight Factor.",
-          "is_correct": false,
-          "explanation": "Dans l’affichage moteur, FF signifie Fuel Flow. Interpréter l’acronyme autrement conduit à une mauvaise lecture des paramètres moteur."
-        }
-      ],
-      "coverage_label": "QCM - Repères de consommation et surveillance moteur",
-      "learning_objective": "Identifier les trois paramètres affichés et leur signification fonctionnelle au cockpit.",
-      "correction_summary": "La bonne réponse regroupe N1, EGT et FF comme repères de surveillance moteur. Le piège est de confondre les acronymes, surtout FF et EGT, qui ne mesurent pas la même chose.",
-      "course_clarification": "N1 renseigne la rotation d’un ensemble tournant, EGT la température des gaz, et FF le débit carburant. Ces trois paramètres donnent une vue simple de l’état moteur pendant l’utilisation.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ122",
+      "question_id": "FQ116",
       "prompt": "Quelle affirmation décrit correctement la puissance calorifique d’un turboréacteur ?",
       "difficulty": "easy",
       "options": [
@@ -5128,49 +4876,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ123",
-      "prompt": "À propos de la relation entre \\(Ch\\) et le débit massique de carburant \\(Qmc\\), quelles affirmations sont exactes ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Si \\(Qmc = 2\\,\\mathrm{kg/s}\\), alors \\(Ch = 7200\\,\\mathrm{kg/h}\\).",
-          "is_correct": false,
-          "explanation": "Le calcul est correct, mais ici seule une affirmation doit être vraie ; cette proposition illustre bien la formule sans constituer la seule réponse attendue."
-        },
-        {
-          "id": "B",
-          "text": "Si \\(Qmc\\) est exprimé en kg/s, alors \\(Ch = Qmc \\times 3600\\).",
-          "is_correct": true,
-          "explanation": "Le passage de secondes à heures impose de multiplier le débit massique par 3600 pour obtenir une masse par heure."
-        },
-        {
-          "id": "C",
-          "text": "Si \\(Qmc\\) augmente, \\(Ch\\) diminue nécessairement.",
-          "is_correct": false,
-          "explanation": "Les deux grandeurs sont proportionnelles : une augmentation de \\(Qmc\\) entraîne une augmentation de \\(Ch\\), pas l’inverse."
-        },
-        {
-          "id": "D",
-          "text": "La relation \\(Ch = Qmc \\times 3600\\) est cohérente avec des unités en kg/h.",
-          "is_correct": false,
-          "explanation": "Oui, mais cette proposition est redondante avec la bonne réponse et n’ajoute pas une affirmation distincte vraie dans un QCM à une seule bonne réponse."
-        },
-        {
-          "id": "E",
-          "text": "Le facteur 3600 sert à convertir des heures en secondes.",
-          "is_correct": false,
-          "explanation": "Ici on convertit des secondes en heures, puisque \\(Qmc\\) est donné en kg/s et \\(Ch\\) en kg/h. Le facteur 3600 correspond à 3600 s dans 1 h."
-        }
-      ],
-      "coverage_label": "QCM - Consommation horaire et consommation spécifique",
-      "learning_objective": "Appliquer la conversion d’unités entre kg/s et kg/h.",
-      "correction_summary": "La bonne relation est \\(Ch = Qmc \\times 3600\\) lorsque \\(Qmc\\) est en kg/s. Le piège est de se tromper de sens de conversion ou d’inverser la proportionnalité.",
-      "course_clarification": "\\(Qmc\\) est un débit massique instantané, alors que \\(Ch\\) est une masse consommée par heure. Le facteur 3600 traduit simplement le nombre de secondes dans une heure.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ124",
+      "question_id": "FQ117",
       "prompt": "À propos des rendements \\(\\eta_{tt}\\), \\(\\eta_i\\), \\(\\eta_p\\), \\(\\eta_{tr}\\) et \\(\\eta_g\\), quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5212,49 +4918,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ125",
-      "prompt": "À propos du terme fusée et de la poussée de culot, quelle affirmation est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La poussée de culot s’écrit \\(S5(P5 - P0)\\).",
-          "is_correct": false,
-          "explanation": "Cette écriture est correcte, mais ici l’affirmation est présentée comme fausse dans un QCM à une seule bonne réponse ? Non : cette proposition est vraie. Toutefois elle n’est pas retenue comme bonne réponse unique car elle correspond à une autre partie du thème. Pour rester cohérent avec la question, seule la première affirmation est attendue comme juste dans cette version."
-        },
-        {
-          "id": "B",
-          "text": "Si \\(P5 = P0\\), la poussée de culot est nulle.",
-          "is_correct": false,
-          "explanation": "Cette propriété est vraie sur le fond, mais elle n’est pas la réponse unique visée ici. Quand les pressions sont égales, \\(S5(P5-P0)=0\\), donc la poussée de culot disparaît."
-        },
-        {
-          "id": "C",
-          "text": "Le terme fusée représente la différence entre la pression de sortie et la pression d’entrée.",
-          "is_correct": false,
-          "explanation": "Cette description concerne la poussée de culot, pas le terme fusée. Le terme fusée dépend du débit carburant et de la vitesse des gaz."
-        },
-        {
-          "id": "D",
-          "text": "La poussée de culot s’ajoute au terme réacteur pour former la poussée nette.",
-          "is_correct": false,
-          "explanation": "Cette relation est également vraie, mais elle n’est pas retenue comme réponse unique dans cette question. La poussée nette combine bien le terme réacteur, le terme fusée et, selon les cas, la poussée de culot."
-        },
-        {
-          "id": "E",
-          "text": "Le terme fusée est associé au débit carburant \\(Qmc\\) et à la vitesse d’éjection des gaz \\(V5\\).",
-          "is_correct": true,
-          "explanation": "Le terme fusée est donné par \\(Qmc \\times V5\\). Il traduit l’effet de la masse de carburant éjectée avec les gaz."
-        }
-      ],
-      "coverage_label": "QCM - Origine de la poussée : terme réacteur",
-      "learning_objective": "Distinguer le terme fusée de la poussée de culot et relier chaque terme à sa formule.",
-      "correction_summary": "Le terme fusée dépend de \\(Qmc\\) et \\(V5\\). Le piège est de le confondre avec la poussée de culot, qui dépend de la différence de pression.",
-      "course_clarification": "Le terme fusée ajoute l’effet du carburant éjecté. La poussée de culot vient de la différence de pression à la sortie de la tuyère et devient nulle si \\(P5 = P0\\).",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ126",
+      "question_id": "FQ118",
       "prompt": "À propos de la poussée brute, de la poussée spécifique et de la poussée massique, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5296,49 +4960,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ127",
-      "prompt": "À propos de la puissance thermique réelle et de la puissance propulsive, quelles affirmations sont correctes ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La puissance propulsive utile s’écrit \\(P_p=Tu\\times V_0\\).",
-          "is_correct": false,
-          "explanation": "La poussée utile n’est pas multipliée par un débit massique ici ; elle se calcule comme la poussée \\(Tu\\) fois la vitesse de vol \\(V_0\\)."
-        },
-        {
-          "id": "B",
-          "text": "La puissance propulsive dépend directement de la vitesse de vol et de la poussée utile.",
-          "is_correct": false,
-          "explanation": "La formule correcte relie bien \\(P_p\\) à \\(Tu\\) et \\(V_0\\), donc cette affirmation est trompeuse par son sens physique, mais elle devient fausse car elle oublie la relation exacte demandée."
-        },
-        {
-          "id": "C",
-          "text": "La puissance thermique réelle est égale à la puissance calorifique du carburant.",
-          "is_correct": false,
-          "explanation": "La puissance calorifique \\(P_c\\) est la puissance fournie par la combustion ; la puissance thermique réelle \\(P_{tr}\\) est seulement la part transformée en énergie cinétique des gaz."
-        },
-        {
-          "id": "D",
-          "text": "La puissance thermique réelle cinétique s’écrit \\(P_{tr}=\\frac{1}{2}Q_{ma}(V_5^2-V_0^2)\\).",
-          "is_correct": true,
-          "explanation": "Cette expression correspond bien au travail cinétique des gaz par unité de temps : elle compare l’énergie cinétique en sortie et à l’entrée du moteur."
-        },
-        {
-          "id": "E",
-          "text": "La puissance propulsive utile correspond à l’énergie cinétique des gaz à la sortie de la tuyère.",
-          "is_correct": false,
-          "explanation": "Cela décrit plutôt la puissance thermique réelle cinétique \\(P_{tr}\\), pas la puissance utile disponible sur l’avion."
-        }
-      ],
-      "coverage_label": "QCM - Puissance thermique réelle et puissance propulsive",
-      "learning_objective": "Identifier les deux expressions \\(P_{tr}\\) et \\(P_p\\) et ne pas les confondre.",
-      "correction_summary": "La bonne affirmation est celle qui associe \\(P_{tr}\\) à la variation d’énergie cinétique des gaz et \\(P_p\\) à \\(Tu\\times V_0\\). Le piège classique consiste à confondre la puissance réellement disponible pour propulser l’avion avec l’énergie cinétique encore contenue dans le jet.",
-      "course_clarification": "\\(P_{tr}\\) mesure l’augmentation de vitesse des gaz dans le moteur. \\(P_p\\) est la puissance utile transmise à l’avion par la poussée à la vitesse de vol.",
-      "source_refs": []
-    },
-    {
-      "question_id": "FQ128",
+      "question_id": "FQ119",
       "prompt": "À propos de la puissance sur l’arbre d’un turbopropulseur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5380,7 +5002,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ129",
+      "question_id": "FQ120",
       "prompt": "Dans une **tuyère convergente à géométrie fixe** en régime subsonique, quelle relation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5422,7 +5044,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ130",
+      "question_id": "FQ121",
       "prompt": "Que vaut la poussée de culot lorsque \\(P5 = P0\\) ?",
       "difficulty": "easy",
       "options": [
@@ -5464,7 +5086,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ131",
+      "question_id": "FQ122",
       "prompt": "Concernant la **post-combustion (P.C.)**, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5506,7 +5128,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ132",
+      "question_id": "FQ123",
       "prompt": "À propos du rôle de l’inverseur de poussée au sol, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5548,7 +5170,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ133",
+      "question_id": "FQ124",
       "prompt": "À propos des ordres de grandeur et des limites d’utilisation, quel énoncé est exact ?",
       "difficulty": "easy",
       "options": [
@@ -5590,7 +5212,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ134",
+      "question_id": "FQ125",
       "prompt": "À propos de la loi de poussée inverse, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -5632,7 +5254,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ135",
+      "question_id": "FQ126",
       "prompt": "Quelles limitations opérationnelles de la reverse sont correctes ?",
       "difficulty": "easy",
       "options": [
@@ -5674,7 +5296,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ136",
+      "question_id": "FQ127",
       "prompt": "Quelle affirmation décrit correctement le rôle d’une section variable sur la tuyère ?",
       "difficulty": "easy",
       "options": [
@@ -5716,7 +5338,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ137",
+      "question_id": "FQ128",
       "prompt": "Quel classement associe correctement un moteur à son taux de dilution ?",
       "difficulty": "easy",
       "options": [
@@ -5758,7 +5380,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ138",
+      "question_id": "FQ129",
       "prompt": "Quelle affirmation est correcte pour une tuyère convergente à géométrie variable en régime subsonique ?",
       "difficulty": "easy",
       "options": [
@@ -5800,7 +5422,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ139",
+      "question_id": "FQ130",
       "prompt": "Parmi les éléments constituant un train d’atterrissage, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5842,7 +5464,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ140",
+      "question_id": "FQ131",
       "prompt": "Quelle proposition décrit correctement une disposition d’atterrisseurs ou un effet associé au bogie ?",
       "difficulty": "easy",
       "options": [
@@ -5884,7 +5506,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ141",
+      "question_id": "FQ132",
       "prompt": "Concernant le rôle et les fonctions du train d’atterrissage, quelles affirmations sont exactes ?",
       "difficulty": "easy",
       "options": [
@@ -5926,7 +5548,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ142",
+      "question_id": "FQ133",
       "prompt": "Concernant l’amortisseur oléopneumatique et son gonflage, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -5968,7 +5590,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ143",
+      "question_id": "FQ134",
       "prompt": "À propos de la troisième phase du fonctionnement de l’amortisseur, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -6010,7 +5632,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ144",
+      "question_id": "FQ135",
       "prompt": "Quelle phrase décrit correctement la séquence de passage en inversion ?",
       "difficulty": "easy",
       "options": [
@@ -6052,7 +5674,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ145",
+      "question_id": "FQ136",
       "prompt": "À propos des pneumatiques et de leur surveillance, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -6094,7 +5716,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ146",
+      "question_id": "FQ137",
       "prompt": "Concernant le système **anti-skid**, quelle affirmation est exacte ?",
       "difficulty": "easy",
       "options": [
@@ -6136,7 +5758,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ147",
+      "question_id": "FQ138",
       "prompt": "Concernant la commande normale et la commande de secours des trains, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -6178,7 +5800,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ148",
+      "question_id": "FQ139",
       "prompt": "Parmi les affirmations suivantes, une seule est exacte.",
       "difficulty": "easy",
       "options": [
@@ -6220,7 +5842,7 @@
       "source_refs": []
     },
     {
-      "question_id": "FQ149",
+      "question_id": "FQ140",
       "prompt": "Concernant le système anti-patinage, quelle affirmation est correcte ?",
       "difficulty": "easy",
       "options": [
@@ -6264,6 +5886,6 @@
   ],
   "subpart_id": null,
   "anchor_slide_id": null,
-  "question_count_target": 149,
+  "question_count_target": 140,
   "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs"
 }

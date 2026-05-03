@@ -4,48 +4,6 @@
   "difficulty": "easy",
   "questions": [
     {
-      "question_id": "S3-2-Q1",
-      "prompt": "À propos de la puissance thermique réelle et de la puissance propulsive, quelles affirmations sont correctes ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La puissance propulsive utile s’écrit \\(P_p=Tu\\times V_0\\).",
-          "is_correct": false,
-          "explanation": "La poussée utile n’est pas multipliée par un débit massique ici ; elle se calcule comme la poussée \\(Tu\\) fois la vitesse de vol \\(V_0\\)."
-        },
-        {
-          "id": "B",
-          "text": "La puissance propulsive dépend directement de la vitesse de vol et de la poussée utile.",
-          "is_correct": false,
-          "explanation": "La formule correcte relie bien \\(P_p\\) à \\(Tu\\) et \\(V_0\\), donc cette affirmation est trompeuse par son sens physique, mais elle devient fausse car elle oublie la relation exacte demandée."
-        },
-        {
-          "id": "C",
-          "text": "La puissance thermique réelle est égale à la puissance calorifique du carburant.",
-          "is_correct": false,
-          "explanation": "La puissance calorifique \\(P_c\\) est la puissance fournie par la combustion ; la puissance thermique réelle \\(P_{tr}\\) est seulement la part transformée en énergie cinétique des gaz."
-        },
-        {
-          "id": "D",
-          "text": "La puissance thermique réelle cinétique s’écrit \\(P_{tr}=\\frac{1}{2}Q_{ma}(V_5^2-V_0^2)\\).",
-          "is_correct": true,
-          "explanation": "Cette expression correspond bien au travail cinétique des gaz par unité de temps : elle compare l’énergie cinétique en sortie et à l’entrée du moteur."
-        },
-        {
-          "id": "E",
-          "text": "La puissance propulsive utile correspond à l’énergie cinétique des gaz à la sortie de la tuyère.",
-          "is_correct": false,
-          "explanation": "Cela décrit plutôt la puissance thermique réelle cinétique \\(P_{tr}\\), pas la puissance utile disponible sur l’avion."
-        }
-      ],
-      "coverage_label": "Puissance thermique réelle et puissance propulsive",
-      "learning_objective": "Identifier les deux expressions \\(P_{tr}\\) et \\(P_p\\) et ne pas les confondre.",
-      "correction_summary": "La bonne affirmation est celle qui associe \\(P_{tr}\\) à la variation d’énergie cinétique des gaz et \\(P_p\\) à \\(Tu\\times V_0\\). Le piège classique consiste à confondre la puissance réellement disponible pour propulser l’avion avec l’énergie cinétique encore contenue dans le jet.",
-      "course_clarification": "\\(P_{tr}\\) mesure l’augmentation de vitesse des gaz dans le moteur. \\(P_p\\) est la puissance utile transmise à l’avion par la poussée à la vitesse de vol.",
-      "source_refs": []
-    },
-    {
       "question_id": "S3-2-Q2",
       "prompt": "À propos de la puissance calorifique et de l’exemple du GE90, quelle proposition est correcte ?",
       "difficulty": "easy",
@@ -170,52 +128,10 @@
       "correction_summary": "La bonne relation est \\(\\eta_p=2V_0/(V_5+V_0)\\). Le piège majeur est de croire qu’un jet très rapide améliore toujours le rendement alors qu’il laisse justement trop d’énergie cinétique dans les gaz.",
       "course_clarification": "Le rendement propulsif est bon quand la poussée est obtenue avec une faible différence de vitesse entre le jet et l’avion. C’est pourquoi les turbofans à fort taux de dilution ont souvent un meilleur rendement propulsif.",
       "source_refs": []
-    },
-    {
-      "question_id": "S3-2-Q5",
-      "prompt": "À propos du turbopropulseur et du diagramme d’écoulement des gaz, quelle proposition est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "La relation \\(P\\times \\eta_h = T\\times V_0\\) associe la puissance développée, le rendement de l’hélice, la traction et la vitesse de vol.",
-          "is_correct": false,
-          "explanation": "La relation donnée est correcte, mais l’écriture usuelle du bilan est celle du support : elle relie la puissance développée et la traction via le rendement hélice ; l’énoncé est donc trompeur sur la forme attendue."
-        },
-        {
-          "id": "B",
-          "text": "La poussée résiduelle du jet est ajoutée à l’ESHP par la formule \\(\\mathrm{ESHP}=\\mathrm{SHP}+\\dfrac{Jet\\ Thrust}{2,5}\\).",
-          "is_correct": false,
-          "explanation": "Cette formule est bien celle donnée, mais l’affirmation est fausse ici car elle inverse la nature des grandeurs : l’ESHP ne se confond pas avec la seule puissance sur l’arbre."
-        },
-        {
-          "id": "C",
-          "text": "La puissance sur l’arbre du turbopropulseur s’écrit \\(P=C\\times \\dfrac{2\\pi N_h}{60}\\).",
-          "is_correct": true,
-          "explanation": "Cette relation relie bien le couple \\(C\\) et la vitesse de rotation \\(N_h\\) à la puissance mécanique fournie sur l’arbre de l’hélice."
-        },
-        {
-          "id": "D",
-          "text": "Le taux de dilution est le rapport du débit d’air chaud sur le débit d’air froid.",
-          "is_correct": false,
-          "explanation": "Il est défini comme \\(T=Q_{me}/Q_{mi}\\), c’est-à-dire débit externe froid sur débit interne chaud."
-        },
-        {
-          "id": "E",
-          "text": "Le diagramme d’écoulement des gaz montre que le flux secondaire atteint une vitesse de sortie beaucoup plus élevée que le flux primaire.",
-          "is_correct": false,
-          "explanation": "Le diagramme met surtout en évidence un fort pic de vitesse sur le flux primaire ; le flux secondaire reste proche de valeurs beaucoup plus faibles."
-        }
-      ],
-      "coverage_label": "Turbopropulseur et écoulement des gaz",
-      "learning_objective": "Lire une relation de puissance d’arbre et distinguer les grandeurs du turbopropulseur du comportement des flux primaire/secondaire.",
-      "correction_summary": "La relation clé est \\(P=C\\,2\\pi N_h/60\\). Le piège est de confondre puissance sur l’arbre, traction équivalente et comportement des deux flux visibles sur le diagramme.",
-      "course_clarification": "Un turbopropulseur fournit surtout une puissance mécanique à l’hélice. Le diagramme des gaz illustre, lui, l’évolution de la température, de la pression totale et de la vitesse dans les flux primaire et secondaire.",
-      "source_refs": []
     }
   ],
   "subpart_id": "S3",
   "anchor_slide_id": "S3-2",
-  "question_count_target": 5,
+  "question_count_target": 3,
   "title": "QCM - Puissance thermique réelle et puissance propulsive"
 }

@@ -88,48 +88,6 @@
       "source_refs": []
     },
     {
-      "question_id": "S2-2-Q3",
-      "prompt": "À propos de la consommation spécifique Csp, quelle proposition est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "Elle représente la masse de carburant nécessaire pour fournir une poussée de 1 newton pendant une heure.",
-          "is_correct": true,
-          "explanation": "Csp est définie comme une masse de carburant rapportée à une poussée unitaire sur une durée d’une heure. C’est précisément ce qui permet de comparer des moteurs entre eux."
-        },
-        {
-          "id": "B",
-          "text": "Elle s’exprime en kg/h.daN ou en lb/h.lbf.",
-          "is_correct": false,
-          "explanation": "Cette proposition est vraie sur les unités, mais elle n’est pas la seule correcte ici ; or la question demande une seule affirmation vraie. Ici, la bonne réponse vise la définition, pas seulement l’unité."
-        },
-        {
-          "id": "C",
-          "text": "Elle est égale à Ch / Tu.",
-          "is_correct": false,
-          "explanation": "La relation donnée est l’inverse : Csp = Tu / Ch dans le support fourni. Confondre le sens du rapport change complètement l’interprétation physique."
-        },
-        {
-          "id": "D",
-          "text": "Elle mesure uniquement la quantité de carburant consommée par minute.",
-          "is_correct": false,
-          "explanation": "Csp n’est pas une consommation horaire brute ni une consommation par minute. Elle rapporte la consommation à la poussée fournie."
-        },
-        {
-          "id": "E",
-          "text": "Elle ne permet pas de comparer des turboréacteurs entre eux.",
-          "is_correct": false,
-          "explanation": "C’est faux : l’un des intérêts majeurs de Csp est justement la comparaison des turboréacteurs à poussée différente."
-        }
-      ],
-      "coverage_label": "Consommation spécifique",
-      "learning_objective": "Reconnaître la définition de Csp, son rôle comparatif et éviter la confusion avec Ch.",
-      "correction_summary": "La bonne réponse est la définition de Csp comme consommation rapportée à une poussée unitaire pendant une heure. Le piège est de la prendre pour une consommation brute ou d’inverser le rapport avec Ch.",
-      "course_clarification": "Csp est une grandeur de performance propulsive. Elle sert à comparer des moteurs en ramenant la consommation à la poussée fournie.",
-      "source_refs": []
-    },
-    {
       "question_id": "S2-2-Q4",
       "prompt": "À propos des valeurs repères de consommation spécifique citées, quelle proposition est correcte ?",
       "difficulty": "easy",
@@ -170,52 +128,10 @@
       "correction_summary": "La bonne proposition reprend fidèlement la valeur du M88 indiquée au décollage. Le piège principal est d’échanger les couples moteur-valeur, très proches visuellement.",
       "course_clarification": "Les exemples servent de repères numériques. Ils ne se mélangent pas : chaque moteur est associé à sa propre valeur de Csp et à sa poussée indiquée.",
       "source_refs": []
-    },
-    {
-      "question_id": "S2-2-Q5",
-      "prompt": "À propos de l’affichage moteur de référence, quelle proposition est correcte ?",
-      "difficulty": "easy",
-      "options": [
-        {
-          "id": "A",
-          "text": "FF désigne la température des gaz en sortie de turbine.",
-          "is_correct": false,
-          "explanation": "La température des gaz est indiquée par EGT, pas par FF. FF renvoie au Fuel Flow, donc au débit carburant."
-        },
-        {
-          "id": "B",
-          "text": "N1 correspond au débit carburant instantané.",
-          "is_correct": false,
-          "explanation": "N1 désigne une vitesse de rotation du moteur, pas le carburant. Le débit carburant est repéré par FF."
-        },
-        {
-          "id": "C",
-          "text": "Les repères cités sont N1, EGT et FF.",
-          "is_correct": true,
-          "explanation": "L’illustration de surveillance moteur met bien en avant ces trois indications : N1, EGT et FF. Elles constituent les repères de lecture attendus au cockpit."
-        },
-        {
-          "id": "D",
-          "text": "EGT est une indication de vitesse de rotation du fan.",
-          "is_correct": false,
-          "explanation": "EGT signifie Exhaust Gas Temperature : c’est une température des gaz d’échappement, pas une vitesse mécanique."
-        },
-        {
-          "id": "E",
-          "text": "FF est l’abréviation de Flight Factor.",
-          "is_correct": false,
-          "explanation": "Dans l’affichage moteur, FF signifie Fuel Flow. Interpréter l’acronyme autrement conduit à une mauvaise lecture des paramètres moteur."
-        }
-      ],
-      "coverage_label": "Surveillance moteur",
-      "learning_objective": "Identifier les trois paramètres affichés et leur signification fonctionnelle au cockpit.",
-      "correction_summary": "La bonne réponse regroupe N1, EGT et FF comme repères de surveillance moteur. Le piège est de confondre les acronymes, surtout FF et EGT, qui ne mesurent pas la même chose.",
-      "course_clarification": "N1 renseigne la rotation d’un ensemble tournant, EGT la température des gaz, et FF le débit carburant. Ces trois paramètres donnent une vue simple de l’état moteur pendant l’utilisation.",
-      "source_refs": []
     }
   ],
   "subpart_id": "S2",
   "anchor_slide_id": "S2-2",
-  "question_count_target": 5,
+  "question_count_target": 3,
   "title": "QCM - Repères de consommation et surveillance moteur"
 }

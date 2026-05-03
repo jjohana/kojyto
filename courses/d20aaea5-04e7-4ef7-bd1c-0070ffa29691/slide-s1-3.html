@@ -2145,7 +2145,9 @@ html[data-embed="1"] .review-card {
       const isMaster = viewerMode === "master";
       const nextHref = app.dataset.nextHref || "";
       const homeHref = app.dataset.homeHref || "index.html";
-      const storageKey = "static-quiz::" + viewerMode + "::" + quiz.quiz_id;
+      const quizStateToken = "559fdce43b96";
+      const storageScope = window.location.pathname.replace(/\/+/g, "/");
+      const storageKey = "static-quiz::" + viewerMode + "::" + storageScope + "::" + quiz.quiz_id + "::" + quizStateToken;
       const finalQuizDrawCount = 25;
 
       function normalizeCoverageLabel(question) {

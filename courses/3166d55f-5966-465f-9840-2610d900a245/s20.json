@@ -21,7 +21,7 @@
       "text": null,
       "bullets": [
         "La **cinématique** relie la position, la vitesse et l’accélération ; elle donne une lecture fiable du mouvement avant tout calcul de force ou de performance.",
-        "Les grandeurs **angulaires** et **linéaires** restent indissociables en aéronautique : \u0003c9 s’exprime en rad/s, \u0003b1 en rad/s², et le rayon R permet de passer d’une rotation à un effet mesurable sur une pale, un rotor ou un organe mobile.",
+        "Les grandeurs **angulaires** et **linéaires** restent indissociables en aéronautique : ω s’exprime en rad/s, α en rad/s², et le rayon R permet de passer d’une rotation à un effet mesurable sur une pale, un rotor ou un organe mobile.",
         "La **dynamique** complète cette description en intégrant les forces, tandis que la **simulation numérique** sert à tester, vérifier et prévoir le comportement d’un système réel à partir d’un modèle."
       ],
       "image_url": null,

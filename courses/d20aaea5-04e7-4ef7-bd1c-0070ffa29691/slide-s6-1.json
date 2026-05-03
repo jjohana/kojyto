@@ -106,7 +106,7 @@
         },
         {
           "id": "C",
-          "text": "À \\(11\\,000\\) m et \\(M=1\\), \\(Tu\\) augmente d’environ 60 % pour une hausse de \\(C_{sp}\\) de 60 %.",
+          "text": "À \\(11\\,000\\) m et \\(M=1, Tu\\) augmente d’environ 60 % pour une hausse de \\(C_{sp}\\) de 60 %.",
           "is_correct": false,
           "explanation": "Ce couple de valeurs décrit la situation à \\(11\\,000\\) m et \\(M=1\\), pas celle au sol."
         },

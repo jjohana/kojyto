@@ -209,7 +209,7 @@
       ],
       "coverage_label": "Génération AC de secours : EMER GEN et static inverter",
       "learning_objective": "Reconstituer la chaîne d'énergie entre batteries et STATIC INVERTER en mode secours.",
-      "correction_summary": "La relation correcte est batteries \u00153 STATIC INVERTER \u00153 réseau AC essentiel. Le piège principal est d'inverser le sens des flux ou de confondre secours et alimentation normale.",
+      "correction_summary": "La relation correcte est batteries 3 STATIC INVERTER 3 réseau AC essentiel. Le piège principal est d'inverser le sens des flux ou de confondre secours et alimentation normale.",
       "course_clarification": "Le chemin d'énergie en secours passe par la conversion avant d'atteindre une partie du réseau AC. Les batteries ne fournissent pas directement le réseau AC ; elles alimentent d'abord le STATIC INVERTER.",
       "source_refs": []
     }

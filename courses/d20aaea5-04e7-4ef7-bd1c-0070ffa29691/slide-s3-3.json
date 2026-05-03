@@ -54,7 +54,7 @@
           "id": "A",
           "text": "\\(P_{tt} = P_c + Q_{ma}C_p(T_5-T_0)\\).",
           "is_correct": false,
-          "explanation": "Les pertes par source froide se soustraient à \\(P_c\\) : elles ne s’ajoutent pas, sinon on obtiendrait une puissance plus grande que l’énergie fournie par combustion."
+          "explanation": "Les pertes par source froide se soustraient \\(à P_c\\): elles ne s’ajoutent pas, sinon on obtiendrait une puissance plus grande que l’énergie fournie par combustion."
         },
         {
           "id": "B",
@@ -66,7 +66,7 @@
           "id": "C",
           "text": "\\(P_{tt} = \\tfrac12 Q_{ma}(V_5^2-V_0^2)\\).",
           "is_correct": false,
-          "explanation": "Cette expression correspond à \\(P_{tr}\\), la puissance thermique réelle liée au jet, et non à la puissance théorique après prise en compte des pertes."
+          "explanation": "Cette expression correspond \\(à P_{tr}\\), la puissance thermique réelle liée au jet, et non à la puissance théorique après prise en compte des pertes."
         },
         {
           "id": "D",
@@ -108,7 +108,7 @@
           "id": "C",
           "text": "\\(P_p = Q_{mc} \\times P_{ci}\\).",
           "is_correct": false,
-          "explanation": "Cette expression donne la puissance calorifique \\(P_c\\), c’est-à-dire l’énergie de combustion fournie par le carburant."
+          "explanation": "Cette expression donne la puissance calorifique \\(P_c, c\\)’est-à-dire l’énergie de combustion fournie par le carburant."
         },
         {
           "id": "D",
@@ -120,12 +120,12 @@
           "id": "E",
           "text": "\\(P_p = \\eta_p \\times P_{tr}\\).",
           "is_correct": false,
-          "explanation": "Le rendement propulsif vérifie bien \\(\\eta_p = P_p/P_{tr}\\), donc \\(P_p = \\eta_p \\times P_{tr}\\). L’écriture proposée inverse le sens de la relation."
+          "explanation": "Le rendement propulsif vérifie bien \\(\\eta_p = P_p/P_{tr}\\), donc \\(P_p = \\eta_p \\times P_{tr}. L\\)’écriture proposée inverse le sens de la relation."
         }
       ],
       "coverage_label": "Puissances du turboréacteur et rendements",
       "learning_objective": "Reconnaître la puissance utile et sa dépendance à la traction et à la vitesse de vol.",
-      "correction_summary": "La puissance propulsive vaut \\(P_p = T_u V_0\\). L’erreur fréquente consiste à la confondre avec la puissance du jet \\(P_{tr}\\) ou avec la puissance chimique du carburant.",
+      "correction_summary": "La puissance propulsive vaut \\(P_p = T_u V_0. L\\)’erreur fréquente consiste à la confondre avec la puissance du jet \\(P_{tr}\\) ou avec la puissance chimique du carburant.",
       "course_clarification": "La puissance utile est celle qui sert réellement au mouvement de l’avion. À vitesse donnée, elle augmente quand la traction augmente.",
       "source_refs": []
     },
@@ -160,14 +160,14 @@
         },
         {
           "id": "E",
-          "text": "\\(\\eta_p = \\dfrac{P_p}{P_{tr}}\\), et avec \\(T_u = Q_{ma}(V_5-V_0)\\), on obtient \\(\\eta_p = \\dfrac{2V_0}{V_5+V_0}\\).",
+          "text": "\\(\\eta_p = \\dfrac{P_p}{P_{tr}}\\), et avec \\(T_u = Q_{ma}(V_5-V_0), on\\) obtient \\(\\eta_p = \\dfrac{2V_0}{V_5+V_0}\\).",
           "is_correct": true,
-          "explanation": "Le rendement propulsif compare la puissance utile à la puissance du jet. En remplaçant la traction par \\(Q_{ma}(V_5-V_0)\\), on obtient la forme simplifiée en vitesses."
+          "explanation": "Le rendement propulsif compare la puissance utile à la puissance du jet. En remplaçant la traction par \\(Q_{ma}(V_5-V_0), on\\) obtient la forme simplifiée en vitesses."
         }
       ],
       "coverage_label": "Puissances du turboréacteur et rendements",
       "learning_objective": "Écrire la définition du rendement propulsif et reconnaître sa forme simplifiée en vitesses.",
-      "correction_summary": "Le rendement propulsif compare \\(P_p\\) à \\(P_{tr}\\) et se réécrit \\(2V_0/(V_5+V_0)\\). Le piège principal est d’inverser le rapport ou de le confondre avec le rendement global.",
+      "correction_summary": "Le rendement propulsif compare \\(P_p à P_{tr}\\) et se réécrit \\(2V_0/(V_5+V_0)\\). Le piège principal est d’inverser le rapport ou de le confondre avec le rendement global.",
       "course_clarification": "Le rendement propulsif traduit l’efficacité avec laquelle l’énergie du jet devient poussée utile. Quand la vitesse d’éjection se rapproche de la vitesse de vol, ce rendement s’améliore.",
       "source_refs": []
     },

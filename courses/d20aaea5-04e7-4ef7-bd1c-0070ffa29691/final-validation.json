@@ -52,39 +52,39 @@
       "options": [
         {
           "id": "A",
-          "text": "Avec \\(Q_{ma}=75\\,kg/s\\), \\(V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(3\\,000\\,N\\).",
+          "text": "Avec \\(Q_{ma}=75\\,kg/s, V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(3\\,000\\,N\\).",
           "is_correct": false,
           "explanation": "Le résultat est dix fois trop faible. La bonne valeur est \\(30\\,000\\,N\\), soit \\(3\\,000\\,daN\\)."
         },
         {
           "id": "B",
-          "text": "Avec \\(Q_{ma}=75\\,kg/s\\), \\(V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(30\\,000\\,N\\).",
+          "text": "Avec \\(Q_{ma}=75\\,kg/s, V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(30\\,000\\,N\\).",
           "is_correct": true,
           "explanation": "On applique \\(Tu = Q_{ma}(V_5 - V_0) = 75\\times(650-250) = 75\\times400 = 30\\,000\\,N\\)."
         },
         {
           "id": "C",
-          "text": "Avec \\(Q_{ma}=75\\,kg/s\\), \\(V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(30\\,000\\,daN\\).",
+          "text": "Avec \\(Q_{ma}=75\\,kg/s, V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(30\\,000\\,daN\\).",
           "is_correct": false,
-          "explanation": "La conversion est fausse : \\(1\\,daN = 10\\,N\\). Donc \\(30\\,000\\,N\\) correspondent à \\(3\\,000\\,daN\\), pas à \\(30\\,000\\,daN\\)."
+          "explanation": "La conversion est fausse \\(: 1\\,daN = 10\\,N\\). Donc \\(30\\,000\\,N\\) correspondent à \\(3\\,000\\,daN\\), pas à \\(30\\,000\\,daN\\)."
         },
         {
           "id": "D",
-          "text": "Avec \\(Q_{ma}=75\\,kg/s\\), \\(V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(75\\,000\\,N\\).",
+          "text": "Avec \\(Q_{ma}=75\\,kg/s, V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(75\\,000\\,N\\).",
           "is_correct": false,
           "explanation": "Ce calcul ne reprend pas la différence de vitesse \\((650-250)\\). La poussée est liée à l’écart de vitesse, pas au débit massique seul."
         },
         {
           "id": "E",
-          "text": "Avec \\(Q_{ma}=75\\,kg/s\\), \\(V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(400\\,N\\).",
+          "text": "Avec \\(Q_{ma}=75\\,kg/s, V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(400\\,N\\).",
           "is_correct": false,
-          "explanation": "\\(400\\) est seulement la différence de vitesse \\(V_5-V_0\\), exprimée en \\(m/s\\). Il manque la multiplication par le débit massique pour obtenir une force."
+          "explanation": "\\(400\\) est seulement la différence de vitesse \\(V_5-V_0\\), exprimée en \\(m/s. Il\\) manque la multiplication par le débit massique pour obtenir une force."
         }
       ],
       "coverage_label": "QCM - Exemple numérique et architecture double flux",
       "learning_objective": "Calculer une poussée à partir d’un débit massique et de vitesses d’entrée/sortie.",
       "correction_summary": "Le calcul donne \\(30\\,000\\,N\\), soit \\(3\\,000\\,daN\\). Le piège principal est d’oublier la multiplication par \\(Q_{ma}\\) ou de confondre newtons et daN.",
-      "course_clarification": "La différence \\(V_5 - V_0\\) vaut ici \\(400\\,m/s\\). En multipliant par \\(75\\,kg/s\\), on obtient une force de \\(30\\,000\\,N\\).",
+      "course_clarification": "La différence \\(V_5 - V_0\\) vaut ici \\(400\\,m/s\\). En multipliant par \\(75\\,kg/s, on\\) obtient une force de \\(30\\,000\\,N\\).",
       "source_refs": []
     },
     {
@@ -102,7 +102,7 @@
           "id": "B",
           "text": "La poussée spécifique s’écrit \\(F_{sp} = Tu \\times Q_{ma}\\).",
           "is_correct": false,
-          "explanation": "Faux : on divise par \\(Q_{ma}\\), on ne multiplie pas."
+          "explanation": "Faux : on divise par \\(Q_{ma}, on ne\\) multiplie pas."
         },
         {
           "id": "C",
@@ -168,7 +168,7 @@
       "coverage_label": "QCM - Consommation horaire et consommation spécifique",
       "learning_objective": "Choisir les unités correctes de \\(Csp\\) et ne pas les confondre avec celles d’un débit ou d’une poussée.",
       "correction_summary": "Les unités attendues sont \\(kg/h.daN\\) ou \\(lb/h.Lbf\\). Le piège est de choisir des unités de débit, de poussée ou de puissance qui ne traduisent pas un rapport à la poussée.",
-      "course_clarification": "Le terme \\(kg/h.daN\\) se lit « kilogrammes par heure et par daN ». Il indique qu’on rapporte une masse de carburant consommée en une heure à une unité de poussée.",
+      "course_clarification": "Le terme \\(kg/h.daN se\\) lit « kilogrammes par heure et par daN ». Il indique qu’on rapporte une masse de carburant consommée en une heure à une unité de poussée.",
       "source_refs": []
     },
     {
@@ -222,11 +222,11 @@
           "id": "A",
           "text": "La puissance calorifique s’exprime en \\(\\mathrm{kg/s}\\).",
           "is_correct": false,
-          "explanation": "Faux : \\(\\mathrm{kg/s}\\) est l’unité du débit massique de carburant \\(Q_{mc}\\), pas de la puissance calorifique, qui s’exprime en watts."
+          "explanation": "Faux \\(: \\mathrm{kg/s}\\) est l’unité du débit massique de carburant \\(Q_{mc}\\), pas de la puissance calorifique, qui s’exprime en watts."
         },
         {
           "id": "B",
-          "text": "Pour \\(Q_{mc}=3{,}2\\ \\mathrm{kg/s}\\), on obtient \\(P_c \\approx 14{,}2\\times10^6\\ \\mathrm{W}\\).",
+          "text": "Pour \\(Q_{mc}=3{,}2\\ \\mathrm{kg/s}, on\\) obtient \\(P_c \\approx 14{,}2\\times10^6\\ \\mathrm{W}\\).",
           "is_correct": false,
           "explanation": "Faux : avec \\(P_{ci}=44\\times10^6\\ \\mathrm{J/kg}\\), le calcul donne \\(3{,}2\\times44\\times10^6 = 141{,}7\\times10^6\\ \\mathrm{W}\\), pas \\(14{,}2\\times10^6\\ \\mathrm{W}\\)."
         },
@@ -246,13 +246,13 @@
           "id": "E",
           "text": "\\(P_c\\) représente directement la puissance utile transmise à l’avion.",
           "is_correct": false,
-          "explanation": "Faux : \\(P_c\\) est la puissance chimique libérée par la combustion. La puissance utile apparaît plus loin dans la chaîne énergétique, après plusieurs conversions et pertes."
+          "explanation": "Faux \\(: P_c\\) est la puissance chimique libérée par la combustion. La puissance utile apparaît plus loin dans la chaîne énergétique, après plusieurs conversions et pertes."
         }
       ],
       "coverage_label": "QCM - Puissance calorifique et puissance thermique théorique",
       "learning_objective": "Identifier l’expression de la puissance calorifique à partir du débit carburant et du PCI.",
-      "correction_summary": "La bonne relation est \\(P_c = Q_{mc}P_{ci}\\). L’erreur fréquente consiste à confondre le débit massique \\(Q_{mc}\\), le PCI et la puissance elle-même, ou à oublier que la puissance s’exprime en watts.",
-      "course_clarification": "\\(P_c\\) mesure l’énergie libérée par seconde par le carburant brûlé. \\(Q_{mc}\\) est un débit massique en \\(\\mathrm{kg/s}\\) et \\(P_{ci}\\) est une énergie par kilogramme en \\(\\mathrm{J/kg}\\).",
+      "correction_summary": "La bonne relation est \\(P_c = Q_{mc}P_{ci}. L\\)’erreur fréquente consiste à confondre le débit massique \\(Q_{mc}\\), le PCI et la puissance elle-même, ou à oublier que la puissance s’exprime en watts.",
+      "course_clarification": "\\(P_c\\) mesure l’énergie libérée par seconde par le carburant brûlé\\(. Q_{mc}\\) est un débit massique en \\(\\mathrm{kg/s}\\) et \\(P_{ci}\\) est une énergie par kilogramme en \\(\\mathrm{J/kg}\\).",
       "source_refs": []
     },
     {
@@ -268,19 +268,19 @@
         },
         {
           "id": "B",
-          "text": "\\(Pp = Tu \\times V_0\\) et, pour \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}\\), \\(Pp = 5{,}67 \\times 10^6\\ \\text{W}\\).",
+          "text": "\\(Pp = Tu \\times V_0\\) et, pour \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}, Pp = 5{,}67 \\times 10^6\\ \\text{W}\\).",
           "is_correct": true,
-          "explanation": "La puissance utile est le produit de la poussée par la vitesse de vol. Le calcul donne bien \\(31\\,500 \\times 180 = 5{,}67 \\times 10^6\\) W, soit \\(567 \\times 10^4\\) W."
+          "explanation": "La puissance utile est le produit de la poussée par la vitesse de vol. Le calcul donne bien \\(31\\,500 \\times 180 = 5{,}67 \\times 10^6 W\\), soit \\(567 \\times 10^4 W\\)."
         },
         {
           "id": "C",
-          "text": "Avec \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}\\), on obtient \\(Pp = 5{,}67 \\times 10^4\\ \\text{W}\\).",
+          "text": "Avec \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}, on\\) obtient \\(Pp = 5{,}67 \\times 10^4\\ \\text{W}\\).",
           "is_correct": false,
-          "explanation": "Le résultat est trop petit d’un facteur 100. Le produit exact de \\(31\\,500\\) par \\(180\\) vaut \\(5{,}67 \\times 10^6\\) W."
+          "explanation": "Le résultat est trop petit d’un facteur 100. Le produit exact de \\(31\\,500\\) par \\(180\\) vaut \\(5{,}67 \\times 10^6 W\\)."
         },
         {
           "id": "D",
-          "text": "Avec \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}\\), on obtient \\(Pp = 7\\,604\\ \\text{W}\\).",
+          "text": "Avec \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}, on\\) obtient \\(Pp = 7\\,604\\ \\text{W}\\).",
           "is_correct": false,
           "explanation": "\\(7\\,604\\) est la valeur exprimée en horsepower dans l’exemple, pas en watts. Il ne faut pas confondre l’unité de puissance et sa conversion."
         },
@@ -293,7 +293,7 @@
       ],
       "coverage_label": "QCM - Puissance thermique réelle et puissance propulsive",
       "learning_objective": "Calculer la puissance propulsive utile à partir de la poussée et de la vitesse de vol.",
-      "correction_summary": "La puissance utile est simplement \\(Pp = Tu \\times V_0\\). L’exemple du CFM56-5A conduit à \\(5{,}67 \\times 10^6\\) W, et le piège principal est de confondre watts et horsepower.",
+      "correction_summary": "La puissance utile est simplement \\(Pp = Tu \\times V_0. L\\)’exemple du CFM56-5A conduit \\(à 5{,}67 \\times 10^6 W\\), et le piège principal est de confondre watts et horsepower.",
       "course_clarification": "\\(Tu\\) est la poussée disponible et \\(V_0\\) la vitesse de l’avion. Cette puissance est celle réellement utilisable pour la propulsion de l’appareil.",
       "source_refs": []
     },
@@ -318,7 +318,7 @@
           "id": "C",
           "text": "\\(P_p = Q_{mc} \\times P_{ci}\\).",
           "is_correct": false,
-          "explanation": "Cette expression donne la puissance calorifique \\(P_c\\), c’est-à-dire l’énergie de combustion fournie par le carburant."
+          "explanation": "Cette expression donne la puissance calorifique \\(P_c, c\\)’est-à-dire l’énergie de combustion fournie par le carburant."
         },
         {
           "id": "D",
@@ -330,12 +330,12 @@
           "id": "E",
           "text": "\\(P_p = \\eta_p \\times P_{tr}\\).",
           "is_correct": false,
-          "explanation": "Le rendement propulsif vérifie bien \\(\\eta_p = P_p/P_{tr}\\), donc \\(P_p = \\eta_p \\times P_{tr}\\). L’écriture proposée inverse le sens de la relation."
+          "explanation": "Le rendement propulsif vérifie bien \\(\\eta_p = P_p/P_{tr}\\), donc \\(P_p = \\eta_p \\times P_{tr}. L\\)’écriture proposée inverse le sens de la relation."
         }
       ],
       "coverage_label": "QCM - Rendements de la chaîne propulsive",
       "learning_objective": "Reconnaître la puissance utile et sa dépendance à la traction et à la vitesse de vol.",
-      "correction_summary": "La puissance propulsive vaut \\(P_p = T_u V_0\\). L’erreur fréquente consiste à la confondre avec la puissance du jet \\(P_{tr}\\) ou avec la puissance chimique du carburant.",
+      "correction_summary": "La puissance propulsive vaut \\(P_p = T_u V_0. L\\)’erreur fréquente consiste à la confondre avec la puissance du jet \\(P_{tr}\\) ou avec la puissance chimique du carburant.",
       "course_clarification": "La puissance utile est celle qui sert réellement au mouvement de l’avion. À vitesse donnée, elle augmente quand la traction augmente.",
       "source_refs": []
     },
@@ -390,7 +390,7 @@
           "id": "A",
           "text": "1 SHP fournit environ 2,5 N de poussée résiduelle.",
           "is_correct": false,
-          "explanation": "L’ordre de grandeur et l’unité sont faux. La relation donnée est \\(1\\) SHP \\(\\approx 2{,}5\\) **lb** de poussée résiduelle, pas des newtons."
+          "explanation": "L’ordre de grandeur et l’unité sont faux. La relation donnée est \\(1\\) SHP \\(\\approx 2{,}5 **lb**\\) de poussée résiduelle, pas des newtons."
         },
         {
           "id": "B",
@@ -402,24 +402,24 @@
           "id": "C",
           "text": "Pour le PW120, \\(2000\\) SHP et \\(250\\) lb de poussée résiduelle donnent \\(ESHP = 2100\\).",
           "is_correct": true,
-          "explanation": "Le calcul est exact : \\(ESHP = SHP + Jet\\ Thrust/2{,}5 = 2000 + 250/2{,}5 = 2100\\). C’est l’exemple numérique donné pour montrer comment intégrer la poussée résiduelle."
+          "explanation": "Le calcul est exact \\(: ESHP = SHP + Jet\\ Thrust/2{,}5 = 2000 + 250/2{,}5 = 2100. C\\)’est l’exemple numérique donné pour montrer comment intégrer la poussée résiduelle."
         },
         {
           "id": "D",
           "text": "La consommation spécifique s’écrit \\(Csp = P/Ch\\).",
           "is_correct": false,
-          "explanation": "La formule est inversée. La consommation spécifique est définie par \\(Csp = Ch/P\\), c’est-à-dire la masse de carburant nécessaire par unité de puissance."
+          "explanation": "La formule est inversée. La consommation spécifique est définie par \\(Csp = Ch/P, c\\)’est-à-dire la masse de carburant nécessaire par unité de puissance."
         },
         {
           "id": "E",
-          "text": "Le PW127F est donné avec une consommation spécifique de \\(0{,}459\\) kg/h.W au décollage.",
+          "text": "Le PW127F est donné avec une consommation spécifique de \\(0{,}459 kg/h.W\\) au décollage.",
           "is_correct": false,
-          "explanation": "L’exemple fourni est \\(0{,}459\\) **lb.h.SHP** au Take Off. L’unité et l’écriture sont donc différentes de celles proposées ici."
+          "explanation": "L’exemple fourni est \\(0{,}459 **lb.h\\).SHP** au Take Off. L’unité et l’écriture sont donc différentes de celles proposées ici."
         }
       ],
       "coverage_label": "QCM - Taux de dilution et exemples de moteurs",
       "learning_objective": "Calculer une ESHP à partir d’une poussée résiduelle et reconnaître la définition de la consommation spécifique.",
-      "correction_summary": "La bonne réponse est le calcul du PW120 : \\(2000 + 250/2{,}5 = 2100\\) ESHP. Le piège principal est de confondre SHP et ESHP ou d’inverser la formule de consommation spécifique.",
+      "correction_summary": "La bonne réponse est le calcul du \\(PW120 : 2000 + 250/2{,}5 = 2100\\) ESHP. Le piège principal est de confondre SHP et ESHP ou d’inverser la formule de consommation spécifique.",
       "course_clarification": "L’ESHP ajoute à la puissance sur l’arbre l’effet d’une poussée résiduelle des gaz. La consommation spécifique compare la masse de carburant consommée à la puissance fournie ; plus elle est faible, plus le moteur est efficient.",
       "source_refs": []
     },
@@ -454,15 +454,15 @@
         },
         {
           "id": "E",
-          "text": "La vitesse de vol \\(V_0\\) s’exprime en bar.",
+          "text": "La vitesse de vol \\(V_0 s\\)’exprime en bar.",
           "is_correct": false,
-          "explanation": "Faux : \\(V_0\\) est une vitesse, donc son unité est \\(\\text{m/s}\\)."
+          "explanation": "Faux \\(: V_0\\) est une vitesse, donc son unité est \\(\\text{m/s}\\)."
         }
       ],
       "coverage_label": "QCM - Principe du turbopropulseur",
       "learning_objective": "Identifier les grandeurs de la relation puissance-traction d’un turbopropulseur.",
       "correction_summary": "Le raisonnement attendu consiste à relier chaque symbole à sa grandeur physique : puissance, rendement, traction et vitesse. La confusion fréquente vient du mélange des unités de puissance, de force et de vitesse.",
-      "course_clarification": "Dans \\(P \\times \\eta_h = T \\times V_0\\), \\(P\\) est une puissance, \\(\\eta_h\\) un rendement sans unité, \\(T\\) une force et \\(V_0\\) une vitesse.",
+      "course_clarification": "Dans \\(P \\times \\eta_h = T \\times V_0, P\\) est une puissance\\(, \\eta_h un\\) rendement sans unité, \\(T\\) une force et \\(V_0\\) une vitesse.",
       "source_refs": []
     },
     {
@@ -708,7 +708,7 @@
           "id": "E",
           "text": "\\(T_{REV} = -V_o(V''_5 + Q_{ma})\\).",
           "is_correct": false,
-          "explanation": "Cette écriture mélange les grandeurs et ne respecte pas la relation fournie, où \\(Q_{ma}\\) multiplie la somme des vitesses."
+          "explanation": "Cette écriture mélange les grandeurs et ne respecte pas la relation fournie\\(, où Q_{ma}\\) multiplie la somme des vitesses."
         }
       ],
       "coverage_label": "QCM - Poussée inverse en double flux et ordres de grandeur",
@@ -1272,19 +1272,19 @@
           "id": "A",
           "text": "\\(V_0\\) est la vitesse de sortie et \\(V_5\\) la vitesse d’entrée.",
           "is_correct": false,
-          "explanation": "Cette lecture inverse les rôles des deux vitesses. Dans la notation du moteur, \\(V_0\\) repère l’entrée et \\(V_5\\) la sortie."
+          "explanation": "Cette lecture inverse les rôles des deux vitesses. Dans la notation du moteur\\(, V_0\\) repère l’entrée et \\(V_5\\) la sortie."
         },
         {
           "id": "B",
           "text": "\\(V_0\\) est la vitesse d’entrée et \\(V_5\\) la vitesse de sortie.",
           "is_correct": true,
-          "explanation": "La notation associe \\(V_0\\) à l’air entrant dans le moteur et \\(V_5\\) à l’air éjecté à la sortie. C’est précisément cette différence de vitesse qui crée la poussée."
+          "explanation": "La notation associe \\(V_0 à l\\)’air entrant dans le moteur et \\(V_5 à l\\)’air éjecté à la sortie. C’est précisément cette différence de vitesse qui crée la poussée."
         },
         {
           "id": "C",
           "text": "La poussée est obtenue quand \\(V_5 < V_0\\).",
           "is_correct": false,
-          "explanation": "Le principe indiqué repose sur une éjection vers l’arrière à plus grande vitesse. Si \\(V_5\\) était plus faible que \\(V_0\\), le moteur n’accélérerait pas l’air dans le sens attendu."
+          "explanation": "Le principe indiqué repose sur une éjection vers l’arrière à plus grande vitesse\\(. Si V_5\\) était plus faible que \\(V_0\\), le moteur n’accélérerait pas l’air dans le sens attendu."
         },
         {
           "id": "D",
@@ -1366,7 +1366,7 @@
         },
         {
           "id": "C",
-          "text": "La poussée résultante indiquée est de 45 % vers l’avant. ",
+          "text": "La poussée résultante indiquée est de 45 % vers l’avant.",
           "is_correct": true,
           "explanation": "Vrai : les contributions avant et arrière donnent un bilan net de 45 % vers l’avant."
         },
@@ -1391,7 +1391,7 @@
     },
     {
       "question_id": "FQ034",
-      "prompt": "Si \\(Qmc = 3{,}2\\ \\mathrm{kg/s}\\), quelle valeur de \\(Ch\\) est correcte ?",
+      "prompt": "\\(Si Qmc = 3{,}2\\ \\mathrm{kg/s}\\), quelle valeur de \\(Ch\\) est correcte ?",
       "difficulty": "easy",
       "options": [
         {
@@ -1404,13 +1404,13 @@
           "id": "B",
           "text": "\\(Ch = 1\\,920\\ \\mathrm{kg/h}\\).",
           "is_correct": false,
-          "explanation": "Le calcul correct donne 11\\,520 \\(kg/h\\), donc 1\\,920 \\(kg/h\\) reste nettement trop faible."
+          "explanation": "Le calcul correct donne \\(11,520 kg/h\\), donc \\(1,920 kg/h\\) reste nettement trop faible."
         },
         {
           "id": "C",
           "text": "\\(Ch = 11\\,520\\ \\mathrm{kg/h}\\).",
           "is_correct": true,
-          "explanation": "On applique la relation \\(Ch = Qmc \\times 3600\\) : \\(3{,}2 \\times 3600 = 11\\,520\\)."
+          "explanation": "On applique la relation \\(Ch = Qmc \\times 3600 : 3{,}2 \\times 3600 = 11\\,520\\)."
         },
         {
           "id": "D",
@@ -1506,13 +1506,13 @@
           "id": "E",
           "text": "\\(C_p\\) est une puissance exprimée en watts.",
           "is_correct": false,
-          "explanation": "Faux : \\(C_p\\) est une chaleur spécifique, donc une capacité massique en \\(\\mathrm{J/(kg\\cdot K)}\\), pas une puissance."
+          "explanation": "Faux \\(: C_p\\) est une chaleur spécifique, donc une capacité massique en \\(\\mathrm{J/(kg\\cdot K)}\\), pas une puissance."
         }
       ],
       "coverage_label": "QCM - Puissance calorifique et puissance thermique théorique",
       "learning_objective": "Choisir la bonne expression de \\(P_{tt}\\) et interpréter le terme de source froide.",
       "correction_summary": "Il faut partir de \\(P_{tt}=P_c-P_{sf}\\) puis remplacer \\(P_{sf}\\) par \\(Q_{ma}C_p(T_5-T_0)\\). La confusion classique vient du signe de la perte et de l’ordre des températures.",
-      "course_clarification": "La puissance thermique théorique est la puissance disponible après retrait des pertes par source froide : \\(P_{tt}=P_c-P_{sf}\\). Le terme \\(Q_{ma}C_p(T_5-T_0)\\) mesure l’énergie emportée par les gaz chauds et perdue pour la suite de la chaîne.",
+      "course_clarification": "La puissance thermique théorique est la puissance disponible après retrait des pertes par source froide \\(: P_{tt}=P_c-P_{sf}\\). Le terme \\(Q_{ma}C_p(T_5-T_0)\\) mesure l’énergie emportée par les gaz chauds et perdue pour la suite de la chaîne.",
       "source_refs": []
     },
     {
@@ -1588,14 +1588,14 @@
         },
         {
           "id": "E",
-          "text": "\\(\\eta_p = \\dfrac{P_p}{P_{tr}}\\), et avec \\(T_u = Q_{ma}(V_5-V_0)\\), on obtient \\(\\eta_p = \\dfrac{2V_0}{V_5+V_0}\\).",
+          "text": "\\(\\eta_p = \\dfrac{P_p}{P_{tr}}\\), et avec \\(T_u = Q_{ma}(V_5-V_0), on\\) obtient \\(\\eta_p = \\dfrac{2V_0}{V_5+V_0}\\).",
           "is_correct": true,
-          "explanation": "Le rendement propulsif compare la puissance utile à la puissance du jet. En remplaçant la traction par \\(Q_{ma}(V_5-V_0)\\), on obtient la forme simplifiée en vitesses."
+          "explanation": "Le rendement propulsif compare la puissance utile à la puissance du jet. En remplaçant la traction par \\(Q_{ma}(V_5-V_0), on\\) obtient la forme simplifiée en vitesses."
         }
       ],
       "coverage_label": "QCM - Rendements de la chaîne propulsive",
       "learning_objective": "Écrire la définition du rendement propulsif et reconnaître sa forme simplifiée en vitesses.",
-      "correction_summary": "Le rendement propulsif compare \\(P_p\\) à \\(P_{tr}\\) et se réécrit \\(2V_0/(V_5+V_0)\\). Le piège principal est d’inverser le rapport ou de le confondre avec le rendement global.",
+      "correction_summary": "Le rendement propulsif compare \\(P_p à P_{tr}\\) et se réécrit \\(2V_0/(V_5+V_0)\\). Le piège principal est d’inverser le rapport ou de le confondre avec le rendement global.",
       "course_clarification": "Le rendement propulsif traduit l’efficacité avec laquelle l’énergie du jet devient poussée utile. Quand la vitesse d’éjection se rapproche de la vitesse de vol, ce rendement s’améliore.",
       "source_refs": []
     },
@@ -1674,7 +1674,7 @@
           "id": "E",
           "text": "Quand \\(T < 1\\), le flux froid dépasse toujours le flux chaud.",
           "is_correct": false,
-          "explanation": "C’est l’inverse : si \\(T < 1\\), le débit du flux froid est inférieur à celui du flux chaud. Le piège est de confondre inférieur et supérieur."
+          "explanation": "C’est l’inverse \\(: si T < 1\\), le débit du flux froid est inférieur à celui du flux chaud. Le piège est de confondre inférieur et supérieur."
         }
       ],
       "coverage_label": "QCM - Taux de dilution et exemples de moteurs",
@@ -1710,7 +1710,7 @@
           "id": "D",
           "text": "La vitesse \\(N_h\\) est une température.",
           "is_correct": false,
-          "explanation": "Faux : \\(N_h\\) désigne la vitesse de rotation de l’hélice, pas une température."
+          "explanation": "Faux \\(: N_h\\) désigne la vitesse de rotation de l’hélice, pas une température."
         },
         {
           "id": "E",
@@ -2008,7 +2008,7 @@
         },
         {
           "id": "E",
-          "text": "La poussée inverse doit diminuer lorsque \\(V_o\\) est faible ; le support donne environ 14 % de \\(T_u\\) maxi pour \\(V_o < 60\\) kt, avec risque de pompage et d’ingestion de gaz chauds en dessous de cette vitesse.",
+          "text": "La poussée inverse doit diminuer lorsque \\(V_o\\) est faible ; le support donne environ 14 % de \\(T_u\\) maxi pour \\(V_o < 60 kt\\), avec risque de pompage et d’ingestion de gaz chauds en dessous de cette vitesse.",
           "is_correct": true,
           "explanation": "La baisse de la poussée inverse à basse vitesse est explicitement indiquée, avec un ordre de grandeur de 14 % sous 60 kt. Le piège est de croire qu’il faudrait au contraire maintenir ou augmenter la poussée inverse à très faible vitesse."
         }
@@ -2556,7 +2556,7 @@
           "id": "E",
           "text": "La poussée \\(Tu\\) s’exprime en kg·m/s.",
           "is_correct": false,
-          "explanation": "Cette écriture ne correspond pas à l’unité d’une force. La quantité \\(kg\\cdot m/s\\) n’est pas le newton, alors que la poussée est donnée en N."
+          "explanation": "Cette écriture ne correspond pas à l’unité d’une force. La quantité \\(kg\\cdot m/s n\\)’est pas le newton, alors que la poussée est donnée en N."
         }
       ],
       "coverage_label": "QCM - Origine de la poussée : terme réacteur",
@@ -2580,7 +2580,7 @@
           "id": "B",
           "text": "Le terme fusée vaut \\(Q_{mc}V_0\\) et s’ajoute à la poussée nette.",
           "is_correct": false,
-          "explanation": "La vitesse utilisée est celle d’éjection des gaz, \\(V_5\\), pas la vitesse d’entrée \\(V_0\\). Le sens physique du terme est lié au jet sortant."
+          "explanation": "La vitesse utilisée est celle d’éjection des gaz\\(, V_5\\), pas la vitesse d’entrée \\(V_0\\). Le sens physique du terme est lié au jet sortant."
         },
         {
           "id": "C",
@@ -2592,7 +2592,7 @@
           "id": "D",
           "text": "Le terme fusée ne dépend pas du débit carburant.",
           "is_correct": false,
-          "explanation": "Le débit carburant est précisément la grandeur qui fait apparaître ce terme. Sans \\(Q_{mc}\\), il n’y a pas de contribution de type fusée."
+          "explanation": "Le débit carburant est précisément la grandeur qui fait apparaître ce terme. Sans \\(Q_{mc}, il n\\)’y a pas de contribution de type fusée."
         },
         {
           "id": "E",
@@ -2646,7 +2646,7 @@
       "coverage_label": "QCM - Tuyère, poussée brute et poussée spécifique",
       "learning_objective": "Identifier la relation \\(Tu = Q_{ma}(V_5 - V_0)\\) et lire correctement ses grandeurs.",
       "correction_summary": "Le raisonnement attendu consiste à repérer que la poussée vient de l’accélération de l’air éjecté vers l’arrière. La confusion fréquente consiste à inverser \\(V_0\\) et \\(V_5\\) ou à oublier le débit massique, ce qui fausse l’expression de la force.",
-      "course_clarification": "\\(Q_{ma}\\) est le débit massique d’air. \\(V_0\\) est la vitesse d’entrée et \\(V_5\\) la vitesse de sortie. La poussée est positive quand l’air sort plus vite qu’il n’entre.",
+      "course_clarification": "\\(Q_{ma}\\) est le débit massique d’air\\(. V_0\\) est la vitesse d’entrée et \\(V_5\\) la vitesse de sortie. La poussée est positive quand l’air sort plus vite qu’il n’entre.",
       "source_refs": []
     },
     {
@@ -2724,7 +2724,7 @@
           "id": "E",
           "text": "\\(Csp = Ch / Tu\\).",
           "is_correct": false,
-          "explanation": "La relation donnée est l'inverse : \\(Csp = Tu / Ch\\). Inverser les termes change le sens physique de l'indicateur."
+          "explanation": "La relation donnée est l'inverse \\(: Csp = Tu / Ch\\). Inverser les termes change le sens physique de l'indicateur."
         }
       ],
       "coverage_label": "QCM - Repères de consommation et surveillance moteur",
@@ -2771,7 +2771,7 @@
       ],
       "coverage_label": "QCM - Puissance calorifique et puissance thermique théorique",
       "learning_objective": "Calculer la puissance propulsive à partir de la poussée et de la vitesse de vol.",
-      "correction_summary": "La formule à appliquer est \\(P_p=T_uV_0\\). L’erreur la plus fréquente est d’oublier la vitesse ou de se tromper d’ordre de grandeur dans le produit.",
+      "correction_summary": "La formule à appliquer est \\(P_p=T_uV_0. L\\)’erreur la plus fréquente est d’oublier la vitesse ou de se tromper d’ordre de grandeur dans le produit.",
       "course_clarification": "La puissance propulsive est la puissance utile associée au déplacement de l’avion. Elle augmente avec la poussée et avec la vitesse de vol.",
       "source_refs": []
     },
@@ -2802,7 +2802,7 @@
           "id": "D",
           "text": "\\(Ptt = Pc - Pp\\).",
           "is_correct": false,
-          "explanation": "Cette différence n’apparaît pas dans la définition donnée. La perte prise en compte est une perte thermique de source froide, exprimée avec \\(Q_{ma}\\), \\(C_p\\), \\(T_5\\) et \\(T_0\\)."
+          "explanation": "Cette différence n’apparaît pas dans la définition donnée. La perte prise en compte est une perte thermique de source froide, exprimée avec \\(Q_{ma}, C_p, T_5\\) et \\(T_0\\)."
         },
         {
           "id": "E",
@@ -2814,7 +2814,7 @@
       "coverage_label": "QCM - Puissance thermique réelle et puissance propulsive",
       "learning_objective": "Écrire la puissance thermique théorique à partir de la puissance calorifique et des pertes de source froide.",
       "correction_summary": "La puissance thermique théorique s’obtient en retranchant les pertes de source froide à la puissance calorifique. Le piège est de confondre cette étape thermique avec la puissance cinétique ou la puissance utile.",
-      "course_clarification": "\\(C_p\\) est la chaleur spécifique à pression constante. \\(T_5\\) et \\(T_0\\) sont les températures des gaz en sortie et à l’entrée. Plus l’écart thermique est grand, plus la part retranchée à \\(Pc\\) est importante.",
+      "course_clarification": "\\(C_p\\) est la chaleur spécifique à pression constante\\(. T_5\\) et \\(T_0\\) sont les températures des gaz en sortie et à l’entrée. Plus l’écart thermique est grand, plus la part retranchée à \\(Pc\\) est importante.",
       "source_refs": []
     },
     {
@@ -2928,7 +2928,7 @@
           "id": "D",
           "text": "Le F404-GE402 du F18 Hornet est donné avec \\(T = 0{,}9\\) en exemple subsonique.",
           "is_correct": false,
-          "explanation": "La valeur \\(T = 0{,}9\\) ne correspond pas à ce moteur : le F404-GE402 est cité en exemple supersonique à faible dilution avec \\(T = 0{,}34\\)."
+          "explanation": "La valeur \\(T = 0{,}9 ne\\) correspond pas à ce moteur : le F404-GE402 est cité en exemple supersonique à faible dilution avec \\(T = 0{,}34\\)."
         },
         {
           "id": "E",
@@ -3082,13 +3082,13 @@
         },
         {
           "id": "B",
-          "text": "Le réglage du col dépend uniquement de la température extérieure et non de la pression \\\\(P_{t4}\\\\).",
+          "text": "Le réglage du col dépend uniquement de la température extérieure et non de la pression \\(P_{t4}\\).",
           "is_correct": false,
-          "explanation": "Le support indique que le réglage du col dépend de la pression \\\\(P_{t4}\\\\) et du régime réacteur, pas seulement de la température extérieure."
+          "explanation": "Le support indique que le réglage du col dépend de la pression \\(P_{t4}\\) et du régime réacteur, pas seulement de la température extérieure."
         },
         {
           "id": "C",
-          "text": "Une tuyère supersonique comporte un convergent, un col et un divergent ; \\\\(M=1\\\\) au col, \\\\(M<1\\\\) dans le convergent et \\\\(M>1\\\\) dans le divergent.",
+          "text": "Une tuyère supersonique comporte un convergent, un col et un divergent ; \\(M=1\\) au col\\(, M<1\\) dans le convergent et \\(M>1\\) dans le divergent.",
           "is_correct": true,
           "explanation": "C’est la description géométrique et cinématique donnée pour la tuyère supersonique : le col correspond au point sonique, le convergent reste subsonique et le divergent devient supersonique."
         },
@@ -3100,15 +3100,15 @@
         },
         {
           "id": "E",
-          "text": "Dans le convergent d’une tuyère supersonique, \\\\(M>1\\\\) dès l’entrée et \\\\(M=1\\\\) au sortir du col.",
+          "text": "Dans le convergent d’une tuyère supersonique\\(, M>1\\) dès l’entrée et \\(M=1\\) au sortir du col.",
           "is_correct": false,
           "explanation": "La répartition indiquée est inversée : le convergent est subsonique, le col est sonique, puis le divergent devient supersonique."
         }
       ],
       "coverage_label": "QCM - Tuyère convergente, rapport critique et supersonique",
       "learning_objective": "Lire la structure d’une tuyère convergente-divergente et associer chaque zone au régime de Mach correspondant.",
-      "correction_summary": "La bonne réponse associe correctement convergent, col et divergent aux régimes \\\\(M<1\\\\), \\\\(M=1\\\\) et \\\\(M>1\\\\). Le piège principal est d’inverser le sens de variation de la section dans le divergent ou de confondre son rôle avec celui du col.",
-      "course_clarification": "Le col fixe le passage sonique, tandis que le divergent permet d’obtenir une accélération supersonique. Le réglage dépend de \\\\(P_{t4}\\\\) et du régime du réacteur, puis l’ensemble s’adapte au Mach de vol.",
+      "correction_summary": "La bonne réponse associe correctement convergent, col et divergent aux régimes \\(M<1, M=1\\) et \\(M>1\\). Le piège principal est d’inverser le sens de variation de la section dans le divergent ou de confondre son rôle avec celui du col.",
+      "course_clarification": "Le col fixe le passage sonique, tandis que le divergent permet d’obtenir une accélération supersonique. Le réglage dépend de \\(P_{t4}\\) et du régime du réacteur, puis l’ensemble s’adapte au Mach de vol.",
       "source_refs": []
     },
     {
@@ -3792,7 +3792,7 @@
           "id": "A",
           "text": "\\(Tu = 75\\times(250-650)=30\\,000\\ \\text{N}\\).",
           "is_correct": false,
-          "explanation": "Le calcul numérique est incompatible avec le signe : \\(250-650\\) vaut \\(-400\\), donc le résultat ne peut pas être \\(+30\\,000\\ \\text{N}\\). La différence doit être prise dans le bon sens."
+          "explanation": "Le calcul numérique est incompatible avec le signe \\(: 250-650\\) vaut \\(-400\\), donc le résultat ne peut pas être \\(+30\\,000\\ \\text{N}\\). La différence doit être prise dans le bon sens."
         },
         {
           "id": "B",
@@ -3816,7 +3816,7 @@
           "id": "E",
           "text": "\\(Tu = 75\\times(650-250)=30\\,000\\ \\text{N}\\).",
           "is_correct": true,
-          "explanation": "Le calcul reprend directement les valeurs données : débit massique \\(75\\ \\text{kg/s}\\), vitesse d’entrée \\(250\\ \\text{m/s}\\) et vitesse de sortie \\(650\\ \\text{m/s}\\). On obtient bien \\(30\\,000\\ \\text{N}\\)."
+          "explanation": "Le calcul reprend directement les valeurs données : débit massique \\(75\\ \\text{kg/s}\\), vitesse d’entrée \\(250\\ \\text{m/s}\\) et vitesse de sortie \\(650\\ \\text{m/s}. On\\) obtient bien \\(30\\,000\\ \\text{N}\\)."
         }
       ],
       "coverage_label": "QCM - Origine de la poussée : terme réacteur",
@@ -3850,7 +3850,7 @@
         },
         {
           "id": "D",
-          "text": "Si \\(P_5=P_0\\), la poussée de culot n’est pas nulle.",
+          "text": "\\(Si P_5=P_0\\), la poussée de culot n’est pas nulle.",
           "is_correct": false,
           "explanation": "Quand les pressions sont égales, le terme \\(P_5-P_0\\) vaut zéro. La poussée de culot est donc nulle."
         },
@@ -3874,25 +3874,25 @@
       "options": [
         {
           "id": "A",
-          "text": "En banc d’essais, \\(V_0 = 0\\) et \\(F_{brute} = V_5(Q_{ma} + Q_{mc})\\).",
+          "text": "En banc d’essais\\(, V_0 = 0\\) et \\(F_{brute} = V_5(Q_{ma} + Q_{mc})\\).",
           "is_correct": true,
           "explanation": "Vrai : la vitesse d’entrée est nulle au banc, donc la poussée brute se réduit à la vitesse d’éjection multipliée par la somme des débits."
         },
         {
           "id": "B",
-          "text": "En banc d’essais, \\(V_0 \\neq 0\\) et \\(F_{brute} = Q_{ma}(V_5 - V_0)\\).",
+          "text": "En banc d’essais\\(, V_0 \\neq 0\\) et \\(F_{brute} = Q_{ma}(V_5 - V_0)\\).",
           "is_correct": false,
           "explanation": "Faux : au banc, la vitesse d’entrée est prise nulle et la formule demandée n’est pas la poussée brute."
         },
         {
           "id": "C",
-          "text": "En banc d’essais, \\(F_{brute} = Q_{mc}V_0\\).",
+          "text": "En banc d’essais\\(, F_{brute} = Q_{mc}V_0\\).",
           "is_correct": false,
           "explanation": "Faux : la vitesse d’entrée est nulle et le débit carburant seul ne donne pas la poussée brute."
         },
         {
           "id": "D",
-          "text": "En banc d’essais, \\(F_{brute} = \\dfrac{Q_{ma}}{V_5}\\).",
+          "text": "En banc d’essais\\(, F_{brute} = \\dfrac{Q_{ma}}{V_5}\\).",
           "is_correct": false,
           "explanation": "Faux : l’expression n’a pas la bonne dimension et ne correspond pas à la poussée brute."
         },
@@ -3958,25 +3958,25 @@
       "options": [
         {
           "id": "A",
-          "text": "À sec, \\(Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(5000\\ \\mathrm{daN}\\).",
+          "text": "À sec\\(, Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(5000\\ \\mathrm{daN}\\).",
           "is_correct": true,
           "explanation": "C'est la valeur repère indiquée pour le M88 au décollage à sec : consommation spécifique de 1,8 kg/h.daN associée à 5000 daN de poussée."
         },
         {
           "id": "B",
-          "text": "À sec, \\(Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(7500\\ \\mathrm{daN}\\).",
+          "text": "À sec\\(, Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(7500\\ \\mathrm{daN}\\).",
           "is_correct": false,
           "explanation": "La poussée de 7500 daN correspond à la version avec postcombustion, pas à la configuration à sec."
         },
         {
           "id": "C",
-          "text": "À sec, \\(Csp = 0{,}33\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(25\\,000\\ \\mathrm{lbf}\\).",
+          "text": "À sec\\(, Csp = 0{,}33\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(25\\,000\\ \\mathrm{lbf}\\).",
           "is_correct": false,
           "explanation": "Cette valeur repère correspond au CFM56-5A1, pas au M88."
         },
         {
           "id": "D",
-          "text": "À sec, \\(Csp = 0{,}84\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(17\\,500\\ \\mathrm{lbf}\\).",
+          "text": "À sec\\(, Csp = 0{,}84\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(17\\,500\\ \\mathrm{lbf}\\).",
           "is_correct": false,
           "explanation": "Cette valeur repère correspond au PW JT4, pas au M88."
         },
@@ -4014,7 +4014,7 @@
           "id": "C",
           "text": "\\(\\eta_p = \\dfrac{P_p}{P_c}\\).",
           "is_correct": false,
-          "explanation": "Faux : \\(P_p/P_c\\) correspond au rendement global \\(\\eta_g\\), pas au rendement propulsif."
+          "explanation": "Faux \\(: P_p/P_c\\) correspond au rendement global \\(\\eta_g\\), pas au rendement propulsif."
         },
         {
           "id": "D",
@@ -4031,7 +4031,7 @@
       ],
       "coverage_label": "QCM - Puissance calorifique et puissance thermique théorique",
       "learning_objective": "Reconnaître la formule simplifiée du rendement propulsif et la distinguer des puissances.",
-      "correction_summary": "Le rendement propulsif ne s’écrit pas avec une puissance, mais comme un rapport adimensionnel. La simplification aboutit à \\(\\eta_p=\\frac{2V_0}{V_5+V_0}\\).",
+      "correction_summary": "Le rendement propulsif ne s’écrit pas avec une puissance, mais comme un rapport adimensionnel. La simplification aboutit \\(à \\eta_p=\\frac{2V_0}{V_5+V_0}\\).",
       "course_clarification": "Le rendement propulsif compare la puissance utile à la puissance cinétique disponible dans le jet. Sa forme simplifiée montre qu’il dépend de la vitesse de vol et de la vitesse d’éjection.",
       "source_refs": []
     },
@@ -4056,7 +4056,7 @@
           "id": "C",
           "text": "\\(\\eta_p = \\dfrac{2V_0}{V_5 + V_0}\\).",
           "is_correct": true,
-          "explanation": "En remplaçant \\(Tu\\) par \\(Q_{ma}(V_5 - V_0)\\), on simplifie l’expression du rendement propulsif en \\(\\frac{2V_0}{V_5+V_0}\\). Cette forme montre qu’un jet trop rapide dégrade le rendement."
+          "explanation": "En remplaçant \\(Tu\\) par \\(Q_{ma}(V_5 - V_0), on\\) simplifie l’expression du rendement propulsif en \\(\\frac{2V_0}{V_5+V_0}\\). Cette forme montre qu’un jet trop rapide dégrade le rendement."
         },
         {
           "id": "D",
@@ -4073,7 +4073,7 @@
       ],
       "coverage_label": "QCM - Puissance thermique réelle et puissance propulsive",
       "learning_objective": "Simplifier l’expression du rendement propulsif et distinguer les différents rendements de la chaîne énergétique.",
-      "correction_summary": "En utilisant \\(Tu = Q_{ma}(V_5 - V_0)\\), le rendement propulsif se réduit à \\(\\frac{2V_0}{V_5+V_0}\\). Le piège consiste à confondre ce rendement avec le rendement global ou thermique.",
+      "correction_summary": "En utilisant \\(Tu = Q_{ma}(V_5 - V_0)\\), le rendement propulsif se réduit \\(à \\frac{2V_0}{V_5+V_0}\\). Le piège consiste à confondre ce rendement avec le rendement global ou thermique.",
       "course_clarification": "Le rendement propulsif mesure l’efficacité avec laquelle l’énergie cinétique du jet devient puissance utile. Il dépend fortement de l’écart entre la vitesse des gaz éjectés et la vitesse de l’avion. Plus les deux vitesses sont proches, meilleur est le rendement.",
       "source_refs": []
     },
@@ -4216,7 +4216,7 @@
         },
         {
           "id": "B",
-          "text": "Elle est égale à \\(P / Ch\\).",
+          "text": "Elle est égale \\(à P / Ch\\).",
           "is_correct": false,
           "explanation": "Faux : l’inverse de la formule donnerait une grandeur différente de la consommation spécifique."
         },
@@ -4390,7 +4390,7 @@
         },
         {
           "id": "C",
-          "text": "À \\(11\\,000\\) m et \\(M=1\\), \\(Tu\\) augmente d’environ 60 % pour une hausse de \\(C_{sp}\\) de 60 %.",
+          "text": "À \\(11\\,000\\) m et \\(M=1, Tu\\) augmente d’environ 60 % pour une hausse de \\(C_{sp}\\) de 60 %.",
           "is_correct": false,
           "explanation": "Ce couple de valeurs décrit la situation à \\(11\\,000\\) m et \\(M=1\\), pas celle au sol."
         },
@@ -4462,7 +4462,7 @@
       "options": [
         {
           "id": "A",
-          "text": "Pour \\(V_o < 60\\) kt, \\(T_{REV}\\) vaut environ 50 % de \\(T_u\\) maxi et le risque principal est l’excès de portance.",
+          "text": "Pour \\(V_o < 60 kt, T_{REV}\\) vaut environ 50 % de \\(T_u\\) maxi et le risque principal est l’excès de portance.",
           "is_correct": false,
           "explanation": "Le 50 % est associé à un ordre de grandeur global, mais le support précise qu’à basse vitesse on est plutôt autour de 14 % de \\(T_u\\) maxi."
         },
@@ -4474,7 +4474,7 @@
         },
         {
           "id": "C",
-          "text": "Pour \\(V_o < 60\\) kt, \\(T_{REV}\\) est de l’ordre de 14 % de \\(T_u\\) maxi et il faut diminuer la poussée inverse à basse vitesse à cause du risque de gaz chauds et de pompage.",
+          "text": "Pour \\(V_o < 60 kt, T_{REV}\\) est de l’ordre de 14 % de \\(T_u\\) maxi et il faut diminuer la poussée inverse à basse vitesse à cause du risque de gaz chauds et de pompage.",
           "is_correct": true,
           "explanation": "Le support donne bien cet ordre de grandeur et précise qu’en dessous de 60 kt il existe un risque d’ingestion de gaz chauds et de pompage."
         },
@@ -4488,12 +4488,12 @@
           "id": "E",
           "text": "L’ordre de grandeur de \\(T_{REV}\\) dépend uniquement du type de frein de roue et pas de la vitesse avion.",
           "is_correct": false,
-          "explanation": "La vitesse avion intervient directement dans l’évolution de la poussée inverse, puisque le document relie \\(T_{REV}\\) à \\(V_o\\)."
+          "explanation": "La vitesse avion intervient directement dans l’évolution de la poussée inverse, puisque le document relie \\(T_{REV} à V_o\\)."
         }
       ],
       "coverage_label": "QCM - Poussée inverse en double flux et ordres de grandeur",
       "learning_objective": "Lire les ordres de grandeur de la poussée inverse et repérer la limite d’utilisation à basse vitesse.",
-      "correction_summary": "La bonne réponse associe \\(V_o < 60\\) kt à une poussée inverse d’environ 14 % de \\(T_u\\) maxi et à un risque de gaz chauds/pompage. Le piège consiste à retenir le chiffre global de 50 % sans tenir compte de la baisse à basse vitesse.",
+      "correction_summary": "La bonne réponse associe \\(V_o < 60 kt à\\) une poussée inverse d’environ 14 % de \\(T_u\\) maxi et à un risque de gaz chauds/pompage. Le piège consiste à retenir le chiffre global de 50 % sans tenir compte de la baisse à basse vitesse.",
       "course_clarification": "La poussée inverse n’est pas constante : elle doit être adaptée à la vitesse de l’avion. En dessous d’un certain seuil, l’usage trop important de la reverse peut provoquer une ingestion de gaz chauds et du pompage.",
       "source_refs": []
     },
@@ -5104,7 +5104,7 @@
         },
         {
           "id": "C",
-          "text": "Le débit massique d’air \\(Q_{ma}\\) s’exprime en newtons.",
+          "text": "Le débit massique d’air \\(Q_{ma} s\\)’exprime en newtons.",
           "is_correct": false,
           "explanation": "\\(Q_{ma}\\) est un débit massique, donc une grandeur en \\(kg/s\\), pas une force. La force apparaît après multiplication par une vitesse."
         },
@@ -5112,7 +5112,7 @@
           "id": "D",
           "text": "La poussée nette s’écrit \\(Tu = Q_{ma}(V_5 - V_0)\\).",
           "is_correct": true,
-          "explanation": "Cette expression correspond au terme réacteur : la poussée vient de l’écart entre la vitesse d’éjection et la vitesse d’entrée de l’air. Si \\(V_5 > V_0\\), la force est dirigée vers l’avant."
+          "explanation": "Cette expression correspond au terme réacteur : la poussée vient de l’écart entre la vitesse d’éjection et la vitesse d’entrée de l’air\\(. Si V_5 > V_0\\), la force est dirigée vers l’avant."
         },
         {
           "id": "E",
@@ -5226,7 +5226,7 @@
           "id": "B",
           "text": "\\(\\eta_g = \\dfrac{P_{tt}}{P_c}\\).",
           "is_correct": false,
-          "explanation": "Faux : \\(P_{tt}/P_c\\) définit le rendement thermique théorique, pas le rendement global."
+          "explanation": "Faux \\(: P_{tt}/P_c\\) définit le rendement thermique théorique, pas le rendement global."
         },
         {
           "id": "C",
@@ -5238,11 +5238,11 @@
           "id": "D",
           "text": "\\(\\eta_g = \\dfrac{P_{tr}}{P_{tt}}\\).",
           "is_correct": false,
-          "explanation": "Faux : \\(P_{tr}/P_{tt}\\) correspond au rendement interne \\(\\eta_i\\), pas au rendement global."
+          "explanation": "Faux \\(: P_{tr}/P_{tt}\\) correspond au rendement interne \\(\\eta_i\\), pas au rendement global."
         },
         {
           "id": "E",
-          "text": "\\(\\eta_g\\) s’exprime en newtons.",
+          "text": "\\(\\eta_g s\\)’exprime en newtons.",
           "is_correct": false,
           "explanation": "Faux : un rendement est sans unité. Les newtons mesurent une force, pas un rendement."
         }
@@ -5250,7 +5250,7 @@
       "coverage_label": "QCM - Puissance calorifique et puissance thermique théorique",
       "learning_objective": "Identifier la définition du rendement global dans la chaîne énergétique du turboréacteur.",
       "correction_summary": "Le rendement global compare la puissance utile en sortie à la puissance calorifique apportée par le carburant. La confusion fréquente consiste à le mélanger avec les rendements intermédiaires de la chaîne.",
-      "course_clarification": "Le rendement global mesure l’efficacité totale de la chaîne énergétique : \\(\\eta_g = P_p/P_c\\). Il résume toutes les pertes entre le carburant et la puissance utile.",
+      "course_clarification": "Le rendement global mesure l’efficacité totale de la chaîne énergétique \\(: \\eta_g = P_p/P_c. Il\\) résume toutes les pertes entre le carburant et la puissance utile.",
       "source_refs": []
     },
     {
@@ -5292,7 +5292,7 @@
       "coverage_label": "QCM - Puissance thermique réelle et puissance propulsive",
       "learning_objective": "Identifier l’expression de la puissance thermique réelle à partir des vitesses d’écoulement.",
       "correction_summary": "La puissance thermique réelle est liée au gain d’énergie cinétique du jet, d’où l’expression avec la différence des carrés des vitesses. Le piège consiste à la confondre avec la poussée ou avec la puissance utile sur l’avion.",
-      "course_clarification": "\\(Q_{ma}\\) désigne le débit massique d’air. \\(V_5\\) est la vitesse des gaz en sortie et \\(V_0\\) la vitesse à l’entrée. La différence \\(V_5^2 - V_0^2\\) mesure l’énergie cinétique gagnée par le flux.",
+      "course_clarification": "\\(Q_{ma}\\) désigne le débit massique d’air\\(. V_5\\) est la vitesse des gaz en sortie et \\(V_0\\) la vitesse à l’entrée. La différence \\(V_5^2 - V_0^2\\) mesure l’énergie cinétique gagnée par le flux.",
       "source_refs": []
     },
     {
@@ -5304,7 +5304,7 @@
           "id": "A",
           "text": "\\(P_{tt} = P_c + Q_{ma}C_p(T_5-T_0)\\).",
           "is_correct": false,
-          "explanation": "Les pertes par source froide se soustraient à \\(P_c\\) : elles ne s’ajoutent pas, sinon on obtiendrait une puissance plus grande que l’énergie fournie par combustion."
+          "explanation": "Les pertes par source froide se soustraient \\(à P_c\\): elles ne s’ajoutent pas, sinon on obtiendrait une puissance plus grande que l’énergie fournie par combustion."
         },
         {
           "id": "B",
@@ -5316,7 +5316,7 @@
           "id": "C",
           "text": "\\(P_{tt} = \\tfrac12 Q_{ma}(V_5^2-V_0^2)\\).",
           "is_correct": false,
-          "explanation": "Cette expression correspond à \\(P_{tr}\\), la puissance thermique réelle liée au jet, et non à la puissance théorique après prise en compte des pertes."
+          "explanation": "Cette expression correspond \\(à P_{tr}\\), la puissance thermique réelle liée au jet, et non à la puissance théorique après prise en compte des pertes."
         },
         {
           "id": "D",
@@ -5352,7 +5352,7 @@
           "id": "B",
           "text": "La puissance sur l’arbre s’écrit \\(P = C \\times N_h\\) sans facteur de conversion.",
           "is_correct": false,
-          "explanation": "Le produit \\(C \\times N_h\\) ne suffit pas, car il manque le passage des tours/minute aux unités cohérentes de puissance. Le facteur \\(2\\pi/60\\) est indispensable."
+          "explanation": "Le produit \\(C \\times N_h ne\\) suffit pas, car il manque le passage des tours/minute aux unités cohérentes de puissance. Le facteur \\(2\\pi/60\\) est indispensable."
         },
         {
           "id": "C",
@@ -5524,7 +5524,7 @@
         },
         {
           "id": "C",
-          "text": "\u0000TREV = -Qma\\,(V''5 + Vo)",
+          "text": "TREV = -Qma\\,(V''5 + Vo)",
           "is_correct": true,
           "explanation": "C’est la relation écrite dans le support : la poussée inverse est négative et dépend de la somme des vitesses concernées, multipliée par le débit massique d’air."
         },
@@ -5620,7 +5620,7 @@
         },
         {
           "id": "E",
-          "text": "La grandeur \\(Q_{ma}\\) n’intervient pas dans le calcul de \\(T_{REV}\\).",
+          "text": "La grandeur \\(Q_{ma} n\\)’intervient pas dans le calcul de \\(T_{REV}\\).",
           "is_correct": false,
           "explanation": "Le débit massique \\(Q_{ma}\\) est bien présent dans la relation et conditionne l’intensité de la poussée. L’ignorer conduirait à une formule incomplète et fausse."
         }
@@ -5628,7 +5628,7 @@
       "coverage_label": "QCM - Calcul et interprétation de la poussée inverse",
       "learning_objective": "Lire et interpréter correctement la formule de poussée inverse, y compris le rôle du signe et de la valeur absolue.",
       "correction_summary": "La relation correcte est \\(T_{REV} = -Q_{ma}(V''_5 + V_o)\\) et sa valeur absolue s’en déduit directement. Le piège principal est de confondre le signe, qui indique le sens, avec la valeur numérique utilisée pour le calcul.",
-      "course_clarification": "\\(Q_{ma}\\) désigne le débit massique, \\(V''_5\\) la vitesse du jet à la sortie, et \\(V_o\\) la vitesse de l’avion. Le signe négatif signifie que la force s’oppose au déplacement et produit un freinage.",
+      "course_clarification": "\\(Q_{ma}\\) désigne le débit massique\\(, V''_5\\) la vitesse du jet à la sortie, et \\(V_o\\) la vitesse de l’avion. Le signe négatif signifie que la force s’oppose au déplacement et produit un freinage.",
       "source_refs": []
     },
     {

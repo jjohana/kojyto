@@ -42,7 +42,7 @@
       "coverage_label": "Poussée fondamentale du turboréacteur",
       "learning_objective": "Identifier la relation \\(Tu = Q_{ma}(V_5 - V_0)\\) et lire correctement ses grandeurs.",
       "correction_summary": "Le raisonnement attendu consiste à repérer que la poussée vient de l’accélération de l’air éjecté vers l’arrière. La confusion fréquente consiste à inverser \\(V_0\\) et \\(V_5\\) ou à oublier le débit massique, ce qui fausse l’expression de la force.",
-      "course_clarification": "\\(Q_{ma}\\) est le débit massique d’air. \\(V_0\\) est la vitesse d’entrée et \\(V_5\\) la vitesse de sortie. La poussée est positive quand l’air sort plus vite qu’il n’entre.",
+      "course_clarification": "\\(Q_{ma}\\) est le débit massique d’air\\(. V_0\\) est la vitesse d’entrée et \\(V_5\\) la vitesse de sortie. La poussée est positive quand l’air sort plus vite qu’il n’entre.",
       "source_refs": []
     },
     {
@@ -52,25 +52,25 @@
       "options": [
         {
           "id": "A",
-          "text": "En banc d’essais, \\(V_0 = 0\\) et \\(F_{brute} = V_5(Q_{ma} + Q_{mc})\\).",
+          "text": "En banc d’essais\\(, V_0 = 0\\) et \\(F_{brute} = V_5(Q_{ma} + Q_{mc})\\).",
           "is_correct": true,
           "explanation": "Vrai : la vitesse d’entrée est nulle au banc, donc la poussée brute se réduit à la vitesse d’éjection multipliée par la somme des débits."
         },
         {
           "id": "B",
-          "text": "En banc d’essais, \\(V_0 \\neq 0\\) et \\(F_{brute} = Q_{ma}(V_5 - V_0)\\).",
+          "text": "En banc d’essais\\(, V_0 \\neq 0\\) et \\(F_{brute} = Q_{ma}(V_5 - V_0)\\).",
           "is_correct": false,
           "explanation": "Faux : au banc, la vitesse d’entrée est prise nulle et la formule demandée n’est pas la poussée brute."
         },
         {
           "id": "C",
-          "text": "En banc d’essais, \\(F_{brute} = Q_{mc}V_0\\).",
+          "text": "En banc d’essais\\(, F_{brute} = Q_{mc}V_0\\).",
           "is_correct": false,
           "explanation": "Faux : la vitesse d’entrée est nulle et le débit carburant seul ne donne pas la poussée brute."
         },
         {
           "id": "D",
-          "text": "En banc d’essais, \\(F_{brute} = \\dfrac{Q_{ma}}{V_5}\\).",
+          "text": "En banc d’essais\\(, F_{brute} = \\dfrac{Q_{ma}}{V_5}\\).",
           "is_correct": false,
           "explanation": "Faux : l’expression n’a pas la bonne dimension et ne correspond pas à la poussée brute."
         },
@@ -102,7 +102,7 @@
           "id": "B",
           "text": "La poussée spécifique s’écrit \\(F_{sp} = Tu \\times Q_{ma}\\).",
           "is_correct": false,
-          "explanation": "Faux : on divise par \\(Q_{ma}\\), on ne multiplie pas."
+          "explanation": "Faux : on divise par \\(Q_{ma}, on ne\\) multiplie pas."
         },
         {
           "id": "C",
@@ -148,7 +148,7 @@
         },
         {
           "id": "C",
-          "text": "La poussée résultante indiquée est de 45 % vers l’avant. ",
+          "text": "La poussée résultante indiquée est de 45 % vers l’avant.",
           "is_correct": true,
           "explanation": "Vrai : les contributions avant et arrière donnent un bilan net de 45 % vers l’avant."
         },

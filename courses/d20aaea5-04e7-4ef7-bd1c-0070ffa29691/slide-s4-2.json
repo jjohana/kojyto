@@ -34,15 +34,15 @@
         },
         {
           "id": "E",
-          "text": "La vitesse de vol \\(V_0\\) s’exprime en bar.",
+          "text": "La vitesse de vol \\(V_0 s\\)’exprime en bar.",
           "is_correct": false,
-          "explanation": "Faux : \\(V_0\\) est une vitesse, donc son unité est \\(\\text{m/s}\\)."
+          "explanation": "Faux \\(: V_0\\) est une vitesse, donc son unité est \\(\\text{m/s}\\)."
         }
       ],
       "coverage_label": "Principe du turbopropulseur : relation puissance-traction",
       "learning_objective": "Identifier les grandeurs de la relation puissance-traction d’un turbopropulseur.",
       "correction_summary": "Le raisonnement attendu consiste à relier chaque symbole à sa grandeur physique : puissance, rendement, traction et vitesse. La confusion fréquente vient du mélange des unités de puissance, de force et de vitesse.",
-      "course_clarification": "Dans \\(P \\times \\eta_h = T \\times V_0\\), \\(P\\) est une puissance, \\(\\eta_h\\) un rendement sans unité, \\(T\\) une force et \\(V_0\\) une vitesse.",
+      "course_clarification": "Dans \\(P \\times \\eta_h = T \\times V_0, P\\) est une puissance\\(, \\eta_h un\\) rendement sans unité, \\(T\\) une force et \\(V_0\\) une vitesse.",
       "source_refs": []
     },
     {
@@ -72,7 +72,7 @@
           "id": "D",
           "text": "La vitesse \\(N_h\\) est une température.",
           "is_correct": false,
-          "explanation": "Faux : \\(N_h\\) désigne la vitesse de rotation de l’hélice, pas une température."
+          "explanation": "Faux \\(: N_h\\) désigne la vitesse de rotation de l’hélice, pas une température."
         },
         {
           "id": "E",
@@ -142,7 +142,7 @@
         },
         {
           "id": "B",
-          "text": "Elle est égale à \\(P / Ch\\).",
+          "text": "Elle est égale \\(à P / Ch\\).",
           "is_correct": false,
           "explanation": "Faux : l’inverse de la formule donnerait une grandeur différente de la consommation spécifique."
         },

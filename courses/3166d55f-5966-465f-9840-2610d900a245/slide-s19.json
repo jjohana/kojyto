@@ -36,13 +36,13 @@
           "id": "E",
           "text": "Le symbole rad doit être remplacé par kg dans tous les calculs de rotation.",
           "is_correct": false,
-          "explanation": "Le kilogramme mesure une masse, sans lien direct avec la mesure angulaire. En rotation, on conserve rad pour l’angle, rad/s pour omega et rad/s² pour alpha."
+          "explanation": "Le kilogramme mesure une masse, sans lien direct avec la mesure angulaire. En rotation, on conserve rad pour l’angle, rad/s pour omega et rad/s² pour alpha."
         }
       ],
       "coverage_label": "Erreurs fréquentes à éviter",
       "learning_objective": "Identifier correctement les unités des grandeurs angulaires et distinguer angle, vitesse angulaire et accélération angulaire.",
-      "correction_summary": "La bonne affirmation rappelle que le radian est sans dimension et que les unités angulaires restent cohérentes : rad/s pour omega, rad/s² pour alpha. Le piège classique consiste à confondre ces unités avec celles des grandeurs linéaires.",
-      "course_clarification": "Un angle theta se mesure en radians. La vitesse angulaire omega = d\\theta/dt et l’accélération angulaire alpha = d\\omega/dt conservent le radian dans leur écriture pratique, même si le radian est sans dimension.",
+      "correction_summary": "La bonne affirmation rappelle que le radian est sans dimension et que les unités angulaires restent cohérentes : rad/s pour omega, rad/s² pour alpha. Le piège classique consiste à confondre ces unités avec celles des grandeurs linéaires.",
+      "course_clarification": "Un angle theta se mesure en radians. La vitesse angulaire omega \\(= d\\theta/dt\\) et l’accélération angulaire alpha \\(= d\\omega/dt\\) conservent le radian dans leur écriture pratique, même si le radian est sans dimension.",
       "source_refs": []
     },
     {
@@ -84,7 +84,7 @@
       "coverage_label": "Erreurs fréquentes à éviter",
       "learning_objective": "Distinguer une grandeur instantanée d’une grandeur moyenne à partir de sa définition mathématique et physique.",
       "correction_summary": "L’énoncé correct associe la vitesse instantanée à la dérivée de la position, et la vitesse moyenne à un intervalle fini. Le piège est de remplacer une valeur locale par un rapport global distance/temps.",
-      "course_clarification": "La pente de x(t) donne v(t) à l’instant considéré. À l’inverse, une moyenne est calculée sur une durée complète et ne représente pas l’évolution locale du mouvement.",
+      "course_clarification": "La pente de x(t) donne v(t) à l’instant considéré. À l’inverse, une moyenne est calculée sur une durée complète et ne représente pas l’évolution locale du mouvement.",
       "source_refs": []
     },
     {
@@ -94,7 +94,7 @@
       "options": [
         {
           "id": "A",
-          "text": "L’accélération se décompose en une composante tangentielle a_t = \\alpha R et une composante normale a_n = \\omega^2R = v^2/R.",
+          "text": "L’accélération se décompose en une composante tangentielle \\(a_t = \\alpha R\\) et une composante normale \\(a_n = \\omega^2R = v^2/R\\).",
           "is_correct": true,
           "explanation": "En mouvement circulaire, l’accélération n’est pas réduite à une seule composante. La composante tangentielle traduit la variation de la vitesse, et la composante normale traduit la courbure de la trajectoire."
         },
@@ -102,19 +102,19 @@
           "id": "B",
           "text": "L’accélération d’un mouvement circulaire est toujours uniquement normale.",
           "is_correct": false,
-          "explanation": "La composante normale existe bien, mais la composante tangentielle peut aussi être présente si la vitesse varie. Oublier a_t conduit à une description incomplète du mouvement."
+          "explanation": "La composante normale existe bien, mais la composante tangentielle peut aussi être présente si la vitesse varie. Oublier a_t conduit à une description incomplète du mouvement."
         },
         {
           "id": "C",
-          "text": "L’accélération normale vaut a_n = omega R.",
+          "text": "L’accélération normale vaut a_n = omega R.",
           "is_correct": false,
-          "explanation": "La bonne expression est a_n = \\omega^2R ou v^2/R. L’expression omega R correspond à la vitesse linéaire v, pas à l’accélération."
+          "explanation": "La bonne expression est \\(a_n = \\omega^2R\\) ou v^2/R. L’expression omega R correspond à la vitesse linéaire v, pas à l’accélération."
         },
         {
           "id": "D",
           "text": "La composante tangentielle ne dépend jamais de la variation de vitesse.",
           "is_correct": false,
-          "explanation": "La composante tangentielle est précisément liée à la variation de la vitesse de translation le long de la trajectoire. Si la vitesse change, a_t doit être prise en compte."
+          "explanation": "La composante tangentielle est précisément liée à la variation de la vitesse de translation le long de la trajectoire. Si la vitesse change, a_t doit être prise en compte."
         },
         {
           "id": "E",
@@ -125,8 +125,8 @@
       ],
       "coverage_label": "Erreurs fréquentes à éviter",
       "learning_objective": "Reconnaître les composantes de l’accélération en mouvement circulaire et utiliser les bonnes formules.",
-      "correction_summary": "La réponse correcte rappelle que l’accélération circulaire se décompose en a_t et a_n. Le piège classique consiste à n’en garder qu’une seule composante ou à confondre vitesse et accélération.",
-      "course_clarification": "La composante tangentielle mesure la variation de la norme de la vitesse. La composante normale, orientée vers le centre, traduit le changement de direction et s’écrit a_n = \\omega^2R = v^2/R.",
+      "correction_summary": "La réponse correcte rappelle que l’accélération circulaire se décompose en a_t et a_n. Le piège classique consiste à n’en garder qu’une seule composante ou à confondre vitesse et accélération.",
+      "course_clarification": "La composante tangentielle mesure la variation de la norme de la vitesse. La composante normale, orientée vers le centre, traduit le changement de direction et s’écrit \\(a_n = \\omega^2R = v^2/R\\).",
       "source_refs": []
     },
     {
@@ -136,15 +136,15 @@
       "options": [
         {
           "id": "A",
-          "text": "Pour convertir des tr/min en rad/s, il faut diviser par 2\\pi puis multiplier par 60.",
+          "text": "Pour convertir des tr/min en rad/s, il faut diviser par 2\\(\\pi\\) puis multiplier par 60.",
           "is_correct": false,
-          "explanation": "Cette transformation inverse le facteur correct. On doit convertir les tours en radians, puis les minutes en secondes ; la formule correcte est \\omega = 2\\pi N/60."
+          "explanation": "Cette transformation inverse le facteur correct. On doit convertir les tours en radians, puis les minutes en secondes ; la formule correcte est \\(\\omega = 2\\pi N/60\\)."
         },
         {
           "id": "B",
           "text": "1500 tr/min correspondent à 15 rad/s.",
           "is_correct": false,
-          "explanation": "La valeur est trop petite d’un facteur 10 environ. Avec \\omega = 2\\pi\\times1500/60, on obtient environ 157 rad/s."
+          "explanation": "La valeur est trop petite d’un facteur 10 environ. Avec \\(\\omega = 2\\pi\\times1500/60, on\\) obtient environ 157 rad/s."
         },
         {
           "id": "C",
@@ -154,21 +154,21 @@
         },
         {
           "id": "D",
-          "text": "Un tour complet vaut \\pi radians.",
+          "text": "Un tour complet vaut \\(\\pi\\) radians.",
           "is_correct": false,
-          "explanation": "Un tour complet correspond à 2\\pi radians. Utiliser \\pi revient à ne compter qu’un demi-tour, ce qui fausse toutes les conversions angulaires."
+          "explanation": "Un tour complet correspond à 2\\(\\pi\\) radians. Utiliser \\(\\pi\\) revient à ne compter qu’un demi-tour, ce qui fausse toutes les conversions angulaires."
         },
         {
           "id": "E",
-          "text": "Si N est exprimé en tr/min, alors \\omega = 2\\pi N/60 en rad/s.",
+          "text": "Si N est exprimé en tr/min, alors \\(\\omega = 2\\pi N/60\\) en rad/s.",
           "is_correct": true,
-          "explanation": "Un tour correspond à 2\\pi radians, et une minute contient 60 secondes. Il faut donc multiplier le nombre de tours par 2\\pi puis diviser par 60 pour obtenir des rad/s."
+          "explanation": "Un tour correspond à 2\\(\\pi\\) radians, et une minute contient 60 secondes. Il faut donc multiplier le nombre de tours par 2\\(\\pi\\) puis diviser par 60 pour obtenir des rad/s."
         }
       ],
       "coverage_label": "Erreurs fréquentes à éviter",
       "learning_objective": "Appliquer correctement la conversion entre tours par minute et radians par seconde.",
-      "correction_summary": "La formule correcte est \\omega = 2\\pi N/60 lorsque N est en tr/min. Le piège principal est d’oublier soit le facteur 2\\pi, soit le passage de minutes à secondes.",
-      "course_clarification": "Le ‘tour’ est une unité de comptage des rotations, et 2\\pi radians correspondent à un tour. Pour travailler en cinématique, il faut ramener la vitesse de rotation en rad/s.",
+      "correction_summary": "La formule correcte est \\(\\omega = 2\\pi N/60\\) lorsque N est en tr/min. Le piège principal est d’oublier soit le facteur 2\\(\\pi\\), soit le passage de minutes à secondes.",
+      "course_clarification": "Le ‘tour’ est une unité de comptage des rotations, et 2\\(\\pi\\) radians correspondent à un tour. Pour travailler en cinématique, il faut ramener la vitesse de rotation en rad/s.",
       "source_refs": []
     },
     {

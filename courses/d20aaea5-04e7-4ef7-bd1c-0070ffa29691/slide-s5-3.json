@@ -142,13 +142,13 @@
         },
         {
           "id": "B",
-          "text": "Le réglage du col dépend uniquement de la température extérieure et non de la pression \\\\(P_{t4}\\\\).",
+          "text": "Le réglage du col dépend uniquement de la température extérieure et non de la pression \\(P_{t4}\\).",
           "is_correct": false,
-          "explanation": "Le support indique que le réglage du col dépend de la pression \\\\(P_{t4}\\\\) et du régime réacteur, pas seulement de la température extérieure."
+          "explanation": "Le support indique que le réglage du col dépend de la pression \\(P_{t4}\\) et du régime réacteur, pas seulement de la température extérieure."
         },
         {
           "id": "C",
-          "text": "Une tuyère supersonique comporte un convergent, un col et un divergent ; \\\\(M=1\\\\) au col, \\\\(M<1\\\\) dans le convergent et \\\\(M>1\\\\) dans le divergent.",
+          "text": "Une tuyère supersonique comporte un convergent, un col et un divergent ; \\(M=1\\) au col\\(, M<1\\) dans le convergent et \\(M>1\\) dans le divergent.",
           "is_correct": true,
           "explanation": "C’est la description géométrique et cinématique donnée pour la tuyère supersonique : le col correspond au point sonique, le convergent reste subsonique et le divergent devient supersonique."
         },
@@ -160,15 +160,15 @@
         },
         {
           "id": "E",
-          "text": "Dans le convergent d’une tuyère supersonique, \\\\(M>1\\\\) dès l’entrée et \\\\(M=1\\\\) au sortir du col.",
+          "text": "Dans le convergent d’une tuyère supersonique\\(, M>1\\) dès l’entrée et \\(M=1\\) au sortir du col.",
           "is_correct": false,
           "explanation": "La répartition indiquée est inversée : le convergent est subsonique, le col est sonique, puis le divergent devient supersonique."
         }
       ],
       "coverage_label": "Tuyère supersonique",
       "learning_objective": "Lire la structure d’une tuyère convergente-divergente et associer chaque zone au régime de Mach correspondant.",
-      "correction_summary": "La bonne réponse associe correctement convergent, col et divergent aux régimes \\\\(M<1\\\\), \\\\(M=1\\\\) et \\\\(M>1\\\\). Le piège principal est d’inverser le sens de variation de la section dans le divergent ou de confondre son rôle avec celui du col.",
-      "course_clarification": "Le col fixe le passage sonique, tandis que le divergent permet d’obtenir une accélération supersonique. Le réglage dépend de \\\\(P_{t4}\\\\) et du régime du réacteur, puis l’ensemble s’adapte au Mach de vol.",
+      "correction_summary": "La bonne réponse associe correctement convergent, col et divergent aux régimes \\(M<1, M=1\\) et \\(M>1\\). Le piège principal est d’inverser le sens de variation de la section dans le divergent ou de confondre son rôle avec celui du col.",
+      "course_clarification": "Le col fixe le passage sonique, tandis que le divergent permet d’obtenir une accélération supersonique. Le réglage dépend de \\(P_{t4}\\) et du régime du réacteur, puis l’ensemble s’adapte au Mach de vol.",
       "source_refs": []
     }
   ],

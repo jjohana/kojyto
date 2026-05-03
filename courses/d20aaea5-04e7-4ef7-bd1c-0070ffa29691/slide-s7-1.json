@@ -190,7 +190,7 @@
         },
         {
           "id": "C",
-          "text": "\u0000TREV = -Qma\\,(V''5 + Vo)",
+          "text": "TREV = -Qma\\,(V''5 + Vo)",
           "is_correct": true,
           "explanation": "C’est la relation écrite dans le support : la poussée inverse est négative et dépend de la somme des vitesses concernées, multipliée par le débit massique d’air."
         },

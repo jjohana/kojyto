@@ -1344,7 +1344,7 @@
       "coverage_label": "QCM - IDG : implantation sur moteur et liaison mécanique",
       "learning_objective": "Comprendre que l’IDG est une génération entraînée mécaniquement par le moteur.",
       "correction_summary": "L’élément clé est l’entraînement par le moteur. Le piège consiste à remplacer cette chaîne mécanique par une source électrique ou par un autre système de l’avion.",
-      "course_clarification": "Un générateur entraîné par moteur transforme une puissance mécanique en puissance électrique. Ici, la chaîne est : moteur \u001f gearbox pad \u001f IDG.",
+      "course_clarification": "Un générateur entraîné par moteur transforme une puissance mécanique en puissance électrique. Ici, la chaîne est : moteur  gearbox pad  IDG.",
       "source_refs": []
     },
     {
@@ -2729,7 +2729,7 @@
       ],
       "coverage_label": "QCM - Génération de secours : logique de bascule",
       "learning_objective": "Reconstituer la chaîne d'énergie entre batteries et STATIC INVERTER en mode secours.",
-      "correction_summary": "La relation correcte est batteries \u00153 STATIC INVERTER \u00153 réseau AC essentiel. Le piège principal est d'inverser le sens des flux ou de confondre secours et alimentation normale.",
+      "correction_summary": "La relation correcte est batteries 3 STATIC INVERTER 3 réseau AC essentiel. Le piège principal est d'inverser le sens des flux ou de confondre secours et alimentation normale.",
       "course_clarification": "Le chemin d'énergie en secours passe par la conversion avant d'atteindre une partie du réseau AC. Les batteries ne fournissent pas directement le réseau AC ; elles alimentent d'abord le STATIC INVERTER.",
       "source_refs": []
     },

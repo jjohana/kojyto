@@ -126,7 +126,7 @@
       "coverage_label": "Entraînement moteur de l’IDG",
       "learning_objective": "Comprendre que l’IDG est une génération entraînée mécaniquement par le moteur.",
       "correction_summary": "L’élément clé est l’entraînement par le moteur. Le piège consiste à remplacer cette chaîne mécanique par une source électrique ou par un autre système de l’avion.",
-      "course_clarification": "Un générateur entraîné par moteur transforme une puissance mécanique en puissance électrique. Ici, la chaîne est : moteur \u001f gearbox pad \u001f IDG.",
+      "course_clarification": "Un générateur entraîné par moteur transforme une puissance mécanique en puissance électrique. Ici, la chaîne est : moteur  gearbox pad  IDG.",
       "source_refs": []
     },
     {

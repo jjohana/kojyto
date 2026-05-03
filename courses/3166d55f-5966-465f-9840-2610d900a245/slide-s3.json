@@ -102,7 +102,7 @@
           "id": "B",
           "text": "Le vecteur position est indépendant du temps.",
           "is_correct": false,
-          "explanation": "Le vecteur position est justement noté comme une fonction du temps, par exemple \\\\(r(t)\\\\)."
+          "explanation": "Le vecteur position est justement noté comme une fonction du temps, par exemple \\(r(t)\\)."
         },
         {
           "id": "C",
@@ -126,7 +126,7 @@
       "coverage_label": "Trajectoire et position",
       "learning_objective": "Comprendre le rôle du vecteur position dépendant du temps.",
       "correction_summary": "La bonne réponse relie la fonction position au temps, puis à la vitesse et à l’accélération. Le piège est de confondre cette grandeur de position avec une vitesse ou une force.",
-      "course_clarification": "On écrit souvent le vecteur position sous la forme \\\\(r(t)\\\\). Sa variation avec le temps sert à obtenir les grandeurs cinématiques dérivées.",
+      "course_clarification": "On écrit souvent le vecteur position sous la forme \\(r(t)\\). Sa variation avec le temps sert à obtenir les grandeurs cinématiques dérivées.",
       "source_refs": []
     },
     {

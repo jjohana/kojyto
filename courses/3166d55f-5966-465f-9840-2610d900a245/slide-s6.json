@@ -30,7 +30,7 @@
           "id": "D",
           "text": "L’accélération est la dérivée temporelle de la vitesse, soit \\(a = \\frac{dv}{dt} = \\frac{d^2r}{dt^2}\\).",
           "is_correct": true,
-          "explanation": "L’accélération mesure comment la vitesse varie au cours du temps. L’écriture \\(\\frac{dv}{dt}\\) exprime cette variation, et comme \\(v = \\frac{dr}{dt}\\), on obtient aussi \\(a = \\frac{d^2r}{dt^2}\\)."
+          "explanation": "L’accélération mesure comment la vitesse varie au cours du temps. L’écriture \\(\\frac{dv}{dt}\\) exprime cette variation, et comme \\(v = \\frac{dr}{dt}, on\\) obtient aussi \\(a = \\frac{d^2r}{dt^2}\\)."
         },
         {
           "id": "E",
@@ -54,7 +54,7 @@
           "id": "A",
           "text": "L’unité SI de l’accélération est \\(\\text{m·s}^{-1}\\).",
           "is_correct": false,
-          "explanation": "\\(\\text{m·s}^{-1}\\) est l’unité d’une vitesse, pas d’une accélération. L’accélération ajoute une division par le temps, d’où \\(\\text{m·s}^{-2}\\)."
+          "explanation": "\\(\\text{m·s}^{-1}\\) est l’unité d’une vitesse, pas d’une accélération. L’accélération ajoute une division par le temps, d’\\(où \\text{m·s}^{-2}\\)."
         },
         {
           "id": "B",
@@ -84,7 +84,7 @@
       "coverage_label": "Accélération : définition et unité",
       "learning_objective": "Reconnaître l’unité SI de l’accélération et la distinguer des unités de vitesse, de force et de vitesse angulaire.",
       "correction_summary": "La bonne unité est \\(\\text{m·s}^{-2}\\). Le piège consiste à confondre l’accélération avec une vitesse, une force ou une vitesse angulaire.",
-      "course_clarification": "Une accélération mesure une variation de vitesse par seconde. Son unité s’obtient donc à partir de celle de la vitesse, ce qui conduit à \\(\\text{m·s}^{-2}\\).",
+      "course_clarification": "Une accélération mesure une variation de vitesse par seconde. Son unité s’obtient donc à partir de celle de la vitesse, ce qui conduit \\(à \\text{m·s}^{-2}\\).",
       "source_refs": []
     },
     {
@@ -102,7 +102,7 @@
           "id": "B",
           "text": "Si l’accélération est nulle, le mobile est forcément immobile.",
           "is_correct": false,
-          "explanation": "Un mobile peut être en mouvement avec \\(a = 0\\) si sa vitesse reste constante. L’absence d’accélération ne signifie pas absence de mouvement."
+          "explanation": "Un mobile peut être en mouvement avec \\(a = 0 si sa\\) vitesse reste constante. L’absence d’accélération ne signifie pas absence de mouvement."
         },
         {
           "id": "C",
@@ -118,14 +118,14 @@
         },
         {
           "id": "E",
-          "text": "Si \\(a = 0\\), la position du mobile est forcément constante au cours du temps.",
+          "text": "\\(Si a = 0\\), la position du mobile est forcément constante au cours du temps.",
           "is_correct": false,
           "explanation": "Une position constante correspond à un mobile au repos. Avec \\(a = 0\\), le mobile peut aussi se déplacer à vitesse constante sur une trajectoire rectiligne."
         }
       ],
       "coverage_label": "Accélération : définition et unité",
       "learning_objective": "Comprendre qu’une accélération nulle est compatible avec un mouvement uniforme.",
-      "correction_summary": "La réponse correcte est celle qui relie \\(a = 0\\) à une vitesse constante, comme dans le mouvement rectiligne uniforme. Le piège est de confondre accélération nulle et immobilité.",
+      "correction_summary": "La réponse correcte est celle qui relie \\(a = 0 à\\) une vitesse constante, comme dans le mouvement rectiligne uniforme. Le piège est de confondre accélération nulle et immobilité.",
       "course_clarification": "Quand la vitesse ne change ni en norme ni en direction, son dérivé temporel est nul. Le mobile peut donc se déplacer tout en ayant \\(a = 0\\).",
       "source_refs": []
     },
@@ -138,7 +138,7 @@
           "id": "A",
           "text": "La composante tangentielle \\(a_t\\) est dirigée vers le centre de courbure.",
           "is_correct": false,
-          "explanation": "La direction vers le centre de courbure correspond à la composante normale \\(a_n\\), pas à \\(a_t\\). La composante tangentielle suit la tangente à la trajectoire."
+          "explanation": "La direction vers le centre de courbure correspond à la composante normale \\(a_n\\), pas \\(à a_t\\). La composante tangentielle suit la tangente à la trajectoire."
         },
         {
           "id": "B",
@@ -156,7 +156,7 @@
           "id": "D",
           "text": "La composante tangentielle \\(a_t\\) est toujours nulle dès que la trajectoire est courbe.",
           "is_correct": false,
-          "explanation": "Une trajectoire courbe peut avoir à la fois une composante normale et une composante tangentielle. Si la vitesse en norme varie, \\(a_t\\) n’est pas nulle."
+          "explanation": "Une trajectoire courbe peut avoir à la fois une composante normale et une composante tangentielle. Si la vitesse en norme varie\\(, a_t n\\)’est pas nulle."
         },
         {
           "id": "E",
@@ -167,7 +167,7 @@
       ],
       "coverage_label": "Composantes tangentielle et normale",
       "learning_objective": "Identifier le rôle de la composante tangentielle dans la variation de la norme de la vitesse.",
-      "correction_summary": "La bonne réponse associe \\(a_t\\) à la variation de la norme de \\(v\\). Le piège est de la confondre avec la composante normale, qui change la direction de la vitesse.",
+      "correction_summary": "La bonne réponse associe \\(a_t à\\) la variation de la norme de \\(v\\). Le piège est de la confondre avec la composante normale, qui change la direction de la vitesse.",
       "course_clarification": "L’accélération peut se décomposer en une partie tangentielle et une partie normale. La partie tangentielle agit sur la valeur de la vitesse : elle fait accélérer ou ralentir le mobile.",
       "source_refs": []
     },
@@ -204,7 +204,7 @@
           "id": "E",
           "text": "La composante normale \\(a_n\\) est nulle dès que la vitesse est constante, quelle que soit la trajectoire.",
           "is_correct": false,
-          "explanation": "Une vitesse constante en norme ne suffit pas à annuler \\(a_n\\). Si la trajectoire est courbe, la direction change et la composante normale peut être non nulle, comme dans un mouvement circulaire uniforme."
+          "explanation": "Une vitesse constante en norme ne suffit pas à annuler \\(a_n. Si\\) la trajectoire est courbe, la direction change et la composante normale peut être non nulle, comme dans un mouvement circulaire uniforme."
         }
       ],
       "coverage_label": "Composantes tangentielle et normale",

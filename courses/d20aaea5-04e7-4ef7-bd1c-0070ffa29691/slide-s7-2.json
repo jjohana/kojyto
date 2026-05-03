@@ -78,7 +78,7 @@
           "id": "E",
           "text": "\\(T_{REV} = -V_o(V''_5 + Q_{ma})\\).",
           "is_correct": false,
-          "explanation": "Cette écriture mélange les grandeurs et ne respecte pas la relation fournie, où \\(Q_{ma}\\) multiplie la somme des vitesses."
+          "explanation": "Cette écriture mélange les grandeurs et ne respecte pas la relation fournie\\(, où Q_{ma}\\) multiplie la somme des vitesses."
         }
       ],
       "coverage_label": "Poussée inverse : formule",
@@ -178,7 +178,7 @@
       "options": [
         {
           "id": "A",
-          "text": "Pour \\(V_o < 60\\) kt, \\(T_{REV}\\) vaut environ 50 % de \\(T_u\\) maxi et le risque principal est l’excès de portance.",
+          "text": "Pour \\(V_o < 60 kt, T_{REV}\\) vaut environ 50 % de \\(T_u\\) maxi et le risque principal est l’excès de portance.",
           "is_correct": false,
           "explanation": "Le 50 % est associé à un ordre de grandeur global, mais le support précise qu’à basse vitesse on est plutôt autour de 14 % de \\(T_u\\) maxi."
         },
@@ -190,7 +190,7 @@
         },
         {
           "id": "C",
-          "text": "Pour \\(V_o < 60\\) kt, \\(T_{REV}\\) est de l’ordre de 14 % de \\(T_u\\) maxi et il faut diminuer la poussée inverse à basse vitesse à cause du risque de gaz chauds et de pompage.",
+          "text": "Pour \\(V_o < 60 kt, T_{REV}\\) est de l’ordre de 14 % de \\(T_u\\) maxi et il faut diminuer la poussée inverse à basse vitesse à cause du risque de gaz chauds et de pompage.",
           "is_correct": true,
           "explanation": "Le support donne bien cet ordre de grandeur et précise qu’en dessous de 60 kt il existe un risque d’ingestion de gaz chauds et de pompage."
         },
@@ -204,12 +204,12 @@
           "id": "E",
           "text": "L’ordre de grandeur de \\(T_{REV}\\) dépend uniquement du type de frein de roue et pas de la vitesse avion.",
           "is_correct": false,
-          "explanation": "La vitesse avion intervient directement dans l’évolution de la poussée inverse, puisque le document relie \\(T_{REV}\\) à \\(V_o\\)."
+          "explanation": "La vitesse avion intervient directement dans l’évolution de la poussée inverse, puisque le document relie \\(T_{REV} à V_o\\)."
         }
       ],
       "coverage_label": "Poussée inverse : ordres de grandeur et limites",
       "learning_objective": "Lire les ordres de grandeur de la poussée inverse et repérer la limite d’utilisation à basse vitesse.",
-      "correction_summary": "La bonne réponse associe \\(V_o < 60\\) kt à une poussée inverse d’environ 14 % de \\(T_u\\) maxi et à un risque de gaz chauds/pompage. Le piège consiste à retenir le chiffre global de 50 % sans tenir compte de la baisse à basse vitesse.",
+      "correction_summary": "La bonne réponse associe \\(V_o < 60 kt à\\) une poussée inverse d’environ 14 % de \\(T_u\\) maxi et à un risque de gaz chauds/pompage. Le piège consiste à retenir le chiffre global de 50 % sans tenir compte de la baisse à basse vitesse.",
       "course_clarification": "La poussée inverse n’est pas constante : elle doit être adaptée à la vitesse de l’avion. En dessous d’un certain seuil, l’usage trop important de la reverse peut provoquer une ingestion de gaz chauds et du pompage.",
       "source_refs": []
     }

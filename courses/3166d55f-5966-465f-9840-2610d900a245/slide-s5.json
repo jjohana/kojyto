@@ -10,39 +10,39 @@
       "options": [
         {
           "id": "A",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta t / \\Delta s\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta t / \\Delta s\\).",
           "is_correct": false,
-          "explanation": "Le rapport est inversé ici : \\\\(\\Delta t / \\Delta s\\\\) ne donne pas une vitesse. La grandeur recherchée doit être une distance divisée par un temps."
+          "explanation": "Le rapport est inversé ici \\(: \\Delta t / \\Delta s ne\\) donne pas une vitesse. La grandeur recherchée doit être une distance divisée par un temps."
         },
         {
           "id": "B",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta s \\cdot \\Delta t\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s \\cdot \\Delta t\\).",
           "is_correct": false,
           "explanation": "Un produit distance × temps n’a pas la dimension d’une vitesse. La vitesse moyenne se calcule par un quotient, pas par une multiplication."
         },
         {
           "id": "C",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta s + \\Delta t\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s + \\Delta t\\).",
           "is_correct": false,
           "explanation": "Une somme de mètres et de secondes n’a pas de sens physique pour une vitesse. Il faut un rapport entre la distance parcourue et la durée."
         },
         {
           "id": "D",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta s / \\Delta t\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s / \\Delta t\\).",
           "is_correct": true,
-          "explanation": "La vitesse moyenne est définie comme le rapport entre la distance parcourue \\\\(\\Delta s\\\\) et la durée \\\\(\\Delta t\\\\) sur l’intervalle étudié."
+          "explanation": "La vitesse moyenne est définie comme le rapport entre la distance parcourue \\(\\Delta s\\) et la durée \\(\\Delta t\\) sur l’intervalle étudié."
         },
         {
           "id": "E",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta v / \\Delta t\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta v / \\Delta t\\).",
           "is_correct": false,
-          "explanation": "\\\\(\\Delta v / \\Delta t\\\\) correspond à une variation de vitesse par unité de temps, donc à une accélération. Ce n’est pas la définition de la vitesse moyenne."
+          "explanation": "\\(\\Delta v / \\Delta t\\) correspond à une variation de vitesse par unité de temps, donc à une accélération. Ce n’est pas la définition de la vitesse moyenne."
         }
       ],
       "coverage_label": "Vitesse moyenne et mesures de vitesse",
       "learning_objective": "Identifier la formule de la vitesse moyenne sur un intervalle de temps.",
-      "correction_summary": "La vitesse moyenne se calcule avec la distance parcourue divisée par la durée : \\\\(v_m = \\Delta s / \\Delta t\\\\). Le piège classique consiste à inverser le rapport ou à confondre vitesse moyenne et accélération.",
-      "course_clarification": "\\\\(\\Delta s\\\\) représente la distance parcourue entre deux instants et \\\\(\\Delta t\\\\) la durée correspondante. La vitesse moyenne donne une valeur globale sur l’intervalle, sans détailler les variations internes du mouvement.",
+      "correction_summary": "La vitesse moyenne se calcule avec la distance parcourue divisée par la durée \\(: v_m = \\Delta s / \\Delta t\\). Le piège classique consiste à inverser le rapport ou à confondre vitesse moyenne et accélération.",
+      "course_clarification": "\\(\\Delta s\\) représente la distance parcourue entre deux instants et \\(\\Delta t\\) la durée correspondante. La vitesse moyenne donne une valeur globale sur l’intervalle, sans détailler les variations internes du mouvement.",
       "source_refs": []
     },
     {
@@ -178,27 +178,27 @@
       "options": [
         {
           "id": "A",
-          "text": "La norme de la vitesse s’écrit \\\\(v = dt/ds\\\\).",
+          "text": "La norme de la vitesse s’écrit \\(v = dt/ds\\).",
           "is_correct": false,
-          "explanation": "Le rapport est inversé : \\\\(dt/ds\\\\) n’est pas une vitesse. La vitesse est bien une variation de distance par unité de temps."
+          "explanation": "Le rapport est inversé \\(: dt/ds n\\)’est pas une vitesse. La vitesse est bien une variation de distance par unité de temps."
         },
         {
           "id": "B",
           "text": "La norme de la vitesse s’exprime en newtons.",
           "is_correct": false,
-          "explanation": "Le newton est une unité de force, pas de vitesse. La vitesse s’exprime en m·s\\\\(^{-1}\\\\)."
+          "explanation": "Le newton est une unité de force, pas de vitesse. La vitesse s’exprime en m·\\(s^{-1}\\)."
         },
         {
           "id": "C",
-          "text": "La norme de la vitesse s’écrit \\\\(v = ds/dt\\\\) et s’exprime en m·s\\\\(^{-1}\\\\).",
+          "text": "La norme de la vitesse s’écrit \\(v = ds/dt\\) et s’exprime en m·\\(s^{-1}\\).",
           "is_correct": true,
-          "explanation": "La norme de la vitesse correspond à la dérivée de l’abscisse curviligne \\\\(s\\\\) par rapport au temps. Son unité SI est le mètre par seconde."
+          "explanation": "La norme de la vitesse correspond à la dérivée de l’abscisse curviligne \\(s\\) par rapport au temps. Son unité SI est le mètre par seconde."
         },
         {
           "id": "D",
           "text": "La norme de la vitesse n’a pas d’unité dans le SI.",
           "is_correct": false,
-          "explanation": "La vitesse est une grandeur physique mesurable et son unité dans le SI est bien le m·s\\\\(^{-1}\\\\). Dire qu’elle n’a pas d’unité est faux."
+          "explanation": "La vitesse est une grandeur physique mesurable et son unité dans le SI est bien le m·\\(s^{-1}\\). Dire qu’elle n’a pas d’unité est faux."
         },
         {
           "id": "E",
@@ -209,7 +209,7 @@
       ],
       "coverage_label": "Vitesse moyenne et mesures de vitesse",
       "learning_objective": "Lire correctement la notation de la vitesse instantanée et son unité.",
-      "correction_summary": "La norme de la vitesse instantanée est \\\\(v = ds/dt\\\\) en m·s\\\\(^{-1}\\\\). Le piège est de confondre vitesse avec une autre grandeur, ou d’inverser le quotient.",
+      "correction_summary": "La norme de la vitesse instantanée est \\(v = ds/dt\\) en m·\\(s^{-1}\\). Le piège est de confondre vitesse avec une autre grandeur, ou d’inverser le quotient.",
       "course_clarification": "La vitesse instantanée décrit la rapidité au voisinage d’un instant donné. Sa direction est tangente à la trajectoire, tandis que sa norme mesure seulement la valeur de la rapidité.",
       "source_refs": []
     }

@@ -42,7 +42,7 @@
       "coverage_label": "Puissance thermique réelle et puissance propulsive",
       "learning_objective": "Identifier l’expression de la puissance thermique réelle à partir des vitesses d’écoulement.",
       "correction_summary": "La puissance thermique réelle est liée au gain d’énergie cinétique du jet, d’où l’expression avec la différence des carrés des vitesses. Le piège consiste à la confondre avec la poussée ou avec la puissance utile sur l’avion.",
-      "course_clarification": "\\(Q_{ma}\\) désigne le débit massique d’air. \\(V_5\\) est la vitesse des gaz en sortie et \\(V_0\\) la vitesse à l’entrée. La différence \\(V_5^2 - V_0^2\\) mesure l’énergie cinétique gagnée par le flux.",
+      "course_clarification": "\\(Q_{ma}\\) désigne le débit massique d’air\\(. V_5\\) est la vitesse des gaz en sortie et \\(V_0\\) la vitesse à l’entrée. La différence \\(V_5^2 - V_0^2\\) mesure l’énergie cinétique gagnée par le flux.",
       "source_refs": []
     },
     {
@@ -58,19 +58,19 @@
         },
         {
           "id": "B",
-          "text": "\\(Pp = Tu \\times V_0\\) et, pour \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}\\), \\(Pp = 5{,}67 \\times 10^6\\ \\text{W}\\).",
+          "text": "\\(Pp = Tu \\times V_0\\) et, pour \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}, Pp = 5{,}67 \\times 10^6\\ \\text{W}\\).",
           "is_correct": true,
-          "explanation": "La puissance utile est le produit de la poussée par la vitesse de vol. Le calcul donne bien \\(31\\,500 \\times 180 = 5{,}67 \\times 10^6\\) W, soit \\(567 \\times 10^4\\) W."
+          "explanation": "La puissance utile est le produit de la poussée par la vitesse de vol. Le calcul donne bien \\(31\\,500 \\times 180 = 5{,}67 \\times 10^6 W\\), soit \\(567 \\times 10^4 W\\)."
         },
         {
           "id": "C",
-          "text": "Avec \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}\\), on obtient \\(Pp = 5{,}67 \\times 10^4\\ \\text{W}\\).",
+          "text": "Avec \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}, on\\) obtient \\(Pp = 5{,}67 \\times 10^4\\ \\text{W}\\).",
           "is_correct": false,
-          "explanation": "Le résultat est trop petit d’un facteur 100. Le produit exact de \\(31\\,500\\) par \\(180\\) vaut \\(5{,}67 \\times 10^6\\) W."
+          "explanation": "Le résultat est trop petit d’un facteur 100. Le produit exact de \\(31\\,500\\) par \\(180\\) vaut \\(5{,}67 \\times 10^6 W\\)."
         },
         {
           "id": "D",
-          "text": "Avec \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}\\), on obtient \\(Pp = 7\\,604\\ \\text{W}\\).",
+          "text": "Avec \\(Tu = 31\\,500\\ \\text{N}\\) et \\(V_0 = 180\\ \\text{m/s}, on\\) obtient \\(Pp = 7\\,604\\ \\text{W}\\).",
           "is_correct": false,
           "explanation": "\\(7\\,604\\) est la valeur exprimée en horsepower dans l’exemple, pas en watts. Il ne faut pas confondre l’unité de puissance et sa conversion."
         },
@@ -83,7 +83,7 @@
       ],
       "coverage_label": "Puissance thermique réelle et puissance propulsive",
       "learning_objective": "Calculer la puissance propulsive utile à partir de la poussée et de la vitesse de vol.",
-      "correction_summary": "La puissance utile est simplement \\(Pp = Tu \\times V_0\\). L’exemple du CFM56-5A conduit à \\(5{,}67 \\times 10^6\\) W, et le piège principal est de confondre watts et horsepower.",
+      "correction_summary": "La puissance utile est simplement \\(Pp = Tu \\times V_0. L\\)’exemple du CFM56-5A conduit \\(à 5{,}67 \\times 10^6 W\\), et le piège principal est de confondre watts et horsepower.",
       "course_clarification": "\\(Tu\\) est la poussée disponible et \\(V_0\\) la vitesse de l’avion. Cette puissance est celle réellement utilisable pour la propulsion de l’appareil.",
       "source_refs": []
     },
@@ -156,7 +156,7 @@
           "id": "D",
           "text": "\\(Ptt = Pc - Pp\\).",
           "is_correct": false,
-          "explanation": "Cette différence n’apparaît pas dans la définition donnée. La perte prise en compte est une perte thermique de source froide, exprimée avec \\(Q_{ma}\\), \\(C_p\\), \\(T_5\\) et \\(T_0\\)."
+          "explanation": "Cette différence n’apparaît pas dans la définition donnée. La perte prise en compte est une perte thermique de source froide, exprimée avec \\(Q_{ma}, C_p, T_5\\) et \\(T_0\\)."
         },
         {
           "id": "E",
@@ -168,7 +168,7 @@
       "coverage_label": "Puissance thermique réelle et puissance propulsive",
       "learning_objective": "Écrire la puissance thermique théorique à partir de la puissance calorifique et des pertes de source froide.",
       "correction_summary": "La puissance thermique théorique s’obtient en retranchant les pertes de source froide à la puissance calorifique. Le piège est de confondre cette étape thermique avec la puissance cinétique ou la puissance utile.",
-      "course_clarification": "\\(C_p\\) est la chaleur spécifique à pression constante. \\(T_5\\) et \\(T_0\\) sont les températures des gaz en sortie et à l’entrée. Plus l’écart thermique est grand, plus la part retranchée à \\(Pc\\) est importante.",
+      "course_clarification": "\\(C_p\\) est la chaleur spécifique à pression constante\\(. T_5\\) et \\(T_0\\) sont les températures des gaz en sortie et à l’entrée. Plus l’écart thermique est grand, plus la part retranchée à \\(Pc\\) est importante.",
       "source_refs": []
     },
     {
@@ -192,7 +192,7 @@
           "id": "C",
           "text": "\\(\\eta_p = \\dfrac{2V_0}{V_5 + V_0}\\).",
           "is_correct": true,
-          "explanation": "En remplaçant \\(Tu\\) par \\(Q_{ma}(V_5 - V_0)\\), on simplifie l’expression du rendement propulsif en \\(\\frac{2V_0}{V_5+V_0}\\). Cette forme montre qu’un jet trop rapide dégrade le rendement."
+          "explanation": "En remplaçant \\(Tu\\) par \\(Q_{ma}(V_5 - V_0), on\\) simplifie l’expression du rendement propulsif en \\(\\frac{2V_0}{V_5+V_0}\\). Cette forme montre qu’un jet trop rapide dégrade le rendement."
         },
         {
           "id": "D",
@@ -209,7 +209,7 @@
       ],
       "coverage_label": "Puissance thermique réelle et puissance propulsive",
       "learning_objective": "Simplifier l’expression du rendement propulsif et distinguer les différents rendements de la chaîne énergétique.",
-      "correction_summary": "En utilisant \\(Tu = Q_{ma}(V_5 - V_0)\\), le rendement propulsif se réduit à \\(\\frac{2V_0}{V_5+V_0}\\). Le piège consiste à confondre ce rendement avec le rendement global ou thermique.",
+      "correction_summary": "En utilisant \\(Tu = Q_{ma}(V_5 - V_0)\\), le rendement propulsif se réduit \\(à \\frac{2V_0}{V_5+V_0}\\). Le piège consiste à confondre ce rendement avec le rendement global ou thermique.",
       "course_clarification": "Le rendement propulsif mesure l’efficacité avec laquelle l’énergie cinétique du jet devient puissance utile. Il dépend fortement de l’écart entre la vitesse des gaz éjectés et la vitesse de l’avion. Plus les deux vitesses sont proches, meilleur est le rendement.",
       "source_refs": []
     }

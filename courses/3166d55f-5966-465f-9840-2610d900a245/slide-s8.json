@@ -34,7 +34,7 @@
         },
         {
           "id": "E",
-          "text": "La position suit une loi quadratique du temps : \\(x(t)=x_0+vt^2\\).",
+          "text": "La position suit une loi quadratique du temps \\(: x(t)=x_0+vt^2\\).",
           "is_correct": false,
           "explanation": "La dépendance en \\(t^2\\) correspond à un mouvement accéléré, pas à un MRU. En MRU, la loi horaire est linéaire en \\(t\\)."
         }
@@ -83,8 +83,8 @@
       ],
       "coverage_label": "Mouvement rectiligne uniforme (MRU)",
       "learning_objective": "Reconnaître la loi horaire d'un MRU et distinguer une dépendance linéaire d'une dépendance quadratique.",
-      "correction_summary": "La bonne loi est \\(x(t)=x_0+vt\\) : la position varie linéairement avec le temps. Le piège est de confondre cette expression avec les lois des mouvements accélérés, qui comportent un terme en \\(t^2\\).",
-      "course_clarification": "\\(x_0\\) est la position initiale, c'est-à-dire la position à \\(t=0\\). La vitesse \\(v\\) reste constante, donc la courbe \\(x(t)\\) est une droite.",
+      "correction_summary": "La bonne loi est \\(x(t)=x_0+vt\\): la position varie linéairement avec le temps. Le piège est de confondre cette expression avec les lois des mouvements accélérés, qui comportent un terme en \\(t^2\\).",
+      "course_clarification": "\\(x_0\\) est la position initiale, c'est-à-dire la position \\(à t=0\\). La vitesse \\(v\\) reste constante, donc la courbe \\(x(t)\\) est une droite.",
       "source_refs": []
     },
     {
@@ -94,7 +94,7 @@
       "options": [
         {
           "id": "A",
-          "text": "L'accélération est nulle : \\(a=0\\).",
+          "text": "L'accélération est nulle \\(: a=0\\).",
           "is_correct": true,
           "explanation": "C'est la conséquence directe d'une vitesse constante : si la vitesse ne change pas, sa dérivée temporelle est nulle, donc \\(a=0\\)."
         },
@@ -114,13 +114,13 @@
           "id": "D",
           "text": "L'accélération est égale à la vitesse \\(v\\).",
           "is_correct": false,
-          "explanation": "Vitesse et accélération sont deux grandeurs différentes : la vitesse s'exprime en m·s\\(^{-1}\\), l'accélération en m·s\\(^{-2}\\). Elles ne sont pas égales par définition."
+          "explanation": "Vitesse et accélération sont deux grandeurs différentes : la vitesse s'exprime en m·\\(s^{-1}, l'\\)accélération en m·\\(s^{-2}\\). Elles ne sont pas égales par définition."
         },
         {
           "id": "E",
-          "text": "L'accélération s'exprime en m·s\\(^{-1}\\).",
+          "text": "L'accélération s'exprime en m·\\(s^{-1}\\).",
           "is_correct": false,
-          "explanation": "L'unité m·s\\(^{-1}\\) est celle de la vitesse. L'accélération s'exprime en m·s\\(^{-2}\\), car elle mesure une variation de vitesse par unité de temps."
+          "explanation": "L'unité m·\\(s^{-1}\\) est celle de la vitesse. L'accélération s'exprime en m·\\(s^{-2}\\), car elle mesure une variation de vitesse par unité de temps."
         }
       ],
       "coverage_label": "Mouvement rectiligne uniforme (MRU)",
@@ -138,7 +138,7 @@
           "id": "A",
           "text": "\\(x(0)=vt\\).",
           "is_correct": false,
-          "explanation": "Cette expression laisse encore apparaître \\(t\\), alors qu'à \\(t=0\\) on calcule une valeur numérique de position. La position initiale ne s'écrit pas sous cette forme."
+          "explanation": "Cette expression laisse encore apparaître \\(t\\), alors \\(qu'à t=0 on\\) calcule une valeur numérique de position. La position initiale ne s'écrit pas sous cette forme."
         },
         {
           "id": "B",
@@ -150,13 +150,13 @@
           "id": "C",
           "text": "\\(x(0)=v\\).",
           "is_correct": false,
-          "explanation": "La vitesse \\(v\\) et la position \\(x\\) n'ont pas la même signification physique ni la même unité. À \\(t=0\\), on retrouve la position initiale, pas la vitesse."
+          "explanation": "La vitesse \\(v\\) et la position \\(x\\) n'ont pas la même signification physique ni la même unité\\(. À t=0, on\\) retrouve la position initiale, pas la vitesse."
         },
         {
           "id": "D",
           "text": "\\(x(0)=x_0+v\\).",
           "is_correct": false,
-          "explanation": "Le terme \\(v\\) n'a pas lieu d'apparaître seul à \\(t=0\\), car il est toujours multiplié par le temps. En posant \\(t=0\\), ce terme s'annule."
+          "explanation": "Le terme \\(v\\) n'a pas lieu d'apparaître seul \\(à t=0\\), car il est toujours multiplié par le temps. En posant \\(t=0\\), ce terme s'annule."
         },
         {
           "id": "E",
@@ -167,8 +167,8 @@
       ],
       "coverage_label": "Mouvement rectiligne uniforme (MRU)",
       "learning_objective": "Savoir lire la position initiale dans la loi horaire d'un MRU.",
-      "correction_summary": "En posant \\(t=0\\) dans \\(x(t)=x_0+vt\\), on obtient directement \\(x(0)=x_0\\). Le piège est de confondre la position initiale avec la vitesse ou avec une origine de repère imposée à 0.",
-      "course_clarification": "La position initiale dépend du repère choisi. Si l'origine n'est pas placée au point de départ, \\(x_0\\) n'est pas nul.",
+      "correction_summary": "En posant \\(t=0\\) dans \\(x(t)=x_0+vt, on\\) obtient directement \\(x(0)=x_0\\). Le piège est de confondre la position initiale avec la vitesse ou avec une origine de repère imposée à 0.",
+      "course_clarification": "La position initiale dépend du repère choisi. Si l'origine n'est pas placée au point de départ\\(, x_0 n'\\)est pas nul.",
       "source_refs": []
     },
     {

@@ -154,7 +154,7 @@
         },
         {
           "id": "D",
-          "text": "Le choix du référentiel est sans effet sur la manière d’écrire \\\\(r(t)\\\\).",
+          "text": "Le choix du référentiel est sans effet sur la manière d’écrire \\(r(t)\\).",
           "is_correct": false,
           "explanation": "L’écriture vectorielle de la position dépend du repère choisi pour définir les vecteurs de base et les coordonnées."
         },
@@ -178,7 +178,7 @@
       "options": [
         {
           "id": "A",
-          "text": "La position du point M s’écrit uniquement \\\\(r(t)=x(t)\\\\), sans vecteurs de base.",
+          "text": "La position du point M s’écrit uniquement \\(r(t)=x(t)\\), sans vecteurs de base.",
           "is_correct": false,
           "explanation": "Une position vectorielle nécessite les composantes selon les directions de base ; une seule coordonnée ne suffit pas en général."
         },
@@ -186,31 +186,31 @@
           "id": "B",
           "text": "La position du point M ne dépend jamais du temps.",
           "is_correct": false,
-          "explanation": "Ici, la position est explicitement fonction du temps : \\\\(r(t)\\\\) varie lorsque le point se déplace."
+          "explanation": "Ici, la position est explicitement fonction du temps : \\(r(t)\\) varie lorsque le point se déplace."
         },
         {
           "id": "C",
-          "text": "La position du point M peut s’écrire \\\\(r(t)=x(t)\\,i+y(t)\\,j+z(t)\\,k\\\\).",
+          "text": "La position du point M peut s’écrire \\(r(t)=x(t)\\,i+y(t)\\,j+z(t)\\,k\\).",
           "is_correct": true,
-          "explanation": "Cette écriture vectorielle donne les coordonnées du point M en fonction du temps dans la base \\\\(i,j,k\\\\)."
+          "explanation": "Cette écriture vectorielle donne les coordonnées du point M en fonction du temps dans la base \\(i,j,k\\)."
         },
         {
           "id": "D",
-          "text": "La position du point M s’écrit \\\\(r(t)=v(t)\\\\), car position et vitesse sont la même grandeur.",
+          "text": "La position du point M s’écrit \\(r(t)=v(t)\\), car position et vitesse sont la même grandeur.",
           "is_correct": false,
           "explanation": "La position et la vitesse sont deux grandeurs différentes : l’une localise le point, l’autre décrit sa variation temporelle."
         },
         {
           "id": "E",
-          "text": "La position du point M s’écrit \\\\(r(t)=x(t)\\,i+y(t)\\,j\\\\) seulement, car la composante selon \\\\(k\\\\) est toujours nulle.",
+          "text": "La position du point M s’écrit \\(r(t)=x(t)\\,i+y(t)\\,j\\) seulement, car la composante selon \\(k\\) est toujours nulle.",
           "is_correct": false,
-          "explanation": "La composante selon \\\\(k\\\\) n’est pas obligatoirement nulle ; la forme générale comporte bien les trois composantes \\\\(x(t), y(t), z(t)\\\\)."
+          "explanation": "La composante selon \\(k\\) n’est pas obligatoirement nulle ; la forme générale comporte bien les trois composantes \\(x(t), y(t), z(t)\\)."
         }
       ],
       "coverage_label": "Position vectorielle",
       "learning_objective": "Lire et interpréter l’écriture vectorielle de la position d’un point dans l’espace.",
-      "correction_summary": "La bonne réponse est l’écriture vectorielle avec les trois composantes \\\\(x(t), y(t), z(t)\\\\). Le piège est d’oublier une composante ou de confondre position et vitesse.",
-      "course_clarification": "Le vecteur position repère le point M dans l’espace à l’instant \\\\(t\\\\). Les fonctions \\\\(x(t), y(t), z(t)\\\\) sont ses coordonnées dans la base choisie.",
+      "correction_summary": "La bonne réponse est l’écriture vectorielle avec les trois composantes \\(x(t), y(t), z(t)\\). Le piège est d’oublier une composante ou de confondre position et vitesse.",
+      "course_clarification": "Le vecteur position repère le point M dans l’espace à l’instant \\(t\\). Les fonctions \\(x(t), y(t), z(t)\\) sont ses coordonnées dans la base choisie.",
       "source_refs": []
     }
   ],

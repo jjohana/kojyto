@@ -102,7 +102,7 @@
           "id": "B",
           "text": "Le vecteur position est indépendant du temps.",
           "is_correct": false,
-          "explanation": "Le vecteur position est justement noté comme une fonction du temps, par exemple \\\\(r(t)\\\\)."
+          "explanation": "Le vecteur position est justement noté comme une fonction du temps, par exemple \\(r(t)\\)."
         },
         {
           "id": "C",
@@ -126,7 +126,7 @@
       "coverage_label": "QCM - Trajectoire et position",
       "learning_objective": "Comprendre le rôle du vecteur position dépendant du temps.",
       "correction_summary": "La bonne réponse relie la fonction position au temps, puis à la vitesse et à l’accélération. Le piège est de confondre cette grandeur de position avec une vitesse ou une force.",
-      "course_clarification": "On écrit souvent le vecteur position sous la forme \\\\(r(t)\\\\). Sa variation avec le temps sert à obtenir les grandeurs cinématiques dérivées.",
+      "course_clarification": "On écrit souvent le vecteur position sous la forme \\(r(t)\\). Sa variation avec le temps sert à obtenir les grandeurs cinématiques dérivées.",
       "source_refs": []
     },
     {
@@ -178,27 +178,27 @@
       "options": [
         {
           "id": "A",
-          "text": "La norme de la vitesse s’écrit \\\\(v = dt/ds\\\\).",
+          "text": "La norme de la vitesse s’écrit \\(v = dt/ds\\).",
           "is_correct": false,
-          "explanation": "Le rapport est inversé : \\\\(dt/ds\\\\) n’est pas une vitesse. La vitesse est bien une variation de distance par unité de temps."
+          "explanation": "Le rapport est inversé \\(: dt/ds n\\)’est pas une vitesse. La vitesse est bien une variation de distance par unité de temps."
         },
         {
           "id": "B",
           "text": "La norme de la vitesse s’exprime en newtons.",
           "is_correct": false,
-          "explanation": "Le newton est une unité de force, pas de vitesse. La vitesse s’exprime en m·s\\\\(^{-1}\\\\)."
+          "explanation": "Le newton est une unité de force, pas de vitesse. La vitesse s’exprime en m·\\(s^{-1}\\)."
         },
         {
           "id": "C",
-          "text": "La norme de la vitesse s’écrit \\\\(v = ds/dt\\\\) et s’exprime en m·s\\\\(^{-1}\\\\).",
+          "text": "La norme de la vitesse s’écrit \\(v = ds/dt\\) et s’exprime en m·\\(s^{-1}\\).",
           "is_correct": true,
-          "explanation": "La norme de la vitesse correspond à la dérivée de l’abscisse curviligne \\\\(s\\\\) par rapport au temps. Son unité SI est le mètre par seconde."
+          "explanation": "La norme de la vitesse correspond à la dérivée de l’abscisse curviligne \\(s\\) par rapport au temps. Son unité SI est le mètre par seconde."
         },
         {
           "id": "D",
           "text": "La norme de la vitesse n’a pas d’unité dans le SI.",
           "is_correct": false,
-          "explanation": "La vitesse est une grandeur physique mesurable et son unité dans le SI est bien le m·s\\\\(^{-1}\\\\). Dire qu’elle n’a pas d’unité est faux."
+          "explanation": "La vitesse est une grandeur physique mesurable et son unité dans le SI est bien le m·\\(s^{-1}\\). Dire qu’elle n’a pas d’unité est faux."
         },
         {
           "id": "E",
@@ -209,7 +209,7 @@
       ],
       "coverage_label": "QCM - Vitesse moyenne et mesures de vitesse",
       "learning_objective": "Lire correctement la notation de la vitesse instantanée et son unité.",
-      "correction_summary": "La norme de la vitesse instantanée est \\\\(v = ds/dt\\\\) en m·s\\\\(^{-1}\\\\). Le piège est de confondre vitesse avec une autre grandeur, ou d’inverser le quotient.",
+      "correction_summary": "La norme de la vitesse instantanée est \\(v = ds/dt\\) en m·\\(s^{-1}\\). Le piège est de confondre vitesse avec une autre grandeur, ou d’inverser le quotient.",
       "course_clarification": "La vitesse instantanée décrit la rapidité au voisinage d’un instant donné. Sa direction est tangente à la trajectoire, tandis que sa norme mesure seulement la valeur de la rapidité.",
       "source_refs": []
     },
@@ -240,7 +240,7 @@
           "id": "D",
           "text": "L’accélération est la dérivée temporelle de la vitesse, soit \\(a = \\frac{dv}{dt} = \\frac{d^2r}{dt^2}\\).",
           "is_correct": true,
-          "explanation": "L’accélération mesure comment la vitesse varie au cours du temps. L’écriture \\(\\frac{dv}{dt}\\) exprime cette variation, et comme \\(v = \\frac{dr}{dt}\\), on obtient aussi \\(a = \\frac{d^2r}{dt^2}\\)."
+          "explanation": "L’accélération mesure comment la vitesse varie au cours du temps. L’écriture \\(\\frac{dv}{dt}\\) exprime cette variation, et comme \\(v = \\frac{dr}{dt}, on\\) obtient aussi \\(a = \\frac{d^2r}{dt^2}\\)."
         },
         {
           "id": "E",
@@ -304,7 +304,7 @@
       "options": [
         {
           "id": "A",
-          "text": "L'accélération est nulle : \\(a=0\\).",
+          "text": "L'accélération est nulle \\(: a=0\\).",
           "is_correct": true,
           "explanation": "C'est la conséquence directe d'une vitesse constante : si la vitesse ne change pas, sa dérivée temporelle est nulle, donc \\(a=0\\)."
         },
@@ -324,13 +324,13 @@
           "id": "D",
           "text": "L'accélération est égale à la vitesse \\(v\\).",
           "is_correct": false,
-          "explanation": "Vitesse et accélération sont deux grandeurs différentes : la vitesse s'exprime en m·s\\(^{-1}\\), l'accélération en m·s\\(^{-2}\\). Elles ne sont pas égales par définition."
+          "explanation": "Vitesse et accélération sont deux grandeurs différentes : la vitesse s'exprime en m·\\(s^{-1}, l'\\)accélération en m·\\(s^{-2}\\). Elles ne sont pas égales par définition."
         },
         {
           "id": "E",
-          "text": "L'accélération s'exprime en m·s\\(^{-1}\\).",
+          "text": "L'accélération s'exprime en m·\\(s^{-1}\\).",
           "is_correct": false,
-          "explanation": "L'unité m·s\\(^{-1}\\) est celle de la vitesse. L'accélération s'exprime en m·s\\(^{-2}\\), car elle mesure une variation de vitesse par unité de temps."
+          "explanation": "L'unité m·\\(s^{-1}\\) est celle de la vitesse. L'accélération s'exprime en m·\\(s^{-2}\\), car elle mesure une variation de vitesse par unité de temps."
         }
       ],
       "coverage_label": "QCM - Mouvement rectiligne uniforme (MRU)",
@@ -360,7 +360,7 @@
           "id": "C",
           "text": "La vitesse diminue toujours quand \\(a>0\\).",
           "is_correct": false,
-          "explanation": "Si \\(a>0\\), le terme \\(at\\) augmente avec le temps, donc la vitesse augmente et ne diminue pas."
+          "explanation": "\\(Si a>0\\), le terme \\(at\\) augmente avec le temps, donc la vitesse augmente et ne diminue pas."
         },
         {
           "id": "D",
@@ -504,7 +504,7 @@
       "coverage_label": "QCM - Équations horaires et trajectoires",
       "learning_objective": "Appliquer la règle de la chaîne pour relier la pente spatiale aux dérivées temporelles.",
       "correction_summary": "La pente instantanée s’écrit \\(\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}\\). Le piège est de confondre ce quotient avec un produit, une somme ou une dérivée seconde.",
-      "course_clarification": "Quand \\(x\\) et \\(y\\) dépendent tous deux du temps, la dérivée \\(dy/dx\\) se calcule en passant par \\(t\\). Cette relation sert à lire la pente locale de la trajectoire à un instant donné.",
+      "course_clarification": "Quand \\(x\\) et \\(y\\) dépendent tous deux du temps, la dérivée \\(dy/dx se\\) calcule en passant par \\(t\\). Cette relation sert à lire la pente locale de la trajectoire à un instant donné.",
       "source_refs": []
     },
     {
@@ -532,7 +532,7 @@
         },
         {
           "id": "D",
-          "text": "L'accélération angulaire est toujours égale à \\(\\omega^2\\).",
+          "text": "L'accélération angulaire est toujours égale \\(à \\omega^2\\).",
           "is_correct": false,
           "explanation": "\\(\\omega^2\\) apparaît dans l'expression de l'accélération normale \\(a_n\\) via \\(a_n=\\omega^2R\\), pas dans la définition de \\(\\alpha\\)."
         },
@@ -690,7 +690,7 @@
           "id": "B",
           "text": "La vitesse de montée s’obtient comme la dérivée de la hauteur par rapport au temps.",
           "is_correct": true,
-          "explanation": "Si la hauteur est notée par exemple \\\\(z(t)\\\\), alors la vitesse verticale de montée est \\\\(v_z(t)=\\frac{dz}{dt}\\\\). C’est une application directe de la cinématique."
+          "explanation": "Si la hauteur est notée par exemple \\(z(t)\\), alors la vitesse verticale de montée est \\(v_z(t)=\\frac{dz}{dt}. C\\)’est une application directe de la cinématique."
         },
         {
           "id": "C",
@@ -766,15 +766,15 @@
       "options": [
         {
           "id": "A",
-          "text": "Pour convertir des tr/min en rad/s, il faut diviser par 2\\pi puis multiplier par 60.",
+          "text": "Pour convertir des tr/min en rad/s, il faut diviser par 2\\(\\pi\\) puis multiplier par 60.",
           "is_correct": false,
-          "explanation": "Cette transformation inverse le facteur correct. On doit convertir les tours en radians, puis les minutes en secondes ; la formule correcte est \\omega = 2\\pi N/60."
+          "explanation": "Cette transformation inverse le facteur correct. On doit convertir les tours en radians, puis les minutes en secondes ; la formule correcte est \\(\\omega = 2\\pi N/60\\)."
         },
         {
           "id": "B",
           "text": "1500 tr/min correspondent à 15 rad/s.",
           "is_correct": false,
-          "explanation": "La valeur est trop petite d’un facteur 10 environ. Avec \\omega = 2\\pi\\times1500/60, on obtient environ 157 rad/s."
+          "explanation": "La valeur est trop petite d’un facteur 10 environ. Avec \\(\\omega = 2\\pi\\times1500/60, on\\) obtient environ 157 rad/s."
         },
         {
           "id": "C",
@@ -784,21 +784,21 @@
         },
         {
           "id": "D",
-          "text": "Un tour complet vaut \\pi radians.",
+          "text": "Un tour complet vaut \\(\\pi\\) radians.",
           "is_correct": false,
-          "explanation": "Un tour complet correspond à 2\\pi radians. Utiliser \\pi revient à ne compter qu’un demi-tour, ce qui fausse toutes les conversions angulaires."
+          "explanation": "Un tour complet correspond à 2\\(\\pi\\) radians. Utiliser \\(\\pi\\) revient à ne compter qu’un demi-tour, ce qui fausse toutes les conversions angulaires."
         },
         {
           "id": "E",
-          "text": "Si N est exprimé en tr/min, alors \\omega = 2\\pi N/60 en rad/s.",
+          "text": "Si N est exprimé en tr/min, alors \\(\\omega = 2\\pi N/60\\) en rad/s.",
           "is_correct": true,
-          "explanation": "Un tour correspond à 2\\pi radians, et une minute contient 60 secondes. Il faut donc multiplier le nombre de tours par 2\\pi puis diviser par 60 pour obtenir des rad/s."
+          "explanation": "Un tour correspond à 2\\(\\pi\\) radians, et une minute contient 60 secondes. Il faut donc multiplier le nombre de tours par 2\\(\\pi\\) puis diviser par 60 pour obtenir des rad/s."
         }
       ],
       "coverage_label": "QCM - Erreurs fréquentes à éviter",
       "learning_objective": "Appliquer correctement la conversion entre tours par minute et radians par seconde.",
-      "correction_summary": "La formule correcte est \\omega = 2\\pi N/60 lorsque N est en tr/min. Le piège principal est d’oublier soit le facteur 2\\pi, soit le passage de minutes à secondes.",
-      "course_clarification": "Le ‘tour’ est une unité de comptage des rotations, et 2\\pi radians correspondent à un tour. Pour travailler en cinématique, il faut ramener la vitesse de rotation en rad/s.",
+      "correction_summary": "La formule correcte est \\(\\omega = 2\\pi N/60\\) lorsque N est en tr/min. Le piège principal est d’oublier soit le facteur 2\\(\\pi\\), soit le passage de minutes à secondes.",
+      "course_clarification": "Le ‘tour’ est une unité de comptage des rotations, et 2\\(\\pi\\) radians correspondent à un tour. Pour travailler en cinématique, il faut ramener la vitesse de rotation en rad/s.",
       "source_refs": []
     },
     {
@@ -1018,39 +1018,39 @@
       "options": [
         {
           "id": "A",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta t / \\Delta s\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta t / \\Delta s\\).",
           "is_correct": false,
-          "explanation": "Le rapport est inversé ici : \\\\(\\Delta t / \\Delta s\\\\) ne donne pas une vitesse. La grandeur recherchée doit être une distance divisée par un temps."
+          "explanation": "Le rapport est inversé ici \\(: \\Delta t / \\Delta s ne\\) donne pas une vitesse. La grandeur recherchée doit être une distance divisée par un temps."
         },
         {
           "id": "B",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta s \\cdot \\Delta t\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s \\cdot \\Delta t\\).",
           "is_correct": false,
           "explanation": "Un produit distance × temps n’a pas la dimension d’une vitesse. La vitesse moyenne se calcule par un quotient, pas par une multiplication."
         },
         {
           "id": "C",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta s + \\Delta t\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s + \\Delta t\\).",
           "is_correct": false,
           "explanation": "Une somme de mètres et de secondes n’a pas de sens physique pour une vitesse. Il faut un rapport entre la distance parcourue et la durée."
         },
         {
           "id": "D",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta s / \\Delta t\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s / \\Delta t\\).",
           "is_correct": true,
-          "explanation": "La vitesse moyenne est définie comme le rapport entre la distance parcourue \\\\(\\Delta s\\\\) et la durée \\\\(\\Delta t\\\\) sur l’intervalle étudié."
+          "explanation": "La vitesse moyenne est définie comme le rapport entre la distance parcourue \\(\\Delta s\\) et la durée \\(\\Delta t\\) sur l’intervalle étudié."
         },
         {
           "id": "E",
-          "text": "Sur l’intervalle \\\\([t_1,t_2]\\\\), la vitesse moyenne s’écrit \\\\(v_m = \\Delta v / \\Delta t\\\\).",
+          "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta v / \\Delta t\\).",
           "is_correct": false,
-          "explanation": "\\\\(\\Delta v / \\Delta t\\\\) correspond à une variation de vitesse par unité de temps, donc à une accélération. Ce n’est pas la définition de la vitesse moyenne."
+          "explanation": "\\(\\Delta v / \\Delta t\\) correspond à une variation de vitesse par unité de temps, donc à une accélération. Ce n’est pas la définition de la vitesse moyenne."
         }
       ],
       "coverage_label": "QCM - Vitesse moyenne et mesures de vitesse",
       "learning_objective": "Identifier la formule de la vitesse moyenne sur un intervalle de temps.",
-      "correction_summary": "La vitesse moyenne se calcule avec la distance parcourue divisée par la durée : \\\\(v_m = \\Delta s / \\Delta t\\\\). Le piège classique consiste à inverser le rapport ou à confondre vitesse moyenne et accélération.",
-      "course_clarification": "\\\\(\\Delta s\\\\) représente la distance parcourue entre deux instants et \\\\(\\Delta t\\\\) la durée correspondante. La vitesse moyenne donne une valeur globale sur l’intervalle, sans détailler les variations internes du mouvement.",
+      "correction_summary": "La vitesse moyenne se calcule avec la distance parcourue divisée par la durée \\(: v_m = \\Delta s / \\Delta t\\). Le piège classique consiste à inverser le rapport ou à confondre vitesse moyenne et accélération.",
+      "course_clarification": "\\(\\Delta s\\) représente la distance parcourue entre deux instants et \\(\\Delta t\\) la durée correspondante. La vitesse moyenne donne une valeur globale sur l’intervalle, sans détailler les variations internes du mouvement.",
       "source_refs": []
     },
     {
@@ -1062,7 +1062,7 @@
           "id": "A",
           "text": "L’unité SI de l’accélération est \\(\\text{m·s}^{-1}\\).",
           "is_correct": false,
-          "explanation": "\\(\\text{m·s}^{-1}\\) est l’unité d’une vitesse, pas d’une accélération. L’accélération ajoute une division par le temps, d’où \\(\\text{m·s}^{-2}\\)."
+          "explanation": "\\(\\text{m·s}^{-1}\\) est l’unité d’une vitesse, pas d’une accélération. L’accélération ajoute une division par le temps, d’\\(où \\text{m·s}^{-2}\\)."
         },
         {
           "id": "B",
@@ -1092,7 +1092,7 @@
       "coverage_label": "QCM - Accélération : définition et unité",
       "learning_objective": "Reconnaître l’unité SI de l’accélération et la distinguer des unités de vitesse, de force et de vitesse angulaire.",
       "correction_summary": "La bonne unité est \\(\\text{m·s}^{-2}\\). Le piège consiste à confondre l’accélération avec une vitesse, une force ou une vitesse angulaire.",
-      "course_clarification": "Une accélération mesure une variation de vitesse par seconde. Son unité s’obtient donc à partir de celle de la vitesse, ce qui conduit à \\(\\text{m·s}^{-2}\\).",
+      "course_clarification": "Une accélération mesure une variation de vitesse par seconde. Son unité s’obtient donc à partir de celle de la vitesse, ce qui conduit \\(à \\text{m·s}^{-2}\\).",
       "source_refs": []
     },
     {
@@ -1146,7 +1146,7 @@
           "id": "A",
           "text": "\\(x(0)=vt\\).",
           "is_correct": false,
-          "explanation": "Cette expression laisse encore apparaître \\(t\\), alors qu'à \\(t=0\\) on calcule une valeur numérique de position. La position initiale ne s'écrit pas sous cette forme."
+          "explanation": "Cette expression laisse encore apparaître \\(t\\), alors \\(qu'à t=0 on\\) calcule une valeur numérique de position. La position initiale ne s'écrit pas sous cette forme."
         },
         {
           "id": "B",
@@ -1158,13 +1158,13 @@
           "id": "C",
           "text": "\\(x(0)=v\\).",
           "is_correct": false,
-          "explanation": "La vitesse \\(v\\) et la position \\(x\\) n'ont pas la même signification physique ni la même unité. À \\(t=0\\), on retrouve la position initiale, pas la vitesse."
+          "explanation": "La vitesse \\(v\\) et la position \\(x\\) n'ont pas la même signification physique ni la même unité\\(. À t=0, on\\) retrouve la position initiale, pas la vitesse."
         },
         {
           "id": "D",
           "text": "\\(x(0)=x_0+v\\).",
           "is_correct": false,
-          "explanation": "Le terme \\(v\\) n'a pas lieu d'apparaître seul à \\(t=0\\), car il est toujours multiplié par le temps. En posant \\(t=0\\), ce terme s'annule."
+          "explanation": "Le terme \\(v\\) n'a pas lieu d'apparaître seul \\(à t=0\\), car il est toujours multiplié par le temps. En posant \\(t=0\\), ce terme s'annule."
         },
         {
           "id": "E",
@@ -1175,8 +1175,8 @@
       ],
       "coverage_label": "QCM - Mouvement rectiligne uniforme (MRU)",
       "learning_objective": "Savoir lire la position initiale dans la loi horaire d'un MRU.",
-      "correction_summary": "En posant \\(t=0\\) dans \\(x(t)=x_0+vt\\), on obtient directement \\(x(0)=x_0\\). Le piège est de confondre la position initiale avec la vitesse ou avec une origine de repère imposée à 0.",
-      "course_clarification": "La position initiale dépend du repère choisi. Si l'origine n'est pas placée au point de départ, \\(x_0\\) n'est pas nul.",
+      "correction_summary": "En posant \\(t=0\\) dans \\(x(t)=x_0+vt, on\\) obtient directement \\(x(0)=x_0\\). Le piège est de confondre la position initiale avec la vitesse ou avec une origine de repère imposée à 0.",
+      "course_clarification": "La position initiale dépend du repère choisi. Si l'origine n'est pas placée au point de départ\\(, x_0 n'\\)est pas nul.",
       "source_refs": []
     },
     {
@@ -1194,7 +1194,7 @@
           "id": "B",
           "text": "Le graphe \\(v(t)\\) passe toujours par l’origine.",
           "is_correct": false,
-          "explanation": "Le graphe passe par \\((0, v_0)\\) ; il ne passe par l’origine que si \\(v_0=0\\)."
+          "explanation": "Le graphe passe par \\((0, v_0)\\) ; il ne passe par l’origine que \\(si v_0=0\\)."
         },
         {
           "id": "C",
@@ -1206,7 +1206,7 @@
           "id": "D",
           "text": "La pente du graphe \\(v(t)\\) vaut toujours zéro.",
           "is_correct": false,
-          "explanation": "La pente est égale à l’accélération \\(a\\), donc elle n’est nulle que si \\(a=0\\)."
+          "explanation": "La pente est égale à l’accélération \\(a\\), donc elle n’est nulle que \\(si a=0\\)."
         },
         {
           "id": "E",
@@ -1254,7 +1254,7 @@
           "id": "E",
           "text": "La vitesse angulaire \\(\\omega\\) est égale à l'accélération normale \\(a_n\\).",
           "is_correct": false,
-          "explanation": "Ces grandeurs n'ont pas la même définition ni la même unité : \\(\\omega\\) s'exprime en rad/s alors que \\(a_n\\) s'exprime en m/s²."
+          "explanation": "Ces grandeurs n'ont pas la même définition ni la même unité : \\(\\omega\\) s'exprime en rad/s alors que \\(a_n s'\\)exprime en m/s²."
         }
       ],
       "coverage_label": "QCM - Mouvement circulaire uniforme (MCU)",
@@ -1284,7 +1284,7 @@
           "id": "C",
           "text": "Dans un mouvement circulaire accéléré, \\(\\omega\\) reste constant tandis que \\(\\alpha = 0\\).",
           "is_correct": false,
-          "explanation": "Si \\(\\alpha = 0\\), la vitesse angulaire ne varie pas : on est alors dans un mouvement circulaire uniforme, pas accéléré."
+          "explanation": "\\(Si \\alpha = 0\\), la vitesse angulaire ne varie pas : on est alors dans un mouvement circulaire uniforme, pas accéléré."
         },
         {
           "id": "D",
@@ -1368,7 +1368,7 @@
           "id": "C",
           "text": "L'accélération normale vérifie \\(a_n = \\alpha^2 R\\).",
           "is_correct": false,
-          "explanation": "L'accélération normale dépend de \\(\\omega\\) au carré : \\(a_n=\\omega^2R\\). Elle ne dépend pas de \\(\\alpha^2\\)."
+          "explanation": "L'accélération normale dépend de \\(\\omega\\) au carré \\(: a_n=\\omega^2R\\). Elle ne dépend pas de \\(\\alpha^2\\)."
         },
         {
           "id": "D",
@@ -1380,11 +1380,11 @@
           "id": "E",
           "text": "La vitesse linéaire vérifie \\(v = \\omega R\\).",
           "is_correct": true,
-          "explanation": "Pour un point situé à la distance \\(R\\) de l'axe, la vitesse linéaire est proportionnelle à la vitesse angulaire : \\(v=\\omega R\\)."
+          "explanation": "Pour un point situé à la distance \\(R\\) de l'axe, la vitesse linéaire est proportionnelle à la vitesse angulaire \\(: v=\\omega R\\)."
         }
       ],
       "coverage_label": "QCM - Grandeurs angulaires et linéaires",
-      "learning_objective": "Associer correctement \\(v\\), \\(a_t\\) et \\(a_n\\) à \\(\\omega\\), \\(\\alpha\\) et \\(R\\).",
+      "learning_objective": "Associer correctement \\(v, a_t\\) et \\(a_n à \\omega, \\alpha\\) et \\(R\\).",
       "correction_summary": "La bonne relation pour la vitesse est \\(v=\\omega R\\). Le piège est de permuter vitesse et accélération, ou de remplacer \\(\\omega^2\\) par \\(\\alpha^2\\) pour l'accélération normale.",
       "course_clarification": "Les grandeurs linéaires décrivent le mouvement d'un point sur la trajectoire. En rotation, elles se déduisent des grandeurs angulaires grâce au rayon \\(R\\).",
       "source_refs": []
@@ -1433,7 +1433,7 @@
     },
     {
       "question_id": "FQ035",
-      "prompt": "Parmi les affirmations suivantes, une seule est exacte pour une pale de rayon \\(R=0{,}6\\ \\text{m}\\) tournant à \\(\\omega=120\\ \\text{rad·s}^{-1}\\).",
+      "prompt": "Parmi les affirmations suivantes, une seule est exacte pour une pale de rayon \\(R=0{,}6\\ \\text{m}\\) tournant \\(à \\omega=120\\ \\text{rad·s}^{-1}\\).",
       "difficulty": "easy",
       "options": [
         {
@@ -1458,7 +1458,7 @@
           "id": "D",
           "text": "La vitesse linéaire de la pale vaut \\(v=72\\ \\text{m·s}^{-1}\\).",
           "is_correct": true,
-          "explanation": "On utilise la relation \\(v=\\omega R\\). Ici, \\(120\\times 0{,}6=72\\), donc la vitesse linéaire vaut bien \\(72\\ \\text{m·s}^{-1}\\)."
+          "explanation": "On utilise la relation \\(v=\\omega R\\). Ici\\(, 120\\times 0{,}6=72\\), donc la vitesse linéaire vaut bien \\(72\\ \\text{m·s}^{-1}\\)."
         },
         {
           "id": "E",
@@ -1750,7 +1750,7 @@
         },
         {
           "id": "D",
-          "text": "Le choix du référentiel est sans effet sur la manière d’écrire \\\\(r(t)\\\\).",
+          "text": "Le choix du référentiel est sans effet sur la manière d’écrire \\(r(t)\\).",
           "is_correct": false,
           "explanation": "L’écriture vectorielle de la position dépend du repère choisi pour définir les vecteurs de base et les coordonnées."
         },
@@ -1834,7 +1834,7 @@
         },
         {
           "id": "D",
-          "text": "\u0002v(t)=\\dfrac{d\\vec r}{dt}=\\left(\\dfrac{dx}{dt}\\right)\\vec i+\\left(\\dfrac{dy}{dt}\\right)\\vec j+\\left(\\dfrac{dz}{dt}\\right)\\vec k",
+          "text": "\\(v(t)=\\dfrac{d\\vec r}{dt}=\\left(\\dfrac{dx}{dt}\\right)\\vec i+\\left(\\dfrac{dy}{dt}\\right)\\vec j+\\left(\\dfrac{dz}{dt}\\right)\\vec k\\)",
           "is_correct": true,
           "explanation": "La vitesse instantanée est la dérivée du vecteur position par rapport au temps. Dans un repère cartésien, elle se décompose en dérivées des coordonnées selon chaque axe."
         },
@@ -1908,7 +1908,7 @@
           "id": "B",
           "text": "Si l’accélération est nulle, le mobile est forcément immobile.",
           "is_correct": false,
-          "explanation": "Un mobile peut être en mouvement avec \\(a = 0\\) si sa vitesse reste constante. L’absence d’accélération ne signifie pas absence de mouvement."
+          "explanation": "Un mobile peut être en mouvement avec \\(a = 0 si sa\\) vitesse reste constante. L’absence d’accélération ne signifie pas absence de mouvement."
         },
         {
           "id": "C",
@@ -1924,14 +1924,14 @@
         },
         {
           "id": "E",
-          "text": "Si \\(a = 0\\), la position du mobile est forcément constante au cours du temps.",
+          "text": "\\(Si a = 0\\), la position du mobile est forcément constante au cours du temps.",
           "is_correct": false,
           "explanation": "Une position constante correspond à un mobile au repos. Avec \\(a = 0\\), le mobile peut aussi se déplacer à vitesse constante sur une trajectoire rectiligne."
         }
       ],
       "coverage_label": "QCM - Accélération : définition et unité",
       "learning_objective": "Comprendre qu’une accélération nulle est compatible avec un mouvement uniforme.",
-      "correction_summary": "La réponse correcte est celle qui relie \\(a = 0\\) à une vitesse constante, comme dans le mouvement rectiligne uniforme. Le piège est de confondre accélération nulle et immobilité.",
+      "correction_summary": "La réponse correcte est celle qui relie \\(a = 0 à\\) une vitesse constante, comme dans le mouvement rectiligne uniforme. Le piège est de confondre accélération nulle et immobilité.",
       "course_clarification": "Quand la vitesse ne change ni en norme ni en direction, son dérivé temporel est nul. Le mobile peut donc se déplacer tout en ayant \\(a = 0\\).",
       "source_refs": []
     },
@@ -1954,7 +1954,7 @@
         },
         {
           "id": "C",
-          "text": "La composante normale est égale à \\(a_t\\) dans tous les mouvements.",
+          "text": "La composante normale est égale \\(à a_t\\) dans tous les mouvements.",
           "is_correct": false,
           "explanation": "Les composantes tangentielle et normale n’ont pas le même rôle. L’une agit sur la norme de la vitesse, l’autre sur sa direction."
         },
@@ -2076,7 +2076,7 @@
           "id": "B",
           "text": "\\(v = \\omega R\\).",
           "is_correct": true,
-          "explanation": "La vitesse linéaire d'un point en rotation est proportionnelle à sa distance à l'axe : \\(v = \\omega R\\)."
+          "explanation": "La vitesse linéaire d'un point en rotation est proportionnelle à sa distance à l'axe \\(: v = \\omega R\\)."
         },
         {
           "id": "C",
@@ -2208,13 +2208,13 @@
           "id": "C",
           "text": "La vitesse angulaire vaut environ \\(157\\ \\text{rad/s}\\) et la vitesse linéaire en bout de pale vaut environ \\(126\\ \\text{m/s}\\).",
           "is_correct": true,
-          "explanation": "La conversion de 1500 tr/min conduit à \\(\\omega \\approx 157\\ \\text{rad/s}\\), puis \\(v=\\omega R\\approx 157\\times 0{,}8 = 126\\ \\text{m/s}\\)."
+          "explanation": "La conversion de 1500 tr/min conduit \\(à \\omega \\approx 157\\ \\text{rad/s}\\), puis \\(v=\\omega R\\approx 157\\times 0{,}8 = 126\\ \\text{m/s}\\)."
         },
         {
           "id": "D",
           "text": "La vitesse linéaire vaut environ \\(0{,}8\\ \\text{m/s}\\).",
           "is_correct": false,
-          "explanation": "Le rayon seul ne suffit pas. Il faut multiplier par la vitesse angulaire : \\(v=\\omega R\\), ce qui donne une valeur bien plus élevée."
+          "explanation": "Le rayon seul ne suffit pas. Il faut multiplier par la vitesse angulaire \\(: v=\\omega R\\), ce qui donne une valeur bien plus élevée."
         },
         {
           "id": "E",
@@ -2286,7 +2286,7 @@
           "id": "B",
           "text": "Elle vaut \\(a_n=8640\\ \\text{m·s}^{-2}\\).",
           "is_correct": true,
-          "explanation": "On applique \\(a_n=\\dfrac{v^2}{R}\\) avec \\(v=72\\ \\text{m·s}^{-1}\\) et \\(R=0{,}6\\ \\text{m}\\). On obtient \\(72^2/0{,}6=8640\\ \\text{m·s}^{-2}\\)."
+          "explanation": "On applique \\(a_n=\\dfrac{v^2}{R}\\) avec \\(v=72\\ \\text{m·s}^{-1}\\) et \\(R=0{,}6\\ \\text{m}. On\\) obtient \\(72^2/0{,}6=8640\\ \\text{m·s}^{-2}\\)."
         },
         {
           "id": "C",
@@ -2362,15 +2362,15 @@
       "options": [
         {
           "id": "A",
-          "text": "La relation correcte entre vitesse linéaire et vitesse angulaire est \\\\(v=\\omega/R\\\\).",
+          "text": "La relation correcte entre vitesse linéaire et vitesse angulaire est \\(v=\\omega/R\\).",
           "is_correct": false,
-          "explanation": "La vitesse linéaire augmente avec le rayon ; elle n’est donc pas divisée par \\\\(R\\\\) mais multipliée par \\\\(R\\\\)."
+          "explanation": "La vitesse linéaire augmente avec le rayon ; elle n’est donc pas divisée par \\(R\\) mais multipliée par \\(R\\)."
         },
         {
           "id": "B",
-          "text": "L’accélération normale au bout de la pale vérifie \\\\(a_n=\\alpha R\\\\).",
+          "text": "L’accélération normale au bout de la pale vérifie \\(a_n=\\alpha R\\).",
           "is_correct": false,
-          "explanation": "\n\\\\(\\alpha R\\\\) donne l’accélération tangentielle, pas l’accélération normale. L’accélération normale dépend de \\\\(\\omega\\\\) au carré."
+          "explanation": "\\(\\alpha R\\) donne l’accélération tangentielle, pas l’accélération normale. L’accélération normale dépend de \\(\\omega\\) au carré."
         },
         {
           "id": "C",
@@ -2386,14 +2386,14 @@
         },
         {
           "id": "E",
-          "text": "Une mesure de vitesse angulaire permet d’évaluer la vitesse linéaire au bout de la pale avec la relation \\\\(v=\\omega R\\\\).",
+          "text": "Une mesure de vitesse angulaire permet d’évaluer la vitesse linéaire au bout de la pale avec la relation \\(v=\\omega R\\).",
           "is_correct": true,
-          "explanation": "Pour un point situé à la distance \\\\(R\\\\) de l’axe, la vitesse linéaire est proportionnelle à la vitesse angulaire : \\\\(v=\\omega R\\\\). C’est la relation clé pour relier rotation et mouvement linéaire."
+          "explanation": "Pour un point situé à la distance \\(R\\) de l’axe, la vitesse linéaire est proportionnelle à la vitesse angulaire \\(: v=\\omega R. C\\)’est la relation clé pour relier rotation et mouvement linéaire."
         }
       ],
       "coverage_label": "QCM - Applications aéronautiques typiques",
       "learning_objective": "Utiliser la relation entre vitesse angulaire, vitesse linéaire et accélération normale.",
-      "correction_summary": "La relation correcte est \\\\(v=\\omega R\\\\), et elle permet ensuite d’estimer les effets mécaniques sur la pale. Le piège principal est de confondre accélération tangentielle et accélération normale.",
+      "correction_summary": "La relation correcte est \\(v=\\omega R\\), et elle permet ensuite d’estimer les effets mécaniques sur la pale. Le piège principal est de confondre accélération tangentielle et accélération normale.",
       "course_clarification": "Pour une rotation, la vitesse d’un point dépend de son rayon. L’accélération normale est liée au changement de direction du mouvement et pointe vers le centre.",
       "source_refs": []
     },
@@ -2430,7 +2430,7 @@
           "id": "E",
           "text": "\\(\\dfrac{dy}{dx} = \\dfrac{dy}{dt}\\,\\dfrac{dx}{dt}\\).",
           "is_correct": false,
-          "explanation": "Le produit des deux dérivées temporelles ne donne pas \\(dy/dx\\). Il faut au contraire former le rapport \\(\\frac{dy/dt}{dx/dt}\\)."
+          "explanation": "Le produit des deux dérivées temporelles ne donne pas \\(dy/dx. Il\\) faut au contraire former le rapport \\(\\frac{dy/dt}{dx/dt}\\)."
         }
       ],
       "coverage_label": "QCM - Formulaire récapitulatif",
@@ -2472,13 +2472,13 @@
           "id": "E",
           "text": "Le symbole rad doit être remplacé par kg dans tous les calculs de rotation.",
           "is_correct": false,
-          "explanation": "Le kilogramme mesure une masse, sans lien direct avec la mesure angulaire. En rotation, on conserve rad pour l’angle, rad/s pour omega et rad/s² pour alpha."
+          "explanation": "Le kilogramme mesure une masse, sans lien direct avec la mesure angulaire. En rotation, on conserve rad pour l’angle, rad/s pour omega et rad/s² pour alpha."
         }
       ],
       "coverage_label": "QCM - Erreurs fréquentes à éviter",
       "learning_objective": "Identifier correctement les unités des grandeurs angulaires et distinguer angle, vitesse angulaire et accélération angulaire.",
-      "correction_summary": "La bonne affirmation rappelle que le radian est sans dimension et que les unités angulaires restent cohérentes : rad/s pour omega, rad/s² pour alpha. Le piège classique consiste à confondre ces unités avec celles des grandeurs linéaires.",
-      "course_clarification": "Un angle theta se mesure en radians. La vitesse angulaire omega = d\\theta/dt et l’accélération angulaire alpha = d\\omega/dt conservent le radian dans leur écriture pratique, même si le radian est sans dimension.",
+      "correction_summary": "La bonne affirmation rappelle que le radian est sans dimension et que les unités angulaires restent cohérentes : rad/s pour omega, rad/s² pour alpha. Le piège classique consiste à confondre ces unités avec celles des grandeurs linéaires.",
+      "course_clarification": "Un angle theta se mesure en radians. La vitesse angulaire omega \\(= d\\theta/dt\\) et l’accélération angulaire alpha \\(= d\\omega/dt\\) conservent le radian dans leur écriture pratique, même si le radian est sans dimension.",
       "source_refs": []
     },
     {
@@ -2572,7 +2572,7 @@
       "options": [
         {
           "id": "A",
-          "text": "La position du point M s’écrit uniquement \\\\(r(t)=x(t)\\\\), sans vecteurs de base.",
+          "text": "La position du point M s’écrit uniquement \\(r(t)=x(t)\\), sans vecteurs de base.",
           "is_correct": false,
           "explanation": "Une position vectorielle nécessite les composantes selon les directions de base ; une seule coordonnée ne suffit pas en général."
         },
@@ -2580,31 +2580,31 @@
           "id": "B",
           "text": "La position du point M ne dépend jamais du temps.",
           "is_correct": false,
-          "explanation": "Ici, la position est explicitement fonction du temps : \\\\(r(t)\\\\) varie lorsque le point se déplace."
+          "explanation": "Ici, la position est explicitement fonction du temps : \\(r(t)\\) varie lorsque le point se déplace."
         },
         {
           "id": "C",
-          "text": "La position du point M peut s’écrire \\\\(r(t)=x(t)\\,i+y(t)\\,j+z(t)\\,k\\\\).",
+          "text": "La position du point M peut s’écrire \\(r(t)=x(t)\\,i+y(t)\\,j+z(t)\\,k\\).",
           "is_correct": true,
-          "explanation": "Cette écriture vectorielle donne les coordonnées du point M en fonction du temps dans la base \\\\(i,j,k\\\\)."
+          "explanation": "Cette écriture vectorielle donne les coordonnées du point M en fonction du temps dans la base \\(i,j,k\\)."
         },
         {
           "id": "D",
-          "text": "La position du point M s’écrit \\\\(r(t)=v(t)\\\\), car position et vitesse sont la même grandeur.",
+          "text": "La position du point M s’écrit \\(r(t)=v(t)\\), car position et vitesse sont la même grandeur.",
           "is_correct": false,
           "explanation": "La position et la vitesse sont deux grandeurs différentes : l’une localise le point, l’autre décrit sa variation temporelle."
         },
         {
           "id": "E",
-          "text": "La position du point M s’écrit \\\\(r(t)=x(t)\\,i+y(t)\\,j\\\\) seulement, car la composante selon \\\\(k\\\\) est toujours nulle.",
+          "text": "La position du point M s’écrit \\(r(t)=x(t)\\,i+y(t)\\,j\\) seulement, car la composante selon \\(k\\) est toujours nulle.",
           "is_correct": false,
-          "explanation": "La composante selon \\\\(k\\\\) n’est pas obligatoirement nulle ; la forme générale comporte bien les trois composantes \\\\(x(t), y(t), z(t)\\\\)."
+          "explanation": "La composante selon \\(k\\) n’est pas obligatoirement nulle ; la forme générale comporte bien les trois composantes \\(x(t), y(t), z(t)\\)."
         }
       ],
       "coverage_label": "QCM - Système, point matériel et référentiel",
       "learning_objective": "Lire et interpréter l’écriture vectorielle de la position d’un point dans l’espace.",
-      "correction_summary": "La bonne réponse est l’écriture vectorielle avec les trois composantes \\\\(x(t), y(t), z(t)\\\\). Le piège est d’oublier une composante ou de confondre position et vitesse.",
-      "course_clarification": "Le vecteur position repère le point M dans l’espace à l’instant \\\\(t\\\\). Les fonctions \\\\(x(t), y(t), z(t)\\\\) sont ses coordonnées dans la base choisie.",
+      "correction_summary": "La bonne réponse est l’écriture vectorielle avec les trois composantes \\(x(t), y(t), z(t)\\). Le piège est d’oublier une composante ou de confondre position et vitesse.",
+      "course_clarification": "Le vecteur position repère le point M dans l’espace à l’instant \\(t\\). Les fonctions \\(x(t), y(t), z(t)\\) sont ses coordonnées dans la base choisie.",
       "source_refs": []
     },
     {
@@ -2742,7 +2742,7 @@
           "id": "A",
           "text": "La composante tangentielle \\(a_t\\) est dirigée vers le centre de courbure.",
           "is_correct": false,
-          "explanation": "La direction vers le centre de courbure correspond à la composante normale \\(a_n\\), pas à \\(a_t\\). La composante tangentielle suit la tangente à la trajectoire."
+          "explanation": "La direction vers le centre de courbure correspond à la composante normale \\(a_n\\), pas \\(à a_t\\). La composante tangentielle suit la tangente à la trajectoire."
         },
         {
           "id": "B",
@@ -2760,7 +2760,7 @@
           "id": "D",
           "text": "La composante tangentielle \\(a_t\\) est toujours nulle dès que la trajectoire est courbe.",
           "is_correct": false,
-          "explanation": "Une trajectoire courbe peut avoir à la fois une composante normale et une composante tangentielle. Si la vitesse en norme varie, \\(a_t\\) n’est pas nulle."
+          "explanation": "Une trajectoire courbe peut avoir à la fois une composante normale et une composante tangentielle. Si la vitesse en norme varie\\(, a_t n\\)’est pas nulle."
         },
         {
           "id": "E",
@@ -2771,7 +2771,7 @@
       ],
       "coverage_label": "QCM - Accélération : définition et unité",
       "learning_objective": "Identifier le rôle de la composante tangentielle dans la variation de la norme de la vitesse.",
-      "correction_summary": "La bonne réponse associe \\(a_t\\) à la variation de la norme de \\(v\\). Le piège est de la confondre avec la composante normale, qui change la direction de la vitesse.",
+      "correction_summary": "La bonne réponse associe \\(a_t à\\) la variation de la norme de \\(v\\). Le piège est de la confondre avec la composante normale, qui change la direction de la vitesse.",
       "course_clarification": "L’accélération peut se décomposer en une partie tangentielle et une partie normale. La partie tangentielle agit sur la valeur de la vitesse : elle fait accélérer ou ralentir le mobile.",
       "source_refs": []
     },
@@ -2848,7 +2848,7 @@
         },
         {
           "id": "E",
-          "text": "La position suit une loi quadratique du temps : \\(x(t)=x_0+vt^2\\).",
+          "text": "La position suit une loi quadratique du temps \\(: x(t)=x_0+vt^2\\).",
           "is_correct": false,
           "explanation": "La dépendance en \\(t^2\\) correspond à un mouvement accéléré, pas à un MRU. En MRU, la loi horaire est linéaire en \\(t\\)."
         }
@@ -2898,7 +2898,7 @@
       "coverage_label": "QCM - Mouvement rectiligne uniformément accéléré (MRUA)",
       "learning_objective": "Reconnaître et utiliser la loi horaire de la vitesse en MRUA.",
       "correction_summary": "La bonne formule est \\(v(t)=v_0+at\\). Le principal piège est de confondre la loi de vitesse avec celle de position, qui contient un terme en \\(t^2\\).",
-      "course_clarification": "\\(v_0\\) est la vitesse à l’instant initial \\(t=0\\). L’accélération constante \\(a\\) fait varier la vitesse de façon linéaire au cours du temps.",
+      "course_clarification": "\\(v_0\\) est la vitesse à l’instant initial \\(t=0. L\\)’accélération constante \\(a\\) fait varier la vitesse de façon linéaire au cours du temps.",
       "source_refs": []
     },
     {
@@ -2910,7 +2910,7 @@
           "id": "A",
           "text": "\\(a_n = \\omega^2 R\\).",
           "is_correct": true,
-          "explanation": "L'accélération normale dépend du carré de la vitesse angulaire et du rayon : \\(a_n = \\omega^2 R\\)."
+          "explanation": "L'accélération normale dépend du carré de la vitesse angulaire et du rayon \\(: a_n = \\omega^2 R\\)."
         },
         {
           "id": "B",
@@ -2964,7 +2964,7 @@
           "id": "C",
           "text": "La vitesse linéaire vérifie \\(v = \\alpha R\\).",
           "is_correct": false,
-          "explanation": "La vitesse linéaire est liée à la vitesse angulaire par \\(v = \\omega R\\). L’expression \\(\\alpha R\\) donne une accélération, pas une vitesse."
+          "explanation": "La vitesse linéaire est liée à la vitesse angulaire par \\(v = \\omega R. L\\)’expression \\(\\alpha R\\) donne une accélération, pas une vitesse."
         },
         {
           "id": "D",
@@ -2980,9 +2980,9 @@
         }
       ],
       "coverage_label": "QCM - Mouvement circulaire accéléré",
-      "learning_objective": "Relier correctement \\(v\\), \\(a_t\\), \\(a_n\\), \\(\\omega\\), \\(\\alpha\\) et le rayon \\(R\\).",
-      "correction_summary": "La relation à retenir est \\(a_t = \\alpha R\\). Il ne faut pas confondre les formules de vitesse et d’accélération, ni mélanger composante tangentielle et composante normale.",
-      "course_clarification": "La vitesse linéaire au bord d’un cercle vaut \\(v = \\omega R\\). L’accélération tangentielle traduit le changement de vitesse, tandis que l’accélération normale traduit le changement de direction.",
+      "learning_objective": "Relier correctement \\(v, a_t, a_n, \\omega, \\alpha\\) et le rayon \\(R\\).",
+      "correction_summary": "La relation à retenir est \\(a_t = \\alpha R. Il ne\\) faut pas confondre les formules de vitesse et d’accélération, ni mélanger composante tangentielle et composante normale.",
+      "course_clarification": "La vitesse linéaire au bord d’un cercle vaut \\(v = \\omega R. L\\)’accélération tangentielle traduit le changement de vitesse, tandis que l’accélération normale traduit le changement de direction.",
       "source_refs": []
     },
     {
@@ -2994,7 +2994,7 @@
           "id": "A",
           "text": "\\(\\dfrac{1}{2}\\)",
           "is_correct": false,
-          "explanation": "Cette valeur ne correspond pas au quotient des dérivées temporelles à \\(t=2\\). Le bon calcul donne \\(4/4\\), soit 1."
+          "explanation": "Cette valeur ne correspond pas au quotient des dérivées temporelles \\(à t=2\\). Le bon calcul donne \\(4/4\\), soit 1."
         },
         {
           "id": "B",
@@ -3006,13 +3006,13 @@
           "id": "C",
           "text": "1",
           "is_correct": true,
-          "explanation": "On calcule \\(dy/dt=2t\\) et \\(dx/dt=4\\). À \\(t=2\\), on a \\(dy/dt=4\\), donc \\(dy/dx=4/4=1\\)."
+          "explanation": "On calcule \\(dy/dt=2t\\) et \\(dx/dt=4. À t=2, on a dy/dt=4\\), donc \\(dy/dx=4/4=1\\)."
         },
         {
           "id": "D",
           "text": "4",
           "is_correct": false,
-          "explanation": "Le nombre 4 apparaît dans \\(dx/dt\\) et dans \\(dy/dt\\) à \\(t=2\\), mais la pente est leur quotient, pas l’un des deux séparément."
+          "explanation": "Le nombre 4 apparaît dans \\(dx/dt\\) et dans \\(dy/dt à t=2\\), mais la pente est leur quotient, pas l’un des deux séparément."
         },
         {
           "id": "E",
@@ -3023,7 +3023,7 @@
       ],
       "coverage_label": "QCM - Équations horaires et trajectoires",
       "learning_objective": "Calculer la pente instantanée d’une trajectoire à partir d’équations horaires simples.",
-      "correction_summary": "On applique \\(dy/dx=(dy/dt)/(dx/dt)\\) puis on évalue à \\(t=2\\). Le piège est de confondre la pente avec une coordonnée ou avec une dérivée prise isolément.",
+      "correction_summary": "On applique \\(dy/dx=(dy/dt)/(dx/dt)\\) puis on évalue \\(à t=2\\). Le piège est de confondre la pente avec une coordonnée ou avec une dérivée prise isolément.",
       "course_clarification": "La pente instantanée indique l’inclinaison locale de la trajectoire. Elle se déduit des variations de \\(x\\) et \\(y\\) par rapport au temps, puis par quotient.",
       "source_refs": []
     },
@@ -3210,7 +3210,7 @@
           "id": "B",
           "text": "Chaque situation repose uniquement sur une vitesse angulaire, sans position ni accélération.",
           "is_correct": false,
-          "explanation": "Les applications aéronautiques citées ne se réduisent pas à \\\\(\\omega\\\\) : il faut aussi modéliser les positions et dériver les grandeurs pour obtenir vitesse et accélération."
+          "explanation": "Les applications aéronautiques citées ne se réduisent pas à \\(\\omega\\) : il faut aussi modéliser les positions et dériver les grandeurs pour obtenir vitesse et accélération."
         },
         {
           "id": "C",
@@ -3262,7 +3262,7 @@
         },
         {
           "id": "D",
-          "text": "\u0011v = \\(\\dfrac{dx}{dt}\\) et \\(a = \\dfrac{dv}{dt} = \\dfrac{d^2x}{dt^2}\\).",
+          "text": "\\(v = \\dfrac{dx}{dt}\\) et \\(a = \\dfrac{dv}{dt} = \\dfrac{d^2x}{dt^2}\\).",
           "is_correct": true,
           "explanation": "La vitesse instantanée est la dérivée de la position par rapport au temps, et l'accélération est la dérivée de la vitesse, donc la dérivée seconde de la position."
         },
@@ -3318,7 +3318,7 @@
       "coverage_label": "QCM - Erreurs fréquentes à éviter",
       "learning_objective": "Distinguer une grandeur instantanée d’une grandeur moyenne à partir de sa définition mathématique et physique.",
       "correction_summary": "L’énoncé correct associe la vitesse instantanée à la dérivée de la position, et la vitesse moyenne à un intervalle fini. Le piège est de remplacer une valeur locale par un rapport global distance/temps.",
-      "course_clarification": "La pente de x(t) donne v(t) à l’instant considéré. À l’inverse, une moyenne est calculée sur une durée complète et ne représente pas l’évolution locale du mouvement.",
+      "course_clarification": "La pente de x(t) donne v(t) à l’instant considéré. À l’inverse, une moyenne est calculée sur une durée complète et ne représente pas l’évolution locale du mouvement.",
       "source_refs": []
     },
     {
@@ -3504,7 +3504,7 @@
           "id": "B",
           "text": "La norme vérifie \\(v=\\dfrac{dt}{ds}\\) et s’exprime en s·m⁻¹.",
           "is_correct": false,
-          "explanation": "L’inverse de \\(ds/dt\\) n’est pas une vitesse ; ses unités sont celles d’un temps par distance, donc ce n’est pas la grandeur demandée."
+          "explanation": "L’inverse de \\(ds/dt n\\)’est pas une vitesse ; ses unités sont celles d’un temps par distance, donc ce n’est pas la grandeur demandée."
         },
         {
           "id": "C",
@@ -3606,7 +3606,7 @@
           "id": "E",
           "text": "La composante normale \\(a_n\\) est nulle dès que la vitesse est constante, quelle que soit la trajectoire.",
           "is_correct": false,
-          "explanation": "Une vitesse constante en norme ne suffit pas à annuler \\(a_n\\). Si la trajectoire est courbe, la direction change et la composante normale peut être non nulle, comme dans un mouvement circulaire uniforme."
+          "explanation": "Une vitesse constante en norme ne suffit pas à annuler \\(a_n. Si\\) la trajectoire est courbe, la direction change et la composante normale peut être non nulle, comme dans un mouvement circulaire uniforme."
         }
       ],
       "coverage_label": "QCM - Accélération : définition et unité",
@@ -3640,7 +3640,7 @@
         },
         {
           "id": "D",
-          "text": "L’accélération est la variation de la vitesse dans le temps : \\(a = \\mathrm{d}v/\\mathrm{d}t = \\mathrm{d}^2r/\\mathrm{d}t^2\\).",
+          "text": "L’accélération est la variation de la vitesse dans le temps \\(: a = \\mathrm{d}v/\\mathrm{d}t = \\mathrm{d}^2r/\\mathrm{d}t^2\\).",
           "is_correct": true,
           "explanation": "Cette écriture relie directement l’accélération à la dérivée temporelle de la vitesse, ou à la dérivée seconde du vecteur position. Elle exprime bien une variation de la vitesse au cours du temps."
         },
@@ -3695,8 +3695,8 @@
       ],
       "coverage_label": "QCM - Mouvement rectiligne uniforme (MRU)",
       "learning_objective": "Reconnaître la loi horaire d'un MRU et distinguer une dépendance linéaire d'une dépendance quadratique.",
-      "correction_summary": "La bonne loi est \\(x(t)=x_0+vt\\) : la position varie linéairement avec le temps. Le piège est de confondre cette expression avec les lois des mouvements accélérés, qui comportent un terme en \\(t^2\\).",
-      "course_clarification": "\\(x_0\\) est la position initiale, c'est-à-dire la position à \\(t=0\\). La vitesse \\(v\\) reste constante, donc la courbe \\(x(t)\\) est une droite.",
+      "correction_summary": "La bonne loi est \\(x(t)=x_0+vt\\): la position varie linéairement avec le temps. Le piège est de confondre cette expression avec les lois des mouvements accélérés, qui comportent un terme en \\(t^2\\).",
+      "course_clarification": "\\(x_0\\) est la position initiale, c'est-à-dire la position \\(à t=0\\). La vitesse \\(v\\) reste constante, donc la courbe \\(x(t)\\) est une droite.",
       "source_refs": []
     },
     {
@@ -3737,7 +3737,7 @@
       ],
       "coverage_label": "QCM - Mouvement rectiligne uniformément accéléré (MRUA)",
       "learning_objective": "Choisir la bonne loi horaire de la position en MRUA et repérer le rôle de chaque terme.",
-      "correction_summary": "La bonne loi est \\(x(t)=x_0+v_0t+\\frac12at^2\\). L’erreur fréquente consiste à permuter les rôles de \\(v_0\\) et de \\(a\\) ou à oublier le facteur \\(\\frac12\\).",
+      "correction_summary": "La bonne loi est \\(x(t)=x_0+v_0t+\\frac12at^2. L\\)’erreur fréquente consiste à permuter les rôles de \\(v_0\\) et de \\(a\\) ou à oublier le facteur \\(\\frac12\\).",
       "course_clarification": "\\(x_0\\) est la position initiale. Le terme en \\(t\\) traduit le mouvement dû à la vitesse initiale, et le terme en \\(t^2\\) traduit l’effet de l’accélération constante.",
       "source_refs": []
     },
@@ -3748,7 +3748,7 @@
       "options": [
         {
           "id": "A",
-          "text": "L'accélération tangentielle est égale à \\(\\omega^2R\\).",
+          "text": "L'accélération tangentielle est égale \\(à \\omega^2R\\).",
           "is_correct": false,
           "explanation": "\\(\\omega^2R\\) est l'expression de l'accélération normale, pas de l'accélération tangentielle."
         },
@@ -3772,7 +3772,7 @@
         },
         {
           "id": "E",
-          "text": "L'accélération tangentielle est nulle : \\(a_t = 0\\).",
+          "text": "L'accélération tangentielle est nulle \\(: a_t = 0\\).",
           "is_correct": true,
           "explanation": "En MCU, la norme de la vitesse reste constante ; il n'y a donc pas de variation tangentielle de la vitesse."
         }
@@ -3810,7 +3810,7 @@
           "id": "D",
           "text": "\\(y=\\dfrac{x^2}{16}\\)",
           "is_correct": true,
-          "explanation": "On isole d’abord \\(t\\) à partir de \\(x=4t\\), donc \\(t=x/4\\). En remplaçant dans \\(y=t^2\\), on obtient bien \\(y=(x/4)^2=x^2/16\\)."
+          "explanation": "On isole d’abord \\(t\\) à partir de \\(x=4t\\), donc \\(t=x/4\\). En remplaçant dans \\(y=t^2, on\\) obtient bien \\(y=(x/4)^2=x^2/16\\)."
         },
         {
           "id": "E",
@@ -4002,7 +4002,7 @@
           "id": "A",
           "text": "\\(x = x_0 + v_0t - \\tfrac12 at^2\\).",
           "is_correct": false,
-          "explanation": "Le signe devant le terme en \\(at^2\\) n'est pas systématiquement négatif. Avec l'écriture du formulaire, le terme correct est bien \\(+\\tfrac12 at^2\\)."
+          "explanation": "Le signe devant le terme en \\(at^2 n'\\)est pas systématiquement négatif. Avec l'écriture du formulaire, le terme correct est bien \\(+\\tfrac12 at^2\\)."
         },
         {
           "id": "B",
@@ -4042,7 +4042,7 @@
       "options": [
         {
           "id": "A",
-          "text": "L’accélération se décompose en une composante tangentielle a_t = \\alpha R et une composante normale a_n = \\omega^2R = v^2/R.",
+          "text": "L’accélération se décompose en une composante tangentielle \\(a_t = \\alpha R\\) et une composante normale \\(a_n = \\omega^2R = v^2/R\\).",
           "is_correct": true,
           "explanation": "En mouvement circulaire, l’accélération n’est pas réduite à une seule composante. La composante tangentielle traduit la variation de la vitesse, et la composante normale traduit la courbure de la trajectoire."
         },
@@ -4050,19 +4050,19 @@
           "id": "B",
           "text": "L’accélération d’un mouvement circulaire est toujours uniquement normale.",
           "is_correct": false,
-          "explanation": "La composante normale existe bien, mais la composante tangentielle peut aussi être présente si la vitesse varie. Oublier a_t conduit à une description incomplète du mouvement."
+          "explanation": "La composante normale existe bien, mais la composante tangentielle peut aussi être présente si la vitesse varie. Oublier a_t conduit à une description incomplète du mouvement."
         },
         {
           "id": "C",
-          "text": "L’accélération normale vaut a_n = omega R.",
+          "text": "L’accélération normale vaut a_n = omega R.",
           "is_correct": false,
-          "explanation": "La bonne expression est a_n = \\omega^2R ou v^2/R. L’expression omega R correspond à la vitesse linéaire v, pas à l’accélération."
+          "explanation": "La bonne expression est \\(a_n = \\omega^2R\\) ou v^2/R. L’expression omega R correspond à la vitesse linéaire v, pas à l’accélération."
         },
         {
           "id": "D",
           "text": "La composante tangentielle ne dépend jamais de la variation de vitesse.",
           "is_correct": false,
-          "explanation": "La composante tangentielle est précisément liée à la variation de la vitesse de translation le long de la trajectoire. Si la vitesse change, a_t doit être prise en compte."
+          "explanation": "La composante tangentielle est précisément liée à la variation de la vitesse de translation le long de la trajectoire. Si la vitesse change, a_t doit être prise en compte."
         },
         {
           "id": "E",
@@ -4073,8 +4073,8 @@
       ],
       "coverage_label": "QCM - Erreurs fréquentes à éviter",
       "learning_objective": "Reconnaître les composantes de l’accélération en mouvement circulaire et utiliser les bonnes formules.",
-      "correction_summary": "La réponse correcte rappelle que l’accélération circulaire se décompose en a_t et a_n. Le piège classique consiste à n’en garder qu’une seule composante ou à confondre vitesse et accélération.",
-      "course_clarification": "La composante tangentielle mesure la variation de la norme de la vitesse. La composante normale, orientée vers le centre, traduit le changement de direction et s’écrit a_n = \\omega^2R = v^2/R.",
+      "correction_summary": "La réponse correcte rappelle que l’accélération circulaire se décompose en a_t et a_n. Le piège classique consiste à n’en garder qu’une seule composante ou à confondre vitesse et accélération.",
+      "course_clarification": "La composante tangentielle mesure la variation de la norme de la vitesse. La composante normale, orientée vers le centre, traduit le changement de direction et s’écrit \\(a_n = \\omega^2R = v^2/R\\).",
       "source_refs": []
     }
   ],

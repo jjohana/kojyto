@@ -32,7 +32,7 @@
     {
       "kind": "formula",
       "title": "Lien entre section et vitesse",
-      "text": "Dans un **écoulement subsonique** (\u001b?M<1\u001b?), la géométrie du conduit pilote l’accélération du jet : une diminution de section favorise l’augmentation de vitesse et la conversion de pression en vitesse.",
+      "text": "Dans un **écoulement subsonique** (M<1), la géométrie du conduit pilote l’accélération du jet : une diminution de section favorise l’augmentation de vitesse et la conversion de pression en vitesse.",
       "bullets": [],
       "image_url": null,
       "image_path": null,

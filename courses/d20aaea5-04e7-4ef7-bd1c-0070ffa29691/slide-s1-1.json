@@ -54,19 +54,19 @@
           "id": "A",
           "text": "\\(V_0\\) est la vitesse de sortie et \\(V_5\\) la vitesse d’entrée.",
           "is_correct": false,
-          "explanation": "Cette lecture inverse les rôles des deux vitesses. Dans la notation du moteur, \\(V_0\\) repère l’entrée et \\(V_5\\) la sortie."
+          "explanation": "Cette lecture inverse les rôles des deux vitesses. Dans la notation du moteur\\(, V_0\\) repère l’entrée et \\(V_5\\) la sortie."
         },
         {
           "id": "B",
           "text": "\\(V_0\\) est la vitesse d’entrée et \\(V_5\\) la vitesse de sortie.",
           "is_correct": true,
-          "explanation": "La notation associe \\(V_0\\) à l’air entrant dans le moteur et \\(V_5\\) à l’air éjecté à la sortie. C’est précisément cette différence de vitesse qui crée la poussée."
+          "explanation": "La notation associe \\(V_0 à l\\)’air entrant dans le moteur et \\(V_5 à l\\)’air éjecté à la sortie. C’est précisément cette différence de vitesse qui crée la poussée."
         },
         {
           "id": "C",
           "text": "La poussée est obtenue quand \\(V_5 < V_0\\).",
           "is_correct": false,
-          "explanation": "Le principe indiqué repose sur une éjection vers l’arrière à plus grande vitesse. Si \\(V_5\\) était plus faible que \\(V_0\\), le moteur n’accélérerait pas l’air dans le sens attendu."
+          "explanation": "Le principe indiqué repose sur une éjection vers l’arrière à plus grande vitesse\\(. Si V_5\\) était plus faible que \\(V_0\\), le moteur n’accélérerait pas l’air dans le sens attendu."
         },
         {
           "id": "D",
@@ -120,7 +120,7 @@
           "id": "E",
           "text": "La poussée \\(Tu\\) s’exprime en kg·m/s.",
           "is_correct": false,
-          "explanation": "Cette écriture ne correspond pas à l’unité d’une force. La quantité \\(kg\\cdot m/s\\) n’est pas le newton, alors que la poussée est donnée en N."
+          "explanation": "Cette écriture ne correspond pas à l’unité d’une force. La quantité \\(kg\\cdot m/s n\\)’est pas le newton, alors que la poussée est donnée en N."
         }
       ],
       "coverage_label": "Origine de la poussée : terme réacteur",
@@ -138,7 +138,7 @@
           "id": "A",
           "text": "\\(Tu = 75\\times(250-650)=30\\,000\\ \\text{N}\\).",
           "is_correct": false,
-          "explanation": "Le calcul numérique est incompatible avec le signe : \\(250-650\\) vaut \\(-400\\), donc le résultat ne peut pas être \\(+30\\,000\\ \\text{N}\\). La différence doit être prise dans le bon sens."
+          "explanation": "Le calcul numérique est incompatible avec le signe \\(: 250-650\\) vaut \\(-400\\), donc le résultat ne peut pas être \\(+30\\,000\\ \\text{N}\\). La différence doit être prise dans le bon sens."
         },
         {
           "id": "B",
@@ -162,7 +162,7 @@
           "id": "E",
           "text": "\\(Tu = 75\\times(650-250)=30\\,000\\ \\text{N}\\).",
           "is_correct": true,
-          "explanation": "Le calcul reprend directement les valeurs données : débit massique \\(75\\ \\text{kg/s}\\), vitesse d’entrée \\(250\\ \\text{m/s}\\) et vitesse de sortie \\(650\\ \\text{m/s}\\). On obtient bien \\(30\\,000\\ \\text{N}\\)."
+          "explanation": "Le calcul reprend directement les valeurs données : débit massique \\(75\\ \\text{kg/s}\\), vitesse d’entrée \\(250\\ \\text{m/s}\\) et vitesse de sortie \\(650\\ \\text{m/s}. On\\) obtient bien \\(30\\,000\\ \\text{N}\\)."
         }
       ],
       "coverage_label": "Origine de la poussée : terme réacteur",

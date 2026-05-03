@@ -60,7 +60,7 @@
           "id": "B",
           "text": "La vitesse de montée s’obtient comme la dérivée de la hauteur par rapport au temps.",
           "is_correct": true,
-          "explanation": "Si la hauteur est notée par exemple \\\\(z(t)\\\\), alors la vitesse verticale de montée est \\\\(v_z(t)=\\frac{dz}{dt}\\\\). C’est une application directe de la cinématique."
+          "explanation": "Si la hauteur est notée par exemple \\(z(t)\\), alors la vitesse verticale de montée est \\(v_z(t)=\\frac{dz}{dt}. C\\)’est une application directe de la cinématique."
         },
         {
           "id": "C",
@@ -136,15 +136,15 @@
       "options": [
         {
           "id": "A",
-          "text": "La relation correcte entre vitesse linéaire et vitesse angulaire est \\\\(v=\\omega/R\\\\).",
+          "text": "La relation correcte entre vitesse linéaire et vitesse angulaire est \\(v=\\omega/R\\).",
           "is_correct": false,
-          "explanation": "La vitesse linéaire augmente avec le rayon ; elle n’est donc pas divisée par \\\\(R\\\\) mais multipliée par \\\\(R\\\\)."
+          "explanation": "La vitesse linéaire augmente avec le rayon ; elle n’est donc pas divisée par \\(R\\) mais multipliée par \\(R\\)."
         },
         {
           "id": "B",
-          "text": "L’accélération normale au bout de la pale vérifie \\\\(a_n=\\alpha R\\\\).",
+          "text": "L’accélération normale au bout de la pale vérifie \\(a_n=\\alpha R\\).",
           "is_correct": false,
-          "explanation": "\n\\\\(\\alpha R\\\\) donne l’accélération tangentielle, pas l’accélération normale. L’accélération normale dépend de \\\\(\\omega\\\\) au carré."
+          "explanation": "\\(\\alpha R\\) donne l’accélération tangentielle, pas l’accélération normale. L’accélération normale dépend de \\(\\omega\\) au carré."
         },
         {
           "id": "C",
@@ -160,14 +160,14 @@
         },
         {
           "id": "E",
-          "text": "Une mesure de vitesse angulaire permet d’évaluer la vitesse linéaire au bout de la pale avec la relation \\\\(v=\\omega R\\\\).",
+          "text": "Une mesure de vitesse angulaire permet d’évaluer la vitesse linéaire au bout de la pale avec la relation \\(v=\\omega R\\).",
           "is_correct": true,
-          "explanation": "Pour un point situé à la distance \\\\(R\\\\) de l’axe, la vitesse linéaire est proportionnelle à la vitesse angulaire : \\\\(v=\\omega R\\\\). C’est la relation clé pour relier rotation et mouvement linéaire."
+          "explanation": "Pour un point situé à la distance \\(R\\) de l’axe, la vitesse linéaire est proportionnelle à la vitesse angulaire \\(: v=\\omega R. C\\)’est la relation clé pour relier rotation et mouvement linéaire."
         }
       ],
       "coverage_label": "Applications aéronautiques typiques — pales d’hélice",
       "learning_objective": "Utiliser la relation entre vitesse angulaire, vitesse linéaire et accélération normale.",
-      "correction_summary": "La relation correcte est \\\\(v=\\omega R\\\\), et elle permet ensuite d’estimer les effets mécaniques sur la pale. Le piège principal est de confondre accélération tangentielle et accélération normale.",
+      "correction_summary": "La relation correcte est \\(v=\\omega R\\), et elle permet ensuite d’estimer les effets mécaniques sur la pale. Le piège principal est de confondre accélération tangentielle et accélération normale.",
       "course_clarification": "Pour une rotation, la vitesse d’un point dépend de son rayon. L’accélération normale est liée au changement de direction du mouvement et pointe vers le centre.",
       "source_refs": []
     },
@@ -186,7 +186,7 @@
           "id": "B",
           "text": "Chaque situation repose uniquement sur une vitesse angulaire, sans position ni accélération.",
           "is_correct": false,
-          "explanation": "Les applications aéronautiques citées ne se réduisent pas à \\\\(\\omega\\\\) : il faut aussi modéliser les positions et dériver les grandeurs pour obtenir vitesse et accélération."
+          "explanation": "Les applications aéronautiques citées ne se réduisent pas à \\(\\omega\\) : il faut aussi modéliser les positions et dériver les grandeurs pour obtenir vitesse et accélération."
         },
         {
           "id": "C",

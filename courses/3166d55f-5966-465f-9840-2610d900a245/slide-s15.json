@@ -5,7 +5,7 @@
   "questions": [
     {
       "question_id": "S15-Q1",
-      "prompt": "Parmi les affirmations suivantes, une seule est exacte pour une pale de rayon \\(R=0{,}6\\ \\text{m}\\) tournant à \\(\\omega=120\\ \\text{rad·s}^{-1}\\).",
+      "prompt": "Parmi les affirmations suivantes, une seule est exacte pour une pale de rayon \\(R=0{,}6\\ \\text{m}\\) tournant \\(à \\omega=120\\ \\text{rad·s}^{-1}\\).",
       "difficulty": "easy",
       "options": [
         {
@@ -30,7 +30,7 @@
           "id": "D",
           "text": "La vitesse linéaire de la pale vaut \\(v=72\\ \\text{m·s}^{-1}\\).",
           "is_correct": true,
-          "explanation": "On utilise la relation \\(v=\\omega R\\). Ici, \\(120\\times 0{,}6=72\\), donc la vitesse linéaire vaut bien \\(72\\ \\text{m·s}^{-1}\\)."
+          "explanation": "On utilise la relation \\(v=\\omega R\\). Ici\\(, 120\\times 0{,}6=72\\), donc la vitesse linéaire vaut bien \\(72\\ \\text{m·s}^{-1}\\)."
         },
         {
           "id": "E",
@@ -60,7 +60,7 @@
           "id": "B",
           "text": "Elle vaut \\(a_n=8640\\ \\text{m·s}^{-2}\\).",
           "is_correct": true,
-          "explanation": "On applique \\(a_n=\\dfrac{v^2}{R}\\) avec \\(v=72\\ \\text{m·s}^{-1}\\) et \\(R=0{,}6\\ \\text{m}\\). On obtient \\(72^2/0{,}6=8640\\ \\text{m·s}^{-2}\\)."
+          "explanation": "On applique \\(a_n=\\dfrac{v^2}{R}\\) avec \\(v=72\\ \\text{m·s}^{-1}\\) et \\(R=0{,}6\\ \\text{m}. On\\) obtient \\(72^2/0{,}6=8640\\ \\text{m·s}^{-2}\\)."
         },
         {
           "id": "C",

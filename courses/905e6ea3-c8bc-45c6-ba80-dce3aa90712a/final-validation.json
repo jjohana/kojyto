@@ -1469,7 +1469,7 @@
       ],
       "coverage_label": "QCM - Interaction entre santé, sécurité et qualité",
       "learning_objective": "Comprendre la chaîne cause-effet entre fatigue, formation, erreur de maintenance, sécurité et qualité.",
-      "correction_summary": "La bonne réponse décrit la chaîne complète : fatigue ou mauvaise formation \u001a erreur de maintenance \u001a impact sur sécurité et qualité. Le piège est de nier l’effet des facteurs humains sur la fiabilité des opérations.",
+      "correction_summary": "La bonne réponse décrit la chaîne complète : fatigue ou mauvaise formation  erreur de maintenance  impact sur sécurité et qualité. Le piège est de nier l’effet des facteurs humains sur la fiabilité des opérations.",
       "course_clarification": "Une erreur de maintenance peut avoir des conséquences techniques et opérationnelles. Quand la vigilance baisse ou que la formation manque, le risque d’erreur augmente, et cela peut toucher à la fois la sécurité et la qualité.",
       "source_refs": []
     },

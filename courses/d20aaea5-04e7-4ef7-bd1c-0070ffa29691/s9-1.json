@@ -83,7 +83,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "E_c=\\frac{1}{2}mv^2\\quad ; \\quad v=v_z\\text{ à l’impact, }v=v_x\\text{ au freinage}"
+      "latex": "E_c=\\frac{1}{2}mv^2\\quad ; \\quad v=v_z\\text{ à l’impact, }v=v_x\\text{ au freinage}",
+      "rendered_latex": "\\[E_c=\\frac{1}{2}mv^2\\quad ; \\quad v=v_z\\text{ à l’impact, }v=v_x\\text{ au freinage}\\]"
     }
   ],
   "course_refs": [],

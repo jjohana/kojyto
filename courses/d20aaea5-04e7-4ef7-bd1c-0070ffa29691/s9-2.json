@@ -38,7 +38,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "E = d\\big(\\text{axe de la roue auxiliaire},\\ \\text{axes des roues principales}\\big) \\qquad V = d\\big(\\text{train principal gauche},\\ \\text{train principal droit}\\big)"
+      "latex": "E = d\\big(\\text{axe de la roue auxiliaire},\\ \\text{axes des roues principales}\\big) \\qquad V = d\\big(\\text{train principal gauche},\\ \\text{train principal droit}\\big)",
+      "rendered_latex": "\\[E = d\\big(\\text{axe de la roue auxiliaire},\\ \\text{axes des roues principales}\\big) \\qquad V = d\\big(\\text{train principal gauche},\\ \\text{train principal droit}\\big)\\]"
     },
     {
       "kind": "table",

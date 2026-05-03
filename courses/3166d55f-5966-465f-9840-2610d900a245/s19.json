@@ -39,7 +39,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\omega=\\frac{2\\pi N}{60},\\quad v=\\omega R,\\quad a_t=\\alpha R,\\quad a_n=\\omega^2R=\\frac{v^2}{R}"
+      "latex": "\\omega=\\frac{2\\pi N}{60},\\quad v=\\omega R,\\quad a_t=\\alpha R,\\quad a_n=\\omega^2R=\\frac{v^2}{R}",
+      "rendered_latex": "\\[\\omega=\\frac{2\\pi N}{60},\\quad v=\\omega R,\\quad a_t=\\alpha R,\\quad a_n=\\omega^2R=\\frac{v^2}{R}\\]"
     }
   ],
   "course_refs": [],

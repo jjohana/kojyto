@@ -71,7 +71,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "v_m = \\frac{\\Delta s}{\\Delta t} \\quad ; \\quad v(t)=\\frac{ds}{dt}"
+      "latex": "v_m = \\frac{\\Delta s}{\\Delta t} \\quad ; \\quad v(t)=\\frac{ds}{dt}",
+      "rendered_latex": "\\[v_m = \\frac{\\Delta s}{\\Delta t} \\quad ; \\quad v(t)=\\frac{ds}{dt}\\]"
     }
   ],
   "course_refs": [],

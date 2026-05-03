@@ -84,7 +84,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\text{compression} \\Rightarrow T_t \\uparrow,\\ p_t \\uparrow \\quad;\\quad \\text{détente} \\Rightarrow p_t \\downarrow,\\ V \\uparrow"
+      "latex": "\\text{compression} \\Rightarrow T_t \\uparrow,\\ p_t \\uparrow \\quad;\\quad \\text{détente} \\Rightarrow p_t \\downarrow,\\ V \\uparrow",
+      "rendered_latex": "\\[\\text{compression} \\Rightarrow T_t \\uparrow,\\ p_t \\uparrow \\quad;\\quad \\text{détente} \\Rightarrow p_t \\downarrow,\\ V \\uparrow\\]"
     }
   ],
   "course_refs": [],

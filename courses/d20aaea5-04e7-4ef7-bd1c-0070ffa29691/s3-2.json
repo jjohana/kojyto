@@ -37,7 +37,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "P_{tr}=\\frac{1}{2}Q_{ma}(V_5^2-V_0^2)\\qquad\\text{et}\\qquad P_p=T_u\\times V_0"
+      "latex": "P_{tr}=\\frac{1}{2}Q_{ma}(V_5^2-V_0^2)\\qquad\\text{et}\\qquad P_p=T_u\\times V_0",
+      "rendered_latex": "\\[P_{tr}=\\frac{1}{2}Q_{ma}(V_5^2-V_0^2)\\qquad\\text{et}\\qquad P_p=T_u\\times V_0\\]"
     }
   ],
   "course_refs": [],

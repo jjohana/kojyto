@@ -37,7 +37,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\omega=\\frac{d\\theta}{dt}\\qquad \\alpha=\\frac{d\\omega}{dt}\\qquad v=\\omega R\\qquad a_t=\\alpha R\\qquad a_n=\\omega^2R=\\frac{v^2}{R}"
+      "latex": "\\omega=\\frac{d\\theta}{dt}\\qquad \\alpha=\\frac{d\\omega}{dt}\\qquad v=\\omega R\\qquad a_t=\\alpha R\\qquad a_n=\\omega^2R=\\frac{v^2}{R}",
+      "rendered_latex": "\\[\\omega=\\frac{d\\theta}{dt}\\qquad \\alpha=\\frac{d\\omega}{dt}\\qquad v=\\omega R\\qquad a_t=\\alpha R\\qquad a_n=\\omega^2R=\\frac{v^2}{R}\\]"
     }
   ],
   "course_refs": [],

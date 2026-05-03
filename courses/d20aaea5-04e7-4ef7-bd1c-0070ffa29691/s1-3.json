@@ -73,7 +73,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "T_u = Q_{ma}(V_5 - V_0) + Q_{mc}V_5 + S_5(P_5 - P_0)"
+      "latex": "T_u = Q_{ma}(V_5 - V_0) + Q_{mc}V_5 + S_5(P_5 - P_0)",
+      "rendered_latex": "\\[T_u = Q_{ma}(V_5 - V_0) + Q_{mc}V_5 + S_5(P_5 - P_0)\\]"
     }
   ],
   "course_refs": [],

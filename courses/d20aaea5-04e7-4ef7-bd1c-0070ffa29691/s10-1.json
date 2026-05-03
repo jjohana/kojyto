@@ -51,7 +51,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "E_{\\text{impact}} = E_{\\text{stockée par le gaz}} + E_{\\text{dissipée par l’huile}}"
+      "latex": "E_{\\text{impact}} = E_{\\text{stockée par le gaz}} + E_{\\text{dissipée par l’huile}}",
+      "rendered_latex": "\\[E_{\\text{impact}} = E_{\\text{stockée par le gaz}} + E_{\\text{dissipée par l’huile}}\\]"
     }
   ],
   "course_refs": [],

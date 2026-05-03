@@ -37,7 +37,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}"
+      "latex": "\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}",
+      "rendered_latex": "\\[\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}\\]"
     }
   ],
   "course_refs": [],

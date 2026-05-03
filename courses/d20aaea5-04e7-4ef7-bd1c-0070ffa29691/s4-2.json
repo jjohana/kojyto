@@ -73,7 +73,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "P\\,\\eta_h = T\\,V_0"
+      "latex": "P\\,\\eta_h = T\\,V_0",
+      "rendered_latex": "\\[P\\,\\eta_h = T\\,V_0\\]"
     }
   ],
   "course_refs": [],

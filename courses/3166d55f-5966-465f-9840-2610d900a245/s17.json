@@ -78,7 +78,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "v=\\frac{dx}{dt},\\qquad a=\\frac{dv}{dt},\\qquad \\omega=\\frac{d\\theta}{dt},\\qquad v=\\omega R,\\qquad a_t=\\alpha R,\\qquad a_n=\\omega^2R=\\frac{v^2}{R}"
+      "latex": "v=\\frac{dx}{dt},\\qquad a=\\frac{dv}{dt},\\qquad \\omega=\\frac{d\\theta}{dt},\\qquad v=\\omega R,\\qquad a_t=\\alpha R,\\qquad a_n=\\omega^2R=\\frac{v^2}{R}",
+      "rendered_latex": "\\[v=\\frac{dx}{dt},\\qquad a=\\frac{dv}{dt},\\qquad \\omega=\\frac{d\\theta}{dt},\\qquad v=\\omega R,\\qquad a_t=\\alpha R,\\qquad a_n=\\omega^2R=\\frac{v^2}{R}\\]"
     }
   ],
   "course_refs": [],

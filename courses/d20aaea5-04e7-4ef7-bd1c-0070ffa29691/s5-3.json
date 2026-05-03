@@ -38,7 +38,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\frac{ds}{S}=\\frac{dv}{V}(M^2-1)"
+      "latex": "\\frac{ds}{S}=\\frac{dv}{V}(M^2-1)",
+      "rendered_latex": "\\[\\frac{ds}{S}=\\frac{dv}{V}(M^2-1)\\]"
     }
   ],
   "course_refs": [],

@@ -37,7 +37,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\[|T_{\\mathrm{REV}}| = Q_{ma}\\,(V''_5 + V_0)\\qquad\\text{et}\\qquad T_{\\mathrm{REV}} = -Q_{ma}\\,(V''_5 + V_0)\\]"
+      "latex": "\\[|T_{\\mathrm{REV}}| = Q_{ma}\\,(V''_5 + V_0)\\qquad\\text{et}\\qquad T_{\\mathrm{REV}} = -Q_{ma}\\,(V''_5 + V_0)\\]",
+      "rendered_latex": "\\[|T_{\\mathrm{REV}}| = Q_{ma}\\,(V''_5 + V_0)\\qquad\\text{et}\\qquad T_{\\mathrm{REV}} = -Q_{ma}\\,(V''_5 + V_0)\\]"
     }
   ],
   "course_refs": [],

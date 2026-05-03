@@ -37,7 +37,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "T_u \\uparrow \\quad \\text{si} \\quad V_{\\text{gaz}} \\uparrow"
+      "latex": "T_u \\uparrow \\quad \\text{si} \\quad V_{\\text{gaz}} \\uparrow",
+      "rendered_latex": "\\[T_u \\uparrow \\quad \\text{si} \\quad V_{\\text{gaz}} \\uparrow\\]"
     }
   ],
   "course_refs": [],

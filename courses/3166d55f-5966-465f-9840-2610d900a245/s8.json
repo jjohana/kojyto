@@ -51,7 +51,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "x(t)=x_0+vt \\quad \\text{et} \\quad a=0"
+      "latex": "x(t)=x_0+vt \\quad \\text{et} \\quad a=0",
+      "rendered_latex": "\\[x(t)=x_0+vt \\quad \\text{et} \\quad a=0\\]"
     }
   ],
   "course_refs": [],

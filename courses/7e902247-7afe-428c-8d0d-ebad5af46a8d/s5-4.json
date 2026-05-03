@@ -78,7 +78,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\mathrm{P/BSW} = \\text{Pushbutton Switch}"
+      "latex": "\\mathrm{P/BSW} = \\text{Pushbutton Switch}",
+      "rendered_latex": "\\[\\mathrm{P/BSW} = \\text{Pushbutton Switch}\\]"
     }
   ],
   "course_refs": [],

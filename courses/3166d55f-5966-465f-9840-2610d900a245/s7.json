@@ -38,7 +38,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\vec a = a_t\\,\\vec t + a_n\\,\\vec n \\qquad\\text{et}\\qquad a_n = \\frac{v^2}{R}"
+      "latex": "\\vec a = a_t\\,\\vec t + a_n\\,\\vec n \\qquad\\text{et}\\qquad a_n = \\frac{v^2}{R}",
+      "rendered_latex": "\\[\\vec a = a_t\\,\\vec t + a_n\\,\\vec n \\qquad\\text{et}\\qquad a_n = \\frac{v^2}{R}\\]"
     }
   ],
   "course_refs": [],

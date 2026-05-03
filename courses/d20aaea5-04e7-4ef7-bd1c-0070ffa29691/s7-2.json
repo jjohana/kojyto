@@ -39,7 +39,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "T_{REV}=-Q_{ma}\\,(V''_5+V_o)\\qquad \\text{avec } Q_{ma}\\text{ le débit massique d’air, }V_o\\text{ la vitesse avion et }V''_5\\text{ la vitesse du jet inversé.}"
+      "latex": "T_{REV}=-Q_{ma}\\,(V''_5+V_o)\\qquad \\text{avec } Q_{ma}\\text{ le débit massique d’air, }V_o\\text{ la vitesse avion et }V''_5\\text{ la vitesse du jet inversé.}",
+      "rendered_latex": "\\[T_{REV}=-Q_{ma}\\,(V''_5+V_o)\\qquad \\text{avec } Q_{ma}\\text{ le débit massique d’air, }V_o\\text{ la vitesse avion et }V''_5\\text{ la vitesse du jet inversé.}\\]"
     }
   ],
   "course_refs": [],

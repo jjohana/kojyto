@@ -37,7 +37,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "v=\\omega R \\qquad a_n=\\frac{v^2}{R}=\\omega^2R"
+      "latex": "v=\\omega R \\qquad a_n=\\frac{v^2}{R}=\\omega^2R",
+      "rendered_latex": "\\[v=\\omega R \\qquad a_n=\\frac{v^2}{R}=\\omega^2R\\]"
     }
   ],
   "course_refs": [],

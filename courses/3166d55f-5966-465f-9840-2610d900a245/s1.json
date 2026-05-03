@@ -48,7 +48,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\vec r(t)=x(t)\\,\\vec i+y(t)\\,\\vec j+z(t)\\,\\vec k"
+      "latex": "\\vec r(t)=x(t)\\,\\vec i+y(t)\\,\\vec j+z(t)\\,\\vec k",
+      "rendered_latex": "\\[\\vec r(t)=x(t)\\,\\vec i+y(t)\\,\\vec j+z(t)\\,\\vec k\\]"
     },
     {
       "kind": "table",

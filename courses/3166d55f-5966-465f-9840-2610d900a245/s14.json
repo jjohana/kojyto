@@ -38,7 +38,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "v(t)=\\frac{dx}{dt}\\qquad a(t)=\\frac{dv}{dt}\\qquad \\Delta x=\\int_{t_1}^{t_2} v(t)\\,dt"
+      "latex": "v(t)=\\frac{dx}{dt}\\qquad a(t)=\\frac{dv}{dt}\\qquad \\Delta x=\\int_{t_1}^{t_2} v(t)\\,dt",
+      "rendered_latex": "\\[v(t)=\\frac{dx}{dt}\\qquad a(t)=\\frac{dv}{dt}\\qquad \\Delta x=\\int_{t_1}^{t_2} v(t)\\,dt\\]"
     }
   ],
   "course_refs": [],

@@ -118,7 +118,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "T = \\frac{Q_{me}}{Q_{mi}} = \\frac{\\text{flux froid}}{\\text{flux chaud}}"
+      "latex": "T = \\frac{Q_{me}}{Q_{mi}} = \\frac{\\text{flux froid}}{\\text{flux chaud}}",
+      "rendered_latex": "\\[T = \\frac{Q_{me}}{Q_{mi}} = \\frac{\\text{flux froid}}{\\text{flux chaud}}\\]"
     }
   ],
   "course_refs": [],

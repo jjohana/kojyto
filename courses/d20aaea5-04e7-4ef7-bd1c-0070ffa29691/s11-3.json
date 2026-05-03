@@ -79,7 +79,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "P_{\\text{frein}} = k\\,F_{\\text{pédale}}"
+      "latex": "P_{\\text{frein}} = k\\,F_{\\text{pédale}}",
+      "rendered_latex": "\\[P_{\\text{frein}} = k\\,F_{\\text{pédale}}\\]"
     }
   ],
   "course_refs": [],

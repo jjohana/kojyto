@@ -51,7 +51,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "T_{REV}=Q_{ma}(-V''_5-V_o)=-Q_{ma}(V''_5+V_o)"
+      "latex": "T_{REV}=Q_{ma}(-V''_5-V_o)=-Q_{ma}(V''_5+V_o)",
+      "rendered_latex": "\\[T_{REV}=Q_{ma}(-V''_5-V_o)=-Q_{ma}(V''_5+V_o)\\]"
     }
   ],
   "course_refs": [],

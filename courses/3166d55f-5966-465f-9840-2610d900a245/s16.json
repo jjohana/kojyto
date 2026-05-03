@@ -51,7 +51,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "v(t) \\approx \\frac{dx}{dt} \\qquad a(t) \\approx \\frac{dv}{dt}"
+      "latex": "v(t) \\approx \\frac{dx}{dt} \\qquad a(t) \\approx \\frac{dv}{dt}",
+      "rendered_latex": "\\[v(t) \\approx \\frac{dx}{dt} \\qquad a(t) \\approx \\frac{dv}{dt}\\]"
     }
   ],
   "course_refs": [],

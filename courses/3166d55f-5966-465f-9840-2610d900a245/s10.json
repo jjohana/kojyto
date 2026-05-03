@@ -38,7 +38,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\omega = \\dfrac{d\\theta}{dt} = \\text{cste},\\quad \\alpha = 0,\\quad v = \\omega R,\\quad a_t = \\alpha R = 0,\\quad a_n = \\omega^2 R = \\dfrac{v^2}{R}"
+      "latex": "\\omega = \\dfrac{d\\theta}{dt} = \\text{cste},\\quad \\alpha = 0,\\quad v = \\omega R,\\quad a_t = \\alpha R = 0,\\quad a_n = \\omega^2 R = \\dfrac{v^2}{R}",
+      "rendered_latex": "\\[\\omega = \\dfrac{d\\theta}{dt} = \\text{cste},\\quad \\alpha = 0,\\quad v = \\omega R,\\quad a_t = \\alpha R = 0,\\quad a_n = \\omega^2 R = \\dfrac{v^2}{R}\\]"
     }
   ],
   "course_refs": [],

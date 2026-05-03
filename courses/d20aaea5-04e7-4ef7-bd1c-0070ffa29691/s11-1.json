@@ -47,7 +47,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "M \\times N - A"
+      "latex": "M \\times N - A",
+      "rendered_latex": "\\[M \\times N - A\\]"
     },
     {
       "kind": "table",

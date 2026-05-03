@@ -51,7 +51,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "T_u = F = Q_{ma}(V_5 - V_0)"
+      "latex": "T_u = F = Q_{ma}(V_5 - V_0)",
+      "rendered_latex": "\\[T_u = F = Q_{ma}(V_5 - V_0)\\]"
     }
   ],
   "course_refs": [],

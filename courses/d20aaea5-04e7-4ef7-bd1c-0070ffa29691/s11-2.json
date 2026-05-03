@@ -39,7 +39,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "F_{\\text{frein}} \\le \\mu N"
+      "latex": "F_{\\text{frein}} \\le \\mu N",
+      "rendered_latex": "\\[F_{\\text{frein}} \\le \\mu N\\]"
     }
   ],
   "course_refs": [],

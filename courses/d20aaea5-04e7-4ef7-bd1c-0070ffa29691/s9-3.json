@@ -78,7 +78,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\begin{aligned}\ne &= d(\\text{axe roue auxiliaire},\\ \\text{axes roues principales})\\\\\nv &= d(\\text{train principal gauche},\\ \\text{train principal droit})\\\\\n\\alpha_g &= \\angle(\\text{verticale},\\ CG\\text{–centre roue})\\\\\n\\alpha_{ch} &= \\angle(\\text{axe du fût},\\ \\perp\\text{ à l’axe de symétrie})\\\\\n\\alpha_{ca} &= \\angle(\\text{plan de symétrie de la roue},\\ \\text{plan de symétrie avion})\\\\\np &= \\angle(\\text{axe de la roue principale},\\ \\text{plan de symétrie})\n\\end{aligned}"
+      "latex": "\\begin{aligned}\ne &= d(\\text{axe roue auxiliaire},\\ \\text{axes roues principales})\\\\\nv &= d(\\text{train principal gauche},\\ \\text{train principal droit})\\\\\n\\alpha_g &= \\angle(\\text{verticale},\\ CG\\text{–centre roue})\\\\\n\\alpha_{ch} &= \\angle(\\text{axe du fût},\\ \\perp\\text{ à l’axe de symétrie})\\\\\n\\alpha_{ca} &= \\angle(\\text{plan de symétrie de la roue},\\ \\text{plan de symétrie avion})\\\\\np &= \\angle(\\text{axe de la roue principale},\\ \\text{plan de symétrie})\n\\end{aligned}",
+      "rendered_latex": "\\begin{aligned}\ne &= d(\\text{axe roue auxiliaire},\\ \\text{axes roues principales})\\\\\nv &= d(\\text{train principal gauche},\\ \\text{train principal droit})\\\\\n\\alpha_g &= \\angle(\\text{verticale},\\ CG\\text{–centre roue})\\\\\n\\alpha_{ch} &= \\angle(\\text{axe du fût},\\ \\perp\\text{ à l’axe de symétrie})\\\\\n\\alpha_{ca} &= \\angle(\\text{plan de symétrie de la roue},\\ \\text{plan de symétrie avion})\\\\\np &= \\angle(\\text{axe de la roue principale},\\ \\text{plan de symétrie})\n\\end{aligned}"
     }
   ],
   "course_refs": [],

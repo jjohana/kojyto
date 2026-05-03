@@ -90,7 +90,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "Ch = Q_{mc} \\times 3600"
+      "latex": "Ch = Q_{mc} \\times 3600",
+      "rendered_latex": "\\[Ch = Q_{mc} \\times 3600\\]"
     }
   ],
   "course_refs": [],

@@ -37,7 +37,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\begin{aligned}\nT_u &= Q_{ma}(V_5 - V_0) + Q_{mc}V_5 \\\\\nT_u &= Q_{ma,\\,froid}(V_5'' - V_0) + Q_{ma,\\,chaud}(V_5' - V_0) + Q_{mc}V_5\n\\end{aligned}"
+      "latex": "\\begin{aligned}\nT_u &= Q_{ma}(V_5 - V_0) + Q_{mc}V_5 \\\\\nT_u &= Q_{ma,\\,froid}(V_5'' - V_0) + Q_{ma,\\,chaud}(V_5' - V_0) + Q_{mc}V_5\n\\end{aligned}",
+      "rendered_latex": "\\begin{aligned}\nT_u &= Q_{ma}(V_5 - V_0) + Q_{mc}V_5 \\\\\nT_u &= Q_{ma,\\,froid}(V_5'' - V_0) + Q_{ma,\\,chaud}(V_5' - V_0) + Q_{mc}V_5\n\\end{aligned}"
     }
   ],
   "course_refs": [],

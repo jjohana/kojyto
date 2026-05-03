@@ -38,7 +38,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "Ch = Q_{mc}\\times 3600 \\qquad ; \\qquad Csp = \\dfrac{Tu}{Ch} \\; (\\text{écriture du support})"
+      "latex": "Ch = Q_{mc}\\times 3600 \\qquad ; \\qquad Csp = \\dfrac{Tu}{Ch} \\; (\\text{écriture du support})",
+      "rendered_latex": "\\[Ch = Q_{mc}\\times 3600 \\qquad ; \\qquad Csp = \\dfrac{Tu}{Ch} \\; (\\text{écriture du support})\\]"
     }
   ],
   "course_refs": [],

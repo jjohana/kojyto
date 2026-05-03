@@ -73,7 +73,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\begin{aligned}\nv &= \\frac{dx}{dt} \\\\\na &= \\frac{dv}{dt} = \\frac{d^2x}{dt^2} \\\\\nx &= x_0 + v_0 t + \\tfrac12 a t^2 \\\\\nv^2 - v_0^2 &= 2a(x - x_0) \\\\\nv &= \\omega R \\\\\na_t &= \\alpha R \\\\\na_n &= \\omega^2 R = \\frac{v^2}{R} \\\\\n\\frac{dy}{dx} &= \\frac{dy/dt}{dx/dt}\n\\end{aligned}"
+      "latex": "\\begin{aligned}\nv &= \\frac{dx}{dt} \\\\\na &= \\frac{dv}{dt} = \\frac{d^2x}{dt^2} \\\\\nx &= x_0 + v_0 t + \\tfrac12 a t^2 \\\\\nv^2 - v_0^2 &= 2a(x - x_0) \\\\\nv &= \\omega R \\\\\na_t &= \\alpha R \\\\\na_n &= \\omega^2 R = \\frac{v^2}{R} \\\\\n\\frac{dy}{dx} &= \\frac{dy/dt}{dx/dt}\n\\end{aligned}",
+      "rendered_latex": "\\begin{aligned}\nv &= \\frac{dx}{dt} \\\\\na &= \\frac{dv}{dt} = \\frac{d^2x}{dt^2} \\\\\nx &= x_0 + v_0 t + \\tfrac12 a t^2 \\\\\nv^2 - v_0^2 &= 2a(x - x_0) \\\\\nv &= \\omega R \\\\\na_t &= \\alpha R \\\\\na_n &= \\omega^2 R = \\frac{v^2}{R} \\\\\n\\frac{dy}{dx} &= \\frac{dy/dt}{dx/dt}\n\\end{aligned}"
     }
   ],
   "course_refs": [],

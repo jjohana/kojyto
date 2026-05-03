@@ -37,7 +37,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "\\theta\\ \\text{en rad} \\qquad \\omega=\\frac{d\\theta}{dt}\\ \\text{(rad/s)} \\qquad \\alpha=\\frac{d\\omega}{dt}\\ \\text{(rad/s}^2\\text{)}\\\\[4pt] v=\\omega R \\qquad a_t=\\alpha R \\qquad a_n=\\omega^2R=\\frac{v^2}{R}"
+      "latex": "\\theta\\ \\text{en rad} \\qquad \\omega=\\frac{d\\theta}{dt}\\ \\text{(rad/s)} \\qquad \\alpha=\\frac{d\\omega}{dt}\\ \\text{(rad/s}^2\\text{)}\\\\[4pt] v=\\omega R \\qquad a_t=\\alpha R \\qquad a_n=\\omega^2R=\\frac{v^2}{R}",
+      "rendered_latex": "\\[\\begin{gathered}\\theta\\ \\text{en rad} \\qquad \\omega=\\frac{d\\theta}{dt}\\ \\text{(rad/s)} \\qquad \\alpha=\\frac{d\\omega}{dt}\\ \\text{(rad/s}^2\\text{)}\\\\[4pt] v=\\omega R \\qquad a_t=\\alpha R \\qquad a_n=\\omega^2R=\\frac{v^2}{R}\\end{gathered}\\]"
     }
   ],
   "course_refs": [],

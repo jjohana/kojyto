@@ -1,0 +1,115 @@
+{
+  "slide_id": "s22",
+  "subpart_id": "s22",
+  "title": "Rémunération et parcours professionnels",
+  "objective": "Repérer les éléments de rémunération et les voies d’évolution de carrière dans le secteur aéronautique.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s22-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repères de rémunération par métier",
+      "text": "Montants visibles, donnés comme des ordres de grandeur et arrondis.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Métier",
+          "Début de carrière",
+          "Après plusieurs années",
+          "Évolution typique"
+        ],
+        [
+          "Technicien / technicienne de maintenance aéronautique",
+          "26 000–30 000 €",
+          "35 000–45 000 €",
+          "Technicien / agent de maintenance → chef d’équipe → responsable maintenance"
+        ],
+        [
+          "Ingénieur aéronautique",
+          "35 000–45 000 €",
+          "40 000–70 000 €",
+          "Ingénieur junior → fonctions d’expertise ou de responsabilité"
+        ],
+        [
+          "Pilote de ligne",
+          "30 000–45 000 €",
+          "50 000–100 000 €",
+          "Premier officier → capitaine → instructeur / commandant de flotte"
+        ],
+        [
+          "Contrôleur aérien",
+          "40 000–50 000 €",
+          "70 000–100 000 €",
+          "Progression vers l’encadrement, l’inspection ou le chef de tour"
+        ],
+        [
+          "Opérateur en production aéronautique",
+          "25 000–30 000 €",
+          "40 000–60 000 €",
+          "Superviseur ou formateur selon l’expérience et les responsabilités"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Ce qui fait évoluer la rémunération",
+      "text": null,
+      "bullets": [
+        "La rémunération combine **salaire fixe**, **primes** et **avantages en nature** ; l’ensemble varie selon le poste et le statut.",
+        "La progression dépend surtout de l’**expérience**, des **responsabilités** et de l’**ancienneté**.",
+        "Repère externe utile : des fiches métier de l’**Onisep** situent les débuts autour de 1 823 € brut/mois en maintenance, 2 500 € en ingénierie maintenance, 2 552 € en contrôle aérien et 2 100 € en pilotage de ligne."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Mécanicien / Mécanicienne d'entretien d'avion — Onisep",
+      "locator": "Salaire débutant et évolutions",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/mecanicien-mecanicienne-d-entretien-d-avion"
+    },
+    {
+      "source_type": "web",
+      "label": "Ingénieur / Ingénieure maintenance aéronautique — Onisep",
+      "locator": "Salaire débutant et évolutions",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/ingenieur-ingenieure-maintenance-aeronautique"
+    },
+    {
+      "source_type": "web",
+      "label": "Contrôleur aérien / Contrôleuse aérienne — Onisep",
+      "locator": "Salaire débutant et évolutions",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/controleur-aerien-controleuse-aerienne"
+    },
+    {
+      "source_type": "web",
+      "label": "Pilote de ligne — Onisep",
+      "locator": "Salaire débutant et évolutions",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/pilote-de-ligne"
+    },
+    {
+      "source_type": "web",
+      "label": "Offre « Agent de production » dans un contexte aéronautique — Aéroemploiformation",
+      "locator": "research",
+      "url": "https://www.aeroemploiformation.com/Emploi-Agent-De-Production"
+    }
+  ],
+  "course_reference_note": "La grille met en regard plusieurs métiers aéronautiques et deux niveaux de rémunération. Les parcours montrent une montée progressive vers davantage de responsabilités.",
+  "teacher_notes": "Faire lire la table de gauche à droite : métier, salaire d’entrée, salaire après quelques années, puis trajectoire d’évolution. Insister sur les composantes de la rémunération et sur le lien entre expérience, responsabilités et ancienneté."
+}

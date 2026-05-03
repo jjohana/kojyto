@@ -487,6 +487,29 @@ html[data-embed="1"] body::after {
   line-height: 1.55;
 }
 
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
+}
+
 .block {
   position: relative;
   grid-column: span 12;
@@ -1583,7 +1606,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S1-1</strong>
           <span>QCM - Génération AC en vol : panorama des sources</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1599,7 +1622,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S1-2</strong>
           <span>QCM - IDG : implantation sur moteur et liaison mécanique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1615,7 +1638,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S1-3</strong>
           <span>QCM - GCU : contrôle et surveillance des IDG</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1631,7 +1654,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S1-4</strong>
           <span>QCM - APU GEN et répartition du contrôle GCU/GAPCU</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1647,7 +1670,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1663,7 +1686,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-2</strong>
           <span>QCM - Panneau de puissance externe et réceptacles</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1679,7 +1702,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-3</strong>
           <span>QCM - Raccordement au AC SYSTEM et implantation près du NLG</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1695,7 +1718,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S3-1</strong>
           <span>QCM - Génération de secours : logique de bascule</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1711,7 +1734,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S3-2</strong>
           <span>QCM - Batteries et STATIC INVERTER</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1727,7 +1750,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S3-3</strong>
           <span>QCM - EMER GEN et EMER GEN GCU</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1743,7 +1766,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S3-4</strong>
           <span>QCM - Réseau AC essentiel et indisponibilité des sources normales</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1759,7 +1782,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S4-1</strong>
           <span>QCM - Architecture DC : vue d’ensemble</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1775,7 +1798,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S4-2</strong>
           <span>QCM - TR 1, TR 2, TR ESS et APU TR</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1791,7 +1814,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S4-3</strong>
           <span>QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1807,7 +1830,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S4-4</strong>
           <span>QCM - APU BATTERY et alimentation de l’APU STARTER</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1823,7 +1846,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S4-5</strong>
           <span>QCM - Blocs de contrôle et interfaces avec le DC SYSTEM</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1839,7 +1862,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S5-1</strong>
           <span>QCM - ECAM ELEC AC : lecture générale de la page</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1855,7 +1878,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S5-2</strong>
           <span>QCM - Surveillance des sources : GEN 1, GEN 2 et APU GEN</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1871,7 +1894,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S5-3</strong>
           <span>QCM - Surveillance des IDG et des paramètres affichés</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1887,7 +1910,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S5-4</strong>
           <span>QCM - Panneau AC GENERATION et commandes P/BSW</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1903,7 +1926,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S5-5</strong>
           <span>QCM - Panneau ELEC : sélection des sources et bus</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1919,7 +1942,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S5-6</strong>
           <span>QCM - Panneau EMER ELEC PWR : test et commande de secours</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1935,7 +1958,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S6-1</strong>
           <span>QCM - Ground Service Network : principe de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1951,7 +1974,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S6-2</strong>
           <span>QCM - MAINT BUS : alimentation du réseau de service</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1967,7 +1990,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S6-3</strong>
           <span>QCM - Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1983,7 +2006,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S7-1</strong>
           <span>QCM - ECMU : gestion des contacteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1999,7 +2022,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S7-2</strong>
           <span>QCM - CBMU : surveillance des C/B et des RCCBs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -2015,7 +2038,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S7-3</strong>
           <span>QCM - Page ECAM C/B : signalement des déclenchements</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -2031,7 +2054,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S7-4</strong>
           <span>QCM - AC & DC CONTACTORS : distribution vers les charges</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -2047,7 +2070,7 @@ html[data-embed="1"] .review-card {
           <strong>QCM S7-5</strong>
           <span>QCM - Lien entre supervision, contacteurs et load distribution</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -2055,7 +2078,7 @@ html[data-embed="1"] .review-card {
           <strong>Validation finale</strong>
           <span>Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion</span>
           
-          <span>25 questions tirees au sort sur 100 - correction finale</span>
+          <span>25 questions tirées au sort sur 150 - correction finale</span>
           
         </a>
         
@@ -2099,6 +2122,8 @@ html[data-embed="1"] .review-card {
             
           </div>
         </section>
+
+        
 
         
         <section class="visual-summary-panel">

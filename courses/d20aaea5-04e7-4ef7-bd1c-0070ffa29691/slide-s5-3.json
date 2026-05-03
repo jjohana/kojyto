@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S5-3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S5-3_Q1",
+      "prompt": "Quelle affirmation décrit correctement l’effet de la section sur la vitesse en régime subsonique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quand \\(M<1\\), une diminution de section entraîne une diminution de vitesse.",
+          "is_correct": false,
+          "explanation": "Faux : en subsonique, la section et la vitesse varient en sens opposé ; la contraction accélère le flux."
+        },
+        {
+          "id": "B",
+          "text": "Quand \\(M<1\\), une augmentation de section entraîne une augmentation de vitesse.",
+          "is_correct": false,
+          "explanation": "Faux : en subsonique, un élargissement ralentit l’écoulement, il ne l’accélère pas."
+        },
+        {
+          "id": "C",
+          "text": "La relation \\(\\mathrm{d}S/S = \\mathrm{d}V/V\\,(M^2-1)\\) est valable uniquement si \\(M>1\\).",
+          "is_correct": false,
+          "explanation": "Faux : la relation est utilisée pour interpréter la variation de section et de vitesse, notamment dans le domaine subsonique indiqué ici."
+        },
+        {
+          "id": "D",
+          "text": "Quand \\(M<1\\), une diminution de section entraîne une augmentation de vitesse.",
+          "is_correct": true,
+          "explanation": "Vrai : la relation \\(\\mathrm{d}S/S = \\mathrm{d}V/V\\,(M^2-1)\\) donne, pour \\(M<1\\), un facteur négatif ; une baisse de section accélère donc l’écoulement."
+        },
+        {
+          "id": "E",
+          "text": "Quand \\(M<1\\), la vitesse est indépendante de la géométrie de la tuyère.",
+          "is_correct": false,
+          "explanation": "Faux : la géométrie agit directement sur la vitesse ; la variation de section impose une variation de vitesse."
+        }
+      ],
+      "coverage_label": "variation de vitesse en régime subsonique",
+      "learning_objective": "Interpréter l’effet d’une variation de section sur la vitesse d’un écoulement subsonique.",
+      "correction_summary": "Il faut repérer le signe de la variation quand \\(M<1\\) : la contraction accélère le fluide et l’élargissement le ralentit. L’erreur fréquente consiste à inverser le sens des variations ou à croire que la formule ne sert qu’en supersonique.",
+      "course_clarification": "En subsonique, une tuyère convergente accélère l’écoulement. La section décroît vers l’aval et la vitesse augmente ; l’effet inverse ralentit le flux.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-3_Q2",
+      "prompt": "Quelle affirmation définit correctement le rapport critique et la tuyère adaptée ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le rapport critique correspond à \\(P_5/Pt_4\\) et vaut toujours 1.",
+          "is_correct": false,
+          "explanation": "Faux : le sens du rapport est inversé ici, et la valeur indiquée pour le rapport critique n’est pas 1."
+        },
+        {
+          "id": "B",
+          "text": "Si \\(M_5 = 1\\), alors \\(R_c = Pt_4/P_5 \\approx 2\\) et \\(P_5 = P_\\infty\\) : la tuyère est dite adaptée.",
+          "is_correct": true,
+          "explanation": "Vrai : le rapport critique est associé à l’écoulement sonique à la sortie ; dans ce cas, la pression de sortie coïncide avec la pression ambiante et l’adaptation est obtenue."
+        },
+        {
+          "id": "C",
+          "text": "Une tuyère adaptée impose toujours \\(M_5 < 1\\).",
+          "is_correct": false,
+          "explanation": "Faux : l’adaptation mentionnée est liée au cas où \\(M_5 = 1\\), pas à un régime subsonique à la sortie."
+        },
+        {
+          "id": "D",
+          "text": "Quand \\(P_5 > P_\\infty\\), la tuyère est adaptée.",
+          "is_correct": false,
+          "explanation": "Faux : l’adaptation correspond à l’égalité entre pression de sortie et pression ambiante, pas à une surpression à la sortie."
+        },
+        {
+          "id": "E",
+          "text": "Le rapport \\(Pt_4/P_5\\) décrit seulement la température de sortie de la tuyère.",
+          "is_correct": false,
+          "explanation": "Faux : il s’agit d’un rapport de pressions, utilisé pour caractériser la détente et l’adaptation de la tuyère."
+        }
+      ],
+      "coverage_label": "rapport critique et tuyère adaptée",
+      "learning_objective": "Identifier le rapport critique et reconnaître la condition d’une tuyère adaptée.",
+      "correction_summary": "La bonne lecture relie trois éléments : \\(M_5 = 1\\), \\(Pt_4/P_5\\) et \\(P_5 = P_\\infty\\). La confusion fréquente consiste à permuter les pressions ou à oublier que l’adaptation correspond à l’égalité avec l’ambiance.",
+      "course_clarification": "Le rapport critique compare la pression totale en sortie de turbine à la pression statique en sortie de tuyère. Quand la sortie est sonique, la tuyère est adaptée si la pression de sortie rejoint la pression extérieure.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-3_Q3",
+      "prompt": "Quelle affirmation est correcte pour une tuyère convergente à géométrie variable en régime subsonique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "En subsonique, si \\(S\\uparrow\\), alors \\(V\\downarrow\\).",
+          "is_correct": true,
+          "explanation": "Vrai : en régime subsonique, la section et la vitesse évoluent en sens inverse ; l’élargissement ralentit le flux."
+        },
+        {
+          "id": "B",
+          "text": "En subsonique, si \\(S\\uparrow\\), alors \\(V\\uparrow\\).",
+          "is_correct": false,
+          "explanation": "Faux : cette évolution est contraire au comportement subsonique indiqué ; une section plus grande ne provoque pas une accélération."
+        },
+        {
+          "id": "C",
+          "text": "En subsonique, si \\(S\\downarrow\\), alors \\(V\\downarrow\\).",
+          "is_correct": false,
+          "explanation": "Faux : la contraction accélère le flux en subsonique."
+        },
+        {
+          "id": "D",
+          "text": "En supersonique, si \\(S\\uparrow\\), alors \\(V\\downarrow\\).",
+          "is_correct": false,
+          "explanation": "Faux : en supersonique, la tendance est inversée par rapport au subsonique ; l’augmentation de section peut accélérer l’écoulement."
+        },
+        {
+          "id": "E",
+          "text": "En subsonique, la vitesse ne dépend pas de la section.",
+          "is_correct": false,
+          "explanation": "Faux : la variation de section gouverne directement la variation de vitesse dans une tuyère."
+        }
+      ],
+      "coverage_label": "tuyère convergente à géométrie variable",
+      "learning_objective": "Distinguer le lien section-vitesse en subsonique dans une tuyère à géométrie variable.",
+      "correction_summary": "Il faut associer le bon régime au bon sens de variation. En subsonique, un élargissement freine l’écoulement et une contraction l’accélère. La confusion classique consiste à appliquer le comportement supersonique au mauvais domaine.",
+      "course_clarification": "Pour une tuyère à géométrie variable, le subsonique suit la logique habituelle : section plus grande, vitesse plus faible ; section plus petite, vitesse plus forte.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-3_Q4",
+      "prompt": "Quelle affirmation est correcte pour une tuyère supersonique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dans la partie divergente d’une tuyère supersonique, \\(M<1\\).",
+          "is_correct": false,
+          "explanation": "Faux : le divergent est associé au domaine supersonique, pas au domaine subsonique."
+        },
+        {
+          "id": "B",
+          "text": "Au col d’une tuyère supersonique, \\(M>1\\).",
+          "is_correct": false,
+          "explanation": "Faux : le col correspond au passage sonique, donc \\(M=1\\)."
+        },
+        {
+          "id": "C",
+          "text": "Dans le convergent d’une tuyère supersonique, \\(M>1\\) dès l’entrée.",
+          "is_correct": false,
+          "explanation": "Faux : le convergent est indiqué comme subsonique avant le col."
+        },
+        {
+          "id": "D",
+          "text": "Une tuyère supersonique ne comporte pas de col.",
+          "is_correct": false,
+          "explanation": "Faux : elle est formée d’un convergent, d’un col et d’un divergent."
+        },
+        {
+          "id": "E",
+          "text": "Dans la partie divergente d’une tuyère supersonique, \\(M>1\\).",
+          "is_correct": true,
+          "explanation": "Vrai : la partie divergente est précisément celle où l’écoulement devient supersonique ; le Mach y est supérieur à 1."
+        }
+      ],
+      "coverage_label": "tuyère supersonique et distribution du Mach",
+      "learning_objective": "Reconnaître les zones de Mach dans une tuyère convergente-divergente.",
+      "correction_summary": "Il faut associer chaque zone à son régime : convergent subsonique, col sonique, divergent supersonique. L’erreur fréquente est d’oublier le rôle du col ou d’inverser les régimes dans les deux parties de la tuyère.",
+      "course_clarification": "Dans une tuyère convergente-divergente, le col fixe le passage à \\(M=1\\). L’écoulement est subsonique avant le col et supersonique après.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-3_Q5",
+      "prompt": "Quelle affirmation est correcte sur le réglage d’une tuyère supersonique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le réglage du col dépend uniquement de la longueur du fuselage.",
+          "is_correct": false,
+          "explanation": "Faux : la géométrie du col est liée aux conditions d’écoulement, pas à la longueur de la cellule."
+        },
+        {
+          "id": "B",
+          "text": "Le divergent sert à rendre l’écoulement subsonique au-dessus du col.",
+          "is_correct": false,
+          "explanation": "Faux : le divergent permet au contraire l’adaptation au Mach de vol en zone supersonique."
+        },
+        {
+          "id": "C",
+          "text": "Le réglage du col dépend de la pression \\(Pt_4\\) et du régime réacteur.",
+          "is_correct": true,
+          "explanation": "Vrai : la pression en sortie turbine et l’état de fonctionnement du réacteur fixent le réglage du col."
+        },
+        {
+          "id": "D",
+          "text": "Le col n’intervient que lorsque la tuyère est à section fixe.",
+          "is_correct": false,
+          "explanation": "Faux : le col est un élément essentiel de la tuyère supersonique et son réglage dépend justement des conditions de fonctionnement."
+        },
+        {
+          "id": "E",
+          "text": "La pression \\(Pt_4\\) n’a aucun effet sur la géométrie de la tuyère.",
+          "is_correct": false,
+          "explanation": "Faux : la pression \\(Pt_4\\) intervient dans le réglage du col, donc elle influence directement le fonctionnement de la tuyère."
+        }
+      ],
+      "coverage_label": "réglage du col et adaptation au Mach de vol",
+      "learning_objective": "Relier le réglage du col aux conditions de fonctionnement et au rôle du divergent.",
+      "correction_summary": "Le raisonnement attendu consiste à relier le col aux paramètres de fonctionnement, puis à distinguer son rôle de celui du divergent. La confusion fréquente est de croire que le divergent sert à rendre l’écoulement subsonique, alors qu’il permet l’adaptation en supersonique.",
+      "course_clarification": "Le col règle le passage à \\(M=1\\) selon \\(Pt_4\\) et le régime du réacteur. Ensuite, le divergent ajuste l’écoulement supersonique pour s’adapter au Mach de vol.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S5",
+  "anchor_slide_id": "S5-3",
+  "question_count_target": 5,
+  "title": "QCM - Tuyère convergente, rapport critique et supersonique"
+}

@@ -1,0 +1,119 @@
+{
+  "slide_id": "S3-4",
+  "subpart_id": "S3",
+  "title": "Lecture du diagramme d’écoulement des gaz",
+  "objective": "Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s3-4-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Ce que montre le diagramme du CFM56-5",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Zone du trajet",
+          "Température totale",
+          "Pression totale",
+          "Vitesse",
+          "Lecture"
+        ],
+        [
+          "Entrée / compression",
+          "augmente",
+          "augmente fortement",
+          "varie peu à modérément",
+          "l’air se charge en énergie avant la combustion"
+        ],
+        [
+          "Chambre de combustion",
+          "pic très élevé",
+          "reste élevée puis commence à baisser",
+          "faiblement modifiée",
+          "apport thermique maximal, sans conversion immédiate en vitesse"
+        ],
+        [
+          "Turbine / tuyère du flux primaire",
+          "baisse",
+          "chute nettement",
+          "augmente fortement",
+          "l’énergie est transformée en vitesse d’éjection"
+        ],
+        [
+          "Flux secondaire",
+          "reste basse",
+          "reste proche de l’ambiante",
+          "augmente vers la sortie",
+          "air de dérivation plus froid, contribution par accélération"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Points de lecture à retenir",
+      "text": null,
+      "bullets": [
+        "\\(T_t\\) désigne la **température totale**, \\(p_t\\) la **pression totale** et \\(V\\) la **vitesse** ; la lecture suit le trajet des gaz de l’entrée vers la sortie.",
+        "Le **flux primaire** est le plus sollicité : les variations de température et de pression sont fortes, puis la détente dans la turbine et la tuyère transforme une partie de l’énergie en vitesse.",
+        "Le **flux secondaire** reste beaucoup plus stable thermiquement ; il se distingue surtout par l’accélération finale du flux d’air de dérivation.",
+        "Repère utile : le **CFM56-5** appartient à la famille **CFM56** et équipe l’**A320ceo** ; l’exemple du schéma correspond donc à un turboréacteur double flux."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation de lecture",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\text{compression} \\Rightarrow T_t \\uparrow,\\ p_t \\uparrow \\quad;\\quad \\text{détente} \\Rightarrow p_t \\downarrow,\\ V \\uparrow"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "CFM56-5B & CFM56-7B — CFM International",
+      "locator": "Présentation de la famille CFM56-5B",
+      "url": "https://www.cfmaeroengines.com/cfm56/CFM56-5B-CFM56-7B"
+    },
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook — FAA",
+      "locator": "Chapitre sur les turbofan engines",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Turbofan Engine Malfunction Recognition - FAA",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/aircraft/air_cert/design_approvals/engine_prop/engine_malf_report.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "CFM56-5B & CFM56-7B - CFM International",
+      "locator": "research",
+      "url": "https://www.cfmaeroengines.com/cfm56/CFM56-5B-CFM56-7B?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Le diagramme de la page 7 superpose température, pression totale et vitesse pour les deux flux. La coupe inférieure relie ces variations au trajet des gaz dans le CFM56-5.",
+  "teacher_notes": "Faire lire le graphe dans l’ordre : entrée, compression, combustion, détente, sortie. Faire comparer le cœur moteur et la dérivation à partir des tendances de température, de pression totale et de vitesse."
+}

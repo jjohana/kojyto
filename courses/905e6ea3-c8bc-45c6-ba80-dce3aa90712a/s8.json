@@ -1,0 +1,88 @@
+{
+  "slide_id": "s8",
+  "subpart_id": "s8",
+  "title": "Aiguilleur du ciel",
+  "objective": "Comprendre le rôle de contrôle et de coordination du trafic aérien.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s8-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Missions principales",
+      "text": "L’aiguilleur du ciel, ou **contrôleur de trafic aérien**, assure la **gestion**, la **surveillance** et le **contrôle** de la navigation aérienne.\n\nIl coordonne les **décollages** et les **atterrissages**, puis suit le **trafic en vol** pour maintenir des trajectoires sûres et organisées.\n\nIl transmet aux pilotes, en temps réel, des instructions précises sur la **trajectoire**, la **vitesse** et l’**altitude**.",
+      "bullets": [
+        "La mission repose sur une coordination continue entre plusieurs avions et les phases critiques du vol.",
+        "Les consignes doivent être immédiates, claires et adaptées à la situation du moment.",
+        "Le rôle combine surveillance, décision et communication opérationnelle."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Poste de travail et qualités attendues",
+      "text": "Le poste se situe dans une **tour de contrôle** ou dans un **centre spécialisé** avec des écrans de surveillance et de navigation.\n\nLe travail exige une **communication** excellente, une **prise de décision rapide** sous stress et une **concentration constante**.\n\nLes repères externes confirment un environnement très rythmé, avec échanges radio continus et forte attention aux détails.",
+      "bullets": [
+        "Le contrôleur s’appuie sur des informations visuelles et radar pour suivre le trafic.",
+        "Il doit garder une vigilance stable malgré la pression et les changements rapides de situation.",
+        "La coordination avec les pilotes repose sur des messages brefs, précis et compréhensibles."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Air Traffic Controllers — Occupational Outlook Handbook",
+      "locator": "Lieu de travail et qualités attendues",
+      "url": "https://www.bls.gov/ooh/transportation-and-material-moving/air-traffic-controllers.htm"
+    },
+    {
+      "source_type": "web",
+      "label": "How Air Traffic Works — Federal Aviation Administration",
+      "locator": "Communication et coordination avec les pilotes",
+      "url": "https://www.faa.gov/podcasts/the-air-up-there/how-air-traffic-works"
+    },
+    {
+      "source_type": "web",
+      "label": "Traffic Management Overview — Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/nextgen/programs/weather/tfm_support/overview"
+    },
+    {
+      "source_type": "web",
+      "label": "The Tower Controller — SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/tower-controller"
+    },
+    {
+      "source_type": "web",
+      "label": "Stress in Air Traffic Control — SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/stress-air-traffic-control"
+    },
+    {
+      "source_type": "web",
+      "label": "Air Traffic Controllers : Occupational Outlook Handbook: : U.S. Bureau of Labor Statistics",
+      "locator": "research",
+      "url": "https://www.bls.gov/ooh/transportation-and-material-moving/air-traffic-controllers.htm?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La page présente le contrôleur aérien comme un acteur de gestion et de surveillance du trafic. Elle situe son activité en tour de contrôle ou en centre spécialisé, avec des qualités comportementales fortement sollicitées.",
+  "teacher_notes": "Faire repérer séparément les **missions** et les **qualités**. Insister sur le lien entre vigilance, communication et prise de décision rapide dans un environnement sous pression."
+}

@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s19",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s19_q1",
+      "prompt": "Concernant la sécurité en entreprise aéronautique, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle concerne uniquement la qualité des pièces produites.",
+          "is_correct": false,
+          "explanation": "La qualité et la sécurité sont liées, mais la sécurité ne se limite pas au contrôle des pièces ; elle englobe aussi les personnes, les opérations et les installations."
+        },
+        {
+          "id": "B",
+          "text": "Elle ne s’applique qu’aux situations d’urgence.",
+          "is_correct": false,
+          "explanation": "La sécurité intervient aussi en amont, par la prévention, les procédures et la détection des risques."
+        },
+        {
+          "id": "C",
+          "text": "Elle exclut les incidents sans gravité dès lors qu’il n’y a pas d’arrêt de travail.",
+          "is_correct": false,
+          "explanation": "Un incident même sans blessure peut révéler un danger et doit être pris en compte pour éviter un accident futur."
+        },
+        {
+          "id": "D",
+          "text": "Elle vise à prévenir les accidents et incidents pouvant toucher le personnel et les aéronefs.",
+          "is_correct": true,
+          "explanation": "La sécurité a bien un objectif préventif : éviter les événements qui peuvent blesser les personnes ou endommager les aéronefs."
+        },
+        {
+          "id": "E",
+          "text": "Elle ne concerne pas les aéronefs en exploitation.",
+          "is_correct": false,
+          "explanation": "La formulation du support inclut explicitement les aéronefs parmi les éléments à protéger."
+        }
+      ],
+      "coverage_label": "Sécurité en entreprise aéronautique",
+      "learning_objective": "Identifier la finalité générale de la sécurité en milieu aéronautique.",
+      "correction_summary": "La bonne réponse est celle qui relie la sécurité à la prévention des accidents et incidents touchant les personnes et les aéronefs. Le piège consiste à réduire la sécurité à la seule qualité des produits ou aux seules urgences.",
+      "course_clarification": "La sécurité couvre la prévention des événements dangereux avant qu’ils ne surviennent. Elle s’applique aux ateliers, aux opérations et aux aéronefs, avec une logique de protection globale.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s19_q2",
+      "prompt": "Parmi les risques majeurs suivants, lequel correspond bien à la sécurité en entreprise aéronautique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La baisse de productivité liée à l’organisation des équipes.",
+          "is_correct": false,
+          "explanation": "C’est un enjeu d’organisation, mais ce n’est pas un risque majeur de sécurité tel qu’il est défini ici."
+        },
+        {
+          "id": "B",
+          "text": "Les incendies ou explosions dans les ateliers ou hangars.",
+          "is_correct": true,
+          "explanation": "Les ateliers et hangars concentrent des sources d’énergie, de carburant ou de produits inflammables, ce qui en fait un risque majeur."
+        },
+        {
+          "id": "C",
+          "text": "La variation du prix des matières premières.",
+          "is_correct": false,
+          "explanation": "C’est un risque économique, pas un danger direct pour le personnel ou les aéronefs."
+        },
+        {
+          "id": "D",
+          "text": "Le retard de livraison d’une commande client.",
+          "is_correct": false,
+          "explanation": "Ce problème peut perturber l’activité, mais il ne correspond pas à un risque de sécurité au sens du support."
+        },
+        {
+          "id": "E",
+          "text": "Le manque de communication commerciale avec les clients.",
+          "is_correct": false,
+          "explanation": "C’est une difficulté relationnelle ou commerciale, sans lien direct avec les risques de sécurité listés."
+        }
+      ],
+      "coverage_label": "Risques majeurs",
+      "learning_objective": "Reconnaître un risque majeur de sécurité en milieu aéronautique.",
+      "correction_summary": "L’incendie ou l’explosion fait partie des risques majeurs explicitement cités. Les autres propositions relèvent d’enjeux économiques, commerciaux ou organisationnels, pas de la sécurité opérationnelle.",
+      "course_clarification": "Un risque majeur est un danger susceptible de provoquer un accident grave. Dans les ateliers et hangars, le feu et l’explosion demandent une vigilance particulière et des procédures adaptées.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s19_q3",
+      "prompt": "À propos des risques majeurs liés à la sécurité, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les chutes de hauteur ou les glissades font partie des risques majeurs.",
+          "is_correct": true,
+          "explanation": "Ces accidents figurent explicitement parmi les risques majeurs mentionnés et peuvent entraîner des blessures graves."
+        },
+        {
+          "id": "B",
+          "text": "Les chutes de hauteur sont uniquement un risque administratif.",
+          "is_correct": false,
+          "explanation": "Une chute de hauteur est un danger physique réel, pas un problème administratif."
+        },
+        {
+          "id": "C",
+          "text": "Les glissades ne posent aucun danger si le sol est propre visiblement.",
+          "is_correct": false,
+          "explanation": "Même avec un sol apparemment propre, une glissade peut se produire à cause d’un revêtement, d’un liquide ou d’une mauvaise chaussure."
+        },
+        {
+          "id": "D",
+          "text": "Les risques de hauteur concernent seulement le transport aérien en vol.",
+          "is_correct": false,
+          "explanation": "Ici, il s’agit du travail au sol, en atelier ou sur structure, pas du vol de l’aéronef."
+        },
+        {
+          "id": "E",
+          "text": "Les chutes de hauteur sont classées comme des non-conformités de pièces.",
+          "is_correct": false,
+          "explanation": "Une chute est un accident de sécurité ; une non-conformité concerne une pièce, un procédé ou une règle non respectée."
+        }
+      ],
+      "coverage_label": "Risques majeurs",
+      "learning_objective": "Distinguer les risques physiques majeurs cités dans le secteur aéronautique.",
+      "correction_summary": "Les chutes de hauteur et les glissades sont bien des risques majeurs de sécurité. Le piège est de les confondre avec des problèmes de qualité ou de maintenance des pièces.",
+      "course_clarification": "Un risque de chute apparaît dès qu’une personne travaille en hauteur ou circule sur une surface dangereuse. La prévention passe par l’organisation du poste, la vigilance et le respect des consignes.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s19_q4",
+      "prompt": "Quel élément correspond au système de management de la sécurité (SMS) ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il remplace toute procédure d’urgence.",
+          "is_correct": false,
+          "explanation": "Le SMS organise la sécurité, mais il ne supprime pas les procédures d’évacuation, de secours ou de lutte contre l’incendie."
+        },
+        {
+          "id": "B",
+          "text": "Il sert uniquement à noter les horaires des salariés.",
+          "is_correct": false,
+          "explanation": "Le SMS concerne la gestion des risques, pas la gestion du temps de travail."
+        },
+        {
+          "id": "C",
+          "text": "Il n’est appliqué qu’en cas d’accident déjà survenu.",
+          "is_correct": false,
+          "explanation": "Le SMS est un outil de prévention et de pilotage continu, pas une simple réaction après accident."
+        },
+        {
+          "id": "D",
+          "text": "Il concerne seulement les clients et non l’activité interne.",
+          "is_correct": false,
+          "explanation": "Le SMS porte d’abord sur l’organisation interne de la sécurité et des risques au sein de l’entreprise."
+        },
+        {
+          "id": "E",
+          "text": "Il est obligatoire pour les entreprises aéronautiques selon l’OACI et l’EASA.",
+          "is_correct": true,
+          "explanation": "Le support précise ce caractère obligatoire et relie le SMS aux références OACI et EASA."
+        }
+      ],
+      "coverage_label": "Système de management de la sécurité (SMS)",
+      "learning_objective": "Comprendre le statut et le rôle du SMS dans le secteur aéronautique.",
+      "correction_summary": "Le SMS est bien un dispositif obligatoire de gestion de la sécurité dans l’aéronautique. Il ne remplace pas les procédures d’urgence : il les complète et les organise.",
+      "course_clarification": "Un SMS structure la prévention des risques, le suivi des incidents et l’amélioration continue. Il aide l’entreprise à repérer, traiter et réduire les dangers avant qu’ils ne provoquent un accident.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s19_q5",
+      "prompt": "Parmi les pratiques suivantes, laquelle correspond à une bonne culture de sécurité ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cacher les incidents mineurs pour éviter de ralentir l’activité.",
+          "is_correct": false,
+          "explanation": "Cacher un incident empêche d’en comprendre la cause et augmente le risque de récidive."
+        },
+        {
+          "id": "B",
+          "text": "Éviter les audits et inspections pour ne pas détecter de problèmes.",
+          "is_correct": false,
+          "explanation": "Les audits et inspections servent justement à repérer les non-conformités et à améliorer la sécurité."
+        },
+        {
+          "id": "C",
+          "text": "Le signalement des incidents sans sanction et les retours d’expérience.",
+          "is_correct": true,
+          "explanation": "La culture de sécurité repose sur la remontée des incidents pour apprendre et prévenir la répétition, sans punir le signalement honnête."
+        },
+        {
+          "id": "D",
+          "text": "Considérer qu’un incident sans blessure ne mérite jamais d’analyse.",
+          "is_correct": false,
+          "explanation": "Même sans blessure, un incident est utile à analyser car il peut révéler un danger ou une faiblesse du système."
+        },
+        {
+          "id": "E",
+          "text": "Remplacer les procédures d’urgence par l’expérience informelle des équipes.",
+          "is_correct": false,
+          "explanation": "L’expérience est utile, mais elle ne remplace pas des procédures écrites et organisées comme le plan d’évacuation ou les premiers secours."
+        }
+      ],
+      "coverage_label": "Culture de sécurité et dispositifs d’urgence",
+      "learning_objective": "Identifier les comportements et dispositifs qui renforcent la prévention et le retour d’expérience.",
+      "correction_summary": "La bonne réponse associe signalement sans sanction et retours d’expérience. Le piège est de croire qu’il faut cacher ou ignorer les incidents mineurs alors qu’ils sont précieux pour prévenir un accident.",
+      "course_clarification": "La culture de sécurité encourage à parler des incidents pour progresser collectivement. Les audits, inspections et procédures d’urgence complètent cette logique en détectant les écarts et en préparant la réaction.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s19",
+  "anchor_slide_id": "s19",
+  "question_count_target": 5,
+  "title": "QCM - Sécurité en entreprise aéronautique"
+}

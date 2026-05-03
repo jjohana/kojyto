@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Post-combustion : intérêt, architecture et coût en carburant</title>
+  <title>QCM - Post-combustion et bruit de tuyère</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -485,6 +485,29 @@ html[data-embed="1"] body::after {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
 }
 
 .block {
@@ -1536,19 +1559,6 @@ html[data-embed="1"] .review-card {
 }
 </style>
   
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [["$", "$"], ["\\(", "\\)"]],
-        displayMath: [["\\[", "\\]"]],
-      },
-      svg: {
-        fontCache: "global",
-      },
-    };
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-  
 </head>
 <body class="viewer-user page-quiz">
   <div class="page-shell with-site-nav">
@@ -1573,49 +1583,49 @@ html[data-embed="1"] .review-card {
         
         <a class="sidebar-slide" href="s1-1.html">
           <strong>S1-1</strong>
-          <span>Origine de la poussée et terme réacteur</span>
+          <span>Origine de la poussée : terme réacteur</span>
           
-          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          <span>Installer le principe physique de la poussée nette et son expression de base.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-1.html">
           <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée et terme réacteur</span>
+          <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-2.html">
           <strong>S1-2</strong>
-          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>Exemple numérique et architecture double flux</span>
           
-          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-2.html">
           <strong>QCM S1-2</strong>
-          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>QCM - Exemple numérique et architecture double flux</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-3.html">
           <strong>S1-3</strong>
-          <span>Exemple chiffré et répartition des forces internes</span>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-3.html">
           <strong>QCM S1-3</strong>
-          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1623,7 +1633,7 @@ html[data-embed="1"] .review-card {
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
-          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
           
         </a>
         
@@ -1631,431 +1641,431 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s2-2.html">
           <strong>S2-2</strong>
-          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>Repères de consommation et surveillance moteur</span>
           
-          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s2-2.html">
           <strong>QCM S2-2</strong>
-          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s2-3.html">
-          <strong>S2-3</strong>
-          <span>Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s2-3.html">
-          <strong>QCM S2-3</strong>
-          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-1.html">
           <strong>S3-1</strong>
-          <span>Principe propulsif du turbopropulseur</span>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
-          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-1.html">
           <strong>QCM S3-1</strong>
-          <span>QCM - Principe propulsif du turbopropulseur</span>
+          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-2.html">
           <strong>S3-2</strong>
-          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
-          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-2.html">
           <strong>QCM S3-2</strong>
-          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
+          
+          <span>Définir et comparer les rendements à chaque étage du moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - Rendements de la chaîne propulsive</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s4-1.html">
           <strong>S4-1</strong>
-          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>Taux de dilution et familles de moteurs</span>
           
-          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s4-1.html">
           <strong>QCM S4-1</strong>
-          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>QCM - Taux de dilution et exemples de moteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>Principe du turbopropulseur</span>
+          
+          <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - Principe du turbopropulseur</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-1.html">
           <strong>S5-1</strong>
-          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
-          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          <span>Décrire les organes de sortie d’un GTR simple flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-1.html">
           <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-2.html">
           <strong>S5-2</strong>
-          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-2.html">
           <strong>QCM S5-2</strong>
-          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s6-1.html">
           <strong>S6-1</strong>
-          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>Post-combustion et bruit de tuyère</span>
           
-          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
           
         </a>
         
         <a class="sidebar-slide active" href="slide-s6-1.html">
           <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>QCM - Post-combustion et bruit de tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-2.html">
-          <strong>S6-2</strong>
-          <span>Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-2.html">
-          <strong>QCM S6-2</strong>
-          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-3.html">
-          <strong>S6-3</strong>
-          <span>Tuyère supersonique convergente-divergente</span>
-          
-          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-3.html">
-          <strong>QCM S6-3</strong>
-          <span>QCM - Tuyère supersonique convergente-divergente</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s7-1.html">
           <strong>S7-1</strong>
-          <span>Traitement acoustique de la tuyère</span>
+          <span>But et formule de la poussée inverse</span>
           
-          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s7-1.html">
           <strong>QCM S7-1</strong>
-          <span>QCM - Traitement acoustique de la tuyère</span>
+          <span>QCM - But et formule de la poussée inverse</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>Poussée inverse : efficacité, limites et choix des flux</span>
+          
+          <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
+          
+          <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-1.html">
           <strong>S8-1</strong>
-          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-1.html">
           <strong>QCM S8-1</strong>
-          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-2.html">
           <strong>S8-2</strong>
-          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          <span>Inverseur pneumatique : organes et séquence</span>
           
-          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-2.html">
           <strong>QCM S8-2</strong>
-          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-1.html">
           <strong>S9-1</strong>
-          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
-          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-1.html">
           <strong>QCM S9-1</strong>
-          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-2.html">
           <strong>S9-2</strong>
-          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          <span>Types de trains et composition</span>
           
-          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          <span>Distinguer les architectures de base et les éléments constitutifs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-2.html">
           <strong>QCM S9-2</strong>
-          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          <span>QCM - Types de trains et composition</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-3.html">
+          <strong>S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-3.html">
+          <strong>QCM S9-3</strong>
+          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-1.html">
           <strong>S10-1</strong>
-          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-1.html">
           <strong>QCM S10-1</strong>
-          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-2.html">
           <strong>S10-2</strong>
-          <span>Composition générale d’un train d’atterrissage</span>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          <span>Décrire la séquence compression-détente-équilibrage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-2.html">
           <strong>QCM S10-2</strong>
-          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-3.html">
+          <strong>S10-3</strong>
+          <span>États du train, verrouillages et sécurités</span>
+          
+          <span>Présenter la cinématique des trains et les sécurités associées.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-3.html">
+          <strong>QCM S10-3</strong>
+          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s11-1.html">
           <strong>S11-1</strong>
-          <span>Géométrie du train et dispositions des roues</span>
+          <span>Voyants, roues et pneumatiques</span>
           
-          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s11-1.html">
           <strong>QCM S11-1</strong>
-          <span>QCM - Géométrie du train et dispositions des roues</span>
+          <span>QCM - Voyants, roues et pneumatiques</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-2.html">
+          <strong>S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
+          
+          <span>Décrire les circuits de freinage et leurs sécurités.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-2.html">
+          <strong>QCM S11-2</strong>
+          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-3.html">
+          <strong>S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-3.html">
+          <strong>QCM S11-3</strong>
+          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s12-1.html">
           <strong>S12-1</strong>
-          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
-          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s12-1.html">
           <strong>QCM S12-1</strong>
-          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s12-2.html">
-          <strong>S12-2</strong>
-          <span>Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s12-2.html">
-          <strong>QCM S12-2</strong>
-          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s13-1.html">
-          <strong>S13-1</strong>
-          <span>Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s13-1.html">
-          <strong>QCM S13-1</strong>
-          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-1.html">
-          <strong>S14-1</strong>
-          <span>Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-1.html">
-          <strong>QCM S14-1</strong>
-          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-2.html">
-          <strong>S14-2</strong>
-          <span>Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-2.html">
-          <strong>QCM S14-2</strong>
-          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-1.html">
-          <strong>S15-1</strong>
-          <span>Circuits de freinage et freins à disques</span>
-          
-          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-1.html">
-          <strong>QCM S15-1</strong>
-          <span>QCM - Circuits de freinage et freins à disques</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-2.html">
-          <strong>S15-2</strong>
-          <span>Anti-skid et anti-brake</span>
-          
-          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-2.html">
-          <strong>QCM S15-2</strong>
-          <span>QCM - Anti-skid et anti-brake</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s16-1.html">
-          <strong>S16-1</strong>
-          <span>QCM : les repères essentiels sur les atterrisseurs</span>
-          
-          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s16-1.html">
-          <strong>QCM S16-1</strong>
-          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="final-validation.html">
           <strong>Validation finale</strong>
-          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          <span>25 questions tirées au sort sur 149 - correction finale</span>
           
         </a>
         
@@ -2067,7 +2077,7 @@ html[data-embed="1"] .review-card {
       
       <div class="slide-toolbar">
         <div class="toolbar-meta">
-          <span>Page 24/61</span>
+          <span>Page 30/61</span>
           
           <span>QCM</span>
         </div>
@@ -2079,7 +2089,7 @@ html[data-embed="1"] .review-card {
           <a class="nav-link" href="s6-1.html">Précédent</a>
           
           
-          <a class="nav-link" href="s6-2.html">Suivante</a>
+          <a class="nav-link" href="s7-1.html">Suivante</a>
           
         </div>
       </div>
@@ -2089,7 +2099,7 @@ html[data-embed="1"] .review-card {
         <section class="quiz-hero">
           <div>
             <p class="eyebrow">QCM</p>
-            <h1>QCM - Post-combustion : intérêt, architecture et coût en carburant</h1>
+            <h1>QCM - Post-combustion et bruit de tuyère</h1>
             <p>
               
               QCM intermédiaire avec correction immédiate question par question.
@@ -2106,14 +2116,14 @@ html[data-embed="1"] .review-card {
           id="quiz-app"
           class="quiz-app-shell"
           data-viewer-mode="user"
-          data-next-href="s6-2.html"
+          data-next-href="s7-1.html"
           data-home-href="index.html"
         ></section>
       </section>
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S6-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S6-1-Q1", "prompt": "À propos du rôle de la post-combustion, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle diminue la vitesse des gaz pour économiser du carburant.", "is_correct": false, "explanation": "Faux : c’est l’inverse. La post-combustion augmente la vitesse d’éjection et consomme davantage de carburant."}, {"id": "B", "text": "Elle agit avant les turbines pour refroidir l’air d’entrée.", "is_correct": false, "explanation": "Faux : la post-combustion se situe après les turbines, pas en amont. Elle intervient dans la tuyère ou le conduit d’éjection."}, {"id": "C", "text": "Elle remplace la combustion principale dans le compresseur.", "is_correct": false, "explanation": "Faux : la combustion principale a lieu dans la chambre de combustion. La post-combustion est une combustion supplémentaire, en aval des turbines."}, {"id": "D", "text": "Elle sert principalement à augmenter la poussée utile en augmentant la vitesse des gaz éjectés.", "is_correct": true, "explanation": "Vrai : c’est l’intérêt principal de la post-combustion. On ajoute de l’énergie aux gaz après les turbines pour accélérer le jet et donc augmenter la poussée."}, {"id": "E", "text": "Elle sert d’abord à réduire la consommation spécifique en régime normal.", "is_correct": false, "explanation": "Faux : la post-combustion dégrade au contraire fortement la consommation spécifique, même si elle améliore la poussée."}], "coverage_label": "", "learning_objective": "Identifier la fonction principale de la post-combustion.", "correction_summary": "Il fallait repérer que la post-combustion n’a pas pour but d’économiser du carburant, mais d’ajouter de l’énergie aux gaz en sortie de turbines. L’erreur fréquente consiste à confondre « augmenter la poussée » avec « améliorer le rendement » : ici la poussée augmente fortement, mais au prix d’une surconsommation importante.", "course_clarification": "La post-combustion est une combustion additionnelle située après les turbines. Elle réchauffe les gaz déjà détendus, ce qui augmente leur vitesse d’éjection et donc la poussée. En contrepartie, elle consomme beaucoup plus de carburant.", "source_refs": []}, {"question_id": "S6-1-Q2", "prompt": "À propos de la géométrie de la tuyère en présence de post-combustion, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La post-combustion fonctionne correctement avec une tuyère rigoureusement fixe dans tous les cas.", "is_correct": false, "explanation": "Faux : le cours indique au contraire qu’une section variable est nécessaire quand la post-combustion est utilisée."}, {"id": "B", "text": "L’utilisation de la post-combustion impose une section variable de la buse.", "is_correct": true, "explanation": "Vrai : quand la post-combustion est allumée, l’énergie disponible augmente et la tuyère doit pouvoir s’ouvrir pour éviter l’obstruction thermique et s’adapter au nouveau régime."}, {"id": "C", "text": "La section variable sert uniquement à réduire le bruit du jet.", "is_correct": false, "explanation": "Faux : ce n’est pas sa fonction principale dans ce contexte. Elle sert surtout à adapter l’écoulement, réguler le moteur et permettre la post-combustion."}, {"id": "D", "text": "La section variable est inutile parce que l’énergie avant la tuyère ne change jamais.", "is_correct": false, "explanation": "Faux : la post-combustion change fortement l’énergie des gaz avant la tuyère, donc la géométrie doit pouvoir s’adapter."}, {"id": "E", "text": "La section variable sert seulement à remplacer l’oxygène absent dans les gaz d’échappement.", "is_correct": false, "explanation": "Faux : la section variable ne remplace pas l’oxygène. Elle agit sur l’écoulement et la détente des gaz, tandis que l’oxygène nécessaire à la combustion provient de l’air de refroidissement."}], "coverage_label": "", "learning_objective": "Relier la post-combustion à la nécessité d’une tuyère à section variable.", "correction_summary": "Le raisonnement attendu est simple : si on ajoute de l’énergie après les turbines, la tuyère doit pouvoir modifier sa section pour laisser passer correctement le débit et éviter une surpression locale. La confusion fréquente est de croire qu’une tuyère fixe suffit toujours, alors que la post-combustion impose justement une adaptation géométrique.", "course_clarification": "Quand la post-combustion est activée, l’écoulement change fortement. Pour conserver un bon fonctionnement et éviter une obstruction thermique, la tuyère doit avoir une section variable, souvent réglée par un vérin.", "source_refs": []}, {"question_id": "S6-1-Q3", "prompt": "À propos de la consommation en post-combustion, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La consommation en post-combustion vaut environ 2 à 3 fois la consommation en régime normal.", "is_correct": true, "explanation": "Vrai : c’est l’ordre de grandeur indiqué dans le cours. La post-combustion améliore la poussée mais au prix d’une surconsommation très élevée."}, {"id": "B", "text": "La consommation en post-combustion est environ deux à trois fois plus faible qu’en régime normal.", "is_correct": false, "explanation": "Faux : c’est l’inverse. La post-combustion augmente fortement la consommation de carburant."}, {"id": "C", "text": "La consommation en post-combustion est strictement identique à celle du régime normal.", "is_correct": false, "explanation": "Faux : l’activation de la post-combustion nécessite un apport énergétique supplémentaire, donc la consommation change nettement."}, {"id": "D", "text": "La consommation en post-combustion ne dépend que de la température extérieure.", "is_correct": false, "explanation": "Faux : le cours donne un ordre de grandeur lié au mode de fonctionnement, pas une dépendance unique à la température extérieure."}, {"id": "E", "text": "La consommation en post-combustion est divisée par deux pour gagner de la poussée.", "is_correct": false, "explanation": "Faux : la poussée augmente, mais pas avec une baisse de consommation. Au contraire, le moteur brûle davantage de carburant."}], "coverage_label": "", "learning_objective": "Estimer l’effet de la post-combustion sur la consommation de carburant.", "correction_summary": "Il fallait retenir que la post-combustion est énergétiquement coûteuse. L’erreur classique est de penser qu’un gain de poussée s’obtient sans pénalité majeure : ici, la pénalité en carburant est importante, souvent d’un facteur 2 à 3.", "course_clarification": "La post-combustion permet un gain de poussée rapide, mais elle consomme beaucoup plus de carburant que le fonctionnement normal. C’est donc une solution ponctuelle, utilisée quand la performance prime sur l’économie.", "source_refs": []}, {"question_id": "S6-1-Q4", "prompt": "Sur le schéma de la post-combustion, quel élément fait partie du dispositif représenté ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le compresseur haute pression est placé dans la tuyère de post-combustion.", "is_correct": false, "explanation": "Faux : le compresseur se trouve beaucoup plus en amont dans le moteur, avant la chambre de combustion."}, {"id": "B", "text": "Le fan est l’élément qui stabilise directement la flamme dans le tube à flamme.", "is_correct": false, "explanation": "Faux : le fan appartient à la partie amont du turboréacteur. La stabilisation de la flamme est assurée par des dispositifs spécifiques dans la zone de post-combustion."}, {"id": "C", "text": "L’inverseur de poussée est l’organe principal qui allume la post-combustion.", "is_correct": false, "explanation": "Faux : l’inverseur de poussée sert au freinage à l’atterrissage, pas à l’allumage de la post-combustion."}, {"id": "D", "text": "Le disque turbine remplace le tube à flamme dans le canal de post-combustion.", "is_correct": false, "explanation": "Faux : le tube à flamme est un élément propre à la zone de post-combustion ; il ne remplace pas la turbine."}, {"id": "E", "text": "Le stabilisateur de flamme fait partie du dispositif de post-combustion.", "is_correct": true, "explanation": "Vrai : le stabilisateur de flamme est un élément du dispositif, car il aide à maintenir la combustion dans le flux rapide des gaz."}], "coverage_label": "", "learning_objective": "Reconnaître un élément de l’architecture de post-combustion.", "correction_summary": "La bonne méthode consiste à lire le rôle de chaque élément du schéma et à ne pas mélanger les parties du cœur moteur avec celles de la tuyère. Une confusion fréquente est d’attribuer à la post-combustion des pièces qui appartiennent au compresseur, au fan ou à l’inverseur de poussée.", "course_clarification": "Le dispositif de post-combustion comprend notamment l’injecteur de PC, le tube à flamme, le stabilisateur de flamme, la rangée spéciale, le canal divergent, la buse à section variable et le vérin. Ces éléments permettent d’alimenter, stabiliser et évacuer la combustion supplémentaire.", "source_refs": []}, {"question_id": "S6-1-Q5", "prompt": "À propos d’une tuyère convergente à géométrie variable en régime subsonique, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Si \\(M<1\\), une diminution de section entraîne toujours une diminution de la vitesse.", "is_correct": false, "explanation": "Faux : c’est l’inverse en subsonique. Une section plus petite accélère le fluide."}, {"id": "B", "text": "Si \\(M<1\\), une augmentation de section entraîne une augmentation de la vitesse.", "is_correct": false, "explanation": "Faux : en subsonique, agrandir la section ralentit l’écoulement."}, {"id": "C", "text": "Si \\(M<1\\), une diminution de section entraîne une augmentation de la vitesse : \\(S\\downarrow \\Rightarrow V\\uparrow\\).", "is_correct": true, "explanation": "Vrai : dans le domaine subsonique, le cours indique bien qu’une réduction de section accélère l’écoulement."}, {"id": "D", "text": "Si \\(M>1\\), une diminution de section entraîne une augmentation de la vitesse dans la partie convergente.", "is_correct": false, "explanation": "Faux : en supersonique, la relation section-vitesse s’inverse ; dans une zone convergente, diminuer la section ne provoque pas une accélération comme en subsonique."}, {"id": "E", "text": "Le col d’une tuyère convergente-divergente correspond à la zone où \\(M<1\\) et où la vitesse est minimale.", "is_correct": false, "explanation": "Faux : au col, l’écoulement atteint \\(M=1\\). Ce n’est pas une zone subsonique avec vitesse minimale, mais le passage critique entre régime subsonique et supersonique."}], "coverage_label": "", "learning_objective": "Appliquer la relation entre section et vitesse dans une tuyère subsonique.", "correction_summary": "Il fallait distinguer clairement le cas subsonique du cas supersonique. L’erreur la plus fréquente est de croire que la même règle « plus de section = plus de vitesse » vaut partout. En réalité, en subsonique, c’est une section plus petite qui accélère l’écoulement.", "course_clarification": "Dans une tuyère convergente à géométrie variable, le comportement dépend du Mach. Si l’écoulement est subsonique, réduire la section accélère le jet. Si l’écoulement devient supersonique, la tendance s’inverse. C’est pourquoi la lecture du régime d’écoulement est essentielle.", "source_refs": []}], "subpart_id": "S6", "anchor_slide_id": "S6-1", "question_count_target": 5, "title": "QCM - Post-combustion : intérêt, architecture et coût en carburant"}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S6-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S6-1-Q1", "prompt": "Concernant la **post-combustion (P.C.)**, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle a lieu avant le compresseur pour augmenter directement la pression d’admission.", "is_correct": false, "explanation": "La post-combustion n’agit pas en amont du compresseur. Elle intervient après les turbines, dans la partie aval de la tuyère."}, {"id": "B", "text": "Elle supprime toute consommation supplémentaire de carburant en phase de forte poussée.", "is_correct": false, "explanation": "Au contraire, la P.C. entraîne une consommation très importante de carburant. Le support indique une consommation de 2 à 3 fois celle du fonctionnement normal."}, {"id": "C", "text": "Elle est compatible avec une tuyère à section fixe sans adaptation géométrique.", "is_correct": false, "explanation": "La présence de post-combustion impose une **section variable** pour adapter le passage des gaz et conserver un fonctionnement correct de la tuyère."}, {"id": "D", "text": "Elle réalise une deuxième combustion après les turbines en utilisant l’oxygène contenu dans l’air de refroidissement.", "is_correct": true, "explanation": "La post-combustion ajoute du combustible après les turbines et exploite l’oxygène encore disponible dans l’air de refroidissement. C’est bien une combustion supplémentaire située en aval de la turbine."}, {"id": "E", "text": "Elle diminue la vitesse des gaz éjectés afin de réduire la poussée.", "is_correct": false, "explanation": "L’intérêt de la P.C. est inverse : augmenter la poussée utile en augmentant la vitesse des gaz éjectés."}], "coverage_label": "Post-combustion (P.C.)", "learning_objective": "Identifier le principe de la post-combustion et sa position dans la chaîne propulsive.", "correction_summary": "La bonne affirmation décrit une combustion supplémentaire après les turbines, utilisant l’oxygène restant. Le piège principal consiste à la confondre avec une combustion en amont ou avec une réduction de la vitesse d’éjection.", "course_clarification": "La post-combustion est une phase d’appoint pour augmenter temporairement la poussée. Elle s’accompagne d’une forte surconsommation et nécessite une géométrie variable de tuyère.", "source_refs": []}, {"question_id": "S6-1-Q2", "prompt": "À propos des effets de la **post-combustion** sur la poussée et la consommation, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "À 11 000 m et M = 2, elle ne peut produire qu’un gain inférieur à +10 % de Tu.", "is_correct": false, "explanation": "Le gain indiqué à 11 000 m et M = 2 est bien plus élevé : il est supérieur à +100 % de Tu."}, {"id": "B", "text": "Au sol, elle peut donner environ +40 % à +50 % de Tu pour environ +100 % de Csp.", "is_correct": true, "explanation": "Le support donne explicitement cet ordre de grandeur au sol : la poussée utile augmente d’environ 40 % à 50 % pour une augmentation d’environ 100 % de la consommation spécifique."}, {"id": "C", "text": "À 11 000 m et M = 1, elle impose toujours une hausse de Csp de 100 %.", "is_correct": false, "explanation": "À 11 000 m et M = 1, l’augmentation de Csp indiquée est de +60 %, pas de 100 %."}, {"id": "D", "text": "Son intérêt est de diminuer Tu en réduisant la vitesse des gaz éjectés.", "is_correct": false, "explanation": "La logique propulsive est inverse : la post-combustion sert à **augmenter** Tu en augmentant la vitesse des gaz éjectés."}, {"id": "E", "text": "À 11 000 m et M = 2, le gain de Tu est nul malgré une consommation accrue.", "is_correct": false, "explanation": "Le document indique au contraire un gain de Tu de plus de 100 % dans cette configuration, pour environ +30 % de Csp."}], "coverage_label": "Gains de poussée et consommation", "learning_objective": "Lire et comparer les ordres de grandeur de gain de poussée et de surconsommation selon les conditions de vol.", "correction_summary": "Les gains ne sont pas les mêmes selon l’altitude et le Mach : ils augmentent avec des effets très marqués en croisière rapide. Le piège est de confondre les pourcentages de Tu et de Csp ou d’inverser leur évolution.", "course_clarification": "Tu désigne la poussée utile. Csp désigne une consommation spécifique liée au coût en carburant pour obtenir cette poussée supplémentaire.", "source_refs": []}, {"question_id": "S6-1-Q3", "prompt": "Quel élément est indispensable lorsqu’une tuyère fonctionne avec **post-combustion** ?", "difficulty": "easy", "options": [{"id": "A", "text": "Une section variable de la tuyère.", "is_correct": true, "explanation": "La post-combustion impose une adaptation de la géométrie de sortie ; le support précise explicitement l’utilisation d’une section variable."}, {"id": "B", "text": "Une suppression complète de toute commande de géométrie.", "is_correct": false, "explanation": "La commande géométrique reste nécessaire, au contraire, pour ajuster la section de passage des gaz pendant la P.C."}, {"id": "C", "text": "Un compresseur supplémentaire placé après les turbines.", "is_correct": false, "explanation": "La post-combustion ne repose pas sur un compresseur ajouté après la turbine ; elle agit par réchauffement et accélération des gaz en aval."}, {"id": "D", "text": "Une réduction de la section de sortie à valeur fixe pour stabiliser la flamme.", "is_correct": false, "explanation": "Le support parle d’une **section variable**, pas d’une section fixe réduite. La stabilisation de la combustion ne remplace pas l’adaptation de géométrie."}, {"id": "E", "text": "L’interdiction d’augmenter la vitesse des gaz éjectés.", "is_correct": false, "explanation": "C’est l’inverse : la post-combustion vise justement à accroître la vitesse des gaz éjectés pour augmenter la poussée."}], "coverage_label": "Géométrie variable de tuyère", "learning_objective": "Associer la post-combustion à l’exigence de section variable de la tuyère.", "correction_summary": "La post-combustion ne se conçoit pas avec une tuyère à géométrie figée. Le point clé est l’adaptation de la section pour permettre le surcroît de débit et de poussée.", "course_clarification": "Une section variable permet de modifier l’ouverture de la tuyère selon le régime. Cela devient nécessaire dès qu’on ajoute une combustion après les turbines.", "source_refs": []}, {"question_id": "S6-1-Q4", "prompt": "Pour réduire le bruit d’une **tuyère**, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il faut empêcher tout mélange entre le jet et l’atmosphère pour supprimer les turbulences.", "is_correct": false, "explanation": "Le document recommande l’inverse : le mélange contrôlé et la dilution du jet réduisent la zone de bruit."}, {"id": "B", "text": "Il faut augmenter uniquement la température des gaz sans modifier leur dispersion.", "is_correct": false, "explanation": "La réduction du bruit est liée à la structure du jet et à sa dilution, pas à une simple hausse de température."}, {"id": "C", "text": "Il faut concentrer le jet dans une veine plus étroite pour diminuer les remous.", "is_correct": false, "explanation": "Concentrer le jet va à l’encontre de la dilution recherchée. Le traitement acoustique vise au contraire à le déformer et le diviser."}, {"id": "D", "text": "Il faut transformer les turbulences en vibrations exclusivement à haute fréquence.", "is_correct": false, "explanation": "Le texte décrit plutôt une évolution des hautes fréquences vers des basses fréquences quand la vitesse diminue et que les turbulences augmentent."}, {"id": "E", "text": "Il faut favoriser la dilution en augmentant la surface de contact entre les gaz éjectés et l’air ambiant.", "is_correct": true, "explanation": "Le principe indiqué est bien d’augmenter les échanges entre le jet rapide et l’air ambiant pour diluer le jet et réduire la zone de bruit."}], "coverage_label": "Traitement acoustique de la tuyère", "learning_objective": "Comprendre la logique de dilution du jet pour réduire le bruit en sortie.", "correction_summary": "La bonne stratégie consiste à augmenter le contact entre le jet et l’air ambiant afin de diluer les gaz rapides. Le piège est de croire qu’il faut simplement bloquer le mélange, alors que la dilution est recherchée.", "course_clarification": "La dilution correspond à un mélange plus large du jet avec l’air extérieur. En pratique, elle permet de réduire l’intensité et l’étendue de la zone bruyante.", "source_refs": []}, {"question_id": "S6-1-Q5", "prompt": "Parmi les solutions suivantes, laquelle fait partie des moyens cités pour le **traitement acoustique** de la tuyère ?", "difficulty": "easy", "options": [{"id": "A", "text": "Les ailettes de compresseur à calage variable.", "is_correct": false, "explanation": "Ce dispositif appartient à la partie compresseur et n’est pas cité comme solution acoustique de sortie de tuyère."}, {"id": "B", "text": "Les injecteurs de carburant du foyer comme unique moyen de réduction du bruit.", "is_correct": false, "explanation": "Les injecteurs de combustion ne constituent pas la solution acoustique citée ici ; les solutions mentionnées concernent la tuyère et son écoulement de sortie."}, {"id": "C", "text": "Les buses à lobes.", "is_correct": true, "explanation": "Les buses à lobes sont explicitement citées comme une solution pour déformer et diviser le jet afin d’augmenter la dilution."}, {"id": "D", "text": "Les volets de frein aérodynamique de l’aile.", "is_correct": false, "explanation": "Les freins aérodynamiques ne sont pas une solution acoustique de tuyère. Le support cite des dispositifs agissant directement sur le jet éjecté."}, {"id": "E", "text": "Les sondes de température placées dans la chambre de combustion.", "is_correct": false, "explanation": "Ces sondes servent au contrôle thermique, pas à la réduction du bruit en sortie de tuyère."}], "coverage_label": "Solutions acoustiques citées", "learning_objective": "Identifier les solutions de réduction du bruit explicitement mentionnées.", "correction_summary": "Les solutions citées sont des dispositifs qui modifient le jet en sortie, comme les buses à lobes. Le piège consiste à proposer des éléments de propulsion ou de mesure qui n’agissent pas sur l’acoustique de la tuyère.", "course_clarification": "Les buses à lobes, les buses à tuyaux d’orgue et les panneaux acoustiques visent tous à augmenter la dilution ou à absorber une partie du bruit. Ils agissent donc sur la structure du jet ou sur l’énergie acoustique.", "source_refs": []}], "subpart_id": "S6", "anchor_slide_id": "S6-1", "question_count_target": 5, "title": "QCM - Post-combustion et bruit de tuyère"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2249,11 +2259,11 @@ html[data-embed="1"] .review-card {
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
           description.textContent =
-            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
         }
       }
 

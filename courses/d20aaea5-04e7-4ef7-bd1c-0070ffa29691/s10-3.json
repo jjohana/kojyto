@@ -1,0 +1,108 @@
+{
+  "slide_id": "S10-3",
+  "subpart_id": "S10",
+  "title": "États du train, verrouillages et sécurités",
+  "objective": "Présenter la cinématique des trains et les sécurités associées.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s10-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Enchaînement des états et organes associés",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Situation",
+          "Organes / action",
+          "Résultat"
+        ],
+        [
+          "**Train verrouillé haut**",
+          "**Boîtier d’accrochage** : le galet est pris dans le crochet ; les trappes sont fermées.",
+          "Train rentré et maintenu en position haute."
+        ],
+        [
+          "**Sortie du train**",
+          "Ouverture des trappes, puis **déverrouillage du crochet** et action du **vérin de manœuvre**.",
+          "Le train descend de façon contrôlée."
+        ],
+        [
+          "**Train verrouillé bas**",
+          "**Contrefiche** articulée ou télescopique ; verrouillage mécanique par **griffe** ; déverrouillage hydraulique.",
+          "Train sorti et verrouillé en position basse."
+        ],
+        [
+          "**Commande normale**",
+          "Levier à **deux positions** sur la planche de bord ; chaque position correspond à un cran du sélecteur de train.",
+          "Commande de rentrée ou de sortie en fonctionnement normal."
+        ],
+        [
+          "**Commande de secours**",
+          "Système indépendant : **circuit hydraulique secours** et/ou **déverrouillage manuel** du levier.",
+          "Assure la **sortie** des trains seulement."
+        ],
+        [
+          "**Sécurité au sol**",
+          "Levier mécaniquement verrouillé si un **amortisseur est comprimé** ; déverrouillage électrique possible par **solénoïde** ; broches de sécurité au sol ou au tractage.",
+          "Interdit la rentrée intempestive et bloque mécaniquement le train."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Le **secours** compense une panne de la commande normale, mais il ne sert qu’à la **sortie** du train : il ne remplace pas une rentrée de secours.",
+        "Au sol, la logique est inverse : empêcher toute **rentrée** quand l’avion repose sur ses roues, puis bloquer les organes de verrouillage bas par des **broches de sécurité**.",
+        "Les états à distinguer sans ambiguïté sont : **train verrouillé haut**, **sortie du train**, puis **train verrouillé bas** ; le verrouillage positif est la condition clé de sécurité."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "14 CFR §23.729",
+      "locator": "Landing gear extension and retraction system",
+      "url": "https://federal.elaws.us/cfr/title14.part23.section23.729"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA Airplane Flying Handbook",
+      "locator": "Chapter 12 — landing gear",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/13_afh_ch12.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook (FAA-H-8083-3A) – Glossary",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/20_afh_glossary.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "McDonnell Douglas DC-8-61 – FAA Lessons Learned",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/N8082U"
+    }
+  ],
+  "course_reference_note": "La page sur les mécanismes de manœuvre distingue nettement la position haute, la sortie et la position basse avec leurs verrouillages. La sécurité au sol et les broches de blocage complètent la logique de commande.",
+  "teacher_notes": "Faire verbaliser l’enchaînement des trois états et le sens unique du secours. Insister sur la différence entre verrouillage haut, verrouillage bas et sécurité au sol."
+}

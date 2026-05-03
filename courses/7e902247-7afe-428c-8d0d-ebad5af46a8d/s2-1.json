@@ -1,0 +1,73 @@
+{
+  "slide_id": "S2-1",
+  "subpart_id": "S2",
+  "title": "Alimentation AC au sol : EXT PWR A et EXT PWR B",
+  "objective": "Identifier les sources externes disponibles au sol pour alimenter le réseau AC.",
+  "layout": "title",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s2-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "hero",
+      "title": "Deux entrées externes pour le réseau AC",
+      "text": "Au sol, le réseau **AC** peut être alimenté par **EXT PWR A** et/ou **EXT PWR B**. Ces deux sources externes s’ajoutent aux sources **moteur** et **APU**, mais elles restent réservées à l’alimentation **au sol**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Repères essentiels",
+      "text": null,
+      "bullets": [
+        "**EXT PWR** signifie **External Power** : la puissance vient du sol et arrive par le panneau de puissance externe vers le **AC SYSTEM**.",
+        "**EXT PWR A** et **EXT PWR B** sont deux entrées distinctes ; selon la configuration disponible, l’avion peut être alimenté par l’une, par l’autre, ou par les deux.",
+        "Cette logique reste **distincte de la génération en vol** : en vol, l’AC est fourni par les **IDG** (Integrated Drive Generators) des moteurs et par le générateur de l’**APU**.",
+        "Précision utile : la source sol est généralement fournie par un **GPU** (Ground Power Unit), raccordé à l’avion via la prise de puissance externe."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus A320 — Aircraft Characteristics - Airport and Maintenance Planning (PDF)",
+      "locator": "external power : prise de puissance externe, 90 kVA, 115/200 V - 400 Hz",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2024-06/AC_A320_0624.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus A330-700L — Aircraft Characteristics - Airport and Maintenance Planning (PDF)",
+      "locator": "external power : deux prises de puissance externe, 90 kVA, 115 V - 400 Hz",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2024-11/AC_A330-700L_1124.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "SKYbrary — Aircraft Electrical Systems",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-electrical-systems"
+    },
+    {
+      "source_type": "web",
+      "label": "SKYbrary — Auxiliary Power Unit (APU)",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/auxiliary-power-unit-apu"
+    }
+  ],
+  "course_reference_note": "Le schéma place **EXT PWR A** et **EXT PWR B** sur l’architecture de génération AC au sol. Le panneau de puissance externe donne accès aux deux raccordements.",
+  "teacher_notes": "Faire verbaliser la différence entre **alimentation sol** et **génération en vol**. Vérifier que **EXT PWR** est identifié comme **External Power** et que **A/B** désignent deux entrées distinctes."
+}

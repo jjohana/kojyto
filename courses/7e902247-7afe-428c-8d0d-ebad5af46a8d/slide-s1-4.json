@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S1-4",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S1-4-Q1",
+      "prompt": "Sur la génération AC, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’APU ne peut jamais alimenter le AC SYSTEM.",
+          "is_correct": false,
+          "explanation": "C’est faux : le schéma montre au contraire que l’APU GEN peut alimenter le AC SYSTEM."
+        },
+        {
+          "id": "B",
+          "text": "Le générateur de l’APU est nommé IDG.",
+          "is_correct": false,
+          "explanation": "C’est faux : IDG désigne un Integrated Drive Generator, associé aux moteurs, pas au générateur de l’APU."
+        },
+        {
+          "id": "C",
+          "text": "Le bloc de contrôle associé à l’APU est la GCU.",
+          "is_correct": false,
+          "explanation": "C’est faux : la GCU contrôle les générateurs des moteurs, tandis que l’APU est associée à la GAPCU."
+        },
+        {
+          "id": "D",
+          "text": "L’APU possède un générateur appelé GEN capable d’alimenter le AC SYSTEM.",
+          "is_correct": true,
+          "explanation": "C’est exact : le générateur de l’APU est bien nommé GEN et il peut alimenter le AC SYSTEM."
+        },
+        {
+          "id": "E",
+          "text": "L’APU alimente uniquement le DC SYSTEM et jamais le AC SYSTEM.",
+          "is_correct": false,
+          "explanation": "C’est faux : ici l’APU GEN est présenté comme source d’alimentation du AC SYSTEM."
+        }
+      ],
+      "coverage_label": "APU GEN et alimentation AC",
+      "learning_objective": "Identifier la source AC de l’APU.",
+      "correction_summary": "La bonne lecture consiste à repérer la source associée à l’APU : son générateur s’appelle GEN et il peut alimenter le AC SYSTEM. Une confusion fréquente consiste à mélanger ce rôle avec celui des IDG, qui concernent les moteurs, ou avec les blocs de contrôle GCU et GAPCU.",
+      "course_clarification": "APU signifie Auxiliary Power Unit. Son générateur est noté GEN. Il fournit une source AC, au même titre que les IDG des moteurs.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-4-Q2",
+      "prompt": "Quel bloc de contrôle est associé à l’APU sur le schéma ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le bloc associé à l’APU est la GCU.",
+          "is_correct": false,
+          "explanation": "C’est faux : la GCU est associée aux générateurs des moteurs, pas à l’APU."
+        },
+        {
+          "id": "B",
+          "text": "Le bloc associé à l’APU est la GAPCU.",
+          "is_correct": true,
+          "explanation": "C’est exact : GAPCU signifie Ground and Auxiliary Power Control Unit et elle est reliée à l’APU."
+        },
+        {
+          "id": "C",
+          "text": "GAPCU signifie Generator Control Unit.",
+          "is_correct": false,
+          "explanation": "C’est faux : Generator Control Unit correspond à GCU, pas à GAPCU."
+        },
+        {
+          "id": "D",
+          "text": "GAPCU est le bloc de contrôle des IDG moteurs.",
+          "is_correct": false,
+          "explanation": "C’est faux : les IDG moteurs sont contrôlés par les GCU associées."
+        },
+        {
+          "id": "E",
+          "text": "L’APU n’a aucun bloc de contrôle représenté.",
+          "is_correct": false,
+          "explanation": "C’est faux : le schéma montre explicitement la GAPCU reliée à l’APU."
+        }
+      ],
+      "coverage_label": "GAPCU et contrôle APU",
+      "learning_objective": "Reconnaître la GAPCU de l’APU.",
+      "correction_summary": "Il faut distinguer les deux familles de contrôle : GCU pour les générateurs moteur et GAPCU pour l’APU. L’erreur classique est de croire que tous les générateurs utilisent la même unité de contrôle. Ici, le sigle GAPCU est donné explicitement.",
+      "course_clarification": "GAPCU est l’abréviation de Ground and Auxiliary Power Control Unit. Elle est associée à l’APU, alors que la GCU est liée aux moteurs.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-4-Q3",
+      "prompt": "À propos des IDG, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il y a un IDG par moteur.",
+          "is_correct": true,
+          "explanation": "C’est exact : le schéma et le texte indiquent un IDG par moteur."
+        },
+        {
+          "id": "B",
+          "text": "Il y a un seul IDG pour les deux moteurs.",
+          "is_correct": false,
+          "explanation": "C’est faux : la répartition indiquée est une machine par moteur."
+        },
+        {
+          "id": "C",
+          "text": "Les IDG sont installés sur l’APU.",
+          "is_correct": false,
+          "explanation": "C’est faux : les IDG sont associés aux moteurs, pas à l’APU."
+        },
+        {
+          "id": "D",
+          "text": "Les IDG sont des batteries de secours.",
+          "is_correct": false,
+          "explanation": "C’est faux : un IDG est un générateur entraîné par moteur, pas une batterie."
+        },
+        {
+          "id": "E",
+          "text": "Les IDG alimentent uniquement le DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "C’est faux : ici les IDG alimentent le AC SYSTEM."
+        }
+      ],
+      "coverage_label": "IDG et répartition par moteur",
+      "learning_objective": "Lire la répartition des IDG par moteur.",
+      "correction_summary": "Le point clé est la répartition : un IDG est associé à chaque moteur. Une confusion fréquente consiste à imaginer une source unique pour toute l’avion, ou à confondre les fonctions AC et DC. Ici, les IDG sont clairement dédiés à la génération AC.",
+      "course_clarification": "IDG signifie Integrated Drive Generator. La notation montre un IDG par moteur, relié au moteur correspondant.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-4-Q4",
+      "prompt": "Comment sont gérés les IDG des moteurs ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chaque IDG est contrôlé par la GAPCU.",
+          "is_correct": false,
+          "explanation": "C’est faux : la GAPCU est associée à l’APU, pas aux IDG des moteurs."
+        },
+        {
+          "id": "B",
+          "text": "Chaque IDG fonctionne sans unité de contrôle dédiée.",
+          "is_correct": false,
+          "explanation": "C’est faux : le schéma montre une GCU associée à chaque IDG."
+        },
+        {
+          "id": "C",
+          "text": "La GCU est réservée au générateur de l’APU.",
+          "is_correct": false,
+          "explanation": "C’est faux : la GCU est liée aux générateurs moteurs, tandis que l’APU utilise la GAPCU."
+        },
+        {
+          "id": "D",
+          "text": "Chaque IDG est contrôlé par le DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "C’est faux : le DC SYSTEM est une partie de distribution/alimentation, pas l’unité de contrôle des IDG."
+        },
+        {
+          "id": "E",
+          "text": "Chaque IDG est contrôlé et surveillé par sa GCU associée.",
+          "is_correct": true,
+          "explanation": "C’est exact : le texte précise que chaque IDG est contrôlé et monitoré par sa Generator Control Unit associée."
+        }
+      ],
+      "coverage_label": "GCU et surveillance IDG",
+      "learning_objective": "Associer chaque IDG à sa GCU.",
+      "correction_summary": "Le raisonnement attendu est simple : identifier l’organe de contrôle placé à côté de la source. Pour les IDG, c’est la GCU. Une erreur fréquente consiste à inverser GCU et GAPCU ou à croire qu’un système de distribution remplace l’unité de contrôle dédiée.",
+      "course_clarification": "GCU signifie Generator Control Unit. Chaque IDG a sa GCU associée pour le contrôle et la surveillance.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-4-Q5",
+      "prompt": "Sur le synoptique, quelle association est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "GCU correspond à l’APU et GAPCU aux moteurs.",
+          "is_correct": false,
+          "explanation": "C’est faux : l’association est inversée sur le schéma."
+        },
+        {
+          "id": "B",
+          "text": "GCU et GAPCU désignent le même bloc de contrôle.",
+          "is_correct": false,
+          "explanation": "C’est faux : ce sont deux blocs différents, avec des rôles distincts."
+        },
+        {
+          "id": "C",
+          "text": "GCU correspond aux moteurs et GAPCU à l’APU.",
+          "is_correct": true,
+          "explanation": "C’est exact : le schéma distingue GCU pour les moteurs et GAPCU pour l’APU."
+        },
+        {
+          "id": "D",
+          "text": "La GAPCU contrôle les IDG des moteurs.",
+          "is_correct": false,
+          "explanation": "C’est faux : les IDG moteurs sont contrôlés par les GCU associées."
+        },
+        {
+          "id": "E",
+          "text": "La GCU contrôle le générateur de l’APU.",
+          "is_correct": false,
+          "explanation": "C’est faux : l’APU est associée à la GAPCU, pas à la GCU."
+        }
+      ],
+      "coverage_label": "Répartition GCU/GAPCU",
+      "learning_objective": "Distinguer GCU et GAPCU sur le schéma.",
+      "correction_summary": "Le bon réflexe est de relier chaque bloc à sa source : GCU pour les moteurs, GAPCU pour l’APU. La confusion la plus fréquente est de permuter les sigles, alors que le schéma les sépare clairement par famille de source.",
+      "course_clarification": "GCU est la Generator Control Unit des moteurs. GAPCU est la Ground and Auxiliary Power Control Unit de l’APU.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S1",
+  "anchor_slide_id": "S1-4",
+  "question_count_target": 5,
+  "title": "QCM - APU GEN et répartition du contrôle GCU/GAPCU"
+}

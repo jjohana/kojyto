@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S4-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S4-2_Q1",
+      "prompt": "Quelle affirmation est exacte à propos d’un TR ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un TR convertit une tension continue en tension alternative.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : un transformer rectifier reçoit de l’AC et fournit du DC."
+        },
+        {
+          "id": "B",
+          "text": "Un TR est un bloc de contrôle du générateur.",
+          "is_correct": false,
+          "explanation": "Le contrôle du générateur est assuré par les GCUs, pas par les TR."
+        },
+        {
+          "id": "C",
+          "text": "Un TR alimente directement les moteurs.",
+          "is_correct": false,
+          "explanation": "Le TR intervient dans l’alimentation électrique, pas dans l’alimentation mécanique des moteurs."
+        },
+        {
+          "id": "D",
+          "text": "TR signifie Transformer Rectifier.",
+          "is_correct": true,
+          "explanation": "L’acronyme est bien donné ainsi : TR = Transformer Rectifier."
+        },
+        {
+          "id": "E",
+          "text": "Un TR ne participe pas à l’alimentation du DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Le schéma montre au contraire que les TR participent à l’alimentation du DC SYSTEM."
+        }
+      ],
+      "coverage_label": "Définition et rôle du TR",
+      "learning_objective": "Identifier la signification de TR et sa fonction de conversion AC vers DC.",
+      "correction_summary": "Le raisonnement attendu consiste à relier l’acronyme à sa fonction réelle : un transformer rectifier transforme l’AC en DC pour alimenter le réseau continu. Une confusion fréquente consiste à inverser le sens de conversion ou à confondre le TR avec un organe de contrôle.",
+      "course_clarification": "Un TR est un convertisseur AC/DC. Il reçoit une alimentation alternative et fournit une alimentation continue pour le DC SYSTEM.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-2_Q2",
+      "prompt": "Quelle affirmation est exacte à propos des blocs TR 1, TR 2 et TR ESS ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "TR 1, TR 2 et TR ESS sont des sources purement mécaniques.",
+          "is_correct": false,
+          "explanation": "Ces blocs sont des convertisseurs électriques, pas des sources mécaniques."
+        },
+        {
+          "id": "B",
+          "text": "TR 1, TR 2 et TR ESS participent à l’alimentation du DC SYSTEM.",
+          "is_correct": true,
+          "explanation": "C’est bien leur rôle sur le schéma : ils participent à l’alimentation du réseau DC."
+        },
+        {
+          "id": "C",
+          "text": "TR 1, TR 2 et TR ESS alimentent l’AC SYSTEM sans conversion.",
+          "is_correct": false,
+          "explanation": "Ils ne fournissent pas directement l’AC ; ils interviennent dans la chaîne d’alimentation du DC."
+        },
+        {
+          "id": "D",
+          "text": "TR 1, TR 2 et TR ESS sont des batteries de secours.",
+          "is_correct": false,
+          "explanation": "Les batteries sont des sources distinctes ; les TR sont des convertisseurs."
+        },
+        {
+          "id": "E",
+          "text": "TR 1, TR 2 et TR ESS servent à lancer l’APU.",
+          "is_correct": false,
+          "explanation": "Le démarrage de l’APU est lié à l’APU TR et à l’APU BATTERY, pas aux TR 1, 2 et ESS."
+        }
+      ],
+      "coverage_label": "TR 1, TR 2 et TR ESS",
+      "learning_objective": "Repérer les TR associés au réseau DC et distinguer leur rôle des autres sources.",
+      "correction_summary": "Il faut reconnaître les TR 1, TR 2 et TR ESS comme des éléments de la chaîne d’alimentation DC, et non comme des sources primaires ou des batteries. L’erreur classique consiste à les prendre pour des générateurs alors qu’ils servent à convertir et distribuer l’énergie vers le DC SYSTEM.",
+      "course_clarification": "TR 1, TR 2 et TR ESS sont des maillons de conversion dans l’architecture électrique. Ils participent à la fourniture du DC SYSTEM à partir du réseau AC.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-2_Q3",
+      "prompt": "Quelle affirmation est exacte concernant le démarrage de l’APU ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’APU STARTER est alimenté via l’APU TR / APU BATTERY.",
+          "is_correct": true,
+          "explanation": "C’est exactement le lien indiqué : le starter de l’APU est alimenté depuis l’APU TR et/ou l’APU BATTERY."
+        },
+        {
+          "id": "B",
+          "text": "L’APU STARTER est alimenté uniquement par les IDGs.",
+          "is_correct": false,
+          "explanation": "Les IDGs alimentent le réseau AC lié aux moteurs, pas le starter APU indiqué ici."
+        },
+        {
+          "id": "C",
+          "text": "L’APU STARTER est relié au BCL sans autre source.",
+          "is_correct": false,
+          "explanation": "Le BCL concerne la batterie ; le schéma associe le starter APU à l’APU TR / APU BATTERY."
+        },
+        {
+          "id": "D",
+          "text": "L’APU STARTER est alimenté par l’EMER GEN.",
+          "is_correct": false,
+          "explanation": "L’EMER GEN appartient à la logique d’alimentation de secours, pas au circuit de démarrage de l’APU."
+        },
+        {
+          "id": "E",
+          "text": "L’APU STARTER n’a aucun lien avec l’APU BATTERY.",
+          "is_correct": false,
+          "explanation": "Le schéma indique au contraire un lien direct avec l’APU BATTERY."
+        }
+      ],
+      "coverage_label": "Alimentation du starter APU",
+      "learning_objective": "Associer correctement le starter APU à son alimentation électrique.",
+      "correction_summary": "Le point clé est d’identifier le chemin d’alimentation du starter APU sur le schéma. On confond souvent le démarrage de l’APU avec les sources générales du réseau, alors qu’un circuit dédié passe par l’APU TR et l’APU BATTERY.",
+      "course_clarification": "Le starter de l’APU n’est pas alimenté par les TR principaux du réseau. Il est relié à l’APU TR et à l’APU BATTERY.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-2_Q4",
+      "prompt": "Quelle affirmation est exacte sur l’alimentation du DC SYSTEM ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le DC SYSTEM ne reçoit d’énergie que des batteries.",
+          "is_correct": false,
+          "explanation": "Les batteries participent à l’alimentation, mais elles ne sont pas les seules sources ou relais présents sur le schéma."
+        },
+        {
+          "id": "B",
+          "text": "Le DC SYSTEM est alimenté seulement par l’APU GEN.",
+          "is_correct": false,
+          "explanation": "L’APU GEN n’est qu’une des sources possibles dans l’architecture, pas l’unique source du DC SYSTEM."
+        },
+        {
+          "id": "C",
+          "text": "Le DC SYSTEM est indépendant du réseau AC.",
+          "is_correct": false,
+          "explanation": "Le schéma montre au contraire des liaisons fortes entre AC SYSTEM et DC SYSTEM via les TR et autres blocs."
+        },
+        {
+          "id": "D",
+          "text": "Le DC SYSTEM est alimenté exclusivement par l’EMER GEN.",
+          "is_correct": false,
+          "explanation": "L’EMER GEN intervient dans la logique de secours, mais il ne constitue pas à lui seul toute l’alimentation du DC SYSTEM."
+        },
+        {
+          "id": "E",
+          "text": "Le DC SYSTEM est alimenté par plusieurs éléments issus ou liés au réseau AC.",
+          "is_correct": true,
+          "explanation": "C’est bien l’idée du schéma : plusieurs blocs liés à l’AC participent ensuite à l’alimentation du DC SYSTEM."
+        }
+      ],
+      "coverage_label": "Architecture d’alimentation du DC SYSTEM",
+      "learning_objective": "Lire le synoptique et comprendre l’origine AC de l’alimentation DC.",
+      "correction_summary": "Le raisonnement attendu consiste à suivre les liaisons entre l’AC SYSTEM et les convertisseurs ou sources associés au DC SYSTEM. Une erreur fréquente est de croire que le DC est isolé de l’AC, alors que l’architecture repose précisément sur ces passerelles de conversion.",
+      "course_clarification": "Le DC SYSTEM est alimenté à partir de plusieurs éléments reliés au réseau AC et à la chaîne batterie. Les TR jouent un rôle central dans cette conversion.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-2_Q5",
+      "prompt": "Quelle affirmation est exacte à propos des BATTERY 1 et BATTERY 2 ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les BATTERY 1 et 2 sont connectées directement au AC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Les batteries appartiennent à la logique DC, pas à une liaison directe avec l’AC SYSTEM."
+        },
+        {
+          "id": "B",
+          "text": "Les BATTERY 1 et 2 remplacent les TR 1 et TR 2.",
+          "is_correct": false,
+          "explanation": "Les batteries stockent l’énergie, alors que les TR assurent la conversion AC/DC ; leurs rôles sont différents."
+        },
+        {
+          "id": "C",
+          "text": "Les BATTERY 1 et 2 sont connectées à la distribution DC via les BCLs.",
+          "is_correct": true,
+          "explanation": "Le schéma montre bien les batteries reliées au réseau DC par l’intermédiaire des BCLs."
+        },
+        {
+          "id": "D",
+          "text": "Les BATTERY 1 et 2 alimentent le réseau AC en régime normal.",
+          "is_correct": false,
+          "explanation": "Le schéma ne leur attribue pas le rôle principal d’alimentation du réseau AC en régime normal."
+        },
+        {
+          "id": "E",
+          "text": "Les BCLs sont des transformer rectifier.",
+          "is_correct": false,
+          "explanation": "BCL signifie Battery Charge Limiter, pas Transformer Rectifier."
+        }
+      ],
+      "coverage_label": "BATTERY 1/2 et BCL",
+      "learning_objective": "Associer les batteries au réseau DC et distinguer leur rôle de celui des TR.",
+      "correction_summary": "Il faut repérer que les batteries sont intégrées au réseau DC via les BCLs, qui limitent et gèrent la charge. La confusion fréquente est de mélanger batteries, BCLs et TR, alors que leurs fonctions sont distinctes : stockage, limitation de charge et conversion.",
+      "course_clarification": "Les BATTERY 1 et 2 appartiennent à la chaîne DC et passent par les BCLs pour leur intégration dans la distribution électrique.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S4",
+  "anchor_slide_id": "S4-2",
+  "question_count_target": 5,
+  "title": "QCM - TR 1, TR 2, TR ESS et APU TR"
+}

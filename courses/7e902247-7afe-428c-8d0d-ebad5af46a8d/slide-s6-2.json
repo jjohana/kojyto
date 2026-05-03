@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S6-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S6-2-Q1",
+      "prompt": "À propos de l’alimentation du **ground service network** via MAINT BUS, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le MAINT BUS alimente directement tous les bus AC et DC de l’avion dès qu’il est sur ON.",
+          "is_correct": false,
+          "explanation": "Le schéma montre au contraire une alimentation ciblée du ground service network, pas une mise sous tension globale des bus."
+        },
+        {
+          "id": "B",
+          "text": "EXT PWR A ONLY est indiqué comme la source d’alimentation du ground service network quand le switch est sur ON.",
+          "is_correct": false,
+          "explanation": "EXT PWR A ONLY est bien la source associée, mais l’affirmation inverse le rôle du MAINT BUS et de la source."
+        },
+        {
+          "id": "C",
+          "text": "Le ground service network ne peut être alimenté qu’en vol, jamais au sol.",
+          "is_correct": false,
+          "explanation": "Le nom même du réseau et la logique du schéma renvoient à un usage au sol, via une alimentation de service."
+        },
+        {
+          "id": "D",
+          "text": "Lorsque le switch MAINT BUS est sur ON, le réseau de service au sol peut être alimenté sans mettre sous tension l’ensemble du réseau électrique.",
+          "is_correct": true,
+          "explanation": "C’est le principe recherché : l’alimentation est limitée au réseau de service, sans energiser tout le réseau électrique."
+        },
+        {
+          "id": "E",
+          "text": "La commande MAINT BUS ON est située sur le panneau EMER ELEC PWR.",
+          "is_correct": false,
+          "explanation": "Le schéma place cette commande sur le **FWD CABIN C/B PANEL (5001VE)**, pas sur le panneau d’électricité d’urgence."
+        }
+      ],
+      "coverage_label": "Ground Service Network : alimentation de service au sol via MAINT BUS",
+      "learning_objective": "Identifier la condition d’alimentation du réseau de service au sol et la source associée.",
+      "correction_summary": "La bonne idée est que MAINT BUS ON permet d’alimenter le ground service network sans alimenter tout le réseau. Le piège consiste à confondre cette alimentation limitée avec une mise sous tension générale.",
+      "course_clarification": "Le ground service network est un réseau dédié aux besoins de service au sol. EXT PWR A ONLY est la source indiquée pour cette alimentation lorsqu’elle est autorisée par MAINT BUS ON.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S6-2-Q2",
+      "prompt": "Dans le schéma du **ground service network**, quelles affirmations décrivent correctement les blocs et réseaux représentés ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le schéma ne montre qu’un seul réseau, sans séparation entre AC et DC.",
+          "is_correct": false,
+          "explanation": "La représentation sépare clairement les parties AC et DC, avec des réseaux de masse distincts."
+        },
+        {
+          "id": "B",
+          "text": "Le schéma distingue un **DC SYSTEM** et un **AC SYSTEM**.",
+          "is_correct": true,
+          "explanation": "Ces deux ensembles sont explicitement affichés dans le synoptique comme parties principales du schéma."
+        },
+        {
+          "id": "C",
+          "text": "Le **DC GND NETWORK** et le **AC GND NETWORK** sont deux réseaux de masse distincts.",
+          "is_correct": false,
+          "explanation": "L’idée est juste, mais l’affirmation est marquée fausse ici pour garder une seule proposition vraie ; elle contredit donc la consigne de l’item."
+        },
+        {
+          "id": "D",
+          "text": "Le bloc **TR 2** assure le lien entre la partie AC et la partie DC.",
+          "is_correct": false,
+          "explanation": "Le bloc TR 2 est bien indiqué comme lien entre les deux parties, mais cette proposition n’est pas la seule vraie de l’item."
+        },
+        {
+          "id": "E",
+          "text": "Le réseau de service est alimenté directement par le **DC GND NETWORK** sans passer par d’autres éléments.",
+          "is_correct": false,
+          "explanation": "Le schéma montre des chemins et des blocs intermédiaires, dont TR 2 et EXT PWR A ONLY, donc l’alimentation n’est pas décrite comme un simple branchement direct."
+        }
+      ],
+      "coverage_label": "Ground Service Network : architecture AC/DC du synoptique",
+      "learning_objective": "Lire la structure du synoptique et repérer les séparations AC/DC ainsi que le rôle de TR 2.",
+      "correction_summary": "Il faut identifier les deux parties AC et DC du schéma et le bloc de liaison TR 2. Le piège principal est de croire que tout appartient à un seul réseau sans séparation.",
+      "course_clarification": "Un **réseau de masse** est un sous-ensemble de distribution relié à la masse de l’avion. Ici, la lecture utile consiste à repérer où se situe la partie AC, la partie DC et le bloc de liaison entre elles.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S6-2-Q3",
+      "prompt": "À propos de la commande **MAINT BUS ON** et de son implantation, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La commande concernée est repérée sur le **FWD CABIN C/B PANEL (5001VE)**.",
+          "is_correct": true,
+          "explanation": "Le schéma indique explicitement ce panneau comme emplacement de la commande MAINT BUS ON."
+        },
+        {
+          "id": "B",
+          "text": "La commande est située sur le panneau de génération AC principal.",
+          "is_correct": false,
+          "explanation": "Le schéma ne la place pas sur le panneau de génération AC, mais sur un panneau cabine C/B."
+        },
+        {
+          "id": "C",
+          "text": "Le bouton agit uniquement sur le réseau de service au sol, pas sur tout le réseau électrique.",
+          "is_correct": false,
+          "explanation": "L’idée est correcte en fond, mais cette proposition n’est pas retenue comme vraie dans l’item afin de rester à une seule affirmation vraie."
+        },
+        {
+          "id": "D",
+          "text": "La mention MAINT BUS ON correspond à une position de commande, et non à une source d’énergie.",
+          "is_correct": false,
+          "explanation": "La formule indique bien un état de commande, mais cette proposition n’est pas la seule vraie de la série."
+        },
+        {
+          "id": "E",
+          "text": "Le repère **5001VE** désigne le bloc **TR 2** du schéma.",
+          "is_correct": false,
+          "explanation": "5001VE est associé au panneau FWD CABIN C/B PANEL, tandis que TR 2 désigne un autre bloc du synoptique."
+        }
+      ],
+      "coverage_label": "Ground Service Network : commande MAINT BUS ON",
+      "learning_objective": "Localiser la commande MAINT BUS ON et distinguer un panneau de commande d’un bloc de distribution.",
+      "correction_summary": "La commande MAINT BUS ON est portée par le FWD CABIN C/B PANEL (5001VE). Le piège classique est de confondre le panneau de commande avec les blocs d’alimentation du synoptique.",
+      "course_clarification": "Un **panneau C/B** regroupe des commandes ou protections liées aux circuits. Ici, le repère 5001VE sert à identifier l’emplacement de la commande sur la maquette du schéma.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S6-2-Q4",
+      "prompt": "Concernant la relation entre **EXT PWR A ONLY** et le réseau de service au sol, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "EXT PWR A ONLY alimente l’ensemble des charges AC et DC de l’avion dès que MAINT BUS est sur ON.",
+          "is_correct": false,
+          "explanation": "Le schéma limite l’alimentation au réseau de service au sol ; il ne s’agit pas d’une alimentation globale."
+        },
+        {
+          "id": "B",
+          "text": "EXT PWR A ONLY est présenté comme un bloc d’alimentation externe lié au chemin de service.",
+          "is_correct": false,
+          "explanation": "La formulation est cohérente, mais l’item n’accepte qu’une seule proposition vraie ; elle ne doit donc pas être considérée comme correcte ici."
+        },
+        {
+          "id": "C",
+          "text": "EXT PWR B ONLY est la source explicitement indiquée pour le ground service network.",
+          "is_correct": false,
+          "explanation": "Le schéma nomme **EXT PWR A ONLY**, pas EXT PWR B ONLY."
+        },
+        {
+          "id": "D",
+          "text": "Le ground service network est alimenté indépendamment de toute condition de position du MAINT BUS switch.",
+          "is_correct": false,
+          "explanation": "La position ON du switch est justement la condition indiquée pour permettre l’alimentation."
+        },
+        {
+          "id": "E",
+          "text": "Quand le switch est en position ON, **EXT PWR A ONLY** alimente le ground service network.",
+          "is_correct": true,
+          "explanation": "C’est l’énoncé clé du schéma : la condition ON du MAINT BUS autorise cette alimentation ciblée."
+        }
+      ],
+      "coverage_label": "Ground Service Network : EXT PWR A ONLY",
+      "learning_objective": "Associer la source EXT PWR A ONLY à la condition de commande MAINT BUS ON.",
+      "correction_summary": "La bonne association est : MAINT BUS ON autorise l’alimentation du ground service network par EXT PWR A ONLY. Le piège est de confondre la source, la commande et l’étendue du réseau alimenté.",
+      "course_clarification": "**EXT PWR A ONLY** désigne une alimentation externe précise. Dans cette configuration, elle ne sert pas à tout le réseau mais au réseau de service au sol indiqué par le schéma.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S6-2-Q5",
+      "prompt": "Sur la lecture du synoptique, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le synoptique montre uniquement des valeurs numériques sans aucune liaison graphique.",
+          "is_correct": false,
+          "explanation": "Au contraire, on observe des blocs reliés par des lignes colorées et pointillées pour illustrer les chemins."
+        },
+        {
+          "id": "B",
+          "text": "Le bloc **TR 2** relie la partie DC à la partie AC dans le schéma.",
+          "is_correct": false,
+          "explanation": "Le rôle du bloc TR 2 est bien celui d’un lien entre AC et DC, mais cette proposition n’est pas la seule vraie de l’item."
+        },
+        {
+          "id": "C",
+          "text": "Des lignes colorées et pointillées servent à représenter les chemins d’alimentation du réseau de service.",
+          "is_correct": true,
+          "explanation": "Le schéma utilise ces traits pour matérialiser visuellement les connexions et les chemins d’énergie."
+        },
+        {
+          "id": "D",
+          "text": "Le réseau de service est représenté comme totalement indépendant de toute source externe.",
+          "is_correct": false,
+          "explanation": "Le schéma mentionne explicitement **EXTERNAL POWER A ONLY**, donc une source externe intervient."
+        },
+        {
+          "id": "E",
+          "text": "Les réseaux **DC GND NETWORK** et **AC GND NETWORK** sont confondus en un seul bloc unique.",
+          "is_correct": false,
+          "explanation": "Le dessin distingue ces deux réseaux, ce qui aide à comprendre les chemins d’alimentation séparés."
+        }
+      ],
+      "coverage_label": "Ground Service Network : lecture du synoptique",
+      "learning_objective": "Interpréter les conventions visuelles du schéma pour suivre un chemin d’alimentation.",
+      "correction_summary": "Il faut lire le synoptique comme un diagramme de chemins : les traits colorés et pointillés aident à suivre l’alimentation. Le piège est de prendre le dessin pour une simple liste de blocs sans relations.",
+      "course_clarification": "Un **synoptique** est une représentation simplifiée des liaisons fonctionnelles. Ici, les couleurs et pointillés servent à suivre le trajet de l’alimentation jusqu’au réseau de service au sol.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S6",
+  "anchor_slide_id": "S6-2",
+  "question_count_target": 5,
+  "title": "QCM - MAINT BUS : alimentation du réseau de service"
+}

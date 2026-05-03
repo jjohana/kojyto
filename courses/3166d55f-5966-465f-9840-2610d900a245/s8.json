@@ -1,0 +1,61 @@
+{
+  "slide_id": "S8",
+  "subpart_id": "6.1",
+  "title": "MRU : vitesse constante et loi horaire linéaire",
+  "objective": "Relier vitesse constante, accélération nulle et expression de la position.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s8-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Idée essentielle",
+      "text": null,
+      "bullets": [
+        "**Rectiligne** : le mobile se déplace sur une droite ; une seule coordonnée, notée ici $x$, suffit pour décrire sa position.",
+        "**Vitesse constante** : $v$ ne varie pas au cours du temps ; par conséquent, l’**accélération** est nulle, $a=0$.",
+        "La **loi horaire** est linéaire : la position augmente ou diminue régulièrement avec le temps à partir de la position initiale $x_0$."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture des symboles et usage",
+      "text": null,
+      "bullets": [
+        "$x(t)$ s’exprime en **mètre (m)**, $t$ en **seconde (s)**, $v$ en **m·s⁻¹** et $x_0$ en **mètre (m)**.",
+        "Le signe de $v$ fixe le **sens** du mouvement sur l’axe choisi ; la valeur absolue de $v$ donne la rapidité du déplacement.",
+        "Le MRU sert de **référence** simple pour comparer un mouvement plus complexe ou vérifier une modélisation de base."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": null,
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "x(t)=x_0+vt \\quad \\text{et} \\quad a=0"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [],
+  "course_reference_note": "Définition du MRU : trajectoire rectiligne, vitesse constante, donc $a=0$. La position varie linéairement selon $x(t)=x_0+vt$.",
+  "teacher_notes": "Faire verbaliser le lien entre trois idées indissociables : **v constante**, **a nulle** et **position linéaire**. Vérifier la lecture du signe de $v$ sur un axe orienté."
+}

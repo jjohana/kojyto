@@ -1,0 +1,87 @@
+{
+  "slide_id": "S7-3",
+  "subpart_id": "S7",
+  "title": "Superviser les disjoncteurs via l’ECAM",
+  "objective": "Lire la page ECAM dédiée aux disjoncteurs et interpréter leur statut comme un état de supervision.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s7-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Correspondance de lecture",
+      "text": "Chaque ligne aide à relier l’affichage ECAM à l’état réel du disjoncteur surveillé.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Lecture utile"
+        ],
+        [
+          "ECAM (Electronic Centralized Aircraft Monitor)",
+          "Page d’affichage qui centralise l’information de surveillance."
+        ],
+        [
+          "CBMU (Circuit Breaker Monitoring Unit)",
+          "Unité qui surveille les C/B et transmet leur état à l’ECAM."
+        ],
+        [
+          "C/B (Circuit Breaker) surveillé",
+          "Disjoncteur du compartiment avionique, en 28 VDC ou 115 VAC, suivi sur la page C/B."
+        ],
+        [
+          "Statut affiché",
+          "À lire comme un **état de supervision** du C/B concerné, pas comme une simple indication décorative."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Seuls les **disjoncteurs surveillés** apparaissent sur la page C/B ; l’affichage reprend l’état du C/B concerné tel qu’il remonte du **CBMU**.",
+        "Quand un C/B surveillé **déclenche**, l’ECAM signale l’anomalie pour que l’équipage identifie rapidement le disjoncteur en cause.",
+        "La lecture correcte consiste à associer chaque statut affiché à une **condition de protection** du circuit, et non à un simple voyant d’alerte."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "FAST #34 / July 2004",
+      "locator": "CBMU et page C/B ECAM",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2022-04/FAST34.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "System Reset: Use With Caution | Safety First",
+      "locator": "Disjoncteurs et prudence sur les resets",
+      "url": "https://safetyfirst.airbus.com/system-reset-use-with-caution/"
+    },
+    {
+      "source_type": "web",
+      "label": "Intermittent repetitive failure | Airbus",
+      "locator": "research",
+      "url": "https://aircraft.airbus.com/en/newsroom/news/2022-12-intermittent-repetitive-failure"
+    }
+  ],
+  "course_reference_note": "La page C/B de l’ECAM est reliée au CBMU et affiche les disjoncteurs surveillés avec leur statut. Les disjoncteurs concernés sont ceux du compartiment avionique en 28 VDC et 115 VAC.",
+  "teacher_notes": "Faire lire chaque statut comme un retour de supervision du C/B. Insister sur le périmètre des disjoncteurs surveillés et sur le rôle de l’ECAM comme page de synthèse de l’état."
+}

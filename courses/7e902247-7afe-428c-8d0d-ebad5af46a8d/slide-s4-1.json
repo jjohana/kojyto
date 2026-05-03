@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S4-1",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S4-1_Q1",
+      "prompt": "Quelle affirmation décrit correctement l’architecture générale de l’alimentation DC ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le DC SYSTEM est alimenté uniquement par les batteries.",
+          "is_correct": false,
+          "explanation": "Les batteries participent bien à l’architecture, mais elles ne sont pas l’unique source d’alimentation du DC SYSTEM."
+        },
+        {
+          "id": "B",
+          "text": "Le DC SYSTEM est indépendant du réseau AC.",
+          "is_correct": false,
+          "explanation": "C’est faux : les liaisons entre AC SYSTEM et DC SYSTEM restent visibles et structurantes."
+        },
+        {
+          "id": "C",
+          "text": "Le DC SYSTEM ne comporte aucun convertisseur.",
+          "is_correct": false,
+          "explanation": "C’est faux : plusieurs convertisseurs interviennent, notamment les transformer rectifier et le static inverter."
+        },
+        {
+          "id": "D",
+          "text": "Le DC SYSTEM peut être alimenté par plusieurs éléments issus ou liés au réseau AC.",
+          "is_correct": true,
+          "explanation": "C’est l’idée centrale du schéma : l’alimentation DC ne vient pas d’une seule source, mais de plusieurs éléments reliés au réseau AC et aux circuits associés."
+        },
+        {
+          "id": "E",
+          "text": "Le DC SYSTEM est alimenté seulement par l’EMER GEN.",
+          "is_correct": false,
+          "explanation": "L’EMER GEN fait partie des sources visibles, mais il ne constitue pas à lui seul toute l’alimentation DC."
+        }
+      ],
+      "coverage_label": "Architecture générale du DC SYSTEM",
+      "learning_objective": "Identifier la logique générale d’alimentation du DC SYSTEM à partir des liaisons avec le réseau AC.",
+      "correction_summary": "La bonne réponse rappelle que l’architecture DC s’appuie sur plusieurs familles de sources reliées au réseau AC. L’erreur fréquente consiste à réduire cette architecture aux batteries ou à une seule source de secours. Il faut lire le schéma comme un ensemble de chemins d’alimentation, pas comme une source unique.",
+      "course_clarification": "Le DC SYSTEM n’est pas isolé : il reçoit de l’énergie via des convertisseurs, des batteries et certaines sources AC associées. La compréhension attendue est celle d’une architecture mixte, avec des liens explicites entre AC SYSTEM et DC SYSTEM.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-1_Q2",
+      "prompt": "Quelle affirmation sur les transformer rectifier est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les transformer rectifier alimentent directement le AC SYSTEM sans conversion.",
+          "is_correct": false,
+          "explanation": "C’est faux : un transformer rectifier convertit une énergie AC en DC, il ne se contente pas d’alimenter directement le réseau AC."
+        },
+        {
+          "id": "B",
+          "text": "Les transformer rectifier TR 1, TR 2, TR ESS et APU TR participent à l’alimentation du DC SYSTEM.",
+          "is_correct": true,
+          "explanation": "C’est exact : le schéma place ces TR parmi les éléments qui fournissent ou participent à l’alimentation du DC SYSTEM."
+        },
+        {
+          "id": "C",
+          "text": "TR 1, TR 2 et TR ESS sont des batteries.",
+          "is_correct": false,
+          "explanation": "C’est faux : ce sont des transformer rectifier, donc des convertisseurs, pas des batteries."
+        },
+        {
+          "id": "D",
+          "text": "L’APU TR n’a aucun lien avec l’alimentation DC.",
+          "is_correct": false,
+          "explanation": "C’est faux : l’APU TR figure explicitement parmi les éléments reliés à l’alimentation du DC SYSTEM."
+        },
+        {
+          "id": "E",
+          "text": "Les TR remplacent le rôle du static inverter pour produire du AC de secours.",
+          "is_correct": false,
+          "explanation": "C’est faux : le static inverter sert à fournir une partie du réseau AC essentiel en secours, alors que les TR servent à la conversion vers le DC."
+        }
+      ],
+      "coverage_label": "Transformer rectifier TR",
+      "learning_objective": "Reconnaître le rôle des TR dans l’architecture de génération DC et ne pas confondre conversion AC/DC et secours AC.",
+      "correction_summary": "La réponse attendue repose sur une lecture simple : les TR sont des convertisseurs intégrés à la chaîne d’alimentation DC. La confusion classique est de les prendre pour des batteries ou pour des organes de secours AC. Il faut distinguer la fonction de conversion DC de la fonction d’inversion AC.",
+      "course_clarification": "Un transformer rectifier sert à transformer une tension AC en tension DC utilisable par le DC SYSTEM. Dans l’architecture étudiée, plusieurs TR sont visibles et chacun participe à la chaîne d’alimentation DC.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-1_Q3",
+      "prompt": "Quelle affirmation décrit correctement la place des batteries dans le schéma ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "BATTERY 1 et BATTERY 2 sont connectées à la distribution DC via les BCL.",
+          "is_correct": true,
+          "explanation": "C’est exact : le schéma montre les batteries reliées à la distribution DC à travers les Battery Charge Limiter, notés BCL."
+        },
+        {
+          "id": "B",
+          "text": "BATTERY 1 et BATTERY 2 alimentent directement le AC SYSTEM en permanence.",
+          "is_correct": false,
+          "explanation": "C’est faux : les batteries sont intégrées à la logique DC, pas présentées ici comme alimentation permanente du réseau AC."
+        },
+        {
+          "id": "C",
+          "text": "BCL signifie Battery Control Line et ne concerne pas les batteries.",
+          "is_correct": false,
+          "explanation": "C’est faux : l’acronyme donné est Battery Charge Limiter, et il est bien associé aux batteries."
+        },
+        {
+          "id": "D",
+          "text": "Les batteries ne figurent pas dans l’architecture d’alimentation DC.",
+          "is_correct": false,
+          "explanation": "C’est faux : BATTERY 1, BATTERY 2 et aussi l’APU BATTERY apparaissent dans le schéma."
+        },
+        {
+          "id": "E",
+          "text": "Les batteries sont reliées au DC SYSTEM sans aucun organe intermédiaire.",
+          "is_correct": false,
+          "explanation": "C’est faux : le schéma montre justement un lien via les BCL et les circuits associés."
+        }
+      ],
+      "coverage_label": "Batteries et BCL",
+      "learning_objective": "Lire la liaison entre batteries, BCL et distribution DC dans une architecture électrique avion.",
+      "correction_summary": "La bonne lecture est que les batteries ne sont pas posées directement sur le réseau sans contrôle : elles passent par les BCL. L’erreur fréquente est de confondre le rôle de stockage de la batterie avec la fonction de limitation/gestion du chargeur. Le schéma insiste sur cette chaîne de liaison.",
+      "course_clarification": "Le Battery Charge Limiter, ou BCL, est l’organe visible entre les batteries et la distribution DC. Les batteries participent à l’alimentation DC, mais leur connexion est encadrée par cette logique de limitation.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-1_Q4",
+      "prompt": "Quelle affirmation sur l’APU starter est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le STARTER de l’APU est alimenté directement par les IDGs des moteurs.",
+          "is_correct": false,
+          "explanation": "C’est faux : les IDGs appartiennent à la génération AC des moteurs et ne sont pas indiqués comme source directe du starter APU."
+        },
+        {
+          "id": "B",
+          "text": "Le STARTER de l’APU est alimenté uniquement par TR 1 et TR 2.",
+          "is_correct": false,
+          "explanation": "C’est faux : le schéma mentionne l’APU TR et l’APU BATTERY, pas TR 1 et TR 2 pour cette fonction."
+        },
+        {
+          "id": "C",
+          "text": "Le STARTER de l’APU est alimenté par le static inverter.",
+          "is_correct": false,
+          "explanation": "C’est faux : le static inverter est lié à l’alimentation AC essentielle, pas au starter APU."
+        },
+        {
+          "id": "D",
+          "text": "Le STARTER de l’APU ne dépend d’aucune source électrique.",
+          "is_correct": false,
+          "explanation": "C’est faux : le démarrage d’un APU nécessite une alimentation électrique, et le schéma en montre le chemin."
+        },
+        {
+          "id": "E",
+          "text": "Le STARTER de l’APU est alimenté via l’APU TR / APU BATTERY.",
+          "is_correct": true,
+          "explanation": "C’est exact : le schéma indique explicitement cette liaison d’alimentation pour le démarrage de l’APU."
+        }
+      ],
+      "coverage_label": "APU starter et alimentation associée",
+      "learning_objective": "Repérer l’alimentation du starter APU et la distinguer des autres sources électriques de l’avion.",
+      "correction_summary": "La lecture attendue est directe : le starter APU est relié à l’APU TR et à l’APU BATTERY. La confusion habituelle consiste à mélanger les sources de génération AC des moteurs avec les circuits de démarrage de l’APU. Ici, il faut suivre la chaîne spécifique indiquée sur le schéma.",
+      "course_clarification": "L’APU starter appartient à un circuit de démarrage dédié. Il ne se déduit pas de la génération des moteurs : il est alimenté par la branche APU TR / APU BATTERY montrée dans l’architecture.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-1_Q5",
+      "prompt": "Quelle affirmation sur les blocs de contrôle visibles est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les blocs de contrôle visibles comprennent uniquement les BCL.",
+          "is_correct": false,
+          "explanation": "C’est faux : les BCL existent dans l’architecture, mais ils ne constituent pas l’ensemble des blocs de contrôle visibles."
+        },
+        {
+          "id": "B",
+          "text": "Le GAPCU contrôle exclusivement les batteries.",
+          "is_correct": false,
+          "explanation": "C’est faux : le GAPCU est lié à la gestion de la puissance auxiliaire et externe, pas au contrôle exclusif des batteries."
+        },
+        {
+          "id": "C",
+          "text": "Les blocs de contrôle visibles comprennent les GCU, l’EMER GEN GCU et le GAPCU.",
+          "is_correct": true,
+          "explanation": "C’est exact : ces blocs sont explicitement cités dans le schéma comme unités de contrôle associées aux différentes sources."
+        },
+        {
+          "id": "D",
+          "text": "L’EMER GEN GCU commande les IDGs des moteurs.",
+          "is_correct": false,
+          "explanation": "C’est faux : les IDGs sont contrôlés par leurs GCUs associés, tandis que l’EMER GEN GCU est lié à l’EMER GEN."
+        },
+        {
+          "id": "E",
+          "text": "Les GCU n’apparaissent pas dans le schéma.",
+          "is_correct": false,
+          "explanation": "C’est faux : les Generator Control Units sont bien visibles et reliées aux sources de génération correspondantes."
+        }
+      ],
+      "coverage_label": "Unités de contrôle électriques",
+      "learning_objective": "Identifier les unités de contrôle associées aux différentes sources de génération et d’alimentation électrique.",
+      "correction_summary": "La réponse correcte consiste à repérer les trois familles de blocs de commande visibles : GCU, EMER GEN GCU et GAPCU. L’erreur fréquente est de confondre les blocs de contrôle avec les sources elles-mêmes ou de leur attribuer une fonction trop large. Il faut associer chaque unité à son rôle de contrôle ou de supervision.",
+      "course_clarification": "Les GCUs surveillent et commandent les générateurs associés, l’EMER GEN GCU s’occupe de l’EMER GEN, et le GAPCU gère les fonctions liées à la puissance auxiliaire et externe. Ces blocs structurent la logique de contrôle de l’architecture électrique.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S4",
+  "anchor_slide_id": "S4-1",
+  "question_count_target": 5,
+  "title": "QCM - Architecture DC : vue d’ensemble"
+}

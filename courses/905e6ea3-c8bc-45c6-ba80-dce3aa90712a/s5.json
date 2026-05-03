@@ -1,0 +1,70 @@
+{
+  "slide_id": "s5",
+  "subpart_id": "s5",
+  "title": "Pilote de ligne",
+  "objective": "Repérer les responsabilités du pilote de ligne et les conditions d’accès au métier.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s5-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Responsabilités avant, pendant et après le vol",
+      "text": "Le pilote de ligne agit à chaque étape du vol avec un objectif unique : la **sécurité** de l’avion et des passagers.",
+      "bullets": [
+        "**Avant le départ** : il prépare le vol, établit le **plan de vol** et vérifie la météo, le trajet et les paramètres utiles à la mission.",
+        "**Pendant le vol** : il surveille les systèmes de l’appareil, garde le contact avec les **contrôleurs aériens** et coordonne l’action avec l’équipage.",
+        "**Après le vol** : il rédige un **rapport détaillé** et reste prêt à réagir rapidement en cas de situation d’urgence."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Accès au métier",
+      "text": "L’exercice du métier demande une qualification réglementée et une formation spécialisée.",
+      "bullets": [
+        "La **licence européenne de pilote de transport aérien (ATPL)** est la référence indiquée pour exercer ce métier.",
+        "Cette licence s’obtient dans un parcours de formation spécialisé, avec des exigences de théorie, de pratique et d’expérience.",
+        "Le rôle ne se limite pas au pilotage : il combine **préparation**, **surveillance**, **communication** et **réaction immédiate**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Onisep — Pilote de ligne",
+      "locator": "Préparation du vol, surveillance en vol, sécurité des passagers",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/pilote-de-ligne"
+    },
+    {
+      "source_type": "web",
+      "label": "EASA — Easy Access Rules for Aircrew",
+      "locator": "Licence ATPL, formation ATO et conditions de délivrance",
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-aircrew?erules-id=ERULES-1963177438-10598"
+    },
+    {
+      "source_type": "web",
+      "label": "Ministère chargé des Transports — Examens théoriques pour devenir personnel navigant",
+      "locator": "Parcours théorique ATPL",
+      "url": "https://www.ecologie.gouv.fr/politiques-publiques/examens-theoriques-devenir-personnel-navigant"
+    }
+  ],
+  "course_reference_note": "Le repère central présente les missions du pilote de ligne et la licence européenne ATPL. La séquence des tâches suit l’ordre : préparer, surveiller, communiquer, puis rendre compte.",
+  "teacher_notes": "Faire reformuler la chronologie du métier en trois temps : avant, pendant et après le vol. Vérifier que l’élève associe ATPL à la licence européenne exigée pour accéder au métier."
+}

@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s17",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s17_q1",
+      "prompt": "Quel élément décrit le mieux la fonction de cette page ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "C’est un tableau récapitulatif des normes qualité applicables à l’aéronautique.",
+          "is_correct": false,
+          "explanation": "Aucun tableau n’apparaît et la page ne présente pas de colonnes de données comparatives. Elle sert d’abord à introduire un thème."
+        },
+        {
+          "id": "B",
+          "text": "C’est un schéma technique expliquant le fonctionnement d’un système aéronautique.",
+          "is_correct": false,
+          "explanation": "Aucun schéma, aucune flèche ni légende technique ne sont visibles. La composition est purement textuelle et graphique, sans explication de fonctionnement."
+        },
+        {
+          "id": "C",
+          "text": "C’est une page remplie de listes à puces sur les risques chimiques et ergonomiques.",
+          "is_correct": false,
+          "explanation": "La page n’est pas structurée en listes détaillées ; elle affiche surtout un titre centré. Les listes à puces appartiennent aux pages de contenu, pas à cette page d’ouverture."
+        },
+        {
+          "id": "D",
+          "text": "C’est une page d’ouverture annonçant une nouvelle partie du support.",
+          "is_correct": true,
+          "explanation": "La mise en page ressemble à une page de lancement : un grand titre centré, très peu d’éléments, et aucun contenu technique développé. Cela correspond à une ouverture de section plutôt qu’à une page d’exercice ou de contenu détaillé."
+        },
+        {
+          "id": "E",
+          "text": "C’est une fiche de calcul avec formules et résultats chiffrés.",
+          "is_correct": false,
+          "explanation": "Aucune formule ni donnée chiffrée n’apparaît. Le visuel est celui d’un bandeau de titre sur fond blanc."
+        }
+      ],
+      "coverage_label": "Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »",
+      "learning_objective": "Identifier une page d’ouverture à partir de sa mise en page visuelle.",
+      "correction_summary": "La bonne réponse est celle qui reconnaît une page d’entrée de partie. Le piège consiste à confondre cette composition sobre avec une page de contenu technique détaillé.",
+      "course_clarification": "Une page d’ouverture sert à annoncer un thème. On la repère souvent grâce à un grand titre, une présentation très épurée et l’absence de tableau ou de schéma.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s17_q2",
+      "prompt": "Quelle description du titre affiché est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le titre est placé dans un encadré rouge en haut à gauche.",
+          "is_correct": false,
+          "explanation": "Aucun encadré rouge n’apparaît et le titre n’est pas placé en haut à gauche. Il est centré dans une large zone bleue."
+        },
+        {
+          "id": "B",
+          "text": "Le titre est centré dans un bandeau bleu foncé sur fond blanc.",
+          "is_correct": true,
+          "explanation": "La page montre bien un grand bandeau bleu foncé au centre, avec le titre écrit en blanc et aligné au milieu. Le contraste fond blanc / bandeau bleu est l’élément visuel dominant."
+        },
+        {
+          "id": "C",
+          "text": "Le titre est écrit en noir au bas de la page, sous un tableau.",
+          "is_correct": false,
+          "explanation": "Le titre n’est pas en bas de page et aucun tableau n’est visible. La mise en page est au contraire très épurée."
+        },
+        {
+          "id": "D",
+          "text": "Le titre est aligné à droite, au-dessus d’un graphique circulaire.",
+          "is_correct": false,
+          "explanation": "Le texte est centré, pas aligné à droite, et il n’y a pas de graphique circulaire exploité comme support d’information."
+        },
+        {
+          "id": "E",
+          "text": "Le titre apparaît en surimpression sur une photo d’atelier aéronautique.",
+          "is_correct": false,
+          "explanation": "Aucune photo d’atelier n’est visible. Le fond est principalement blanc avec une zone bleue de présentation."
+        }
+      ],
+      "coverage_label": "Titre de section : « Santé, sécurité et qualité en entreprise aéronautique »",
+      "learning_objective": "Reconnaître les caractéristiques de mise en forme du titre d’ouverture.",
+      "correction_summary": "La réponse juste décrit un titre centré dans un bandeau bleu foncé sur fond blanc. Le piège est de confondre cette page avec une diapositive illustrée ou un document riche en images.",
+      "course_clarification": "Le bandeau de titre sert à signaler immédiatement la nouvelle section. La couleur et le centrage sont des indices visuels importants pour repérer la page d’ouverture.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s17_q3",
+      "prompt": "Quels éléments sont absents de cette page ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aucun tableau, graphique ni schéma n’est visible.",
+          "is_correct": true,
+          "explanation": "La page est volontairement sobre : elle contient un titre et un fond de présentation, mais pas d’outil de lecture comme un tableau, un graphique ou un schéma."
+        },
+        {
+          "id": "B",
+          "text": "Un tableau comparatif des contrats de travail est visible.",
+          "is_correct": false,
+          "explanation": "Aucun tableau n’apparaît, et le thème des contrats de travail ne correspond pas à cette page d’ouverture."
+        },
+        {
+          "id": "C",
+          "text": "Un schéma technique de maintenance est présent au centre.",
+          "is_correct": false,
+          "explanation": "Il n’y a pas de schéma technique au centre de la page. Le centre est occupé par le bandeau de titre."
+        },
+        {
+          "id": "D",
+          "text": "Un graphique en barres sur les risques professionnels est affiché.",
+          "is_correct": false,
+          "explanation": "Aucun graphique n’est montré. Le contenu visuel est limité à une composition de titre."
+        },
+        {
+          "id": "E",
+          "text": "Une photographie d’un aéronef en atelier occupe le fond.",
+          "is_correct": false,
+          "explanation": "La page ne comporte pas de photographie d’arrière-plan. Le fond est blanc, avec un bloc bleu de présentation."
+        }
+      ],
+      "coverage_label": "Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »",
+      "learning_objective": "Repérer l’absence d’éléments techniques dans une page de lancement.",
+      "correction_summary": "La bonne affirmation est celle qui note l’absence de tableau, graphique et schéma. Le piège consiste à imaginer une page de contenu illustré alors qu’il s’agit d’une page d’ouverture.",
+      "course_clarification": "Une page de lancement n’a pas pour rôle de détailler des données. Elle présente surtout le thème avec une composition simple et lisible.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s17_q4",
+      "prompt": "Quel détail visuel est bien présent sur la page ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un logo carré multicolore est placé dans l’angle inférieur droit.",
+          "is_correct": false,
+          "explanation": "Aucun logo carré multicolore n’est décrit ou visible dans cette composition. L’élément distinctif est le filigrane diagonal."
+        },
+        {
+          "id": "B",
+          "text": "Une bordure rouge encadre toute la page.",
+          "is_correct": false,
+          "explanation": "La page ne présente pas de bordure rouge périphérique. Le cadre visuel principal est un grand bandeau bleu centré."
+        },
+        {
+          "id": "C",
+          "text": "Une légende sous l’image donne des références réglementaires.",
+          "is_correct": false,
+          "explanation": "Il n’y a pas d’image légendée ni de références réglementaires affichées sous un visuel. La page est très peu chargée."
+        },
+        {
+          "id": "D",
+          "text": "Un QR code renvoie vers une ressource complémentaire.",
+          "is_correct": false,
+          "explanation": "Aucun QR code n’est mentionné ni visible. La page contient surtout le titre et le filigrane."
+        },
+        {
+          "id": "E",
+          "text": "Un filigrane diagonal répété « IAAG – Institut Aéronautique Amaury de la Grange » traverse la page.",
+          "is_correct": true,
+          "explanation": "Le filigrane répété en diagonale est bien mentionné et visible. Il recouvre la page sans être le sujet principal, ce qui permet de l’identifier comme un marquage de fond."
+        }
+      ],
+      "coverage_label": "Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »",
+      "learning_objective": "Identifier le filigrane et comprendre son rôle de marquage visuel.",
+      "correction_summary": "L’élément repérable est le filigrane diagonal répété IAAG. Le piège consiste à confondre ce marquage discret avec un logo, un QR code ou une légende informative.",
+      "course_clarification": "Un filigrane est un texte ou un motif ajouté en transparence sur une page. Il sert souvent à identifier la source ou à protéger le document, sans faire partie du contenu principal.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s17_q5",
+      "prompt": "Quelle lecture globale de la page est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La page présente un dossier complet sur les contrats CDI et CDD.",
+          "is_correct": false,
+          "explanation": "Les contrats de travail appartiennent à une autre partie du contenu. Ici, la page ne développe pas de notions juridiques détaillées."
+        },
+        {
+          "id": "B",
+          "text": "La page expose une procédure d’audit qualité en plusieurs étapes.",
+          "is_correct": false,
+          "explanation": "Aucune procédure étape par étape n’est développée. La page sert seulement à introduire le thème général."
+        },
+        {
+          "id": "C",
+          "text": "La page a l’apparence d’une couverture de document ou de support pédagogique.",
+          "is_correct": true,
+          "explanation": "La composition est très aérée, avec un titre central et peu d’éléments annexes. Cet aspect correspond à une page de couverture ou de lancement, pas à une page de développement."
+        },
+        {
+          "id": "D",
+          "text": "La page contient des exercices corrigés sur les EPI et la maintenance.",
+          "is_correct": false,
+          "explanation": "Il n’y a pas d’exercice corrigé ni de contenu opérationnel détaillé. La page reste une entrée de section."
+        },
+        {
+          "id": "E",
+          "text": "La page est une fiche de synthèse avec définitions et exemples multiples.",
+          "is_correct": false,
+          "explanation": "Une fiche de synthèse contient généralement plusieurs blocs de contenu. Ici, la priorité est donnée à la mise en scène du titre."
+        }
+      ],
+      "coverage_label": "Titre de section : « Santé, sécurité et qualité en entreprise aéronautique »",
+      "learning_objective": "Interpréter la nature d’une page à partir de sa structure visuelle générale.",
+      "correction_summary": "La bonne réponse est celle qui voit une couverture ou une page de lancement. Le principal piège est de surinterpréter la page comme une fiche de contenu alors qu’elle introduit seulement la partie.",
+      "course_clarification": "La forme générale d’une page aide à comprendre sa fonction. Quand le contenu est très minimal et que le titre est mis en scène, il s’agit souvent d’une ouverture de partie.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s17",
+  "anchor_slide_id": "s17",
+  "question_count_target": 5,
+  "title": "QCM - Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »"
+}

@@ -1,0 +1,113 @@
+{
+  "slide_id": "s15",
+  "subpart_id": "s15",
+  "title": "Le contrat de travail",
+  "objective": "Comprendre la définition, les formes et les éléments essentiels du contrat de travail.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s15-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Formes et points clés",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "**Élément**",
+          "**Ce qu’il faut retenir**"
+        ],
+        [
+          "**Contrat de travail**",
+          "Lien juridique qui organise le travail, la rémunération et l’autorité de l’employeur."
+        ],
+        [
+          "**CDI**",
+          "Contrat sans durée fixée ; il apporte **stabilité** et **protection**."
+        ],
+        [
+          "**CDD**",
+          "Contrat à durée limitée pour une **mission ponctuelle** ou un **remplacement**."
+        ],
+        [
+          "**Contrats spécifiques**",
+          "**Apprentissage**, **alternance** et **intérim** : formes adaptées à des situations précises."
+        ],
+        [
+          "**Mentions obligatoires**",
+          "**Identité des parties**, **fonction**, **salaire**, **horaires** et **durée**."
+        ],
+        [
+          "**Rupture**",
+          "**Démission**, **licenciement**, **rupture conventionnelle** ou **fin de CDD**."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Idée essentielle",
+      "text": null,
+      "bullets": [
+        "Le **contrat de travail** est un **lien juridique** entre un **salarié** et un **employeur** ; il fixe les droits et les obligations de chacun.",
+        "Le **CDI (Contrat à Durée Indéterminée)** correspond à une relation de travail plus **stable** ; le **CDD (Contrat à Durée Déterminée)** répond à un besoin **limité dans le temps**.",
+        "Un contrat doit préciser les éléments indispensables à son exécution : **identité des parties**, **fonction**, **salaire**, **horaires** et **durée**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Service-Public — CDD",
+      "locator": "Définition, durée et mentions obligatoires",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F36"
+    },
+    {
+      "source_type": "web",
+      "label": "Service-Public — CDI",
+      "locator": "Contrat sans limitation de durée",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1906"
+    },
+    {
+      "source_type": "web",
+      "label": "Service-Public — Contrat de travail écrit",
+      "locator": "Différences d’exigence d’écrit selon le contrat",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F15635"
+    },
+    {
+      "source_type": "web",
+      "label": "Conclusion du contrat de travail à durée déterminée (CDD) | Service Public",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F36"
+    },
+    {
+      "source_type": "web",
+      "label": "Conclusion d'un contrat de travail à durée indéterminée (CDI) pour un salarié | Service Public",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1906"
+    },
+    {
+      "source_type": "web",
+      "label": "Le contrat de travail est-il obligatoirement écrit ? | Service Public",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F15635"
+    }
+  ],
+  "course_reference_note": "Pages 13 à 18, partie IV : définition, formes, mentions obligatoires et rupture du contrat de travail. Les repères clés sont CDI, CDD et contrats spécifiques.",
+  "teacher_notes": "Faire distinguer **CDI** et **CDD** par la durée et l’usage. Rappeler les mentions obligatoires et les principales formes de rupture ; en appui, le **CDD** est un contrat encadré, tandis que le **CDI** reste la forme stable de la relation de travail."
+}

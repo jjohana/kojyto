@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S9-1",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S9-1-Q1",
+      "prompt": "À propos du rôle du train d’atterrissage, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il sert uniquement pendant la phase de croisière.",
+          "is_correct": false,
+          "explanation": "La croisière ne fait pas partie de sa fonction principale ; le train intervient surtout au sol et pendant les phases de décollage et d’atterrissage."
+        },
+        {
+          "id": "B",
+          "text": "Il remplace les ailes pour produire la portance.",
+          "is_correct": false,
+          "explanation": "La portance est assurée par les ailes, pas par le train d’atterrissage."
+        },
+        {
+          "id": "C",
+          "text": "Il n’a aucun rôle pendant le freinage après l’atterrissage.",
+          "is_correct": false,
+          "explanation": "Le freinage après l’atterrissage fait partie de ses fonctions : il contribue à absorber l’énergie cinétique horizontale."
+        },
+        {
+          "id": "D",
+          "text": "Il permet le roulage sur piste, taxiway et parking à faible vitesse.",
+          "is_correct": true,
+          "explanation": "Le train sert bien aux déplacements au sol à faible vitesse, notamment sur piste, taxiway et zone de parking."
+        },
+        {
+          "id": "E",
+          "text": "Il ne doit jamais être utilisé lors des manœuvres au sol.",
+          "is_correct": false,
+          "explanation": "Au contraire, l’orientation des roues et le train permettent les virages et manœuvres au sol."
+        }
+      ],
+      "coverage_label": "Rôle du train d’atterrissage",
+      "learning_objective": "Identifier les fonctions opérationnelles de base du train d’atterrissage.",
+      "correction_summary": "La bonne réponse décrit le roulage au sol à faible vitesse. Le piège consiste à confondre cette fonction avec la portance ou avec des phases de vol.",
+      "course_clarification": "Le train d’atterrissage sert aux déplacements au sol et à certaines phases de transition comme le décollage. Il participe aussi au freinage et à la stabilité de l’avion au sol.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S9-1-Q2",
+      "prompt": "Concernant l’orientation des roues et les efforts sur les atterrisseurs, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La compression est le seul effort appliqué sur un atterrisseur.",
+          "is_correct": false,
+          "explanation": "Plusieurs efforts existent : flexion avant, flexion arrière, flexion latérale, compression et torsion."
+        },
+        {
+          "id": "B",
+          "text": "L’orientation des roues assure la dirigeabilité et permet les virages au sol.",
+          "is_correct": true,
+          "explanation": "L’orientation des roues donne la capacité de diriger l’avion au roulage et d’effectuer des virages au sol."
+        },
+        {
+          "id": "C",
+          "text": "La torsion n’apparaît jamais sur un train d’atterrissage.",
+          "is_correct": false,
+          "explanation": "La torsion fait partie des efforts listés pour les atterrisseurs."
+        },
+        {
+          "id": "D",
+          "text": "La flexion latérale est sans lien avec les efforts au sol.",
+          "is_correct": false,
+          "explanation": "La flexion latérale fait bien partie des sollicitations mécaniques subies par le train."
+        },
+        {
+          "id": "E",
+          "text": "L’orientation des roues n’intervient que pour le freinage sur piste.",
+          "is_correct": false,
+          "explanation": "Le freinage est une autre fonction ; l’orientation des roues sert surtout à la dirigeabilité et aux manœuvres."
+        }
+      ],
+      "coverage_label": "Dirigeabilité et efforts appliqués",
+      "learning_objective": "Associer l’orientation des roues à la manœuvrabilité et reconnaître les principaux efforts mécaniques.",
+      "correction_summary": "La bonne réponse relie l’orientation des roues à la dirigeabilité. Le piège est de confondre cette fonction avec le freinage ou de réduire les efforts à une seule sollicitation.",
+      "course_clarification": "La dirigeabilité correspond à la capacité de guider l’avion au sol. Les atterrisseurs doivent résister à plusieurs efforts combinés, pas seulement à la compression verticale.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S9-1-Q3",
+      "prompt": "À propos des types de trains d’atterrissage, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le train classique présente notamment un risque de cabotage, appelé aussi mise en pylône.",
+          "is_correct": true,
+          "explanation": "Le risque de cabotage est bien associé au train classique, avec possibilité de mise en pylône."
+        },
+        {
+          "id": "B",
+          "text": "Le train tricycle est défini par deux trains principaux sur l’axe longitudinal et des balanciers auxiliaires.",
+          "is_correct": false,
+          "explanation": "Cette description correspond au train monotrace, pas au train tricycle."
+        },
+        {
+          "id": "C",
+          "text": "Le train monotrace est constitué d’une roulette de queue et d’un train avant.",
+          "is_correct": false,
+          "explanation": "Le train monotrace comporte deux trains principaux sur l’axe longitudinal et des atterrisseurs auxiliaires appelés balanciers."
+        },
+        {
+          "id": "D",
+          "text": "Le train multiple est interdit dès qu’un avion possède trois roues.",
+          "is_correct": false,
+          "explanation": "Le train multiple désigne une combinaison de trains tricycle et monotrace ; il ne se définit pas par un simple comptage de roues."
+        },
+        {
+          "id": "E",
+          "text": "Le train tricycle est surtout connu pour son moment de survirage au roulage.",
+          "is_correct": false,
+          "explanation": "Le moment de survirage est cité pour le train classique, pas pour le train tricycle."
+        }
+      ],
+      "coverage_label": "Types de trains d’atterrissage",
+      "learning_objective": "Distinguer les architectures classiques, tricycle, monotrace et multiple à partir de leurs caractéristiques.",
+      "correction_summary": "La bonne réponse associe le cabotage au train classique. Le principal piège consiste à confondre les architectures et leurs caractéristiques géométriques ou dynamiques.",
+      "course_clarification": "Un train d’atterrissage peut être organisé selon plusieurs architectures. Chaque type a des avantages et des limites de stabilité, de roulage et de comportement au sol.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S9-1-Q4",
+      "prompt": "Parmi les éléments constituant un train d’atterrissage, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le système d’orientation des roues est absent de tous les avions.",
+          "is_correct": false,
+          "explanation": "L’orientation des roues avant, et parfois principales, peut faire partie du train."
+        },
+        {
+          "id": "B",
+          "text": "Le système de rentrée-sortie et les trappes n’ont aucun lien avec le train.",
+          "is_correct": false,
+          "explanation": "Le système de manœuvre rentrée-sortie du train et les trappes font bien partie des éléments mentionnés."
+        },
+        {
+          "id": "C",
+          "text": "Les flotteurs sont réservés aux avions de chasse terrestres.",
+          "is_correct": false,
+          "explanation": "Les flotteurs sont indiqués pour le cas des hydravions, pas pour les avions terrestres classiques."
+        },
+        {
+          "id": "D",
+          "text": "Les skis sont utilisés pour les pistes enneigées et uniquement dans ce contexte.",
+          "is_correct": false,
+          "explanation": "Les skis sont bien prévus pour les pistes enneigées ; l’énoncé inverse ou déplace cette fonction."
+        },
+        {
+          "id": "E",
+          "text": "Un train peut comprendre des roues, des pneumatiques, des freins et leur système de commande et de contrôle.",
+          "is_correct": true,
+          "explanation": "Ces éléments font partie de la composition listée pour un train d’atterrissage."
+        }
+      ],
+      "coverage_label": "Composition d’un train d’atterrissage",
+      "learning_objective": "Reconnaître les principaux sous-ensembles d’un train et leurs adaptations spécifiques.",
+      "correction_summary": "La bonne réponse énumère des composants réels du train. Le piège est d’exclure à tort l’orientation, la rentrée-sortie ou les dispositifs spécifiques comme flotteurs et skis.",
+      "course_clarification": "Un train ne se limite pas aux roues : il inclut aussi les freins, l’orientation et parfois la rétraction. Selon l’aéronef, des éléments spécifiques peuvent remplacer la configuration standard.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S9-1-Q5",
+      "prompt": "À propos de la géométrie du train d’atterrissage, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La voie correspond à la distance entre l’axe de la roue avant et le fuselage.",
+          "is_correct": false,
+          "explanation": "La voie est la distance séparant les deux trains principaux, pas une distance par rapport au fuselage."
+        },
+        {
+          "id": "B",
+          "text": "L’angle de garde est l’angle entre l’axe de la roue principale et le plan de symétrie de l’avion.",
+          "is_correct": false,
+          "explanation": "Cette définition correspond au parallélisme, pas à l’angle de garde."
+        },
+        {
+          "id": "C",
+          "text": "L’empattement est la distance séparant l’axe de la roue de l’atterrisseur auxiliaire des axes des roues des atterrisseurs principaux.",
+          "is_correct": true,
+          "explanation": "C’est la définition donnée pour l’empattement dans la géométrie des trains."
+        },
+        {
+          "id": "D",
+          "text": "L’angle de carrossage est l’angle entre la verticale de l’avion et la droite joignant le centre de gravité au centre des roues.",
+          "is_correct": false,
+          "explanation": "Cette description correspond à l’angle de garde, alors que le carrossage concerne la roue et le plan de symétrie de l’avion."
+        },
+        {
+          "id": "E",
+          "text": "Le parallélisme est l’angle entre l’axe du fût de train principal et la perpendiculaire à l’axe de symétrie.",
+          "is_correct": false,
+          "explanation": "Cette définition correspond à l’angle de chasse, pas au parallélisme."
+        }
+      ],
+      "coverage_label": "Géométrie des trains d’atterrissage",
+      "learning_objective": "Lire correctement les définitions de l’empattement, de la voie et des principaux angles géométriques.",
+      "correction_summary": "La bonne réponse donne la définition de l’empattement. Le piège classique est d’intervertir les angles de garde, de chasse, de carrossage et de parallélisme.",
+      "course_clarification": "Ces paramètres géométriques servent à caractériser la position et l’orientation du train. Ils influencent la stabilité, la tenue au roulage et le comportement en manœuvre.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S9",
+  "anchor_slide_id": "S9-1",
+  "question_count_target": 5,
+  "title": "QCM - Rôle et fonctions du train d’atterrissage"
+}

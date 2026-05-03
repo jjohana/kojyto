@@ -1,5 +1,5 @@
 {
-  "site_build_version": 3,
+  "site_build_version": 6,
   "viewer_mode": "user",
   "page_count": 61,
   "slide_count": 30,
@@ -9,8 +9,8 @@
       "page_id": "S1-1",
       "kind": "slide",
       "badge": "S1-1",
-      "title": "Origine de la poussée et terme réacteur",
-      "subtitle": "Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.",
+      "title": "Origine de la poussée : terme réacteur",
+      "subtitle": "Installer le principe physique de la poussée nette et son expression de base.",
       "href": "s1-1.html",
       "json_href": "s1-1.json"
     },
@@ -18,8 +18,8 @@
       "page_id": "slide::S1-1",
       "kind": "quiz",
       "badge": "QCM S1-1",
-      "title": "QCM - Origine de la poussée et terme réacteur",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Origine de la poussée : terme réacteur",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s1-1.html",
       "json_href": "slide-s1-1.json"
     },
@@ -27,8 +27,8 @@
       "page_id": "S1-2",
       "kind": "slide",
       "badge": "S1-2",
-      "title": "Poussée nette : terme fusée, poussée de culot et poussée brute",
-      "subtitle": "Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.",
+      "title": "Exemple numérique et architecture double flux",
+      "subtitle": "Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.",
       "href": "s1-2.html",
       "json_href": "s1-2.json"
     },
@@ -36,8 +36,8 @@
       "page_id": "slide::S1-2",
       "kind": "quiz",
       "badge": "QCM S1-2",
-      "title": "QCM - Poussée nette : terme fusée, poussée de culot et poussée brute",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Exemple numérique et architecture double flux",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s1-2.html",
       "json_href": "slide-s1-2.json"
     },
@@ -45,8 +45,8 @@
       "page_id": "S1-3",
       "kind": "slide",
       "badge": "S1-3",
-      "title": "Exemple chiffré et répartition des forces internes",
-      "subtitle": "Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.",
+      "title": "Tuyère, poussée brute et poussée spécifique",
+      "subtitle": "Relier la tuyère, les conditions d’essai et les indicateurs de performance.",
       "href": "s1-3.html",
       "json_href": "s1-3.json"
     },
@@ -54,8 +54,8 @@
       "page_id": "slide::S1-3",
       "kind": "quiz",
       "badge": "QCM S1-3",
-      "title": "QCM - Exemple chiffré et répartition des forces internes",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Tuyère, poussée brute et poussée spécifique",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s1-3.html",
       "json_href": "slide-s1-3.json"
     },
@@ -64,7 +64,7 @@
       "kind": "slide",
       "badge": "S2-1",
       "title": "Consommation horaire et consommation spécifique",
-      "subtitle": "Définir les indicateurs de consommation utilisés pour comparer les moteurs.",
+      "subtitle": "Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.",
       "href": "s2-1.html",
       "json_href": "s2-1.json"
     },
@@ -73,7 +73,7 @@
       "kind": "quiz",
       "badge": "QCM S2-1",
       "title": "QCM - Consommation horaire et consommation spécifique",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s2-1.html",
       "json_href": "slide-s2-1.json"
     },
@@ -81,8 +81,8 @@
       "page_id": "S2-2",
       "kind": "slide",
       "badge": "S2-2",
-      "title": "Puissances du réacteur : calorifique, thermique et utile",
-      "subtitle": "Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.",
+      "title": "Repères de consommation et surveillance moteur",
+      "subtitle": "Interpréter des valeurs usuelles et les informations affichées au cockpit.",
       "href": "s2-2.html",
       "json_href": "s2-2.json"
     },
@@ -90,35 +90,17 @@
       "page_id": "slide::S2-2",
       "kind": "quiz",
       "badge": "QCM S2-2",
-      "title": "QCM - Puissances du réacteur : calorifique, thermique et utile",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Repères de consommation et surveillance moteur",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s2-2.html",
       "json_href": "slide-s2-2.json"
-    },
-    {
-      "page_id": "S2-3",
-      "kind": "slide",
-      "badge": "S2-3",
-      "title": "Rendements du turboréacteur et taux de dilution",
-      "subtitle": "Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.",
-      "href": "s2-3.html",
-      "json_href": "s2-3.json"
-    },
-    {
-      "page_id": "slide::S2-3",
-      "kind": "quiz",
-      "badge": "QCM S2-3",
-      "title": "QCM - Rendements du turboréacteur et taux de dilution",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s2-3.html",
-      "json_href": "slide-s2-3.json"
     },
     {
       "page_id": "S3-1",
       "kind": "slide",
       "badge": "S3-1",
-      "title": "Principe propulsif du turbopropulseur",
-      "subtitle": "Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.",
+      "title": "Puissance calorifique et puissance thermique théorique",
+      "subtitle": "Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.",
       "href": "s3-1.html",
       "json_href": "s3-1.json"
     },
@@ -126,8 +108,8 @@
       "page_id": "slide::S3-1",
       "kind": "quiz",
       "badge": "QCM S3-1",
-      "title": "QCM - Principe propulsif du turbopropulseur",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Puissance calorifique et puissance thermique théorique",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s3-1.html",
       "json_href": "slide-s3-1.json"
     },
@@ -135,8 +117,8 @@
       "page_id": "S3-2",
       "kind": "slide",
       "badge": "S3-2",
-      "title": "Puissance sur l’arbre, SHP et E.S.H.P.",
-      "subtitle": "Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.",
+      "title": "Puissance thermique réelle et puissance propulsive",
+      "subtitle": "Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.",
       "href": "s3-2.html",
       "json_href": "s3-2.json"
     },
@@ -144,17 +126,53 @@
       "page_id": "slide::S3-2",
       "kind": "quiz",
       "badge": "QCM S3-2",
-      "title": "QCM - Puissance sur l’arbre, SHP et E.S.H.P.",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Puissance thermique réelle et puissance propulsive",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s3-2.html",
       "json_href": "slide-s3-2.json"
+    },
+    {
+      "page_id": "S3-3",
+      "kind": "slide",
+      "badge": "S3-3",
+      "title": "Rendements de la chaîne propulsive",
+      "subtitle": "Définir et comparer les rendements à chaque étage du moteur.",
+      "href": "s3-3.html",
+      "json_href": "s3-3.json"
+    },
+    {
+      "page_id": "slide::S3-3",
+      "kind": "quiz",
+      "badge": "QCM S3-3",
+      "title": "QCM - Rendements de la chaîne propulsive",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s3-3.html",
+      "json_href": "slide-s3-3.json"
+    },
+    {
+      "page_id": "S3-4",
+      "kind": "slide",
+      "badge": "S3-4",
+      "title": "Lecture du diagramme d’écoulement des gaz",
+      "subtitle": "Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.",
+      "href": "s3-4.html",
+      "json_href": "s3-4.json"
+    },
+    {
+      "page_id": "slide::S3-4",
+      "kind": "quiz",
+      "badge": "QCM S3-4",
+      "title": "QCM - Lecture du diagramme d’écoulement des gaz",
+      "subtitle": "4 questions - correction immédiate",
+      "href": "slide-s3-4.html",
+      "json_href": "slide-s3-4.json"
     },
     {
       "page_id": "S4-1",
       "kind": "slide",
       "badge": "S4-1",
-      "title": "Lire le diagramme d’écoulement du CFM56-5",
-      "subtitle": "Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.",
+      "title": "Taux de dilution et familles de moteurs",
+      "subtitle": "Relier le taux de dilution aux familles de turboréacteurs.",
       "href": "s4-1.html",
       "json_href": "s4-1.json"
     },
@@ -162,17 +180,35 @@
       "page_id": "slide::S4-1",
       "kind": "quiz",
       "badge": "QCM S4-1",
-      "title": "QCM - Lire le diagramme d’écoulement du CFM56-5",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Taux de dilution et exemples de moteurs",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s4-1.html",
       "json_href": "slide-s4-1.json"
+    },
+    {
+      "page_id": "S4-2",
+      "kind": "slide",
+      "badge": "S4-2",
+      "title": "Principe du turbopropulseur",
+      "subtitle": "Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.",
+      "href": "s4-2.html",
+      "json_href": "s4-2.json"
+    },
+    {
+      "page_id": "slide::S4-2",
+      "kind": "quiz",
+      "badge": "QCM S4-2",
+      "title": "QCM - Principe du turbopropulseur",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s4-2.html",
+      "json_href": "slide-s4-2.json"
     },
     {
       "page_id": "S5-1",
       "kind": "slide",
       "badge": "S5-1",
-      "title": "Canal d’éjection, cône de raccordement et tuyère",
-      "subtitle": "Comprendre comment l’échappement transforme la pression en vitesse de jet.",
+      "title": "Canal d’éjection et rôle de la tuyère",
+      "subtitle": "Décrire les organes de sortie d’un GTR simple flux.",
       "href": "s5-1.html",
       "json_href": "s5-1.json"
     },
@@ -180,8 +216,8 @@
       "page_id": "slide::S5-1",
       "kind": "quiz",
       "badge": "QCM S5-1",
-      "title": "QCM - Canal d’éjection, cône de raccordement et tuyère",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Canal d’éjection et rôle de la tuyère",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s5-1.html",
       "json_href": "slide-s5-1.json"
     },
@@ -189,8 +225,8 @@
       "page_id": "S5-2",
       "kind": "slide",
       "badge": "S5-2",
-      "title": "Géométries de sortie : flux séparés, flux mélangés et section variable",
-      "subtitle": "Distinguer les principales architectures d’échappement d’un turboréacteur double flux.",
+      "title": "Tuyères variables, double flux et adaptation au vol",
+      "subtitle": "Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.",
       "href": "s5-2.html",
       "json_href": "s5-2.json"
     },
@@ -198,17 +234,35 @@
       "page_id": "slide::S5-2",
       "kind": "quiz",
       "badge": "QCM S5-2",
-      "title": "QCM - Géométries de sortie : flux séparés, flux mélangés et section variable",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Tuyères variables, double flux et adaptation au vol",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s5-2.html",
       "json_href": "slide-s5-2.json"
+    },
+    {
+      "page_id": "S5-3",
+      "kind": "slide",
+      "badge": "S5-3",
+      "title": "Tuyère convergente, rapport critique et supersonique",
+      "subtitle": "Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.",
+      "href": "s5-3.html",
+      "json_href": "s5-3.json"
+    },
+    {
+      "page_id": "slide::S5-3",
+      "kind": "quiz",
+      "badge": "QCM S5-3",
+      "title": "QCM - Tuyère convergente, rapport critique et supersonique",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s5-3.html",
+      "json_href": "slide-s5-3.json"
     },
     {
       "page_id": "S6-1",
       "kind": "slide",
       "badge": "S6-1",
-      "title": "Post-combustion : intérêt, architecture et coût en carburant",
-      "subtitle": "Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.",
+      "title": "Post-combustion et bruit de tuyère",
+      "subtitle": "Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.",
       "href": "s6-1.html",
       "json_href": "s6-1.json"
     },
@@ -216,53 +270,17 @@
       "page_id": "slide::S6-1",
       "kind": "quiz",
       "badge": "QCM S6-1",
-      "title": "QCM - Post-combustion : intérêt, architecture et coût en carburant",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Post-combustion et bruit de tuyère",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s6-1.html",
       "json_href": "slide-s6-1.json"
-    },
-    {
-      "page_id": "S6-2",
-      "kind": "slide",
-      "badge": "S6-2",
-      "title": "Tuyère convergente : régime subsonique et adaptation",
-      "subtitle": "Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.",
-      "href": "s6-2.html",
-      "json_href": "s6-2.json"
-    },
-    {
-      "page_id": "slide::S6-2",
-      "kind": "quiz",
-      "badge": "QCM S6-2",
-      "title": "QCM - Tuyère convergente : régime subsonique et adaptation",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s6-2.html",
-      "json_href": "slide-s6-2.json"
-    },
-    {
-      "page_id": "S6-3",
-      "kind": "slide",
-      "badge": "S6-3",
-      "title": "Tuyère supersonique convergente-divergente",
-      "subtitle": "Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.",
-      "href": "s6-3.html",
-      "json_href": "s6-3.json"
-    },
-    {
-      "page_id": "slide::S6-3",
-      "kind": "quiz",
-      "badge": "QCM S6-3",
-      "title": "QCM - Tuyère supersonique convergente-divergente",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s6-3.html",
-      "json_href": "slide-s6-3.json"
     },
     {
       "page_id": "S7-1",
       "kind": "slide",
       "badge": "S7-1",
-      "title": "Traitement acoustique de la tuyère",
-      "subtitle": "Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.",
+      "title": "But et formule de la poussée inverse",
+      "subtitle": "Poser le freinage aérodynamique au sol et sa loi de poussée.",
       "href": "s7-1.html",
       "json_href": "s7-1.json"
     },
@@ -270,17 +288,53 @@
       "page_id": "slide::S7-1",
       "kind": "quiz",
       "badge": "QCM S7-1",
-      "title": "QCM - Traitement acoustique de la tuyère",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - But et formule de la poussée inverse",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s7-1.html",
       "json_href": "slide-s7-1.json"
+    },
+    {
+      "page_id": "S7-2",
+      "kind": "slide",
+      "badge": "S7-2",
+      "title": "Poussée inverse : efficacité, limites et choix des flux",
+      "subtitle": "Comparer les architectures simple flux et double flux et situer les limites d’utilisation.",
+      "href": "s7-2.html",
+      "json_href": "s7-2.json"
+    },
+    {
+      "page_id": "slide::S7-2",
+      "kind": "quiz",
+      "badge": "QCM S7-2",
+      "title": "QCM - Poussée inverse en double flux et ordres de grandeur",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s7-2.html",
+      "json_href": "slide-s7-2.json"
+    },
+    {
+      "page_id": "S7-3",
+      "kind": "slide",
+      "badge": "S7-3",
+      "title": "Calcul et interprétation de la poussée inverse",
+      "subtitle": "Exploiter la loi de poussée inverse sur un cas d’utilisation.",
+      "href": "s7-3.html",
+      "json_href": "s7-3.json"
+    },
+    {
+      "page_id": "slide::S7-3",
+      "kind": "quiz",
+      "badge": "QCM S7-3",
+      "title": "QCM - Calcul et interprétation de la poussée inverse",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s7-3.html",
+      "json_href": "slide-s7-3.json"
     },
     {
       "page_id": "S8-1",
       "kind": "slide",
       "badge": "S8-1",
-      "title": "Inverseur de poussée : but, principe et poussée reverse",
-      "subtitle": "Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.",
+      "title": "Commandes, sécurités et limitations de l’inverseur",
+      "subtitle": "Identifier les conditions de mise en reverse et les verrouillages de protection.",
       "href": "s8-1.html",
       "json_href": "s8-1.json"
     },
@@ -288,8 +342,8 @@
       "page_id": "slide::S8-1",
       "kind": "quiz",
       "badge": "QCM S8-1",
-      "title": "QCM - Inverseur de poussée : but, principe et poussée reverse",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Commandes, sécurités et limitations de l’inverseur",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s8-1.html",
       "json_href": "slide-s8-1.json"
     },
@@ -297,8 +351,8 @@
       "page_id": "S8-2",
       "kind": "slide",
       "badge": "S8-2",
-      "title": "Inverseur sur flux secondaire dans les architectures double flux",
-      "subtitle": "Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.",
+      "title": "Inverseur pneumatique : organes et séquence",
+      "subtitle": "Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.",
       "href": "s8-2.html",
       "json_href": "s8-2.json"
     },
@@ -306,8 +360,8 @@
       "page_id": "slide::S8-2",
       "kind": "quiz",
       "badge": "QCM S8-2",
-      "title": "QCM - Inverseur sur flux secondaire et architectures double flux",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Dispositif pneumatique et séquence de fonctionnement",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s8-2.html",
       "json_href": "slide-s8-2.json"
     },
@@ -315,8 +369,8 @@
       "page_id": "S9-1",
       "kind": "slide",
       "badge": "S9-1",
-      "title": "Commande pneumatique de l’inverseur : sécurités et organes",
-      "subtitle": "Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.",
+      "title": "Rôle et fonctions du train d’atterrissage",
+      "subtitle": "Poser les fonctions mécaniques et opérationnelles du train.",
       "href": "s9-1.html",
       "json_href": "s9-1.json"
     },
@@ -324,8 +378,8 @@
       "page_id": "slide::S9-1",
       "kind": "quiz",
       "badge": "QCM S9-1",
-      "title": "QCM - Commande pneumatique de l’inverseur : sécurités et organes",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Rôle et fonctions du train d’atterrissage",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s9-1.html",
       "json_href": "slide-s9-1.json"
     },
@@ -333,8 +387,8 @@
       "page_id": "S9-2",
       "kind": "slide",
       "badge": "S9-2",
-      "title": "Séquence d’un inverseur de poussée et voyants associés",
-      "subtitle": "Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.",
+      "title": "Types de trains et composition",
+      "subtitle": "Distinguer les architectures de base et les éléments constitutifs.",
       "href": "s9-2.html",
       "json_href": "s9-2.json"
     },
@@ -342,17 +396,35 @@
       "page_id": "slide::S9-2",
       "kind": "quiz",
       "badge": "QCM S9-2",
-      "title": "QCM - Séquence de fonctionnement et indications de l’inverseur",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Types de trains et composition",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s9-2.html",
       "json_href": "slide-s9-2.json"
+    },
+    {
+      "page_id": "S9-3",
+      "kind": "slide",
+      "badge": "S9-3",
+      "title": "Géométrie des trains et dispositions des atterrisseurs",
+      "subtitle": "Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.",
+      "href": "s9-3.html",
+      "json_href": "s9-3.json"
+    },
+    {
+      "page_id": "slide::S9-3",
+      "kind": "quiz",
+      "badge": "QCM S9-3",
+      "title": "QCM - Géométrie des trains et dispositions des atterrisseurs",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s9-3.html",
+      "json_href": "slide-s9-3.json"
     },
     {
       "page_id": "S10-1",
       "kind": "slide",
       "badge": "S10-1",
-      "title": "Rôle des atterrisseurs, efforts et types de trains",
-      "subtitle": "Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.",
+      "title": "Amortisseurs oléopneumatiques : rôle et principe",
+      "subtitle": "Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.",
       "href": "s10-1.html",
       "json_href": "s10-1.json"
     },
@@ -360,8 +432,8 @@
       "page_id": "slide::S10-1",
       "kind": "quiz",
       "badge": "QCM S10-1",
-      "title": "QCM - Rôle des atterrisseurs, efforts et types de trains",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s10-1.html",
       "json_href": "slide-s10-1.json"
     },
@@ -369,8 +441,8 @@
       "page_id": "S10-2",
       "kind": "slide",
       "badge": "S10-2",
-      "title": "Composition générale d’un train d’atterrissage",
-      "subtitle": "Connaître les principaux sous-ensembles d’un train et les contraintes de construction.",
+      "title": "Fonctionnement en trois temps de l’amortisseur",
+      "subtitle": "Décrire la séquence compression-détente-équilibrage.",
       "href": "s10-2.html",
       "json_href": "s10-2.json"
     },
@@ -378,17 +450,35 @@
       "page_id": "slide::S10-2",
       "kind": "quiz",
       "badge": "QCM S10-2",
-      "title": "QCM - Composition générale d’un train d’atterrissage",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Fonctionnement en trois temps de l’amortisseur",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s10-2.html",
       "json_href": "slide-s10-2.json"
+    },
+    {
+      "page_id": "S10-3",
+      "kind": "slide",
+      "badge": "S10-3",
+      "title": "États du train, verrouillages et sécurités",
+      "subtitle": "Présenter la cinématique des trains et les sécurités associées.",
+      "href": "s10-3.html",
+      "json_href": "s10-3.json"
+    },
+    {
+      "page_id": "slide::S10-3",
+      "kind": "quiz",
+      "badge": "QCM S10-3",
+      "title": "QCM - Rentrée-sortie, verrouillage et secours",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s10-3.html",
+      "json_href": "slide-s10-3.json"
     },
     {
       "page_id": "S11-1",
       "kind": "slide",
       "badge": "S11-1",
-      "title": "Géométrie du train et dispositions des roues",
-      "subtitle": "Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.",
+      "title": "Voyants, roues et pneumatiques",
+      "subtitle": "Reconnaître les états de surveillance et les familles de roues/pneus.",
       "href": "s11-1.html",
       "json_href": "s11-1.json"
     },
@@ -396,17 +486,53 @@
       "page_id": "slide::S11-1",
       "kind": "quiz",
       "badge": "QCM S11-1",
-      "title": "QCM - Géométrie du train et dispositions des roues",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - Voyants, roues et pneumatiques",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s11-1.html",
       "json_href": "slide-s11-1.json"
+    },
+    {
+      "page_id": "S11-2",
+      "kind": "slide",
+      "badge": "S11-2",
+      "title": "Freinage, adhérence et systèmes de protection",
+      "subtitle": "Décrire les circuits de freinage et leurs sécurités.",
+      "href": "s11-2.html",
+      "json_href": "s11-2.json"
+    },
+    {
+      "page_id": "slide::S11-2",
+      "kind": "quiz",
+      "badge": "QCM S11-2",
+      "title": "QCM - Freinage, adhérence et systèmes de protection",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s11-2.html",
+      "json_href": "slide-s11-2.json"
+    },
+    {
+      "page_id": "S11-3",
+      "kind": "slide",
+      "badge": "S11-3",
+      "title": "Anti-patinage, pneus, dirigibilité et surveillance",
+      "subtitle": "Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.",
+      "href": "s11-3.html",
+      "json_href": "s11-3.json"
+    },
+    {
+      "page_id": "slide::S11-3",
+      "kind": "quiz",
+      "badge": "QCM S11-3",
+      "title": "QCM - Anti-patinage, pneus, dirigibilité et surveillance",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s11-3.html",
+      "json_href": "slide-s11-3.json"
     },
     {
       "page_id": "S12-1",
       "kind": "slide",
       "badge": "S12-1",
-      "title": "Amortisseur oléopneumatique : structure et gonflage",
-      "subtitle": "Expliquer la constitution de l’amortisseur et les précautions de gonflage.",
+      "title": "Exercice à choix multiples : notions clés des atterrisseurs",
+      "subtitle": "Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.",
       "href": "s12-1.html",
       "json_href": "s12-1.json"
     },
@@ -414,143 +540,17 @@
       "page_id": "slide::S12-1",
       "kind": "quiz",
       "badge": "QCM S12-1",
-      "title": "QCM - Amortisseur oléopneumatique : structure et gonflage",
-      "subtitle": "5 questions - correction immÃ©diate",
+      "title": "QCM - QCM d’entraînement : notions clés des atterrisseurs",
+      "subtitle": "5 questions - correction immédiate",
       "href": "slide-s12-1.html",
       "json_href": "slide-s12-1.json"
-    },
-    {
-      "page_id": "S12-2",
-      "kind": "slide",
-      "badge": "S12-2",
-      "title": "Amortisseur : compression, détente et équilibrage",
-      "subtitle": "Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.",
-      "href": "s12-2.html",
-      "json_href": "s12-2.json"
-    },
-    {
-      "page_id": "slide::S12-2",
-      "kind": "quiz",
-      "badge": "QCM S12-2",
-      "title": "QCM - Amortisseur : compression, détente et équilibrage",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s12-2.html",
-      "json_href": "slide-s12-2.json"
-    },
-    {
-      "page_id": "S13-1",
-      "kind": "slide",
-      "badge": "S13-1",
-      "title": "Train escamotable : rentrée, sortie et verrouillages",
-      "subtitle": "Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.",
-      "href": "s13-1.html",
-      "json_href": "s13-1.json"
-    },
-    {
-      "page_id": "slide::S13-1",
-      "kind": "quiz",
-      "badge": "QCM S13-1",
-      "title": "QCM - Train escamotable : rentrée, sortie et verrouillages",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s13-1.html",
-      "json_href": "slide-s13-1.json"
-    },
-    {
-      "page_id": "S14-1",
-      "kind": "slide",
-      "badge": "S14-1",
-      "title": "Roues et pneumatiques : types, structure et dimensions",
-      "subtitle": "Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.",
-      "href": "s14-1.html",
-      "json_href": "s14-1.json"
-    },
-    {
-      "page_id": "slide::S14-1",
-      "kind": "quiz",
-      "badge": "QCM S14-1",
-      "title": "QCM - Roues et pneumatiques : types, structure et dimensions",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s14-1.html",
-      "json_href": "slide-s14-1.json"
-    },
-    {
-      "page_id": "S14-2",
-      "kind": "slide",
-      "badge": "S14-2",
-      "title": "Usure, shimmy, dirigabilité et surveillance",
-      "subtitle": "Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.",
-      "href": "s14-2.html",
-      "json_href": "s14-2.json"
-    },
-    {
-      "page_id": "slide::S14-2",
-      "kind": "quiz",
-      "badge": "QCM S14-2",
-      "title": "QCM - Usure, shimmy, dirigabilité et surveillance",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s14-2.html",
-      "json_href": "slide-s14-2.json"
-    },
-    {
-      "page_id": "S15-1",
-      "kind": "slide",
-      "badge": "S15-1",
-      "title": "Circuits de freinage et freins à disques",
-      "subtitle": "Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.",
-      "href": "s15-1.html",
-      "json_href": "s15-1.json"
-    },
-    {
-      "page_id": "slide::S15-1",
-      "kind": "quiz",
-      "badge": "QCM S15-1",
-      "title": "QCM - Circuits de freinage et freins à disques",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s15-1.html",
-      "json_href": "slide-s15-1.json"
-    },
-    {
-      "page_id": "S15-2",
-      "kind": "slide",
-      "badge": "S15-2",
-      "title": "Anti-skid et anti-brake",
-      "subtitle": "Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.",
-      "href": "s15-2.html",
-      "json_href": "s15-2.json"
-    },
-    {
-      "page_id": "slide::S15-2",
-      "kind": "quiz",
-      "badge": "QCM S15-2",
-      "title": "QCM - Anti-skid et anti-brake",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s15-2.html",
-      "json_href": "slide-s15-2.json"
-    },
-    {
-      "page_id": "S16-1",
-      "kind": "slide",
-      "badge": "S16-1",
-      "title": "QCM : les repères essentiels sur les atterrisseurs",
-      "subtitle": "Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.",
-      "href": "s16-1.html",
-      "json_href": "s16-1.json"
-    },
-    {
-      "page_id": "slide::S16-1",
-      "kind": "quiz",
-      "badge": "QCM S16-1",
-      "title": "QCM - Synthèse et entraînement QCM sur les atterrisseurs",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "slide-s16-1.html",
-      "json_href": "slide-s16-1.json"
     },
     {
       "page_id": "final::validation",
       "kind": "quiz",
       "badge": "Validation finale",
-      "title": "Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs",
-      "subtitle": "25 questions tirees au sort sur 50 - correction finale",
+      "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs",
+      "subtitle": "25 questions tirées au sort sur 149 - correction finale",
       "href": "final-validation.html",
       "json_href": "final-validation.json"
     }

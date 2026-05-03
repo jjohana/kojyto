@@ -1,0 +1,92 @@
+{
+  "slide_id": "S4-5",
+  "subpart_id": "S4",
+  "title": "Blocs de contrôle et interfaces avec le DC SYSTEM",
+  "objective": "Identifier les unités de contrôle visibles et leur lien avec l’alimentation DC.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s4-5-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repères à mémoriser",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "**Bloc**",
+          "**Fonction visible**",
+          "**Lien avec le DC SYSTEM**"
+        ],
+        [
+          "**GCU** (Generator Control Unit, unité de contrôle du générateur)",
+          "Commande et surveille chaque **IDG** (Integrated Drive Generator, générateur à entraînement intégré) sur les moteurs.",
+          "Sécurise la production **AC** qui alimente ensuite la chaîne de conversion vers le **DC SYSTEM**."
+        ],
+        [
+          "**EMER GEN GCU** (unité de contrôle du générateur de secours)",
+          "Commande et surveille l’**EMER GEN** de secours.",
+          "Prend le relais quand les sources normales ne suffisent plus et alimente la chaîne électrique associée au **DC SYSTEM**."
+        ],
+        [
+          "**GAPCU** (Ground and Auxiliary Power Control Unit, unité de contrôle de l’alimentation sol et auxiliaire)",
+          "Gère le **APU GEN** et l’**EXTERNAL POWER A/B**.",
+          "Oriente ces sources vers l’**AC SYSTEM** ; la conversion permet ensuite l’alimentation du **DC SYSTEM**."
+        ],
+        [
+          "**Interfaces DC**",
+          "**TR 1, 2, ESS** (Transformer Rectifier), **STATIC INVERTER**, batteries et **BCL** (Battery Charge Limiter).",
+          "Assurent la conversion et la distribution vers les bus **DC** et les circuits associés."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture rapide de l’architecture",
+      "text": null,
+      "bullets": [
+        "La logique à retenir est simple : **source**, **contrôle**, puis **conversion** avant la distribution vers le **DC SYSTEM**.",
+        "Les blocs de contrôle visibles se partagent les rôles : **GCU** pour les **IDG**, **EMER GEN GCU** pour la génération de secours, **GAPCU** pour l’**APU GEN** et la puissance externe.",
+        "Le **DC SYSTEM** reçoit l’énergie après passage par les **TR** et les circuits de secours ou de batterie ; les notations **GEN**, **IDG**, **AC SYSTEM** et **DC SYSTEM** restent celles du schéma."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus – Preventing Loss of Engine Generators on A320 Family, A330 and A340 Aircraft",
+      "locator": "rôle du GCU : surveillance et protection du générateur",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    },
+    {
+      "source_type": "web",
+      "label": "Skybrary – Transformer Rectifier Unit (TRU)",
+      "locator": "conversion de l’AC vers 28 V DC",
+      "url": "https://skybrary.aero/index.php/articles/transformer-rectifier-unit-tru"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Characteristics – A320 – Electrical System",
+      "locator": "research",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2023-12/ac_a320_1223.pdf"
+    }
+  ],
+  "course_reference_note": "Les repères visibles rassemblent les blocs de contrôle autour des sources AC et de la chaîne DC. Les liens à retenir sont GCU, EMER GEN GCU, GAPCU et les interfaces de conversion vers le DC SYSTEM.",
+  "teacher_notes": "Faire repérer d’abord les trois blocs de contrôle, puis faire suivre la chaîne d’énergie : source AC, supervision, conversion, distribution DC. Insister sur la distinction entre génération AC et alimentation du DC SYSTEM via les TR et les circuits associés."
+}

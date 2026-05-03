@@ -1,67 +1,69 @@
 {
-  "generated_at": "2026-05-02T20:54:21.456472+00:00",
-  "course_count": 5,
-  "total_size_bytes": 197466110,
+  "generated_at": "2026-05-03T03:07:24.130498+00:00",
+  "course_count": 4,
+  "total_size_bytes": 247788029,
   "courses": [
     {
       "course_id": "7e902247-7afe-428c-8d0d-ebad5af46a8d",
       "title": "AERONEFS ATA 24",
       "source_filename": "AERONEFS ATA 24.pdf",
+      "source_filenames": [
+        "AERONEFS ATA 24.pdf"
+      ],
       "created_at": "2026-04-23T17:53:52.515855",
       "href": "courses/7e902247-7afe-428c-8d0d-ebad5af46a8d/index.html",
       "deck_href": "courses/7e902247-7afe-428c-8d0d-ebad5af46a8d/deck.html",
       "page_count": 61,
       "slide_count": 30,
       "quiz_count": 31,
-      "size_bytes": 72047147
+      "size_bytes": 73059434
     },
     {
       "course_id": "d20aaea5-04e7-4ef7-bd1c-0070ffa29691",
       "title": "Cours 8 du 13 janvier 2026_filigrane + 2 docs",
       "source_filename": "Cours 8 du 13 janvier 2026_filigrane.pdf + 2 autres documents",
+      "source_filenames": [
+        "Cours 8 du 13 janvier 2026_filigrane.pdf",
+        "Cours 18 du mardi 27 janvier 2026_filigrane.pdf",
+        "Cours Atterrisseurs+QCM 26092025 M_filigrane.pdf"
+      ],
       "created_at": "2026-04-22T22:28:38.028963",
       "href": "courses/d20aaea5-04e7-4ef7-bd1c-0070ffa29691/index.html",
       "deck_href": "courses/d20aaea5-04e7-4ef7-bd1c-0070ffa29691/deck.html",
       "page_count": 61,
       "slide_count": 30,
       "quiz_count": 31,
-      "size_bytes": 59554283
+      "size_bytes": 78405222
     },
     {
       "course_id": "3166d55f-5966-465f-9840-2610d900a245",
       "title": "Cinematique_BTS_Aero",
       "source_filename": "Cours_Complet_Cinematique_BTS_Aero.docx",
+      "source_filenames": [
+        "Cours_Complet_Cinematique_BTS_Aero.docx"
+      ],
       "created_at": "2026-04-05T17:43:40.313604",
       "href": "courses/3166d55f-5966-465f-9840-2610d900a245/index.html",
       "deck_href": "courses/3166d55f-5966-465f-9840-2610d900a245/deck.html",
       "page_count": 41,
       "slide_count": 20,
       "quiz_count": 21,
-      "size_bytes": 18063017
-    },
-    {
-      "course_id": "07ab92ec-c759-4fdb-97cf-80bb61661e71",
-      "title": "AERONEFS ATA 24",
-      "source_filename": "AERONEFS ATA 24.pdf",
-      "created_at": "2026-04-05T10:37:07.425102",
-      "href": "courses/07ab92ec-c759-4fdb-97cf-80bb61661e71/index.html",
-      "deck_href": "courses/07ab92ec-c759-4fdb-97cf-80bb61661e71/deck.html",
-      "page_count": 61,
-      "slide_count": 30,
-      "quiz_count": 31,
-      "size_bytes": 29342192
+      "size_bytes": 46972470
     },
     {
       "course_id": "905e6ea3-c8bc-45c6-ba80-dce3aa90712a",
       "title": "Économie Gestion Bac Pro Aéronautique",
       "source_filename": "Économie Gestion Bac Pro Aéronautique_Mme GAOUGAOU_filigrane (1).pdf",
+      "source_filenames": [
+        "Économie Gestion Bac Pro Aéronautique_Mme GAOUGAOU_filigrane (1).pdf"
+      ],
       "created_at": "2026-04-04T20:25:44.166753",
       "href": "courses/905e6ea3-c8bc-45c6-ba80-dce3aa90712a/index.html",
       "deck_href": "courses/905e6ea3-c8bc-45c6-ba80-dce3aa90712a/deck.html",
-      "page_count": 37,
+      "page_count": 41,
       "slide_count": 20,
-      "quiz_count": 17,
-      "size_bytes": 18459471
+      "quiz_count": 21,
+      "size_bytes": 49350903
     }
   ]
 }

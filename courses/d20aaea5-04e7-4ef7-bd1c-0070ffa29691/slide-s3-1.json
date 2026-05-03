@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S3-1",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S3-1-Q1",
+      "prompt": "Quelle affirmation décrit correctement la puissance calorifique d’un turboréacteur ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle s’exprime en kg/s car elle mesure un débit de carburant.",
+          "is_correct": false,
+          "explanation": "Le débit carburant \\(Q_{mc}\\) s’exprime en kg/s, mais la puissance calorifique est une puissance : elle s’exprime en watts."
+        },
+        {
+          "id": "B",
+          "text": "Elle dépend uniquement de la vitesse d’éjection des gaz.",
+          "is_correct": false,
+          "explanation": "La vitesse d’éjection intervient dans la puissance cinétique réelle, pas dans la définition de la puissance calorifique."
+        },
+        {
+          "id": "C",
+          "text": "Elle est égale à \\(Q_{ma} \\times C_p(T_5-T_0)\\).",
+          "is_correct": false,
+          "explanation": "Cette expression correspond aux pertes par source froide et intervient dans \\(P_{tt}\\), pas dans \\(P_c\\)."
+        },
+        {
+          "id": "D",
+          "text": "La puissance calorifique vaut \\(P_c = Q_{mc} \\times P_{ci}\\).",
+          "is_correct": true,
+          "explanation": "La puissance calorifique est l’énergie libérée par seconde par la combustion, donc elle dépend du débit massique de carburant \\(Q_{mc}\\) et du pouvoir calorifique inférieur \\(P_{ci}\\)."
+        },
+        {
+          "id": "E",
+          "text": "Elle est toujours inférieure à la puissance propulsive utile.",
+          "is_correct": false,
+          "explanation": "La puissance calorifique représente l’apport énergétique initial ; elle est en général supérieure aux puissances utiles, car il existe des pertes à chaque étape."
+        }
+      ],
+      "coverage_label": "Puissance calorifique Pc",
+      "learning_objective": "Identifier la définition et l’expression de \\(P_c\\) à partir du débit carburant et du PCI.",
+      "correction_summary": "La bonne relation est \\(P_c = Q_{mc} \\times P_{ci}\\). Piège classique : confondre puissance, débit massique et pertes thermiques.",
+      "course_clarification": "\\(Q_{mc}\\) est le débit massique de carburant, en kg/s. \\(P_{ci}\\) est le pouvoir calorifique inférieur, ici fixé à \\(44\\times10^6\\) J/kg. Le produit donne une puissance en watts.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-1-Q2",
+      "prompt": "À propos de la puissance thermique théorique \\(P_{tt}\\), quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle est égale à \\(P_c + P_{sf}\\).",
+          "is_correct": false,
+          "explanation": "Les pertes doivent être soustraites de la puissance calorifique, pas ajoutées."
+        },
+        {
+          "id": "B",
+          "text": "On a \\(P_{tt} = P_c - P_{sf}\\).",
+          "is_correct": true,
+          "explanation": "La puissance thermique théorique retire à la puissance calorifique les pertes vers la source froide, d’où la relation \\(P_{tt}=P_c-P_{sf}\\)."
+        },
+        {
+          "id": "C",
+          "text": "Elle correspond à la puissance propulsive utile \\(P_p\\).",
+          "is_correct": false,
+          "explanation": "\\(P_{tt}\\) est une puissance intermédiaire liée à la thermodynamique interne, alors que \\(P_p\\) est la puissance utile transmise à l’avion."
+        },
+        {
+          "id": "D",
+          "text": "Avec les sources froides, \\(P_{sf} = Q_{ma} C_p(T_5-T_0)\\).",
+          "is_correct": false,
+          "explanation": "Cette formule est bien celle des pertes par source froide, mais l’item est faux car il affirme que c’est \\(P_{tt}\\) elle-même qui vaut cela."
+        },
+        {
+          "id": "E",
+          "text": "Elle ne dépend jamais de la température \\(T_5\\).",
+          "is_correct": false,
+          "explanation": "La température de sortie intervient via les pertes par source froide ; \\(P_{tt}\\) dépend donc indirectement de \\(T_5\\)."
+        }
+      ],
+      "coverage_label": "Puissance thermique théorique Ptt",
+      "learning_objective": "Relier \\(P_{tt}\\) à \\(P_c\\) et aux pertes par source froide.",
+      "correction_summary": "\\(P_{tt}\\) se calcule en retranchant les pertes par source froide à \\(P_c\\). Le piège est de confondre cette étape avec la puissance utile finale.",
+      "course_clarification": "La source froide représente l’énergie emportée par les gaz chauds à la sortie. Dans l’expression donnée, \\(C_p\\) est la chaleur spécifique des gaz à pression constante, avec \\(C_p\\) air \\(=1000\\) J/kg·K.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-1-Q3",
+      "prompt": "À propos de la puissance thermique réelle, cinétique \\(P_{tr}\\), quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "\\(P_{tr} = \\dfrac{1}{2} Q_{ma}(V_5^2 - V_0^2)\\).",
+          "is_correct": true,
+          "explanation": "La puissance thermique réelle est le travail cinétique des gaz par unité de temps, d’où l’expression avec la différence des carrés des vitesses."
+        },
+        {
+          "id": "B",
+          "text": "Elle dépend directement du débit de carburant \\(Q_{mc}\\) et du PCI.",
+          "is_correct": false,
+          "explanation": "Le débit carburant et le PCI interviennent dans \\(P_c\\), pas dans l’expression cinétique de \\(P_{tr}\\)."
+        },
+        {
+          "id": "C",
+          "text": "Elle est égale à \\(Tu\\times V_0\\).",
+          "is_correct": false,
+          "explanation": "\\(Tu\\times V_0\\) est la puissance propulsive utile \\(P_p\\), pas \\(P_{tr}\\)."
+        },
+        {
+          "id": "D",
+          "text": "Elle ne fait intervenir que \\(T_5-T_0\\).",
+          "is_correct": false,
+          "explanation": "La différence de température apparaît dans les pertes par source froide, alors que \\(P_{tr}\\) dépend des vitesses des gaz."
+        },
+        {
+          "id": "E",
+          "text": "Elle est exprimée en newtons.",
+          "is_correct": false,
+          "explanation": "\\(P_{tr}\\) est une puissance, donc une grandeur en watts ; le newton est une unité de force."
+        }
+      ],
+      "coverage_label": "Puissance thermique réelle Ptr",
+      "learning_objective": "Reconnaître l’expression cinétique de \\(P_{tr}\\) et la distinguer des autres puissances.",
+      "correction_summary": "\\(P_{tr}\\) traduit l’énergie cinétique des gaz par unité de temps. Le principal piège est de le confondre avec \\(P_p\\) ou avec les expressions liées au carburant.",
+      "course_clarification": "\\(Q_{ma}\\) est le débit massique d’air. La différence \\(V_5^2-V_0^2\\) compare l’état du jet à l’entrée et à la sortie du moteur.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-1-Q4",
+      "prompt": "Quelle affirmation sur la puissance propulsive utile est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle s’écrit \\(P_p = \\dfrac{1}{2}Q_{ma}(V_5^2-V_0^2)\\).",
+          "is_correct": false,
+          "explanation": "Cette expression est celle de la puissance thermique réelle \\(P_{tr}\\), pas de la puissance utile."
+        },
+        {
+          "id": "B",
+          "text": "Elle dépend seulement du PCI du carburant.",
+          "is_correct": false,
+          "explanation": "Le PCI intervient en amont dans la puissance calorifique, mais la puissance utile dépend ici de la poussée et de la vitesse de l’avion."
+        },
+        {
+          "id": "C",
+          "text": "Elle est forcément plus grande que \\(P_c\\).",
+          "is_correct": false,
+          "explanation": "La chaîne énergétique comporte des pertes ; la puissance utile est donc inférieure à la puissance calorifique."
+        },
+        {
+          "id": "D",
+          "text": "Elle s’exprime en kg/s.",
+          "is_correct": false,
+          "explanation": "\\(P_p\\) est une puissance, donc elle s’exprime en watts, pas en débit massique."
+        },
+        {
+          "id": "E",
+          "text": "La puissance propulsive utile vaut \\(P_p = T_u \\times V_0\\).",
+          "is_correct": true,
+          "explanation": "La puissance utile correspond à la poussée multipliée par la vitesse de l’avion, ce qui donne bien \\(P_p=T_uV_0\\)."
+        }
+      ],
+      "coverage_label": "Puissance propulsive utile Pp",
+      "learning_objective": "Utiliser la relation entre poussée, vitesse de vol et puissance utile.",
+      "correction_summary": "La formule attendue est \\(P_p = T_uV_0\\). Le piège classique consiste à confondre puissance utile et puissance cinétique du jet.",
+      "course_clarification": "La poussée \\(T_u\\) est une force, en newtons. Multipliée par la vitesse de l’avion, elle donne une puissance mécanique utile transmise à l’avion.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-1-Q5",
+      "prompt": "Quelle affirmation sur les rendements associés aux puissances est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le rendement propulsif est \\(\\eta_p = \\dfrac{P_c}{P_p}\\).",
+          "is_correct": false,
+          "explanation": "Le rapport est inversé : un rendement compare une puissance utile à une puissance reçue, donc \\(\\eta_p\\) n’est pas \\(P_c/P_p\\)."
+        },
+        {
+          "id": "B",
+          "text": "Le rendement thermique théorique est \\(\\eta_{tt} = \\dfrac{P_c}{P_{tt}}\\).",
+          "is_correct": false,
+          "explanation": "Le rendement thermique théorique est défini par \\(\\eta_{tt}=P_{tt}/P_c\\), et non l’inverse."
+        },
+        {
+          "id": "C",
+          "text": "Le rendement global est \\(\\eta_g = \\dfrac{P_p}{P_c}\\).",
+          "is_correct": true,
+          "explanation": "Le rendement global compare la puissance utile en sortie à la puissance calorifique fournie par le carburant, ce qui donne \\(\\eta_g=P_p/P_c\\)."
+        },
+        {
+          "id": "D",
+          "text": "Pour un GTR double flux, le rendement propulsif est donné comme toujours inférieur à 0,1.",
+          "is_correct": false,
+          "explanation": "L’ordre de grandeur indiqué est beaucoup plus élevé : environ 0,7 à 0,9 pour un double flux."
+        },
+        {
+          "id": "E",
+          "text": "Le rendement global donné en ordre de grandeur est compris entre 0,18 et 0,4.",
+          "is_correct": false,
+          "explanation": "Cette plage est bien celle du rendement global, mais l’item est faux car il dit que \\(\\eta_g\\) n’est pas un rapport de puissances ; or c’est précisément sa définition."
+        }
+      ],
+      "coverage_label": "Rendements ηtt, ηi, ηp, ηtr, ηg",
+      "learning_objective": "Distinguer les différents rendements et choisir la bonne définition de \\(\\eta_g\\).",
+      "correction_summary": "\\(\\eta_g\\) est le rapport entre la puissance utile et la puissance calorifique. Piège fréquent : inverser numérateur et dénominateur ou confondre rendement global et rendement propulsif.",
+      "course_clarification": "Les rendements décrivent des étapes successives de conversion de l’énergie. Plus la chaîne comporte de pertes, plus le rendement final diminue.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S3",
+  "anchor_slide_id": "S3-1",
+  "question_count_target": 5,
+  "title": "QCM - Puissance calorifique et puissance thermique théorique"
+}

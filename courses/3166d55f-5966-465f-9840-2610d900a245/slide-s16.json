@@ -1,0 +1,179 @@
+{
+  "quiz_id": "slide::S16",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S16-Q1",
+      "prompt": "À propos d'une simulation numérique de la cinématique avec Python, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il faut obligatoirement connaître l'équation différentielle exacte du mouvement pour calculer une vitesse.",
+          "is_correct": false,
+          "explanation": "La dérivation numérique sert justement quand on dispose de valeurs discrètes, sans imposer une forme analytique complète du mouvement."
+        },
+        {
+          "id": "B",
+          "text": "Une liste de positions ne permet jamais d'estimer l'accélération.",
+          "is_correct": false,
+          "explanation": "L'accélération s'obtient en pratique à partir de la dérivation numérique de la vitesse, elle-même déduite des positions."
+        },
+        {
+          "id": "C",
+          "text": "Les données discrètes ne servent qu'à tracer des points, pas à calculer des grandeurs cinématiques.",
+          "is_correct": false,
+          "explanation": "Les points mesurés peuvent être exploités pour approximer des dérivées et donc des grandeurs comme la vitesse et l'accélération."
+        },
+        {
+          "id": "D",
+          "text": "On peut partir d'une liste de valeurs de position pour reconstruire la vitesse et l'accélération.",
+          "is_correct": true,
+          "explanation": "Les positions discrètes permettent d'estimer numériquement les dérivées successives. C'est exactement l'idée de la simulation cinématique avec des données échantillonnées."
+        },
+        {
+          "id": "E",
+          "text": "La méthode suppose que la position soit déjà égale à la vitesse au moment de la mesure.",
+          "is_correct": false,
+          "explanation": "Position et vitesse sont des grandeurs différentes : la vitesse est obtenue par dérivation de la position, pas confondue avec elle."
+        }
+      ],
+      "coverage_label": "Approche numérique avec Python",
+      "learning_objective": "Identifier comment exploiter des données de position discrètes pour estimer vitesse et accélération.",
+      "correction_summary": "La bonne idée est de partir de positions discrètes pour approcher les dérivées. Le piège est de confondre mesure brute et grandeur dérivée.",
+      "course_clarification": "Une donnée discrète est une valeur mesurée à des instants séparés. En cinématique numérique, la position sert de base pour estimer v(t) puis a(t) par dérivation approchée.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S16-Q2",
+      "prompt": "Dans l'exemple Python suivant, quel rôle joue `numpy.gradient` ?\n\\[\nimport numpy as np\n\\]\n\\[\nt = np.linspace(0, 10, 100)\n\\]\n\\[\nx = 4t + 0.5t^2\n\\]\n\\[\nv = np.gradient(x, t)\n\\]\n\\[\na = np.gradient(v, t)\n\\]",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "`numpy.gradient` calcule directement la solution exacte de l'équation horaire.",
+          "is_correct": false,
+          "explanation": "La fonction ne résout pas un modèle analytique exact ; elle fournit une approximation à partir de données échantillonnées."
+        },
+        {
+          "id": "B",
+          "text": "`numpy.gradient` permet d'estimer numériquement une dérivée à partir de valeurs discrètes.",
+          "is_correct": true,
+          "explanation": "La fonction calcule une approximation de la dérivée en exploitant les différences entre points voisins, ce qui correspond à une dérivation numérique."
+        },
+        {
+          "id": "C",
+          "text": "`numpy.gradient` remplace la variable temps `t` par un scalaire unique.",
+          "is_correct": false,
+          "explanation": "Ici `t` est un tableau d'instants. La fonction utilise justement ce tableau pour tenir compte de l'échantillonnage."
+        },
+        {
+          "id": "D",
+          "text": "`numpy.gradient` ne peut être utilisée que pour des données symboliques écrites à la main.",
+          "is_correct": false,
+          "explanation": "Elle s'applique à des tableaux numériques, ce qui en fait un outil adapté aux mesures ou aux simulations discrètes."
+        },
+        {
+          "id": "E",
+          "text": "`numpy.gradient` fournit une primitive numérique de `x(t)`.",
+          "is_correct": false,
+          "explanation": "La fonction n'intègre pas les données ; elle estime leur dérivée, pas leur primitive."
+        }
+      ],
+      "coverage_label": "Approche numérique avec Python",
+      "learning_objective": "Comprendre l'usage de `numpy.gradient` pour obtenir des dérivées numériques.",
+      "correction_summary": "`numpy.gradient` sert à approximer une dérivée à partir de données discrètes. Le piège principal est de le confondre avec une intégration ou une résolution exacte.",
+      "course_clarification": "La dérivation numérique remplace la formule analytique quand on travaille sur des valeurs mesurées ou simulées. `numpy.gradient(x, t)` estime la pente de `x` en fonction de `t`.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S16-Q3",
+      "prompt": "À propos de la suite d'instructions Python donnée dans l'exemple, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "`v = np.gradient(x, t)` calcule une estimation de la vitesse à partir de la position `x` et du temps `t`.",
+          "is_correct": true,
+          "explanation": "La vitesse est la dérivée de la position par rapport au temps ; la commande applique précisément cette dérivation numérique."
+        },
+        {
+          "id": "B",
+          "text": "`a = np.gradient(v, t)` calcule la position à partir de la vitesse.",
+          "is_correct": false,
+          "explanation": "Cette commande dérive la vitesse pour obtenir l'accélération, elle ne reconstruit pas la position."
+        },
+        {
+          "id": "C",
+          "text": "`t = np.linspace(0, 10, 100)` crée 100 valeurs aléatoires entre 0 et 10.",
+          "is_correct": false,
+          "explanation": "`linspace` génère des valeurs régulièrement espacées, pas des valeurs aléatoires."
+        },
+        {
+          "id": "D",
+          "text": "`x = 4*t + 0.5*t**2` décrit une position constante dans le temps.",
+          "is_correct": false,
+          "explanation": "L'expression dépend de `t` au premier et au second degré, donc la position varie avec le temps."
+        },
+        {
+          "id": "E",
+          "text": "`a = np.gradient(v, t)` donne toujours une accélération nulle quel que soit le mouvement.",
+          "is_correct": false,
+          "explanation": "L'accélération dépend de la variation de la vitesse ; elle n'est nulle que si la vitesse est constante."
+        }
+      ],
+      "coverage_label": "Approche numérique avec Python",
+      "learning_objective": "Lire le code Python de simulation et associer chaque ligne à la grandeur cinématique calculée.",
+      "correction_summary": "La ligne sur `v` estime la vitesse, puis la ligne sur `a` estime l'accélération. Le piège est d'inverser dérivation et intégration ou de mal lire `linspace`.",
+      "course_clarification": "`np.linspace(0, 10, 100)` crée un maillage temporel régulier. Ensuite, les gradients successifs transforment position puis vitesse en grandeurs cinématiques dérivées.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S16-Q4",
+      "prompt": "Quel est l'intérêt principal de l'approche numérique avec Python pour l'étude d'un mouvement ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle remplace toute mesure expérimentale par une loi théorique sans vérification.",
+          "is_correct": false,
+          "explanation": "L'intérêt est au contraire d'exploiter les mesures ou les données simulées pour confronter le modèle à la réalité."
+        },
+        {
+          "id": "B",
+          "text": "Elle interdit l'utilisation de données bruitées.",
+          "is_correct": false,
+          "explanation": "Les données de capteurs peuvent être bruitées ; l'exploitation numérique s'accompagne souvent d'un filtrage."
+        },
+        {
+          "id": "C",
+          "text": "Elle ne peut pas être utilisée pour analyser un mouvement de translation.",
+          "is_correct": false,
+          "explanation": "La cinématique numérique s'applique aux déplacements en général, y compris aux mouvements de translation."
+        },
+        {
+          "id": "D",
+          "text": "Elle fournit uniquement la trajectoire graphique sans accès à la vitesse ni à l'accélération.",
+          "is_correct": false,
+          "explanation": "L'intérêt est précisément d'obtenir aussi des grandeurs dérivées comme la vitesse et l'accélération à partir des positions."
+        },
+        {
+          "id": "E",
+          "text": "Elle sert à valider des modèles expérimentaux de déplacement à partir de données mesurées.",
+          "is_correct": true,
+          "explanation": "L'objectif indiqué est de comparer les données numériques ou mesurées à un modèle afin de vérifier sa cohérence avec le mouvement observé."
+        }
+      ],
+      "coverage_label": "Approche numérique avec Python",
+      "learning_objective": "Identifier l'objectif pratique de la simulation numérique en cinématique.",
+      "correction_summary": "L'approche numérique permet de confronter un modèle à des mesures pour le valider. Le piège est de croire qu'elle remplace la mesure ou qu'elle se limite au tracé.",
+      "course_clarification": "Valider un modèle signifie vérifier qu'il reproduit correctement les données observées. En pratique, Python aide à traiter des positions discrètes pour calculer des grandeurs dérivées et comparer au réel.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "11",
+  "anchor_slide_id": "S16",
+  "question_count_target": 4,
+  "title": "QCM - Approche numérique avec Python"
+}

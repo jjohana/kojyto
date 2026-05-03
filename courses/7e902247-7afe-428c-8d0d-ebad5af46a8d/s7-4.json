@@ -1,0 +1,98 @@
+{
+  "slide_id": "S7-4",
+  "subpart_id": "S7",
+  "title": "AC & DC CONTACTORS : distribution vers les charges",
+  "objective": "Comprendre comment les contacteurs alimentent les réseaux de charge.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s7-4-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Chaîne d’alimentation",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Rôle",
+          "Effet sur la distribution"
+        ],
+        [
+          "**AC & DC SYSTEM**",
+          "Fournit et oriente la puissance **AC** (courant alternatif) et **DC** (courant continu) vers la chaîne de commutation.",
+          "Met l’énergie à disposition des contacteurs."
+        ],
+        [
+          "**AC & DC CONTACTORS**",
+          "Assurent la commutation et le routage de la puissance.",
+          "Envoient l’énergie vers le bon réseau de charges."
+        ],
+        [
+          "**DC LOAD DISTRIBUTION**",
+          "Répartit la puissance côté **DC** vers les consommateurs associés.",
+          "Alimente les charges finales en courant continu."
+        ],
+        [
+          "**AC LOAD DISTRIBUTION**",
+          "Répartit la puissance côté **AC** vers les consommateurs associés.",
+          "Alimente les charges finales en courant alternatif."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "La lecture utile est : **énergie → contacteurs → distribution → charges** ; les contacteurs assurent le passage, la distribution assure la répartition.",
+        "La séparation **AC / DC** reste structurante : chaque réseau alimente les charges compatibles avec son type de courant.",
+        "Les blocs **AC & DC CONTACTORS** ne constituent pas la charge finale ; ils sont l’interface de commande entre la source et les réseaux de distribution."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "AC 43.13-2C (DRAFT)",
+      "locator": "Distribution électrique de l’aéronef",
+      "url": "https://www.faa.gov/aircraft/draft_docs/afs_ac/AC_43.13-2C_Coord_Copy.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Electrical Systems (Skybrary)",
+      "locator": "Architecture de distribution AC et DC",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-electrical-systems"
+    },
+    {
+      "source_type": "web",
+      "label": "8130.34B – Electrical system description and distribution throughout the aircraft",
+      "locator": "research",
+      "url": "https://www.faa.gov/documentLibrary/media/Order/8130.34B.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "“DRAFT” \nU.S. Department \nof Transportation \nFeder",
+      "locator": "research",
+      "url": "https://www.faa.gov/aircraft/draft_docs/afs_ac/AC_43.13-2C_Coord_Copy.pdf?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Le synoptique montre la chaîne **AC & DC SYSTEM → AC & DC CONTACTORS →** réseaux **DC LOAD DISTRIBUTION** et **AC LOAD DISTRIBUTION**. La page repère bien le rôle de routage des contacteurs vers les charges finales.",
+  "teacher_notes": "Faire repérer le trajet d’énergie de gauche à droite, puis distinguer le rôle de **commutation** des contacteurs et celui de **répartition** des réseaux de distribution. Insister sur la séparation **AC / DC** et sur le fait que les charges finales sont alimentées après les blocs de distribution."
+}

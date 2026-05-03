@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s15",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s15_q1",
+      "prompt": "Quel énoncé décrit correctement le contrat de travail ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le contrat de travail relie uniquement deux employeurs entre eux.",
+          "is_correct": false,
+          "explanation": "Un contrat de travail concerne la relation entre un salarié et un employeur, pas entre deux employeurs."
+        },
+        {
+          "id": "B",
+          "text": "Le contrat de travail ne sert qu’à fixer le salaire.",
+          "is_correct": false,
+          "explanation": "Le salaire fait partie des mentions importantes, mais le contrat définit aussi la fonction, les horaires, la durée et l’identité des parties."
+        },
+        {
+          "id": "C",
+          "text": "Le contrat de travail est toujours oral et sans écrit obligatoire.",
+          "is_correct": false,
+          "explanation": "La forme orale n’est pas l’idée retenue ici : le support insiste sur des mentions obligatoires à faire apparaître dans le contrat."
+        },
+        {
+          "id": "D",
+          "text": "Le contrat de travail crée un lien juridique entre un salarié et un employeur.",
+          "is_correct": true,
+          "explanation": "C’est la définition attendue : le contrat de travail organise la relation juridique entre les deux parties. Il ne s’agit pas d’un simple accord informel, mais d’un cadre qui fixe des droits et des obligations."
+        },
+        {
+          "id": "E",
+          "text": "Le contrat de travail n’a aucun effet juridique sur la relation de travail.",
+          "is_correct": false,
+          "explanation": "Au contraire, il crée précisément un lien juridique qui encadre la relation de travail et ses conditions."
+        }
+      ],
+      "coverage_label": "Définition du contrat de travail",
+      "learning_objective": "Identifier la définition juridique du contrat de travail et son rôle dans la relation salarié-employeur.",
+      "correction_summary": "La bonne réponse est celle qui parle d’un lien juridique entre salarié et employeur. Le piège consiste à réduire le contrat à un simple papier administratif ou à un seul élément comme le salaire.",
+      "course_clarification": "Le contrat de travail formalise la relation de travail. Il fixe les droits et obligations de chaque partie et sert de base pour organiser le poste, la rémunération et la durée du travail.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s15_q2",
+      "prompt": "Quel énoncé correspond au CDI ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le CDI est réservé aux missions ponctuelles ou au remplacement.",
+          "is_correct": false,
+          "explanation": "Les missions ponctuelles ou le remplacement correspondent au CDD, pas au CDI."
+        },
+        {
+          "id": "B",
+          "text": "Le CDI est un Contrat à Durée Indéterminée, associé à la stabilité et à la protection.",
+          "is_correct": true,
+          "explanation": "Le sigle CDI signifie bien Contrat à Durée Indéterminée. L’idée centrale à retenir est l’absence de date de fin prévue au départ, avec une plus grande stabilité."
+        },
+        {
+          "id": "C",
+          "text": "Le CDI est un contrat qui se termine automatiquement à une date fixée dès le départ.",
+          "is_correct": false,
+          "explanation": "Cette caractéristique décrit un contrat à durée déterminée, pas un CDI."
+        },
+        {
+          "id": "D",
+          "text": "Le CDI signifie Contrat à Durée Déterminée.",
+          "is_correct": false,
+          "explanation": "L’abréviation est inversée : CDD signifie Contrat à Durée Déterminée, tandis que CDI signifie Contrat à Durée Indéterminée."
+        },
+        {
+          "id": "E",
+          "text": "Le CDI ne donne aucune stabilité au salarié.",
+          "is_correct": false,
+          "explanation": "Le support associe au CDI l’idée de stabilité et de protection, ce qui est l’opposé de cette affirmation."
+        }
+      ],
+      "coverage_label": "CDI",
+      "learning_objective": "Reconnaître le sigle CDI et relier ce contrat à la stabilité et à la protection.",
+      "correction_summary": "Le CDI est le Contrat à Durée Indéterminée, donc sans date de fin prévue à l’avance. Le piège fréquent est de confondre CDI et CDD.",
+      "course_clarification": "Le CDI est la forme de contrat la plus stable. Il ne prévoit pas de terme fixé dès la signature, ce qui le distingue du CDD.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s15_q3",
+      "prompt": "Quel énoncé décrit correctement le CDD ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le CDD est un Contrat à Durée Déterminée, utilisé pour des missions ponctuelles ou du remplacement.",
+          "is_correct": true,
+          "explanation": "C’est la définition attendue : le CDD est limité dans le temps et sert notamment pour une tâche temporaire ou pour remplacer quelqu’un."
+        },
+        {
+          "id": "B",
+          "text": "Le CDD est un contrat sans date de fin prévue.",
+          "is_correct": false,
+          "explanation": "Cela correspond au CDI. Le CDD, lui, est précisément défini par une durée déterminée."
+        },
+        {
+          "id": "C",
+          "text": "Le CDD est toujours synonyme de stabilité durable et de protection renforcée.",
+          "is_correct": false,
+          "explanation": "Le support réserve cette idée au CDI. Le CDD répond à un besoin temporaire, donc il n’a pas la même logique de stabilité."
+        },
+        {
+          "id": "D",
+          "text": "Le CDD ne peut jamais servir à remplacer un salarié absent.",
+          "is_correct": false,
+          "explanation": "Le remplacement fait partie des usages explicitement indiqués pour le CDD."
+        },
+        {
+          "id": "E",
+          "text": "CDD signifie Contrat à Durée Indéterminée.",
+          "is_correct": false,
+          "explanation": "L’abréviation est incorrecte : CDD signifie Contrat à Durée Déterminée."
+        }
+      ],
+      "coverage_label": "CDD",
+      "learning_objective": "Identifier le sigle CDD et comprendre son usage pour des missions temporaires ou le remplacement.",
+      "correction_summary": "Le CDD est le contrat limité dans le temps, utilisé pour une mission ponctuelle ou un remplacement. Le piège principal est de le confondre avec le CDI.",
+      "course_clarification": "Le CDD prévoit une fin dès le départ. Il sert à répondre à un besoin temporaire, contrairement au CDI qui n’a pas de durée fixée à l’avance.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s15_q4",
+      "prompt": "Quelles mentions doivent figurer dans un contrat de travail ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le contrat de travail doit obligatoirement mentionner le prix du carburant et des pièces de rechange.",
+          "is_correct": false,
+          "explanation": "Ces informations ne font pas partie des mentions obligatoires indiquées. Elles concernent l’activité économique, pas le contenu standard du contrat."
+        },
+        {
+          "id": "B",
+          "text": "Le contrat de travail peut être rédigé sans indiquer la fonction du salarié.",
+          "is_correct": false,
+          "explanation": "La fonction fait partie des mentions obligatoires, car elle précise le poste occupé et les missions confiées."
+        },
+        {
+          "id": "C",
+          "text": "Le contrat de travail n’a pas besoin d’indiquer les horaires.",
+          "is_correct": false,
+          "explanation": "Les horaires sont bien mentionnés parmi les éléments obligatoires, car ils encadrent le temps de travail."
+        },
+        {
+          "id": "D",
+          "text": "La durée du contrat n’a aucune importance juridique.",
+          "is_correct": false,
+          "explanation": "La durée est un élément essentiel : elle permet de distinguer notamment un CDI d’un CDD et de fixer le cadre du contrat."
+        },
+        {
+          "id": "E",
+          "text": "L’identité des parties, la fonction, le salaire, les horaires et la durée figurent parmi les mentions obligatoires.",
+          "is_correct": true,
+          "explanation": "Ces éléments sont explicitement cités comme mentions obligatoires. Ils permettent d’identifier les signataires et de préciser les conditions essentielles du travail."
+        }
+      ],
+      "coverage_label": "Mentions obligatoires du contrat de travail",
+      "learning_objective": "Repérer les informations indispensables qui doivent apparaître dans un contrat de travail.",
+      "correction_summary": "Les bonnes mentions sont l’identité des parties, la fonction, le salaire, les horaires et la durée. Le piège est d’oublier qu’un contrat ne se limite pas au poste ou au salaire.",
+      "course_clarification": "Les mentions obligatoires servent à sécuriser la relation de travail. Elles définissent qui s’engage, pour quoi faire, à quel salaire, sur quels horaires et pour quelle durée.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s15_q5",
+      "prompt": "Quel énoncé sur la rupture du contrat de travail est exact ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La rupture du contrat ne peut jamais se faire d’un commun accord.",
+          "is_correct": false,
+          "explanation": "La rupture conventionnelle correspond précisément à une rupture décidée par accord entre les deux parties."
+        },
+        {
+          "id": "B",
+          "text": "La fin de CDD n’est pas une forme de rupture du contrat.",
+          "is_correct": false,
+          "explanation": "La fin de CDD est bien l’une des formes de rupture indiquées : le contrat s’arrête à son terme prévu."
+        },
+        {
+          "id": "C",
+          "text": "La rupture du contrat peut se faire par démission, licenciement, rupture conventionnelle ou fin de CDD.",
+          "is_correct": true,
+          "explanation": "Ces quatre modes de rupture sont bien listés. Ils couvrent l’initiative du salarié, celle de l’employeur, l’accord des deux parties et l’arrivée du terme du CDD."
+        },
+        {
+          "id": "D",
+          "text": "Le licenciement est une rupture décidée par le salarié.",
+          "is_correct": false,
+          "explanation": "Le licenciement est décidé par l’employeur, pas par le salarié. L’initiative du salarié correspond à la démission."
+        },
+        {
+          "id": "E",
+          "text": "La démission correspond à l’arrêt automatique d’un contrat à durée déterminée.",
+          "is_correct": false,
+          "explanation": "La démission est la décision du salarié de quitter son emploi. L’arrêt automatique à l’échéance concerne la fin du CDD."
+        }
+      ],
+      "coverage_label": "Rupture du contrat de travail",
+      "learning_objective": "Distinguer les principaux modes de rupture d’un contrat de travail et associer chaque terme à sa logique.",
+      "correction_summary": "La rupture peut prendre quatre formes : démission, licenciement, rupture conventionnelle et fin de CDD. Le principal piège est de confondre qui prend l’initiative et à quel type de contrat cela s’applique.",
+      "course_clarification": "La démission vient du salarié, le licenciement de l’employeur, la rupture conventionnelle d’un accord commun et la fin de CDD de l’échéance prévue. Ces distinctions sont essentielles pour lire correctement une situation de travail.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s15",
+  "anchor_slide_id": "s15",
+  "question_count_target": 5,
+  "title": "QCM - Le contrat de travail"
+}

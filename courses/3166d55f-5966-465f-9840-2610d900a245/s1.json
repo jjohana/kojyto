@@ -1,0 +1,131 @@
+{
+  "slide_id": "S1",
+  "subpart_id": "1",
+  "title": "Introduction à la cinématique",
+  "objective": "Distinguer la cinématique de la dynamique et situer son rôle en aéronautique.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Points de méthode",
+      "text": null,
+      "bullets": [
+        "\\(\\vec r(t)\\) est le **vecteur position** du point matériel \\(M\\) dans le référentiel choisi ; il sert de base au calcul de la trajectoire, puis de la vitesse et de l’accélération.",
+        "\\(x(t)\\), \\(y(t)\\) et \\(z(t)\\) sont des coordonnées en **mètre (m)** ; \\(t\\) est en **seconde (s)**, et \\(\\vec i\\), \\(\\vec j\\), \\(\\vec k\\) sont les vecteurs unitaires des axes du repère.",
+        "Le choix du **référentiel** modifie l’écriture du mouvement : le référentiel terrestre sert pour l’extérieur de l’aéronef, le référentiel lié à l’aéronef sert pour des mouvements internes.",
+        "En aéronautique, la cinématique décrit le mouvement d’une hélice, d’un train d’atterrissage ou d’un capteur sur un banc de test ; la dynamique intervient quand on cherche les causes de ce mouvement."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Définition de base",
+      "text": "La **cinématique** est la partie de la mécanique qui décrit le mouvement des corps sans s’intéresser aux causes de ce mouvement. Elle répond à la question : **comment** un corps se déplace-t-il ? ",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Repérage du mouvement",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\vec r(t)=x(t)\\,\\vec i+y(t)\\,\\vec j+z(t)\\,\\vec k"
+    },
+    {
+      "kind": "table",
+      "title": "Frontière entre cinématique et dynamique",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Aspect",
+          "Cinématique",
+          "Dynamique"
+        ],
+        [
+          "Question centrale",
+          "Comment le corps se déplace-t-il ?",
+          "Pourquoi le mouvement apparaît-il ou change-t-il ?"
+        ],
+        [
+          "Grandeurs suivies",
+          "Position, trajectoire, vitesse, accélération",
+          "Forces, poussée, frottements, gravité"
+        ],
+        [
+          "Rôle opérationnel",
+          "Décrire et prévoir le mouvement",
+          "Expliquer l’origine des variations de mouvement"
+        ],
+        [
+          "Exemple aéronautique",
+          "Rotation d’une hélice, course d’un train d’atterrissage",
+          "Poussée moteur, résistance de l’air, actionnement hydraulique"
+        ]
+      ],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Dynamics | Britannica",
+      "locator": "Définition générale de la dynamique comme étude des forces et du mouvement",
+      "url": "https://www.britannica.com/science/dynamics-physics?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Guide to Aerodynamics | NASA Glenn Research Center",
+      "locator": "Exemples aéronautiques de mouvement et d’actionnement",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/learn-about-aerodynamics/"
+    },
+    {
+      "source_type": "web",
+      "label": "Dynamics | Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/science/dynamics"
+    },
+    {
+      "source_type": "web",
+      "label": "Mechanics | Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/science/mechanics"
+    },
+    {
+      "source_type": "web",
+      "label": "Physics | Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/science/physics-science"
+    },
+    {
+      "source_type": "web",
+      "label": "Physics (OpenStax, PDF)",
+      "locator": "research",
+      "url": "https://assets.openstax.org/oscms-prodcms/media/documents/Physics-WEB_Sab7RrQ.pdf"
+    }
+  ],
+  "course_reference_note": "La première partie pose la frontière entre décrire un mouvement et en chercher la cause. Le vecteur position du point M sert de base aux grandeurs cinématiques suivantes.",
+  "teacher_notes": "Faire reformuler la différence « comment ? / pourquoi ? » à partir de l’exemple de l’hélice. Vérifier que le référentiel est explicité avant tout calcul."
+}

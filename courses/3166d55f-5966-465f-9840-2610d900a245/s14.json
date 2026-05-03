@@ -1,0 +1,48 @@
+{
+  "slide_id": "S14",
+  "subpart_id": "9",
+  "title": "Méthodes graphiques et expérimentales",
+  "objective": "Exploiter des courbes et des mesures expérimentales pour déterminer vitesse, accélération et déplacement.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s14-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Exploitation pratique en TP",
+      "text": null,
+      "bullets": [
+        "Sur une courbe **x(t)**, la **pente** au point considéré donne la **vitesse** instantanée **v(t)** ; sur une courbe **v(t)**, la pente donne l’**accélération** **a(t)**.",
+        "L’**aire** sous la courbe **v(t)** entre deux instants donne le **déplacement** \\(\\Delta x\\) ; le signe de l’aire indique le sens du mouvement.",
+        "Les mesures issues des capteurs sont souvent **bruitées** : un filtrage simple, comme une **moyenne glissante**, aide à lisser les données avant la dérivation ou l’intégration.",
+        "L’exploitation se fait avec un **tableur**, **Python** ou un **simulateur** pour tracer les courbes, estimer les pentes et calculer les aires."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations de lecture graphique",
+      "text": "x(t) : position ; v(t) : vitesse ; a(t) : accélération. t₁ et t₂ délimitent l’intervalle d’étude. Les unités doivent rester cohérentes avec le graphique.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "v(t)=\\frac{dx}{dt}\\qquad a(t)=\\frac{dv}{dt}\\qquad \\Delta x=\\int_{t_1}^{t_2} v(t)\\,dt"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [],
+  "course_reference_note": "La lecture des courbes relie directement position, vitesse et accélération. Les mesures expérimentales sont ensuite filtrées avant exploitation.",
+  "teacher_notes": "Faire identifier oralement pente et aire sur des courbes simples avant de passer au calcul. Insister sur le filtrage des données bruitées et sur la cohérence des unités."
+}

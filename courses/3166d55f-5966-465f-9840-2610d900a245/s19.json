@@ -1,0 +1,74 @@
+{
+  "slide_id": "S19",
+  "subpart_id": "14",
+  "title": "Erreurs fréquentes à éviter",
+  "objective": "Repérer les erreurs classiques de calcul, d’unités et de référentiel en cinématique.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s19-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Pièges classiques",
+      "text": null,
+      "bullets": [
+        "**Unités** : garder des unités cohérentes ; le **radian (rad)** est l’unité SI de l’angle plan, souvent notée sans dimension dans les calculs.",
+        "**Vitesse** : ne pas confondre **vitesse moyenne** et **vitesse instantanée** ; une pente de courbe donne une grandeur instantanée.",
+        "**Accélération** : en mouvement circulaire, séparer **a_t** (tangentielle) et **a_n** (normale) ; oublier l’une des deux fausse l’interprétation.",
+        "**Conversion** : passer de **tr/min** à **rad/s** avec \\(\\omega=2\\pi N/60\\) ; oublier le 60 ou le facteur \\(2\\pi\\) crée une erreur d’ordre de grandeur.",
+        "**Référentiel** : préciser le repère de mesure (**sol**, **avion**, **composant**) avant tout calcul ; une même grandeur peut changer selon le référentiel."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations à contrôler",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\omega=\\frac{2\\pi N}{60},\\quad v=\\omega R,\\quad a_t=\\alpha R,\\quad a_n=\\omega^2R=\\frac{v^2}{R}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NIST SP 330 - Section 5",
+      "locator": "Unité radian et conversions angulaires",
+      "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-5"
+    },
+    {
+      "source_type": "web",
+      "label": "OpenStax - Instantaneous Velocity and Speed",
+      "locator": "Distinction vitesse moyenne / instantanée",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/3-2-instantaneous-velocity-and-speed"
+    },
+    {
+      "source_type": "web",
+      "label": "OpenStax - Uniform and Nonuniform Circular Motion",
+      "locator": "Décomposition tangentielle et normale",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion"
+    },
+    {
+      "source_type": "web",
+      "label": "OpenStax - Relative Motion, Distance, and Displacement",
+      "locator": "Choix du référentiel",
+      "url": "https://openstax.org/books/physics/pages/2-1-relative-motion-distance-and-displacement"
+    }
+  ],
+  "course_reference_note": "Points 8 et 13 : relations angulaires, linéaires et formulaire récapitulatif. Le point 14 cible directement les erreurs d’unités, de composantes et de référentiel.",
+  "teacher_notes": "Faire repérer aux étudiants l’erreur avant le calcul : unité manquante, conversion angulaire, composante oubliée ou référentiel non précisé. Insister sur le passage tr/min ↔ rad/s et sur la lecture de a_t et a_n en mouvement circulaire."
+}

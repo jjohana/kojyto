@@ -1,0 +1,98 @@
+{
+  "slide_id": "S1-1",
+  "subpart_id": "S1",
+  "title": "Origine de la poussée : terme réacteur",
+  "objective": "Installer le principe physique de la poussée nette et son expression de base.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s1-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture physique",
+      "text": null,
+      "bullets": [
+        "Le turboréacteur **accélère** une masse d’air vers l’arrière ; la **variation de quantité de mouvement** entraîne une réaction vers l’avant appelée **poussée**.",
+        "**Qma** désigne le **débit massique d’air** (kg/s) ; **V0** est la vitesse d’entrée et **V5** la vitesse de sortie (m/s).",
+        "La poussée est une **force** : elle s’exprime en **newtons (N)**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Sens physique et limite de lecture",
+      "text": null,
+      "bullets": [
+        "Si **V5 > V0**, la poussée est positive ; plus l’écart de vitesse est grand, plus la poussée augmente.",
+        "Exemple de calcul : **75 kg/s × (650 − 250) = 30 000 N**.",
+        "La forme complète peut ajouter un **terme de pression** si la tuyère n’est pas adaptée ; ici, on isole seulement le **terme réacteur**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation de base",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "T_u = F = Q_{ma}(V_5 - V_0)"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Thrust Equation | Glenn Research Center | NASA",
+      "locator": "formule générale de la poussée et terme de pression éventuel",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-force/"
+    },
+    {
+      "source_type": "web",
+      "label": "General Thrust Equation | Glenn Research Center | NASA",
+      "locator": "expression de la poussée comme variation de quantité de mouvement",
+      "url": "https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/thrsteq.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Jet engine | Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/technology/jet-engine"
+    },
+    {
+      "source_type": "web",
+      "label": "Thrust Equation | Glenn Research Center | NASA",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-force/?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "General Thrust Equation",
+      "locator": "research",
+      "url": "https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/thrsteq.html?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Jet engine | Design, Types, & Functionality | Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/technology/jet-engine?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La poussée nette est posée à partir du bilan d’un flux d’air accéléré entre V0 et V5. L’expression Tu = Qma(V5 - V0) est explicitement nommée « terme réacteur ».",
+  "teacher_notes": "Faire distinguer la **vitesse d’entrée** V0 et la **vitesse de sortie** V5 dans le référentiel du moteur. Insister sur le fait que la poussée vient de la **différence de vitesse** et non de la vitesse absolue prise isolément."
+}

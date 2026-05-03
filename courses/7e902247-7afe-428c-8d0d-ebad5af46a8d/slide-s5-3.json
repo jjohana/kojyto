@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S5-3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S5-3-Q1",
+      "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos de l’indication IDG 1 affichée.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’IDG 1 est affiché à 76 °C.",
+          "is_correct": false,
+          "explanation": "Faux : 76 °C correspond à IDG 2, pas à IDG 1."
+        },
+        {
+          "id": "B",
+          "text": "L’IDG 1 est affiché à 115 V.",
+          "is_correct": false,
+          "explanation": "Faux : 115 V fait partie des indications de GEN, pas des températures IDG."
+        },
+        {
+          "id": "C",
+          "text": "L’IDG 1 est affiché à 400 Hz.",
+          "is_correct": false,
+          "explanation": "Faux : 400 Hz est une fréquence associée à GEN, pas à un IDG."
+        },
+        {
+          "id": "D",
+          "text": "L’IDG 1 est affiché à 77 °C.",
+          "is_correct": true,
+          "explanation": "Vrai : la valeur visible associée à IDG 1 est bien 77 °C sur le synoptique."
+        },
+        {
+          "id": "E",
+          "text": "L’IDG 1 n’apparaît pas sur la page ECAM AC.",
+          "is_correct": false,
+          "explanation": "Faux : IDG 1 apparaît bien parmi les paramètres surveillés et sa température est lisible."
+        }
+      ],
+      "coverage_label": "Surveillance des IDG et des paramètres affichés",
+      "learning_objective": "Identifier la valeur de température associée à IDG 1 sur l’affichage ECAM.",
+      "correction_summary": "Il faut lire la valeur placée à côté du repère exact, sans la confondre avec une autre source voisine. L’erreur fréquente consiste à inverser IDG 1 et IDG 2 ou à mélanger une température avec une tension ou une fréquence affichées pour les générateurs.",
+      "course_clarification": "IDG 1 et IDG 2 sont deux paramètres distincts. La lecture correcte se fait toujours en associant le repère et sa valeur immédiatement voisine : ici, IDG 1 vaut 77 °C.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-3-Q2",
+      "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos de l’indication IDG 2 affichée.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’IDG 2 est affiché à 77 °C.",
+          "is_correct": false,
+          "explanation": "Faux : 77 °C est la valeur affichée pour IDG 1."
+        },
+        {
+          "id": "B",
+          "text": "L’IDG 2 est affiché à 76 °C.",
+          "is_correct": true,
+          "explanation": "Vrai : la valeur visible à côté de IDG 2 est bien 76 °C."
+        },
+        {
+          "id": "C",
+          "text": "L’IDG 2 est affiché à 115 V.",
+          "is_correct": false,
+          "explanation": "Faux : 115 V correspond à une indication de GEN, pas à IDG 2."
+        },
+        {
+          "id": "D",
+          "text": "L’IDG 2 est affiché à 400 Hz.",
+          "is_correct": false,
+          "explanation": "Faux : 400 Hz est une fréquence de génération AC, pas une température."
+        },
+        {
+          "id": "E",
+          "text": "L’IDG 2 est remplacé par la mention EXT A sur l’affichage.",
+          "is_correct": false,
+          "explanation": "Faux : EXT A est une autre indication visible, séparée de l’IDG 2."
+        }
+      ],
+      "coverage_label": "Surveillance des IDG et des paramètres affichés",
+      "learning_objective": "Lire correctement la température associée à IDG 2 parmi les indications affichées.",
+      "correction_summary": "Le raisonnement attendu consiste à repérer la valeur attachée à IDG 2 et à ne pas la permuter avec IDG 1. La confusion la plus fréquente vient du fait que les deux IDG sont affichés ensemble avec des valeurs proches, mais distinctes.",
+      "course_clarification": "Chaque IDG possède sa propre valeur de surveillance. Ici, IDG 2 est affiché à 76 °C, ce qui doit être lu indépendamment de IDG 1.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-3-Q3",
+      "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos des indications EXT.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "EXT A et EXT B apparaissent tous les deux dans les indications affichées.",
+          "is_correct": true,
+          "explanation": "Vrai : les deux repères EXT A et EXT B sont bien visibles parmi les indications de surveillance."
+        },
+        {
+          "id": "B",
+          "text": "Seul EXT A apparaît dans les indications affichées.",
+          "is_correct": false,
+          "explanation": "Faux : EXT B apparaît aussi, donc l’affichage ne se limite pas à EXT A."
+        },
+        {
+          "id": "C",
+          "text": "Seul EXT B apparaît dans les indications affichées.",
+          "is_correct": false,
+          "explanation": "Faux : EXT A apparaît également sur l’écran."
+        },
+        {
+          "id": "D",
+          "text": "EXT A et EXT B désignent les températures des deux IDG.",
+          "is_correct": false,
+          "explanation": "Faux : les températures des IDG sont données séparément avec les valeurs 77 °C et 76 °C."
+        },
+        {
+          "id": "E",
+          "text": "EXT A et EXT B sont des voyants du panneau EMER ELEC PWR.",
+          "is_correct": false,
+          "explanation": "Faux : ces repères figurent dans les indications de l’écran ECAM AC, pas dans le panneau EMER ELEC PWR."
+        }
+      ],
+      "coverage_label": "Surveillance des IDG et des paramètres affichés",
+      "learning_objective": "Reconnaître les repères EXT A et EXT B comme des indications visibles de surveillance.",
+      "correction_summary": "Il faut distinguer les repères de source externe des autres éléments de l’écran. L’erreur fréquente est de transformer EXT A et EXT B en températures, en commandes ou en voyants d’un autre panneau.",
+      "course_clarification": "EXT A et EXT B sont des indications affichées au même titre que les autres sources surveillées. Elles se lisent comme des paramètres visibles, pas comme des températures d’IDG ni comme des commandes.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-3-Q4",
+      "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos de l’indication GEN 1 affichée.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "GEN 1 est affiché à 62% / 28 V / 400 Hz.",
+          "is_correct": false,
+          "explanation": "Faux : la tension affichée est 115 V, pas 28 V."
+        },
+        {
+          "id": "B",
+          "text": "GEN 1 est affiché à 77 °C.",
+          "is_correct": false,
+          "explanation": "Faux : 77 °C correspond à IDG 1, pas à GEN 1."
+        },
+        {
+          "id": "C",
+          "text": "GEN 1 est affiché à 76 °C.",
+          "is_correct": false,
+          "explanation": "Faux : 76 °C correspond à IDG 2, pas à GEN 1."
+        },
+        {
+          "id": "D",
+          "text": "GEN 1 est affiché à 62% / 115 V / 50 Hz.",
+          "is_correct": false,
+          "explanation": "Faux : la fréquence affichée est 400 Hz, pas 50 Hz."
+        },
+        {
+          "id": "E",
+          "text": "GEN 1 est affiché à 62% / 115 V / 400 Hz.",
+          "is_correct": true,
+          "explanation": "Vrai : la chaîne de valeurs visible pour GEN 1 est bien 62% / 115 V / 400 Hz."
+        }
+      ],
+      "coverage_label": "Surveillance des IDG et des paramètres affichés",
+      "learning_objective": "Lire correctement la suite de valeurs associée à GEN 1.",
+      "correction_summary": "Le point clé est de lire l’ensemble de la chaîne sans changer une unité. La confusion classique consiste à conserver le pourcentage mais à permuter la tension ou la fréquence avec une autre valeur connue du réseau électrique.",
+      "course_clarification": "L’indication GEN 1 est une information de surveillance complète : elle combine un pourcentage, une tension et une fréquence. Ici, la lecture correcte est 62% / 115 V / 400 Hz.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-3-Q5",
+      "prompt": "Parmi les affirmations suivantes, une seule est exacte à propos de la lecture des valeurs affichées.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les valeurs affichées donnent directement les lois de commande du réseau.",
+          "is_correct": false,
+          "explanation": "Faux : l’affichage présente des informations de surveillance, pas des lois de commande déduites."
+        },
+        {
+          "id": "B",
+          "text": "Les valeurs affichées correspondent uniquement à des commandes manuelles.",
+          "is_correct": false,
+          "explanation": "Faux : l’écran montre aussi des indications de sources et d’état, pas seulement des commandes."
+        },
+        {
+          "id": "C",
+          "text": "Les valeurs affichées se lisent comme des paramètres de surveillance.",
+          "is_correct": true,
+          "explanation": "Vrai : les valeurs visibles sur l’écran sont à interpréter comme des paramètres surveillés."
+        },
+        {
+          "id": "D",
+          "text": "Les valeurs affichées concernent seulement les sources externes EXT A et EXT B.",
+          "is_correct": false,
+          "explanation": "Faux : l’affichage comprend aussi GEN 1, GEN 2, IDG 1, IDG 2 et d’autres repères."
+        },
+        {
+          "id": "E",
+          "text": "Les valeurs affichées ne doivent pas être associées à leur repère de source.",
+          "is_correct": false,
+          "explanation": "Faux : chaque valeur doit être lue avec le repère auquel elle appartient, sinon l’interprétation devient erronée."
+        }
+      ],
+      "coverage_label": "Surveillance des IDG et des paramètres affichés",
+      "learning_objective": "Interpréter les valeurs de l’écran comme des informations de surveillance associées à leur source.",
+      "correction_summary": "Le raisonnement attendu consiste à distinguer une indication de surveillance d’une commande ou d’une loi de fonctionnement. L’erreur fréquente est de surinterpréter l’écran comme s’il décrivait une logique de commande complète, alors qu’il fournit d’abord des valeurs à lire et à associer à leur source.",
+      "course_clarification": "Une indication affichée n’est pas une consigne de pilotage : c’est une information à surveiller. La bonne lecture consiste à associer chaque valeur à son repère, puis à l’interpréter comme un état ou une mesure.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S5",
+  "anchor_slide_id": "S5-3",
+  "question_count_target": 5,
+  "title": "QCM - Surveillance des IDG et des paramètres affichés"
+}

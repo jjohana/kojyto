@@ -1,0 +1,65 @@
+{
+  "slide_id": "S3-1",
+  "subpart_id": "S3",
+  "title": "Génération de secours : logique de bascule",
+  "objective": "Comprendre la logique d’alimentation de secours lorsque les sources normales ne sont plus disponibles.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s3-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Sources normales indisponibles",
+      "text": null,
+      "bullets": [
+        "Les **croix rouges** signalent l’indisponibilité des sources normales : **IDG** (Integrated Drive Generator), **APU GEN** (générateur de l’**APU** — Auxiliary Power Unit) et **EXT PWR** (alimentation externe).",
+        "Quand ces sources ne sont plus disponibles, le **réseau AC général** n’est plus alimenté par la chaîne principale ; la logique de distribution ne cherche pas à le maintenir identique au fonctionnement normal.",
+        "Le schéma met en évidence une **séparation** entre le réseau AC général et le **réseau AC essentiel** : la priorité devient la continuité minimale de l’alimentation."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Chaîne de secours vers l’AC essentiel",
+      "text": null,
+      "bullets": [
+        "La chaîne de secours repose sur les **batteries** qui alimentent le **static inverter** (convertisseur statique), lequel fournit une partie du **réseau AC essentiel**.",
+        "L’**EMER GEN** (Emergency Generator) fait partie de cette logique de secours : il est surveillé et commandé dans la chaîne de génération d’urgence.",
+        "Point clé à retenir : **sources normales barrées → isolement du réseau général → maintien du réseau AC essentiel** par la chaîne de secours.",
+        "En appui, une alimentation de secours par **inverter statique** depuis les batteries est un principe confirmé sur des architectures avioniques de secours."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Aircraft Electrical Systems — SKYbrary Aviation Safety",
+      "locator": "Synthèse sur l’alimentation du bus AC essentiel par inverter statique depuis les batteries en cas de perte de génération AC.",
+      "url": "https://skybrary.aero/articles/aircraft-electrical-systems"
+    },
+    {
+      "source_type": "web",
+      "label": "Preventing Loss of Engine Generators on A320 Family, A330 and A340 Aircraft — Airbus Safety First",
+      "locator": "Référence de contexte sur la configuration électrique d’urgence après perte des générateurs principaux.",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    }
+  ],
+  "course_reference_note": "Le schéma souligne les sources barrées par des croix rouges et la coupure entre réseau AC général et réseau AC essentiel. La chaîne de secours reste assurée par l’EMER GEN et, si besoin, par les batteries via le static inverter.",
+  "teacher_notes": "Faire repérer d’abord les sources normales barrées, puis faire verbaliser le chemin de secours : batteries → static inverter → AC essentiel. Insister sur la distinction entre réseau AC général et réseau AC essentiel."
+}

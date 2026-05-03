@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s13",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s13-q1",
+      "prompt": "Parmi les affirmations suivantes sur le droit à la rémunération, une seule est exacte.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le salaire d’un salarié peut toujours être fixé librement, sans tenir compte d’un minimum légal.",
+          "is_correct": false,
+          "explanation": "Le minimum légal s’impose. La liberté de fixation du salaire est encadrée par la loi et, selon les cas, par les conventions collectives."
+        },
+        {
+          "id": "B",
+          "text": "Une convention collective ne peut jamais améliorer la rémunération prévue par la loi.",
+          "is_correct": false,
+          "explanation": "Une convention collective peut prévoir des conditions plus favorables que la loi. Elle ne peut pas aller en dessous des protections légales."
+        },
+        {
+          "id": "C",
+          "text": "Le droit à la rémunération concerne seulement les primes, pas le salaire de base.",
+          "is_correct": false,
+          "explanation": "La rémunération comprend d’abord le salaire de base, puis éventuellement des compléments comme des primes. Réduire ce droit aux primes est donc incorrect."
+        },
+        {
+          "id": "D",
+          "text": "Le salarié a droit à un salaire au moins égal au salaire minimum légal, avec application possible des conventions collectives aéronautiques plus favorables.",
+          "is_correct": true,
+          "explanation": "Le salaire ne peut pas être inférieur au minimum légal, et une convention collective peut prévoir des avantages supplémentaires. Le piège consiste à croire que seul le salaire minimum légal compte."
+        },
+        {
+          "id": "E",
+          "text": "Le droit à la rémunération n’existe que pour les salariés en CDI.",
+          "is_correct": false,
+          "explanation": "Ce droit concerne tout salarié lié par un contrat de travail, quel qu’il soit. Le type de contrat ne supprime pas le droit au paiement du travail réalisé."
+        }
+      ],
+      "coverage_label": "Droit à la rémunération",
+      "learning_objective": "Vérifier la compréhension du salaire minimum légal et du rôle des conventions collectives aéronautiques.",
+      "correction_summary": "La seule affirmation exacte relie le salaire minimum légal et l’éventuel apport plus favorable d’une convention collective. Le piège est de confondre liberté salariale totale et rémunération encadrée.",
+      "course_clarification": "Le droit à la rémunération garantit un paiement du travail effectué. En pratique, le salaire doit respecter le minimum légal et peut être complété par des dispositions conventionnelles plus favorables.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s13-q2",
+      "prompt": "À propos du respect de la vie privée et de la personne, une seule affirmation est exacte.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le respect de la vie privée autorise l’employeur à traiter différemment les salariés selon leur sexe.",
+          "is_correct": false,
+          "explanation": "L’égalité femmes-hommes interdit de fonder une différence de traitement sur le sexe. C’est l’opposé du respect de la personne."
+        },
+        {
+          "id": "B",
+          "text": "La discrimination, le harcèlement et l’atteinte à l’égalité entre les femmes et les hommes sont incompatibles avec le respect dû au salarié.",
+          "is_correct": true,
+          "explanation": "Le respect de la personne implique l’absence de discrimination et de harcèlement, ainsi que l’égalité entre les femmes et les hommes. Ces atteintes sont précisément visées par le droit présenté."
+        },
+        {
+          "id": "C",
+          "text": "Le harcèlement est toléré s’il permet d’augmenter la productivité.",
+          "is_correct": false,
+          "explanation": "Le harcèlement porte atteinte à la personne et n’est pas justifié par un objectif de productivité. C’est une violation du droit au respect."
+        },
+        {
+          "id": "D",
+          "text": "La discrimination n’est un problème que si elle concerne la rémunération.",
+          "is_correct": false,
+          "explanation": "La discrimination peut toucher l’embauche, l’accès à un poste, l’évolution ou les conditions de travail. Elle ne se limite pas au salaire."
+        },
+        {
+          "id": "E",
+          "text": "Le droit au respect de la personne concerne uniquement les relations entre collègues, pas l’organisation du travail.",
+          "is_correct": false,
+          "explanation": "Ce droit s’applique dans l’ensemble de la relation de travail. Les pratiques d’organisation et de management peuvent aussi le remettre en cause."
+        }
+      ],
+      "coverage_label": "Droit au respect de la vie privée et de la personne",
+      "learning_objective": "Identifier les situations interdites par le respect de la personne au travail.",
+      "correction_summary": "La bonne réponse regroupe discrimination, harcèlement et égalité femmes-hommes comme protections essentielles. Le piège est de réduire ce droit à une simple règle de comportement entre collègues.",
+      "course_clarification": "Le respect de la personne protège le salarié contre les atteintes à sa dignité et à son égalité de traitement. Il couvre notamment la discrimination, le harcèlement et l’égalité hommes/femmes.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s13-q3",
+      "prompt": "Concernant le droit à la sécurité et à la santé au travail, une seule affirmation est exacte.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les équipements de protection individuelle, ou EPI, font partie des mesures de prévention en entreprise aéronautique.",
+          "is_correct": true,
+          "explanation": "Les EPI sont cités comme mesure préventive pour protéger le salarié contre les risques professionnels. Le sigle doit être relié à cette fonction de protection."
+        },
+        {
+          "id": "B",
+          "text": "Les EPI désignent les équipements de production industrielle.",
+          "is_correct": false,
+          "explanation": "Le sigle EPI ne renvoie pas à des machines de production mais à des équipements destinés à protéger la personne. Le sens du sigle est donc mal interprété."
+        },
+        {
+          "id": "C",
+          "text": "Le droit à la sécurité supprime tout risque professionnel.",
+          "is_correct": false,
+          "explanation": "Le droit à la sécurité vise à prévenir les risques et à les réduire, pas à les faire disparaître totalement. La prévention reste nécessaire."
+        },
+        {
+          "id": "D",
+          "text": "Le port des EPI est réservé aux situations de bureau sans exposition particulière.",
+          "is_correct": false,
+          "explanation": "Les EPI sont surtout utiles face à des risques identifiés, par exemple en maintenance ou en environnement industriel. Les limiter aux bureaux est incohérent."
+        },
+        {
+          "id": "E",
+          "text": "La santé au travail concerne seulement la santé physique, pas le bien-être mental.",
+          "is_correct": false,
+          "explanation": "La santé au travail vise aussi le bien-être mental. Les risques psychosociaux font partie des risques à prévenir."
+        }
+      ],
+      "coverage_label": "Droit à la sécurité et à la santé au travail",
+      "learning_objective": "Reconnaître le rôle des EPI et l’objectif de prévention en santé-sécurité.",
+      "correction_summary": "La seule affirmation exacte associe les EPI à une mesure de prévention. Le piège principal est de confondre protection individuelle et matériel de production.",
+      "course_clarification": "Les EPI sont des équipements portés par la personne pour limiter l’exposition à un danger. Ils s’inscrivent dans une logique de prévention des accidents et des atteintes à la santé.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s13-q4",
+      "prompt": "À propos du droit à la formation et au développement professionnel, une seule affirmation est exacte.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le développement professionnel consiste uniquement à changer d’entreprise.",
+          "is_correct": false,
+          "explanation": "Le développement professionnel concerne l’évolution des compétences, pas seulement la mobilité externe. Il peut se construire dans le même emploi."
+        },
+        {
+          "id": "B",
+          "text": "La validation des compétences remplace toute formation ultérieure.",
+          "is_correct": false,
+          "explanation": "Valider des compétences ne supprime pas le besoin de formation continue. Les deux logiques sont complémentaires."
+        },
+        {
+          "id": "C",
+          "text": "Un brevet ou une certification n’a aucun lien avec les compétences du salarié.",
+          "is_correct": false,
+          "explanation": "Un brevet ou une certification sert justement à reconnaître officiellement des compétences. Ils font partie de la logique de qualification."
+        },
+        {
+          "id": "D",
+          "text": "Le droit à la formation ne concerne que les jeunes en apprentissage.",
+          "is_correct": false,
+          "explanation": "Le droit à la formation et au développement professionnel concerne les salariés en général. Il ne se limite pas à l’apprentissage."
+        },
+        {
+          "id": "E",
+          "text": "La formation continue, la validation des compétences et l’obtention d’un brevet ou d’une certification relèvent du développement professionnel du salarié.",
+          "is_correct": true,
+          "explanation": "Ces éléments correspondent bien au droit à la formation et au développement professionnel. Ils servent à maintenir et reconnaître les compétences."
+        }
+      ],
+      "coverage_label": "Droit à la formation et au développement professionnel",
+      "learning_objective": "Vérifier la compréhension des moyens de progression et de reconnaissance des compétences.",
+      "correction_summary": "L’énoncé exact associe formation continue, validation des compétences et certification. Le piège est de croire que ce droit ne sert qu’à changer de poste ou qu’il concerne un seul public.",
+      "course_clarification": "La formation continue permet d’actualiser les compétences. La validation des compétences et la certification donnent une reconnaissance formelle utile pour l’évolution professionnelle.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s13-q5",
+      "prompt": "Sur le droit à la représentation collective, une seule affirmation est exacte.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le CSE désigne un certificat de sécurité aéronautique.",
+          "is_correct": false,
+          "explanation": "Le sigle CSE ne renvoie pas à une certification technique, mais à une instance de représentation des salariés. C’est un contresens sur l’acronyme."
+        },
+        {
+          "id": "B",
+          "text": "La représentation collective supprime le dialogue social entre salariés et employeur.",
+          "is_correct": false,
+          "explanation": "Au contraire, elle organise ce dialogue et permet de porter les intérêts des salariés. Elle ne le supprime pas."
+        },
+        {
+          "id": "C",
+          "text": "Les délégués du personnel et le comité social et économique, ou CSE, font partie des formes de représentation collective des salariés.",
+          "is_correct": true,
+          "explanation": "Le droit à la représentation collective inclut bien les délégués du personnel et le CSE. Le sigle CSE doit être identifié comme un organe de représentation des salariés."
+        },
+        {
+          "id": "D",
+          "text": "Les délégués du personnel et le CSE concernent uniquement les apprentis.",
+          "is_correct": false,
+          "explanation": "Ces instances représentent les salariés de l’entreprise, pas seulement les apprentis. Limiter leur rôle à une catégorie est faux."
+        },
+        {
+          "id": "E",
+          "text": "Le droit à la représentation collective remplace le droit à la rémunération.",
+          "is_correct": false,
+          "explanation": "La représentation collective et la rémunération sont deux droits différents et complémentaires. L’un ne remplace pas l’autre."
+        }
+      ],
+      "coverage_label": "Droit à la représentation collective",
+      "learning_objective": "Identifier les instances de représentation et le sigle CSE.",
+      "correction_summary": "La bonne affirmation relie la représentation collective aux délégués du personnel et au CSE. Le piège est de transformer le sigle CSE en sigle technique ou en certification.",
+      "course_clarification": "La représentation collective permet aux salariés d’être portés par des instances dédiées. Le CSE est l’instance de référence citée ici pour représenter les intérêts des salariés.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s13",
+  "anchor_slide_id": "s13",
+  "question_count_target": 5,
+  "title": "QCM - Les droits du salarié"
+}

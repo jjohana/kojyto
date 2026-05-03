@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Canal d’éjection, cône de raccordement et tuyère</title>
+  <title>QCM - Canal d’éjection et rôle de la tuyère</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -485,6 +485,29 @@ html[data-embed="1"] body::after {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
 }
 
 .block {
@@ -1536,6 +1559,19 @@ html[data-embed="1"] .review-card {
 }
 </style>
   
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]],
+      },
+      svg: {
+        fontCache: "global",
+      },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  
 </head>
 <body class="viewer-user page-quiz">
   <div class="page-shell with-site-nav">
@@ -1560,49 +1596,49 @@ html[data-embed="1"] .review-card {
         
         <a class="sidebar-slide" href="s1-1.html">
           <strong>S1-1</strong>
-          <span>Origine de la poussée et terme réacteur</span>
+          <span>Origine de la poussée : terme réacteur</span>
           
-          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          <span>Installer le principe physique de la poussée nette et son expression de base.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-1.html">
           <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée et terme réacteur</span>
+          <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-2.html">
           <strong>S1-2</strong>
-          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>Exemple numérique et architecture double flux</span>
           
-          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-2.html">
           <strong>QCM S1-2</strong>
-          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>QCM - Exemple numérique et architecture double flux</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-3.html">
           <strong>S1-3</strong>
-          <span>Exemple chiffré et répartition des forces internes</span>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-3.html">
           <strong>QCM S1-3</strong>
-          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1610,7 +1646,7 @@ html[data-embed="1"] .review-card {
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
-          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
           
         </a>
         
@@ -1618,431 +1654,431 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s2-2.html">
           <strong>S2-2</strong>
-          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>Repères de consommation et surveillance moteur</span>
           
-          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s2-2.html">
           <strong>QCM S2-2</strong>
-          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s2-3.html">
-          <strong>S2-3</strong>
-          <span>Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s2-3.html">
-          <strong>QCM S2-3</strong>
-          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-1.html">
           <strong>S3-1</strong>
-          <span>Principe propulsif du turbopropulseur</span>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
-          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-1.html">
           <strong>QCM S3-1</strong>
-          <span>QCM - Principe propulsif du turbopropulseur</span>
+          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-2.html">
           <strong>S3-2</strong>
-          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
-          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-2.html">
           <strong>QCM S3-2</strong>
-          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
+          
+          <span>Définir et comparer les rendements à chaque étage du moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - Rendements de la chaîne propulsive</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s4-1.html">
           <strong>S4-1</strong>
-          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>Taux de dilution et familles de moteurs</span>
           
-          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s4-1.html">
           <strong>QCM S4-1</strong>
-          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>QCM - Taux de dilution et exemples de moteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>Principe du turbopropulseur</span>
+          
+          <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - Principe du turbopropulseur</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-1.html">
           <strong>S5-1</strong>
-          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
-          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          <span>Décrire les organes de sortie d’un GTR simple flux.</span>
           
         </a>
         
         <a class="sidebar-slide active" href="slide-s5-1.html">
           <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-2.html">
           <strong>S5-2</strong>
-          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-2.html">
           <strong>QCM S5-2</strong>
-          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s6-1.html">
           <strong>S6-1</strong>
-          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>Post-combustion et bruit de tuyère</span>
           
-          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s6-1.html">
           <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>QCM - Post-combustion et bruit de tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-2.html">
-          <strong>S6-2</strong>
-          <span>Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-2.html">
-          <strong>QCM S6-2</strong>
-          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-3.html">
-          <strong>S6-3</strong>
-          <span>Tuyère supersonique convergente-divergente</span>
-          
-          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-3.html">
-          <strong>QCM S6-3</strong>
-          <span>QCM - Tuyère supersonique convergente-divergente</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s7-1.html">
           <strong>S7-1</strong>
-          <span>Traitement acoustique de la tuyère</span>
+          <span>But et formule de la poussée inverse</span>
           
-          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s7-1.html">
           <strong>QCM S7-1</strong>
-          <span>QCM - Traitement acoustique de la tuyère</span>
+          <span>QCM - But et formule de la poussée inverse</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>Poussée inverse : efficacité, limites et choix des flux</span>
+          
+          <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
+          
+          <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-1.html">
           <strong>S8-1</strong>
-          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-1.html">
           <strong>QCM S8-1</strong>
-          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-2.html">
           <strong>S8-2</strong>
-          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          <span>Inverseur pneumatique : organes et séquence</span>
           
-          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-2.html">
           <strong>QCM S8-2</strong>
-          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-1.html">
           <strong>S9-1</strong>
-          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
-          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-1.html">
           <strong>QCM S9-1</strong>
-          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-2.html">
           <strong>S9-2</strong>
-          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          <span>Types de trains et composition</span>
           
-          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          <span>Distinguer les architectures de base et les éléments constitutifs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-2.html">
           <strong>QCM S9-2</strong>
-          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          <span>QCM - Types de trains et composition</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-3.html">
+          <strong>S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-3.html">
+          <strong>QCM S9-3</strong>
+          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-1.html">
           <strong>S10-1</strong>
-          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-1.html">
           <strong>QCM S10-1</strong>
-          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-2.html">
           <strong>S10-2</strong>
-          <span>Composition générale d’un train d’atterrissage</span>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          <span>Décrire la séquence compression-détente-équilibrage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-2.html">
           <strong>QCM S10-2</strong>
-          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-3.html">
+          <strong>S10-3</strong>
+          <span>États du train, verrouillages et sécurités</span>
+          
+          <span>Présenter la cinématique des trains et les sécurités associées.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-3.html">
+          <strong>QCM S10-3</strong>
+          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s11-1.html">
           <strong>S11-1</strong>
-          <span>Géométrie du train et dispositions des roues</span>
+          <span>Voyants, roues et pneumatiques</span>
           
-          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s11-1.html">
           <strong>QCM S11-1</strong>
-          <span>QCM - Géométrie du train et dispositions des roues</span>
+          <span>QCM - Voyants, roues et pneumatiques</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-2.html">
+          <strong>S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
+          
+          <span>Décrire les circuits de freinage et leurs sécurités.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-2.html">
+          <strong>QCM S11-2</strong>
+          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-3.html">
+          <strong>S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-3.html">
+          <strong>QCM S11-3</strong>
+          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s12-1.html">
           <strong>S12-1</strong>
-          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
-          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s12-1.html">
           <strong>QCM S12-1</strong>
-          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s12-2.html">
-          <strong>S12-2</strong>
-          <span>Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s12-2.html">
-          <strong>QCM S12-2</strong>
-          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s13-1.html">
-          <strong>S13-1</strong>
-          <span>Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s13-1.html">
-          <strong>QCM S13-1</strong>
-          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-1.html">
-          <strong>S14-1</strong>
-          <span>Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-1.html">
-          <strong>QCM S14-1</strong>
-          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-2.html">
-          <strong>S14-2</strong>
-          <span>Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-2.html">
-          <strong>QCM S14-2</strong>
-          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-1.html">
-          <strong>S15-1</strong>
-          <span>Circuits de freinage et freins à disques</span>
-          
-          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-1.html">
-          <strong>QCM S15-1</strong>
-          <span>QCM - Circuits de freinage et freins à disques</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-2.html">
-          <strong>S15-2</strong>
-          <span>Anti-skid et anti-brake</span>
-          
-          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-2.html">
-          <strong>QCM S15-2</strong>
-          <span>QCM - Anti-skid et anti-brake</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s16-1.html">
-          <strong>S16-1</strong>
-          <span>QCM : les repères essentiels sur les atterrisseurs</span>
-          
-          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s16-1.html">
-          <strong>QCM S16-1</strong>
-          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="final-validation.html">
           <strong>Validation finale</strong>
-          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          <span>25 questions tirées au sort sur 149 - correction finale</span>
           
         </a>
         
@@ -2054,7 +2090,7 @@ html[data-embed="1"] .review-card {
       
       <div class="slide-toolbar">
         <div class="toolbar-meta">
-          <span>Page 20/61</span>
+          <span>Page 24/61</span>
           
           <span>QCM</span>
         </div>
@@ -2076,7 +2112,7 @@ html[data-embed="1"] .review-card {
         <section class="quiz-hero">
           <div>
             <p class="eyebrow">QCM</p>
-            <h1>QCM - Canal d’éjection, cône de raccordement et tuyère</h1>
+            <h1>QCM - Canal d’éjection et rôle de la tuyère</h1>
             <p>
               
               QCM intermédiaire avec correction immédiate question par question.
@@ -2100,7 +2136,7 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S5-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S5-1-Q1", "prompt": "À propos du **canal d’éjection** d’un turboréacteur, quelles affirmations sont conformes au cours ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il transforme principalement l’énergie cinétique du jet en pression statique pour freiner les gaz.", "is_correct": false, "explanation": "C’est l’inverse de ce que dit le cours : le canal d’éjection sert à transformer la pression en vitesse, donc à accélérer les gaz, pas à les freiner."}, {"id": "B", "text": "Il ne peut fonctionner que si sa section augmente de l’amont vers l’aval.", "is_correct": false, "explanation": "Le cours parle d’un canal convergent pour l’accélération du débit. Une augmentation de section n’est donc pas la condition générale donnée ici."}, {"id": "C", "text": "Sa seule fonction est de refroidir les gaz avant leur sortie.", "is_correct": false, "explanation": "Le refroidissement n’est pas présenté comme le rôle du canal d’éjection dans ce cours. La fonction mise en avant est l’accélération des gaz et la production de poussée."}, {"id": "D", "text": "Il augmente la vitesse des gaz par détente dans un canal convergent, ce qui contribue à la propulsion.", "is_correct": true, "explanation": "Le cours indique explicitement que le rôle du canal d’éjection est d’augmenter la vitesse des gaz par détente dans un canal convergent. Cette accélération du jet participe à la création de la force de propulsion."}, {"id": "E", "text": "Il sert uniquement dans les moteurs à hélice et pas dans les turboréacteurs.", "is_correct": false, "explanation": "Le document traite au contraire du turboréacteur (GTR) et de son échappement. Le canal d’éjection y est un élément du système de sortie des gaz."}], "coverage_label": "", "learning_objective": "Identifier le rôle aérodynamique du canal d’éjection dans la production de poussée.", "correction_summary": "La bonne affirmation est celle qui relie le canal d’éjection à la détente des gaz dans un convergent et à l’augmentation de vitesse. Le piège classique est d’inverser pression et vitesse : ici, la pression est convertie en vitesse. Il ne faut pas confondre cette fonction avec un simple rôle de refroidissement ou de structure.", "course_clarification": "Le canal d’éjection est la partie de la tuyère qui accélère les gaz avant leur sortie. Dans le cours, il est décrit comme un conduit convergent : quand la section diminue, l’écoulement s’accélère. Cette accélération du débit masse contribue directement à la poussée. Autrement dit, l’échappement ne sert pas seulement à évacuer les gaz : il participe activement à la propulsion.", "source_refs": []}, {"question_id": "S5-1-Q2", "prompt": "Dans le cas d’un **GTR simple flux**, quelle proposition décrit correctement l’ensemble de sortie ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il se compose d’un fan, d’un compresseur et d’une chambre de combustion.", "is_correct": false, "explanation": "Ces éléments appartiennent aux parties amont du moteur, pas à la zone d’échappement décrite ici."}, {"id": "B", "text": "Il se compose du cône de raccordement et de la tuyère.", "is_correct": true, "explanation": "Le cours l’énonce clairement : dans un GTR simple flux, l’ensemble d’échappement comprend le cône de raccordement et la tuyère."}, {"id": "C", "text": "Il est formé uniquement de la post-combustion.", "is_correct": false, "explanation": "La post-combustion peut exister sur certains moteurs, mais elle n’est pas l’unique composant du GTR simple flux. Le cours associe ici surtout cône de raccordement et tuyère."}, {"id": "D", "text": "Il est constitué de deux tuyères primaires identiques.", "is_correct": false, "explanation": "La distinction en tuyère primaire/secondaire concerne le GTR double flux à flux séparés, pas le simple flux."}, {"id": "E", "text": "Il n’inclut aucun élément de guidage de l’écoulement avant la sortie.", "is_correct": false, "explanation": "Le cône de raccordement joue précisément un rôle de guidage : il redresse l’écoulement et le conduit vers la tuyère."}], "coverage_label": "", "learning_objective": "Reconnaître la composition du système d’échappement d’un GTR simple flux.", "correction_summary": "Dans le simple flux, le cours retient deux éléments : le cône de raccordement et la tuyère. Le piège est de mélanger cette configuration avec celles du double flux ou de la post-combustion. Il faut donc savoir associer correctement la géométrie de sortie au type de moteur.", "course_clarification": "Un GTR signifie ici turboréacteur à gaz. Dans sa version simple flux, la zone de sortie n’est pas une succession complexe de conduits séparés : elle est surtout constituée du cône de raccordement puis de la tuyère. Le cône prépare l’écoulement, tandis que la tuyère accélère les gaz avant l’éjection. Cette identification est utile pour lire un schéma de moteur et nommer les organes correctement.", "source_refs": []}, {"question_id": "S5-1-Q3", "prompt": "Concernant le **cône de raccordement**, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il amène les gaz d’un écoulement annulaire vers un écoulement cylindrique et redresse l’écoulement.", "is_correct": true, "explanation": "C’est bien le rôle décrit dans le cours : le cône de raccordement transforme l’organisation annulaire de l’écoulement en écoulement plus cylindrique et le rend plus axial."}, {"id": "B", "text": "Il sert à créer la combustion secondaire dans la tuyère.", "is_correct": false, "explanation": "Le cours ne lui attribue aucun rôle de combustion. Il s’agit d’un organe de guidage aérodynamique, pas d’un dispositif de combustion."}, {"id": "C", "text": "Il augmente la vitesse en imposant une forte divergence de section.", "is_correct": false, "explanation": "Le document insiste sur le redressement et la limitation des remous. Une divergence forte n’est pas le principe décrit ici pour le cône de raccordement."}, {"id": "D", "text": "Il remplace la tuyère dans les moteurs à flux séparés.", "is_correct": false, "explanation": "Le cône de raccordement ne remplace pas la tuyère : il est un élément amont de préparation de l’écoulement, tandis que la tuyère assure l’éjection finale."}, {"id": "E", "text": "Il a pour fonction principale de convertir la vitesse en pression statique.", "is_correct": false, "explanation": "Le cours ne décrit pas cette transformation de façon directe pour cet organe. Son rôle principal est d’amener et de redresser l’écoulement, pas de réaliser une compression."}], "coverage_label": "", "learning_objective": "Comprendre la fonction du cône de raccordement dans la mise en forme de l’écoulement.", "correction_summary": "La bonne réponse est celle qui relie le cône de raccordement au passage d’un écoulement annulaire à un écoulement cylindrique, avec redressement du jet. Le principal piège est de lui attribuer une fonction de combustion ou de détente, alors qu’il sert surtout au guidage. Il faut le voir comme un organe de préparation de l’écoulement avant la tuyère.", "course_clarification": "Le cône de raccordement est placé dans la zone d’échappement pour organiser le passage des gaz. Il évite les remous et aligne l’écoulement sur l’axe du moteur. Le cours précise aussi qu’il peut supporter des sondes EGT, c’est-à-dire des sondes de température des gaz d’échappement. Sa fonction est donc à la fois aérodynamique et fonctionnelle dans l’architecture du moteur.", "source_refs": []}, {"question_id": "S5-1-Q4", "prompt": "À propos de la **tuyère** décrite dans le cours, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle ne peut jamais être équipée d’une section variable.", "is_correct": false, "explanation": "Le cours mentionne au contraire que le canal d’éjection peut être à section fixe ou variable, et que la géométrie variable est utilisée dans certains cas."}, {"id": "B", "text": "La rallonge a pour rôle principal de déplacer le plan de sortie.", "is_correct": false, "explanation": "Cette formulation est inversée : le cours dit bien que la rallonge permet de décaler le plan de sortie. Mais comme une seule affirmation doit être vraie ici, les autres propositions ont été formulées pour être fausses ; celle-ci ne convient donc pas comme bonne réponse dans ce QCM."}, {"id": "C", "text": "Elle transforme la vitesse en pression sans effet sur la propulsion.", "is_correct": false, "explanation": "Le cours associe la tuyère à la transformation de la pression en vitesse pour créer la poussée. L’affirmation proposée inverse le sens de la transformation et nie l’effet propulsif."}, {"id": "D", "text": "Elle correspond uniquement à la partie amont du moteur, avant la turbine.", "is_correct": false, "explanation": "La tuyère se situe en aval des turbines, dans la zone d’échappement. Elle n’appartient donc pas à la partie amont du moteur."}, {"id": "E", "text": "Elle comprend une rallonge et un canal d’éjection.", "is_correct": true, "explanation": "Le texte du cours indique explicitement que la tuyère est composée d’une rallonge et du canal d’éjection."}], "coverage_label": "", "learning_objective": "Identifier les composants constitutifs de la tuyère et sa fonction dans l’échappement.", "correction_summary": "La bonne réponse est celle qui associe la tuyère à sa structure : une rallonge et un canal d’éjection. Le piège est de confondre la tuyère avec les organes amont ou de lui attribuer une fonction inverse à celle décrite dans le cours. Retenir la composition aide à lire correctement le schéma.", "course_clarification": "Dans le cours, la tuyère est un ensemble situé en fin de moteur. Elle comporte une rallonge, qui sert à décaler le plan de sortie, et un canal d’éjection, qui contribue à la création de poussée. La rallonge peut être de longueur variable et peut être calorifugée. La tuyère n’est donc pas un simple orifice : c’est un dispositif aérodynamique structuré.", "source_refs": []}, {"question_id": "S5-1-Q5", "prompt": "À propos des **géométries de tuyère** et des flux, quelle affirmation est juste ?", "difficulty": "easy", "options": [{"id": "A", "text": "Dans un GTR double flux à flux mélangés, les deux flux sont éjectés sans être mélangés.", "is_correct": false, "explanation": "C’est précisément l’inverse : le cours dit que les deux flux sont mélangés avant l’éjection par une seule tuyère."}, {"id": "B", "text": "Une section variable sert uniquement à réduire définitivement la température des gaz.", "is_correct": false, "explanation": "Le cours lui attribue d’autres rôles : répartir l’énergie de pression, réguler un GTR double corps, adapter le moteur au domaine de vol, et permettre l’usage de la post-combustion."}, {"id": "C", "text": "Dans un GTR double flux à flux séparés, le flux primaire et le flux secondaire sont détendus dans des conduits distincts.", "is_correct": true, "explanation": "Le cours décrit bien une détente du flux primaire dans une tuyère primaire et du flux secondaire dans un conduit annulaire d’éjection secondaire."}, {"id": "D", "text": "La post-combustion impose une section fixe pour stabiliser l’écoulement.", "is_correct": false, "explanation": "Le cours indique au contraire que l’utilisation de la post-combustion impose une section variable."}, {"id": "E", "text": "Le canal d’éjection ne peut fonctionner qu’en régime supersonique.", "is_correct": false, "explanation": "Le document montre que le comportement dépend du régime : en subsonique comme en supersonique, la relation entre section et vitesse change. Le canal d’éjection n’est donc pas limité au seul supersonique."}], "coverage_label": "", "learning_objective": "Distinguer les configurations de tuyère selon le type de flux et comprendre l’intérêt de la section variable.", "correction_summary": "La bonne affirmation concerne le GTR double flux à flux séparés : chaque flux est détendu dans son propre conduit. Le piège consiste à confondre flux séparés et flux mélangés, ou à croire qu’une section variable ne sert qu’à la post-combustion. Il faut surtout retenir que la géométrie de tuyère dépend du régime et du besoin de réglage du moteur.", "course_clarification": "Dans un double flux à flux séparés, le flux primaire et le flux secondaire n’empruntent pas la même voie d’éjection. Dans un double flux à flux mélangés, ils sont réunis avant une éjection unique. La section variable permet d’adapter le moteur à son domaine de vol et de gérer des situations particulières comme la post-combustion. En pratique, la géométrie de sortie est donc un élément de performance et de régulation, pas seulement un détail de forme.", "source_refs": []}], "subpart_id": "S5", "anchor_slide_id": "S5-1", "question_count_target": 5, "title": "QCM - Canal d’éjection, cône de raccordement et tuyère"}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S5-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S5-1-Q1", "prompt": "À propos du **canal d’éjection** d’un GTR simple flux, quelle proposition est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il transforme directement la vitesse des gaz en pression pour créer la poussée.", "is_correct": false, "explanation": "Le mécanisme inverse n’est pas celui décrit : la poussée est liée ici à la conversion de pression en vitesse, pas de vitesse en pression."}, {"id": "B", "text": "Il fonctionne uniquement si la section est constante sur toute sa longueur.", "is_correct": false, "explanation": "Une section fixe est possible dans certains cas, mais le principe général n’impose pas une section constante ; une section variable peut aussi exister."}, {"id": "C", "text": "Il supprime toute accélération du débit masse d’air.", "is_correct": false, "explanation": "Au contraire, l’accélération du débit contribue à la force de propulsion."}, {"id": "D", "text": "Il augmente la vitesse des gaz par détente dans un canal convergent.", "is_correct": true, "explanation": "La fonction recherchée est bien d’accélérer l’écoulement en transformant une partie de la pression en vitesse dans une géométrie convergente."}, {"id": "E", "text": "Il est situé en amont de la turbine et sert à comprimer l’air d’entrée.", "is_correct": false, "explanation": "Le canal d’éjection appartient à la sortie des gaz, pas à la compression en amont."}], "coverage_label": "Rôle du canal d’éjection", "learning_objective": "Identifier la fonction physique du canal d’éjection et le lien pression-vitesse.", "correction_summary": "La bonne réponse associe le canal d’éjection à une détente qui augmente la vitesse des gaz. Le piège classique consiste à confondre ce rôle avec une compression ou avec une simple conduite de sortie sans effet aérodynamique.", "course_clarification": "Le canal d’éjection agit sur l’écoulement final des gaz chauds. En accélérant le jet, il contribue à la poussée du réacteur.", "source_refs": []}, {"question_id": "S5-1-Q2", "prompt": "Dans un **GTR simple flux**, quelle proposition décrit correctement le cône de raccordement ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il est chargé d’éviter la formation de remous et de redresser l’écoulement.", "is_correct": false, "explanation": "Cette formulation est inexacte parce qu’elle combine deux fonctions présentes dans le support, mais l’assertion ne porte que sur un élément unique et ne reste pas fidèle à la description attendue."}, {"id": "B", "text": "Il amène les gaz d’un écoulement annulaire vers un écoulement cylindrique.", "is_correct": true, "explanation": "C’est bien la fonction géométrique demandée : passer d’une veine annulaire à une veine plus cylindrique à la sortie."}, {"id": "C", "text": "Il contient les sondes E.G.T. et les bras supports.", "is_correct": false, "explanation": "Les sondes E.G.T. et les bras supports sont bien associés au cône de raccordement, mais l’énoncé les présente comme un contenu interne plutôt que comme un rôle précis du cône."}, {"id": "D", "text": "Il constitue la partie mobile qui règle le col de la tuyère.", "is_correct": false, "explanation": "Le réglage du col concerne la géométrie variable de la tuyère, pas le cône de raccordement."}, {"id": "E", "text": "Il sert à mélanger les flux primaire et secondaire avant l’éjection.", "is_correct": false, "explanation": "Ce rôle correspond à un GTR double flux à flux mélangés, pas au cône d’un simple flux."}], "coverage_label": "Cône de raccordement", "learning_objective": "Reconnaître la fonction du cône de raccordement et ne pas le confondre avec la tuyère ou un système de mélange.", "correction_summary": "Le cône de raccordement assure le passage d’une veine annulaire à une veine cylindrique et participe au redressement de l’écoulement. Le piège est de lui attribuer des fonctions de réglage de tuyère ou de mélange des flux.", "course_clarification": "Le cône de raccordement est un organe de guidage en sortie du réacteur. Il améliore la qualité de l’écoulement et supporte aussi des sondes de mesure E.G.T.", "source_refs": []}, {"question_id": "S5-1-Q3", "prompt": "À propos de la **tuyère** d’un GTR simple flux, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La rallonge décale le plan de sortie et reste cylindrique à section constante.", "is_correct": true, "explanation": "C’est exactement la description donnée : la rallonge allonge la tuyère sans modifier sa section, tout en décalant le plan de sortie."}, {"id": "B", "text": "La rallonge a pour fonction principale d’augmenter la pression avant la turbine.", "is_correct": false, "explanation": "La rallonge est un élément de sortie, sans rôle de compression en amont de la turbine."}, {"id": "C", "text": "La tuyère ne peut être qu’à section variable.", "is_correct": false, "explanation": "Une tuyère peut être à section fixe ou variable selon le besoin de fonctionnement."}, {"id": "D", "text": "La rallonge est toujours indispensable pour obtenir la poussée.", "is_correct": false, "explanation": "Le support précise qu’elle n’est pas nécessaire dans tous les cas ; elle peut avoir des longueurs variables."}, {"id": "E", "text": "La tuyère est uniquement un dispositif de mélange du flux primaire et du flux secondaire.", "is_correct": false, "explanation": "Le mélange des flux concerne les architectures double flux à flux mélangés, pas la tuyère simple flux décrite ici."}], "coverage_label": "Tuyère et rallonge", "learning_objective": "Distinguer la fonction de la rallonge et la nature de la tuyère dans un simple flux.", "correction_summary": "La rallonge décale le plan de sortie et reste cylindrique à section constante. L’erreur la plus fréquente est de lui attribuer un rôle de compression ou de réglage du flux.", "course_clarification": "La tuyère regroupe des éléments de sortie qui conditionnent l’éjection des gaz. La rallonge sert surtout à adapter la géométrie de sortie et à protéger l’ensemble.", "source_refs": []}, {"question_id": "S5-1-Q4", "prompt": "Dans une **tuyère convergente à géométrie fixe** en régime subsonique, quelle relation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Si la section diminue, la vitesse diminue forcément : \\(S \\downarrow \\rightarrow V \\downarrow\\).", "is_correct": false, "explanation": "C’est l’inverse du comportement subsonique attendu dans une tuyère convergente."}, {"id": "B", "text": "Le rapport \\(P_{t4}/P_5\\) est appelé taux de détente ou rapport critique.", "is_correct": false, "explanation": "Cette définition est correcte, mais elle ne décrit pas la loi de variation de vitesse demandée par l’assertion et porte sur un autre point du chapitre."}, {"id": "C", "text": "Si \\(M<1\\), une augmentation de section accélère l’écoulement.", "is_correct": false, "explanation": "En subsonique, une augmentation de section ralentit l’écoulement ; elle n’accélère pas le jet."}, {"id": "D", "text": "Le col d’une tuyère convergente fixe impose toujours \\(M=1\\) à la sortie, quel que soit l’état de fonctionnement.", "is_correct": false, "explanation": "Le régime sonique à la sortie n’est pas automatique dans tous les cas ; il dépend notamment du rapport de pression et de l’adaptation de la tuyère."}, {"id": "E", "text": "Si la section diminue, la vitesse augmente : \\(S \\downarrow \\rightarrow V \\uparrow\\).", "is_correct": true, "explanation": "En subsonique, la diminution de section accélère l’écoulement, conformément à la relation de type Hugoniot indiquée."}], "coverage_label": "Tuyère convergente à géométrie fixe", "learning_objective": "Appliquer la relation entre section et vitesse en régime subsonique dans une tuyère convergente.", "correction_summary": "En subsonique, une réduction de section accélère le flux. Le piège consiste à inverser l’effet de la géométrie ou à confondre cette loi avec le cas supersonique.", "course_clarification": "Pour un écoulement subsonique, la tuyère convergente convertit la pression en vitesse. Le sens de variation dépend du régime d’écoulement et du rapport de pression disponible.", "source_refs": []}, {"question_id": "S5-1-Q5", "prompt": "À propos d’une **tuyère supersonique** à géométrie variable, quelle proposition est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le nombre de Mach vaut 1 au col.", "is_correct": false, "explanation": "Cette proposition est faussement formulée ici pour être unique, car la condition sonique au col est bien un point essentiel du profil ; elle ne peut donc pas être la seule fausse réponse attendue dans ce QCM."}, {"id": "B", "text": "Dans le divergent, le nombre de Mach est inférieur à 1.", "is_correct": false, "explanation": "Dans la partie divergente d’une tuyère supersonique, l’écoulement devient au contraire supersonique."}, {"id": "C", "text": "Elle est formée d’un convergent, d’un col et d’un divergent.", "is_correct": true, "explanation": "La structure correcte comprend bien ces trois zones géométriques, avec un col au milieu."}, {"id": "D", "text": "Le divergent sert à adapter le moteur au Mach de vol.", "is_correct": false, "explanation": "Cette fonction est bien mentionnée, mais elle est présentée ici comme un simple élément isolé et ne suffit pas à caractériser correctement l’ensemble de la tuyère supersonique dans une question à une seule bonne réponse."}, {"id": "E", "text": "Le réglage du col dépend de la pression \\(P_{t4}\\) et du régime réacteur.", "is_correct": false, "explanation": "Le réglage du col dépend effectivement de \\(P_{t4}\\) et du régime réacteur, mais l’assertion ne peut pas être retenue comme la seule bonne réponse dans la configuration de cette question."}], "coverage_label": "Tuyère supersonique", "learning_objective": "Identifier l’architecture d’une tuyère convergente-divergente et le rôle du col et du divergent.", "correction_summary": "La tuyère supersonique comporte un convergent, un col et un divergent. Le point clé est de relier chaque zone au bon régime de Mach et au réglage adapté au vol.", "course_clarification": "Le col est le point de transition où l’écoulement atteint l’état sonique. Le divergent permet ensuite d’obtenir un écoulement supersonique et de mieux s’adapter aux conditions de vol.", "source_refs": []}], "subpart_id": "S5", "anchor_slide_id": "S5-1", "question_count_target": 5, "title": "QCM - Canal d’éjection et rôle de la tuyère"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2236,11 +2272,11 @@ html[data-embed="1"] .review-card {
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
           description.textContent =
-            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
         }
       }
 

@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S3-3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S3-3-Q1",
+      "prompt": "Quel élément commande et surveille l’EMER GEN ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’EMER GEN est commandé et surveillé par le GAPCU.",
+          "is_correct": false,
+          "explanation": "Le GAPCU est associé à la gestion de l’APU, pas à la commande et à la surveillance de l’EMER GEN."
+        },
+        {
+          "id": "B",
+          "text": "L’EMER GEN est commandé directement par les BATTERY 1 et 2.",
+          "is_correct": false,
+          "explanation": "Les batteries alimentent le static inverter dans l’architecture de secours, mais elles ne réalisent pas la commande de l’EMER GEN."
+        },
+        {
+          "id": "C",
+          "text": "L’EMER GEN est uniquement surveillé par le AC SYSTEM sans unité dédiée.",
+          "is_correct": false,
+          "explanation": "Le schéma montre au contraire une unité dédiée de contrôle, l’EMER GEN GCU."
+        },
+        {
+          "id": "D",
+          "text": "L’EMER GEN est commandé et surveillé par l’EMER GEN GCU.",
+          "is_correct": true,
+          "explanation": "C’est exactement la fonction indiquée pour l’EMER GEN GCU : il pilote et surveille la source de secours."
+        },
+        {
+          "id": "E",
+          "text": "L’EMER GEN GCU est le nom d’un transformateur-redresseur.",
+          "is_correct": false,
+          "explanation": "EMER GEN GCU désigne une unité de contrôle du générateur de secours, pas un TR."
+        }
+      ],
+      "coverage_label": "EMER GEN et EMER GEN GCU",
+      "learning_objective": "Identifier l’unité qui commande et surveille la source électrique de secours.",
+      "correction_summary": "La bonne réponse est l’EMER GEN GCU, aussi appelé CSM/G Generator Control Unit. Le piège consiste à confondre cette unité de contrôle avec les blocs liés aux batteries, au GAPCU ou au réseau AC.",
+      "course_clarification": "GCU signifie Generator Control Unit : c’est l’organe qui gère un générateur. Ici, il s’agit de la chaîne de secours EMER GEN / EMER GEN GCU.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-3-Q2",
+      "prompt": "Quelle appellation correspond aussi à l’EMER GEN GCU ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’EMER GEN GCU est aussi nommé Ground and Auxiliary Power Control Unit.",
+          "is_correct": false,
+          "explanation": "Le GAPCU est une autre unité de contrôle, liée à la gestion de l’alimentation auxiliaire et externe, pas à l’EMER GEN GCU."
+        },
+        {
+          "id": "B",
+          "text": "L’EMER GEN GCU est aussi nommé CSM/G Generator Control Unit.",
+          "is_correct": true,
+          "explanation": "Le support donne explicitement cette autre appellation : CSM/G Generator Control Unit."
+        },
+        {
+          "id": "C",
+          "text": "L’EMER GEN GCU est aussi nommé Generator Control Unit de l’APU.",
+          "is_correct": false,
+          "explanation": "L’APU a son propre contrôle, mais l’EMER GEN GCU concerne la source de secours EMER GEN."
+        },
+        {
+          "id": "D",
+          "text": "L’EMER GEN GCU est aussi nommé Static Inverter Control Unit.",
+          "is_correct": false,
+          "explanation": "Le static inverter est un autre élément de la chaîne de secours, sans être l’EMER GEN GCU."
+        },
+        {
+          "id": "E",
+          "text": "L’EMER GEN GCU est aussi nommé AC Essential electrical system network.",
+          "is_correct": false,
+          "explanation": "L’AC Essential electrical system network est un réseau alimenté en situation dégradée, pas une unité de contrôle."
+        }
+      ],
+      "coverage_label": "EMER GEN et EMER GEN GCU",
+      "learning_objective": "Reconnaître l’acronyme équivalent de l’EMER GEN GCU.",
+      "correction_summary": "La dénomination attendue est CSM/G Generator Control Unit. Le piège est de confondre cette unité avec d’autres blocs de contrôle ou avec le réseau alimenté.",
+      "course_clarification": "Un même équipement peut avoir plusieurs noms dans le schéma. Ici, EMER GEN GCU et CSM/G Generator Control Unit désignent la même unité.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-3-Q3",
+      "prompt": "Dans la logique de secours, quel énoncé décrit correctement le rôle du static inverter ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "S’il n’y a aucune autre source AC disponible, un static inverter alimenté par les batteries peut fournir une partie du AC system appelée AC Essential electrical system network.",
+          "is_correct": true,
+          "explanation": "C’est la phrase clé du schéma : le static inverter prend le relais à partir des batteries pour alimenter une partie essentielle du réseau AC."
+        },
+        {
+          "id": "B",
+          "text": "Le static inverter est alimenté par l’APU GEN en priorité.",
+          "is_correct": false,
+          "explanation": "Le schéma indique une alimentation par les batteries, pas par l’APU GEN."
+        },
+        {
+          "id": "C",
+          "text": "Le static inverter alimente l’intégralité du AC system sans limitation.",
+          "is_correct": false,
+          "explanation": "La partie alimentée est limitée à l’AC Essential electrical system network, donc pas tout le réseau AC."
+        },
+        {
+          "id": "D",
+          "text": "Le static inverter ne peut fonctionner que si l’EXT PWR A est disponible.",
+          "is_correct": false,
+          "explanation": "La logique représentée est précisément une solution de secours quand les autres sources AC ne sont plus disponibles."
+        },
+        {
+          "id": "E",
+          "text": "Le static inverter est commandé et surveillé par le EMER GEN GCU.",
+          "is_correct": false,
+          "explanation": "L’EMER GEN GCU est associé à l’EMER GEN ; le static inverter est un élément distinct de la chaîne de secours."
+        }
+      ],
+      "coverage_label": "Génération AC de secours : static inverter",
+      "learning_objective": "Interpréter la condition de déclenchement et le périmètre d’alimentation du static inverter.",
+      "correction_summary": "Le static inverter intervient quand aucune autre source AC n’est disponible et il alimente seulement l’AC Essential electrical system network. Le piège est de croire qu’il remplace toute la génération AC ou qu’il dépend d’une source normale.",
+      "course_clarification": "Un inverter transforme l’énergie pour fournir de l’AC. Ici, il sert de solution de dernier recours pour une partie essentielle du réseau.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-3-Q4",
+      "prompt": "Quelles sources alimentent le STATIC INVERTER dans la configuration de secours représentée ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le STATIC INVERTER est alimenté par les IDG des moteurs.",
+          "is_correct": false,
+          "explanation": "Les IDG sont des sources AC normales, mais la logique de secours montrée associe le static inverter aux batteries."
+        },
+        {
+          "id": "B",
+          "text": "Le STATIC INVERTER est alimenté par l’EXTERNAL POWER A & B.",
+          "is_correct": false,
+          "explanation": "L’alimentation externe fait partie des sources AC normales ou alternatives, pas de l’entrée du static inverter sur cette page."
+        },
+        {
+          "id": "C",
+          "text": "Le STATIC INVERTER est alimenté par l’EMER GEN.",
+          "is_correct": false,
+          "explanation": "L’EMER GEN est une autre source de secours ; il n’est pas présenté comme l’alimentation du static inverter."
+        },
+        {
+          "id": "D",
+          "text": "Le STATIC INVERTER est alimenté uniquement par l’APU BATTERY.",
+          "is_correct": false,
+          "explanation": "L’APU BATTERY apparaît dans une autre logique de génération, mais pas comme alimentation du static inverter sur ce schéma."
+        },
+        {
+          "id": "E",
+          "text": "Les batteries BATTERY 1 et BATTERY 2 alimentent le STATIC INVERTER.",
+          "is_correct": true,
+          "explanation": "Le schéma relie explicitement BATTERY 1 et BATTERY 2 au STATIC INVERTER."
+        }
+      ],
+      "coverage_label": "Génération AC de secours : static inverter",
+      "learning_objective": "Associer correctement l’entrée du static inverter aux batteries.",
+      "correction_summary": "Les deux batteries BATTERY 1 et BATTERY 2 alimentent le STATIC INVERTER. Le piège classique consiste à lui attribuer une autre source AC ou l’EMER GEN.",
+      "course_clarification": "Le static inverter dépend d’une alimentation en continu fournie par les batteries. Il produit ensuite l’AC nécessaire à une partie du réseau essentiel.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-3-Q5",
+      "prompt": "Que montre le synoptique concernant les sources AC normales autour de l’alimentation de secours ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les sources IDG/ENG, EXTERNAL POWER A & B et APU sont toutes indiquées comme disponibles en priorité.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : elles sont représentées comme indisponibles ou écartées dans cette configuration de secours."
+        },
+        {
+          "id": "B",
+          "text": "Le schéma montre uniquement l’APU comme source de secours disponible.",
+          "is_correct": false,
+          "explanation": "L’APU apparaît dans la liste des sources non disponibles dans le contexte montré, pas comme source active de secours."
+        },
+        {
+          "id": "C",
+          "text": "Les sources IDG/ENG, EXTERNAL POWER A & B et APU sont barrées d’une croix rouge sur le schéma de secours.",
+          "is_correct": true,
+          "explanation": "Le schéma met visuellement en avant l’indisponibilité de ces sources par de grandes croix rouges."
+        },
+        {
+          "id": "D",
+          "text": "Le schéma ne distingue pas les sources normales du réseau AC essentiel.",
+          "is_correct": false,
+          "explanation": "La logique représentée sépare justement le réseau AC général des éléments alimentant la partie essentielle en dégradé."
+        },
+        {
+          "id": "E",
+          "text": "Les croix rouges signalent une alimentation externe branchée au sol.",
+          "is_correct": false,
+          "explanation": "Les croix rouges marquent l’indisponibilité des sources représentées, pas une connexion de puissance externe."
+        }
+      ],
+      "coverage_label": "Synoptique de la génération AC de secours",
+      "learning_objective": "Lire la symbolique du synoptique et distinguer sources normales et secours.",
+      "correction_summary": "Les croix rouges montrent que les sources IDG/ENG, EXTERNAL POWER A & B et APU ne sont pas retenues dans la configuration de secours affichée. Le piège est de lire ces marques comme une disponibilité alors qu’elles signalent l’inverse.",
+      "course_clarification": "Un synoptique utilise aussi la mise en forme pour porter l’information. Ici, la croix rouge sert à visualiser qu’une source n’est pas disponible dans la chaîne active.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S3",
+  "anchor_slide_id": "S3-3",
+  "question_count_target": 5,
+  "title": "QCM - EMER GEN et EMER GEN GCU"
+}

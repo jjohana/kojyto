@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S9-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S9-2-Q1",
+      "prompt": "Quel énoncé décrit correctement le rôle principal du train d’atterrissage et ses effets au sol ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il sert uniquement à absorber l’énergie cinétique verticale à l’atterrissage, sans rôle dans le roulage.",
+          "is_correct": false,
+          "explanation": "L’absorption de l’énergie verticale n’est qu’une de ses fonctions. Il intervient aussi dans le roulage, la dirigeabilité, le freinage et les manœuvres au sol."
+        },
+        {
+          "id": "B",
+          "text": "Il assure seulement le freinage après l’atterrissage en absorbant l’énergie cinétique horizontale.",
+          "is_correct": false,
+          "explanation": "Le freinage fait partie de ses fonctions, mais le train ne se limite pas à cela. Il doit aussi permettre le roulage, l’orientation et l’absorption des chocs à l’impact."
+        },
+        {
+          "id": "C",
+          "text": "L’orientation des roues n’a pas d’effet sur la dirigeabilité de l’avion au sol.",
+          "is_correct": false,
+          "explanation": "L’orientation des roues est précisément ce qui permet la dirigeabilité et les virages au sol. Sans ce réglage, la manœuvre au sol serait fortement dégradée."
+        },
+        {
+          "id": "D",
+          "text": "Il permet le roulage sur piste, taxiway et parking, et il participe aux manœuvres à vitesse faible ou élevée comme le décollage.",
+          "is_correct": true,
+          "explanation": "Le train d’atterrissage sert au déplacement au sol et aux phases de roulage et de décollage. Il doit donc assurer la mobilité de l’avion sur les surfaces aéronautiques et pendant les manœuvres au sol."
+        },
+        {
+          "id": "E",
+          "text": "Les efforts appliqués au train se réduisent à la traction pure.",
+          "is_correct": false,
+          "explanation": "Les efforts mentionnés sont variés : flexion avant, flexion arrière, flexion latérale, compression et torsion. La traction pure n’est pas l’effort caractéristique mis en avant ici."
+        }
+      ],
+      "coverage_label": "Rôle du train d’atterrissage",
+      "learning_objective": "Identifier les fonctions du train d’atterrissage en phase sol et à l’atterrissage.",
+      "correction_summary": "La bonne affirmation est celle qui réunit roulage, taxiway, parking et manœuvres au sol. Le piège consiste à réduire le train à une seule fonction, comme l’absorption du choc ou le freinage.",
+      "course_clarification": "Le train d’atterrissage sert à soutenir et guider l’avion au sol. Il doit à la fois porter les charges, orienter l’avion et contribuer à l’absorption des efforts à l’impact et au freinage.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S9-2-Q2",
+      "prompt": "Quelle affirmation associe correctement un type de train à sa caractéristique ou à son risque principal ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le train tricycle est surtout décrit par l’absence totale de risque de basculement.",
+          "is_correct": false,
+          "explanation": "Le train tricycle n’élimine pas le risque de basculement ; ce risque augmente même si la charge croît sur la roue avant. La stabilité dépend donc de la répartition des charges."
+        },
+        {
+          "id": "B",
+          "text": "Le train classique présente un risque de cabotage, c’est-à-dire de mise en pylône, lors d’un freinage brusque.",
+          "is_correct": true,
+          "explanation": "Le train classique est associé au risque de cabotage lors d’un freinage brusque. La mise en pylône est la conséquence redoutée dans cette configuration."
+        },
+        {
+          "id": "C",
+          "text": "Le train monotrace possède un seul train principal centré sous le fuselage.",
+          "is_correct": false,
+          "explanation": "Le train monotrace est défini par deux trains principaux sur l’axe longitudinal et des atterrisseurs auxiliaires appelés balanciers. Il ne s’agit donc pas d’un unique train principal central."
+        },
+        {
+          "id": "D",
+          "text": "Le train multiple correspond à un train classique équipé de deux roues de plus.",
+          "is_correct": false,
+          "explanation": "Le train multiple est défini comme une combinaison de trains tricycle et monotrace. Ce n’est pas une simple variation du train classique."
+        },
+        {
+          "id": "E",
+          "text": "Le train tricycle est caractérisé par deux trains principaux placés à l’arrière de l’avion et une roulette de queue.",
+          "is_correct": false,
+          "explanation": "Cette description correspond au train classique, avec roulette de queue. Le train tricycle comporte au contraire une roue avant et deux trains principaux."
+        }
+      ],
+      "coverage_label": "Types de trains d’atterrissage",
+      "learning_objective": "Reconnaître les grandes architectures de train et leurs risques associés.",
+      "correction_summary": "La bonne réponse relie le train classique au cabotage et à la mise en pylône. Le piège consiste à confondre les architectures, notamment train classique et train tricycle.",
+      "course_clarification": "Le train classique place les appuis principaux à l’arrière et expose davantage au cabotage. Le train tricycle déplace l’appui vers l’avant avec une roue avant, ce qui modifie la stabilité au sol.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S9-2-Q3",
+      "prompt": "Quelle proposition décrit correctement la composition d’un train d’atterrissage ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un train comprend notamment des atterrisseurs principaux, un atterrisseur avant ou une roulette de queue, des roues et pneumatiques, ainsi que des freins.",
+          "is_correct": true,
+          "explanation": "La composition attendue inclut les éléments porteurs et les organes de freinage. Les atterrisseurs principaux, l’atterrisseur avant ou la roulette de queue, les roues et les pneumatiques font bien partie de l’ensemble."
+        },
+        {
+          "id": "B",
+          "text": "Le train ne comporte jamais de système de commande et de contrôle des freins.",
+          "is_correct": false,
+          "explanation": "Le système de freinage comprend aussi une commande et un contrôle. Le train ne se limite pas aux roues et aux disques ou tambours de frein."
+        },
+        {
+          "id": "C",
+          "text": "Le système d’orientation ne concerne que les roues principales et jamais les roues avant.",
+          "is_correct": false,
+          "explanation": "L’orientation des roues avant est explicitement prévue, et parfois celle des roues principales aussi. Limiter l’orientation aux seules roues principales est donc faux."
+        },
+        {
+          "id": "D",
+          "text": "Le mécanisme de rentrée-sortie du train et les trappes ne font pas partie de sa composition.",
+          "is_correct": false,
+          "explanation": "Le système de manœuvre rentrée-sortie et les trappes sont bien des éléments de composition. Ils sont indispensables pour les trains escamotables."
+        },
+        {
+          "id": "E",
+          "text": "Les flotteurs et les skis sont des éléments obligatoires sur tous les avions équipés d’un train d’atterrissage classique.",
+          "is_correct": false,
+          "explanation": "Les flotteurs et les skis sont des éléments spécifiques à certains aéronefs : hydravions pour les flotteurs et avions sur pistes enneigées pour les skis. Ils ne sont pas systématiques."
+        }
+      ],
+      "coverage_label": "Composition d’un train d’atterrissage",
+      "learning_objective": "Identifier les constituants d’un train et distinguer les équipements spécifiques.",
+      "correction_summary": "La bonne réponse regroupe les organes de base : appuis, roues, pneumatiques et freinage. Le piège est de confondre les éléments communs avec les équipements spécifiques comme les flotteurs ou les skis.",
+      "course_clarification": "La composition d’un train d’atterrissage inclut les organes qui portent, freinent, orientent et rentrent le train. Certains aéronefs ajoutent des éléments adaptés au milieu d’exploitation, comme les flotteurs ou les skis.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S9-2-Q4",
+      "prompt": "Quelle affirmation donne correctement un couple de définitions géométriques du train d’atterrissage ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’empattement est la distance entre les deux trains principaux.",
+          "is_correct": false,
+          "explanation": "Cette définition correspond à la voie, pas à l’empattement. L’empattement relie l’axe des roues de l’atterrisseur auxiliaire aux axes des roues des atterrisseurs principaux."
+        },
+        {
+          "id": "B",
+          "text": "L’angle de garde est l’angle entre l’axe du fût de train principal et la perpendiculaire à l’axe de symétrie.",
+          "is_correct": false,
+          "explanation": "Cette définition correspond à l’angle de chasse. L’angle de garde implique la verticale de l’avion et la droite joignant le centre de gravité au centre des roues principales."
+        },
+        {
+          "id": "C",
+          "text": "Le parallélisme est l’angle entre le plan de symétrie longitudinal de la roue et le plan de symétrie de l’avion.",
+          "is_correct": false,
+          "explanation": "Cette formulation décrit l’angle de carrossage. Le parallélisme concerne l’axe de la roue principale par rapport au plan de symétrie."
+        },
+        {
+          "id": "D",
+          "text": "L’angle de carrossage est défini par la distance entre les roues et non par un angle.",
+          "is_correct": false,
+          "explanation": "Le carrossage est bien un angle, pas une distance. Il se mesure entre le plan de symétrie longitudinal de la roue et le plan de symétrie de l’avion."
+        },
+        {
+          "id": "E",
+          "text": "La voie est la distance séparant les deux trains principaux.",
+          "is_correct": true,
+          "explanation": "La voie correspond bien à l’écartement entre les deux trains principaux. Cette définition est à distinguer de l’empattement, qui met en jeu l’atterrisseur auxiliaire et les principaux."
+        }
+      ],
+      "coverage_label": "Géométrie des trains d’atterrissage",
+      "learning_objective": "Associer chaque terme géométrique à sa définition correcte.",
+      "correction_summary": "La bonne affirmation porte sur la voie, qui relie les deux trains principaux. Le piège majeur est de permuter voie, empattement, chasse, garde, carrossage et parallélisme.",
+      "course_clarification": "La géométrie du train sert à décrire la position relative des roues et des trains. Chaque terme a une définition précise : il faut distinguer une distance, un angle et le plan de référence concerné.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S9-2-Q5",
+      "prompt": "Quelle proposition décrit correctement une disposition d’atterrisseurs ou un effet associé au bogie ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La roue simple en porte-à-faux désigne un bogie à quatre roues.",
+          "is_correct": false,
+          "explanation": "La roue simple en porte-à-faux correspond à une seule roue en porte-à-faux, pas à un bogie multiple. Il ne faut pas confondre la forme de montage et le nombre de roues."
+        },
+        {
+          "id": "B",
+          "text": "Le train à fourche est une disposition qui n’existe que pour les hydravions.",
+          "is_correct": false,
+          "explanation": "Les flotteurs sont associés aux hydravions, pas le train à fourche. Le train à fourche est une disposition d’atterrisseur, indépendante de cette seule application."
+        },
+        {
+          "id": "C",
+          "text": "Le bogie permet de réduire le diamètre des roues, d’augmenter les points de contact et d’améliorer la sécurité en cas de crevaison.",
+          "is_correct": true,
+          "explanation": "Le bogie cumule plusieurs avantages : roues plus compactes, meilleur partage des charges et sécurité accrue en cas de crevaison. C’est l’effet recherché dans cette disposition."
+        },
+        {
+          "id": "D",
+          "text": "Le diabolo correspond à deux trains principaux sur l’axe longitudinal avec des balanciers auxiliaires.",
+          "is_correct": false,
+          "explanation": "Cette définition correspond au train monotrace, pas au diabolo. Le diabolo est une disposition de roues, et non une architecture de train."
+        },
+        {
+          "id": "E",
+          "text": "La roue simple et le bogie désignent exactement la même disposition d’atterrisseurs.",
+          "is_correct": false,
+          "explanation": "Ces deux dispositions sont différentes : la roue simple ne comporte qu’une roue, alors que le bogie regroupe plusieurs roues sur un même ensemble. Le nombre de points de contact change donc."
+        }
+      ],
+      "coverage_label": "Types de disposition des atterrisseurs",
+      "learning_objective": "Distinguer les dispositions de roues et comprendre l’intérêt du bogie.",
+      "correction_summary": "La bonne réponse est celle qui donne l’intérêt du bogie : plus de points de contact et une meilleure sécurité. Le piège consiste à confondre une disposition de roues avec une architecture de train complète.",
+      "course_clarification": "La disposition des atterrisseurs décrit la façon dont les roues sont montées. Le bogie est particulièrement utile quand il faut répartir la charge et limiter les conséquences d’une crevaison.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S9",
+  "anchor_slide_id": "S9-2",
+  "question_count_target": 5,
+  "title": "QCM - Types de trains et composition"
+}

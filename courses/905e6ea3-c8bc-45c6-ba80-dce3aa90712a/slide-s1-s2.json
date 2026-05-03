@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s1_s2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s1_s2_q1",
+      "prompt": "À propos de la page de couverture, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le logo central correspond à l’acronyme IAAG, sans autre texte associé.",
+          "is_correct": false,
+          "explanation": "Le logo n’est pas seul : il est accompagné de l’intitulé « Institut Aéronautique Amaury de la Grange »."
+        },
+        {
+          "id": "B",
+          "text": "La page de couverture est sur fond bleu foncé intégral, sans zone blanche.",
+          "is_correct": false,
+          "explanation": "Le fond est blanc, avec seulement un bandeau horizontal bleu foncé au milieu."
+        },
+        {
+          "id": "C",
+          "text": "La mention « Présentée par: Wijdane Gaougaou » apparaît à gauche du bandeau.",
+          "is_correct": false,
+          "explanation": "Cette mention est placée à droite, dans un encadré bleu plus sombre."
+        },
+        {
+          "id": "D",
+          "text": "Le titre principal visible est « Économie-Gestion Bac Pro Aéronautique ».",
+          "is_correct": true,
+          "explanation": "Le bandeau et la couverture affichent bien ce titre, qui identifie la matière et le niveau du support."
+        },
+        {
+          "id": "E",
+          "text": "Aucun filigrane n’est visible sur cette page.",
+          "is_correct": false,
+          "explanation": "Un filigrane diagonal répété « IAAG - Institut Aéronautique Amaury de la Grange » recouvre la page."
+        }
+      ],
+      "coverage_label": "Couverture du support",
+      "learning_objective": "Identifier les éléments textuels et visuels de la page de couverture.",
+      "correction_summary": "La bonne réponse reprend le titre exact affiché sur la couverture. Le piège consiste à confondre le fond blanc avec le bandeau bleu et à mal placer la mention de présentation.",
+      "course_clarification": "Une couverture sert à identifier rapidement un support. Ici, il faut repérer le titre, le nom de la présentatrice et le logo IAAG, ainsi que le filigrane répété.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s1_s2_q2",
+      "prompt": "À propos de la diapositive de présentation du module, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La diapositive contient six encadrés colorés organisés en deux rangées de trois.",
+          "is_correct": false,
+          "explanation": "Cette organisation en deux rangées de trois correspond bien à la page, donc l’affirmation est fausse si elle dit le contraire."
+        },
+        {
+          "id": "B",
+          "text": "Le module présenté s’intitule « L’individu dans l’organisation ».",
+          "is_correct": true,
+          "explanation": "Le titre centré de la diapositive annonce explicitement ce module."
+        },
+        {
+          "id": "C",
+          "text": "Le thème « Rémunération et parcours professionnels » fait partie des thèmes annoncés.",
+          "is_correct": false,
+          "explanation": "Ce thème figure bien parmi les six encadrés ; l’affirmation est donc fausse car elle nie une information présente."
+        },
+        {
+          "id": "D",
+          "text": "Le sommaire annonce uniquement des notions de mécanique aéronautique, sans aspect social ou juridique.",
+          "is_correct": false,
+          "explanation": "Le sommaire inclut aussi les droits et devoirs du salarié, le contrat de travail, la santé-sécurité-qualité et la rémunération."
+        },
+        {
+          "id": "E",
+          "text": "La page montre un tableau chiffré détaillé sur les salaires du secteur.",
+          "is_correct": false,
+          "explanation": "Aucun tableau ni donnée chiffrée n’apparaît : la page présente seulement un titre et des encadrés thématiques."
+        }
+      ],
+      "coverage_label": "Présentation du module",
+      "learning_objective": "Reconnaître le titre du module et la structure générale du sommaire.",
+      "correction_summary": "La bonne affirmation est celle qui reprend le nom du module. Le piège consiste à confondre une simple page de sommaire avec un tableau ou une liste de chiffres absents ici.",
+      "course_clarification": "Le module rassemble plusieurs thèmes liés à la place de la personne dans l’entreprise. La diapositive sert surtout à annoncer ces thèmes, pas à les développer.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s1_s2_q3",
+      "prompt": "Parmi les métiers présentés, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’ingénieur en aéronautique développe et teste des prototypes, et peut aussi créer des logiciels pour améliorer les performances des aéronefs.",
+          "is_correct": true,
+          "explanation": "La description du métier insiste bien sur la conception, les essais de prototypes et la création de logiciels."
+        },
+        {
+          "id": "B",
+          "text": "Le pilote de ligne se limite au pilotage en vol et ne prépare pas le plan de vol.",
+          "is_correct": false,
+          "explanation": "Le texte précise au contraire qu’il planifie le vol et établit le plan de vol."
+        },
+        {
+          "id": "C",
+          "text": "Le mécanicien moteur travaille surtout sur la vente commerciale des avions.",
+          "is_correct": false,
+          "explanation": "Son activité porte sur le démontage, le remontage, l’inspection et la réparation des moteurs."
+        },
+        {
+          "id": "D",
+          "text": "L’ingénieur en aéronautique n’intervient que sur la propulsion, jamais sur les structures ni l’avionique.",
+          "is_correct": false,
+          "explanation": "Le texte cite plusieurs domaines : aérodynamique, propulsion, structures, avionique et contrôle de vol."
+        },
+        {
+          "id": "E",
+          "text": "Le pilote de ligne n’a pas à réagir en situation d’urgence.",
+          "is_correct": false,
+          "explanation": "Le document indique explicitement qu’il doit être capable de réagir rapidement en cas d’urgence."
+        }
+      ],
+      "coverage_label": "Découverte des métiers de l’aéronautique",
+      "learning_objective": "Associer chaque métier à ses missions principales et distinguer les fonctions décrites.",
+      "correction_summary": "L’affirmation vraie reprend les tâches attribuées à l’ingénieur. Le piège consiste à réduire les métiers à une seule action alors que le texte décrit des missions plus larges.",
+      "course_clarification": "Un métier se reconnaît ici par ses activités concrètes : conception, pilotage, maintenance ou inspection. Il faut lire les verbes d’action pour identifier correctement le rôle de chacun.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s1_s2_q4",
+      "prompt": "À propos du pilote de ligne, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il n’a pas besoin de vérifier la météo avant le vol.",
+          "is_correct": false,
+          "explanation": "Le texte précise qu’il vérifie la météo avant le vol, donc cette affirmation contredit le contenu."
+        },
+        {
+          "id": "B",
+          "text": "La licence européenne ATPL et une formation spécialisée sont nécessaires pour exercer ce métier.",
+          "is_correct": false,
+          "explanation": "Cette exigence est bien indiquée ; l’affirmation est donc fausse parce qu’elle la nie."
+        },
+        {
+          "id": "C",
+          "text": "Son rôle se limite à surveiller les systèmes en vol, sans autre responsabilité.",
+          "is_correct": false,
+          "explanation": "Le rôle est plus large : planification, plan de vol, météo, communications et rapport après vol."
+        },
+        {
+          "id": "D",
+          "text": "Le pilote de ligne travaille sans lien avec les contrôleurs aériens.",
+          "is_correct": false,
+          "explanation": "Le texte dit au contraire qu’il communique avec les contrôleurs aériens pendant l’activité."
+        },
+        {
+          "id": "E",
+          "text": "Il communique avec les contrôleurs aériens et l’équipage, puis rédige un rapport après chaque vol.",
+          "is_correct": true,
+          "explanation": "Ces deux tâches sont explicitement mentionnées dans la description du métier."
+        }
+      ],
+      "coverage_label": "Pilote de ligne",
+      "learning_objective": "Repérer les responsabilités opérationnelles et les conditions d’accès au métier de pilote de ligne.",
+      "correction_summary": "La bonne réponse met en avant la communication et le rapport après vol. Le piège classique est d’oublier que le métier ne se réduit pas au pilotage lui-même.",
+      "course_clarification": "Le pilote de ligne assure la sécurité du vol avant, pendant et après l’opération. La licence ATPL et la formation spécialisée constituent une condition d’exercice importante.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s1_s2_q5",
+      "prompt": "À propos du mécanicien moteur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il se contente d’observer les moteurs sans jamais démonter ni remonter de pièces.",
+          "is_correct": false,
+          "explanation": "Son activité comprend précisément le démontage et le remontage des moteurs."
+        },
+        {
+          "id": "B",
+          "text": "La patience et le sens de l’observation sont présentés comme essentiels à ce métier.",
+          "is_correct": false,
+          "explanation": "Ces qualités sont bien mentionnées ; l’affirmation est donc fausse parce qu’elle les nie."
+        },
+        {
+          "id": "C",
+          "text": "Il doit assurer une veille technique et se former régulièrement à cause de l’évolution des technologies.",
+          "is_correct": true,
+          "explanation": "Le texte insiste sur l’évolution constante des technologies et sur la nécessité de rester à jour par la formation continue."
+        },
+        {
+          "id": "D",
+          "text": "Il n’a pas besoin de connaître le fonctionnement des moteurs, seulement leur apparence extérieure.",
+          "is_correct": false,
+          "explanation": "Le texte demande au contraire une connaissance approfondie des types de moteurs, de leur fonctionnement et de leur entretien."
+        },
+        {
+          "id": "E",
+          "text": "Son travail ne concerne pas la sécurité des appareils et des passagers.",
+          "is_correct": false,
+          "explanation": "La réparation et le remplacement des pièces servent justement à garantir la sécurité des appareils et des passagers."
+        }
+      ],
+      "coverage_label": "Mécanicien moteur",
+      "learning_objective": "Comprendre les tâches, les compétences et les exigences d’adaptation du métier de mécanicien moteur.",
+      "correction_summary": "La bonne affirmation souligne la veille technique et la formation régulière. Le piège consiste à oublier que ce métier exige à la fois précision, connaissances techniques et mise à jour permanente.",
+      "course_clarification": "Le mécanicien moteur intervient sur l’entretien et la sécurité des moteurs d’aéronefs. La veille technique signifie suivre les évolutions pour continuer à travailler correctement et en sécurité.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s1_s2",
+  "anchor_slide_id": "s1_s2",
+  "question_count_target": 5,
+  "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »"
+}

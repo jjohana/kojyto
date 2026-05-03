@@ -1,0 +1,142 @@
+{
+  "slide_id": "S9-1",
+  "subpart_id": "S9",
+  "title": "Rôle et fonctions du train d’atterrissage",
+  "objective": "Poser les fonctions mécaniques et opérationnelles du train.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s9-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Fonctions et sollicitations associées",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Fonction opérationnelle",
+          "Effort ou action mécanique",
+          "Lecture utile pour le dimensionnement"
+        ],
+        [
+          "Roulage sur piste, taxiway et parking",
+          "Charges faibles mais continues",
+          "Structure sollicitée surtout en **compression** et en appuis répétés"
+        ],
+        [
+          "Dirigeabilité et virages au sol",
+          "Orientation des roues",
+          "Apparition de **torsion** et de **flexion latérale**"
+        ],
+        [
+          "Impact vertical à l’atterrissage",
+          "Absorption de l’énergie cinétique verticale",
+          "Sollicitation dominante en **compression** avec amortissement du choc"
+        ],
+        [
+          "Freinage après l’atterrissage",
+          "Absorption de l’énergie cinétique horizontale",
+          "Montée des efforts de **flexion avant** et de **torsion**"
+        ],
+        [
+          "Manœuvres à grande vitesse au décollage",
+          "Maintien de trajectoire et stabilité au sol",
+          "Les sollicitations précédentes peuvent se cumuler"
+        ],
+        [
+          "Efforts listés dans le support",
+          "—",
+          "**Flexion avant**, **flexion arrière**, **flexion latérale**, **compression**, **torsion**"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Le train assure à la fois le **support** de l’avion au sol et sa **dirigeabilité** lors des déplacements sur piste.",
+        "L’atterrissage impose d’abord une absorption d’énergie **verticale** ; le freinage transforme ensuite l’énergie **horizontale** en efforts mécaniques et en chaleur.",
+        "Le choix d’architecture et de dimensionnement se lit donc à partir des sollicitations dominantes : **compression**, **flexion** et **torsion**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Énergie à absorber",
+      "text": "L’atterrisseur et les freins dissipent l’énergie liée à la vitesse selon la composante considérée.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "E_c=\\frac{1}{2}mv^2\\quad ; \\quad v=v_z\\text{ à l’impact, }v=v_x\\text{ au freinage}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Landing Gear — SKYbrary Aviation Safety",
+      "locator": "functions générales du train, stabilité directionnelle et freinage",
+      "url": "https://skybrary.aero/articles/landing-gear"
+    },
+    {
+      "source_type": "web",
+      "label": "Brakes — SKYbrary Aviation Safety",
+      "locator": "freinage différentiel et dissipation d’énergie au sol",
+      "url": "https://skybrary.aero/articles/brakes"
+    },
+    {
+      "source_type": "web",
+      "label": "AC 25.723-1 - Shock Absorption Tests — Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentid/22663"
+    },
+    {
+      "source_type": "web",
+      "label": "ROTORCRAFT OCCUPANT PROTECTION — Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/media/33726"
+    },
+    {
+      "source_type": "web",
+      "label": "Landing Gear | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/landing-gear"
+    },
+    {
+      "source_type": "web",
+      "label": "Brakes | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/brakes"
+    },
+    {
+      "source_type": "web",
+      "label": "AC 25.723-1 - Shock Absorption Tests",
+      "locator": "research",
+      "url": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentid/22663?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "ROTORCRAFT OCCUPANT PROTECTION",
+      "locator": "research",
+      "url": "https://www.faa.gov/media/33726?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Les fonctions du train sont clairement réparties entre roulage, dirigeabilité, absorption du choc vertical et freinage après l’atterrissage. Les efforts associés sont listés : flexion avant, flexion arrière, flexion latérale, compression et torsion.",
+  "teacher_notes": "Insister sur le lien fonction → sollicitation : guider, porter, amortir, freiner. Garder la distinction entre énergie verticale à l’impact et énergie horizontale au freinage."
+}

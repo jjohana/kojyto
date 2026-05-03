@@ -1,0 +1,64 @@
+{
+  "slide_id": "S2-3",
+  "subpart_id": "S2",
+  "title": "Raccordement au AC SYSTEM et implantation près du NLG",
+  "objective": "Localiser l’interface de puissance externe et son lien avec le réseau AC.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s2-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Implantation du panneau",
+      "text": null,
+      "bullets": [
+        "Le panneau de commande de puissance externe est placé près du **NLG (Nose Landing Gear)**, c’est-à-dire à proximité du train avant.",
+        "Le repérage visuel sert à localiser rapidement l’interface au sol avant tout raccordement.",
+        "Sur certaines implantations Airbus, le point de connexion est associé à un accès avant dédié, au voisinage du nez de l’avion."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lien avec le réseau AC",
+      "text": null,
+      "bullets": [
+        "Les entrées **EXT PWR A** et **EXT PWR B** alimentent le **AC SYSTEM** en parallèle des autres sources représentées : moteurs via les **IDG (Integrated Drive Generator)** et groupe auxiliaire de puissance via l’**APU (Auxiliary Power Unit)**.",
+        "Le raccordement externe ajoute une source disponible sans modifier la logique générale de distribution : le réseau AC principal reste le point commun d’alimentation.",
+        "Le panneau donne aussi des indications d’état, par exemple **EXT PWR A AVAIL** et **EXT PWR B AVAIL**, qui aident à vérifier la disponibilité avant mise sous tension."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus - Aircraft Characteristics - Airport and Maintenance Planning",
+      "locator": "accès 121AL / localisation du raccordement de puissance externe",
+      "url": "https://aircraft.airbus.com/sites/g/files/jlcbta126/files/2025-07/AC_A320_20250715.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus Safety First - Preventing loss of engine generators",
+      "locator": "complément APU et alimentation du réseau électrique",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    }
+  ],
+  "course_reference_note": "Le schéma place l’interface de puissance externe près du **NLG** et la relie directement au **AC SYSTEM**. Les sources **EXT PWR A** et **EXT PWR B** s’ajoutent en parallèle des alimentations moteur et **APU**.",
+  "teacher_notes": "Faire lire séparément la localisation physique et la fonction électrique : où se trouve le panneau, puis à quel réseau il se raccorde. Insister sur la notion de **parallèle** avec les autres sources."
+}

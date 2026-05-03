@@ -1,0 +1,72 @@
+{
+  "slide_id": "S6-1",
+  "subpart_id": "S6",
+  "title": "Ground Service Network : principe de fonctionnement",
+  "objective": "Comprendre l’alimentation du réseau de service au sol sans énergiser tout le réseau électrique.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s6-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Effet opérationnel",
+      "text": null,
+      "bullets": [
+        "Le **réseau de service au sol** est traité séparément des réseaux principaux : l’objectif est d’obtenir une alimentation utile pour la maintenance, sans mise sous tension globale inutile.",
+        "Le **MAINT BUS** joue le rôle de commande centrale : il oriente l’alimentation vers la fonction de service au sol, au lieu d’alimenter l’ensemble des bus et charges de bord.",
+        "Cette logique réduit la complexité de mise en service au sol et limite les zones effectivement alimentées, tout en conservant la cohérence de distribution prévue par le synoptique électrique."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Principe de sélection",
+      "text": "Le **MAINTenance BUS switch** permet d’alimenter le **ground service electrical network** sans énergiser tout le réseau électrique. En position **ON**, l’alimentation **EXTERNAL POWER A ONLY** alimente ce réseau de service ciblé.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "A320 Electrical Power Training Manual",
+      "locator": "MAINT BUS / ground service network",
+      "url": "https://www.scribd.com/document/434992600/Sistema-Electrico-A319"
+    },
+    {
+      "source_type": "web",
+      "label": "AIRCRAFT CHARACTERISTICS - AIRPORT AND MAINTENANCE PLANNING (A320)",
+      "locator": "external power connection",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2024-06/AC_A320_0624.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "A320 Electrical Power System Overview | Scribd",
+      "locator": "research",
+      "url": "https://www.scribd.com/document/708585210/24-00"
+    },
+    {
+      "source_type": "web",
+      "label": "A320 Electrical Power Training Manual | PDF | Electric Generator | Power Supply",
+      "locator": "research",
+      "url": "https://www.scribd.com/document/434992600/Sistema-Electrico-A319?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La page consacrée au Ground Service Network montre le switch **MAINT BUS ON** dans le panneau **FWD CABIN C/B PANEL (5001VE)**. Le schéma relie cette commande à une alimentation limitée par **EXTERNAL POWER A ONLY**.",
+  "teacher_notes": "Faire repérer l’idée clé : une commande unique suffit à alimenter le réseau de service au sol sans activer tout le réseau électrique. Insister sur la séparation entre réseau de service et réseaux principaux."
+}

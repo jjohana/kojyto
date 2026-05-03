@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Inverseur sur flux secondaire et architectures double flux</title>
+  <title>QCM - Dispositif pneumatique et séquence de fonctionnement</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -485,6 +485,29 @@ html[data-embed="1"] body::after {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
 }
 
 .block {
@@ -1560,49 +1583,49 @@ html[data-embed="1"] .review-card {
         
         <a class="sidebar-slide" href="s1-1.html">
           <strong>S1-1</strong>
-          <span>Origine de la poussée et terme réacteur</span>
+          <span>Origine de la poussée : terme réacteur</span>
           
-          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          <span>Installer le principe physique de la poussée nette et son expression de base.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-1.html">
           <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée et terme réacteur</span>
+          <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-2.html">
           <strong>S1-2</strong>
-          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>Exemple numérique et architecture double flux</span>
           
-          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-2.html">
           <strong>QCM S1-2</strong>
-          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>QCM - Exemple numérique et architecture double flux</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-3.html">
           <strong>S1-3</strong>
-          <span>Exemple chiffré et répartition des forces internes</span>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-3.html">
           <strong>QCM S1-3</strong>
-          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1610,7 +1633,7 @@ html[data-embed="1"] .review-card {
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
-          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
           
         </a>
         
@@ -1618,431 +1641,431 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s2-2.html">
           <strong>S2-2</strong>
-          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>Repères de consommation et surveillance moteur</span>
           
-          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s2-2.html">
           <strong>QCM S2-2</strong>
-          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s2-3.html">
-          <strong>S2-3</strong>
-          <span>Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s2-3.html">
-          <strong>QCM S2-3</strong>
-          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-1.html">
           <strong>S3-1</strong>
-          <span>Principe propulsif du turbopropulseur</span>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
-          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-1.html">
           <strong>QCM S3-1</strong>
-          <span>QCM - Principe propulsif du turbopropulseur</span>
+          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-2.html">
           <strong>S3-2</strong>
-          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
-          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-2.html">
           <strong>QCM S3-2</strong>
-          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
+          
+          <span>Définir et comparer les rendements à chaque étage du moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - Rendements de la chaîne propulsive</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s4-1.html">
           <strong>S4-1</strong>
-          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>Taux de dilution et familles de moteurs</span>
           
-          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s4-1.html">
           <strong>QCM S4-1</strong>
-          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>QCM - Taux de dilution et exemples de moteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>Principe du turbopropulseur</span>
+          
+          <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - Principe du turbopropulseur</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-1.html">
           <strong>S5-1</strong>
-          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
-          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          <span>Décrire les organes de sortie d’un GTR simple flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-1.html">
           <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-2.html">
           <strong>S5-2</strong>
-          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-2.html">
           <strong>QCM S5-2</strong>
-          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s6-1.html">
           <strong>S6-1</strong>
-          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>Post-combustion et bruit de tuyère</span>
           
-          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s6-1.html">
           <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>QCM - Post-combustion et bruit de tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-2.html">
-          <strong>S6-2</strong>
-          <span>Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-2.html">
-          <strong>QCM S6-2</strong>
-          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-3.html">
-          <strong>S6-3</strong>
-          <span>Tuyère supersonique convergente-divergente</span>
-          
-          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-3.html">
-          <strong>QCM S6-3</strong>
-          <span>QCM - Tuyère supersonique convergente-divergente</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s7-1.html">
           <strong>S7-1</strong>
-          <span>Traitement acoustique de la tuyère</span>
+          <span>But et formule de la poussée inverse</span>
           
-          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s7-1.html">
           <strong>QCM S7-1</strong>
-          <span>QCM - Traitement acoustique de la tuyère</span>
+          <span>QCM - But et formule de la poussée inverse</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>Poussée inverse : efficacité, limites et choix des flux</span>
+          
+          <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
+          
+          <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-1.html">
           <strong>S8-1</strong>
-          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-1.html">
           <strong>QCM S8-1</strong>
-          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-2.html">
           <strong>S8-2</strong>
-          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          <span>Inverseur pneumatique : organes et séquence</span>
           
-          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
           
         </a>
         
         <a class="sidebar-slide active" href="slide-s8-2.html">
           <strong>QCM S8-2</strong>
-          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-1.html">
           <strong>S9-1</strong>
-          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
-          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-1.html">
           <strong>QCM S9-1</strong>
-          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-2.html">
           <strong>S9-2</strong>
-          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          <span>Types de trains et composition</span>
           
-          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          <span>Distinguer les architectures de base et les éléments constitutifs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-2.html">
           <strong>QCM S9-2</strong>
-          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          <span>QCM - Types de trains et composition</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-3.html">
+          <strong>S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-3.html">
+          <strong>QCM S9-3</strong>
+          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-1.html">
           <strong>S10-1</strong>
-          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-1.html">
           <strong>QCM S10-1</strong>
-          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-2.html">
           <strong>S10-2</strong>
-          <span>Composition générale d’un train d’atterrissage</span>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          <span>Décrire la séquence compression-détente-équilibrage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-2.html">
           <strong>QCM S10-2</strong>
-          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-3.html">
+          <strong>S10-3</strong>
+          <span>États du train, verrouillages et sécurités</span>
+          
+          <span>Présenter la cinématique des trains et les sécurités associées.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-3.html">
+          <strong>QCM S10-3</strong>
+          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s11-1.html">
           <strong>S11-1</strong>
-          <span>Géométrie du train et dispositions des roues</span>
+          <span>Voyants, roues et pneumatiques</span>
           
-          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s11-1.html">
           <strong>QCM S11-1</strong>
-          <span>QCM - Géométrie du train et dispositions des roues</span>
+          <span>QCM - Voyants, roues et pneumatiques</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-2.html">
+          <strong>S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
+          
+          <span>Décrire les circuits de freinage et leurs sécurités.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-2.html">
+          <strong>QCM S11-2</strong>
+          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-3.html">
+          <strong>S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-3.html">
+          <strong>QCM S11-3</strong>
+          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s12-1.html">
           <strong>S12-1</strong>
-          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
-          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s12-1.html">
           <strong>QCM S12-1</strong>
-          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s12-2.html">
-          <strong>S12-2</strong>
-          <span>Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s12-2.html">
-          <strong>QCM S12-2</strong>
-          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s13-1.html">
-          <strong>S13-1</strong>
-          <span>Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s13-1.html">
-          <strong>QCM S13-1</strong>
-          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-1.html">
-          <strong>S14-1</strong>
-          <span>Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-1.html">
-          <strong>QCM S14-1</strong>
-          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-2.html">
-          <strong>S14-2</strong>
-          <span>Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-2.html">
-          <strong>QCM S14-2</strong>
-          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-1.html">
-          <strong>S15-1</strong>
-          <span>Circuits de freinage et freins à disques</span>
-          
-          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-1.html">
-          <strong>QCM S15-1</strong>
-          <span>QCM - Circuits de freinage et freins à disques</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-2.html">
-          <strong>S15-2</strong>
-          <span>Anti-skid et anti-brake</span>
-          
-          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-2.html">
-          <strong>QCM S15-2</strong>
-          <span>QCM - Anti-skid et anti-brake</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s16-1.html">
-          <strong>S16-1</strong>
-          <span>QCM : les repères essentiels sur les atterrisseurs</span>
-          
-          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s16-1.html">
-          <strong>QCM S16-1</strong>
-          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="final-validation.html">
           <strong>Validation finale</strong>
-          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          <span>25 questions tirées au sort sur 149 - correction finale</span>
           
         </a>
         
@@ -2054,7 +2077,7 @@ html[data-embed="1"] .review-card {
       
       <div class="slide-toolbar">
         <div class="toolbar-meta">
-          <span>Page 34/61</span>
+          <span>Page 40/61</span>
           
           <span>QCM</span>
         </div>
@@ -2076,7 +2099,7 @@ html[data-embed="1"] .review-card {
         <section class="quiz-hero">
           <div>
             <p class="eyebrow">QCM</p>
-            <h1>QCM - Inverseur sur flux secondaire et architectures double flux</h1>
+            <h1>QCM - Dispositif pneumatique et séquence de fonctionnement</h1>
             <p>
               
               QCM intermédiaire avec correction immédiate question par question.
@@ -2100,7 +2123,7 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S8-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S8-2-Q1", "prompt": "Dans une architecture moderne de turboréacteur double flux, quelle affirmation décrit correctement l’inversion de poussée ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’inversion de poussée doit obligatoirement agir sur le flux primaire pour être efficace.", "is_correct": false, "explanation": "Le cours indique au contraire que, dans les architectures modernes, on supprime souvent l’inversion sur le flux primaire. L’efficacité recherchée est obtenue en agissant seulement sur le flux secondaire."}, {"id": "B", "text": "Le dispositif moderne inverse simultanément les deux flux dans tous les cas de figure.", "is_correct": false, "explanation": "Cette idée correspond plutôt à une architecture ancienne ou générale, mais pas à la solution moderne mise en avant ici. Le cours insiste sur la suppression fréquente de l’inverseur du flux primaire."}, {"id": "C", "text": "La réversion ne peut fonctionner que sur un turboréacteur simple flux.", "is_correct": false, "explanation": "Le cours traite explicitement du cas des turboréacteurs double flux. L’inversion est possible dans les deux familles d’architectures, mais sa mise en œuvre diffère."}, {"id": "D", "text": "La réversion est généralement appliquée au seul **flux secondaire**.", "is_correct": true, "explanation": "C’est la configuration décrite dans le cours pour les architectures modernes à fort taux de dilution. Le flux primaire est souvent laissé sans inverseur, tandis que le flux secondaire assure l’essentiel de la poussée inversée."}, {"id": "E", "text": "L’inversion sur le flux secondaire est réservée aux phases de croisière.", "is_correct": false, "explanation": "Le cours rappelle que l’inverseur de poussée est utilisé à l’atterrissage pour aider au freinage. Il ne s’agit pas d’un dispositif de croisière."}], "coverage_label": "", "learning_objective": "Identifier la configuration moderne d’inversion de poussée sur un turboréacteur double flux.", "correction_summary": "La bonne réponse est celle qui associe l’inversion de poussée au seul flux secondaire. Dans les architectures modernes, le flux primaire est souvent laissé sans inverseur car cela améliore plusieurs performances. Le piège classique consiste à confondre cette architecture avec les systèmes plus anciens qui inversaient les deux flux.", "course_clarification": "Un turboréacteur **double flux** possède un flux primaire et un flux secondaire. Dans les architectures modernes à fort taux de dilution, la poussée utile est surtout fournie par le flux secondaire. On peut donc réserver l’inversion à ce seul flux. Cela simplifie le système et réduit les contraintes mécaniques et d’entretien.", "source_refs": []}, {"question_id": "S8-2-Q2", "prompt": "Parmi les effets suivants, lequel est un avantage cité lorsque l’inverseur du flux primaire est supprimé sur un GTR double flux moderne ?", "difficulty": "easy", "options": [{"id": "A", "text": "La masse du moteur augmente.", "is_correct": false, "explanation": "Le cours indique au contraire une **masse réduite**. Supprimer des organes de réversion enlève de la structure et des composants."}, {"id": "B", "text": "La fiabilité du système augmente.", "is_correct": true, "explanation": "Le cours cite explicitement une **fiabilité accrue** comme avantage de la suppression de l’inverseur sur le flux primaire."}, {"id": "C", "text": "Le coût d’entretien augmente.", "is_correct": false, "explanation": "Le cours mentionne une diminution du coût d’entretien. Moins de mécanismes à maintenir signifie généralement moins d’opérations de maintenance."}, {"id": "D", "text": "L’endurance du GTR diminue.", "is_correct": false, "explanation": "Le cours précise que l’endurance augmente. La suppression d’un système complexe réduit l’usure et les sources de panne."}, {"id": "E", "text": "La vitesse d’utilisation doit être plus élevée pour éviter les risques d’ingestion de gaz chauds.", "is_correct": false, "explanation": "Le cours dit l’inverse : la vitesse d’utilisation est plus faible, notamment sans risque d’ingestion de gaz chauds. L’assertion mélange donc un avantage réel avec une conséquence erronée."}], "coverage_label": "", "learning_objective": "Reconnaître les bénéfices techniques de la suppression de l’inverseur sur le flux primaire.", "correction_summary": "L’avantage attendu est l’augmentation de la fiabilité. Le cours associe aussi cette architecture à une masse plus faible, une endurance accrue et un entretien moins coûteux. Le piège est de confondre ces effets avec une dégradation des performances, alors qu’ils sont au contraire présentés comme des gains.", "course_clarification": "Supprimer l’inverseur sur le flux primaire retire des éléments mobiles et des commandes supplémentaires. Cela améliore la **fiabilité** et réduit la **masse**. L’**endurance** du moteur augmente car le système est moins sollicité et comporte moins de pièces susceptibles de s’user. En pratique, cela rend l’installation plus simple et moins chère à maintenir.", "source_refs": []}, {"question_id": "S8-2-Q3", "prompt": "Quel énoncé correspond à l’effet global recherché par cette architecture moderne d’inversion sur les turboréacteurs double flux ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle améliore aussi l’efficacité du système.", "is_correct": true, "explanation": "Le cours mentionne explicitement une **efficacité meilleure** quand l’inversion sur le flux primaire est supprimée."}, {"id": "B", "text": "Elle impose une vitesse d’utilisation plus élevée.", "is_correct": false, "explanation": "Le cours précise au contraire une vitesse d’utilisation plus faible. L’objectif est d’éviter les problèmes liés à l’ingestion de gaz chauds et de rester dans une plage d’utilisation sûre."}, {"id": "C", "text": "Elle remplace totalement la poussée positive par une poussée inverse en vol normal.", "is_correct": false, "explanation": "Le dispositif conserve d’abord une poussée positive en fonctionnement normal. La poussée inverse n’apparaît que lorsqu’on actionne l’inverseur, typiquement à l’atterrissage."}, {"id": "D", "text": "Elle supprime tout besoin d’entretien sur le moteur.", "is_correct": false, "explanation": "Le cours parle d’un coût d’entretien réduit, pas supprimé. Un moteur reste un système complexe qui nécessite toujours de la maintenance."}, {"id": "E", "text": "Elle réduit la fiabilité pour gagner en simplicité.", "is_correct": false, "explanation": "Le cours dit exactement l’inverse : la fiabilité augmente. La suppression d’un inverseur sur le flux primaire simplifie certes l’architecture, mais dans le but d’améliorer la robustesse."}], "coverage_label": "", "learning_objective": "Interpréter l’effet global de la suppression de l’inverseur sur le flux primaire.", "correction_summary": "La bonne idée à retenir est le gain d’efficacité associé à cette architecture. Elle s’accompagne aussi d’une utilisation plus sûre et d’un meilleur compromis masse/maintenance. Le piège est de croire qu’un système plus simple serait forcément moins performant : ici, c’est l’inverse selon le cours.", "course_clarification": "Dans le cours, l’**efficacité** désigne le meilleur usage de l’énergie et de la poussée disponible. En supprimant l’inversion sur le flux primaire, le système gagne en simplicité sans perdre la fonction de freinage. La vitesse d’utilisation peut être plus faible, ce qui limite les risques d’aspiration de gaz chauds. Cette solution est donc un compromis entre performance, sécurité et maintenance.", "source_refs": []}, {"question_id": "S8-2-Q4", "prompt": "Quel élément décrit correctement le comportement du dispositif en configuration moderne sur un turboréacteur double flux ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le moteur ne produit jamais de poussée positive lorsque l’inverseur est présent.", "is_correct": false, "explanation": "Le cours montre au contraire que le moteur fonctionne d’abord en poussée positive avant le passage en inversion. L’inverseur ne remplace pas le fonctionnement normal, il le modifie temporairement."}, {"id": "B", "text": "L’inversion est destinée à augmenter la distance d’atterrissage.", "is_correct": false, "explanation": "Le but est exactement l’inverse : réduire la distance nécessaire à l’atterrissage. La poussée inverse sert au freinage."}, {"id": "C", "text": "Le flux primaire est forcément dévié vers l’avant sur les moteurs modernes.", "is_correct": false, "explanation": "Le cours précise que, dans les architectures modernes, l’inversion sur le flux primaire est souvent supprimée. Ce n’est donc pas un principe général du moteur moderne."}, {"id": "D", "text": "La poussée inverse maximale est obtenue en vol de croisière sans action de l’équipage.", "is_correct": false, "explanation": "L’inverseur est utilisé à l’atterrissage et nécessite une commande spécifique. Il ne se déclenche pas spontanément en croisière."}, {"id": "E", "text": "Le dispositif conserve une poussée positive puis une poussée inverse maximale.", "is_correct": true, "explanation": "Le cours indique clairement cette succession : d’abord la poussée normale, puis la **poussée inverse maxi** lorsque le système est déployé."}], "coverage_label": "", "learning_objective": "Lire la séquence fonctionnelle d’un inverseur moderne : poussée normale puis poussée inverse.", "correction_summary": "La configuration décrite par le cours conserve d’abord la poussée positive, puis permet une poussée inverse maximale. Il faut donc distinguer le fonctionnement normal du moteur et l’action de l’inverseur. Le piège consiste à penser que l’inverseur supprime la poussée normale ou qu’il agit en permanence.", "course_clarification": "La **poussée positive** correspond au fonctionnement normal du turboréacteur, quand les gaz sont éjectés vers l’arrière. La **poussée inverse** est obtenue lorsque le dispositif redirige une partie du flux pour créer un effort de freinage. Dans la configuration moderne présentée, cette inversion concerne surtout le flux secondaire. L’intérêt pratique est d’aider l’avion à ralentir après l’atterrissage.", "source_refs": []}, {"question_id": "S8-2-Q5", "prompt": "Selon le cours, quelle affirmation résume le mieux l’intérêt opérationnel de cette architecture moderne sur un GTR double flux ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle impose d’augmenter le nombre d’organes de réversion pour être plus sûre.", "is_correct": false, "explanation": "Le cours va dans le sens inverse : on simplifie l’architecture en supprimant des éléments sur le flux primaire. Il n’est pas question d’ajouter des organes de réversion."}, {"id": "B", "text": "Elle augmente le coût d’entretien pour améliorer l’endurance.", "is_correct": false, "explanation": "Le cours indique une diminution du coût d’entretien et une augmentation de l’endurance. L’assertion inverse les deux effets."}, {"id": "C", "text": "Elle permet de réduire la masse tout en améliorant la fiabilité.", "is_correct": true, "explanation": "Le cours associe explicitement la suppression de l’inverseur sur le flux primaire à une **masse réduite** et à une **fiabilité accrue**."}, {"id": "D", "text": "Elle supprime le besoin de freinage à l’atterrissage.", "is_correct": false, "explanation": "L’inverseur reste utile pour aider au freinage. Il ne remplace pas les freins, mais les soulage et réduit la distance d’atterrissage."}, {"id": "E", "text": "Elle est réservée aux avions à adhérence parfaite et piste sèche uniquement.", "is_correct": false, "explanation": "Le cours mentionne précisément l’intérêt du freinage quand l’adhérence est réduite, par exemple sous pluie, neige ou givre. L’assertion contredit donc l’usage réel."}], "coverage_label": "", "learning_objective": "Associer l’architecture moderne à ses gains opérationnels principaux.", "correction_summary": "La bonne réponse associe réduction de masse et amélioration de la fiabilité. Cette architecture garde la fonction de freinage tout en simplifiant le système. Le principal piège est de confondre simplification et perte de performance : ici, le cours présente au contraire un gain opérationnel.", "course_clarification": "Cette architecture moderne vise un meilleur compromis entre performance et maintenance. En retirant l’inversion du flux primaire, on allège le moteur et on améliore sa robustesse. L’inversion sur le flux secondaire suffit pour assurer le freinage à l’atterrissage. En pratique, cela facilite l’exploitation de l’avion tout en conservant un bon niveau de sécurité.", "source_refs": []}], "subpart_id": "S8", "anchor_slide_id": "S8-2", "question_count_target": 5, "title": "QCM - Inverseur sur flux secondaire et architectures double flux"}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S8-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S8-2_Q1", "prompt": "À propos de l’ensemble inverseur à énergie pneumatique, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’ensemble inverseur est constitué d’une seule couronne mobile actionnée par un vérin unique.", "is_correct": false, "explanation": "Faux : la structure n’est pas monobloc et l’actionnement ne repose pas sur un seul vérin."}, {"id": "B", "text": "Les volets obturateurs servent uniquement à augmenter la vitesse du flux secondaire.", "is_correct": false, "explanation": "Faux : les volets servent à fermer le conduit de la soufflante lors de la mise en inverse, pas à accélérer le flux."}, {"id": "C", "text": "Les grilles déviatrices sont absentes du dispositif et sont remplacées par des buses orientables.", "is_correct": false, "explanation": "Faux : les grilles déviatrices font partie de la description du système."}, {"id": "D", "text": "L’ensemble inverseur est constitué de deux parties appelées demi-capots, actionnées chacune par trois vérins à vis.", "is_correct": true, "explanation": "C’est exact : le dispositif décrit comporte bien deux demi-capots, et chacun est manœuvré par 3 vérins à vis."}, {"id": "E", "text": "Le dispositif de commande ne comporte aucun mécanisme d’interdiction.", "is_correct": false, "explanation": "Faux : un mécanisme d’interdiction est explicitement inclus dans la chaîne de commande."}], "coverage_label": "Description de l’ensemble inverseur pneumatique", "learning_objective": "Identifier les organes principaux d’un inverseur pneumatique.", "correction_summary": "La bonne réponse reprend la description exacte de l’ensemble inverseur : deux demi-capots et trois vérins à vis par partie. La confusion fréquente consiste à mélanger cette structure avec une simple couronne mobile ou à attribuer aux volets un rôle de propulsion au lieu d’obturation.", "course_clarification": "Un inverseur pneumatique comporte une partie mobile en deux demi-capots. Leur déplacement commande la déviation du flux, tandis que les volets ferment le conduit de la soufflante.", "source_refs": []}, {"question_id": "S8-2_Q2", "prompt": "Quelle affirmation décrit correctement la chaîne de commande de l’inverseur ?", "difficulty": "easy", "options": [{"id": "A", "text": "La chaîne de commande se limite à une manette et à un simple câble mécanique sans organe intermédiaire.", "is_correct": false, "explanation": "Faux : la chaîne comporte plusieurs organes de commande et de distribution, pas seulement une liaison mécanique simple."}, {"id": "B", "text": "La chaîne de commande comprend notamment une manette d’inversion, un sélecteur de commande, une vanne de régulation et une vanne d’isolement.", "is_correct": true, "explanation": "C’est exact : ces organes font partie de la chaîne de commande décrite pour l’inverseur."}, {"id": "C", "text": "Le moteur pneumatique tourne dans un seul sens, sans possibilité d’inversion de rotation.", "is_correct": false, "explanation": "Faux : le moteur pneumatique est indiqué comme ayant deux sens de rotation."}, {"id": "D", "text": "La régulation de vitesse est absente car le débit pneumatique est toujours maximal.", "is_correct": false, "explanation": "Faux : une régulation de vitesse est bien prévue dans le mécanisme d’entraînement."}, {"id": "E", "text": "Les transmissions flexibles n’interviennent pas dans l’actionnement du système.", "is_correct": false, "explanation": "Faux : les transmissions flexibles sont explicitement mentionnées dans la chaîne de commande."}], "coverage_label": "Chaîne de commande de l’inverseur", "learning_objective": "Reconnaître les éléments de la chaîne de commande et d’entraînement.", "correction_summary": "Il fallait repérer les organes réellement cités dans la chaîne de commande. L’erreur classique est de réduire le système à un seul levier alors qu’il combine des organes de sélection, de régulation et de transmission.", "course_clarification": "La chaîne de commande regroupe la manette, les organes de sélection et de sécurité, puis le dispositif qui transforme la commande en mouvement de l’inverseur.", "source_refs": []}, {"question_id": "S8-2_Q3", "prompt": "À propos de l’essai de l’inverseur, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’essai de l’inverseur peut être réalisé pneumatiquement à partir du collecteur de soutirage par l’intermédiaire d’un clapet 3 voies.", "is_correct": true, "explanation": "C’est exact : le texte précise bien cette possibilité d’essai pneumatique."}, {"id": "B", "text": "L’essai ne peut être fait qu’en vol, lorsque la poussée est maximale.", "is_correct": false, "explanation": "Faux : l’essai est prévu au sol ou par commande dédiée, pas en vol à poussée maximale."}, {"id": "C", "text": "L’essai est réalisé uniquement avec une alimentation hydraulique externe.", "is_correct": false, "explanation": "Faux : l’énoncé mentionne une alimentation pneumatique, pas hydraulique, pour l’essai décrit."}, {"id": "D", "text": "L’essai impose obligatoirement le démontage des demi-capots avant toute vérification.", "is_correct": false, "explanation": "Faux : aucun démontage n’est demandé pour l’essai décrit."}, {"id": "E", "text": "L’essai exclut toute commande manuelle car une manivelle est interdite.", "is_correct": false, "explanation": "Faux : une vérification manuelle avec une manivelle est bien mentionnée comme possibilité."}], "coverage_label": "Essai de l’inverseur", "learning_objective": "Distinguer les modes d’essai pneumatique et manuel de l’inverseur.", "correction_summary": "La réponse juste associe l’essai pneumatique au collecteur de soutirage et au clapet 3 voies. La confusion fréquente consiste à croire que seul un essai électrique ou hydraulique est possible, alors qu’une manœuvre manuelle est aussi prévue.", "course_clarification": "Un essai peut être pneumatique, avec l’air prélevé sur le collecteur de soutirage, ou manuel, avec une manivelle selon l’équipement.", "source_refs": []}, {"question_id": "S8-2_Q4", "prompt": "Quelle phrase décrit correctement la séquence de passage en inversion ?", "difficulty": "easy", "options": [{"id": "A", "text": "Les demi-capots se déplacent vers l’avant pour découvrir les grilles déviatrices.", "is_correct": false, "explanation": "Faux : le déplacement décrit est vers l’arrière, pas vers l’avant."}, {"id": "B", "text": "Les volets ouvrent le conduit de la soufflante pour augmenter le débit vers l’arrière.", "is_correct": false, "explanation": "Faux : les volets ferment le conduit de la soufflante au moment de la mise en inverse."}, {"id": "C", "text": "Le mécanisme d’interdiction empêche toute augmentation de la poussée inverse.", "is_correct": false, "explanation": "Faux : il permet au contraire de poursuivre le déplacement de la manette vers l’arrière et d’augmenter la poussée inverse."}, {"id": "D", "text": "Les aérofreins sortent automatiquement pendant la poussée positive sans action sur les manettes d’inversion.", "is_correct": false, "explanation": "Faux : la sortie automatique des aérofreins est liée au déplacement vers l’arrière des manettes d’inversion pendant l’atterrissage ou l’arrêt décollage."}, {"id": "E", "text": "Le sélecteur de commande est placé en inversion, puis le mécanisme d’entraînement alimente l’inverseur dans le sens inversion.", "is_correct": true, "explanation": "C’est exact : la séquence commence par le positionnement du sélecteur en inversion, suivi de l’alimentation du mécanisme d’entraînement dans le bon sens."}], "coverage_label": "Séquence de fonctionnement en inversion", "learning_objective": "Reconstituer l’ordre des actions lors du passage en poussée inverse.", "correction_summary": "Il fallait suivre la chronologie exacte : sélection de l’inversion, alimentation du mécanisme, recul des demi-capots, découverte des grilles et fermeture du conduit par les volets. L’erreur habituelle est d’inverser le sens du mouvement ou le rôle des volets.", "course_clarification": "La mise en inverse suit toujours une logique commande → entraînement → déplacement des organes → modification du flux. Le mécanisme d’interdiction autorise ensuite l’augmentation de la poussée inverse.", "source_refs": []}, {"question_id": "S8-2_Q5", "prompt": "Quelle affirmation sur les sécurités et limitations de l’inversion de poussée est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le reverse est autorisé à toute vitesse, car il protège le moteur contre l’ingestion.", "is_correct": false, "explanation": "Faux : la vitesse minimale d’utilisation est justement imposée pour éviter l’ingestion de gaz chauds et de projections."}, {"id": "B", "text": "La poussée n’est jamais réduite automatiquement en cas de sortie intempestive des inverseurs en vol.", "is_correct": false, "explanation": "Faux : une réduction automatique de la poussée est prévue dans ce cas."}, {"id": "C", "text": "Le reverse est inutilisable en dessous d’une vitesse avion fixée afin d’éviter l’ingestion des gaz chauds.", "is_correct": true, "explanation": "C’est exact : la limitation de vitesse est donnée pour éviter l’ingestion des gaz chauds et les risques associés."}, {"id": "D", "text": "La durée maximale d’utilisation n’existe pas, puisque le dispositif supporte un échauffement illimité.", "is_correct": false, "explanation": "Faux : une durée maxi est fixée pour limiter l’échauffement des dispositifs et des structures voisines."}, {"id": "E", "text": "Le jet dévié ne peut pas soulever de corps étrangers aspirables par le moteur.", "is_correct": false, "explanation": "Faux : le flux dévié peut au contraire soulever des cailloux ou autres éléments aspirés ensuite par le moteur."}], "coverage_label": "Limitations et sécurités de l’inverseur", "learning_objective": "Appliquer les limitations d’utilisation et les sécurités associées au reverse.", "correction_summary": "La bonne réponse reprend la limitation de vitesse, qui protège contre l’ingestion de gaz chauds. La confusion fréquente consiste à voir le reverse comme une protection universelle, alors qu’il impose aussi des contraintes de vitesse, de durée et de sécurité en vol.", "course_clarification": "L’inversion de poussée n’est pas utilisable partout ni tout le temps : elle est limitée par la vitesse, la durée d’emploi et des sécurités qui réduisent automatiquement la poussée en cas de situation anormale.", "source_refs": []}], "subpart_id": "S8", "anchor_slide_id": "S8-2", "question_count_target": 5, "title": "QCM - Dispositif pneumatique et séquence de fonctionnement"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2236,11 +2259,11 @@ html[data-embed="1"] .review-card {
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
           description.textContent =
-            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
         }
       }
 

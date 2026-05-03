@@ -1,0 +1,75 @@
+{
+  "slide_id": "S3",
+  "subpart_id": "3",
+  "title": "Trajectoire et position",
+  "objective": "Définir la trajectoire et relier la position temporelle à l’étude du mouvement.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Trajectoire",
+      "text": "La **trajectoire** est l’ensemble des positions successives occupées par M au cours du temps : c’est la **trace du mouvement**.",
+      "bullets": [
+        "Trois formes à retenir : **rectiligne** (droite), **circulaire** (cercle) et **curviligne** (courbe).",
+        "La trajectoire ne se confond pas avec la position instantanée : la première décrit un **chemin**, la seconde un **point à un instant**.",
+        "La longueur s’exprime en **mètre (m)** dans le Système international (SI) ; exemple : un capteur sur une aile peut suivre une trajectoire **courbe** si la structure se déforme légèrement."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Position instantanée",
+      "text": "Le **vecteur position** localise le point M à un instant donné et dépend du temps.",
+      "bullets": [
+        "Il décrit **où se trouve** M à l’instant t.",
+        "Ses coordonnées changent avec le temps, ce qui prépare l’étude de la **vitesse** puis de l’**accélération**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\vec r(t)=x(t)\\,\\vec i+y(t)\\,\\vec j+z(t)\\,\\vec k"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "OpenStax — Displacement and Velocity Vectors",
+      "locator": "position instantanée et vecteur position",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "source_type": "web",
+      "label": "OpenStax — Chapter 4 Summary",
+      "locator": "trajectoire et fonction position",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-summary"
+    },
+    {
+      "source_type": "web",
+      "label": "Projectile Motion — University Physics Volume 1 (OpenStax)",
+      "locator": "research",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion"
+    },
+    {
+      "source_type": "web",
+      "label": "4.1 Displacement and Velocity Vectors - University Physics Volume 1 | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La distinction attendue est simple : la position instantanée repère M à un instant, la trajectoire rassemble toutes ses positions successives. Les formes rectiligne, circulaire et curviligne sont à conserver telles quelles.",
+  "teacher_notes": "Faire verbaliser la différence entre **point à un instant** et **trace dans le temps**. Vérifier que la fonction position dépend bien du temps avant d’introduire vitesse et accélération."
+}

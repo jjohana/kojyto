@@ -1,0 +1,164 @@
+{
+  "slide_id": "s13",
+  "subpart_id": "s13",
+  "title": "Les droits du salarié",
+  "objective": "Identifier les principaux droits reconnus au salarié.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s13-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Les droits essentiels à retenir",
+      "text": "Chaque droit correspond à une protection concrète dans l’entreprise.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "**Droit à la rémunération**",
+          "Le salaire doit respecter le **Smic** (salaire minimum interprofessionnel de croissance) et, si elle est plus favorable, la **convention collective** applicable.",
+          "Smic ; minimum conventionnel"
+        ],
+        [
+          "**Droit au respect de la personne**",
+          "Le salarié est protégé contre la **discrimination**, le **harcèlement** et les atteintes à la **vie privée**.",
+          "Égalité femmes-hommes ; données personnelles"
+        ],
+        [
+          "**Droit à la sécurité et à la santé**",
+          "L’entreprise doit prévenir les risques et fournir les **EPI** (équipements de protection individuelle) adaptés.",
+          "EPI ; consignes de sécurité"
+        ],
+        [
+          "**Droit à la formation**",
+          "Le salarié peut développer ses compétences grâce à la **formation continue**, à la validation des compétences et à la préparation d’un brevet ou d’une certification.",
+          "Développement professionnel"
+        ],
+        [
+          "**Droit à la représentation collective**",
+          "Les salariés peuvent être représentés et faire remonter leurs demandes par les instances collectives, notamment le **CSE** (comité social et économique).",
+          "CSE ; représentation du personnel"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Sigles à connaître",
+      "text": null,
+      "bullets": [
+        "**EPI** : équipements de protection individuelle, utilisés pour protéger le salarié contre un ou plusieurs risques professionnels.",
+        "**CSE** : comité social et économique, instance de représentation du personnel dans l’entreprise.",
+        "En matière de rémunération, le salaire doit respecter le **minimum légal** et le **minimum conventionnel** quand il est plus favorable."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Smic (salaire minimum interprofessionnel de croissance) | Service-Public.fr",
+      "locator": "rémunération minimale",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F2300?gh_src=qbt3211"
+    },
+    {
+      "source_type": "web",
+      "label": "Discrimination au travail | Service-Public.fr",
+      "locator": "protection contre la discrimination",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1642?lang=fr"
+    },
+    {
+      "source_type": "web",
+      "label": "Protection individuelle - INRS",
+      "locator": "définition des EPI",
+      "url": "https://www.inrs.fr/demarche/protection-individuelle/ce-qu-il-faut-retenir.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Formation des salariés du secteur privé | Service-Public.fr",
+      "locator": "formation professionnelle continue",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/N177?lang=fr"
+    },
+    {
+      "source_type": "web",
+      "label": "Comité social et économique (CSE) | Service-Public.fr",
+      "locator": "représentation du personnel",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F34474"
+    },
+    {
+      "source_type": "web",
+      "label": "Rémunération - Quel est le salaire minimum applicable selon votre convention collective ? | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/actualites/A18444"
+    },
+    {
+      "source_type": "web",
+      "label": "Harcèlement sexuel | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1043"
+    },
+    {
+      "source_type": "web",
+      "label": "Travail et données personnelles | CNIL",
+      "locator": "research",
+      "url": "https://www.cnil.fr/travail-et-donnees-personnelles"
+    },
+    {
+      "source_type": "web",
+      "label": "Protection individuelle. La protection individuelle - Démarches de prévention | INRS",
+      "locator": "research",
+      "url": "https://www.inrs.fr/demarche/protection-individuelle/ce-qu-il-faut-retenir"
+    },
+    {
+      "source_type": "web",
+      "label": "Le comité d'entreprise (CE) existe-t-il toujours ? | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F96"
+    },
+    {
+      "source_type": "web",
+      "label": "Smic (salaire minimum interprofessionnel de croissance) | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F2300?gh_src=qbt3211&utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Discrimination au travail | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1642?lang=fr&utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Protection individuelle. La protection individuelle - Démarches de prévention - INRS",
+      "locator": "research",
+      "url": "https://www.inrs.fr/demarche/protection-individuelle/ce-qu-il-faut-retenir.html?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Formation des salariés du secteur privé | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/N177?lang=fr&utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Comité social et économique (CSE) | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F34474?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Repères pris dans les pages 13 à 18 : rémunération, protection de la personne, sécurité, formation et représentation collective. Les sigles EPI et CSE sont à retenir.",
+  "teacher_notes": "Faire repérer aux élèves le lien entre chaque droit et sa traduction concrète dans l’entreprise : salaire, protection, sécurité, progression et voix collective. Insister sur les sigles EPI et CSE, puis demander un exemple simple pour chaque droit."
+}

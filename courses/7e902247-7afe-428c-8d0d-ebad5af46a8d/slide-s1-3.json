@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S1-3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S1-3-Q1",
+      "prompt": "Concernant la relation entre une GCU et un IDG, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Une seule GCU supervise en même temps tous les IDG de l’avion.",
+          "is_correct": false,
+          "explanation": "Le schéma montre une association dédiée entre chaque IDG et sa propre GCU, pas une supervision unique de tous les générateurs."
+        },
+        {
+          "id": "B",
+          "text": "La GCU est un organe propre à la source moteur correspondante.",
+          "is_correct": false,
+          "explanation": "La GCU est bien associée à l’IDG du moteur correspondant, mais elle ne désigne pas la source d’énergie elle-même ; elle en assure la commande et le contrôle."
+        },
+        {
+          "id": "C",
+          "text": "La GCU est un élément de stockage d’énergie électrique.",
+          "is_correct": false,
+          "explanation": "Une GCU n’est pas un stockage : c’est une unité de contrôle et de surveillance."
+        },
+        {
+          "id": "D",
+          "text": "Chaque IDG est contrôlé et surveillé par la GCU qui lui est associée.",
+          "is_correct": true,
+          "explanation": "C’est l’idée centrale du schéma : une GCU est liée à un IDG précis pour assurer sa commande et sa surveillance."
+        },
+        {
+          "id": "E",
+          "text": "La GCU alimente directement le AC SYSTEM à la place de l’IDG.",
+          "is_correct": false,
+          "explanation": "Le rôle de la GCU est de contrôler et surveiller l’IDG ; l’alimentation du réseau AC est assurée par l’IDG, pas par la GCU."
+        }
+      ],
+      "coverage_label": "GCU : contrôle et surveillance des IDG",
+      "learning_objective": "Identifier la fonction de la GCU et son lien direct avec l’IDG associé.",
+      "correction_summary": "La bonne réponse est celle qui relie une GCU à son IDG associé pour la commande et la surveillance. Le piège consiste à confondre unité de contrôle et source de puissance.",
+      "course_clarification": "IDG signifie Integrated Drive Generator et GCU signifie Generator Control Unit. La GCU est l’unité qui pilote et surveille l’IDG correspondant, sans être la source de puissance elle-même.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-3-Q2",
+      "prompt": "À propos du schéma de génération AC, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les flèches représentent uniquement le flux d’air dans le moteur.",
+          "is_correct": false,
+          "explanation": "Le schéma concerne la génération électrique ; les flèches ne décrivent pas un flux mécanique ou aérodynamique."
+        },
+        {
+          "id": "B",
+          "text": "Les flèches du schéma matérialisent le lien entre chaque GCU et son IDG.",
+          "is_correct": true,
+          "explanation": "Le schéma utilise des flèches pour montrer l’association fonctionnelle entre les blocs GCU et les IDG correspondants."
+        },
+        {
+          "id": "C",
+          "text": "Les flèches relient la batterie au AC SYSTEM comme liaison principale de génération normale.",
+          "is_correct": false,
+          "explanation": "La batterie n’est pas la source principale représentée ici ; le schéma met en avant les IDG et l’APU GEN pour l’alimentation AC."
+        },
+        {
+          "id": "D",
+          "text": "Les flèches relient les IDG entre eux pour équilibrer leur vitesse de rotation.",
+          "is_correct": false,
+          "explanation": "Aucune liaison de ce type n’est indiquée : les flèches servent à montrer les relations de contrôle/surveillance entre GCU et IDG."
+        },
+        {
+          "id": "E",
+          "text": "Les flèches indiquent que la GCU est physiquement installée dans le réseau AC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Le dessin met en évidence une fonction de contrôle reliée à l’IDG, pas une insertion de la GCU comme source dans le réseau de puissance."
+        }
+      ],
+      "coverage_label": "GCU : contrôle et surveillance des IDG",
+      "learning_objective": "Interpréter correctement les liaisons graphiques du schéma entre GCU et IDG.",
+      "correction_summary": "La bonne lecture du schéma est que les flèches servent à matérialiser le lien entre chaque GCU et son IDG. Le piège est d’y voir un chemin de puissance ou un autre type de liaison technique.",
+      "course_clarification": "Le schéma représente des blocs fonctionnels, pas seulement des câbles de puissance. Une flèche entre deux blocs signifie ici une relation de contrôle et de surveillance.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-3-Q3",
+      "prompt": "Sur l’implantation des IDG, quelle proposition correspond au schéma ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il existe un IDG par moteur.",
+          "is_correct": true,
+          "explanation": "Le texte associé au schéma précise qu’en vol il y a un IDG par moteur."
+        },
+        {
+          "id": "B",
+          "text": "Tous les moteurs partagent un seul IDG commun.",
+          "is_correct": false,
+          "explanation": "Le support indique explicitement une répartition un par moteur, donc pas un générateur commun."
+        },
+        {
+          "id": "C",
+          "text": "Chaque IDG est directement connecté au gearbox pad du moteur correspondant.",
+          "is_correct": false,
+          "explanation": "Cette relation est bien donnée par le support, donc cette proposition est vraie et ne peut pas être retenue ici comme fausse."
+        },
+        {
+          "id": "D",
+          "text": "L’IDG est raccordé uniquement à l’APU.",
+          "is_correct": false,
+          "explanation": "L’IDG est associé au moteur correspondant, tandis que l’APU possède son propre générateur séparé."
+        },
+        {
+          "id": "E",
+          "text": "Un IDG n’est pas lié à une source moteur, mais uniquement au réseau au sol.",
+          "is_correct": false,
+          "explanation": "Le schéma montre les IDG comme des sources entraînées par les moteurs en vol, pas comme des dispositifs réservés à l’alimentation au sol."
+        }
+      ],
+      "coverage_label": "GCU : contrôle et surveillance des IDG",
+      "learning_objective": "Reconnaître l’architecture de base : un IDG par moteur et son raccordement moteur.",
+      "correction_summary": "La relation essentielle est un IDG par moteur, directement raccordé au gearbox pad du moteur correspondant. Le piège consiste à confondre cette architecture avec une source unique ou avec l’APU.",
+      "course_clarification": "Un IDG est un générateur entraîné par le moteur. Il fournit une source AC dédiée à chaque moteur, ce qui simplifie l’identification des sources sur le schéma.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-3-Q4",
+      "prompt": "Quelle proposition décrit correctement l’acronyme GCU ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "GCU signifie Ground Control Unit.",
+          "is_correct": false,
+          "explanation": "L’abréviation correcte est Generator Control Unit ; le terme Ground ne correspond pas à cette unité."
+        },
+        {
+          "id": "B",
+          "text": "GCU signifie Generator Current Unit.",
+          "is_correct": false,
+          "explanation": "Cette expansion ne figure pas dans le support et ne correspond pas à l’acronyme utilisé."
+        },
+        {
+          "id": "C",
+          "text": "GCU signifie General Control Utility.",
+          "is_correct": false,
+          "explanation": "Cette formulation ne correspond ni à la légende ni à la fonction du bloc représenté."
+        },
+        {
+          "id": "D",
+          "text": "GCU désigne le générateur entraîné par le moteur.",
+          "is_correct": false,
+          "explanation": "Le générateur entraîné par le moteur est l’IDG ; la GCU est l’unité qui le contrôle et le surveille."
+        },
+        {
+          "id": "E",
+          "text": "GCU signifie Generator Control Unit.",
+          "is_correct": true,
+          "explanation": "L’acronyme est explicitement donné dans la légende et dans le texte associé au schéma."
+        }
+      ],
+      "coverage_label": "GCU : contrôle et surveillance des IDG",
+      "learning_objective": "Connaître la signification exacte de l’acronyme GCU et éviter la confusion avec l’IDG.",
+      "correction_summary": "GCU se développe en Generator Control Unit. Le principal piège est de confondre l’unité de commande avec le générateur lui-même.",
+      "course_clarification": "La GCU est une unité de contrôle associée à un générateur. L’IDG produit l’énergie électrique, tandis que la GCU supervise son fonctionnement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-3-Q5",
+      "prompt": "À propos du rôle fonctionnel de la GCU, quelle proposition est juste ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La GCU commande directement les carburateurs des moteurs.",
+          "is_correct": false,
+          "explanation": "Aucune fonction de ce type n’apparaît : la GCU est liée à la génération électrique, pas à l’alimentation carburant."
+        },
+        {
+          "id": "B",
+          "text": "La GCU surveille uniquement l’APU GEN et pas les IDG.",
+          "is_correct": false,
+          "explanation": "Le schéma distingue les GCUs associées aux IDG des blocs liés à l’APU ; cette proposition inverse les rôles."
+        },
+        {
+          "id": "C",
+          "text": "La GCU concerne la source moteur correspondante.",
+          "is_correct": true,
+          "explanation": "Le support relie chaque GCU à l’IDG du moteur correspondant, donc la GCU n’est pas générique mais dédiée à cette source."
+        },
+        {
+          "id": "D",
+          "text": "La GCU remplace le gearbox pad du moteur.",
+          "is_correct": false,
+          "explanation": "Le gearbox pad est un point de connexion mécanique du moteur ; la GCU est un bloc de contrôle séparé, sans fonction de remplacement mécanique."
+        },
+        {
+          "id": "E",
+          "text": "La GCU est un organe de stockage similaire à une batterie.",
+          "is_correct": false,
+          "explanation": "Une GCU n’a pas de rôle de stockage ; elle intervient dans la commande et la surveillance de l’IDG."
+        }
+      ],
+      "coverage_label": "GCU : contrôle et surveillance des IDG",
+      "learning_objective": "Relier la GCU à sa source moteur et distinguer sa fonction de celle des autres organes du système.",
+      "correction_summary": "La GCU est dédiée à la source moteur correspondante et sert à la contrôler et la surveiller. Le piège est d’attribuer à la GCU des fonctions mécaniques, de stockage ou liées à l’APU.",
+      "course_clarification": "La GCU est une unité de supervision associée à une source de génération précise. Elle n’alimente pas le réseau à elle seule : elle pilote le fonctionnement de l’IDG correspondant.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S1",
+  "anchor_slide_id": "S1-3",
+  "question_count_target": 5,
+  "title": "QCM - GCU : contrôle et surveillance des IDG"
+}

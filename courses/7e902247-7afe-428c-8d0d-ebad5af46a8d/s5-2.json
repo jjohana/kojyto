@@ -1,0 +1,93 @@
+{
+  "slide_id": "S5-2",
+  "subpart_id": "S5",
+  "title": "Surveillance des sources AC sur l’Electronic Centralized Aircraft Monitor (ECAM)",
+  "objective": "Identifier les indications principales liées aux générateurs sur l’ECAM.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s5-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repérage des indications sur la page AC",
+      "text": "Les indications apparaissent sur la page électrique AC de l’ECAM, dans la zone de surveillance des sources.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Indication",
+          "Position dans l’affichage",
+          "Valeurs / lecture"
+        ],
+        [
+          "GEN 1",
+          "À gauche",
+          "62% / 115 V / 400 Hz"
+        ],
+        [
+          "APU GEN",
+          "Au centre, affiché séparément",
+          "Source du groupe auxiliaire de puissance (APU), distincte des générateurs moteurs"
+        ],
+        [
+          "GEN 2",
+          "À droite",
+          "62% / 115 V / 400 Hz"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Les repères **GEN 1** et **GEN 2** présentent les mêmes grandeurs visibles : **62% / 115 V / 400 Hz** ; la page sert avant tout à **surveiller** l’état des sources AC.",
+        "**APU GEN** reste une source **distincte** dans l’affichage : elle n’est pas confondue avec les deux générateurs moteurs.",
+        "La page ECAM AC montre aussi la **connexion des sources au réseau**, ce qui permet de suivre rapidement la disponibilité électrique."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "SKYbrary — Electronic Centralized Aircraft Monitor (ECAM)",
+      "locator": "Le System Display présente des synoptiques et des paramètres de surveillance des systèmes.",
+      "url": "https://skybrary.aero/index.php/articles/electronic-centralized-aircraft-monitor-ecam"
+    },
+    {
+      "source_type": "web",
+      "label": "SKYbrary — Aircraft Electrical Systems",
+      "locator": "Les générateurs aéronautiques fournissent typiquement du 115/200 V à 400 Hz sur les réseaux AC.",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-electrical-systems"
+    },
+    {
+      "source_type": "web",
+      "label": "Preventing loss of engine generators on A320 family, A330 and A340 aircraft — Airbus Safety First",
+      "locator": "research",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    },
+    {
+      "source_type": "web",
+      "label": "Electronic Centralized Aircraft Monitor (ECAM) | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/electronic-centralized-aircraft-monitor-ecam?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La page AC de l’ECAM affiche les sources de génération et leurs valeurs principales. GEN 1, GEN 2 et APU GEN y apparaissent comme repères de surveillance.",
+  "teacher_notes": "Faire lire d’abord la position des indications, puis la valeur commune 62% / 115 V / 400 Hz. Insister sur la distinction entre GEN 1, GEN 2 et APU GEN."
+}

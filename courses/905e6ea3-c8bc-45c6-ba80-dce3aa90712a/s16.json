@@ -1,0 +1,33 @@
+{
+  "slide_id": "s16",
+  "subpart_id": "s16",
+  "title": "TP – L’individu dans l’organisation",
+  "objective": "Situer la page de transition vers le travail pratique du module.",
+  "layout": "title",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s16-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "hero",
+      "title": "Page de couverture du TP",
+      "text": "La mise en page annonce une séquence sur les **métiers** et les **droits/devoirs** dans l’organisation. Fond **bleu**, motif circulaire discret et filigrane diagonal **IAAG** : aucun schéma, tableau, graphique ni illustration technique n’est visible.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [],
+  "course_reference_note": "Page de couverture du TP, centrée sur la découverte des métiers et des droits/devoirs. La présentation reste sobre : fond bleu, motif discret et filigrane IAAG répété.",
+  "teacher_notes": "Faire repérer les indices de couverture : titre, fond bleu, filigrane et absence d’éléments techniques. Rappeler que la page sert d’entrée visuelle avant le travail pratique."
+}

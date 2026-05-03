@@ -1,0 +1,104 @@
+{
+  "slide_id": "s3",
+  "subpart_id": "s3",
+  "title": "Découverte des métiers de l’aéronautique",
+  "objective": "Identifier les grandes familles de métiers du secteur et situer le pilote parmi d’autres fonctions essentielles.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Des métiers complémentaires autour d’un même secteur",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Famille de métier",
+          "Missions principales",
+          "Idée clé"
+        ],
+        [
+          "Pilotage",
+          "Préparer le vol, vérifier la météo, communiquer avec les contrôleurs et l’équipage, assurer la sécurité en vol.",
+          "Métier emblématique, mais un métier parmi d’autres."
+        ],
+        [
+          "Conception / ingénierie",
+          "Développer et tester des prototypes, créer des logiciels, travailler sur l’aérodynamique, la propulsion, les structures, l’avionique et le contrôle de vol.",
+          "La technique commence dès la conception."
+        ],
+        [
+          "Sécurité du trafic aérien",
+          "Organiser et surveiller la circulation aérienne pour garder des vols fluides et sûrs.",
+          "La sécurité dépend aussi de métiers de coordination."
+        ],
+        [
+          "Maintenance",
+          "Inspecter, démonter, remonter, réparer ou remplacer les pièces et assurer une veille technique.",
+          "La sécurité repose sur l’entretien régulier."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "L’aéronautique est un univers **passionnant** et **en évolution constante** ; il réunit des métiers de **conception**, de **sécurité du trafic** et de **maintenance**.",
+        "Le métier de pilote de ligne reste central, mais il ne résume pas le secteur : la **licence européenne de pilote de ligne (ATPL, Airline Transport Pilot Licence)** s’inscrit dans un ensemble plus large de compétences.",
+        "Chaque famille de métier contribue à un objectif commun : la **sécurité** des personnes, des appareils et des opérations aériennes."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Ingénieur / Ingénieure en aéronautique - Onisep",
+      "locator": "fiche métier",
+      "url": "https://www.onisep.fr/ressources/Univers-Metier/Metiers/ingenieur-ingenieure-en-aeronautique"
+    },
+    {
+      "source_type": "web",
+      "label": "Contrôleur aérien / Contrôleuse aérienne - Onisep",
+      "locator": "fiche métier",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/controleur-aerien-controleuse-aerienne"
+    },
+    {
+      "source_type": "web",
+      "label": "Mécanicien / Mécanicienne d'entretien d'avion - Onisep",
+      "locator": "fiche métier",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/mecanicien-mecanicienne-d-entretien-d-avion"
+    },
+    {
+      "source_type": "web",
+      "label": "Pilote de ligne - Onisep",
+      "locator": "research",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/pilote-de-ligne"
+    },
+    {
+      "source_type": "web",
+      "label": "Outils métiers | STAC",
+      "locator": "research",
+      "url": "https://www.stac.aviation-civile.gouv.fr/fr/presentation-stac/outils-metiers"
+    }
+  ],
+  "course_reference_note": "Les pages d’introduction et les fiches métier montrent un secteur pluriel : pilotage, ingénierie, sécurité du trafic et maintenance. Le pilote est mis en avant, mais il n’épuise pas les débouchés.",
+  "teacher_notes": "Faire repérer les grandes familles de métiers avant de détailler un métier précis. Demander aux élèves de classer chaque exemple dans la bonne famille : pilotage, conception, sécurité du trafic ou maintenance."
+}

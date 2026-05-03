@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S11-1",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S11-1-Q1",
+      "prompt": "Concernant les voyants de cabine liés aux trains d’atterrissage, quelles affirmations sont correctes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le voyant rouge signale uniquement une panne du circuit hydraulique de freinage.",
+          "is_correct": false,
+          "explanation": "Le voyant rouge sert à signaler une manœuvre de train ou des trappes hautes non verrouillées, pas un défaut du freinage."
+        },
+        {
+          "id": "B",
+          "text": "Avec 3 voyants verts allumés, les trains sont en position haute et verrouillés.",
+          "is_correct": false,
+          "explanation": "La position haute verrouillée n’est pas indiquée par les 3 verts ; ceux-ci valident la position basse verrouillée."
+        },
+        {
+          "id": "C",
+          "text": "Le voyant rouge s’allume quand les trains sont verrouillés bas et les trappes fermées.",
+          "is_correct": false,
+          "explanation": "Cette situation correspond justement à l’état normal de sortie et verrouillage bas, pas à l’alarme rouge."
+        },
+        {
+          "id": "D",
+          "text": "L’allumage des 3 voyants verts indique que les 3 trains sont verrouillés bas.",
+          "is_correct": true,
+          "explanation": "Les 3 voyants verts correspondent à la confirmation que les trains sont sortis et verrouillés en position basse."
+        },
+        {
+          "id": "E",
+          "text": "Le voyant rouge n’a aucun lien avec l’état des trappes de train.",
+          "is_correct": false,
+          "explanation": "Le voyant rouge est aussi associé à des trappes non verrouillées hautes, donc il renseigne bien sur l’état des trappes."
+        }
+      ],
+      "coverage_label": "Voyants de cabine",
+      "learning_objective": "Interpréter l’état des trains à partir des voyants verts et rouges.",
+      "correction_summary": "La bonne lecture est : 3 verts = trains verrouillés bas. Le voyant rouge signale une situation de manœuvre ou de non-verrouillage en haut, ce qui piège souvent les réponses qui inversent haut et bas.",
+      "course_clarification": "Les voyants de train servent à confirmer la position et le verrouillage des trains. Le vert valide l’état basse sortie, alors que le rouge attire l’attention sur une configuration non sécurisée ou en transition.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-1-Q2",
+      "prompt": "À propos du voyant TNS (Train Non Sorti), quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il s’active seulement si les trains sont sortis à une altitude élevée.",
+          "is_correct": false,
+          "explanation": "Le TNS concerne au contraire le cas où les trains ne sont pas sortis alors que la situation impose leur sortie, avec une altitude trop basse."
+        },
+        {
+          "id": "B",
+          "text": "Il peut être accompagné d’un voyant ou d’un flash et d’un levier d’alarme sonore.",
+          "is_correct": true,
+          "explanation": "Le signal TNS n’est pas seulement visuel : il peut aussi être associé à une alarme sonore selon la configuration décrite."
+        },
+        {
+          "id": "C",
+          "text": "Il dépend uniquement de la température des freins.",
+          "is_correct": false,
+          "explanation": "La surveillance de température relève du BTMS ; le TNS dépend de la configuration de vol et de l’état des trains."
+        },
+        {
+          "id": "D",
+          "text": "Il ne tient pas compte de la position de la manette des gaz ni de la vitesse.",
+          "is_correct": false,
+          "explanation": "Le texte mentionne justement une manette des gaz réduite et une vitesse faible comme conditions associées à l’alerte TNS."
+        },
+        {
+          "id": "E",
+          "text": "Il signale un risque de roulage trop rapide avec volets rentrés uniquement.",
+          "is_correct": false,
+          "explanation": "Le TNS n’est pas limité à ce cas : il peut apparaître si les trains ne sont pas sortis à altitude trop basse, avec plusieurs conditions de vol listées."
+        }
+      ],
+      "coverage_label": "Voyant TNS",
+      "learning_objective": "Identifier les conditions de déclenchement de l’alerte TNS.",
+      "correction_summary": "Le TNS avertit d’un train non sorti dans une configuration dangereuse, et peut s’accompagner d’un flash ou d’une alarme sonore. Le piège est de le confondre avec une alerte de vitesse ou de freinage.",
+      "course_clarification": "TNS signifie que le train n’est pas sorti alors que l’avion approche d’une situation où il devrait l’être. L’alerte combine donc l’état du train et des conditions de vol comme l’altitude, la vitesse ou la configuration des volets.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-1-Q3",
+      "prompt": "Sur les architectures de roues, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La roue à flasque mobile permet de glisser le pneu en place sans écarter le talon.",
+          "is_correct": true,
+          "explanation": "La flasque amovible facilite le montage du pneu, précisément sans devoir écarter le talon."
+        },
+        {
+          "id": "B",
+          "text": "La roue monobloc est constituée de deux demi-jantes séparées par un moyeu divisé.",
+          "is_correct": false,
+          "explanation": "Cette description correspond à une architecture différente ; la roue monobloc est un seul élément."
+        },
+        {
+          "id": "C",
+          "text": "La roue à flasque mobile est dépourvue de tout dispositif de sécurité thermique.",
+          "is_correct": false,
+          "explanation": "Le document mentionne au contraire un bouchon fusible thermique sur la roue à flasque mobile."
+        },
+        {
+          "id": "D",
+          "text": "La roue monobloc est associée au montage du pneu sans effort sur des avions lourds.",
+          "is_correct": false,
+          "explanation": "Le pneu est monté en force sur un seul élément, et cette solution est indiquée pour des avions légers soumis à de fortes charges locales."
+        },
+        {
+          "id": "E",
+          "text": "La roue à moyeu divisé est la seule architecture explicitement décrite comme utilisée sur avions légers.",
+          "is_correct": false,
+          "explanation": "L’usage sur avions légers est associé à la roue monobloc, pas à la roue à moyeu divisé."
+        }
+      ],
+      "coverage_label": "Roues",
+      "learning_objective": "Distinguer les principaux types de roues et leur principe d’assemblage.",
+      "correction_summary": "La bonne réponse est la roue à flasque mobile, qui facilite le montage du pneu et comporte un bouchon fusible thermique. Le principal piège consiste à confondre cette solution avec la roue monobloc ou le moyeu divisé.",
+      "course_clarification": "Une roue monobloc forme un seul ensemble, tandis qu’une roue à flasque mobile permet d’installer le pneu plus facilement. Le bouchon fusible thermique protège l’ensemble en cas d’échauffement excessif.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-1-Q4",
+      "prompt": "Concernant les freins d’aéronef, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les freins à tambours sont présentés comme la solution la plus adaptée aux avions lourds.",
+          "is_correct": false,
+          "explanation": "Le texte associe les freins à tambours aux avions légers, pas aux avions lourds."
+        },
+        {
+          "id": "B",
+          "text": "Le freinage sert uniquement à immobiliser l’avion au parking.",
+          "is_correct": false,
+          "explanation": "Le freinage a plusieurs fonctions : absorber l’énergie cinétique, réduire la distance de roulement, aider au parking, au décollage court et aux évolutions au sol."
+        },
+        {
+          "id": "C",
+          "text": "Un bouchon fusible thermique est mentionné sur les freins à tambours pour éviter l’éclatement.",
+          "is_correct": false,
+          "explanation": "Le bouchon fusible thermique est associé aux freins à disques dans le support, pour la sécurité thermique et l’évitement de l’éclatement."
+        },
+        {
+          "id": "D",
+          "text": "Le coefficient d’adhérence dépend uniquement de la masse de l’avion.",
+          "is_correct": false,
+          "explanation": "Il dépend du revêtement de piste, de la vitesse avion, de la pression et de la température du pneu, ainsi que du glissement."
+        },
+        {
+          "id": "E",
+          "text": "Les freins à disques offrent un refroidissement efficace et une usure régulière.",
+          "is_correct": true,
+          "explanation": "Les avantages cités pour les freins à disques incluent le refroidissement efficace et une usure régulière des disques."
+        }
+      ],
+      "coverage_label": "Freins à disques",
+      "learning_objective": "Reconnaître le rôle et les caractéristiques des freins à disques et à tambours.",
+      "correction_summary": "Les freins à disques se distinguent par leur refroidissement, leur usure régulière et leur sécurité thermique. Le piège classique est d’attribuer ces avantages aux freins à tambours ou de réduire le freinage à la seule immobilisation au parking.",
+      "course_clarification": "Le freinage aviation ne sert pas seulement à arrêter l’avion : il contribue aussi à la sécurité au sol et à certaines phases de roulage. Les freins à disques sont décrits comme plus performants thermiquement que les freins à tambours.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-1-Q5",
+      "prompt": "À propos des pneumatiques et de leur surveillance, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le pneu radial présente une surface de contact importante et constante.",
+          "is_correct": false,
+          "explanation": "Cette caractéristique est bien celle du pneu radial ; l’affirmation est donc fausse si elle nie ce point."
+        },
+        {
+          "id": "B",
+          "text": "Le pneu diagonal a une carcasse souple ceinturée métalliquement et une surface de contact constante.",
+          "is_correct": false,
+          "explanation": "Cette description correspond au pneu radial, alors que le pneu diagonal est fait de nappes croisées et se déforme davantage."
+        },
+        {
+          "id": "C",
+          "text": "Le TPMS surveille la pression des pneus, le BTMS la température des freins et l’OPMS la pression hydraulique des amortisseurs.",
+          "is_correct": true,
+          "explanation": "Les trois acronymes sont associés chacun à un paramètre distinct : pneus, freins et amortisseurs."
+        },
+        {
+          "id": "D",
+          "text": "Le shimmy est un phénomène vibratoire des freins à disque.",
+          "is_correct": false,
+          "explanation": "Le shimmy concerne les roues libres à une certaine vitesse, pas les freins eux-mêmes."
+        },
+        {
+          "id": "E",
+          "text": "Un méplat est un défaut spécifique lié à un gonflage parfaitement correct.",
+          "is_correct": false,
+          "explanation": "Le méplat est un défaut d’usure ou de choc, mentionné avec l’atterrissage dur, et non un état de gonflage correct."
+        }
+      ],
+      "coverage_label": "Pneumatiques et surveillance",
+      "learning_objective": "Associer les acronymes de surveillance aux paramètres surveillés et distinguer pneu radial et diagonal.",
+      "correction_summary": "Il faut associer chaque système à son paramètre : TPMS pour la pression des pneus, BTMS pour la température des freins et OPMS pour la pression hydraulique des amortisseurs. Le piège est de confondre les structures radial/diagonal ou de rattacher le shimmy aux freins.",
+      "course_clarification": "Le pneu radial garde une zone de contact plus stable, alors que le pneu diagonal se déforme davantage. La surveillance embarquée permet d’anticiper les dérives de pression, de température ou d’amortissement avant la panne ou l’usure anormale.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S11",
+  "anchor_slide_id": "S11-1",
+  "question_count_target": 5,
+  "title": "QCM - Voyants, roues et pneumatiques"
+}

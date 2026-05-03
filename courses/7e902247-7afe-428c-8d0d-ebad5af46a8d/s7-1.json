@@ -1,0 +1,77 @@
+{
+  "slide_id": "S7-1",
+  "subpart_id": "S7",
+  "title": "ECMU : gestion des contacteurs",
+  "objective": "Identifier le rôle des ECMU dans la commande des contacteurs électriques.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s7-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Place dans la chaîne de distribution",
+      "text": null,
+      "bullets": [
+        "L’**ECMU** ne distribue pas l’énergie : elle envoie les ordres de fermeture ou d’ouverture aux contacteurs de puissance.",
+        "Le **contacteur** est l’organe de **commutation** qui établit ou coupe la liaison entre sources, bus et charges.",
+        "La distribution électrique dépend donc de l’état du contacteur : fermé, le chemin de puissance est établi ; ouvert, la liaison est isolée.",
+        "La page de synthèse met en évidence le lien entre **ECMU**, contacteurs **AC/DC** et réseaux de distribution, sans détailler ici la logique interne de décision."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Idée clé",
+      "text": "Les **Electrical Contactor Management Units (ECMU)** pilotent la **commande** des contacteurs électriques.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "État d’un contacteur",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "C_i(t) \\in \\{0,1\\},\\qquad 1=\\text{fermé},\\ 0=\\text{ouvert}\\\\[2pt]\\mathrm{ECMU} \\longrightarrow C_i(t)"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "FAST Magazine 39 – December 2006 (Airbus)",
+      "locator": "ECMU standard sur A340",
+      "url": "https://aircraft.airbus.com/sites/g/files/jlcbta126/files/2022-04/FAST39.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Trends In Aerospace Power Distribution (TE Connectivity)",
+      "locator": "Distribution électrique aéronautique et rôle des contacteurs",
+      "url": "https://www.te.com/en/industries/aerospace/insights/trends-in-aerospace-power-distribution.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Power Distribution (Astronics)",
+      "locator": "research",
+      "url": "https://www.astronics.com/aircraft-power-distribution"
+    }
+  ],
+  "course_reference_note": "La page de synthèse électrique relie les ECMU aux contacteurs AC et DC. Le schéma montre leur place entre la logique de commande et la distribution des charges.",
+  "teacher_notes": "Faire verbaliser le couple calculateur/contacteur : l’ECMU décide, le contacteur commute. Insister sur la différence entre **commande** et **distribution**."
+}

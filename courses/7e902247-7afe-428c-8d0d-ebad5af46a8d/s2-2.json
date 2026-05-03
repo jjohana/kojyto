@@ -1,0 +1,92 @@
+{
+  "slide_id": "S2-2",
+  "subpart_id": "S2",
+  "title": "Panneau de puissance externe et réceptacles",
+  "objective": "Lire le panneau de contrôle de puissance externe et ses fonctions principales.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s2-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Lecture du panneau EXT PWR",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Lecture utile",
+          "Effet opérationnel"
+        ],
+        [
+          "**EXT PWR** (puissance externe) A / B",
+          "Le panneau donne accès à **deux réceptacles** EXT PWR.",
+          "Le raccordement à la **puissance sol** peut être réalisé depuis ce point."
+        ],
+        [
+          "Voyant **AVAIL**",
+          "La source externe est **disponible**.",
+          "La connexion peut être engagée si les conditions sont réunies."
+        ],
+        [
+          "Voyant **NOT IN USE**",
+          "La source externe n’est **pas utilisée**.",
+          "Le réceptacle n’alimente pas le réseau à cet instant."
+        ],
+        [
+          "Commande d’accès",
+          "L’accès aux réceptacles est **piloté depuis le panneau**.",
+          "La mise en service dépend de cette commande."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Deux sources externes, **A** et/ou **B**, peuvent alimenter le **système AC** au sol.",
+        "Lire d’abord l’état des voyants **AVAIL** et **NOT IN USE**, puis vérifier la commande d’accès avant tout raccordement.",
+        "Le panneau sert d’interface entre la **source sol** et les réceptacles EXT PWR."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus - Aircraft Characteristics A330-700L, section 5-4-4 Electrical System",
+      "locator": "section 5-4-4",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2023-02/Airbus-Commercial-Aircraft-AC-A330-700L.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA - Master Minimum Equipment List Airbus A320, section 24-41 Electrical Power",
+      "locator": "section 24-41",
+      "url": "https://www.faa.gov/aircraft/draft_docs/mmel/MMEL_A-320_Rev_31_Draft.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus - Aircraft Characteristics A330-700L (extrait de la figure Electrical Service Panel)",
+      "locator": "research",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2024-11/AC_A330-700L_1124.pdf"
+    }
+  ],
+  "course_reference_note": "La planche sur la génération AC montre le panneau **EXTERNAL POWER CONTROL PANEL** et ses voyants. Elle relie directement ce panneau au raccordement de la **puissance sol** via **EXT PWR A/B**.",
+  "teacher_notes": "Faire lire la logique dans cet ordre : **disponibilité**, **utilisation**, puis **accès au réceptacle**. Rappeler que les libellés visibles servent à identifier l’état de la puissance externe avant le branchement."
+}

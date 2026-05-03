@@ -1,0 +1,93 @@
+{
+  "slide_id": "S3-3",
+  "subpart_id": "S3",
+  "title": "EMER GEN et EMER GEN GCU",
+  "objective": "Repérer la commande et la surveillance de la source électrique de secours.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s3-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Couple source de secours / contrôle associé",
+      "text": "Repérer d’abord la source, puis son unité de commande et de surveillance.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Fonction",
+          "Repérage"
+        ],
+        [
+          "**EMER GEN**",
+          "Générateur électrique de **secours** ; il fournit l’alimentation dédiée quand la génération normale n’est pas disponible.",
+          "Bloc source relié au système AC de secours."
+        ],
+        [
+          "**EMER GEN GCU** (aussi nommé **CSM/G Generator Control Unit**)",
+          "Unité de **commande** et de **surveillance** de l’EMER GEN.",
+          "Bloc de contrôle associé à l’EMER GEN."
+        ],
+        [
+          "**Chaîne de secours**",
+          "Le synoptique met en avant le couple **source + contrôle** comme ensemble dédié.",
+          "Lecture prioritaire : source puis organe de contrôle."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "L’**EMER GEN** est la **source** ; l’**EMER GEN GCU** est l’**organe de contrôle** qui la pilote et la surveille.",
+        "La relation à mémoriser est une paire fonctionnelle simple : **EMER GEN ↔ EMER GEN GCU**.",
+        "Le synoptique de secours souligne cette chaîne dédiée pour la repérer rapidement."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus SafetyFirst – perte d’un générateur moteur",
+      "locator": "passage sur le rôle du GCU dans la surveillance et la régulation d’un générateur AC",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    },
+    {
+      "source_type": "web",
+      "label": "Elearnstation – Electrical power",
+      "locator": "section sur la génération électrique de secours (CSM/G et EMER GCU)",
+      "url": "https://www.elearnstation.com/scenari/ELECTRICAL%20POWER/co/module_ELECTPOW_15.html?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "DESCRIPTION AND OPERATION [ELECTRICAL POWER]",
+      "locator": "research",
+      "url": "https://www.elearnstation.com/scenari/ELECTRICAL%20POWER/co/module_ELECTPOW_15.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Federal Register, Vol. 79, No. 111, June 10, 2014",
+      "locator": "research",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2014-06-10/pdf/2014-12444.pdf"
+    }
+  ],
+  "course_reference_note": "Le synoptique de secours met au premier plan la paire **EMER GEN / EMER GEN GCU**. La logique à repérer est simple : une source dédiée et son bloc de **commande-surveillance**.",
+  "teacher_notes": "Faire identifier séparément la **source** (EMER GEN) et l’**unité de contrôle** (EMER GEN GCU), puis faire reformuler la relation fonctionnelle entre les deux. Insister sur la lecture du synoptique : le contrôle n’est pas une source, il supervise la source de secours."
+}

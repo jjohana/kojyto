@@ -1,0 +1,132 @@
+{
+  "slide_id": "s18",
+  "subpart_id": "s18",
+  "title": "Santé en entreprise aéronautique",
+  "objective": "Identifier les risques professionnels et les mesures de prévention liées à la santé au travail.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s18-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Familles de risques et moyens de prévention",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "**Famille de risque**",
+          "**Exemples en entreprise aéronautique**",
+          "**Moyens de prévention**"
+        ],
+        [
+          "**Physiques**",
+          "Bruit des moteurs, vibrations, radiations, postures contraignantes.",
+          "Port des **EPI** adaptés, protections auditives, surveillance médicale régulière."
+        ],
+        [
+          "**Chimiques**",
+          "Produits de maintenance, diluants, carburants, huiles, lubrifiants.",
+          "Port des **EPI** adaptés et application stricte des consignes de sécurité."
+        ],
+        [
+          "**Ergonomiques**",
+          "Manutention de pièces lourdes, travail en hauteur, gestes répétitifs.",
+          "Aménagement ergonomique des postes de travail, formation aux gestes et postures."
+        ],
+        [
+          "**Psychosociaux**",
+          "Stress lié aux délais, responsabilités, horaires décalés.",
+          "Formation à la gestion du stress et suivi médical régulier."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Repères à retenir",
+      "text": null,
+      "bullets": [
+        "**EPI** signifie **équipements de protection individuelle** : casques, gants, lunettes, protections auditives.",
+        "Les **risques psychosociaux (RPS)** regroupent notamment le stress, les délais serrés, les responsabilités et les horaires décalés.",
+        "La prévention combine **formation**, **surveillance médicale** et **aménagement ergonomique** ; les EPI complètent ces mesures."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Principe de base",
+      "text": "La **santé au travail** protège contre les **risques professionnels** et maintient le bien-être **physique** et **mental**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "INRS - Protection individuelle",
+      "locator": "Définition des EPI",
+      "url": "https://www.inrs.fr/demarche/protection-individuelle/ce-qu-il-faut-retenir.html"
+    },
+    {
+      "source_type": "web",
+      "label": "INRS - Risques psychosociaux",
+      "locator": "Ce qu’il faut retenir",
+      "url": "https://www.inrs.fr/risques/psychosociaux/ce-qu-il-faut-retenir.htm"
+    },
+    {
+      "source_type": "web",
+      "label": "Service-Public.fr - Visite d'information et de prévention",
+      "locator": "Surveillance médicale",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F34061"
+    },
+    {
+      "source_type": "web",
+      "label": "Bruit. Ce qu’il faut retenir - INRS",
+      "locator": "research",
+      "url": "https://www.inrs.fr/risques/bruit/ce-qu-il-faut-retenir.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Vibrations. Ce qu'il faut retenir - INRS",
+      "locator": "research",
+      "url": "https://www.inrs.fr/risques/vibrations"
+    },
+    {
+      "source_type": "web",
+      "label": "Risques chimiques. Ce qu’il faut retenir - INRS",
+      "locator": "research",
+      "url": "https://www.inrs.fr/risques/chimiques"
+    },
+    {
+      "source_type": "web",
+      "label": "Risques psychosociaux. Travail en horaires atypiques - INRS",
+      "locator": "research",
+      "url": "https://www.inrs.fr/risques/travail-horaires-atypiques/ce-qu-il-faut-retenir"
+    },
+    {
+      "source_type": "web",
+      "label": "Prévention médicale. Ce qu'il faut retenir - INRS",
+      "locator": "research",
+      "url": "https://www.inrs.fr/demarche/prevention-medicale"
+    }
+  ],
+  "course_reference_note": "Pages 13 à 18 : repérage des familles de risques et des moyens de prévention en santé au travail. La distinction entre risques et protections est centrale ici.",
+  "teacher_notes": "Faire classer les exemples dans les 4 familles de risques. Faire reformuler que les **EPI** protègent, mais ne suppriment pas le danger à la source."
+}

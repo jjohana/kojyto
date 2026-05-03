@@ -1,0 +1,74 @@
+{
+  "slide_id": "S11-2",
+  "subpart_id": "S11",
+  "title": "Freinage, adhérence et systèmes de protection",
+  "objective": "Décrire les circuits de freinage et leurs sécurités.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s11-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Circuits et protections",
+      "text": null,
+      "bullets": [
+        "Le freinage absorbe l’**énergie cinétique** et la transforme en chaleur ; la force utile dépend de l’**adhérence** disponible au sol. **\\(\\mu\\)** est le coefficient d’adhérence, sans unité, et **\\(N\\)** la charge normale sur la roue, en newtons.",
+        "Le coefficient d’adhérence varie avec le **revêtement de piste**, la **vitesse avion**, la **pression** et la **température** du pneu, ainsi qu’avec le **glissement** ; quand la roue bloque, l’adhérence utile chute.",
+        "En **freinage direct**, l’énergie musculaire du pilote est transmise aux freins ; en **freinage assisté**, l’énergie hydraulique prend le relais, avec une pression proportionnelle à l’effort sur la pédale et une sensation de retour conservée.",
+        "Le **frein de parking** est mis en pression par **électropompe** et maintenu par un **accumulateur** ; un **circuit hydraulique de secours** totalement indépendant fonctionne en parallèle en cas de panne du freinage normal.",
+        "Les **freins à tambours** conviennent aux avions légers ; les **freins à disques** répartissent mieux les pressions, s’usent plus régulièrement et refroidissent plus efficacement. Le **bouchon fusible** protège thermiquement le système et limite le risque d’éclatement en cas d’échauffement excessif."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Limite d’adhérence",
+      "text": "La force de freinage utile reste bornée par le contact pneu-piste : si l’adhérence diminue, le freinage devient moins efficace.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "F_{\\text{frein}} \\le \\mu N"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "ENR 1.1: General Rules",
+      "locator": "runway surface friction / coefficient de freinage",
+      "url": "https://www.faa.gov/air_traffic/publications/atpubs/aip_html/part2_enr_section_1.1.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Pilot Guide to Takeoff Safety Table of Contents",
+      "locator": "wheel fuse plug",
+      "url": "https://www.faa.gov/sites/faa.gov/files/2022-11/takeoff_safety.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Brakes Installed on Transport Category Airplanes; Braking Systems Harmonization Working Group",
+      "locator": "research",
+      "url": "https://www.faa.gov/media/31456"
+    },
+    {
+      "source_type": "web",
+      "label": "Runway Surface Friction",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/runway-surface-friction"
+    }
+  ],
+  "course_reference_note": "Le freinage direct, le freinage assisté, le frein de parking et le circuit de secours sont décrits ensemble. L’anti-patinage et le bouchon fusible complètent la sécurité du freinage.",
+  "teacher_notes": "Faire expliciter que l’adhérence limite la décélération utile ; distinguer commande de freinage, maintien du parking et secours indépendant."
+}

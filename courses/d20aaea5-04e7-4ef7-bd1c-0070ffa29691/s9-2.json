@@ -1,0 +1,120 @@
+{
+  "slide_id": "S9-2",
+  "subpart_id": "S9",
+  "title": "Types de trains et composition",
+  "objective": "Distinguer les architectures de base et les éléments constitutifs.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s9-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Composition et critères de construction",
+      "text": null,
+      "bullets": [
+        "Un train d’atterrissage réunit des **atterrisseurs principaux** et un atterrisseur avant ou une **roulette de queue** ; l’ensemble comprend aussi les roues, les pneumatiques, les freins et leur système de commande et de contrôle.",
+        "L’orientation des roues avant, et parfois des roues principales, assure la dirigeabilité au sol ; le système de manœuvre rentrée-sortie permet l’escamotage en vol avec ses trappes de fermeture.",
+        "Des éléments spécifiques existent selon l’emploi : **flotteurs** pour les hydravions et **skis** pour les pistes enneigées.",
+        "La construction cherche toujours un compromis entre **légèreté** et **résistance** ; les matériaux cités sont l’alliage léger, l’aluminium et le titane."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Repères géométriques à associer",
+      "text": "L’empattement et la voie servent à décrire la disposition des appuis au sol.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "E = d\\big(\\text{axe de la roue auxiliaire},\\ \\text{axes des roues principales}\\big) \\qquad V = d\\big(\\text{train principal gauche},\\ \\text{train principal droit}\\big)"
+    },
+    {
+      "kind": "table",
+      "title": "Architectures de train à reconnaître",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Type",
+          "Disposition",
+          "Risque ou propriété dominante",
+          "Repère à mémoriser"
+        ],
+        [
+          "**Train classique**",
+          "Roues principales en avant et roue de queue.",
+          "Risque de **cabotage**, instabilité au roulage, au décollage et à l’atterrissage, et moment de survirage dans les virages au sol.",
+          "Le freinage brusque peut déclencher une mise en pylône."
+        ],
+        [
+          "**Train tricycle**",
+          "Une roue avant et deux trains principaux.",
+          "Risque de basculement accru si la charge augmente sur la roue avant.",
+          "Configuration très utilisée pour la stabilité au sol."
+        ],
+        [
+          "**Train monotrace**",
+          "Deux trains principaux sur l’axe longitudinal, avec atterrisseurs auxiliaires appelés **balanciers**.",
+          "Disposition longitudinale de type tandem.",
+          "Le rôle des balanciers est d’aider à la tenue latérale et à l’appui."
+        ],
+        [
+          "**Train multiple**",
+          "Combinaison de trains tricycle et monotrace.",
+          "Architecture mixte.",
+          "À retenir comme un assemblage de logiques de disposition."
+        ]
+      ],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "FAA Airplane Flying Handbook, Chapter 14 (Landing Gear)",
+      "locator": "Chapter 14",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/15_afh_ch14.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA Order 8000.71 – Landing Gear Taxonomy",
+      "locator": "Landing gear taxonomy",
+      "url": "https://www.faa.gov/documentLibrary/media/Order/FAA_Order_8000.71.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "SKYbrary – Landing Gear",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/landing-gear"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA – Concorde accident page (bogie beam mention)",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/F-BTSC"
+    },
+    {
+      "source_type": "web",
+      "label": "Concorde | Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/F-BTSC?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Pages 1 à 3 : les architectures de train sont nommées par leur disposition et par leurs risques au sol. La composition commune et les éléments spécifiques complètent la mémorisation.",
+  "teacher_notes": "Faire associer chaque architecture à sa disposition, puis faire verbaliser le risque principal avant de passer à la composition."
+}

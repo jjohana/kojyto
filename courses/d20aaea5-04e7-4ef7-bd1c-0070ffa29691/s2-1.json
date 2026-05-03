@@ -1,0 +1,67 @@
+{
+  "slide_id": "S2-1",
+  "subpart_id": "S2",
+  "title": "Consommation horaire et consommation spécifique",
+  "objective": "Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s2-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture des grandeurs",
+      "text": null,
+      "bullets": [
+        "**Ch** est une **consommation horaire** : masse de carburant consommée en 1 heure à un régime donné, lue au **débitmètre carburant (Fuel Flow)** au poste de pilotage.",
+        "Si **Qmc** est exprimé en **kg/s**, la conversion vers **kg/h** se fait en multipliant par **3600** ; avec **lb/h**, on garde la cohérence du système d’unités utilisé.",
+        "**Csp** est une grandeur **rapportée à la poussée** : elle sert à comparer des turboréacteurs entre eux, avec des écritures usuelles en **kg/h.daN** ou **lb/h.lbf**.",
+        "Idée clé : à débit carburant comparable, un moteur plus poussant présente une **meilleure** consommation spécifique."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations de base",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "Ch = Q_{mc}\\times 3600 \\qquad ; \\qquad Csp = \\dfrac{Tu}{Ch} \\; (\\text{écriture du support})"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Specific Fuel Consumption",
+      "locator": "définition de la consommation spécifique de poussée et unités usuelles",
+      "url": "https://www.grc.nasa.gov/www/k-12/airplane/sfc.html"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Fuel Mass Flow Rate",
+      "locator": "débit massique de carburant et conversion temporelle",
+      "url": "https://www.grc.nasa.gov/www/k-12/airplane/fuelfl.html"
+    },
+    {
+      "source_type": "web",
+      "label": "NA VAIR 00-801-80 / Aircraft Performance — FAA",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/00-80T-80.pdf"
+    }
+  ],
+  "course_reference_note": "La page définit **Ch** comme un débit horaire lu au **Fuel Flow** et introduit **Csp** comme grandeur liée à la poussée. Les unités usuelles et plusieurs valeurs de référence suivent immédiatement.",
+  "teacher_notes": "Faire repérer l’unité de départ de **Qmc** avant la conversion. Faire distinguer une grandeur **mesurée** au cockpit et une grandeur **comparative** pour classer les moteurs."
+}

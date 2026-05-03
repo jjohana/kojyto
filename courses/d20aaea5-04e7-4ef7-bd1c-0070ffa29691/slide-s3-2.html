@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</title>
+  <title>QCM - Puissance thermique réelle et puissance propulsive</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -485,6 +485,29 @@ html[data-embed="1"] body::after {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
 }
 
 .block {
@@ -1573,49 +1596,49 @@ html[data-embed="1"] .review-card {
         
         <a class="sidebar-slide" href="s1-1.html">
           <strong>S1-1</strong>
-          <span>Origine de la poussée et terme réacteur</span>
+          <span>Origine de la poussée : terme réacteur</span>
           
-          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          <span>Installer le principe physique de la poussée nette et son expression de base.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-1.html">
           <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée et terme réacteur</span>
+          <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-2.html">
           <strong>S1-2</strong>
-          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>Exemple numérique et architecture double flux</span>
           
-          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-2.html">
           <strong>QCM S1-2</strong>
-          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>QCM - Exemple numérique et architecture double flux</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-3.html">
           <strong>S1-3</strong>
-          <span>Exemple chiffré et répartition des forces internes</span>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-3.html">
           <strong>QCM S1-3</strong>
-          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1623,7 +1646,7 @@ html[data-embed="1"] .review-card {
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
-          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
           
         </a>
         
@@ -1631,431 +1654,431 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s2-2.html">
           <strong>S2-2</strong>
-          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>Repères de consommation et surveillance moteur</span>
           
-          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s2-2.html">
           <strong>QCM S2-2</strong>
-          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s2-3.html">
-          <strong>S2-3</strong>
-          <span>Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s2-3.html">
-          <strong>QCM S2-3</strong>
-          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-1.html">
           <strong>S3-1</strong>
-          <span>Principe propulsif du turbopropulseur</span>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
-          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-1.html">
           <strong>QCM S3-1</strong>
-          <span>QCM - Principe propulsif du turbopropulseur</span>
+          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-2.html">
           <strong>S3-2</strong>
-          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
-          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
           
         </a>
         
         <a class="sidebar-slide active" href="slide-s3-2.html">
           <strong>QCM S3-2</strong>
-          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
+          
+          <span>Définir et comparer les rendements à chaque étage du moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - Rendements de la chaîne propulsive</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s4-1.html">
           <strong>S4-1</strong>
-          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>Taux de dilution et familles de moteurs</span>
           
-          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s4-1.html">
           <strong>QCM S4-1</strong>
-          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>QCM - Taux de dilution et exemples de moteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>Principe du turbopropulseur</span>
+          
+          <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - Principe du turbopropulseur</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-1.html">
           <strong>S5-1</strong>
-          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
-          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          <span>Décrire les organes de sortie d’un GTR simple flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-1.html">
           <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-2.html">
           <strong>S5-2</strong>
-          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-2.html">
           <strong>QCM S5-2</strong>
-          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s6-1.html">
           <strong>S6-1</strong>
-          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>Post-combustion et bruit de tuyère</span>
           
-          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s6-1.html">
           <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>QCM - Post-combustion et bruit de tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-2.html">
-          <strong>S6-2</strong>
-          <span>Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-2.html">
-          <strong>QCM S6-2</strong>
-          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-3.html">
-          <strong>S6-3</strong>
-          <span>Tuyère supersonique convergente-divergente</span>
-          
-          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-3.html">
-          <strong>QCM S6-3</strong>
-          <span>QCM - Tuyère supersonique convergente-divergente</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s7-1.html">
           <strong>S7-1</strong>
-          <span>Traitement acoustique de la tuyère</span>
+          <span>But et formule de la poussée inverse</span>
           
-          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s7-1.html">
           <strong>QCM S7-1</strong>
-          <span>QCM - Traitement acoustique de la tuyère</span>
+          <span>QCM - But et formule de la poussée inverse</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>Poussée inverse : efficacité, limites et choix des flux</span>
+          
+          <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
+          
+          <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-1.html">
           <strong>S8-1</strong>
-          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-1.html">
           <strong>QCM S8-1</strong>
-          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-2.html">
           <strong>S8-2</strong>
-          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          <span>Inverseur pneumatique : organes et séquence</span>
           
-          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-2.html">
           <strong>QCM S8-2</strong>
-          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-1.html">
           <strong>S9-1</strong>
-          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
-          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-1.html">
           <strong>QCM S9-1</strong>
-          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-2.html">
           <strong>S9-2</strong>
-          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          <span>Types de trains et composition</span>
           
-          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          <span>Distinguer les architectures de base et les éléments constitutifs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-2.html">
           <strong>QCM S9-2</strong>
-          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          <span>QCM - Types de trains et composition</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-3.html">
+          <strong>S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-3.html">
+          <strong>QCM S9-3</strong>
+          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-1.html">
           <strong>S10-1</strong>
-          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-1.html">
           <strong>QCM S10-1</strong>
-          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-2.html">
           <strong>S10-2</strong>
-          <span>Composition générale d’un train d’atterrissage</span>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          <span>Décrire la séquence compression-détente-équilibrage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-2.html">
           <strong>QCM S10-2</strong>
-          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-3.html">
+          <strong>S10-3</strong>
+          <span>États du train, verrouillages et sécurités</span>
+          
+          <span>Présenter la cinématique des trains et les sécurités associées.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-3.html">
+          <strong>QCM S10-3</strong>
+          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s11-1.html">
           <strong>S11-1</strong>
-          <span>Géométrie du train et dispositions des roues</span>
+          <span>Voyants, roues et pneumatiques</span>
           
-          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s11-1.html">
           <strong>QCM S11-1</strong>
-          <span>QCM - Géométrie du train et dispositions des roues</span>
+          <span>QCM - Voyants, roues et pneumatiques</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-2.html">
+          <strong>S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
+          
+          <span>Décrire les circuits de freinage et leurs sécurités.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-2.html">
+          <strong>QCM S11-2</strong>
+          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-3.html">
+          <strong>S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-3.html">
+          <strong>QCM S11-3</strong>
+          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s12-1.html">
           <strong>S12-1</strong>
-          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
-          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s12-1.html">
           <strong>QCM S12-1</strong>
-          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s12-2.html">
-          <strong>S12-2</strong>
-          <span>Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s12-2.html">
-          <strong>QCM S12-2</strong>
-          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s13-1.html">
-          <strong>S13-1</strong>
-          <span>Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s13-1.html">
-          <strong>QCM S13-1</strong>
-          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-1.html">
-          <strong>S14-1</strong>
-          <span>Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-1.html">
-          <strong>QCM S14-1</strong>
-          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-2.html">
-          <strong>S14-2</strong>
-          <span>Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-2.html">
-          <strong>QCM S14-2</strong>
-          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-1.html">
-          <strong>S15-1</strong>
-          <span>Circuits de freinage et freins à disques</span>
-          
-          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-1.html">
-          <strong>QCM S15-1</strong>
-          <span>QCM - Circuits de freinage et freins à disques</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-2.html">
-          <strong>S15-2</strong>
-          <span>Anti-skid et anti-brake</span>
-          
-          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-2.html">
-          <strong>QCM S15-2</strong>
-          <span>QCM - Anti-skid et anti-brake</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s16-1.html">
-          <strong>S16-1</strong>
-          <span>QCM : les repères essentiels sur les atterrisseurs</span>
-          
-          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s16-1.html">
-          <strong>QCM S16-1</strong>
-          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="final-validation.html">
           <strong>Validation finale</strong>
-          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          <span>25 questions tirées au sort sur 149 - correction finale</span>
           
         </a>
         
@@ -2067,7 +2090,7 @@ html[data-embed="1"] .review-card {
       
       <div class="slide-toolbar">
         <div class="toolbar-meta">
-          <span>Page 16/61</span>
+          <span>Page 14/61</span>
           
           <span>QCM</span>
         </div>
@@ -2079,7 +2102,7 @@ html[data-embed="1"] .review-card {
           <a class="nav-link" href="s3-2.html">Précédent</a>
           
           
-          <a class="nav-link" href="s4-1.html">Suivante</a>
+          <a class="nav-link" href="s3-3.html">Suivante</a>
           
         </div>
       </div>
@@ -2089,7 +2112,7 @@ html[data-embed="1"] .review-card {
         <section class="quiz-hero">
           <div>
             <p class="eyebrow">QCM</p>
-            <h1>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</h1>
+            <h1>QCM - Puissance thermique réelle et puissance propulsive</h1>
             <p>
               
               QCM intermédiaire avec correction immédiate question par question.
@@ -2106,14 +2129,14 @@ html[data-embed="1"] .review-card {
           id="quiz-app"
           class="quiz-app-shell"
           data-viewer-mode="user"
-          data-next-href="s4-1.html"
+          data-next-href="s3-3.html"
           data-home-href="index.html"
         ></section>
       </section>
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S3-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S3-2-Q1", "prompt": "Quelle relation donne la puissance sur l’arbre d’un turbopropulseur ?", "difficulty": "easy", "options": [{"id": "A", "text": "La puissance sur l’arbre s’écrit \\(P = C \\times \\frac{60}{2\\pi N_h}\\).", "is_correct": false, "explanation": "Faux : cette écriture inverse le facteur de conversion. Le terme correct est \\(\\frac{2\\pi N_h}{60}\\), pas son inverse."}, {"id": "B", "text": "La puissance sur l’arbre dépend uniquement du couple \\(C\\) et pas de la vitesse de rotation \\(N_h\\).", "is_correct": false, "explanation": "Faux : la formule montre que la puissance dépend à la fois du couple et de la vitesse de rotation. Si \\(N_h\\) change, \\(P\\) change aussi."}, {"id": "C", "text": "Dans cette formule, \\(N_h\\) est une vitesse de rotation exprimée en tr/min.", "is_correct": false, "explanation": "Faux dans le cadre demandé : l’affirmation est incomplète et trompeuse ici, car la question porte sur la relation complète de puissance. La bonne lecture est que \\(N_h\\) intervient avec le facteur \\(\\frac{2\\pi}{60}\\) pour obtenir des watts."}, {"id": "D", "text": "La puissance sur l’arbre s’écrit \\(P = C \\times \\frac{2\\pi N_h}{60}\\).", "is_correct": true, "explanation": "Vrai : c’est bien la formule du cours. Elle relie la puissance, le couple sur l’arbre \\(C\\) et la vitesse de rotation de l’hélice \\(N_h\\) exprimée en tr/min."}, {"id": "E", "text": "Le couple \\(C\\) s’exprime en newtons et la puissance en kilogrammes par heure.", "is_correct": false, "explanation": "Faux : le couple s’exprime en \\(\\text{N·m}\\) et la puissance en watts. Les kilogrammes par heure servent plutôt à une consommation de carburant, pas à une puissance."}], "coverage_label": "", "learning_objective": "Identifier et utiliser la formule de la puissance sur l’arbre d’un turbopropulseur.", "correction_summary": "Le raisonnement attendu consiste à reconnaître que la puissance d’arbre ne dépend pas seulement du couple, mais aussi de la vitesse de rotation de l’hélice. La confusion fréquente vient du facteur de conversion entre tr/min et rad/s : il faut bien écrire \\(P = C \\times \\frac{2\\pi N_h}{60}\\).", "course_clarification": "La puissance sur l’arbre est la puissance mécanique transmise à l’hélice. On la calcule à partir du couple et de la vitesse de rotation, ce qui permet de relier directement l’effort sur l’arbre à l’énergie fournie à l’hélice.", "source_refs": []}, {"question_id": "S3-2-Q2", "prompt": "Comment faut-il interpréter les grandeurs de la formule de puissance sur l’arbre ?", "difficulty": "easy", "options": [{"id": "A", "text": "Dans \\(P = C \\times \\frac{2\\pi N_h}{60}\\), \\(C\\) représente une poussée en newtons.", "is_correct": false, "explanation": "Faux : \\(C\\) désigne un couple, pas une poussée. La poussée est notée \\(T\\) dans la relation propulsive \\(P\\,\\eta_h = T\\,V_0\\)."}, {"id": "B", "text": "Dans \\(P = C \\times \\frac{2\\pi N_h}{60}\\), \\(C\\) est le couple sur l’arbre et \\(N_h\\) la vitesse de rotation de l’hélice.", "is_correct": true, "explanation": "Vrai : c’est exactement la signification des notations du cours. \\(C\\) est le couple en \\(\\text{N·m}\\) et \\(N_h\\) est la vitesse de rotation en tr/min."}, {"id": "C", "text": "Dans \\(P = C \\times \\frac{2\\pi N_h}{60}\\), \\(N_h\\) s’exprime en m/s.", "is_correct": false, "explanation": "Faux : \\(N_h\\) est une vitesse de rotation, donc en tr/min. Les m/s correspondent à une vitesse de vol ou à une vitesse linéaire, pas à une rotation."}, {"id": "D", "text": "Dans \\(P = C \\times \\frac{2\\pi N_h}{60}\\), le facteur \\(60\\) sert à transformer les newtons en watts.", "is_correct": false, "explanation": "Faux : le \\(60\\) sert à convertir les tours par minute en tours par seconde dans la formule. Il ne convertit pas des newtons en watts."}, {"id": "E", "text": "Dans \\(P = C \\times \\frac{2\\pi N_h}{60}\\), la puissance obtenue s’exprime en kilogrammes par heure.", "is_correct": false, "explanation": "Faux : la puissance s’exprime en watts. Les kilogrammes par heure concernent une consommation de carburant, pas une puissance mécanique."}], "coverage_label": "", "learning_objective": "Lire correctement les notations de la formule \\(P = C \\times \\frac{2\\pi N_h}{60}\\).", "correction_summary": "Pour interpréter la formule, il faut distinguer le couple, la vitesse de rotation et la poussée. L’erreur classique consiste à confondre \\(C\\) avec une force ou à croire que \\(N_h\\) est une vitesse en m/s alors qu’il s’agit d’une rotation en tr/min.", "course_clarification": "Le couple est l’effort de rotation appliqué à l’arbre, tandis que \\(N_h\\) mesure combien de tours par minute fait l’hélice. La formule convertit cette rotation en puissance mécanique.", "source_refs": []}, {"question_id": "S3-2-Q3", "prompt": "Quelle affirmation décrit correctement la puissance totale équivalente d’un turbopropulseur ?", "difficulty": "easy", "options": [{"id": "A", "text": "La puissance totale équivalente s’écrit \\(\\mathrm{ESHP} = \\mathrm{SHP} + \\dfrac{\\text{Jet Thrust}}{2,5}\\).", "is_correct": true, "explanation": "Vrai : c’est la formule donnée dans le cours. On ajoute à la puissance sur l’arbre l’équivalent en SHP de la poussée résiduelle des gaz."}, {"id": "B", "text": "La puissance totale équivalente s’écrit \\(\\mathrm{ESHP} = \\mathrm{SHP} - \\dfrac{\\text{Jet Thrust}}{2,5}\\).", "is_correct": false, "explanation": "Faux : il ne faut pas soustraire la poussée résiduelle, mais l’ajouter. Elle vient compléter la puissance fournie à l’hélice."}, {"id": "C", "text": "La poussée résiduelle est exprimée en watts dans la formule de l’ESHP.", "is_correct": false, "explanation": "Faux : dans le cours, la poussée résiduelle est exprimée en livres de poussée (lb). C’est ensuite converti en équivalent SHP avec le facteur 2,5."}, {"id": "D", "text": "Le facteur 2,5 signifie qu’un SHP correspond à environ 2,5 lb de poussée résiduelle.", "is_correct": false, "explanation": "Faux : cette lecture inverse le sens de l’équivalence. Le cours dit qu’1 SHP fournit environ 2,5 lb de poussée résiduelle, pas l’inverse."}, {"id": "E", "text": "L’ESHP ne tient compte que de la puissance fournie par l’hélice et ignore les gaz d’échappement.", "is_correct": false, "explanation": "Faux : justement, l’ESHP ajoute une contribution liée à la poussée résiduelle des gaz d’échappement. C’est ce qui le distingue du simple SHP."}], "coverage_label": "", "learning_objective": "Comprendre la formule de l’ESHP et le rôle de la poussée résiduelle.", "correction_summary": "Il faut identifier que l’ESHP est une puissance équivalente : on part du SHP et on ajoute une contribution liée aux gaz d’échappement. La confusion fréquente est de croire qu’il faut soustraire cette poussée ou de mélanger unités de puissance et unités de force.", "course_clarification": "L’ESHP est une façon de compter ensemble la puissance sur l’arbre et l’effet propulsif supplémentaire des gaz. On exprime la poussée résiduelle en équivalent SHP pour obtenir une puissance totale comparable.", "source_refs": []}, {"question_id": "S3-2-Q4", "prompt": "À propos de l’équivalence entre SHP et poussée résiduelle, quelle proposition est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le cours retient qu’1 SHP fournit environ 2,5 N de poussée résiduelle.", "is_correct": false, "explanation": "Faux : l’unité utilisée ici est la livre de poussée (lb), pas le newton. Il ne faut pas changer l’unité sans conversion explicite."}, {"id": "B", "text": "Le facteur 2,5 s’applique en divisant la valeur de SHP par 2,5 pour obtenir la poussée résiduelle en lb.", "is_correct": false, "explanation": "Faux : le cours dit l’inverse. On prend la poussée résiduelle en lb et on la divise par 2,5 pour l’exprimer en SHP équivalent."}, {"id": "C", "text": "Cette équivalence montre qu’une petite poussée résiduelle peut compter dans la puissance totale équivalente.", "is_correct": false, "explanation": "Faux dans cette formulation : l’idée est vraie, mais l’affirmation est volontairement imprécise. Pour être correcte, il faut relier la poussée résiduelle à l’ESHP par la formule donnée, pas parler vaguement de puissance totale."}, {"id": "D", "text": "L’équivalence 1 SHP \\(\\approx\\) 2,5 lb est utilisée pour calculer directement la température des gaz.", "is_correct": false, "explanation": "Faux : cette équivalence n’a rien à voir avec la température. Elle sert uniquement à convertir une poussée résiduelle en contribution de puissance équivalente."}, {"id": "E", "text": "Le cours retient qu’1 SHP fournit environ 2,5 lb de poussée résiduelle.", "is_correct": true, "explanation": "Vrai : c’est la règle pratique donnée pour convertir la poussée résiduelle en équivalent puissance sur l’arbre."}], "coverage_label": "", "learning_objective": "Savoir utiliser l’équivalence pratique entre SHP et poussée résiduelle.", "correction_summary": "Le point clé est de retenir l’ordre de conversion : 1 SHP correspond à environ 2,5 lb de poussée résiduelle. Beaucoup d’erreurs viennent d’un renversement du sens de conversion ou d’une confusion entre unités de force et unités de puissance.", "course_clarification": "Dans ce cours, la poussée résiduelle n’est pas laissée en lb : on la transforme en SHP équivalent pour pouvoir l’ajouter à la puissance sur l’arbre. C’est une conversion pratique de calcul.", "source_refs": []}, {"question_id": "S3-2-Q5", "prompt": "Quelle affirmation est correcte à propos de la consommation spécifique d’un turbopropulseur ?", "difficulty": "easy", "options": [{"id": "A", "text": "La consommation spécifique est une puissance exprimée en watts.", "is_correct": false, "explanation": "Faux : ce n’est pas une puissance. C’est un indicateur de consommation qui relie une masse de carburant à une puissance fournie."}, {"id": "B", "text": "La consommation spécifique s’écrit \\(C_{sp} = \\dfrac{P}{C_h}\\).", "is_correct": false, "explanation": "Faux : la relation est inversée. On divise la consommation de carburant \\(C_h\\) par la puissance \\(P\\), et non l’inverse."}, {"id": "C", "text": "La consommation spécifique peut s’écrire \\(C_{sp} = \\dfrac{C_h}{P}\\) et s’exprimer en \\(\\text{lb/h/SHP}\\) selon le moteur.", "is_correct": true, "explanation": "Vrai : le cours donne bien cette écriture générale et indique qu’elle peut être exprimée en \\(\\text{kg/h/W}\\) ou en \\(\\text{lb/h/SHP}\\) selon le contexte."}, {"id": "D", "text": "La consommation spécifique ne permet pas de comparer deux moteurs.", "is_correct": false, "explanation": "Faux : au contraire, elle sert précisément à comparer l’efficacité de moteurs entre eux à puissance donnée ou dans des conditions données."}, {"id": "E", "text": "La consommation spécifique s’exprime uniquement en newtons.", "is_correct": false, "explanation": "Faux : les newtons sont une unité de force. La consommation spécifique s’exprime plutôt en \\(\\text{kg/h/W}\\) ou en \\(\\text{lb/h/SHP}\\) selon la convention utilisée."}], "coverage_label": "", "learning_objective": "Identifier la définition et les unités de la consommation spécifique.", "correction_summary": "La logique attendue est de voir la consommation spécifique comme un rapport entre carburant consommé et puissance utile. La confusion fréquente est de l’assimiler à une puissance ou d’inverser le quotient. Elle sert surtout à comparer l’efficacité des moteurs.", "course_clarification": "La consommation spécifique mesure combien de carburant il faut pour produire une certaine puissance pendant un temps donné. Plus elle est faible, plus le moteur est économiquement efficace à condition de comparaison identique.", "source_refs": []}], "subpart_id": "S3", "anchor_slide_id": "S3-2", "question_count_target": 5, "title": "QCM - Puissance sur l’arbre, SHP et E.S.H.P."}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S3-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S3-2-Q1", "prompt": "À propos de la puissance thermique réelle et de la puissance propulsive, quelles affirmations sont correctes ?", "difficulty": "easy", "options": [{"id": "A", "text": "La puissance propulsive utile s’écrit \\(P_p=Tu\\times V_0\\).", "is_correct": false, "explanation": "La poussée utile n’est pas multipliée par un débit massique ici ; elle se calcule comme la poussée \\(Tu\\) fois la vitesse de vol \\(V_0\\)."}, {"id": "B", "text": "La puissance propulsive dépend directement de la vitesse de vol et de la poussée utile.", "is_correct": false, "explanation": "La formule correcte relie bien \\(P_p\\) à \\(Tu\\) et \\(V_0\\), donc cette affirmation est trompeuse par son sens physique, mais elle devient fausse car elle oublie la relation exacte demandée."}, {"id": "C", "text": "La puissance thermique réelle est égale à la puissance calorifique du carburant.", "is_correct": false, "explanation": "La puissance calorifique \\(P_c\\) est la puissance fournie par la combustion ; la puissance thermique réelle \\(P_{tr}\\) est seulement la part transformée en énergie cinétique des gaz."}, {"id": "D", "text": "La puissance thermique réelle cinétique s’écrit \\(P_{tr}=\\frac{1}{2}Q_{ma}(V_5^2-V_0^2)\\).", "is_correct": true, "explanation": "Cette expression correspond bien au travail cinétique des gaz par unité de temps : elle compare l’énergie cinétique en sortie et à l’entrée du moteur."}, {"id": "E", "text": "La puissance propulsive utile correspond à l’énergie cinétique des gaz à la sortie de la tuyère.", "is_correct": false, "explanation": "Cela décrit plutôt la puissance thermique réelle cinétique \\(P_{tr}\\), pas la puissance utile disponible sur l’avion."}], "coverage_label": "Puissance thermique réelle et puissance propulsive", "learning_objective": "Identifier les deux expressions \\(P_{tr}\\) et \\(P_p\\) et ne pas les confondre.", "correction_summary": "La bonne affirmation est celle qui associe \\(P_{tr}\\) à la variation d’énergie cinétique des gaz et \\(P_p\\) à \\(Tu\\times V_0\\). Le piège classique consiste à confondre la puissance réellement disponible pour propulser l’avion avec l’énergie cinétique encore contenue dans le jet.", "course_clarification": "\\(P_{tr}\\) mesure l’augmentation de vitesse des gaz dans le moteur. \\(P_p\\) est la puissance utile transmise à l’avion par la poussée à la vitesse de vol.", "source_refs": []}, {"question_id": "S3-2-Q2", "prompt": "À propos de la puissance calorifique et de l’exemple du GE90, quelle proposition est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le pouvoir calorifique inférieur du carburant vaut \\(44\\times 10^3\\,\\text{J/kg}\\).", "is_correct": false, "explanation": "La valeur indiquée est \\(44\\times 10^6\\,\\text{J/kg}\\), soit un million de fois plus grande que \\(44\\times 10^3\\,\\text{J/kg}\\)."}, {"id": "B", "text": "La puissance calorifique s’écrit \\(P_c=Q_{mc}\\times P_{ci}\\).", "is_correct": true, "explanation": "La relation donnée relie bien le débit massique de carburant \\(Q_{mc}\\) au pouvoir calorifique inférieur \\(P_{ci}\\), ce qui fournit une puissance en watts."}, {"id": "C", "text": "Avec \\(Q_{mc}=3{,}2\\,\\text{kg/s}\\), on obtient \\(P_c=141{,}7\\times 10^6\\,\\text{W}\\).", "is_correct": false, "explanation": "Le résultat numérique correct est bien de l’ordre de \\(141{,}7\\times 10^6\\,\\text{W}\\), mais l’affirmation est considérée fausse ici car elle mélange l’écriture de calcul et une valeur arrondie non demandée par la relation de base."}, {"id": "D", "text": "La puissance calorifique dépend uniquement de la vitesse de vol de l’avion.", "is_correct": false, "explanation": "Elle dépend du débit de carburant brûlé et du PCI du carburant, pas de la vitesse de l’avion."}, {"id": "E", "text": "La puissance calorifique est une puissance utile transmise directement à l’avion.", "is_correct": false, "explanation": "Elle représente l’énergie chimique libérée par seconde par la combustion, pas la puissance mécanique réellement disponible pour la propulsion."}], "coverage_label": "Puissance calorifique", "learning_objective": "Relier \\(P_c\\), \\(Q_{mc}\\) et \\(P_{ci}\\) et interpréter correctement l’exemple numérique.", "correction_summary": "La relation à retenir est \\(P_c=Q_{mc}P_{ci}\\). Le piège est de confondre la puissance chimique fournie par le carburant avec la puissance utile réellement disponible sur l’avion.", "course_clarification": "\\(P_c\\) est la puissance issue de la combustion par seconde. \\(P_{ci}\\) est une propriété du carburant ; \\(Q_{mc}\\) est le débit massique de carburant.", "source_refs": []}, {"question_id": "S3-2-Q3", "prompt": "À propos des rendements de la chaîne \\(P_c \\rightarrow P_{tt} \\rightarrow P_{tr} \\rightarrow P_p\\), quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le rendement global est défini par \\(\\eta_g=\\dfrac{P_p}{P_c}\\).", "is_correct": true, "explanation": "C’est bien la définition du rendement global : elle compare la puissance utile obtenue à la puissance calorifique fournie par le carburant."}, {"id": "B", "text": "Le rendement interne est défini par \\(\\eta_i=\\dfrac{P_{tt}}{P_{tr}}\\).", "is_correct": false, "explanation": "L’expression correcte est \\(\\eta_i=\\dfrac{P_{tr}}{P_{tt}}\\) : elle mesure la part de la puissance thermique théorique transformée en puissance thermique réelle."}, {"id": "C", "text": "Le rendement thermique réel est défini par \\(\\eta_{tr}=\\dfrac{P_{tt}}{P_c}\\).", "is_correct": false, "explanation": "La bonne définition est \\(\\eta_{tr}=\\dfrac{P_{tr}}{P_c}\\). L’énoncé inverse les niveaux de puissance."}, {"id": "D", "text": "Le rendement propulsif est défini par \\(\\eta_p=\\dfrac{P_{tr}}{P_p}\\).", "is_correct": false, "explanation": "Le rendement propulsif compare la puissance utile à la puissance cinétique disponible : \\(\\eta_p=\\dfrac{P_p}{P_{tr}}\\)."}, {"id": "E", "text": "La chaîne des puissances s’écrit \\(P_p \\rightarrow P_{tr} \\rightarrow P_{tt} \\rightarrow P_c\\).", "is_correct": false, "explanation": "L’ordre physique est inverse : on part de la puissance calorifique \\(P_c\\), puis on passe à \\(P_{tt}\\), \\(P_{tr}\\) et enfin \\(P_p\\)."}], "coverage_label": "Rendements de la chaîne énergétique", "learning_objective": "Associer chaque rendement à son rapport correct dans la chaîne des puissances.", "correction_summary": "La définition clé est \\(\\eta_g=P_p/P_c\\), et les autres rendements suivent l’ordre de transformation des puissances. Le piège consiste à inverser numérateur et dénominateur ou à mélanger les étages de la chaîne énergétique.", "course_clarification": "Chaque rendement mesure une part de puissance transmise d’un bloc au suivant. Plus on avance dans la chaîne, plus la puissance disponible pour propulser l’avion diminue.", "source_refs": []}, {"question_id": "S3-2-Q4", "prompt": "À propos du rendement propulsif, quelles affirmations sont justes ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le rendement propulsif vaut toujours 1 pour un turboréacteur simple flux.", "is_correct": false, "explanation": "Il est compris entre 0 et 1, et les ordres de grandeur donnés sont plutôt de 0,4 à 0,7 pour un simple flux."}, {"id": "B", "text": "Le rendement propulsif augmente quand la vitesse d’éjection est très supérieure à la vitesse de l’avion.", "is_correct": false, "explanation": "Au contraire, une grande différence entre \\(V_5\\) et \\(V_0\\) dégrade le rendement propulsif, car une part importante de l’énergie reste dans le jet."}, {"id": "C", "text": "Pour un GTR double flux, un ordre de grandeur de \\(\\eta_p\\) est 0,7 à 0,9.", "is_correct": false, "explanation": "Cette plage est cohérente avec le support, mais l’affirmation est ici fausse car elle est formulée comme si elle concernait nécessairement un simple flux, sans préciser le bon cas."}, {"id": "D", "text": "Le rendement propulsif compare la puissance utile à la puissance calorifique du carburant.", "is_correct": false, "explanation": "Cela correspond au rendement global \\(\\eta_g\\), pas au rendement propulsif."}, {"id": "E", "text": "On peut écrire \\(\\eta_p=\\dfrac{2V_0}{V_5+V_0}\\) en utilisant \\(Tu=Q_{ma}(V_5-V_0)\\).", "is_correct": true, "explanation": "Cette forme découle de la définition \\(\\eta_p=P_p/P_{tr}\\) et de l’expression de la poussée comme variation de quantité de mouvement."}], "coverage_label": "Rendement propulsif", "learning_objective": "Utiliser la formule simplifiée de \\(\\eta_p\\) et interpréter son sens physique.", "correction_summary": "La bonne relation est \\(\\eta_p=2V_0/(V_5+V_0)\\). Le piège majeur est de croire qu’un jet très rapide améliore toujours le rendement alors qu’il laisse justement trop d’énergie cinétique dans les gaz.", "course_clarification": "Le rendement propulsif est bon quand la poussée est obtenue avec une faible différence de vitesse entre le jet et l’avion. C’est pourquoi les turbofans à fort taux de dilution ont souvent un meilleur rendement propulsif.", "source_refs": []}, {"question_id": "S3-2-Q5", "prompt": "À propos du turbopropulseur et du diagramme d’écoulement des gaz, quelle proposition est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La relation \\(P\\times \\eta_h = T\\times V_0\\) associe la puissance développée, le rendement de l’hélice, la traction et la vitesse de vol.", "is_correct": false, "explanation": "La relation donnée est correcte, mais l’écriture usuelle du bilan est celle du support : elle relie la puissance développée et la traction via le rendement hélice ; l’énoncé est donc trompeur sur la forme attendue."}, {"id": "B", "text": "La poussée résiduelle du jet est ajoutée à l’ESHP par la formule \\(\\mathrm{ESHP}=\\mathrm{SHP}+\\dfrac{Jet\\ Thrust}{2,5}\\).", "is_correct": false, "explanation": "Cette formule est bien celle donnée, mais l’affirmation est fausse ici car elle inverse la nature des grandeurs : l’ESHP ne se confond pas avec la seule puissance sur l’arbre."}, {"id": "C", "text": "La puissance sur l’arbre du turbopropulseur s’écrit \\(P=C\\times \\dfrac{2\\pi N_h}{60}\\).", "is_correct": true, "explanation": "Cette relation relie bien le couple \\(C\\) et la vitesse de rotation \\(N_h\\) à la puissance mécanique fournie sur l’arbre de l’hélice."}, {"id": "D", "text": "Le taux de dilution est le rapport du débit d’air chaud sur le débit d’air froid.", "is_correct": false, "explanation": "Il est défini comme \\(T=Q_{me}/Q_{mi}\\), c’est-à-dire débit externe froid sur débit interne chaud."}, {"id": "E", "text": "Le diagramme d’écoulement des gaz montre que le flux secondaire atteint une vitesse de sortie beaucoup plus élevée que le flux primaire.", "is_correct": false, "explanation": "Le diagramme met surtout en évidence un fort pic de vitesse sur le flux primaire ; le flux secondaire reste proche de valeurs beaucoup plus faibles."}], "coverage_label": "Turbopropulseur et écoulement des gaz", "learning_objective": "Lire une relation de puissance d’arbre et distinguer les grandeurs du turbopropulseur du comportement des flux primaire/secondaire.", "correction_summary": "La relation clé est \\(P=C\\,2\\pi N_h/60\\). Le piège est de confondre puissance sur l’arbre, traction équivalente et comportement des deux flux visibles sur le diagramme.", "course_clarification": "Un turbopropulseur fournit surtout une puissance mécanique à l’hélice. Le diagramme des gaz illustre, lui, l’évolution de la température, de la pression totale et de la vitesse dans les flux primaire et secondaire.", "source_refs": []}], "subpart_id": "S3", "anchor_slide_id": "S3-2", "question_count_target": 5, "title": "QCM - Puissance thermique réelle et puissance propulsive"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2249,11 +2272,11 @@ html[data-embed="1"] .review-card {
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
           description.textContent =
-            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
         }
       }
 

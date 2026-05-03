@@ -1,0 +1,151 @@
+{
+  "slide_id": "S12-1",
+  "subpart_id": "S12",
+  "title": "Exercice à choix multiples : notions clés des atterrisseurs",
+  "objective": "Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s12-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Réponses de référence",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Q",
+          "Réponse attendue",
+          "Repère à retenir"
+        ],
+        [
+          "1",
+          "a, b et c",
+          "Le train assure la **prise de contact**, le **roulage**, le **freinage**, limite le **rebond** et répartit le poids."
+        ],
+        [
+          "2",
+          "c",
+          "Sur un train classique, le **centre de gravité** se situe en arrière des trains principaux."
+        ],
+        [
+          "3",
+          "b",
+          "La **voie** est la distance séparant les deux trains principaux."
+        ],
+        [
+          "4",
+          "b",
+          "L’**empattement** est la distance séparant le train auxiliaire du train principal."
+        ],
+        [
+          "5",
+          "a",
+          "L’**angle de garde** est l’angle entre la verticale et la droite joignant le centre de gravité au centre des roues principales."
+        ],
+        [
+          "6",
+          "a",
+          "Les amortisseurs doivent d’abord **dissiper l’énergie verticale** pour éviter le rebond après le premier impact."
+        ],
+        [
+          "7",
+          "c",
+          "Le gonflage se fait avion sur vérin, **amortisseur détendu**, avec correction liée à la température."
+        ],
+        [
+          "8",
+          "a",
+          "Le train escamotable sert d’abord à **réduire la traînée**."
+        ],
+        [
+          "9",
+          "c",
+          "Sur avion lourd, la **roue à moyeu divisé** est la plus utilisée."
+        ],
+        [
+          "10",
+          "a",
+          "Le freinage vise d’abord à **réduire la distance d’arrêt** et à faciliter les évolutions au sol."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Mode d’emploi",
+      "text": null,
+      "bullets": [
+        "Lire chaque question, cacher la réponse, puis restituer la définition avec les mots précis : **voie**, **empattement**, **angle de garde**.",
+        "Les fonctions du train se résument autour du **contact au sol**, du **roulage**, du **freinage** et de la **dissipation de l’énergie** à l’atterrissage."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "SKYbrary — Landing Gear",
+      "locator": "Définition générale du train d’atterrissage et train classique",
+      "url": "https://skybrary.aero/index.php/articles/landing-gear"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — Pilot’s Handbook of Aeronautical Knowledge",
+      "locator": "Chapitre sur le train d’atterrissage",
+      "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/faa-h-8083-25c.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "SPaircraft — Landing Gear Model",
+      "locator": "Notions de track et wheelbase pour la géométrie du train",
+      "url": "https://spaircraft.readthedocs.io/en/docs/lg.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook (FAA-H-8083-3C)",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/16_afh_ch15.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook (FAA-H-8083-3C) – chapitre sur les systèmes de train",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/13_afh_ch12.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook (FAA-H-8083-3C) – chapitre sur l’atterrissage",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Landing Gear | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/landing-gear?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Landing Gear - an overview | ScienceDirect Topics",
+      "locator": "research",
+      "url": "https://www.sciencedirect.com/topics/social-sciences/landing-gear?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Page 8 : dix questions pour vérifier les fonctions du train, la géométrie et le freinage. Les réponses attendues reprennent les définitions de base du document.",
+  "teacher_notes": "Faire restituer les réponses sans aide, puis faire reformuler les notions de **voie**, **empattement** et **angle de garde**. Insister sur le gonflage de l’amortisseur en configuration avion sur vérin et sur la différence entre **réduire la traînée** et **freiner**."
+}

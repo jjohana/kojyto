@@ -1,0 +1,50 @@
+{
+  "slide_id": "s1_s2",
+  "subpart_id": "s1_s2",
+  "title": "Couverture et sommaire du module « L’individu dans l’organisation »",
+  "objective": "Identifier le support, son autrice et les grandes thématiques annoncées.",
+  "layout": "title",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s1-s2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "hero",
+      "title": "Repérer l’identité du support et l’architecture du module",
+      "text": "Le support est intitulé **« Économie-Gestion Bac Pro Aéronautique »** et est présenté par **Wijdane Gaougaou**. La page de couverture met en avant le logo **IAAG** (*Institut Aéronautique Amaury de la Grange*), sur fond blanc avec un **bandeau bleu foncé** et un **filigrane diagonal** répété.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Les six thèmes annoncés",
+      "text": null,
+      "bullets": [
+        "**Découverte des métiers de l’aéronautique** : panorama des fonctions, au-delà du seul pilote.",
+        "**Droits et devoirs du salarié / contrat de travail** : cadre de la relation de travail.",
+        "**TP – L’individu dans l’organisation** : mise en pratique sur les métiers et les droits/devoirs.",
+        "**Santé, sécurité et qualité en entreprise aéronautique** : exigences de fonctionnement en milieu professionnel.",
+        "**Interaction entre santé, sécurité et qualité** : liens opérationnels entre les trois dimensions.",
+        "**Rémunération et parcours professionnels** : repères sur l’évolution de carrière et la rémunération."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [],
+  "course_reference_note": "La couverture affiche le titre du support, la mention de présentation et le logo IAAG au centre. Le sommaire du module « L’individu dans l’organisation » est organisé en six encadrés colorés.",
+  "teacher_notes": "Faire ressortir l’identité visuelle du support puis la logique d’ensemble du module. Insister sur les six thèmes comme porte d’entrée vers la suite."
+}

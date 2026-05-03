@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</title>
+  <title>QCM - Exemple numérique et architecture double flux</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -485,6 +485,29 @@ html[data-embed="1"] body::after {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
 }
 
 .block {
@@ -1573,49 +1596,49 @@ html[data-embed="1"] .review-card {
         
         <a class="sidebar-slide" href="s1-1.html">
           <strong>S1-1</strong>
-          <span>Origine de la poussée et terme réacteur</span>
+          <span>Origine de la poussée : terme réacteur</span>
           
-          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          <span>Installer le principe physique de la poussée nette et son expression de base.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-1.html">
           <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée et terme réacteur</span>
+          <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-2.html">
           <strong>S1-2</strong>
-          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>Exemple numérique et architecture double flux</span>
           
-          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
           
         </a>
         
         <a class="sidebar-slide active" href="slide-s1-2.html">
           <strong>QCM S1-2</strong>
-          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>QCM - Exemple numérique et architecture double flux</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-3.html">
           <strong>S1-3</strong>
-          <span>Exemple chiffré et répartition des forces internes</span>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-3.html">
           <strong>QCM S1-3</strong>
-          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1623,7 +1646,7 @@ html[data-embed="1"] .review-card {
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
-          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
           
         </a>
         
@@ -1631,431 +1654,431 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s2-2.html">
           <strong>S2-2</strong>
-          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>Repères de consommation et surveillance moteur</span>
           
-          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s2-2.html">
           <strong>QCM S2-2</strong>
-          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s2-3.html">
-          <strong>S2-3</strong>
-          <span>Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s2-3.html">
-          <strong>QCM S2-3</strong>
-          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-1.html">
           <strong>S3-1</strong>
-          <span>Principe propulsif du turbopropulseur</span>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
-          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-1.html">
           <strong>QCM S3-1</strong>
-          <span>QCM - Principe propulsif du turbopropulseur</span>
+          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-2.html">
           <strong>S3-2</strong>
-          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
-          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-2.html">
           <strong>QCM S3-2</strong>
-          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
+          
+          <span>Définir et comparer les rendements à chaque étage du moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - Rendements de la chaîne propulsive</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s4-1.html">
           <strong>S4-1</strong>
-          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>Taux de dilution et familles de moteurs</span>
           
-          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s4-1.html">
           <strong>QCM S4-1</strong>
-          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>QCM - Taux de dilution et exemples de moteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>Principe du turbopropulseur</span>
+          
+          <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - Principe du turbopropulseur</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-1.html">
           <strong>S5-1</strong>
-          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
-          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          <span>Décrire les organes de sortie d’un GTR simple flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-1.html">
           <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-2.html">
           <strong>S5-2</strong>
-          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-2.html">
           <strong>QCM S5-2</strong>
-          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s6-1.html">
           <strong>S6-1</strong>
-          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>Post-combustion et bruit de tuyère</span>
           
-          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s6-1.html">
           <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>QCM - Post-combustion et bruit de tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-2.html">
-          <strong>S6-2</strong>
-          <span>Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-2.html">
-          <strong>QCM S6-2</strong>
-          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-3.html">
-          <strong>S6-3</strong>
-          <span>Tuyère supersonique convergente-divergente</span>
-          
-          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-3.html">
-          <strong>QCM S6-3</strong>
-          <span>QCM - Tuyère supersonique convergente-divergente</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s7-1.html">
           <strong>S7-1</strong>
-          <span>Traitement acoustique de la tuyère</span>
+          <span>But et formule de la poussée inverse</span>
           
-          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s7-1.html">
           <strong>QCM S7-1</strong>
-          <span>QCM - Traitement acoustique de la tuyère</span>
+          <span>QCM - But et formule de la poussée inverse</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>Poussée inverse : efficacité, limites et choix des flux</span>
+          
+          <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
+          
+          <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-1.html">
           <strong>S8-1</strong>
-          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-1.html">
           <strong>QCM S8-1</strong>
-          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-2.html">
           <strong>S8-2</strong>
-          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          <span>Inverseur pneumatique : organes et séquence</span>
           
-          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-2.html">
           <strong>QCM S8-2</strong>
-          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-1.html">
           <strong>S9-1</strong>
-          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
-          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-1.html">
           <strong>QCM S9-1</strong>
-          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-2.html">
           <strong>S9-2</strong>
-          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          <span>Types de trains et composition</span>
           
-          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          <span>Distinguer les architectures de base et les éléments constitutifs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-2.html">
           <strong>QCM S9-2</strong>
-          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          <span>QCM - Types de trains et composition</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-3.html">
+          <strong>S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-3.html">
+          <strong>QCM S9-3</strong>
+          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-1.html">
           <strong>S10-1</strong>
-          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-1.html">
           <strong>QCM S10-1</strong>
-          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-2.html">
           <strong>S10-2</strong>
-          <span>Composition générale d’un train d’atterrissage</span>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          <span>Décrire la séquence compression-détente-équilibrage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-2.html">
           <strong>QCM S10-2</strong>
-          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-3.html">
+          <strong>S10-3</strong>
+          <span>États du train, verrouillages et sécurités</span>
+          
+          <span>Présenter la cinématique des trains et les sécurités associées.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-3.html">
+          <strong>QCM S10-3</strong>
+          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s11-1.html">
           <strong>S11-1</strong>
-          <span>Géométrie du train et dispositions des roues</span>
+          <span>Voyants, roues et pneumatiques</span>
           
-          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s11-1.html">
           <strong>QCM S11-1</strong>
-          <span>QCM - Géométrie du train et dispositions des roues</span>
+          <span>QCM - Voyants, roues et pneumatiques</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-2.html">
+          <strong>S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
+          
+          <span>Décrire les circuits de freinage et leurs sécurités.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-2.html">
+          <strong>QCM S11-2</strong>
+          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-3.html">
+          <strong>S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-3.html">
+          <strong>QCM S11-3</strong>
+          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s12-1.html">
           <strong>S12-1</strong>
-          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
-          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s12-1.html">
           <strong>QCM S12-1</strong>
-          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s12-2.html">
-          <strong>S12-2</strong>
-          <span>Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s12-2.html">
-          <strong>QCM S12-2</strong>
-          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s13-1.html">
-          <strong>S13-1</strong>
-          <span>Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s13-1.html">
-          <strong>QCM S13-1</strong>
-          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-1.html">
-          <strong>S14-1</strong>
-          <span>Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-1.html">
-          <strong>QCM S14-1</strong>
-          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-2.html">
-          <strong>S14-2</strong>
-          <span>Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-2.html">
-          <strong>QCM S14-2</strong>
-          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-1.html">
-          <strong>S15-1</strong>
-          <span>Circuits de freinage et freins à disques</span>
-          
-          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-1.html">
-          <strong>QCM S15-1</strong>
-          <span>QCM - Circuits de freinage et freins à disques</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-2.html">
-          <strong>S15-2</strong>
-          <span>Anti-skid et anti-brake</span>
-          
-          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-2.html">
-          <strong>QCM S15-2</strong>
-          <span>QCM - Anti-skid et anti-brake</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s16-1.html">
-          <strong>S16-1</strong>
-          <span>QCM : les repères essentiels sur les atterrisseurs</span>
-          
-          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s16-1.html">
-          <strong>QCM S16-1</strong>
-          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="final-validation.html">
           <strong>Validation finale</strong>
-          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          <span>25 questions tirées au sort sur 149 - correction finale</span>
           
         </a>
         
@@ -2089,7 +2112,7 @@ html[data-embed="1"] .review-card {
         <section class="quiz-hero">
           <div>
             <p class="eyebrow">QCM</p>
-            <h1>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</h1>
+            <h1>QCM - Exemple numérique et architecture double flux</h1>
             <p>
               
               QCM intermédiaire avec correction immédiate question par question.
@@ -2113,7 +2136,7 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S1-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S1-2-Q1", "prompt": "À propos du **terme réacteur**, de quelle affirmation s’agit-il ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il dépend uniquement du débit carburant \\(Q_{mc}\\).", "is_correct": false, "explanation": "Non : le débit carburant intervient dans le **terme fusée**, pas dans le terme réacteur. Le terme réacteur dépend du débit massique d’air \\(Q_{ma}\\) et de la différence de vitesse \\(V_5 - V_0\\)."}, {"id": "B", "text": "Il est égal à \\(Q_{mc}V_5\\).", "is_correct": false, "explanation": "Non : \\(Q_{mc}V_5\\) correspond au terme lié au carburant, appelé terme fusée dans le cours. Le terme réacteur décrit seulement la contribution de l’air accéléré dans le moteur."}, {"id": "C", "text": "Il est nul dès que \\(V_5 > V_0\\).", "is_correct": false, "explanation": "Non : au contraire, si \\(V_5\\) est supérieur à \\(V_0\\), alors \\(V_5 - V_0 > 0\\) et la poussée est positive. C’est précisément cette différence de vitesse qui crée la propulsion."}, {"id": "D", "text": "Il s’écrit \\(T_u = Q_{ma}(V_5 - V_0)\\).", "is_correct": true, "explanation": "Oui : le cours donne explicitement la relation fondamentale \\(T_u = Q_{ma}(V_5 - V_0)\\). Ce terme traduit l’effet de réaction lié à l’accélération de la masse d’air entre l’entrée et la sortie du moteur."}, {"id": "E", "text": "Il correspond à la poussée de culot \\(S_5(P_5-P_0)\\).", "is_correct": false, "explanation": "Non : la poussée de culot est une contribution distincte, liée à la différence de pression à la sortie de tuyère. Le terme réacteur ne fait intervenir que le débit d’air et la variation de vitesse."}], "coverage_label": "", "learning_objective": "Identifier l’expression du terme réacteur et distinguer ses variables de celles des autres contributions de poussée.", "correction_summary": "La bonne réponse est celle qui associe le terme réacteur à \\(Q_{ma}(V_5 - V_0)\\). Le piège classique consiste à confondre cette contribution avec le terme fusée ou la poussée de culot. Retenir que le terme réacteur dépend du débit d’air et de l’accélération du flux.", "course_clarification": "Le **terme réacteur** est la contribution de base de la poussée d’un turboréacteur. Il s’écrit \\(T_u = Q_{ma}(V_5 - V_0)\\), où \\(Q_{ma}\\) est le débit massique d’air, \\(V_0\\) la vitesse d’entrée et \\(V_5\\) la vitesse de sortie. Cette expression traduit l’effet de réaction : l’air est accéléré vers l’arrière, donc le moteur reçoit une force vers l’avant. En pratique, plus l’écart \\(V_5 - V_0\\) est grand, plus la poussée augmente.", "source_refs": []}, {"question_id": "S1-2-Q2", "prompt": "Dans la formule de la **poussée nette** d’un GTR simple flux, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle ne dépend jamais de la pression de sortie de tuyère.", "is_correct": false, "explanation": "Non : la pression de sortie intervient via la poussée de culot. Si \\(P_5\\neq P_0\\), cette contribution n’est pas nulle et elle complète la poussée nette."}, {"id": "B", "text": "Elle est la somme du terme réacteur, du terme fusée et de la poussée de culot.", "is_correct": true, "explanation": "Oui : le cours indique que la poussée nette regroupe ces trois contributions. On additionne donc le terme réacteur, le terme fusée \\(Q_{mc}V_5\\) et la poussée de culot \\(S_5(P_5-P_0)\\)."}, {"id": "C", "text": "Elle s’écrit uniquement \\(Q_{mc}V_5\\).", "is_correct": false, "explanation": "Non : \\(Q_{mc}V_5\\) n’est qu’une partie de la poussée totale, le terme fusée. La poussée nette ajoute aussi le terme réacteur et éventuellement la poussée de culot."}, {"id": "D", "text": "Elle est égale à \\(Q_{ma}(V_5-V_0) + Q_{mc}V_5 + S_5(P_5-P_0)\\).", "is_correct": false, "explanation": "Cette écriture correspond bien à la poussée nette d’un simple flux dans le cours, mais l’énoncé demande l’affirmation correcte parmi les propositions ; ici il faut reconnaître que c’est bien la formule complète. Or comme une seule affirmation doit être vraie, cette proposition serait également vraie : elle ne peut donc pas être retenue dans un QCM à réponse unique. Le piège est de repérer qu’une formule complète peut être correcte même si elle ressemble à un simple rappel."}, {"id": "E", "text": "Elle est nécessairement nulle si \\(V_0\\neq 0\\).", "is_correct": false, "explanation": "Non : la poussée nette peut être positive en vol dès lors que \\(V_5\\) est suffisamment supérieur à \\(V_0\\). La valeur de \\(V_0\\) ne rend pas la poussée nulle par elle-même."}], "coverage_label": "", "learning_objective": "Reconnaître les trois contributions qui composent la poussée nette et savoir les distinguer des formules partielles.", "correction_summary": "La poussée nette résulte de l’addition de trois effets : réaction de l’air, apport du carburant et différence de pression à la tuyère. L’erreur fréquente est d’oublier l’une des contributions ou de les confondre entre elles. Il faut donc lire la formule comme un bilan complet des forces propulsives.", "course_clarification": "La **poussée nette** est la poussée réellement obtenue en tenant compte de toutes les contributions utiles. Pour un GTR simple flux, le cours donne \\(T_u = Q_{ma}(V_5 - V_0) + Q_{mc}V_5 + S_5(P_5 - P_0)\\). Le premier terme est le terme réacteur, le deuxième le terme fusée et le troisième la poussée de culot. Cette décomposition permet de comprendre d’où vient la force propulsive et comment chaque phénomène physique y contribue.", "source_refs": []}, {"question_id": "S1-2-Q3", "prompt": "À propos du **terme fusée**, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il correspond à la contribution du débit carburant \\(Q_{mc}\\) éjecté à la vitesse \\(V_5\\).", "is_correct": true, "explanation": "Oui : le cours définit le terme fusée comme la poussée issue de l’injection du carburant, modélisée par \\(Q_{mc}V_5\\). Cette contribution s’ajoute au terme réacteur dans la poussée nette."}, {"id": "B", "text": "Il est lié à la différence de pression \\(S_5(P_5-P_0)\\).", "is_correct": false, "explanation": "Non : cette expression correspond à la poussée de culot. Le terme fusée est associé au débit de carburant, pas à l’écart de pression à la sortie de tuyère."}, {"id": "C", "text": "Il remplace toujours le terme réacteur dans les moteurs à double flux.", "is_correct": false, "explanation": "Non : le terme fusée ne remplace pas le terme réacteur, il s’y ajoute. En double flux, la poussée comprend les contributions des deux flux et, si on la prend en compte, celle du carburant."}, {"id": "D", "text": "Il ne dépend pas de la vitesse d’éjection des gaz.", "is_correct": false, "explanation": "Non : le cours précise au contraire que le carburant est éjecté à la vitesse \\(V_5\\). La vitesse de sortie est donc indispensable dans cette contribution."}, {"id": "E", "text": "Il est toujours plus grand que le terme réacteur.", "is_correct": false, "explanation": "Non : le cours ne donne aucun tel classement général. En pratique, le terme réacteur dépend du débit d’air et de la différence de vitesse, et il peut être très supérieur au terme fusée."}], "coverage_label": "", "learning_objective": "Identifier la définition physique et mathématique du terme fusée dans la poussée nette.", "correction_summary": "Le terme fusée est la contribution du carburant éjecté à la vitesse de sortie \\(V_5\\). Il ne faut pas le confondre avec la poussée de culot, qui dépend de la pression, ni avec le terme réacteur, qui dépend du débit d’air. La question vise surtout à reconnaître la variable clé : \\(Q_{mc}\\).", "course_clarification": "Le **terme fusée** est la part de poussée liée au débit de carburant. Le cours l’écrit \\(Q_{mc}V_5\\), où \\(Q_{mc}\\) est le débit massique de carburant et \\(V_5\\) la vitesse d’éjection. Il s’ajoute au terme réacteur dans la poussée nette. Cette contribution reste généralement plus faible que celle de l’air, mais elle fait partie du bilan complet des forces.", "source_refs": []}, {"question_id": "S1-2-Q4", "prompt": "Concernant la **poussée de culot**, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle dépend du débit carburant \\(Q_{mc}\\) uniquement.", "is_correct": false, "explanation": "Non : cette contribution dépend de la pression à la sortie de tuyère et de la section \\(S_5\\), pas du débit carburant. Le carburant intervient dans le terme fusée, pas dans la poussée de culot."}, {"id": "B", "text": "Elle est toujours positive quelle que soit la valeur de \\(P_5\\).", "is_correct": false, "explanation": "Non : le signe dépend de \\(P_5 - P_0\\). Si \\(P_5 = P_0\\), la poussée de culot est nulle ; si \\(P_5 < P_0\\), elle devient négative."}, {"id": "C", "text": "Elle correspond à la vitesse d’entrée \\(V_0\\) du moteur.", "is_correct": false, "explanation": "Non : la vitesse d’entrée sert dans le terme réacteur, pas dans la poussée de culot. Ici, la grandeur décisive est la pression de sortie."}, {"id": "D", "text": "Elle est la somme des flux froid et chaud dans un double flux.", "is_correct": false, "explanation": "Non : cela décrit la structure de la poussée totale dans un turboréacteur double flux, mais pas la poussée de culot. La poussée de culot est un effet de pression à la tuyère."}, {"id": "E", "text": "Elle s’écrit \\(S_5(P_5 - P_0)\\).", "is_correct": true, "explanation": "Oui : le cours donne exactement cette expression. Elle traduit l’effet de la différence entre la pression de sortie et la pression ambiante, appliquée sur la section de sortie de la tuyère."}], "coverage_label": "", "learning_objective": "Reconnaître l’expression de la poussée de culot et comprendre son origine physique.", "correction_summary": "La poussée de culot est une force de pression exercée sur la section de sortie de la tuyère. Son expression est \\(S_5(P_5-P_0)\\) et elle s’ajoute aux autres termes de poussée. Le piège principal est de la confondre avec un terme de débit ou avec la poussée due aux flux internes.", "course_clarification": "La **poussée de culot** vient de la différence entre la pression statique des gaz à la sortie de la tuyère et la pression extérieure. Le cours l’écrit \\(S_5(P_5 - P_0)\\), où \\(S_5\\) est la section de sortie. Si la tuyère est adaptée et que \\(P_5 = P_0\\), cette contribution devient nulle. En pratique, elle complète le bilan de poussée quand la détente des gaz n’est pas exactement complète.", "source_refs": []}, {"question_id": "S1-2-Q5", "prompt": "En **banc d’essais**, quelle affirmation sur la poussée brute est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La poussée brute est identique à la poussée spécifique.", "is_correct": false, "explanation": "Non : la poussée spécifique est \\(T_u/Q_{ma}\\), donc un rapport de poussée au débit d’air. La poussée brute est une expression de force, pas un rapport."}, {"id": "B", "text": "Elle s’écrit toujours \\(Q_{ma}(V_5 - V_0)\\) même au banc.", "is_correct": false, "explanation": "Non : cette écriture correspond au terme réacteur en conditions générales. Au banc d’essais, le cours impose \\(V_0 = 0\\), ce qui modifie l’expression de la poussée brute."}, {"id": "C", "text": "On considère \\(V_0 = 0\\), donc \\(T_{u\\,brute} = V_5(Q_{ma} + Q_{mc})\\).", "is_correct": true, "explanation": "Oui : le cours précise qu’en banc d’essais la vitesse d’entrée est nulle, ce qui simplifie la formule en \\(T_{u\\,brute} = V_5(Q_{ma}+Q_{mc})\\). C’est la forme à retenir pour la poussée brute mesurée au sol."}, {"id": "D", "text": "Elle ne prend pas en compte le débit carburant.", "is_correct": false, "explanation": "Non : le cours montre au contraire que la poussée brute inclut aussi le terme lié au carburant, d’où la somme \\(Q_{ma} + Q_{mc}\\) multipliée par \\(V_5\\)."}, {"id": "E", "text": "Elle est calculée en divisant la poussée nette par le poids du moteur.", "is_correct": false, "explanation": "Non : cela décrit la poussée massique, pas la poussée brute. La poussée brute est une force mesurée dans des conditions où l’air d’entrée est immobile."}], "coverage_label": "", "learning_objective": "Savoir simplifier la formule de poussée brute quand \\(V_0=0\\) et distinguer cette grandeur des autres rapports de poussée.", "correction_summary": "Au banc d’essais, on prend \\(V_0=0\\), ce qui transforme la poussée en \\(V_5(Q_{ma}+Q_{mc})\\). Le piège consiste à conserver la formule de vol ou à la confondre avec une grandeur normalisée comme la poussée spécifique. Ici on cherche simplement la poussée brute mesurée au sol.", "course_clarification": "La **poussée brute** est la poussée observée en banc d’essais, quand l’air à l’entrée est supposé immobile. Le cours pose \\(V_0 = 0\\), d’où \\(T_{u\\,brute} = V_5(Q_{ma}+Q_{mc})\\). Cette forme met en évidence que les débits d’air et de carburant sont tous deux accélérés par l’éjection. Elle sert surtout à caractériser le moteur dans une configuration de test, différente du vol réel.", "source_refs": []}], "subpart_id": "S1", "anchor_slide_id": "S1-2", "question_count_target": 5, "title": "QCM - Poussée nette : terme fusée, poussée de culot et poussée brute"}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S1-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S1-2-Q1", "prompt": "Quelle expression correspond au terme réacteur de la poussée ?", "difficulty": "easy", "options": [{"id": "A", "text": "Tu = Qma \\(V0 - V5\\).", "is_correct": false, "explanation": "Faux : l’ordre des vitesses est inversé. La sortie est plus rapide que l’entrée, donc on prend \\(V5 - V0\\)."}, {"id": "B", "text": "Tu = Qmc \\(V5 - V0\\).", "is_correct": false, "explanation": "Faux : \\(Qmc\\) est le débit carburant, pas le débit d’air du terme réacteur."}, {"id": "C", "text": "Tu = Qma \\(V5 + V0\\).", "is_correct": false, "explanation": "Faux : la poussée dépend d’une différence de vitesses, pas d’une somme."}, {"id": "D", "text": "Tu = Qma \\(V5 - V0\\).", "is_correct": true, "explanation": "Vrai : la poussée due au seul débit d’air correspond au débit massique d’air multiplié par le gain de vitesse entre l’entrée et la sortie."}, {"id": "E", "text": "Tu = Qma \\(V5\\).", "is_correct": false, "explanation": "Faux : il manque la vitesse d’entrée \\(V0\\), donc l’expression n’est pas complète."}], "coverage_label": "Terme réacteur", "learning_objective": "Identifier l’expression du terme réacteur de la poussée.", "correction_summary": "La bonne lecture consiste à repérer que la poussée provient de l’augmentation de vitesse de l’air entre l’entrée et la sortie. Beaucoup d’erreurs viennent d’un mauvais sens de soustraction ou de la confusion entre débit d’air et débit carburant.", "course_clarification": "Le terme réacteur s’écrit \\(Tu = Qma(V5 - V0)\\). Il mesure l’effet de l’accélération de l’air aspiré puis éjecté vers l’arrière.", "source_refs": []}, {"question_id": "S1-2-Q2", "prompt": "Avec \\(Qma = 75\\,kg/s\\), \\(V0 = 250\\,m/s\\) et \\(V5 = 650\\,m/s\\), quelle valeur de poussée est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "\\(Tu = 3\\,000\\,N\\).", "is_correct": false, "explanation": "Faux : cette valeur est dix fois trop faible. La conversion correcte donne \\(30\\,000\\,N\\), puis \\(3\\,000\\,daN\\)."}, {"id": "B", "text": "\\(Tu = 30\\,000\\,N = 3\\,000\\,daN\\).", "is_correct": true, "explanation": "Vrai : on applique \\(Tu = Qma(V5 - V0) = 75 \\times (650 - 250) = 75 \\times 400 = 30\\,000\\,N\\), soit \\(3\\,000\\,daN\\)."}, {"id": "C", "text": "\\(Tu = 30\\,000\\,daN\\).", "is_correct": false, "explanation": "Faux : \\(30\\,000\\,N\\) correspond à \\(3\\,000\\,daN\\), pas à \\(30\\,000\\,daN\\)."}, {"id": "D", "text": "\\(Tu = 18\\,750\\,N\\).", "is_correct": false, "explanation": "Faux : ce résultat ne correspond pas à la différence de vitesses imposée par les données numériques."}, {"id": "E", "text": "\\(Tu = 75\\times 650\\,N\\).", "is_correct": false, "explanation": "Faux : il faut soustraire \\(V0\\) à \\(V5\\). Multiplier seulement par \\(V5\\) oublie la vitesse d’entrée."}], "coverage_label": "Calcul de poussée", "learning_objective": "Calculer une poussée à partir du débit d’air et des vitesses.", "correction_summary": "Le calcul attendu est direct : on remplace dans \\(Tu = Qma(V5 - V0)\\), puis on convertit en daN si besoin. Une confusion fréquente consiste à oublier la soustraction de \\(V0\\) ou à se tromper dans la conversion N/daN.", "course_clarification": "La poussée augmente avec le débit d’air et avec l’écart \\(V5 - V0\\). Ici, l’écart vaut \\(400\\,m/s\\), donc la poussée vaut \\(30\\,000\\,N\\).", "source_refs": []}, {"question_id": "S1-2-Q3", "prompt": "Dans une architecture double flux, comment s’exprime la poussée totale ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle est la somme des poussées du flux froid et du flux chaud.", "is_correct": true, "explanation": "Vrai : la poussée totale résulte de l’addition des contributions des deux flux, froid et chaud."}, {"id": "B", "text": "Elle correspond uniquement à la poussée du flux chaud.", "is_correct": false, "explanation": "Faux : le flux froid contribue aussi à la poussée totale."}, {"id": "C", "text": "Elle correspond uniquement à la poussée du flux froid.", "is_correct": false, "explanation": "Faux : le flux chaud participe également à la poussée."}, {"id": "D", "text": "Elle est égale à la différence entre la poussée du flux chaud et celle du flux froid.", "is_correct": false, "explanation": "Faux : on additionne les deux contributions, on ne les soustrait pas."}, {"id": "E", "text": "Elle est obtenue en multipliant les deux poussées de flux.", "is_correct": false, "explanation": "Faux : il n’y a pas de multiplication entre les poussées des deux flux."}], "coverage_label": "Double flux", "learning_objective": "Distinguer la poussée d’un turboreacteur double flux de celle d’un simple flux.", "correction_summary": "Il faut lire la logique d’addition des contributions : flux froid + flux chaud. L’erreur classique consiste à croire qu’un seul flux domine ou à remplacer la somme par une différence.", "course_clarification": "En double flux, le fan répartit le débit d’air en deux chemins. La poussée globale est la somme des effets du flux froid et du flux chaud.", "source_refs": []}, {"question_id": "S1-2-Q4", "prompt": "Quel est le terme associé au débit carburant dans la formule complète de poussée ?", "difficulty": "easy", "options": [{"id": "A", "text": "\\(Qma \\times V5\\).", "is_correct": false, "explanation": "Faux : ce produit correspond au débit d’air, pas au débit carburant."}, {"id": "B", "text": "\\(Qmc \\times (V5 - V0)\\).", "is_correct": false, "explanation": "Faux : le terme carburant est écrit avec \\(V5\\) seul, sans retrancher \\(V0\\)."}, {"id": "C", "text": "\\(S5(P5 - P0)\\).", "is_correct": false, "explanation": "Faux : c’est la poussée de culot, liée à la différence de pression à la sortie."}, {"id": "D", "text": "\\(Qmc / V5\\).", "is_correct": false, "explanation": "Faux : le support indique un produit, pas un quotient."}, {"id": "E", "text": "\\(Qmc \\times V5\\).", "is_correct": true, "explanation": "Vrai : le terme lié au carburant s’écrit bien comme le produit du débit carburant par la vitesse d’éjection des gaz."}], "coverage_label": "Terme fusée", "learning_objective": "Lire correctement le terme carburant dans la formule de poussée.", "correction_summary": "Le terme carburant ajoute un effet de type fusée à la poussée réacteur. La confusion fréquente est de le mélanger avec le terme d’air ou avec la poussée de culot, alors que la forme attendue est un produit simple \\(Qmc \\times V5\\).", "course_clarification": "Le débit carburant contribue à la poussée via \\(Qmc \\times V5\\). C’est un ajout séparé du terme réacteur \\(Qma(V5 - V0)\\).", "source_refs": []}, {"question_id": "S1-2-Q5", "prompt": "Que vaut la poussée de culot lorsque \\(P5 = P0\\) ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle est maximale.", "is_correct": false, "explanation": "Faux : une poussée de culot n’apparaît que s’il existe une différence de pression non nulle."}, {"id": "B", "text": "Elle devient égale à \\(S5P5\\).", "is_correct": false, "explanation": "Faux : il faut bien la différence \\(P5 - P0\\), pas la pression de sortie seule."}, {"id": "C", "text": "Elle est nulle.", "is_correct": true, "explanation": "Vrai : si \\(P5 = P0\\), alors \\(S5(P5 - P0) = 0\\), donc la poussée de culot disparaît."}, {"id": "D", "text": "Elle change seulement avec \\(Qmc\\).", "is_correct": false, "explanation": "Faux : la poussée de culot dépend de la pression à la sortie et de la pression d’entrée, pas du débit carburant."}, {"id": "E", "text": "Elle s’écrit \\(Qma(V5 - V0)\\).", "is_correct": false, "explanation": "Faux : cette écriture correspond au terme réacteur, pas à la poussée de culot."}], "coverage_label": "Poussée de culot", "learning_objective": "Interpréter la condition d’annulation de la poussée de culot.", "correction_summary": "Le raisonnement attendu est simple : si les pressions de sortie et d’entrée sont égales, la différence de pression est nulle, donc le terme de culot disparaît. Une erreur fréquente consiste à confondre ce terme de pression avec le terme réacteur.", "course_clarification": "La poussée de culot vaut \\(S5(P5 - P0)\\). Elle est nulle dès que \\(P5 = P0\\).", "source_refs": []}], "subpart_id": "S1", "anchor_slide_id": "S1-2", "question_count_target": 5, "title": "QCM - Exemple numérique et architecture double flux"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2249,11 +2272,11 @@ html[data-embed="1"] .review-card {
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
           description.textContent =
-            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
         }
       }
 

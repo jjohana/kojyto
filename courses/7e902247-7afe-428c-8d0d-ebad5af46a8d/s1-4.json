@@ -1,0 +1,70 @@
+{
+  "slide_id": "S1-4",
+  "subpart_id": "S1",
+  "title": "APU GEN et répartition du contrôle GCU/GAPCU",
+  "objective": "Distinguer la source APU et son bloc de contrôle dédié.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s1-4-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Sources d’alimentation AC",
+      "text": null,
+      "bullets": [
+        "Les **IDG** (*Integrated Drive Generator*) sont liés aux moteurs (**ENG**) et alimentent le **AC SYSTEM**.",
+        "L’**APU** (*Auxiliary Power Unit*) possède un **GEN** (*Generator*) capable d’alimenter lui aussi le **AC SYSTEM**.",
+        "Sur le synoptique, la source APU apparaît donc comme une source **AC** distincte des générateurs entraînés par les moteurs."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Blocs de contrôle associés",
+      "text": null,
+      "bullets": [
+        "Chaque **IDG** est contrôlé et surveillé par sa **GCU** (*Generator Control Unit*).",
+        "L’**APU GEN** est associé à la **GAPCU** (*Ground and Auxiliary Power Control Unit*).",
+        "Le repérage clé est simple : **GCU** pour les moteurs, **GAPCU** pour l’APU."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus A330-700L — Aircraft Characteristics, Airport and Maintenance Planning (APU)",
+      "locator": "research",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2024-11/AC_A330-700L_1124.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — MMEL A-320 Rev 31 Draft",
+      "locator": "research",
+      "url": "https://www.faa.gov/aircraft/draft_docs/mmel/MMEL_A-320_Rev_31_Draft.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus — A330-700L Aircraft Characteristics (ancienne édition)",
+      "locator": "research",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2023-08/ac_a330-700l_jul2023.pdf"
+    }
+  ],
+  "course_reference_note": "Le schéma de génération AC montre les deux familles de sources : les IDG des moteurs et le GEN de l’APU. Les flèches de contrôle séparent clairement les GCU des moteurs et la GAPCU de l’APU.",
+  "teacher_notes": "Faire repérer d’abord la source, puis son unité de contrôle associée : IDG + GCU d’un côté, APU GEN + GAPCU de l’autre."
+}

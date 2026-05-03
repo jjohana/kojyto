@@ -1,0 +1,108 @@
+{
+  "slide_id": "S6-1",
+  "subpart_id": "S6",
+  "title": "Post-combustion et bruit de tuyère",
+  "objective": "Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s6-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Réduire le bruit de tuyère",
+      "text": null,
+      "bullets": [
+        "À la sortie, les gaz se mélangent peu avec l’atmosphère : les remous de faible amplitude produisent d’abord des bruits à **haute fréquence** ; plus loin, quand la vitesse baisse et que la turbulence augmente, le bruit devient surtout à **basse fréquence**.",
+        "La réduction du bruit repose sur la **dilution** du jet : il faut augmenter la surface de contact entre les gaz éjectés et l’air ambiant pour raccourcir la zone bruyante.",
+        "Les solutions citées sont les **buses à lobes**, les **buses à tuyaux d’orgue** et les **panneaux acoustiques** ; elles déforment ou divisent le jet pour favoriser le mélange."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Surcroît de poussée",
+      "text": "La post-combustion ajoute de l’énergie après la turbine : la vitesse d’éjection augmente, donc la **poussée utile (Tu)** augmente. En contrepartie, la **consommation spécifique (Csp)** s’élève et une **section variable** devient nécessaire. Repères indiqués : au sol, **+40 % à +50 % de Tu** pour **+100 % de Csp** ; à **11 000 m et M = 1**, **+60 % de Tu** pour **+60 % de Csp** ; à **11 000 m et M = 2**, **> +100 % de Tu** pour **+30 % de Csp**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "T_u \\uparrow \\quad \\text{si} \\quad V_{\\text{gaz}} \\uparrow"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Nozzles — NASA Glenn Research Center",
+      "locator": "principe de buse à géométrie variable et écoulement propulsif",
+      "url": "https://www.grc.nasa.gov/WWW/BGH/nozzle.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Noise Reduction with Lobed Mixers — NASA NTRS",
+      "locator": "mélange du jet et réduction du bruit avec buses à lobes",
+      "url": "https://ntrs.nasa.gov/citations/19980000198"
+    },
+    {
+      "source_type": "web",
+      "label": "Afterburning Turbojet — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www.grc.nasa.gov/www/k-12/airplane/Animation/turbtyp/etaf.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Noise, Turbulence, and Thrust of Subsonic Free Jets from Lobed Nozzles — NASA NTRS",
+      "locator": "research",
+      "url": "https://ntrs.nasa.gov/citations/20020027543"
+    },
+    {
+      "source_type": "web",
+      "label": "Nozzle Acoustic Test Rig (NATR) — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/aeronautics/acoustics/testing-facilities/nozzle-acoustic-test-rig/"
+    },
+    {
+      "source_type": "web",
+      "label": "Nozzles",
+      "locator": "research",
+      "url": "https://www.grc.nasa.gov/WWW/BGH/nozzle.html?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Afterburning Turbojet",
+      "locator": "research",
+      "url": "https://www.grc.nasa.gov/www/k-12/airplane/Animation/turbtyp/etaf.html?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Noise Reduction with Lobed Mixers: Nozzle-Length and Free-Jet Speed Effects - NASA Technical Reports Server (NTRS)",
+      "locator": "research",
+      "url": "https://ntrs.nasa.gov/citations/19980000198?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Noise, Turbulence, and Thrust of Subsonic Free Jets from Lobed Nozzles - NASA Technical Reports Server (NTRS)",
+      "locator": "research",
+      "url": "https://ntrs.nasa.gov/citations/20020027543?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Nozzle Acoustic Test Rig (NATR) | Glenn Research Center | NASA",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/aeronautics/acoustics/testing-facilities/nozzle-acoustic-test-rig/?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La page 3 relie la vitesse du jet à la poussée et décrit l’origine du bruit de tuyère. Les solutions acoustiques indiquées sont les buses à lobes, les buses à tuyaux d’orgue et les panneaux acoustiques.",
+  "teacher_notes": "Opposer clairement les deux logiques : **ajouter de l’énergie** pour gagner de la poussée, **favoriser le mélange** pour réduire le bruit. Insister sur la nécessité d’une **section variable** en post-combustion et sur la **dilution** comme levier acoustique."
+}

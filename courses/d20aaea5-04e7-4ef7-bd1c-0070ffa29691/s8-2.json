@@ -1,0 +1,70 @@
+{
+  "slide_id": "S8-2",
+  "subpart_id": "S8",
+  "title": "Inverseur pneumatique : organes et séquence",
+  "objective": "Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s8-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Organes principaux",
+      "text": null,
+      "bullets": [
+        "Un **inverseur** est placé à la sortie du **flux secondaire** de chaque réacteur.",
+        "L’ensemble inverseur comporte deux **demi-capots**, chacun actionné par **3 vérins à vis**.",
+        "Les organes mobiles associent des **grilles déviatrices** et des **volets obturateurs**.",
+        "La chaîne de commande comprend la **manette d’inversion**, le **mécanisme d’interdiction**, le **sélecteur de commande**, la **vanne de régulation** et la **vanne d’isolement**.",
+        "Le mécanisme d’entraînement utilise un **moteur pneumatique à 2 sens de rotation**, une **régulation de vitesse** et des **transmissions flexibles**.",
+        "L’essai de l’inverseur peut se faire **pneumatiquement** par le collecteur de soutirage avec **clapet 3 voies**, ou **manuellement** avec une **manivelle**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Chronologie de fonctionnement et sécurités",
+      "text": null,
+      "bullets": [
+        "Quand le **sélecteur** passe en inversion, le mécanisme reçoit l’alimentation pneumatique dans le **sens inversion**.",
+        "Les **demi-capots** se déplacent vers l’arrière, ce qui **découvre les grilles déviatrices**.",
+        "Les **volets obturateurs** ferment alors le conduit de la soufflante et dirigent le flux vers l’effet inverseur.",
+        "Une fois la position **inversion** atteinte, le **mécanisme d’interdiction** autorise encore le déplacement arrière de la manette et l’augmentation de la **poussée inverse**.",
+        "Un signal de pression commande les dispositifs **anti-pompage** par ouverture des **vannes de décharge** ; les **aérofreins** sortent automatiquement lors du déplacement arrière des manettes en atterrissage ou à l’arrêt décollage.",
+        "Repères à mémoriser : **REV UNLOCK** pour l’état de déverrouillage, puis **REV IN TRANSIT** pendant la transition vers la poussée inverse."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Federal Aviation Administration — Boeing 737-700",
+      "locator": "commande inverseur, position ralenti, déploiement et augmentation de la poussée inverse",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/N471WN"
+    },
+    {
+      "source_type": "web",
+      "label": "AC 20-18B - Qualification Testing of Turbojet and Turbofan Engine Thrust Reversers | Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1029466"
+    }
+  ],
+  "course_reference_note": "L’inverseur est monté à la sortie du flux secondaire et la commande part de la manette d’inversion. La séquence à retenir suit la chaîne commande, alimentation, mouvement puis verrouillage.",
+  "teacher_notes": "Faire mémoriser la chaîne **commande → alimentation → mouvement → verrouillage**. Insister sur l’enchaînement des états **REV UNLOCK** puis **REV IN TRANSIT**, et sur le rôle du mécanisme d’interdiction dans l’augmentation de la poussée inverse."
+}

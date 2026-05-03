@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Géométrie du train et dispositions des roues</title>
+  <title>QCM - Voyants, roues et pneumatiques</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -485,6 +485,29 @@ html[data-embed="1"] body::after {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
 }
 
 .block {
@@ -1560,49 +1583,49 @@ html[data-embed="1"] .review-card {
         
         <a class="sidebar-slide" href="s1-1.html">
           <strong>S1-1</strong>
-          <span>Origine de la poussée et terme réacteur</span>
+          <span>Origine de la poussée : terme réacteur</span>
           
-          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          <span>Installer le principe physique de la poussée nette et son expression de base.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-1.html">
           <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée et terme réacteur</span>
+          <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-2.html">
           <strong>S1-2</strong>
-          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>Exemple numérique et architecture double flux</span>
           
-          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-2.html">
           <strong>QCM S1-2</strong>
-          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>QCM - Exemple numérique et architecture double flux</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-3.html">
           <strong>S1-3</strong>
-          <span>Exemple chiffré et répartition des forces internes</span>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-3.html">
           <strong>QCM S1-3</strong>
-          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1610,7 +1633,7 @@ html[data-embed="1"] .review-card {
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
-          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
           
         </a>
         
@@ -1618,431 +1641,431 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s2-2.html">
           <strong>S2-2</strong>
-          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>Repères de consommation et surveillance moteur</span>
           
-          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s2-2.html">
           <strong>QCM S2-2</strong>
-          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s2-3.html">
-          <strong>S2-3</strong>
-          <span>Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s2-3.html">
-          <strong>QCM S2-3</strong>
-          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-1.html">
           <strong>S3-1</strong>
-          <span>Principe propulsif du turbopropulseur</span>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
-          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-1.html">
           <strong>QCM S3-1</strong>
-          <span>QCM - Principe propulsif du turbopropulseur</span>
+          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-2.html">
           <strong>S3-2</strong>
-          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
-          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-2.html">
           <strong>QCM S3-2</strong>
-          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
+          
+          <span>Définir et comparer les rendements à chaque étage du moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - Rendements de la chaîne propulsive</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s4-1.html">
           <strong>S4-1</strong>
-          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>Taux de dilution et familles de moteurs</span>
           
-          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s4-1.html">
           <strong>QCM S4-1</strong>
-          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>QCM - Taux de dilution et exemples de moteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>Principe du turbopropulseur</span>
+          
+          <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - Principe du turbopropulseur</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-1.html">
           <strong>S5-1</strong>
-          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
-          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          <span>Décrire les organes de sortie d’un GTR simple flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-1.html">
           <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-2.html">
           <strong>S5-2</strong>
-          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-2.html">
           <strong>QCM S5-2</strong>
-          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s6-1.html">
           <strong>S6-1</strong>
-          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>Post-combustion et bruit de tuyère</span>
           
-          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s6-1.html">
           <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>QCM - Post-combustion et bruit de tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-2.html">
-          <strong>S6-2</strong>
-          <span>Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-2.html">
-          <strong>QCM S6-2</strong>
-          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-3.html">
-          <strong>S6-3</strong>
-          <span>Tuyère supersonique convergente-divergente</span>
-          
-          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-3.html">
-          <strong>QCM S6-3</strong>
-          <span>QCM - Tuyère supersonique convergente-divergente</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s7-1.html">
           <strong>S7-1</strong>
-          <span>Traitement acoustique de la tuyère</span>
+          <span>But et formule de la poussée inverse</span>
           
-          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s7-1.html">
           <strong>QCM S7-1</strong>
-          <span>QCM - Traitement acoustique de la tuyère</span>
+          <span>QCM - But et formule de la poussée inverse</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>Poussée inverse : efficacité, limites et choix des flux</span>
+          
+          <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
+          
+          <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-1.html">
           <strong>S8-1</strong>
-          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-1.html">
           <strong>QCM S8-1</strong>
-          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-2.html">
           <strong>S8-2</strong>
-          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          <span>Inverseur pneumatique : organes et séquence</span>
           
-          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-2.html">
           <strong>QCM S8-2</strong>
-          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-1.html">
           <strong>S9-1</strong>
-          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
-          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-1.html">
           <strong>QCM S9-1</strong>
-          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-2.html">
           <strong>S9-2</strong>
-          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          <span>Types de trains et composition</span>
           
-          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          <span>Distinguer les architectures de base et les éléments constitutifs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-2.html">
           <strong>QCM S9-2</strong>
-          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          <span>QCM - Types de trains et composition</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-3.html">
+          <strong>S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-3.html">
+          <strong>QCM S9-3</strong>
+          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-1.html">
           <strong>S10-1</strong>
-          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-1.html">
           <strong>QCM S10-1</strong>
-          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-2.html">
           <strong>S10-2</strong>
-          <span>Composition générale d’un train d’atterrissage</span>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          <span>Décrire la séquence compression-détente-équilibrage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-2.html">
           <strong>QCM S10-2</strong>
-          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-3.html">
+          <strong>S10-3</strong>
+          <span>États du train, verrouillages et sécurités</span>
+          
+          <span>Présenter la cinématique des trains et les sécurités associées.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-3.html">
+          <strong>QCM S10-3</strong>
+          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s11-1.html">
           <strong>S11-1</strong>
-          <span>Géométrie du train et dispositions des roues</span>
+          <span>Voyants, roues et pneumatiques</span>
           
-          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
           
         </a>
         
         <a class="sidebar-slide active" href="slide-s11-1.html">
           <strong>QCM S11-1</strong>
-          <span>QCM - Géométrie du train et dispositions des roues</span>
+          <span>QCM - Voyants, roues et pneumatiques</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-2.html">
+          <strong>S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
+          
+          <span>Décrire les circuits de freinage et leurs sécurités.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-2.html">
+          <strong>QCM S11-2</strong>
+          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-3.html">
+          <strong>S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-3.html">
+          <strong>QCM S11-3</strong>
+          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s12-1.html">
           <strong>S12-1</strong>
-          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
-          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s12-1.html">
           <strong>QCM S12-1</strong>
-          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s12-2.html">
-          <strong>S12-2</strong>
-          <span>Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s12-2.html">
-          <strong>QCM S12-2</strong>
-          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s13-1.html">
-          <strong>S13-1</strong>
-          <span>Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s13-1.html">
-          <strong>QCM S13-1</strong>
-          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-1.html">
-          <strong>S14-1</strong>
-          <span>Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-1.html">
-          <strong>QCM S14-1</strong>
-          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-2.html">
-          <strong>S14-2</strong>
-          <span>Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-2.html">
-          <strong>QCM S14-2</strong>
-          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-1.html">
-          <strong>S15-1</strong>
-          <span>Circuits de freinage et freins à disques</span>
-          
-          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-1.html">
-          <strong>QCM S15-1</strong>
-          <span>QCM - Circuits de freinage et freins à disques</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-2.html">
-          <strong>S15-2</strong>
-          <span>Anti-skid et anti-brake</span>
-          
-          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-2.html">
-          <strong>QCM S15-2</strong>
-          <span>QCM - Anti-skid et anti-brake</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s16-1.html">
-          <strong>S16-1</strong>
-          <span>QCM : les repères essentiels sur les atterrisseurs</span>
-          
-          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s16-1.html">
-          <strong>QCM S16-1</strong>
-          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="final-validation.html">
           <strong>Validation finale</strong>
-          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          <span>25 questions tirées au sort sur 149 - correction finale</span>
           
         </a>
         
@@ -2054,7 +2077,7 @@ html[data-embed="1"] .review-card {
       
       <div class="slide-toolbar">
         <div class="toolbar-meta">
-          <span>Page 44/61</span>
+          <span>Page 54/61</span>
           
           <span>QCM</span>
         </div>
@@ -2066,7 +2089,7 @@ html[data-embed="1"] .review-card {
           <a class="nav-link" href="s11-1.html">Précédent</a>
           
           
-          <a class="nav-link" href="s12-1.html">Suivante</a>
+          <a class="nav-link" href="s11-2.html">Suivante</a>
           
         </div>
       </div>
@@ -2076,7 +2099,7 @@ html[data-embed="1"] .review-card {
         <section class="quiz-hero">
           <div>
             <p class="eyebrow">QCM</p>
-            <h1>QCM - Géométrie du train et dispositions des roues</h1>
+            <h1>QCM - Voyants, roues et pneumatiques</h1>
             <p>
               
               QCM intermédiaire avec correction immédiate question par question.
@@ -2093,14 +2116,14 @@ html[data-embed="1"] .review-card {
           id="quiz-app"
           class="quiz-app-shell"
           data-viewer-mode="user"
-          data-next-href="s12-1.html"
+          data-next-href="s11-2.html"
           data-home-href="index.html"
         ></section>
       </section>
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S11-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S11-Q1", "prompt": "Concernant l’empattement d’un train d’atterrissage, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’empattement est la distance entre les deux trains principaux.", "is_correct": false, "explanation": "Cette définition correspond à la voie, pas à l’empattement."}, {"id": "B", "text": "L’empattement est l’angle entre l’axe du fût de train principal et la perpendiculaire à l’axe de symétrie de l’avion.", "is_correct": false, "explanation": "Cela décrit l’angle de chasse, qui est une notion angulaire et non une distance."}, {"id": "C", "text": "L’empattement est l’angle entre la verticale de l’avion et la droite reliant le centre de gravité au centre des roues du train principal.", "is_correct": false, "explanation": "Cela correspond à l’angle de garde, pas à l’empattement."}, {"id": "D", "text": "L’empattement est la distance séparant l’axe des roues du train auxiliaire des axes des roues des trains principaux.", "is_correct": true, "explanation": "C’est exactement la définition donnée dans le cours : on mesure la distance entre le train auxiliaire et les trains principaux."}, {"id": "E", "text": "L’empattement est l’angle entre le plan de symétrie de l’avion et l’axe de la roue principale.", "is_correct": false, "explanation": "Cela ne définit aucun empattement ; on confond ici une distance avec un angle lié au parallélisme."}], "coverage_label": "", "learning_objective": "Identifier correctement l’empattement dans la géométrie d’un train d’atterrissage.", "correction_summary": "Le raisonnement attendu consiste à distinguer une distance d’un angle et à repérer quels éléments du train sont reliés. L’erreur fréquente est de confondre l’empattement avec la voie ou avec un angle de réglage des roues. Ici, l’empattement relie le train auxiliaire aux trains principaux.", "course_clarification": "Dans le cours, l’empattement désigne une distance géométrique : on mesure l’écart entre le train auxiliaire et les trains principaux. Ce n’est donc ni un angle ni la distance entre deux trains principaux.", "source_refs": []}, {"question_id": "S11-Q2", "prompt": "À propos de la voie d’un avion, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La voie est la distance entre l’axe des roues du train auxiliaire et les axes des roues principales.", "is_correct": false, "explanation": "Cette distance correspond à l’empattement, pas à la voie."}, {"id": "B", "text": "La voie est la distance séparant les deux trains principaux.", "is_correct": true, "explanation": "C’est la définition exacte de la voie dans le cours."}, {"id": "C", "text": "La voie est l’angle entre la verticale de l’avion et la droite joignant le centre de gravité au centre des roues.", "is_correct": false, "explanation": "Cette description correspond à l’angle de garde."}, {"id": "D", "text": "La voie est l’angle entre le plan de symétrie de la roue et le plan de symétrie de l’avion.", "is_correct": false, "explanation": "Il s’agit de l’angle de carrossage, qui n’est pas une distance."}, {"id": "E", "text": "La voie est l’angle entre l’axe de la roue principale et le plan de symétrie de l’avion.", "is_correct": false, "explanation": "Cela décrit le parallélisme, pas la voie."}], "coverage_label": "", "learning_objective": "Reconnaître la voie comme une distance entre les deux trains principaux.", "correction_summary": "Il faut identifier que la voie est une grandeur linéaire, donc une distance latérale entre les deux trains principaux. La confusion classique est de la mélanger avec l’empattement, qui concerne le train auxiliaire, ou avec des angles de réglage des roues.", "course_clarification": "La voie correspond à l’écartement entre les deux trains principaux. On parle donc de la largeur du train principal vue de face ou de dessus, et non d’un angle ou d’une distance impliquant le train auxiliaire.", "source_refs": []}, {"question_id": "S11-Q3", "prompt": "Quelle proposition décrit correctement l’angle de chasse ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’angle de chasse est l’angle formé par l’axe du fût de train principal et la perpendiculaire à l’axe de symétrie de l’avion.", "is_correct": true, "explanation": "C’est la définition du cours : on compare l’axe du fût à la perpendiculaire à l’axe de symétrie."}, {"id": "B", "text": "L’angle de chasse est l’angle entre la verticale de l’avion et la droite reliant le centre de gravité au centre des roues du train principal.", "is_correct": false, "explanation": "Cette définition correspond à l’angle de garde."}, {"id": "C", "text": "L’angle de chasse est la distance entre le train auxiliaire et les trains principaux.", "is_correct": false, "explanation": "Il s’agit de l’empattement, donc d’une distance et non d’un angle."}, {"id": "D", "text": "L’angle de chasse est l’angle entre le plan de symétrie longitudinal de la roue et le plan de symétrie de l’avion.", "is_correct": false, "explanation": "Cela définit l’angle de carrossage."}, {"id": "E", "text": "L’angle de chasse est l’angle entre l’axe de la roue principale et le plan de symétrie de l’avion.", "is_correct": false, "explanation": "Cela correspond au parallélisme, pas à l’angle de chasse."}], "coverage_label": "", "learning_objective": "Distinguer l’angle de chasse des autres angles géométriques du train principal.", "correction_summary": "Le point clé est de lire précisément les deux droites ou plans mis en relation. L’erreur la plus fréquente consiste à confondre l’angle de chasse avec l’angle de garde ou avec le parallélisme, car tous sont liés à l’orientation du train principal. Ici, on doit retenir l’axe du fût et la perpendiculaire à l’axe de symétrie.", "course_clarification": "L’angle de chasse est un angle de position du fût de train principal dans le plan longitudinal. Il se mesure par rapport à la perpendiculaire à l’axe de symétrie de l’avion.", "source_refs": []}, {"question_id": "S11-Q4", "prompt": "Quelle affirmation décrit correctement l’angle de carrossage ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’angle de carrossage est l’angle entre l’axe du fût de train principal et la perpendiculaire à l’axe de symétrie de l’avion.", "is_correct": false, "explanation": "Cela correspond à l’angle de chasse."}, {"id": "B", "text": "L’angle de carrossage est la distance séparant les deux trains principaux.", "is_correct": false, "explanation": "La voie est une distance ; le carrossage est un angle."}, {"id": "C", "text": "L’angle de carrossage est l’angle entre la verticale de l’avion et la droite reliant le centre de gravité au centre des roues.", "is_correct": false, "explanation": "Cette définition correspond à l’angle de garde."}, {"id": "D", "text": "L’angle de carrossage est l’angle entre l’axe de la roue principale et le plan de symétrie de l’avion.", "is_correct": false, "explanation": "Cela décrit le parallélisme, pas le carrossage."}, {"id": "E", "text": "L’angle de carrossage est l’angle entre le plan de symétrie longitudinal de la roue et le plan de symétrie de l’avion.", "is_correct": true, "explanation": "C’est la définition donnée dans le cours pour l’angle de carrossage."}], "coverage_label": "", "learning_objective": "Identifier l’angle de carrossage à partir de sa définition géométrique.", "correction_summary": "Il faut repérer quel plan est associé à la roue et quel plan est associé à l’avion. La confusion courante vient du fait que plusieurs angles concernent l’orientation d’une roue ; cependant le carrossage compare les plans de symétrie, alors que le parallélisme compare un axe à un plan.", "course_clarification": "Le carrossage mesure l’inclinaison de la roue par rapport au plan de symétrie de l’avion. On le lit comme un angle entre deux plans, et non comme une distance.", "source_refs": []}, {"question_id": "S11-Q5", "prompt": "À propos du bogie, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le bogie sert uniquement à augmenter la vitesse maximale de roulage de l’avion.", "is_correct": false, "explanation": "Le cours ne lui attribue pas ce rôle ; il agit sur la répartition des charges, les contacts au sol et la sécurité."}, {"id": "B", "text": "Le bogie est une disposition où une seule roue est montée sans autre roue associée.", "is_correct": false, "explanation": "Cela décrit une roue simple, pas un bogie."}, {"id": "C", "text": "Le bogie permet de réduire le diamètre des roues, d’augmenter les points de contact et d’améliorer la sécurité en cas de crevaison.", "is_correct": true, "explanation": "C’est exactement le rôle attribué au bogie dans le cours."}, {"id": "D", "text": "Le bogie désigne un angle de réglage des roues principales.", "is_correct": false, "explanation": "Le bogie n’est pas un angle, mais une disposition mécanique des roues."}, {"id": "E", "text": "Le bogie remplace nécessairement le train auxiliaire avant sur tous les avions.", "is_correct": false, "explanation": "Le bogie est une disposition de roues du train, pas un système imposé à l’avant ; il ne remplace pas automatiquement le train auxiliaire."}], "coverage_label": "", "learning_objective": "Reconnaître la fonction principale du bogie parmi les dispositions de roues.", "correction_summary": "Le raisonnement attendu est de relier la disposition mécanique à son avantage opérationnel. L’erreur fréquente consiste à réduire le bogie à une simple présence de plusieurs roues, alors que le cours insiste sur ses bénéfices : roues plus petites, plus de points de contact et meilleure sécurité en cas de crevaison.", "course_clarification": "Un bogie est un ensemble de roues porté par un même support. Il permet de mieux répartir les efforts au sol, de multiplier les contacts et d’améliorer la sécurité, notamment si un pneu est endommagé.", "source_refs": []}], "subpart_id": "S11", "anchor_slide_id": "S11-1", "question_count_target": 5, "title": "QCM - Géométrie du train et dispositions des roues"}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S11-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S11-1-Q1", "prompt": "Concernant les voyants de cabine liés aux trains d’atterrissage, quelles affirmations sont correctes ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le voyant rouge signale uniquement une panne du circuit hydraulique de freinage.", "is_correct": false, "explanation": "Le voyant rouge sert à signaler une manœuvre de train ou des trappes hautes non verrouillées, pas un défaut du freinage."}, {"id": "B", "text": "Avec 3 voyants verts allumés, les trains sont en position haute et verrouillés.", "is_correct": false, "explanation": "La position haute verrouillée n’est pas indiquée par les 3 verts ; ceux-ci valident la position basse verrouillée."}, {"id": "C", "text": "Le voyant rouge s’allume quand les trains sont verrouillés bas et les trappes fermées.", "is_correct": false, "explanation": "Cette situation correspond justement à l’état normal de sortie et verrouillage bas, pas à l’alarme rouge."}, {"id": "D", "text": "L’allumage des 3 voyants verts indique que les 3 trains sont verrouillés bas.", "is_correct": true, "explanation": "Les 3 voyants verts correspondent à la confirmation que les trains sont sortis et verrouillés en position basse."}, {"id": "E", "text": "Le voyant rouge n’a aucun lien avec l’état des trappes de train.", "is_correct": false, "explanation": "Le voyant rouge est aussi associé à des trappes non verrouillées hautes, donc il renseigne bien sur l’état des trappes."}], "coverage_label": "Voyants de cabine", "learning_objective": "Interpréter l’état des trains à partir des voyants verts et rouges.", "correction_summary": "La bonne lecture est : 3 verts = trains verrouillés bas. Le voyant rouge signale une situation de manœuvre ou de non-verrouillage en haut, ce qui piège souvent les réponses qui inversent haut et bas.", "course_clarification": "Les voyants de train servent à confirmer la position et le verrouillage des trains. Le vert valide l’état basse sortie, alors que le rouge attire l’attention sur une configuration non sécurisée ou en transition.", "source_refs": []}, {"question_id": "S11-1-Q2", "prompt": "À propos du voyant TNS (Train Non Sorti), quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il s’active seulement si les trains sont sortis à une altitude élevée.", "is_correct": false, "explanation": "Le TNS concerne au contraire le cas où les trains ne sont pas sortis alors que la situation impose leur sortie, avec une altitude trop basse."}, {"id": "B", "text": "Il peut être accompagné d’un voyant ou d’un flash et d’un levier d’alarme sonore.", "is_correct": true, "explanation": "Le signal TNS n’est pas seulement visuel : il peut aussi être associé à une alarme sonore selon la configuration décrite."}, {"id": "C", "text": "Il dépend uniquement de la température des freins.", "is_correct": false, "explanation": "La surveillance de température relève du BTMS ; le TNS dépend de la configuration de vol et de l’état des trains."}, {"id": "D", "text": "Il ne tient pas compte de la position de la manette des gaz ni de la vitesse.", "is_correct": false, "explanation": "Le texte mentionne justement une manette des gaz réduite et une vitesse faible comme conditions associées à l’alerte TNS."}, {"id": "E", "text": "Il signale un risque de roulage trop rapide avec volets rentrés uniquement.", "is_correct": false, "explanation": "Le TNS n’est pas limité à ce cas : il peut apparaître si les trains ne sont pas sortis à altitude trop basse, avec plusieurs conditions de vol listées."}], "coverage_label": "Voyant TNS", "learning_objective": "Identifier les conditions de déclenchement de l’alerte TNS.", "correction_summary": "Le TNS avertit d’un train non sorti dans une configuration dangereuse, et peut s’accompagner d’un flash ou d’une alarme sonore. Le piège est de le confondre avec une alerte de vitesse ou de freinage.", "course_clarification": "TNS signifie que le train n’est pas sorti alors que l’avion approche d’une situation où il devrait l’être. L’alerte combine donc l’état du train et des conditions de vol comme l’altitude, la vitesse ou la configuration des volets.", "source_refs": []}, {"question_id": "S11-1-Q3", "prompt": "Sur les architectures de roues, quelle proposition est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La roue à flasque mobile permet de glisser le pneu en place sans écarter le talon.", "is_correct": true, "explanation": "La flasque amovible facilite le montage du pneu, précisément sans devoir écarter le talon."}, {"id": "B", "text": "La roue monobloc est constituée de deux demi-jantes séparées par un moyeu divisé.", "is_correct": false, "explanation": "Cette description correspond à une architecture différente ; la roue monobloc est un seul élément."}, {"id": "C", "text": "La roue à flasque mobile est dépourvue de tout dispositif de sécurité thermique.", "is_correct": false, "explanation": "Le document mentionne au contraire un bouchon fusible thermique sur la roue à flasque mobile."}, {"id": "D", "text": "La roue monobloc est associée au montage du pneu sans effort sur des avions lourds.", "is_correct": false, "explanation": "Le pneu est monté en force sur un seul élément, et cette solution est indiquée pour des avions légers soumis à de fortes charges locales."}, {"id": "E", "text": "La roue à moyeu divisé est la seule architecture explicitement décrite comme utilisée sur avions légers.", "is_correct": false, "explanation": "L’usage sur avions légers est associé à la roue monobloc, pas à la roue à moyeu divisé."}], "coverage_label": "Roues", "learning_objective": "Distinguer les principaux types de roues et leur principe d’assemblage.", "correction_summary": "La bonne réponse est la roue à flasque mobile, qui facilite le montage du pneu et comporte un bouchon fusible thermique. Le principal piège consiste à confondre cette solution avec la roue monobloc ou le moyeu divisé.", "course_clarification": "Une roue monobloc forme un seul ensemble, tandis qu’une roue à flasque mobile permet d’installer le pneu plus facilement. Le bouchon fusible thermique protège l’ensemble en cas d’échauffement excessif.", "source_refs": []}, {"question_id": "S11-1-Q4", "prompt": "Concernant les freins d’aéronef, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Les freins à tambours sont présentés comme la solution la plus adaptée aux avions lourds.", "is_correct": false, "explanation": "Le texte associe les freins à tambours aux avions légers, pas aux avions lourds."}, {"id": "B", "text": "Le freinage sert uniquement à immobiliser l’avion au parking.", "is_correct": false, "explanation": "Le freinage a plusieurs fonctions : absorber l’énergie cinétique, réduire la distance de roulement, aider au parking, au décollage court et aux évolutions au sol."}, {"id": "C", "text": "Un bouchon fusible thermique est mentionné sur les freins à tambours pour éviter l’éclatement.", "is_correct": false, "explanation": "Le bouchon fusible thermique est associé aux freins à disques dans le support, pour la sécurité thermique et l’évitement de l’éclatement."}, {"id": "D", "text": "Le coefficient d’adhérence dépend uniquement de la masse de l’avion.", "is_correct": false, "explanation": "Il dépend du revêtement de piste, de la vitesse avion, de la pression et de la température du pneu, ainsi que du glissement."}, {"id": "E", "text": "Les freins à disques offrent un refroidissement efficace et une usure régulière.", "is_correct": true, "explanation": "Les avantages cités pour les freins à disques incluent le refroidissement efficace et une usure régulière des disques."}], "coverage_label": "Freins à disques", "learning_objective": "Reconnaître le rôle et les caractéristiques des freins à disques et à tambours.", "correction_summary": "Les freins à disques se distinguent par leur refroidissement, leur usure régulière et leur sécurité thermique. Le piège classique est d’attribuer ces avantages aux freins à tambours ou de réduire le freinage à la seule immobilisation au parking.", "course_clarification": "Le freinage aviation ne sert pas seulement à arrêter l’avion : il contribue aussi à la sécurité au sol et à certaines phases de roulage. Les freins à disques sont décrits comme plus performants thermiquement que les freins à tambours.", "source_refs": []}, {"question_id": "S11-1-Q5", "prompt": "À propos des pneumatiques et de leur surveillance, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le pneu radial présente une surface de contact importante et constante.", "is_correct": false, "explanation": "Cette caractéristique est bien celle du pneu radial ; l’affirmation est donc fausse si elle nie ce point."}, {"id": "B", "text": "Le pneu diagonal a une carcasse souple ceinturée métalliquement et une surface de contact constante.", "is_correct": false, "explanation": "Cette description correspond au pneu radial, alors que le pneu diagonal est fait de nappes croisées et se déforme davantage."}, {"id": "C", "text": "Le TPMS surveille la pression des pneus, le BTMS la température des freins et l’OPMS la pression hydraulique des amortisseurs.", "is_correct": true, "explanation": "Les trois acronymes sont associés chacun à un paramètre distinct : pneus, freins et amortisseurs."}, {"id": "D", "text": "Le shimmy est un phénomène vibratoire des freins à disque.", "is_correct": false, "explanation": "Le shimmy concerne les roues libres à une certaine vitesse, pas les freins eux-mêmes."}, {"id": "E", "text": "Un méplat est un défaut spécifique lié à un gonflage parfaitement correct.", "is_correct": false, "explanation": "Le méplat est un défaut d’usure ou de choc, mentionné avec l’atterrissage dur, et non un état de gonflage correct."}], "coverage_label": "Pneumatiques et surveillance", "learning_objective": "Associer les acronymes de surveillance aux paramètres surveillés et distinguer pneu radial et diagonal.", "correction_summary": "Il faut associer chaque système à son paramètre : TPMS pour la pression des pneus, BTMS pour la température des freins et OPMS pour la pression hydraulique des amortisseurs. Le piège est de confondre les structures radial/diagonal ou de rattacher le shimmy aux freins.", "course_clarification": "Le pneu radial garde une zone de contact plus stable, alors que le pneu diagonal se déforme davantage. La surveillance embarquée permet d’anticiper les dérives de pression, de température ou d’amortissement avant la panne ou l’usure anormale.", "source_refs": []}], "subpart_id": "S11", "anchor_slide_id": "S11-1", "question_count_target": 5, "title": "QCM - Voyants, roues et pneumatiques"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2236,11 +2259,11 @@ html[data-embed="1"] .review-card {
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
           description.textContent =
-            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
         }
       }
 

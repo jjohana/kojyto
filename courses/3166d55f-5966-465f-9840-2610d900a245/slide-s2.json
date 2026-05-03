@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S2-Q1",
+      "prompt": "Quel énoncé décrit correctement le **système étudié** en cinématique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le système étudié est toujours le référentiel d’observation.",
+          "is_correct": false,
+          "explanation": "Le système est l’objet observé, alors que le référentiel est le repère choisi pour observer ce mouvement. Ce sont deux notions différentes."
+        },
+        {
+          "id": "B",
+          "text": "Le système étudié est une simplification qui remplace toujours l’objet par un point unique.",
+          "is_correct": false,
+          "explanation": "Cette description correspond au modèle du point matériel, pas à la définition du système étudié."
+        },
+        {
+          "id": "C",
+          "text": "Le système étudié est uniquement un objet en mouvement rectiligne uniforme.",
+          "is_correct": false,
+          "explanation": "Le système peut être n’importe quel objet dont on veut étudier le mouvement, quelle que soit sa trajectoire."
+        },
+        {
+          "id": "D",
+          "text": "Le système étudié est l’objet dont on veut décrire le mouvement.",
+          "is_correct": true,
+          "explanation": "C’est la définition directe attendue : on choisit l’objet à étudier, comme un avion, un piston ou une hélice, puis on décrit son mouvement."
+        },
+        {
+          "id": "E",
+          "text": "Le système étudié est le repère lié au sol ou à l’aéronef.",
+          "is_correct": false,
+          "explanation": "Le repère lié au sol ou à l’aéronef désigne un référentiel, pas le système étudié."
+        }
+      ],
+      "coverage_label": "Système étudié",
+      "learning_objective": "Identifier correctement l’objet dont on cherche à décrire le mouvement.",
+      "correction_summary": "Le bon énoncé est celui qui définit le système comme l’objet étudié. Le piège consiste à confondre système, référentiel et modèle du point matériel.",
+      "course_clarification": "Le système est l’objet physique choisi pour l’étude, par exemple un avion ou un piston. On le distingue du référentiel, qui sert à observer le mouvement, et du point matériel, qui est un modèle simplifié.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S2-Q2",
+      "prompt": "Quel énoncé décrit correctement le modèle du **point matériel** ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le point matériel conserve la forme réelle de l’objet pour toutes les calculs.",
+          "is_correct": false,
+          "explanation": "Au contraire, le modèle néglige la forme et la répartition détaillée de l’objet pour ne garder qu’un point représentatif."
+        },
+        {
+          "id": "B",
+          "text": "Le point matériel assimile l’objet à un point unique concentrant sa masse.",
+          "is_correct": true,
+          "explanation": "C’est la définition donnée : l’objet est représenté par un point, ce qui simplifie l’étude lorsque la taille de l’objet n’est pas déterminante."
+        },
+        {
+          "id": "C",
+          "text": "Le point matériel décrit uniquement les objets immobiles.",
+          "is_correct": false,
+          "explanation": "Le point matériel sert justement à étudier un mouvement, donc il ne se limite pas aux objets immobiles."
+        },
+        {
+          "id": "D",
+          "text": "Le point matériel est le repère par rapport auquel le mouvement est observé.",
+          "is_correct": false,
+          "explanation": "Cette phrase définit le référentiel, pas le point matériel."
+        },
+        {
+          "id": "E",
+          "text": "Le point matériel impose que la trajectoire soit toujours circulaire.",
+          "is_correct": false,
+          "explanation": "Le modèle du point matériel ne fixe pas la forme de la trajectoire ; celle-ci peut être rectiligne, circulaire ou curviligne."
+        }
+      ],
+      "coverage_label": "Point matériel",
+      "learning_objective": "Reconnaître la simplification qu’introduit le modèle du point matériel.",
+      "correction_summary": "Le point matériel est une représentation simplifiée de l’objet, réduit à un point concentrant sa masse. Le piège fréquent est de lui attribuer le rôle du référentiel ou de lui imposer une trajectoire particulière.",
+      "course_clarification": "Ce modèle sert quand les dimensions de l’objet sont négligeables devant la situation étudiée. Il permet de décrire le mouvement sans suivre chaque partie de l’objet.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S2-Q3",
+      "prompt": "Quel énoncé décrit correctement le **référentiel** ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le référentiel est le repère par rapport auquel le mouvement est observé.",
+          "is_correct": true,
+          "explanation": "C’est la définition attendue : le mouvement n’est décrit qu’après avoir choisi le repère d’observation."
+        },
+        {
+          "id": "B",
+          "text": "Le référentiel est l’objet dont on étudie la trajectoire.",
+          "is_correct": false,
+          "explanation": "L’objet étudié est le système ; le référentiel est le cadre de description choisi pour observer son mouvement."
+        },
+        {
+          "id": "C",
+          "text": "Le référentiel est toujours lié à l’aéronef, quel que soit le problème étudié.",
+          "is_correct": false,
+          "explanation": "Le référentiel peut être terrestre ou lié à l’aéronef selon le contexte ; il n’est pas unique."
+        },
+        {
+          "id": "D",
+          "text": "Le référentiel ne change jamais la description mathématique du mouvement.",
+          "is_correct": false,
+          "explanation": "Le choix du référentiel influence justement la description mathématique du mouvement, donc la formulation peut changer."
+        },
+        {
+          "id": "E",
+          "text": "Le référentiel est une grandeur mesurée en mètres par seconde.",
+          "is_correct": false,
+          "explanation": "Un référentiel n’est pas une grandeur physique, mais un cadre de référence pour décrire une position ou un mouvement."
+        }
+      ],
+      "coverage_label": "Référentiel",
+      "learning_objective": "Distinguer le référentiel comme cadre de description du mouvement.",
+      "correction_summary": "Le référentiel est le repère choisi pour observer et décrire le mouvement. Le piège principal est de le confondre avec l’objet étudié ou avec une grandeur physique.",
+      "course_clarification": "Un même mouvement peut être décrit différemment selon le référentiel choisi. En pratique, on utilise souvent le référentiel terrestre ou celui lié à l’aéronef.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S2-Q4",
+      "prompt": "À propos des référentiels courants et de leur effet sur la description du mouvement, quel énoncé est exact ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le référentiel lié à l’aéronef est utile pour étudier des mouvements internes.",
+          "is_correct": false,
+          "explanation": "C’est précisément l’usage du référentiel lié à l’aéronef, donc cet énoncé est vrai alors qu’il devait être faux ici."
+        },
+        {
+          "id": "B",
+          "text": "Le choix du référentiel peut modifier la description mathématique du mouvement.",
+          "is_correct": false,
+          "explanation": "Cette affirmation est fausse dans cette question, mais elle est bien vraie en cinématique : le référentiel influence l’écriture du mouvement."
+        },
+        {
+          "id": "C",
+          "text": "Le référentiel terrestre est fixé par rapport à l’aéronef.",
+          "is_correct": false,
+          "explanation": "Le référentiel terrestre est défini par rapport au sol, pas par rapport à l’aéronef."
+        },
+        {
+          "id": "D",
+          "text": "Le référentiel lié à l’aéronef est un repère immobile par rapport au sol.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : un référentiel lié à l’aéronef se déplace avec l’aéronef et n’est pas immobile par rapport au sol."
+        },
+        {
+          "id": "E",
+          "text": "Le référentiel terrestre est fixe par rapport au sol.",
+          "is_correct": true,
+          "explanation": "C’est bien la caractéristique donnée : il sert de cadre d’observation lié au sol."
+        }
+      ],
+      "coverage_label": "Référentiels courants",
+      "learning_objective": "Identifier les référentiels terrestre et lié à l’aéronef, ainsi que l’impact du choix du référentiel.",
+      "correction_summary": "Le référentiel terrestre est fixé au sol et le référentiel lié à l’aéronef sert pour les mouvements internes. Le piège est de confondre le rôle de ces deux repères ou d’oublier que le choix du référentiel change la description mathématique.",
+      "course_clarification": "Le référentiel est un cadre d’observation : selon celui choisi, les coordonnées et les équations du mouvement peuvent changer. C’est pourquoi il faut toujours préciser le référentiel utilisé.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S2-Q5",
+      "prompt": "Quelle écriture décrit correctement la **position du point** $M$ ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La position du point $M$ s’écrit seulement \\(r=x+y+z\\), sans vecteurs.",
+          "is_correct": false,
+          "explanation": "Cette écriture oublie la nature vectorielle de la position et ne précise pas les directions spatiales."
+        },
+        {
+          "id": "B",
+          "text": "La position du point $M$ est indépendante du temps.",
+          "is_correct": false,
+          "explanation": "La position est notée \\(r(t)\\) justement pour montrer qu’elle varie avec le temps."
+        },
+        {
+          "id": "C",
+          "text": "La position du point $M$ peut s’écrire \\(r(t)=x(t)\\,\\mathbf{i}+y(t)\\,\\mathbf{j}+z(t)\\,\\mathbf{k}\\).",
+          "is_correct": true,
+          "explanation": "C’est l’écriture vectorielle donnée : les coordonnées du point dépendent du temps et sont projetées sur les vecteurs de base \\(\\mathbf{i}\\), \\(\\mathbf{j}\\) et \\(\\mathbf{k}\\)."
+        },
+        {
+          "id": "D",
+          "text": "La position du point $M$ s’écrit \\(v(t)=x(t)\\mathbf{i}+y(t)\\mathbf{j}+z(t)\\mathbf{k}\\).",
+          "is_correct": false,
+          "explanation": "La lettre \\(v(t)\\) désigne la vitesse, pas le vecteur position. Ici, on cherche bien \\(r(t)\\)."
+        },
+        {
+          "id": "E",
+          "text": "Les fonctions \\(x(t)\\), \\(y(t)\\) et \\(z(t)\\) représentent des unités de mesure, pas des coordonnées.",
+          "is_correct": false,
+          "explanation": "Ce sont des coordonnées de position dépendant du temps ; les unités associées sont des longueurs, en mètres dans le SI."
+        }
+      ],
+      "coverage_label": "Vecteur position",
+      "learning_objective": "Lire et interpréter l’écriture vectorielle de la position dans l’espace.",
+      "correction_summary": "La bonne écriture est celle du vecteur position avec ses trois composantes temporelles. Le piège consiste à confondre position et vitesse ou à oublier le caractère vectoriel de l’expression.",
+      "course_clarification": "Le vecteur position repère le point dans l’espace à un instant donné. Chaque coordonnée dépend du temps et s’exprime dans une base \b\\(\\mathbf{i},\\mathbf{j},\\mathbf{k}\\) associée au repère choisi.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "2",
+  "anchor_slide_id": "S2",
+  "question_count_target": 5,
+  "title": "QCM - Système, point matériel et référentiel"
+}

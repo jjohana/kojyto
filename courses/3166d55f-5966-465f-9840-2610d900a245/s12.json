@@ -1,0 +1,66 @@
+{
+  "slide_id": "S12",
+  "subpart_id": "7",
+  "title": "Équations horaires et trajectoires",
+  "objective": "Éliminer le temps pour obtenir l’équation de trajectoire et exploiter la règle de la chaîne.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s12-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Méthode et exemples",
+      "text": null,
+      "bullets": [
+        "**Équations horaires** : on part de \\(x(t)\\) et \\(y(t)\\), qui décrivent la position du point à l’instant \\(t\\). Pour obtenir l’**équation de trajectoire**, on élimine le paramètre \\(t\\) et on écrit directement \\(y\\) en fonction de \\(x\\).",
+        "**Pente instantanée** : la dérivée \\(dy/dx\\) se déduit des variations par rapport au temps. Cette écriture donne la pente de la courbe paramétrée ; si \\(dx/dt = 0\\), la pente n’est pas définie à cet instant.",
+        "**Deux tracés types** : \\(x(t)=4t\\) et \\(y(t)=t^2\\) donnent \\(t=x/4\\), puis \\(y=x^2/16\\) : la trajectoire est une **parabole**. Avec \\(x(t)=R\\cos(\\omega t)\\) et \\(y(t)=R\\sin(\\omega t)\\), on obtient \\(x^2+y^2=R^2\\) : la trajectoire est un **cercle** de rayon \\(R\\)."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Règle de la chaîne",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "OpenStax Calculus Volume 3 — 1.2 Calculus of Parametric Curves",
+      "locator": "section 1.2",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/1-2-calculus-of-parametric-curves?modal=MH"
+    },
+    {
+      "source_type": "web",
+      "label": "OpenStax Calculus Volume 1 — 3.6 The Chain Rule",
+      "locator": "section 3.6",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/3-6-the-chain-rule"
+    },
+    {
+      "source_type": "web",
+      "label": "Circle — Wolfram MathWorld",
+      "locator": "research",
+      "url": "https://mathworld.wolfram.com/Circle.html"
+    }
+  ],
+  "course_reference_note": "Les coordonnées du point sont écrites sous forme paramétrée, puis le paramètre \\(t\\) est éliminé pour retrouver l’équation de trajectoire. La pente se lit avec la règle de la chaîne.",
+  "teacher_notes": "Faire verbaliser l’élimination de \\(t\\) avant de calculer la trajectoire. Insister sur la différence entre loi horaire \\(x(t), y(t)\\) et équation cartésienne \\(y(x)\\)."
+}

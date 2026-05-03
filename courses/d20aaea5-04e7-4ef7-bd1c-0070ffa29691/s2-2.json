@@ -1,0 +1,137 @@
+{
+  "slide_id": "S2-2",
+  "subpart_id": "S2",
+  "title": "Repères de consommation et surveillance moteur",
+  "objective": "Interpréter des valeurs usuelles et les informations affichées au cockpit.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s2-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Valeurs repères de consommation spécifique",
+      "text": "La **consommation spécifique (Csp)** sert à comparer des turboréacteurs entre eux : elle relie la consommation au niveau de poussée fourni.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Moteur",
+          "Contexte",
+          "Csp",
+          "Poussée",
+          "Lecture rapide"
+        ],
+        [
+          "Safran M88",
+          "Militaire, sans postcombustion (PC)",
+          "1,8 kg/h.daN",
+          "5 000 daN",
+          "Repère au décollage"
+        ],
+        [
+          "Safran M88",
+          "Militaire, avec PC",
+          "1,8 kg/h.daN",
+          "7 500 daN",
+          "La PC augmente la poussée"
+        ],
+        [
+          "PW JT4 (B707)",
+          "Avion de ligne ancien",
+          "0,84 lb/h.lbf",
+          "17 500 lbf",
+          "Comparaison historique"
+        ],
+        [
+          "CFM56-5A1 (A320)",
+          "Turboréacteur double flux civil",
+          "0,33 lb/h.lbf",
+          "25 000 lbf",
+          "Forte efficacité propulsive"
+        ],
+        [
+          "GE90-90 (B777)",
+          "Turbofan très puissant de gros-porteur",
+          "0,45 lb/h.lbf",
+          "90 000 lbf",
+          "Très forte poussée"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture cockpit : trois informations complémentaires",
+      "text": null,
+      "bullets": [
+        "**N1** : régime de référence du fan ; il donne une image directe de l’état de fonctionnement et sert au suivi de la poussée.",
+        "**EGT** (Exhaust Gas Temperature, température des gaz d’échappement) : paramètre de **limite thermique** ; une hausse excessive réduit la marge disponible.",
+        "**FF** (Fuel Flow, débit carburant) : valeur instantanée de la consommation affichée au poste ; avec N1 et EGT, elle permet de relier **performance**, **marge thermique** et **consommation réelle**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Conversion en consommation horaire",
+      "text": "Qmc est le débit massique de carburant, exprimé en kg/s. Ch est la consommation horaire, exprimée en kg/h.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "Ch = Q_{mc} \\times 3600"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Safran — M88",
+      "locator": "Page produit M88",
+      "url": "https://www.safran-group.com/products-services/m88-proven-performance-and-reliability"
+    },
+    {
+      "source_type": "web",
+      "label": "Safran — CFM56",
+      "locator": "Communiqué CFM56 fleet",
+      "url": "https://www.safran-group.com/pressroom/cfm56-fleet-surpassed-800-million-flight-hours-2016-06-02"
+    },
+    {
+      "source_type": "web",
+      "label": "GE — GE90",
+      "locator": "Communiqué GE90 record",
+      "url": "https://www.ge.com/news/press-releases/ge-announces-record-year-worlds-largest-most-powerful-jet-engine"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus — N1 / EGT",
+      "locator": "Indications moteur et limites EGT",
+      "url": "https://safetyfirst.airbus.com/app/themes/mh_newsdesk/iframe.php?p=78620"
+    },
+    {
+      "source_type": "web",
+      "label": "A318 Aircraft Characteristics - Airport and Maintenance Planning | Airbus",
+      "locator": "research",
+      "url": "https://www.airbus.com/en/products-services/commercial-aircraft/a318.html"
+    },
+    {
+      "source_type": "web",
+      "label": "737-400 Engine Indicating System (EIS) | FAA",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/G-OBME"
+    }
+  ],
+  "course_reference_note": "La page donne les définitions de **Ch** et **Csp**, puis les valeurs repères pour M88, JT4, CFM56-5A1 et GE90-90. L’illustration centrale montre aussi un affichage moteur avec **N1**, **EGT** et **FF**.",
+  "teacher_notes": "Faire comparer les ordres de grandeur sans sortir du cadre des valeurs fournies. Insister sur le fait que **N1**, **EGT** et **FF** se lisent ensemble : régime, limite thermique et consommation instantanée."
+}

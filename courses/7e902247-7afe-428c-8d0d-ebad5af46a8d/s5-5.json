@@ -1,0 +1,98 @@
+{
+  "slide_id": "S5-5",
+  "subpart_id": "S5",
+  "title": "Panneau ELEC : sélection des sources et bus",
+  "objective": "Identifier les commandes et voyants du panneau ELEC, puis relier chaque libellé à sa fonction de sélection ou de supervision.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s5-5-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repérage des commandes et voyants essentiels",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Famille",
+          "Éléments",
+          "Rôle de lecture"
+        ],
+        [
+          "Supervision / état",
+          "FAULT, OFF, AUTO, A/THR",
+          "Repères de **commande** et de **surveillance** de l’interface ELEC ; ils indiquent le mode ou l’état associé."
+        ],
+        [
+          "Liaison / répartition",
+          "BUS TIE, AC ESS FEED",
+          "**BUS TIE** relie ou isole les bus selon la logique de répartition ; **AC ESS FEED** concerne l’alimentation du **bus AC essentiel**."
+        ],
+        [
+          "Sources de production",
+          "GEN, APU GEN, EXT A, EXT B",
+          "Sélection et présence des sources disponibles : générateurs moteurs, générateur APU et alimentations externes."
+        ],
+        [
+          "Charges gérées",
+          "GALLEY, COMMERCIAL",
+          "Charges de bord identifiées sur le panneau, susceptibles d’être prises en compte dans la répartition électrique."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Idée clé à retenir",
+      "text": null,
+      "bullets": [
+        "Le panneau ELEC rassemble les **sources**, les **liaisons de bus** et certaines **charges** ; l’ECAM affiche leur état et leurs connexions de façon lisible sur la page électrique.",
+        "Un **bus** est un point commun de distribution électrique ; **BUS TIE** sert à connecter ou séparer ces points pour maintenir l’alimentation disponible.",
+        "Conserver les libellés tels quels, notamment **BUS TIE** et **AC ESS FEED**, afin de rester fidèle au repérage du panneau."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "SKYbrary Aviation Safety - Bus or Bus-Bar",
+      "locator": "Définition d’un bus comme point commun de distribution électrique",
+      "url": "https://skybrary.aero/index.php/articles/bus-or-bus-bar"
+    },
+    {
+      "source_type": "web",
+      "label": "SKYbrary Aviation Safety - Aircraft Electrical Systems",
+      "locator": "Logique de distribution et de répartition électrique",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-electrical-systems"
+    },
+    {
+      "source_type": "web",
+      "label": "A320 Electrical - SmartCockpit",
+      "locator": "research",
+      "url": "https://www.smartcockpit.com/download/a320-electrical/"
+    },
+    {
+      "source_type": "web",
+      "label": "Preventing loss of engine generators on A320 family, A330 and A340 aircraft - Airbus SafetyFirst",
+      "locator": "research",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    }
+  ],
+  "course_reference_note": "Repérage sur la page ELEC : les libellés du panneau sont mis en regard du synoptique des sources et des bus. L’ECAM montre les connexions et l’état des alimentations associées.",
+  "teacher_notes": "Faire mémoriser les familles : **supervision**, **liaison/répartition**, **sources de production**, **charges gérées**. Insister sur l’écriture exacte des sigles et sur la fonction de répartition portée par le panneau."
+}

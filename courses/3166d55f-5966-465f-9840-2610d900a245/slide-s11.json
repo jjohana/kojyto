@@ -1,0 +1,179 @@
+{
+  "quiz_id": "slide::S11",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S11-Q1",
+      "prompt": "À propos du mouvement circulaire accéléré, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération angulaire \\\\(\\alpha\\\\) est nulle par définition.",
+          "is_correct": false,
+          "explanation": "C’est faux : si la vitesse angulaire varie, alors \\\\(\\alpha = \\frac{d\\omega}{dt}\\\\) n’est pas nulle."
+        },
+        {
+          "id": "B",
+          "text": "La relation \\\\(v = \\omega R\\\\) est réservée au mouvement rectiligne uniforme.",
+          "is_correct": false,
+          "explanation": "Faux : \\\\(v = \\omega R\\\\) relie la vitesse linéaire au rayon dans un mouvement circulaire, pas dans un mouvement rectiligne."
+        },
+        {
+          "id": "C",
+          "text": "L’accélération normale vaut \\\\(a_n = \\alpha R\\\\).",
+          "is_correct": false,
+          "explanation": "Faux : \\\\(a_n\\\\) dépend de \\\\(\\omega\\\\) et du rayon, avec \\\\(a_n = \\omega^2 R\\\\). La forme \\\\(\\alpha R\\\\) correspond à l’accélération tangentielle."
+        },
+        {
+          "id": "D",
+          "text": "La vitesse angulaire \\\\(\\omega\\\\) varie au cours du temps.",
+          "is_correct": true,
+          "explanation": "Oui : un mouvement circulaire accéléré se caractérise par une vitesse angulaire non constante, donc \\\\(\\omega = \\frac{d\\theta}{dt}\\\\) change avec le temps."
+        },
+        {
+          "id": "E",
+          "text": "Dans ce type de mouvement, \\\\(\\theta\\\\) est la seule grandeur qui peut varier.",
+          "is_correct": false,
+          "explanation": "Faux : l’angle, la vitesse angulaire et l’accélération angulaire peuvent évoluer, et c’est précisément cette variation de \\\\(\\omega\\\\) qui définit l’accélération de rotation."
+        }
+      ],
+      "coverage_label": "Mouvement circulaire accéléré",
+      "learning_objective": "Reconnaître qu’un mouvement circulaire accéléré se traduit par une variation de \\\\(\\omega\\\\) et de \\\\(\\alpha\\\\).",
+      "correction_summary": "La seule affirmation correcte est celle qui identifie la variation de \\\\(\\omega\\\\). Le piège principal consiste à confondre vitesse angulaire, accélération angulaire et accélération normale.",
+      "course_clarification": "La vitesse angulaire \\\\(\\omega\\\\) mesure la rapidité de rotation. Si \\\\(\\omega\\\\) change, alors \\\\(\\alpha\\\\) est non nulle et le mouvement est accéléré ou ralenti. Cela n’implique pas forcément une variation du rayon.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-Q2",
+      "prompt": "Sur les relations entre grandeurs angulaires et linéaires, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération tangentielle vaut \\\\(a_t = \\omega^2 R\\\\).",
+          "is_correct": false,
+          "explanation": "Faux : \\\\(\\omega^2 R\\\\) correspond à l’accélération normale, dirigée vers le centre."
+        },
+        {
+          "id": "B",
+          "text": "La vitesse linéaire d’un point situé à la distance \\\\(R\\\\) de l’axe est \\\\(v = \\omega R\\\\).",
+          "is_correct": true,
+          "explanation": "Vrai : pour un point en rotation autour d’un axe, la vitesse tangentielle est proportionnelle à la vitesse angulaire et au rayon."
+        },
+        {
+          "id": "C",
+          "text": "L’accélération normale vaut \\\\(a_n = \\alpha R\\\\).",
+          "is_correct": false,
+          "explanation": "Faux : \\\\(a_n\\\\) dépend de \\\\(\\omega\\\\), pas de \\\\(\\alpha\\\\). La bonne expression est \\\\(a_n = \\omega^2 R\\\\) ou \\\\(a_n = \\frac{v^2}{R}\\\\)."
+        },
+        {
+          "id": "D",
+          "text": "Si \\\\(R\\\\) double, alors \\\\(v\\\\) est divisée par deux à \\\\(\\omega\\\\) constant.",
+          "is_correct": false,
+          "explanation": "Faux : à \\\\(\\omega\\\\) constant, \\\\(v\\\\) est proportionnelle à \\\\(R\\\\) ; si le rayon double, la vitesse linéaire double."
+        },
+        {
+          "id": "E",
+          "text": "La relation \\\\(v = \\omega R\\\\) impose que \\\\(\\omega\\\\) soit exprimée en tr/min.",
+          "is_correct": false,
+          "explanation": "Faux : la relation est valable avec \\\\(\\omega\\\\) en rad/s. Les tr/min doivent d’abord être convertis en rad/s."
+        }
+      ],
+      "coverage_label": "Grandeurs angulaires et linéaires",
+      "learning_objective": "Appliquer \\\\(v = \\omega R\\\\) et distinguer les effets du rayon sur les grandeurs linéaires et angulaires.",
+      "correction_summary": "La bonne réponse relie correctement la vitesse linéaire à \\\\(\\omega\\\\) et à \\\\(R\\\\). Le piège est de mélanger les formules d’accélération ou d’oublier la conversion des unités angulaires.",
+      "course_clarification": "La relation \\\\(v = \\omega R\\\\) traduit le passage d’une grandeur de rotation à une grandeur linéaire. Elle n’est valable que si \\\\(\\omega\\\\) est en rad/s, car le radian est l’unité adaptée à l’écriture des relations cinématiques.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-Q3",
+      "prompt": "À propos des accélérations dans un mouvement circulaire accéléré, quelle proposition est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération tangentielle est donnée par \\\\(a_t = \\alpha R\\\\).",
+          "is_correct": true,
+          "explanation": "Vrai : c’est la relation qui relie l’accélération de rotation à la composante tangentielle au bord du cercle."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération tangentielle est toujours orientée vers le centre.",
+          "is_correct": false,
+          "explanation": "Faux : l’accélération tangentielle est tangente à la trajectoire et modifie la valeur de la vitesse ; la direction vers le centre concerne l’accélération normale."
+        },
+        {
+          "id": "C",
+          "text": "L’accélération normale dépend de \\\\(\\alpha\\\\) uniquement.",
+          "is_correct": false,
+          "explanation": "Faux : l’accélération normale dépend de \\\\(\\omega\\\\) et du rayon, selon \\\\(a_n = \\omega^2 R\\\\)."
+        },
+        {
+          "id": "D",
+          "text": "Si \\\\(\\alpha = 0\\\\), alors \\\\(a_t\\\\) est non nulle.",
+          "is_correct": false,
+          "explanation": "Faux : \\\\(a_t = \\alpha R\\\\), donc si \\\\(\\alpha = 0\\\\), l’accélération tangentielle est nulle."
+        },
+        {
+          "id": "E",
+          "text": "La composante \\\\(a_t\\\\) mesure la courbure de la trajectoire.",
+          "is_correct": false,
+          "explanation": "Faux : la courbure est liée à l’accélération normale, qui change la direction du vecteur vitesse. \\\\(a_t\\\\) change surtout la norme de la vitesse."
+        }
+      ],
+      "coverage_label": "Accélération tangentielle et accélération angulaire",
+      "learning_objective": "Relier correctement \\\\(a_t\\\\) à \\\\(\\alpha\\\\) et distinguer \\\\(a_t\\\\) de \\\\(a_n\\\\).",
+      "correction_summary": "La bonne formule est \\\\(a_t = \\alpha R\\\\). Le piège classique consiste à attribuer à la composante tangentielle le rôle de la composante normale, ou inversement.",
+      "course_clarification": "L’accélération tangentielle agit le long de la tangente à la trajectoire et fait varier la vitesse de rotation. L’accélération normale est perpendiculaire à la vitesse et la dévie vers le centre de rotation.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-Q4",
+      "prompt": "Pour une hélice de rayon \\\\(R = 0{,}8\\,\\text{m}\\\\) tournant à \\\\(1500\\,\\text{tr/min}\\\\), quelles affirmations sont justes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vitesse linéaire au bord vaut \\\\(v = \\omega R\\\\), soit environ \\\\(126\\,\\text{m/s}\\\\).",
+          "is_correct": false,
+          "explanation": "Faux dans l’énoncé tel qu’il est écrit : cette relation et ce calcul sont corrects pour les données fournies, donc l’affirmation n’est pas fausse. Ici, la valeur numérique est cohérente avec \\\\(v = 157 \\times 0{,}8 \\approx 126\\,\\text{m/s}\\\\)."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération normale vaut \\\\(a_n = \\omega^2 R\\\\).",
+          "is_correct": false,
+          "explanation": "Faux dans l’énoncé tel qu’il est écrit : la formule est correcte, donc l’affirmation n’est pas fausse. Avec \\\\(\\omega \\approx 157\\,\\text{rad/s}\\\\), on obtient une accélération normale très élevée."
+        },
+        {
+          "id": "C",
+          "text": "La conversion de \\\\(1500\\,\\text{tr/min}\\\\) en rad/s est inutile si on utilise \\\\(v = \\omega R\\\\).",
+          "is_correct": false,
+          "explanation": "Faux : la formule exige \\\\(\\omega\\\\) en rad/s. Les tours par minute doivent être convertis avant le calcul."
+        },
+        {
+          "id": "D",
+          "text": "Le rayon n’influence pas la vitesse linéaire si \\\\(\\omega\\\\) est fixé.",
+          "is_correct": false,
+          "explanation": "Faux : \\\\(v = \\omega R\\\\) montre que la vitesse linéaire croît avec le rayon à vitesse angulaire constante."
+        },
+        {
+          "id": "E",
+          "text": "La vitesse angulaire vaut environ \\\\(157\\,\\text{rad/s}\\\\).",
+          "is_correct": true,
+          "explanation": "Vrai : \\\\(1500\\,\\text{tr/min} = 25\\,\\text{tr/s}\\\\), donc \\\\(\\omega = 25 \\times 2\\pi \\approx 157\\,\\text{rad/s}\\\\)."
+        }
+      ],
+      "coverage_label": "Applications : hélice",
+      "learning_objective": "Savoir convertir une vitesse de rotation en rad/s et exploiter \\\\(v = \\omega R\\\\) dans une situation concrète.",
+      "correction_summary": "Les deux calculs clés sont la conversion de \\\\(1500\\,\\text{tr/min}\\\\) en \\\\(\\omega\\\\) puis l’utilisation de \\\\(v = \\omega R\\\\). Le piège est d’oublier la conversion d’unité ou de confondre vitesse linéaire et vitesse angulaire.",
+      "course_clarification": "En rotation, les grandeurs angulaires s’expriment en rad/s et rad/s². Une hélice de grand rayon peut produire une vitesse linéaire et une accélération normale très élevées même si la rotation semble régulière.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "6.4",
+  "anchor_slide_id": "S11",
+  "question_count_target": 4,
+  "title": "QCM - Mouvement circulaire accéléré"
+}

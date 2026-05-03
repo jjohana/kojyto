@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s7",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s7_q1",
+      "prompt": "Concernant le technicien avitailleur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il dirige la circulation aérienne depuis une tour de contrôle.",
+          "is_correct": false,
+          "explanation": "Cette mission correspond à l’aiguilleur du ciel, pas à l’avitailleur."
+        },
+        {
+          "id": "B",
+          "text": "Il réalise des tests sur les moteurs pour vérifier leur conformité.",
+          "is_correct": false,
+          "explanation": "Les essais techniques sur les composants et systèmes relèvent du technicien d’essai."
+        },
+        {
+          "id": "C",
+          "text": "Il supervise l’embarquement des passagers et la gestion des bagages.",
+          "is_correct": false,
+          "explanation": "Cette fonction correspond au chef d’escale, qui coordonne les opérations passagers et bagages."
+        },
+        {
+          "id": "D",
+          "text": "Il ravitaille les avions en carburant.",
+          "is_correct": true,
+          "explanation": "C’est sa mission principale : assurer l’approvisionnement des avions en carburant au sol."
+        },
+        {
+          "id": "E",
+          "text": "Il organise les trajectoires, la vitesse et l’altitude des vols.",
+          "is_correct": false,
+          "explanation": "La gestion de la trajectoire et des paramètres de vol est du ressort du contrôle aérien."
+        }
+      ],
+      "coverage_label": "Avitailleur",
+      "learning_objective": "Identifier la mission principale du technicien avitailleur.",
+      "correction_summary": "La bonne réponse est celle qui décrit le ravitaillement en carburant. Les autres propositions confondent l’avitailleur avec d’autres métiers de l’aéronautique.",
+      "course_clarification": "L’avitailleur intervient au sol pour fournir le kérosène nécessaire à l’avion. Son rôle est opérationnel et lié à la préparation du vol avant départ.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s7_q2",
+      "prompt": "Quelle affirmation décrit correctement la quantité de kérosène à livrer ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle est choisie librement par l’agent selon la taille de l’avion.",
+          "is_correct": false,
+          "explanation": "La quantité ne dépend pas d’un choix personnel, mais d’une décision opérationnelle liée au vol."
+        },
+        {
+          "id": "B",
+          "text": "Elle est déterminée précisément à partir des indications du pilote.",
+          "is_correct": true,
+          "explanation": "L’avitailleur doit respecter la quantité demandée par le pilote, sans approximation."
+        },
+        {
+          "id": "C",
+          "text": "Elle dépend du poids, de la distance et des conditions météo.",
+          "is_correct": false,
+          "explanation": "Cette proposition est vraie en soi, mais ici elle est fausse car elle affirme que la quantité est indépendante des indications du pilote, alors que les deux éléments vont ensemble."
+        },
+        {
+          "id": "D",
+          "text": "Elle est identique pour tous les vols d’un même appareil.",
+          "is_correct": false,
+          "explanation": "La quantité varie selon les conditions du vol ; elle n’est donc pas fixe d’un vol à l’autre."
+        },
+        {
+          "id": "E",
+          "text": "Elle dépend uniquement de la couleur de l’avion.",
+          "is_correct": false,
+          "explanation": "La couleur de l’avion n’a aucun lien avec le calcul du carburant."
+        }
+      ],
+      "coverage_label": "Quantités de kérosène",
+      "learning_objective": "Reconnaître le principe de détermination de la quantité de carburant à livrer.",
+      "correction_summary": "La quantité à ravitailler est fixée par les besoins du vol et doit être respectée précisément. Le piège consiste à confondre une décision arbitraire avec un calcul fondé sur des paramètres de vol.",
+      "course_clarification": "Le pilote détermine la quantité à embarquer en tenant compte des contraintes du vol. L’avitailleur exécute ensuite ce besoin avec précision.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s7_q3",
+      "prompt": "Quels paramètres entrent dans le calcul des quantités de kérosène ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le poids de l’avion, la distance à parcourir et les conditions météo.",
+          "is_correct": true,
+          "explanation": "Ces trois éléments influencent les besoins en carburant et figurent explicitement parmi les critères cités."
+        },
+        {
+          "id": "B",
+          "text": "Le nombre de passagers au comptoir d’enregistrement et le code couleur de la compagnie.",
+          "is_correct": false,
+          "explanation": "Ces éléments ne servent pas à déterminer la quantité de kérosène."
+        },
+        {
+          "id": "C",
+          "text": "La météo seulement, sans tenir compte du reste.",
+          "is_correct": false,
+          "explanation": "La météo compte, mais elle n’est pas le seul facteur mentionné."
+        },
+        {
+          "id": "D",
+          "text": "Le type de siège choisi par les passagers.",
+          "is_correct": false,
+          "explanation": "Le choix des sièges n’intervient pas dans le calcul du carburant."
+        },
+        {
+          "id": "E",
+          "text": "Le numéro de la piste de roulage utilisé pour le stationnement.",
+          "is_correct": false,
+          "explanation": "Le stationnement ne détermine pas la quantité de carburant à livrer."
+        }
+      ],
+      "coverage_label": "Calcul des quantités",
+      "learning_objective": "Identifier les facteurs qui influencent la quantité de carburant à ravitailler.",
+      "correction_summary": "Le calcul repose sur le poids, la distance et la météo. Il ne faut pas ajouter des éléments sans lien direct avec la mission de vol.",
+      "course_clarification": "Plus le vol est lourd, long ou soumis à des conditions météorologiques défavorables, plus les besoins en carburant peuvent varier. L’objectif est d’adapter la quantité au vol prévu.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s7_q4",
+      "prompt": "Quelles opérations font partie du travail de l’avitailleur ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prendre les commandes des passagers et gérer les réservations.",
+          "is_correct": false,
+          "explanation": "La gestion des passagers relève d’autres fonctions aéroportuaires, pas de l’avitaillement."
+        },
+        {
+          "id": "B",
+          "text": "Contrôler la navigation aérienne depuis une tour de contrôle.",
+          "is_correct": false,
+          "explanation": "Le contrôle de la navigation aérienne appartient au métier d’aiguilleur du ciel."
+        },
+        {
+          "id": "C",
+          "text": "Réaliser les essais de certification des moteurs et des systèmes hydrauliques.",
+          "is_correct": false,
+          "explanation": "Ces essais concernent le technicien d’essai, pas l’avitailleur."
+        },
+        {
+          "id": "D",
+          "text": "Coordonner l’embarquement et résoudre les problèmes de bagages.",
+          "is_correct": false,
+          "explanation": "Ces missions correspondent au chef d’escale."
+        },
+        {
+          "id": "E",
+          "text": "Manipuler les équipements de transfert de carburant et vérifier les systèmes d’alimentation de l’avion.",
+          "is_correct": true,
+          "explanation": "Ces tâches sont explicitement mentionnées et font partie de l’intervention technique au sol."
+        }
+      ],
+      "coverage_label": "Équipements et systèmes",
+      "learning_objective": "Reconnaître les gestes techniques associés au transfert de carburant.",
+      "correction_summary": "L’avitailleur utilise le matériel de transfert et contrôle les systèmes liés au carburant. Le piège est de confondre cette activité avec des fonctions de trafic, de test ou d’exploitation passagers.",
+      "course_clarification": "Le ravitaillement n’est pas seulement un remplissage : il implique un matériel spécifique et une vérification des circuits d’alimentation. Cela garantit la sécurité et la bonne alimentation de l’avion.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s7_q5",
+      "prompt": "À la fin d’une opération d’avitaillement, quelles actions sont attendues ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Abandonner toute vérification dès que le réservoir est rempli.",
+          "is_correct": false,
+          "explanation": "Le contrôle ne s’arrête pas au remplissage : un échantillon est prélevé et les données sont consignées."
+        },
+        {
+          "id": "B",
+          "text": "Modifier la quantité livrée sans informer le pilote.",
+          "is_correct": false,
+          "explanation": "La quantité doit être respectée précisément ; la modifier sans accord serait contraire à la procédure."
+        },
+        {
+          "id": "C",
+          "text": "Prélever un échantillon de carburant, enregistrer les données et facturer la prestation.",
+          "is_correct": true,
+          "explanation": "Ces trois actions sont indiquées comme faisant partie de la fin d’opération et du suivi administratif."
+        },
+        {
+          "id": "D",
+          "text": "Remettre la facture directement aux passagers.",
+          "is_correct": false,
+          "explanation": "La prestation est liée à l’exploitation aéronautique, pas à la relation commerciale avec les passagers."
+        },
+        {
+          "id": "E",
+          "text": "Laisser le carburant sans contrôle de qualité pour gagner du temps.",
+          "is_correct": false,
+          "explanation": "Le contrôle qualité par prélèvement est au contraire une étape attendue après chaque opération."
+        }
+      ],
+      "coverage_label": "Contrôle qualité et traçabilité",
+      "learning_objective": "Identifier les tâches de fin d’avitaillement, y compris le contrôle qualité et la facturation.",
+      "correction_summary": "Après l’opération, il faut vérifier la qualité du carburant, tracer l’intervention et établir la facturation. Le principal piège est d’oublier l’aspect administratif et le contrôle qualité.",
+      "course_clarification": "Le prélèvement d’un échantillon sert à contrôler la qualité du carburant. L’enregistrement des données et la facturation assurent la traçabilité de l’intervention.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s7",
+  "anchor_slide_id": "s7",
+  "question_count_target": 5,
+  "title": "QCM - Avitailleur"
+}

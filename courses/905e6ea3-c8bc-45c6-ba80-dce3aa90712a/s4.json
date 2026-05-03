@@ -1,0 +1,76 @@
+{
+  "slide_id": "s4",
+  "subpart_id": "s4",
+  "title": "Ingénieur en aéronautique",
+  "objective": "Identifier les missions et les champs de collaboration de l’ingénieur aéronautique.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s4-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Missions principales",
+      "text": null,
+      "bullets": [
+        "**Concevoir** des solutions aéronautiques en reliant informatique et conception pour imaginer des aéronefs ou des systèmes plus performants.",
+        "**Développer et tester** des prototypes afin de vérifier le comportement des solutions, repérer les défauts et valider les choix techniques.",
+        "**Créer des logiciels** et des outils d’aide à la conception pour améliorer les performances des aéronefs."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Domaines techniques et collaboration",
+      "text": null,
+      "bullets": [
+        "Les sous-disciplines citées sont l’**aérodynamique**, la **propulsion**, les **structures**, l’**avionique** et le **contrôle de vol**.",
+        "Le travail se fait avec des équipes de **physique**, **mécanique**, **électronique** et **matériaux** pour faire converger conception, essais et intégration.",
+        "Selon les besoins du programme, il peut aussi échanger avec les domaines de l’**hydraulique**, de la **pneumatique** et de l’**armement**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Aerospace Engineers : Occupational Outlook Handbook",
+      "locator": "aérodynamique, structures, navigation/contrôle, propulsion",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/aerospace-engineers.htm"
+    },
+    {
+      "source_type": "web",
+      "label": "Ingénieur ENAC",
+      "locator": "avionique, systèmes avion, aérodynamique",
+      "url": "https://www.enac.fr/fr/ingenierie"
+    },
+    {
+      "source_type": "web",
+      "label": "Guides et domaines d’expertise NASA (Aerostructures, NESC, NASA Technology Taxonomy)",
+      "locator": "research",
+      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/aerostructures/"
+    },
+    {
+      "source_type": "web",
+      "label": "Aerospace Engineers : Occupational Outlook Handbook: : U.S. Bureau of Labor Statistics",
+      "locator": "research",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/aerospace-engineers.htm?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Le passage présente l’ingénieur en aéronautique comme un spécialiste de l’informatique et de la conception aéronautique. Il insiste sur les prototypes, les logiciels de performance et le travail en équipe pluridisciplinaire.",
+  "teacher_notes": "Faire relier chaque mission à un exemple concret : concevoir, tester, corriger, puis intégrer avec d’autres spécialistes."
+}

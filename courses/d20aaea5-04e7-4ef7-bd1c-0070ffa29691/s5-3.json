@@ -1,0 +1,67 @@
+{
+  "slide_id": "S5-3",
+  "subpart_id": "S5",
+  "title": "Tuyère convergente, rapport critique et supersonique",
+  "objective": "Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s5-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture physique du rapport critique",
+      "text": null,
+      "bullets": [
+        "En **subsonique** (**M < 1**), le terme **M² - 1** est négatif : une **section qui diminue** accélère l’écoulement (**S ↓ → V ↑**), tandis qu’une section qui augmente le ralentit.",
+        "Le rapport **Pt4/P5** est le **taux de détente** ou **rapport critique**. Quand **M5 = 1**, on atteint le régime critique au **col** ; ici **Rc = Pt4/P5 ≈ 2** et, si **P5 = P∞**, la tuyère est dite **adaptée**.",
+        "Dans une tuyère **convergente-divergente**, le **convergent** amène l’écoulement vers **M = 1** au col, puis le **divergent** permet le régime **supersonique** (**M > 1**) avec **S ↑ → V ↑**.",
+        "Le **réglage du col** dépend de **Pt4** et du régime moteur ; le **divergent** sert à l’**adaptation au Mach de vol**, tandis qu’une géométrie fixe n’est correcte que pour une condition de pression donnée."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation aire–vitesse",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\frac{ds}{S}=\\frac{dv}{V}(M^2-1)"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Nozzle Design",
+      "locator": "col, Mach 1 et accélération dans le divergent",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/nozzle-design/"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Converging-Diverging Verification Nozzle",
+      "locator": "variation de la pression de sortie et adaptation de la tuyère",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/cdv/cdv.html"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA Technical Reports Server — Experimental Study of Gas-Flow Separation in Overexpanded Exhaust Nozzles for Rocket Motors",
+      "locator": "research",
+      "url": "https://ntrs.nasa.gov/citations/19630039654"
+    }
+  ],
+  "course_reference_note": "Les repères Pt4, P5, M et le col servent à lire l’étranglement puis l’adaptation de la tuyère. Le passage distingue clairement le domaine subsonique, le cas critique et l’écoulement supersonique.",
+  "teacher_notes": "Faire partir de la formule, puis demander le signe de M² - 1 en subsonique et en supersonique. Insister sur le rôle du col : M = 1 au point critique, puis adaptation au Mach de vol."
+}

@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S5-1",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S5-1-Q1",
+      "prompt": "À propos de la page ECAM AC, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle affiche uniquement des paramètres hydrauliques sans lien avec l’électricité.",
+          "is_correct": false,
+          "explanation": "Les éléments visibles concernent l’électricité AC : sources, bus, commandes et surveillance électrique."
+        },
+        {
+          "id": "B",
+          "text": "Elle est réservée à la navigation de maintenance sans indication de sources.",
+          "is_correct": false,
+          "explanation": "La page montre au contraire un synoptique de surveillance et de commande des alimentations AC."
+        },
+        {
+          "id": "C",
+          "text": "Elle ne comporte aucun état lisible pour les sources ou le réseau.",
+          "is_correct": false,
+          "explanation": "Des états et valeurs sont affichés, par exemple pour GEN 1, GEN 2, IDG ou l’APU GEN."
+        },
+        {
+          "id": "D",
+          "text": "Elle présente les sources AC et leur connexion au réseau électrique.",
+          "is_correct": true,
+          "explanation": "La page sert bien à visualiser les sources AC et la façon dont elles alimentent ou rejoignent le réseau."
+        },
+        {
+          "id": "E",
+          "text": "Elle affiche principalement des données de carburant et de masse avion.",
+          "is_correct": false,
+          "explanation": "Aucune information carburant ou masse n’est l’objet de cette page ; le thème est l’électricité AC."
+        }
+      ],
+      "coverage_label": "ECAM ELEC AC : lecture générale de la page",
+      "learning_objective": "Identifier la fonction générale de la page ECAM AC et reconnaître son rôle de surveillance des sources AC.",
+      "correction_summary": "La bonne idée est que cette page affiche les sources AC et leur connexion au réseau. Le piège consiste à la confondre avec une page de systèmes non électriques ou purement de maintenance.",
+      "course_clarification": "ECAM désigne l’affichage de surveillance en cockpit. Sur cette page, on lit l’état des sources AC, des bus et des commandes associées, pas une logique de fonctionnement complète.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-1-Q2",
+      "prompt": "Parmi les valeurs suivantes, quelle association correspond à l’affichage de la page ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "GEN 2 est affiché à 90% / 230 V / 50 HZ.",
+          "is_correct": false,
+          "explanation": "La valeur indiquée pour GEN 2 est 62% / 115 V / 400 HZ, pas cette combinaison."
+        },
+        {
+          "id": "B",
+          "text": "GEN 1 est affiché à 62% / 115 V / 400 HZ.",
+          "is_correct": true,
+          "explanation": "Cette valeur est explicitement donnée sur le synoptique pour GEN 1."
+        },
+        {
+          "id": "C",
+          "text": "IDG 1 est affiché à 115 °C.",
+          "is_correct": false,
+          "explanation": "L’indication visible pour IDG 1 est 77 °C, donc cette valeur est fausse."
+        },
+        {
+          "id": "D",
+          "text": "IDG 2 est affiché à 400 °C.",
+          "is_correct": false,
+          "explanation": "L’affichage montre 76 °C pour IDG 2 ; 400 correspond à la fréquence des générateurs, pas à une température."
+        },
+        {
+          "id": "E",
+          "text": "APU GEN est affiché à 27,8 V.",
+          "is_correct": false,
+          "explanation": "27,8 V apparaît sur le panneau schématique, mais pas comme valeur de l’APU GEN."
+        }
+      ],
+      "coverage_label": "Indications et valeurs affichées",
+      "learning_objective": "Lire correctement une valeur affichée sur le synoptique AC et distinguer tension, fréquence et température.",
+      "correction_summary": "GEN 1 est bien affiché avec 62% / 115 V / 400 HZ. Le piège consiste à mélanger les grandeurs ou à attribuer à un équipement la valeur d’un autre symbole du synoptique.",
+      "course_clarification": "Une même ligne peut regrouper plusieurs grandeurs : pour un générateur, on lit ici un pourcentage, une tension et une fréquence. Les températures affichées pour les IDG sont des paramètres distincts.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-1-Q3",
+      "prompt": "À propos du panneau de contrôle et d’indication AC GENERATION, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il contient des P/BSW et des indicateurs pour commander et surveiller la source de secours EMER GEN / CSM/G.",
+          "is_correct": true,
+          "explanation": "Le texte associé au panneau précise qu’il regroupe des P/BSW et des indicateurs liés à la source de secours, l’EMER GEN / CSM/G."
+        },
+        {
+          "id": "B",
+          "text": "Il sert uniquement à la distribution des passagers vers les galley.",
+          "is_correct": false,
+          "explanation": "Le panneau est dédié à la commande et à la surveillance de la génération AC, pas à la distribution commerciale."
+        },
+        {
+          "id": "C",
+          "text": "Il ne comporte aucun organe de commande, seulement des voyants de température.",
+          "is_correct": false,
+          "explanation": "Le panneau est décrit comme un ensemble de commandes et d’indicateurs, avec des P/BSW."
+        },
+        {
+          "id": "D",
+          "text": "Il est réservé au contrôle du carburant des groupes électriques.",
+          "is_correct": false,
+          "explanation": "Rien ne relie ce panneau au carburant ; il concerne la génération électrique de secours et sa surveillance."
+        },
+        {
+          "id": "E",
+          "text": "Il ne peut pas donner d’information sur l’état de la source de secours.",
+          "is_correct": false,
+          "explanation": "Les indicateurs du panneau servent justement à contrôler et surveiller l’état de la source de secours."
+        }
+      ],
+      "coverage_label": "AC GENERATION panel",
+      "learning_objective": "Reconnaître le rôle du panneau AC GENERATION et identifier la fonction de la source de secours EMER GEN / CSM/G.",
+      "correction_summary": "Le panneau AC GENERATION regroupe les commandes et indications liées à la source de secours EMER GEN / CSM/G. Le piège est de lui attribuer une fonction de distribution commerciale ou de carburant.",
+      "course_clarification": "P/BSW signifie un organe de commande de type poussoir/interrupteur. CSM/G renvoie à l’urgence électrique, surveillée et commandée via ce panneau.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-1-Q4",
+      "prompt": "Concernant le panneau ELEC et le synoptique associé, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "On y trouve uniquement des commandes de train d’atterrissage.",
+          "is_correct": false,
+          "explanation": "Les libellés visibles sont électriques ; aucune commande de train n’est mentionnée."
+        },
+        {
+          "id": "B",
+          "text": "Le panneau ne montre jamais d’état ni de voyant.",
+          "is_correct": false,
+          "explanation": "Le schéma indique justement des commandes et des voyants liés à l’état des sources et des bus."
+        },
+        {
+          "id": "C",
+          "text": "Le terme BUS TIE désigne une mesure de température de l’huile.",
+          "is_correct": false,
+          "explanation": "BUS TIE correspond à une liaison de bus électrique, pas à une température."
+        },
+        {
+          "id": "D",
+          "text": "AC ESS FEED concerne l’alimentation électrique essentielle AC, sans lien avec la distribution générale.",
+          "is_correct": false,
+          "explanation": "AC ESS FEED renvoie bien à l’alimentation essentielle AC, mais elle reste une fonction de distribution électrique, donc l’isolement proposé est faux."
+        },
+        {
+          "id": "E",
+          "text": "On y trouve notamment BUS TIE, AC ESS FEED, GEN, APU GEN, EXT A, EXT B, GALLEY et COMMERCIAL.",
+          "is_correct": true,
+          "explanation": "Ces libellés apparaissent bien dans la zone ELEC décrite par le schéma."
+        }
+      ],
+      "coverage_label": "Panneau ELEC",
+      "learning_objective": "Identifier les commandes et voyants principaux du panneau ELEC et les relier à la distribution électrique AC.",
+      "correction_summary": "Les repères BUS TIE, AC ESS FEED, GEN, APU GEN, EXT A, EXT B, GALLEY et COMMERCIAL appartiennent bien au panneau ELEC. Le piège consiste à leur donner un sens non électrique ou une fonction unique hors contexte.",
+      "course_clarification": "BUS TIE correspond à une liaison entre bus. AC ESS FEED concerne l’alimentation du réseau AC essentiel ; les autres repères désignent des commandes ou indications de sources et de distribution.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-1-Q5",
+      "prompt": "À propos du schéma GROUND SERVICE NETWORK et du panneau EMER ELEC PWR, quelle affirmation est vraie ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lorsque le switch est sur ON, tout le réseau électrique de l’avion est forcément energisé.",
+          "is_correct": false,
+          "explanation": "Le schéma précise au contraire qu’il ne faut pas energiser l’ensemble du réseau."
+        },
+        {
+          "id": "B",
+          "text": "Le panneau EMER ELEC PWR ne comporte aucun mode de test.",
+          "is_correct": false,
+          "explanation": "Le repère EMER GEN TEST est bien visible dans ce panneau."
+        },
+        {
+          "id": "C",
+          "text": "Le switch MAINT BUS ON permet d’alimenter le réseau de service au sol sans energiser tout le réseau électrique.",
+          "is_correct": true,
+          "explanation": "Le texte associé au schéma le dit explicitement : le réseau de service au sol est alimenté sans mise sous tension de tout le réseau."
+        },
+        {
+          "id": "D",
+          "text": "Le levier rouge est associé à la position OFF uniquement.",
+          "is_correct": false,
+          "explanation": "Le visuel indique un levier rouge associé à AUTO, pas uniquement à OFF."
+        },
+        {
+          "id": "E",
+          "text": "TR 2 alimente directement la cabine passagers sans passer par les réseaux DC ou AC.",
+          "is_correct": false,
+          "explanation": "TR 2 est montré comme un élément de liaison dans le schéma électrique, pas comme une alimentation directe de cabine."
+        }
+      ],
+      "coverage_label": "GROUND SERVICE NETWORK / EMER ELEC PWR",
+      "learning_objective": "Interpréter la fonction du maintenance bus et reconnaître les commandes visibles sur le panneau d’électricité d’urgence.",
+      "correction_summary": "Le switch MAINT BUS ON sert à alimenter le réseau de service au sol sans mettre sous tension tout le réseau. Le piège est de croire qu’il s’agit d’une mise sous tension générale de l’avion.",
+      "course_clarification": "Le réseau de service au sol est une alimentation dédiée à certaines fonctions au sol. Le panneau EMER ELEC PWR regroupe des commandes et indications liées à la génération électrique d’urgence, dont EMER GEN TEST et un levier rouge associé à AUTO.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S5",
+  "anchor_slide_id": "S5-1",
+  "question_count_target": 5,
+  "title": "QCM - ECAM ELEC AC : lecture générale de la page"
+}

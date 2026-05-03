@@ -1,0 +1,66 @@
+{
+  "slide_id": "S3-1",
+  "subpart_id": "S3",
+  "title": "Puissance calorifique et puissance thermique théorique",
+  "objective": "Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s3-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Sens physique et grandeurs",
+      "text": null,
+      "bullets": [
+        "**Puissance calorifique (Pc)** : énergie libérée par seconde par la combustion du carburant. Elle dépend directement du **débit massique carburant (Qmc)** et du **pouvoir calorifique inférieur (PCI)**.",
+        "**Puissance thermique théorique (Ptt)** : part de Pc qui reste après les **pertes par source froide**. La perte est modélisée par \\(Q_{ma} C_p (T_5 - T_0)\\), avec **Cp** la chaleur spécifique à pression constante.",
+        "**Exemple GE90** : avec \\(Q_{mc} = 3{,}2\\) kg/s et \\(P_{ci} = 44\\times10^6\\) J/kg, on obtient \\(P_c = 141{,}7\\times10^6\\) W, soit environ **191 576 hp** ; l’étape suivante consiste à retrancher \\(P_{sf}\\) pour atteindre \\(P_{tt}\\)."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations fondamentales",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\[\nP_c = Q_{mc}\\,P_{ci}\n\\qquad\nP_{tt} = P_c - P_{sf}\n\\]\n\\[\nP_{sf} = Q_{ma}\\,C_p\\,(T_5 - T_0)\n\\]\n\\[\nQ_{mc}=3{,}2\\,\\mathrm{kg/s},\\; P_{ci}=44\\times10^6\\,\\mathrm{J/kg}\n\\Rightarrow P_c=141{,}7\\times10^6\\,\\mathrm{W}\n\\]"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Définition du lower heating value (LHV)",
+      "locator": "glossaire sur le pouvoir calorifique inférieur",
+      "url": "https://www.energy.gov/eere/fuelcells/glossary"
+    },
+    {
+      "source_type": "web",
+      "label": "Pouvoir calorifique inférieur du jet fuel",
+      "locator": "valeur d’ordre de grandeur autour de 43,03 MJ/kg",
+      "url": "https://ntrs.nasa.gov/api/citations/20060003629/downloads/20060003629.pdf?attachment=true"
+    },
+    {
+      "source_type": "web",
+      "label": "Propriétés thermodynamiques de l’air",
+      "locator": "ordre de grandeur de Cp de l’air",
+      "url": "https://www.nist.gov/publications/thermodynamic-properties-air-60-2000-k-pressures-up-2000-mpa-0"
+    }
+  ],
+  "course_reference_note": "Repère la puissance calorifique à partir de \\(Q_{mc}\\) et du \\(P_{ci}\\). Enchaîne ensuite vers \\(P_{tt}\\) en retranchant la source froide \\(Q_{ma}C_p(T_5-T_0)\\).",
+  "teacher_notes": "Faire distinguer clairement \\(P_c\\), \\(P_{tt}\\) et la puissance utile \\(P_p\\). Vérifier les unités : \\(Q_{mc}\\) en kg/s, \\(P_{ci}\\) en J/kg, \\(C_p\\) en J/kg·K ; insister sur l’interprétation énergétique avant les rendements."
+}

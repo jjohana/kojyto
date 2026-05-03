@@ -1,0 +1,161 @@
+{
+  "slide_id": "s19",
+  "subpart_id": "s19",
+  "title": "Sécurité en entreprise aéronautique",
+  "objective": "Comprendre la prévention des accidents et les dispositifs de sécurité du secteur.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s19-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Risques et moyens de maîtrise",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Axe",
+          "Points clés"
+        ],
+        [
+          "**Risques majeurs**",
+          "Incendies ou explosions dans les ateliers et hangars ; chutes de hauteur ou glissades ; accidents lors des opérations de maintenance ou des tests moteurs ; non-conformités de pièces ou de procédés pouvant compromettre la sécurité des vols."
+        ],
+        [
+          "**Système de management de la sécurité (SMS)**",
+          "Dispositif **obligatoire** selon l’**Organisation de l’aviation civile internationale (OACI)** et l’**Agence européenne de la sécurité aérienne (EASA)** ; il structure l’identification des dangers et la réduction des risques."
+        ],
+        [
+          "**Procédures d’urgence**",
+          "Plan d’évacuation, lutte contre l’incendie et premiers secours : ces actions doivent être prêtes à être déclenchées rapidement."
+        ],
+        [
+          "**Vérifications**",
+          "Audits et inspections réguliers pour détecter les non-conformités et corriger les écarts avant qu’ils ne deviennent critiques."
+        ],
+        [
+          "**Culture de sécurité**",
+          "Signalement des incidents sans sanction injustifiée et exploitation des **retours d’expérience** pour éviter la répétition des événements."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Le **SMS** est une démarche proactive : il ne réagit pas seulement après un événement, il cherche à repérer les dangers avant l’accident.",
+        "La **Just Culture** favorise le signalement des occurrences utiles à la sécurité, afin de faire remonter les faits sans freiner l’alerte.",
+        "Les contrôles de conformité et le retour d’expérience transforment un incident repéré en action de prévention durable."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Définition centrale",
+      "text": "La **sécurité** vise à prévenir les accidents et incidents qui peuvent toucher le **personnel** et les **aéronefs**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Safety Management - ICAO",
+      "locator": "SMS et gestion proactive des risques",
+      "url": "https://www.icao.int/safety/safetymanagement/Pages/default.aspx"
+    },
+    {
+      "source_type": "web",
+      "label": "Occurrence Reporting - EASA",
+      "locator": "Culture de signalement et Just Culture",
+      "url": "https://www.easa.europa.eu/en/the-agency/faqs/occurrence-reporting"
+    },
+    {
+      "source_type": "web",
+      "label": "ICAO Guidance Material on Emergency Response and Contingency Planning",
+      "locator": "Préparation et coordination des urgences",
+      "url": "https://www2023.icao.int/sustainability/ERP/Pages/ICAO-ERPGuidance.aspx"
+    },
+    {
+      "source_type": "web",
+      "label": "Safety Management System and Management System — the integrated approach - EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/domains/safety-management/safety-management-system-sms"
+    },
+    {
+      "source_type": "web",
+      "label": "Chapter 9: Safety Management Systems (SMS) - ICAO",
+      "locator": "research",
+      "url": "https://www.icao.int/safety-management/SMI/SMM/Chapter%209"
+    },
+    {
+      "source_type": "web",
+      "label": "Safety Management – Legal framework - EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/domains/safety-management/aviation-safety-reporting/legal-framework"
+    },
+    {
+      "source_type": "web",
+      "label": "Rescue and Fire Fighting Resource Page - ICAO",
+      "locator": "research",
+      "url": "https://www.icao.int/safety/Pages/Rescue-Fire-Fighting.aspx"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft emergency evacuation - EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/light/topics/aircraft-emergency-evacuation"
+    },
+    {
+      "source_type": "web",
+      "label": "Ramp Inspection Programmes (SAFA/SACA) - EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/easa-and-you/air-operations/ramp-inspection-programmes-safa-saca"
+    },
+    {
+      "source_type": "web",
+      "label": "Safety Management",
+      "locator": "research",
+      "url": "https://www.icao.int/safety/safetymanagement/Pages/default.aspx?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Occurrence Reporting | EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/the-agency/faqs/occurrence-reporting?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "ICAO Guidance Material on Emergency Response and Contingency Planning",
+      "locator": "research",
+      "url": "https://www2023.icao.int/sustainability/ERP/Pages/ICAO-ERPGuidance.aspx?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Ramp Inspection Programmes (SAFA/SACA) | EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/easa-and-you/air-operations/ramp-inspection-programmes-safa-saca?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Repère la partie sur la sécurité : définition, risques majeurs, SMS, urgences et culture de signalement. Les éléments sont présentés comme des moyens concrets de prévention et de conformité.",
+  "teacher_notes": "Faire distinguer clairement les risques opérationnels, les dispositifs de maîtrise et la logique de retour d’expérience. Insister sur l’enchaînement : danger, prévention, urgence, correction."
+}

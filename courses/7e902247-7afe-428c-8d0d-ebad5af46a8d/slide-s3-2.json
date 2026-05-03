@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S3-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S3-2-Q1",
+      "prompt": "Quel énoncé décrit correctement l’alimentation du STATIC INVERTER en situation dégradée ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le STATIC INVERTER est alimenté directement par l’APU GEN.",
+          "is_correct": false,
+          "explanation": "L’APU GEN alimente le réseau AC général lorsqu’il est disponible, mais il n’est pas la source montrée pour le STATIC INVERTER sur cette séquence."
+        },
+        {
+          "id": "B",
+          "text": "Le STATIC INVERTER transforme du courant alternatif en courant continu pour charger les batteries.",
+          "is_correct": false,
+          "explanation": "Le rôle visé ici est l’inverse : l’onduleur fournit de l’AC à partir des batteries, il ne sert pas à recharger les batteries."
+        },
+        {
+          "id": "C",
+          "text": "Les batteries alimentent directement l’AC SYSTEM sans organe intermédiaire.",
+          "is_correct": false,
+          "explanation": "La chaîne comporte un organe intermédiaire, le STATIC INVERTER, qui prend l’énergie des batteries avant de la fournir au réseau AC essentiel."
+        },
+        {
+          "id": "D",
+          "text": "BATTERY 1 et BATTERY 2 alimentent le STATIC INVERTER.",
+          "is_correct": true,
+          "explanation": "C’est le trajet indiqué : les deux batteries fournissent l’énergie au STATIC INVERTER quand l’alimentation de secours est sollicitée."
+        },
+        {
+          "id": "E",
+          "text": "Les batteries ne participent jamais à l’alimentation du réseau électrique de secours.",
+          "is_correct": false,
+          "explanation": "C’est contraire au schéma : en situation dégradée, elles sont précisément la source qui permet d’alimenter le STATIC INVERTER."
+        }
+      ],
+      "coverage_label": "Alimentation du STATIC INVERTER",
+      "learning_objective": "Identifier la chaîne d’alimentation batteries → STATIC INVERTER en mode dégradé.",
+      "correction_summary": "La bonne réponse est celle qui relie BATTERY 1 et BATTERY 2 au STATIC INVERTER. Le piège consiste à confondre l’alimentation de secours par batteries avec les sources normales comme l’APU GEN ou les IDG.",
+      "course_clarification": "Le STATIC INVERTER est un convertisseur qui permet d’obtenir de l’AC à partir des batteries. Cette architecture n’est utilisée que dans une situation dégradée, quand les autres sources AC ne sont pas disponibles.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-2-Q2",
+      "prompt": "Quelle proposition décrit le plus précisément le rôle du STATIC INVERTER ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le STATIC INVERTER remplace en permanence les IDG en vol normal.",
+          "is_correct": false,
+          "explanation": "En vol normal, les IDG alimentent le système AC ; le STATIC INVERTER n’intervient que dans une logique de secours."
+        },
+        {
+          "id": "B",
+          "text": "Le STATIC INVERTER peut fournir une partie du AC system.",
+          "is_correct": true,
+          "explanation": "Le schéma indique qu’il alimente une portion du système AC, et non forcément l’ensemble du réseau."
+        },
+        {
+          "id": "C",
+          "text": "Le STATIC INVERTER commande et surveille l’EMER GEN.",
+          "is_correct": false,
+          "explanation": "Cette fonction est attribuée à l’EMER GEN GCU, pas au STATIC INVERTER."
+        },
+        {
+          "id": "D",
+          "text": "Le STATIC INVERTER alimente directement les moteurs de l’avion.",
+          "is_correct": false,
+          "explanation": "Le rôle décrit concerne le réseau électrique AC, pas l’alimentation mécanique des moteurs."
+        },
+        {
+          "id": "E",
+          "text": "Le STATIC INVERTER est la source principale du réseau AC quand les moteurs tournent.",
+          "is_correct": false,
+          "explanation": "Quand les moteurs fournissent de l’énergie, ce sont les IDG qui assurent l’alimentation AC principale."
+        }
+      ],
+      "coverage_label": "Rôle du STATIC INVERTER",
+      "learning_objective": "Distinguer le rôle de secours du STATIC INVERTER de celui des sources normales AC.",
+      "correction_summary": "Le STATIC INVERTER fournit une partie du AC system, en mode dégradé. Il ne remplace ni les IDG ni l’EMER GEN dans leur fonction propre.",
+      "course_clarification": "Un inverter convertit l’énergie disponible pour produire de l’AC. Ici, il sert à maintenir une partie du réseau AC quand les alimentations normales ne sont plus présentes.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-2-Q3",
+      "prompt": "Quelle expression correspond au réseau alimenté par le STATIC INVERTER ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "AC Essential electrical system network.",
+          "is_correct": true,
+          "explanation": "C’est le nom exact du réseau partiellement alimenté par le STATIC INVERTER dans la configuration dégradée."
+        },
+        {
+          "id": "B",
+          "text": "DC Essential electrical system network.",
+          "is_correct": false,
+          "explanation": "La question porte sur un réseau AC, pas DC. Le qualificatif essentiel existe ici pour la partie alternative du système."
+        },
+        {
+          "id": "C",
+          "text": "AC Primary electrical system network.",
+          "is_correct": false,
+          "explanation": "Le document distingue le réseau AC essentiel du réseau AC général ; la dénomination « Primary » ne correspond pas à cette formulation."
+        },
+        {
+          "id": "D",
+          "text": "Emergency fuel electrical system network.",
+          "is_correct": false,
+          "explanation": "Cette expression ne désigne pas le réseau électrique décrit ; elle mélange un thème électrique avec une notion carburant sans rapport ici."
+        },
+        {
+          "id": "E",
+          "text": "AC Main landing gear network.",
+          "is_correct": false,
+          "explanation": "Il s’agit d’un terme sans lien avec la distribution électrique montrée ; le piège est de confondre un sous-système aéronef avec le réseau AC visé."
+        }
+      ],
+      "coverage_label": "AC Essential electrical system network",
+      "learning_objective": "Reconnaître la dénomination exacte du réseau AC essentiel alimenté en secours.",
+      "correction_summary": "La bonne réponse est le nom exact du réseau : AC Essential electrical system network. Le piège classique est de le confondre avec un réseau DC ou avec le réseau AC général.",
+      "course_clarification": "Le réseau AC essentiel est une partie du système AC conservée en situation dégradée. Il est alimenté quand les sources normales ont disparu et qu’il faut préserver les fonctions indispensables.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-2-Q4",
+      "prompt": "Dans la logique de secours présentée, quelle affirmation est correcte à propos des sources AC normales ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les croix rouges indiquent que ces sources sont toutes disponibles et prioritaires.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : la croix rouge indique qu’elles ne sont pas utilisées ou ne sont pas disponibles dans la situation montrée."
+        },
+        {
+          "id": "B",
+          "text": "EXTERNAL POWER A & B sont les seules sources encore actives sur le schéma de secours.",
+          "is_correct": false,
+          "explanation": "Le schéma de secours met au contraire en avant leur indisponibilité, pas leur activation."
+        },
+        {
+          "id": "C",
+          "text": "L’APU est la seule source qui alimente le STATIC INVERTER dans cette configuration.",
+          "is_correct": false,
+          "explanation": "Le STATIC INVERTER est alimenté par les batteries ; l’APU n’est pas la source de cette chaîne de secours."
+        },
+        {
+          "id": "D",
+          "text": "Les IDG restent la source utilisée pour le réseau AC essentiel lorsque les autres sources tombent en panne.",
+          "is_correct": false,
+          "explanation": "Les IDG sont des sources normales d’alimentation AC, mais la logique de secours décrite intervient précisément quand elles ne sont plus disponibles."
+        },
+        {
+          "id": "E",
+          "text": "Les croix rouges signalent l’indisponibilité de IDG/ENG, EXTERNAL POWER A & B et APU.",
+          "is_correct": true,
+          "explanation": "Le schéma met explicitement ces sources hors jeu par des croix rouges pour montrer le passage à l’alimentation de secours."
+        }
+      ],
+      "coverage_label": "Indisponibilité des sources normales",
+      "learning_objective": "Interpréter les croix rouges et comprendre la transition vers l’alimentation de secours.",
+      "correction_summary": "Les croix rouges marquent l’indisponibilité des sources normales : IDG/ENG, EXTERNAL POWER A & B et APU. Le piège est de lire ces marques comme un signe de disponibilité alors qu’elles signalent l’inverse.",
+      "course_clarification": "La situation représentée est dégradée : les alimentations habituelles ne sont plus disponibles. Le schéma met donc en évidence la chaîne de secours batteries → STATIC INVERTER → réseau AC essentiel.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-2-Q5",
+      "prompt": "Quelle phrase décrit correctement la logique d’alimentation du réseau AC essentiel ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le réseau AC essentiel est alimenté uniquement par l’EMER GEN GCU.",
+          "is_correct": false,
+          "explanation": "Le GCU commande et surveille l’EMER GEN ; il n’alimente pas à lui seul le réseau."
+        },
+        {
+          "id": "B",
+          "text": "Le STATIC INVERTER sert à alimenter l’EXTERNAL POWER A au sol.",
+          "is_correct": false,
+          "explanation": "L’EXTERNAL POWER est une source externe distincte ; le STATIC INVERTER n’a pas pour fonction de la fournir."
+        },
+        {
+          "id": "C",
+          "text": "Quand aucune autre source AC n’est disponible, les batteries peuvent alimenter un STATIC INVERTER qui fournit une partie du AC system.",
+          "is_correct": true,
+          "explanation": "C’est exactement la logique de secours décrite : absence des autres sources, batteries actives, puis alimentation partielle du réseau AC via l’inverter."
+        },
+        {
+          "id": "D",
+          "text": "Les batteries n’interviennent que pour la distribution DC et jamais pour l’AC.",
+          "is_correct": false,
+          "explanation": "Ici, les batteries participent bien à l’alimentation d’un équipement fournissant de l’AC via le STATIC INVERTER."
+        },
+        {
+          "id": "E",
+          "text": "Le réseau AC essentiel n’existe que lorsque l’APU GEN fonctionne normalement.",
+          "is_correct": false,
+          "explanation": "Le réseau AC essentiel est précisément destiné à rester disponible quand les sources normales, dont l’APU GEN, ne sont plus là."
+        }
+      ],
+      "coverage_label": "Logique d’alimentation de secours du réseau AC",
+      "learning_objective": "Expliquer la chaîne complète de secours reliant les batteries au réseau AC essentiel.",
+      "correction_summary": "La bonne logique est : absence des sources AC normales, batteries actives, STATIC INVERTER, puis alimentation partielle du AC Essential electrical system network. Le piège principal est de confondre le rôle du GCU, du STATIC INVERTER et des sources externes.",
+      "course_clarification": "La chaîne de secours ne cherche pas à alimenter tout le réseau AC, seulement une partie essentielle. L’EMER GEN et son GCU appartiennent à la logique de secours, mais la question du STATIC INVERTER concerne la solution alimentée par batteries.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S3",
+  "anchor_slide_id": "S3-2",
+  "question_count_target": 5,
+  "title": "QCM - Batteries et STATIC INVERTER"
+}

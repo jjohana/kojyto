@@ -1,0 +1,130 @@
+{
+  "slide_id": "S8-1",
+  "subpart_id": "S8",
+  "title": "Commandes, sécurités et limitations de l’inverseur",
+  "objective": "Identifier les conditions de mise en reverse et les verrouillages de protection.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s8-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Verrouillages et effets de sécurité",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Condition / verrouillage",
+          "Effet sur la commande",
+          "Raison opérationnelle"
+        ],
+        [
+          "Énergie de manœuvre pneumatique, hydraulique ou électrique",
+          "Permet l’actionnement des inverseurs selon l’architecture retenue",
+          "Adapter l’effort de commande au système installé"
+        ],
+        [
+          "Commande reverse couplée à la commande de poussée",
+          "La mise en reverse dépend de la position de la manette de poussée",
+          "Éviter une sélection incohérente entre poussée positive et poussée inverse"
+        ],
+        [
+          "Manette des gaz sur **RALENTI**",
+          "Passage en poussée inverse autorisé seulement à bas régime",
+          "Limiter les efforts et éviter une manœuvre intempestive sous forte poussée"
+        ],
+        [
+          "Train principal comprimé",
+          "La logique **sol/vol** autorise la reverse au sol",
+          "Empêcher l’activation en vol"
+        ],
+        [
+          "Inverseurs sortis",
+          "La mise en reverse devient possible ; le retour en poussée positive se fait en ramenant la manette d’inversion sur **NEUTRE** puis en augmentant la poussée si les inverseurs sont rentrés",
+          "Garantir que la poussée positive ne revient que lorsque le dispositif est revenu en position normale verrouillée"
+        ],
+        [
+          "Sortie intempestive en vol ou rentrée sans commande préalable",
+          "La poussée est automatiquement réduite",
+          "Protéger la cellule et stabiliser la trajectoire"
+        ],
+        [
+          "Vitesse avion inférieure à une limite fixée",
+          "Reverse inutilisable",
+          "Éviter l’ingestion des gaz chauds et les projections de débris"
+        ],
+        [
+          "Durée maximale d’utilisation limitée",
+          "Arrêt de l’usage prolongé",
+          "Prévenir l’échauffement du dispositif d’inversion et des structures voisines"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "La reverse n’est utilisable que si la chaîne de sécurité est cohérente : **ralenti**, **train principal comprimé** et **inverseurs sortis**.",
+        "En cas de mouvement non commandé, l’automatisme ramène la situation vers un état plus sûr par **réduction de poussée**.",
+        "Les limitations de vitesse et de durée protègent à la fois le moteur, la cellule et l’environnement proche du jet dévié."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook (FAA-H-8083-3C)",
+      "locator": "sélection du reverse au ralenti et usage au roulage",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Thrust Reverser Selection is a Decision to Stop | Airbus Safety First",
+      "locator": "logique sol/vol et sélection du reverse",
+      "url": "https://safetyfirst.airbus.com/thrust-reverser-selection-is-a-decision-to-stop/"
+    },
+    {
+      "source_type": "web",
+      "label": "Boeing 737-275 | Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/C-FPWC"
+    },
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook  (FAA-H-8083-3C)",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Fokker 100 | Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/PT-MRK?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "https://safetyfirst.airbus.com/thrust-reverser-selection-is-a-decision-to-stop/?airbus-iframe=true&airbus-post=2070&utm_source=openai",
+      "locator": "research",
+      "url": "https://safetyfirst.airbus.com/thrust-reverser-selection-is-a-decision-to-stop/?airbus-iframe=true&airbus-post=2070&utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Les conditions de commande, les sécurités et les limitations sont réunies sur les pages 5 et 6. Le schéma et le texte associent l’état de l’inverseur à la logique sol/vol et à la réduction automatique de poussée.",
+  "teacher_notes": "Insister sur la chaîne de conditions avant autorisation de reverse : ralenti, train principal comprimé, inverseurs sortis. Faire verbaliser les risques associés : ingestion de gaz chauds, projections de cailloux et échauffement des structures."
+}

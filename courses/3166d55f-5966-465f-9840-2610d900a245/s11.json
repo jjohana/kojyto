@@ -1,0 +1,78 @@
+{
+  "slide_id": "S11",
+  "subpart_id": "6.4",
+  "title": "Mouvement circulaire accéléré",
+  "objective": "Identifier la variation de ω et relier accélération tangentielle et accélération angulaire.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s11-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Interprétation physique et exemple",
+      "text": null,
+      "bullets": [
+        "**ω** est la vitesse angulaire en rad/s ; **α** est sa variation en rad/s². Dès que ω change, le mouvement devient **circulaire accéléré**.",
+        "**a_t** est l’accélération **tangentielle** : elle modifie la valeur de la vitesse. **a_n** est l’accélération **normale** : elle change la direction et reste orientée vers le centre.",
+        "Exemple d’une **hélice** : avec R = 0,6 m et ω = 120 rad/s, on obtient v = 72 m/s. Si α ≠ 0, alors a_t = αR s’ajoute à a_n, très élevée, ce qui explique les fortes contraintes mécaniques."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations angulaires et linéaires",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\omega=\\frac{d\\theta}{dt}\\qquad \\alpha=\\frac{d\\omega}{dt}\\qquad v=\\omega R\\qquad a_t=\\alpha R\\qquad a_n=\\omega^2R=\\frac{v^2}{R}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "OpenStax – Angular Acceleration",
+      "locator": "définition de α comme variation de ω et lien avec la rotation",
+      "url": "https://openstax.org/books/college-physics/pages/10-1-angular-acceleration"
+    },
+    {
+      "source_type": "web",
+      "label": "OpenStax – Nonuniform Circular Motion",
+      "locator": "décomposition en composantes tangentielle et normale perpendiculaires",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion"
+    },
+    {
+      "source_type": "web",
+      "label": "6.3 Rotational Motion - Physics | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/physics/pages/6-3-rotational-motion"
+    },
+    {
+      "source_type": "web",
+      "label": "Imagine the Universe! - More On Uniform Circular Motion | NASA",
+      "locator": "research",
+      "url": "https://imagine.gsfc.nasa.gov/features/yba/CygX1_mass/gravity/circular_motion.html"
+    },
+    {
+      "source_type": "web",
+      "label": "10.1 Angular Acceleration - College Physics | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/college-physics/pages/10-1-angular-acceleration?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Repères utiles : les grandeurs angulaires θ, ω et α sont reliées aux grandeurs linéaires v, a_t et a_n. L’exemple de l’hélice fixe l’ordre de grandeur de v et rappelle l’importance de a_n.",
+  "teacher_notes": "Faire distinguer clairement **a_t** et **a_n** : la première change la vitesse, la seconde change la direction. Insister sur les unités : rad est sans dimension, rad/s et rad/s² restent les notations attendues. L’exemple d’hélice sert à relier la formule à une contrainte mécanique réelle."
+}

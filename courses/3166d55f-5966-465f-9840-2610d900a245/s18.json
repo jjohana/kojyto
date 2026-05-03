@@ -1,0 +1,114 @@
+{
+  "slide_id": "S18",
+  "subpart_id": "13",
+  "title": "Formulaire récapitulatif",
+  "objective": "Conserver les relations fondamentales à mobiliser dans les calculs de cinématique.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s18-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Lecture rapide des relations",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Cadre",
+          "Relation",
+          "Interprétation"
+        ],
+        [
+          "Translation",
+          "v = dx/dt ; a = dv/dt = d²x/dt²",
+          "Vitesse et accélération **instantanées** d’un point repéré par sa position x."
+        ],
+        [
+          "Mouvement rectiligne à accélération constante",
+          "x = x₀ + v₀t + ½at² ; v² - v₀² = 2a(x - x₀)",
+          "Deux écritures équivalentes pour relier **position**, **vitesse** et **accélération**."
+        ],
+        [
+          "Rotation",
+          "v = ωR ; a_t = αR ; a_n = ω²R = v²/R",
+          "Lien entre grandeurs **angulaires** et **linéaires** ; R est le rayon."
+        ],
+        [
+          "Grandeur paramétrée",
+          "dy/dx = (dy/dt)/(dx/dt)",
+          "Forme utile quand x et y dépendent toutes deux du temps t."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Points d’attention",
+      "text": null,
+      "bullets": [
+        "**ω** est la vitesse angulaire, **α** l’accélération angulaire et **R** le rayon ; on garde les unités usuelles : rad/s, rad/s² et m.",
+        "La composante **a_n** est normale à la trajectoire et vaut **v²/R** ; la composante **a_t** traduit la variation de la valeur de la vitesse.",
+        "La relation **dy/dx = (dy/dt)/(dx/dt)** s’emploie dans une écriture paramétrée par le temps ; elle n’est pas exploitable si **dx/dt = 0**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations de base",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\begin{aligned}\nv &= \\frac{dx}{dt} \\\\\na &= \\frac{dv}{dt} = \\frac{d^2x}{dt^2} \\\\\nx &= x_0 + v_0 t + \\tfrac12 a t^2 \\\\\nv^2 - v_0^2 &= 2a(x - x_0) \\\\\nv &= \\omega R \\\\\na_t &= \\alpha R \\\\\na_n &= \\omega^2 R = \\frac{v^2}{R} \\\\\n\\frac{dy}{dx} &= \\frac{dy/dt}{dx/dt}\n\\end{aligned}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Équations clés de cinématique (OpenStax)",
+      "locator": "Ch. 10 Key Equations",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/10-key-equations"
+    },
+    {
+      "source_type": "web",
+      "label": "Règle de la chaîne (OpenStax)",
+      "locator": "3.6 The Chain Rule",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/3-6-the-chain-rule"
+    },
+    {
+      "source_type": "web",
+      "label": "Ch. 10 Summary - University Physics Volume 1 | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/10-summary"
+    },
+    {
+      "source_type": "web",
+      "label": "10.4: Relating Angular and Translational Quantities - Physics LibreTexts",
+      "locator": "research",
+      "url": "https://phys.libretexts.org/Bookshelves/University_Physics/University_Physics_%28OpenStax%29/Book%3A_University_Physics_I_-_Mechanics_Sound_Oscillations_and_Waves_%28OpenStax%29/10%3A_Fixed-Axis_Rotation__Introduction/10.04%3A_Relating_Angular_and_Translational_Quantities"
+    },
+    {
+      "source_type": "web",
+      "label": "Ch. 10 Key Equations - University Physics Volume 1 | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/10-key-equations?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Repères pris dans le récapitulatif final : translation, rotation et lien entre dérivées temporelles. Les notations x₀, v₀, ω, α et R sont conservées.",
+  "teacher_notes": "Faire lire d’abord la formule centrale, puis la table de synthèse. Insister sur la distinction entre **vitesse**, **accélération tangentielle** et **accélération normale**."
+}

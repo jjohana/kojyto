@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S5-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S5-2-Q1",
+      "prompt": "Choisir l’affirmation correcte sur l’indication GEN 1 affichée sur l’ECAM.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "GEN 1 est affiché avec 77 °C.",
+          "is_correct": false,
+          "explanation": "Faux : 77 °C correspond à IDG 1, pas à GEN 1."
+        },
+        {
+          "id": "B",
+          "text": "GEN 1 est affiché avec 27,8 V.",
+          "is_correct": false,
+          "explanation": "Faux : 27,8 V apparaît en haut à gauche du synoptique, ce n’est pas la valeur de GEN 1."
+        },
+        {
+          "id": "C",
+          "text": "GEN 1 est affiché comme une source de service au sol uniquement.",
+          "is_correct": false,
+          "explanation": "Faux : GEN 1 est une source AC surveillée, pas un intitulé de service au sol."
+        },
+        {
+          "id": "D",
+          "text": "GEN 1 est affiché avec 62 % / 115 V / 400 HZ.",
+          "is_correct": true,
+          "explanation": "Vrai : la valeur visible pour GEN 1 est bien 62 %, 115 V et 400 HZ sur la page ECAM AC."
+        },
+        {
+          "id": "E",
+          "text": "GEN 1 n’est pas surveillé sur la page ECAM AC.",
+          "is_correct": false,
+          "explanation": "Faux : GEN 1 fait partie des paramètres explicitement surveillés sur la page."
+        }
+      ],
+      "coverage_label": "Affichage GEN 1",
+      "learning_objective": "Lire correctement la valeur associée à GEN 1 sur l’ECAM.",
+      "correction_summary": "La bonne lecture consiste à associer GEN 1 à ses trois valeurs affichées : 62 %, 115 V et 400 HZ. La confusion fréquente consiste à mélanger cette indication avec la température d’un IDG ou avec une autre donnée du synoptique.",
+      "course_clarification": "GEN 1 est un paramètre de surveillance de la page ECAM AC. Les trois grandeurs affichées ensemble indiquent l’état électrique du générateur.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-2-Q2",
+      "prompt": "Choisir l’affirmation correcte sur l’indication GEN 2 affichée sur l’ECAM.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "GEN 2 est affiché avec 76 °C.",
+          "is_correct": false,
+          "explanation": "Faux : 76 °C correspond à IDG 2, pas à GEN 2."
+        },
+        {
+          "id": "B",
+          "text": "GEN 2 est affiché avec 62 % / 115 V / 400 HZ.",
+          "is_correct": true,
+          "explanation": "Vrai : GEN 2 présente les mêmes valeurs que GEN 1 sur l’affichage, soit 62 %, 115 V et 400 HZ."
+        },
+        {
+          "id": "C",
+          "text": "GEN 2 est absent de l’affichage ECAM AC.",
+          "is_correct": false,
+          "explanation": "Faux : GEN 2 figure explicitement parmi les paramètres surveillés."
+        },
+        {
+          "id": "D",
+          "text": "GEN 2 est affiché comme APU GEN.",
+          "is_correct": false,
+          "explanation": "Faux : APU GEN est une source distincte, différente de GEN 2."
+        },
+        {
+          "id": "E",
+          "text": "GEN 2 est affiché avec 27,8 V et 400 HZ sans tension AC.",
+          "is_correct": false,
+          "explanation": "Faux : l’indication visible pour GEN 2 associe 115 V à 400 HZ, pas 27,8 V."
+        }
+      ],
+      "coverage_label": "Affichage GEN 2",
+      "learning_objective": "Identifier la valeur affichée pour GEN 2 sur la page de surveillance.",
+      "correction_summary": "Il faut lire GEN 2 comme une indication AC complète : pourcentage, tension et fréquence. L’erreur classique consiste à reprendre une température IDG ou une valeur générique du synoptique au lieu de l’étiquette GEN 2.",
+      "course_clarification": "GEN 2 est surveillé au même titre que GEN 1. L’affichage donne directement 62 % / 115 V / 400 HZ.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-2-Q3",
+      "prompt": "Choisir l’affirmation correcte sur APU GEN dans l’affichage ECAM.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "APU GEN apparaît comme une source distincte dans l’affichage.",
+          "is_correct": true,
+          "explanation": "Vrai : APU GEN est bien présenté séparément de GEN 1 et GEN 2 sur la page."
+        },
+        {
+          "id": "B",
+          "text": "APU GEN est la même indication que GEN 1.",
+          "is_correct": false,
+          "explanation": "Faux : GEN 1 et APU GEN sont deux sources différentes dans l’affichage."
+        },
+        {
+          "id": "C",
+          "text": "APU GEN correspond à une température mesurée en °C.",
+          "is_correct": false,
+          "explanation": "Faux : APU GEN est une source électrique affichée, pas une température."
+        },
+        {
+          "id": "D",
+          "text": "APU GEN n’apparaît pas sur la page ECAM AC.",
+          "is_correct": false,
+          "explanation": "Faux : APU GEN est explicitement visible dans le synoptique."
+        },
+        {
+          "id": "E",
+          "text": "APU GEN désigne le réseau de service au sol.",
+          "is_correct": false,
+          "explanation": "Faux : le réseau de service au sol est traité par un autre schéma, pas par APU GEN."
+        }
+      ],
+      "coverage_label": "APU GEN",
+      "learning_objective": "Reconnaître APU GEN comme une source affichée distincte des autres générateurs.",
+      "correction_summary": "L’idée attendue est simple : APU GEN est une source à part dans la surveillance AC. La confusion fréquente consiste à le prendre pour une simple variante de GEN 1 ou GEN 2, alors qu’il est affiché séparément.",
+      "course_clarification": "APU GEN n’est pas une valeur numérique mais une source AC identifiée à part sur l’écran.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-2-Q4",
+      "prompt": "Choisir l’affirmation correcte sur les températures IDG affichées sur l’ECAM.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "IDG 1 est affiché à 62 % et IDG 2 à 62 %.",
+          "is_correct": false,
+          "explanation": "Faux : 62 % correspond aux indications de GEN 1 et GEN 2, pas aux IDG."
+        },
+        {
+          "id": "B",
+          "text": "IDG 1 et IDG 2 sont affichés en volts.",
+          "is_correct": false,
+          "explanation": "Faux : les IDG sont ici surveillés en température, exprimée en °C."
+        },
+        {
+          "id": "C",
+          "text": "IDG 2 est affiché à 115 V.",
+          "is_correct": false,
+          "explanation": "Faux : 115 V correspond à l’indication électrique des générateurs, pas à IDG 2."
+        },
+        {
+          "id": "D",
+          "text": "IDG 1 et IDG 2 ne font pas partie des paramètres surveillés.",
+          "is_correct": false,
+          "explanation": "Faux : les IDG 1 et IDG 2 figurent parmi les paramètres les plus importants surveillés."
+        },
+        {
+          "id": "E",
+          "text": "IDG 1 est affiché à 77 °C et IDG 2 à 76 °C.",
+          "is_correct": true,
+          "explanation": "Vrai : ces deux températures apparaissent clairement sur la page ECAM AC."
+        }
+      ],
+      "coverage_label": "Températures IDG",
+      "learning_objective": "Lire les températures associées à IDG 1 et IDG 2 sur le synoptique.",
+      "correction_summary": "Il faut associer les IDG à des températures et non aux valeurs électriques des générateurs. La confusion la plus fréquente est de mélanger les lignes GEN 1 / GEN 2 avec les lignes IDG 1 / IDG 2.",
+      "course_clarification": "Un IDG est suivi ici par sa température : IDG 1 à 77 °C et IDG 2 à 76 °C.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-2-Q5",
+      "prompt": "Choisir l’affirmation correcte sur le panneau AC GENERATION et la source de secours.",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le panneau AC GENERATION sert uniquement à afficher la température des IDG.",
+          "is_correct": false,
+          "explanation": "Faux : ce panneau comprend des P/BSW et des indicateurs liés à la source de secours, pas seulement des températures."
+        },
+        {
+          "id": "B",
+          "text": "Le panneau AC GENERATION ne comporte aucun indicateur.",
+          "is_correct": false,
+          "explanation": "Faux : des indicateurs sont explicitement mentionnés avec les P/BSW."
+        },
+        {
+          "id": "C",
+          "text": "Le panneau AC GENERATION contient des P/BSW et des indicateurs pour commander et surveiller la source de secours EMER GEN / CSM/G.",
+          "is_correct": true,
+          "explanation": "Vrai : le texte associé au panneau indique bien cette fonction de commande et de surveillance."
+        },
+        {
+          "id": "D",
+          "text": "EMER GEN / CSM/G désigne la surveillance de GEN 1 et GEN 2 uniquement.",
+          "is_correct": false,
+          "explanation": "Faux : EMER GEN / CSM/G correspond à la source de secours, distincte des générateurs principaux."
+        },
+        {
+          "id": "E",
+          "text": "Le panneau AC GENERATION commande le réseau de service au sol sans lien avec l’électricité de secours.",
+          "is_correct": false,
+          "explanation": "Faux : le texte relie ce panneau à la source de secours, pas au réseau de service au sol."
+        }
+      ],
+      "coverage_label": "Panneau AC GENERATION",
+      "learning_objective": "Identifier le rôle du panneau AC GENERATION et la surveillance de la source de secours.",
+      "correction_summary": "La bonne réponse relie le panneau AC GENERATION à des P/BSW et à des indicateurs dédiés à la source de secours EMER GEN / CSM/G. L’erreur fréquente consiste à confondre cette fonction avec l’affichage des générateurs principaux ou avec un autre réseau électrique.",
+      "course_clarification": "Les P/BSW sont des commandes de type pushbutton switch. Sur ce panneau, ils servent à la commande et à la surveillance de la source de secours EMER GEN / CSM/G.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S5",
+  "anchor_slide_id": "S5-2",
+  "question_count_target": 5,
+  "title": "QCM - Surveillance des sources : GEN 1, GEN 2 et APU GEN"
+}

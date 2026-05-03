@@ -1,0 +1,90 @@
+{
+  "slide_id": "s21",
+  "subpart_id": "s21",
+  "title": "Interaction entre santé, sécurité et qualité",
+  "objective": "Montrer les liens entre conditions de travail, prévention des risques et qualité des produits.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s21-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Ce que cela change en maintenance",
+      "text": null,
+      "bullets": [
+        "Un technicien **fatigué** ou **mal formé** augmente le risque d’**erreur humaine** ; en maintenance aéronautique, cette erreur peut dégrader à la fois la **sécurité** et la **qualité** de l’avion.",
+        "Le **SMS** organise la prévention des risques et la gestion de la sécurité ; le **QMS** vise des produits conformes et réguliers. Les deux se renforcent dans une même logique de fiabilité.",
+        "Une organisation efficace agit sur les **conditions de travail**, la **formation** et la **vigilance**, car la qualité finale dépend aussi de la manière dont le travail est réalisé."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Principe clé",
+      "text": "La **santé** et la **sécurité** des employés influencent directement la **qualité** des produits.\n\nUne culture d’entreprise intégrée qui combine **SMS (Safety Management System)** et **QMS (Quality Management System)** est essentielle.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "ISO — Management de la qualité",
+      "locator": "Définition du système de management de la qualité (QMS/SMQ)",
+      "url": "https://www.iso.org/fr/management-qualite"
+    },
+    {
+      "source_type": "web",
+      "label": "ICAO — Safety Management Systems",
+      "locator": "Définition du Safety Management System (SMS)",
+      "url": "https://www.icao.int/safety-management/SMI/SMM/Chapter%209"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — Human Factors in Aviation Maintenance",
+      "locator": "La fatigue comme facteur fréquent d’erreur de maintenance",
+      "url": "https://www.faa.gov/about/initiatives/maintenance_hf"
+    },
+    {
+      "source_type": "web",
+      "label": "ICAO — Fatigue management",
+      "locator": "research",
+      "url": "https://www.icao.int/safety/fatigue-management"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — Fatigue Risk Management",
+      "locator": "research",
+      "url": "https://www.faa.gov/about/initiatives/maintenance_hf/fatigue"
+    },
+    {
+      "source_type": "web",
+      "label": "ISO - Management de la qualité : La voie de l’amélioration continue",
+      "locator": "research",
+      "url": "https://www.iso.org/fr/management-qualite?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Human Factors in Aviation Maintenance | Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/about/initiatives/maintenance_hf?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La page met en relation santé, sécurité et qualité à travers un exemple de maintenance aéronautique. Elle présente aussi l’idée d’une culture intégrée associant SMS et QMS.",
+  "teacher_notes": "Faire verbaliser la chaîne causale : fatigue ou mauvaise formation → erreur de maintenance → impact sur la sécurité et la qualité. Bien faire distinguer SMS et QMS, puis montrer qu’ils se complètent."
+}

@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S7-3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S7-3-Q1",
+      "prompt": "À propos du CBMU et de la page C/B ECAM, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le CBMU pilote directement les contacteurs AC & DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "La gestion des contacteurs relève des ECMU, pas du CBMU. Le CBMU est centré sur la surveillance des disjoncteurs et de leur statut."
+        },
+        {
+          "id": "B",
+          "text": "La page C/B ECAM affiche uniquement les valeurs de tension des bus électriques.",
+          "is_correct": false,
+          "explanation": "La page C/B ECAM liste des disjoncteurs et leurs statuts. L’affichage des seules tensions appartient à d’autres pages de supervision électrique."
+        },
+        {
+          "id": "C",
+          "text": "Le CBMU surveille seulement les sources AC de génération.",
+          "is_correct": false,
+          "explanation": "Le champ de surveillance du CBMU concerne les C/B et les RCCBs, pas uniquement les sources AC. Il ne se limite donc pas aux générateurs."
+        },
+        {
+          "id": "D",
+          "text": "Le CBMU surveille l’état des C/B et des RCCBs.",
+          "is_correct": true,
+          "explanation": "Le CBMU est l’unité de surveillance dédiée aux disjoncteurs et aux RCCBs. Il remonte leur statut pour l’affichage et le suivi sur l’ECAM."
+        },
+        {
+          "id": "E",
+          "text": "Les C/B surveillés sont toujours affichés en rouge lorsqu’ils sont normaux.",
+          "is_correct": false,
+          "explanation": "La couleur indiquée est le vert pour des C/B surveillés en condition normale. Le rouge n’est pas la convention donnée ici pour cet état."
+        }
+      ],
+      "coverage_label": "CBMU et page C/B ECAM",
+      "learning_objective": "Identifier la fonction du CBMU et distinguer sa surveillance de celle des contacteurs.",
+      "correction_summary": "La bonne réponse est celle qui relie le CBMU à la surveillance des C/B et des RCCBs. Le piège consiste à confondre surveillance des disjoncteurs et gestion des contacteurs.",
+      "course_clarification": "Un C/B est un disjoncteur surveillé par l’ordinateur CBMU. Les statuts sont ensuite présentés sur la page C/B ECAM pour aider au diagnostic.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-3-Q2",
+      "prompt": "À propos des disjoncteurs surveillés, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les disjoncteurs surveillés sont situés uniquement dans le compartiment passagers.",
+          "is_correct": false,
+          "explanation": "Le support situe ces C/B dans le compartiment avionique, pas dans le compartiment passagers. Il ne faut pas déplacer leur localisation."
+        },
+        {
+          "id": "B",
+          "text": "Les disjoncteurs concernés sont des C/B 28 VDC et 115 VAC situés dans le compartiment avionique.",
+          "is_correct": true,
+          "explanation": "Le schéma relie le CBMU à des disjoncteurs 28 VDC et 115 VAC placés dans le compartiment avionique. C’est précisément ce périmètre qui est décrit."
+        },
+        {
+          "id": "C",
+          "text": "Le CBMU surveille des contacteurs de puissance au lieu de disjoncteurs.",
+          "is_correct": false,
+          "explanation": "Les contacteurs sont gérés par les ECMU, alors que le CBMU surveille les C/B et les RCCBs. Les deux fonctions sont distinctes."
+        },
+        {
+          "id": "D",
+          "text": "La page C/B ECAM affiche des statuts de disjoncteurs, pas des valeurs de température des IDG.",
+          "is_correct": false,
+          "explanation": "Les températures IDG appartiennent à l’affichage de la page électrique AC, pas à la page C/B ECAM. Ici, on lit des statuts de disjoncteurs."
+        },
+        {
+          "id": "E",
+          "text": "Les C/B surveillés sont toujours des éléments 115 VDC.",
+          "is_correct": false,
+          "explanation": "La notation donnée est 28 VDC et 115 VAC, pas 115 VDC. Le type de courant et la tension doivent être lus exactement."
+        }
+      ],
+      "coverage_label": "Disjoncteurs 28 VDC et 115 VAC",
+      "learning_objective": "Repérer la localisation et les caractéristiques des disjoncteurs surveillés.",
+      "correction_summary": "La bonne affirmation associe les C/B surveillés aux tensions 28 VDC et 115 VAC dans le compartiment avionique. Le piège classique est de confondre la tension ou la zone d’installation.",
+      "course_clarification": "Le repérage des tensions et de l’emplacement aide à identifier le bon circuit surveillé. Ici, la logique est une supervision de disjoncteurs d’avionique, pas de tous les réseaux de bord.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-3-Q3",
+      "prompt": "Sur l’état affiché d’un C/B surveillé, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un C/B surveillé déclenché ou tiré manuellement est signalé sur la page ECAM.",
+          "is_correct": true,
+          "explanation": "Le texte indique que le CBMU signale sur l’ECAM tout C/B surveillé déclenché ou retiré manuellement. L’affichage sert donc d’alerte de supervision."
+        },
+        {
+          "id": "B",
+          "text": "Seuls les C/B non surveillés peuvent apparaître sur la page ECAM.",
+          "is_correct": false,
+          "explanation": "La page ECAM est justement destinée à afficher les C/B surveillés et leurs statuts. Les non-surveillés ne sont pas le point visé ici."
+        },
+        {
+          "id": "C",
+          "text": "Un C/B déclenché n’est jamais visible à l’écran si le système fonctionne normalement.",
+          "is_correct": false,
+          "explanation": "Au contraire, le déclenchement d’un C/B surveillé doit être signalé. L’absence de signalement empêcherait la fonction de supervision."
+        },
+        {
+          "id": "D",
+          "text": "Le signalement visuel correspond à une commande de réarmement automatique du C/B.",
+          "is_correct": false,
+          "explanation": "Le signalement visuel montre un état, il ne constitue pas une commande. Il faut distinguer indication et action de commande."
+        },
+        {
+          "id": "E",
+          "text": "Le CBMU efface le statut des C/B dès qu’un déclenchement est détecté.",
+          "is_correct": false,
+          "explanation": "Le rôle du CBMU est d’indiquer l’état, pas de masquer l’événement. Le statut doit rester visible pour permettre le diagnostic."
+        }
+      ],
+      "coverage_label": "Signalement des déclenchements C/B",
+      "learning_objective": "Interpréter le rôle du signalement ECAM comme un état de supervision.",
+      "correction_summary": "La bonne réponse est celle qui relie le déclenchement ou le tirage manuel d’un C/B à un affichage ECAM. Le piège consiste à prendre cet affichage pour une action de commande ou un effacement automatique.",
+      "course_clarification": "Un statut affiché sur l’ECAM informe l’équipage de l’état du disjoncteur. Cela permet de repérer rapidement un C/B déclenché ou sorti manuellement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-3-Q4",
+      "prompt": "À propos des couleurs et du statut des C/B surveillés, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les C/B surveillés sont généralement de couleur bleue.",
+          "is_correct": false,
+          "explanation": "La couleur indiquée n’est pas le bleu. Le repère visuel donné pour les C/B surveillés est le vert."
+        },
+        {
+          "id": "B",
+          "text": "La couleur affichée remplace l’information de statut du C/B.",
+          "is_correct": false,
+          "explanation": "La couleur aide à lire le statut, mais ne remplace pas la logique de supervision. Le statut reste l’information principale associée au disjoncteur."
+        },
+        {
+          "id": "C",
+          "text": "Un C/B surveillé n’a jamais besoin d’être identifié visuellement.",
+          "is_correct": false,
+          "explanation": "Justement, le suivi sur ECAM repose aussi sur une identification visuelle. La couleur facilite la lecture rapide de l’état surveillé."
+        },
+        {
+          "id": "D",
+          "text": "La couleur verte signifie obligatoirement qu’un C/B est déclenché.",
+          "is_correct": false,
+          "explanation": "Le document associe le vert aux C/B surveillés, pas à un déclenchement. Il ne faut pas confondre couleur de repérage et état de panne."
+        },
+        {
+          "id": "E",
+          "text": "Les C/B surveillés sont généralement de couleur verte.",
+          "is_correct": true,
+          "explanation": "La couleur verte est explicitement donnée pour les C/B surveillés. Elle sert à identifier visuellement ces éléments sur l’affichage."
+        }
+      ],
+      "coverage_label": "Couleur des C/B surveillés",
+      "learning_objective": "Associer la couleur de repérage au statut des C/B surveillés.",
+      "correction_summary": "La bonne affirmation retient la couleur verte comme repère des C/B surveillés. Le piège est de confondre couleur d’identification et signal d’anomalie.",
+      "course_clarification": "La couleur sert de repère immédiat pour lire la page C/B ECAM. Elle facilite le contrôle visuel sans remplacer l’information de statut.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-3-Q5",
+      "prompt": "À propos des ECMU et de la distribution électrique, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les contacteurs AC & DC SYSTEM alimentent DC LOAD DISTRIBUTION et AC LOAD DISTRIBUTION.",
+          "is_correct": false,
+          "explanation": "Le schéma montre au contraire que les contacteurs sont reliés aux blocs de distribution de charge. Il faut lire le sens de la chaîne d’alimentation."
+        },
+        {
+          "id": "B",
+          "text": "Le CBMU est l’unité principale de gestion des contacteurs AC & DC.",
+          "is_correct": false,
+          "explanation": "La gestion des contacteurs est attribuée aux ECMU. Le CBMU intervient sur la surveillance des C/B et des RCCBs."
+        },
+        {
+          "id": "C",
+          "text": "Les ECMU gèrent les contacteurs électriques.",
+          "is_correct": true,
+          "explanation": "Les Electrical Contactor Management Units (ECMU) ont pour rôle la gestion des contacteurs. Elles sont distinctes du CBMU qui surveille les disjoncteurs."
+        },
+        {
+          "id": "D",
+          "text": "AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION sont des éléments de supervision des disjoncteurs.",
+          "is_correct": false,
+          "explanation": "Ces blocs représentent des distributions de charge, pas des unités de supervision des C/B. Ils appartiennent à la chaîne de distribution électrique."
+        },
+        {
+          "id": "E",
+          "text": "Les ECMU sont reliées à la gestion des contacteurs, mais pas à la surveillance des C/B.",
+          "is_correct": false,
+          "explanation": "La surveillance des C/B est le rôle du CBMU, pas des ECMU. Il faut bien séparer gestion des contacteurs et surveillance des disjoncteurs."
+        }
+      ],
+      "coverage_label": "ECMU et distributions AC/DC",
+      "learning_objective": "Distinguer le rôle des ECMU de celui du CBMU et lire une chaîne de distribution électrique simple.",
+      "correction_summary": "La bonne réponse identifie les ECMU comme unités de gestion des contacteurs. Le piège consiste à inverser les rôles entre gestion des contacteurs et surveillance des disjoncteurs.",
+      "course_clarification": "Les contacteurs orientent la distribution de l’énergie vers les charges AC ou DC. Les ECMU pilotent ces contacteurs, tandis que le CBMU surveille l’état des C/B.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S7",
+  "anchor_slide_id": "S7-3",
+  "question_count_target": 5,
+  "title": "QCM - Page ECAM C/B : signalement des déclenchements"
+}

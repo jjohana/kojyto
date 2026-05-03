@@ -1,0 +1,92 @@
+{
+  "slide_id": "S5-3",
+  "subpart_id": "S5",
+  "title": "Lire les paramètres de surveillance sur la page ECAM AC",
+  "objective": "Associer chaque valeur affichée à sa source de surveillance, notamment les IDG et les sources externes visibles.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s5-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repère / valeur / lecture",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Repère affiché",
+          "Valeur visible",
+          "Lecture"
+        ],
+        [
+          "**Générateur à entraînement intégré (IDG)** 1",
+          "77 °C",
+          "Température surveillée de l’IDG 1"
+        ],
+        [
+          "**Générateur à entraînement intégré (IDG)** 2",
+          "76 °C",
+          "Température surveillée de l’IDG 2"
+        ],
+        [
+          "**EXT A**",
+          "Mention affichée",
+          "Source externe visible sur la page de surveillance"
+        ],
+        [
+          "**EXT B**",
+          "Mention affichée",
+          "Source externe visible sur la page de surveillance"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Méthode de lecture",
+      "text": null,
+      "bullets": [
+        "Lire d’abord le **libellé** : il indique la source ou l’équipement surveillé, puis associer la **valeur** à ce même repère.",
+        "Sur la page **ECAM** (Electronic Centralized Aircraft Monitor), les paramètres les plus importants restent affichés pour un contrôle rapide de l’état électrique.",
+        "Ici, les mentions **IDG 1**, **IDG 2**, **EXT A** et **EXT B** sont des indications de surveillance : elles ne se lisent pas isolément, mais toujours avec la valeur qui leur est associée."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus A318 Aircraft Characteristics - Airport and Maintenance Planning",
+      "locator": "IDG = Integrated Drive Generator",
+      "url": "https://aircraft.airbus.com/sites/g/files/jlcbta126/files/2023-02/Airbus-techdata-AC_A318_0322.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Electronic Centralized Aircraft Monitor (ECAM) — SKYbrary",
+      "locator": "Rôle de l’ECAM dans l’affichage des informations systèmes",
+      "url": "https://skybrary.aero/index.php/articles/electronic-centralized-aircraft-monitor-ecam?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Electronic Centralized Aircraft Monitor (ECAM) — SKYbrary",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/electronic-centralized-aircraft-monitor-ecam"
+    }
+  ],
+  "course_reference_note": "La page ECAM AC montre les sources et les paramètres utiles à la surveillance électrique. Les repères IDG 1, IDG 2, EXT A et EXT B se lisent avec leurs valeurs affichées.",
+  "teacher_notes": "Faire repérer d’abord le libellé, puis la grandeur associée. Insister sur l’association correcte source/valeur : IDG 1 → 77 °C, IDG 2 → 76 °C, et sur la présence des sources externes EXT A et EXT B dans l’indication de page."
+}

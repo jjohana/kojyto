@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s14",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s14_q1",
+      "prompt": "Concernant l’obligation de travail du salarié, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le salarié peut choisir librement de ne pas accomplir les missions confiées si elles prennent trop de temps.",
+          "is_correct": false,
+          "explanation": "La réalisation des missions confiées fait partie de l’obligation de travail. Le temps nécessaire n’autorise pas à les ignorer ou à les abandonner."
+        },
+        {
+          "id": "B",
+          "text": "L’obligation de travail consiste uniquement à signer son contrat au moment de l’embauche.",
+          "is_correct": false,
+          "explanation": "Signer le contrat relève de la formation de la relation de travail, pas de son exécution. L’obligation de travail porte sur le comportement quotidien du salarié."
+        },
+        {
+          "id": "C",
+          "text": "La ponctualité est facultative tant que le salarié travaille vite.",
+          "is_correct": false,
+          "explanation": "La rapidité ne remplace pas le respect des horaires. La ponctualité fait partie des exigences attendues au même titre que l’assiduité."
+        },
+        {
+          "id": "D",
+          "text": "Le salarié doit être assidu, ponctuel et réaliser les missions confiées.",
+          "is_correct": true,
+          "explanation": "L’obligation de travail repose sur la présence régulière, le respect des horaires et l’exécution des tâches demandées. Ces trois éléments sont explicitement liés entre eux dans la notion d’obligation de travail."
+        },
+        {
+          "id": "E",
+          "text": "L’obligation de travail concerne seulement les cadres et pas les autres salariés.",
+          "is_correct": false,
+          "explanation": "L’obligation de travail s’applique à tout salarié. Elle n’est pas réservée à une catégorie professionnelle particulière."
+        }
+      ],
+      "coverage_label": "Obligation de travail",
+      "learning_objective": "Identifier les éléments concrets de l’obligation de travail : assiduité, ponctualité et exécution des missions.",
+      "correction_summary": "La bonne réponse associe assiduité, ponctualité et réalisation des missions confiées. Le piège consiste à croire qu’une seule de ces exigences suffit ou qu’elles ne concernent que certains salariés.",
+      "course_clarification": "L’assiduité correspond à une présence régulière au travail. La ponctualité signifie arriver à l’heure et respecter les horaires. Le salarié doit aussi exécuter les tâches qui lui sont confiées.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s14_q2",
+      "prompt": "À propos de l’obligation de loyauté et de confidentialité, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le salarié peut transmettre librement les plans et procédés à un concurrent si cela l’aide à changer d’emploi.",
+          "is_correct": false,
+          "explanation": "Divulguer des informations techniques à un concurrent viole la confidentialité et la loyauté. Le changement d’emploi ne supprime pas cette obligation."
+        },
+        {
+          "id": "B",
+          "text": "Le salarié doit protéger les informations techniques et industrielles.",
+          "is_correct": true,
+          "explanation": "La loyauté et la confidentialité imposent de ne pas divulguer des informations sensibles. Les données techniques et industrielles sont explicitement visées car elles peuvent avoir une valeur stratégique ou économique."
+        },
+        {
+          "id": "C",
+          "text": "La confidentialité concerne seulement les documents papier et jamais les fichiers numériques.",
+          "is_correct": false,
+          "explanation": "La protection des informations s’applique à tous les supports : papier, numérique, oral ou visuel. Limiter la confidentialité au papier serait trop restrictif."
+        },
+        {
+          "id": "D",
+          "text": "L’obligation de loyauté autorise à révéler tout secret dès qu’il n’y a pas de dommage immédiat.",
+          "is_correct": false,
+          "explanation": "L’idée de loyauté est précisément de préserver l’intérêt de l’entreprise et de garder les informations sensibles confidentielles. L’absence de dommage immédiat ne rend pas la divulgation acceptable."
+        },
+        {
+          "id": "E",
+          "text": "Cette obligation concerne uniquement les informations financières et exclut les informations techniques.",
+          "is_correct": false,
+          "explanation": "Le point clé porte aussi sur les informations techniques et industrielles. Le support ne limite pas la confidentialité aux seules données financières."
+        }
+      ],
+      "coverage_label": "Obligation de loyauté et de confidentialité",
+      "learning_objective": "Repérer ce que le salarié doit protéger et comprendre que la confidentialité couvre les informations techniques et industrielles.",
+      "correction_summary": "La bonne réponse porte sur la protection des informations techniques et industrielles. Le piège est de réduire la confidentialité à un seul type de document ou à une seule catégorie d’informations.",
+      "course_clarification": "La loyauté interdit de nuire à l’employeur par une divulgation non autorisée. La confidentialité protège les informations sensibles, quelle que soit leur forme. En pratique, il faut éviter de communiquer des données internes à des personnes non autorisées.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s14_q3",
+      "prompt": "À propos du règlement intérieur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le salarié doit respecter le règlement intérieur, notamment pour la sécurité, la discipline et les procédures qualité.",
+          "is_correct": true,
+          "explanation": "Le règlement intérieur fixe des règles de fonctionnement à suivre dans l’entreprise. Le cours insiste sur trois domaines : sécurité, discipline et procédures qualité."
+        },
+        {
+          "id": "B",
+          "text": "Le règlement intérieur n’a aucun lien avec la sécurité au travail.",
+          "is_correct": false,
+          "explanation": "La sécurité fait justement partie des éléments mentionnés dans le règlement intérieur. Le respect de ces règles sert à éviter les accidents et les écarts de fonctionnement."
+        },
+        {
+          "id": "C",
+          "text": "Les normes ISO remplacent automatiquement toutes les consignes de discipline.",
+          "is_correct": false,
+          "explanation": "Les normes ISO concernent la qualité et l’organisation des processus, mais elles ne suppriment pas les règles de discipline interne. Les deux logiques se complètent."
+        },
+        {
+          "id": "D",
+          "text": "Le règlement intérieur ne s’applique qu’aux ateliers de production et jamais aux autres postes.",
+          "is_correct": false,
+          "explanation": "Le règlement intérieur structure la vie de l’entreprise dans son ensemble. Il ne se limite pas à un seul type de poste."
+        },
+        {
+          "id": "E",
+          "text": "Respecter le règlement intérieur signifie surtout décider soi-même des procédures à suivre.",
+          "is_correct": false,
+          "explanation": "Le règlement intérieur impose des règles communes ; il ne laisse pas chaque salarié choisir librement ses propres procédures. L’objectif est l’uniformité et la maîtrise des risques."
+        }
+      ],
+      "coverage_label": "Règlement intérieur",
+      "learning_objective": "Vérifier que le règlement intérieur encadre la sécurité, la discipline et les procédures qualité.",
+      "correction_summary": "La bonne réponse associe le règlement intérieur à la sécurité, à la discipline et aux procédures qualité. Le piège est de le réduire à une simple formalité ou à un texte sans effet pratique.",
+      "course_clarification": "Le règlement intérieur fixe les règles à respecter dans l’entreprise. Il sert à organiser le travail, à maintenir la discipline et à sécuriser les activités. Dans l’aéronautique, il peut aussi intégrer des exigences qualité comme les normes ISO.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s14_q4",
+      "prompt": "Concernant l’obligation de sécurité du salarié, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le salarié peut ignorer une procédure de sécurité si l’opération paraît rapide.",
+          "is_correct": false,
+          "explanation": "La rapidité ne justifie pas le non-respect d’une procédure de sécurité. Une consigne de sécurité doit être suivie même si elle prend du temps."
+        },
+        {
+          "id": "B",
+          "text": "La sécurité consiste seulement à porter des gants, sans autre règle.",
+          "is_correct": false,
+          "explanation": "Le port d’équipements peut faire partie de la sécurité, mais l’obligation va plus loin : respect des procédures et signalement des risques. Elle ne se réduit pas à un seul équipement."
+        },
+        {
+          "id": "C",
+          "text": "Le salarié doit attendre qu’un accident se produise avant d’informer son responsable.",
+          "is_correct": false,
+          "explanation": "Le signalement des risques est préventif. Il faut alerter avant l’accident pour éviter qu’un danger ne se transforme en incident ou en accident."
+        },
+        {
+          "id": "D",
+          "text": "Cette obligation ne concerne que les aéronefs et jamais le personnel.",
+          "is_correct": false,
+          "explanation": "La sécurité vise à protéger à la fois le personnel et les aéronefs. L’objectif est la prévention des accidents et des incidents."
+        },
+        {
+          "id": "E",
+          "text": "Le salarié doit respecter les procédures de sécurité et signaler les risques.",
+          "is_correct": true,
+          "explanation": "L’obligation de sécurité ne se limite pas à éviter les fautes : elle impose aussi d’appliquer les procédures et d’alerter en cas de danger. Le signalement des risques fait partie du comportement attendu."
+        }
+      ],
+      "coverage_label": "Obligation de sécurité",
+      "learning_objective": "Comprendre que la sécurité impose le respect des procédures et le signalement des risques.",
+      "correction_summary": "La bonne réponse associe respect des procédures de sécurité et signalement des risques. Le piège consiste à croire que la sécurité se limite à un équipement ou qu’elle intervient seulement après un accident.",
+      "course_clarification": "Une procédure de sécurité est une consigne précise destinée à éviter un danger. Signaler un risque consiste à prévenir l’encadrement ou les personnes concernées dès qu’une situation paraît dangereuse. Cette vigilance protège les personnes et le matériel.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s14_q5",
+      "prompt": "Dans une entreprise aéronautique, quelle affirmation décrit correctement le lien entre devoirs du salarié, qualité et sécurité ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Une non-conformité de pièce n’a pas d’effet sur la sécurité si le reste du travail est correct.",
+          "is_correct": false,
+          "explanation": "Une non-conformité peut compromettre la sécurité des vols, même si d’autres aspects du travail semblent corrects. En aéronautique, la rigueur sur chaque élément est essentielle."
+        },
+        {
+          "id": "B",
+          "text": "Le salarié n’a pas à s’intéresser aux procédures qualité, car elles concernent seulement le service qualité.",
+          "is_correct": false,
+          "explanation": "Les procédures qualité concernent l’ensemble des acteurs qui réalisent ou contrôlent le travail. Chaque salarié doit les respecter dans son activité."
+        },
+        {
+          "id": "C",
+          "text": "Le respect des procédures qualité participe aussi à la sécurité des vols.",
+          "is_correct": true,
+          "explanation": "La qualité et la sécurité sont liées : une pièce ou un procédé non conforme peut compromettre la sécurité. Respecter les procédures qualité aide donc aussi à protéger les vols."
+        },
+        {
+          "id": "D",
+          "text": "Le respect des normes ISO dispense de toute vigilance sur les risques.",
+          "is_correct": false,
+          "explanation": "Les normes ISO structurent la qualité, mais elles ne remplacent pas la vigilance opérationnelle. Il faut toujours rester attentif aux risques et aux écarts."
+        },
+        {
+          "id": "E",
+          "text": "La discipline interne et la qualité sont deux notions sans rapport entre elles.",
+          "is_correct": false,
+          "explanation": "La discipline aide à appliquer correctement les méthodes, ce qui soutient la qualité. Dans le contexte aéronautique, cette cohérence est importante pour éviter les non-conformités."
+        }
+      ],
+      "coverage_label": "Qualité et sécurité",
+      "learning_objective": "Relier le respect des procédures qualité à la prévention des risques et à la sécurité aéronautique.",
+      "correction_summary": "La bonne réponse montre qu’une non-conformité peut avoir un impact direct sur la sécurité. Le piège est de séparer qualité, discipline et sécurité alors qu’elles sont liées.",
+      "course_clarification": "Une procédure qualité permet d’obtenir un travail conforme aux exigences. En aéronautique, une erreur de qualité peut devenir un risque de sécurité. Respecter les règles internes aide donc à protéger à la fois la production et les vols.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s14",
+  "anchor_slide_id": "s14",
+  "question_count_target": 5,
+  "title": "QCM - Les devoirs du salarié"
+}

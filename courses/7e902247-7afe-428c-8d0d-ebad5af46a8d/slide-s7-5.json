@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S7-5",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S7-5-Q1",
+      "prompt": "Concernant le CBMU, quelle proposition décrit correctement sa fonction principale ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le CBMU assure la distribution finale vers les charges AC et DC.",
+          "is_correct": false,
+          "explanation": "La distribution vers les charges est assurée par les blocs de distribution de charge, pas par le CBMU. Le CBMU appartient à la surveillance, pas à la répartition de puissance."
+        },
+        {
+          "id": "B",
+          "text": "Le CBMU pilote les contacteurs électriques à la place des ECMU.",
+          "is_correct": false,
+          "explanation": "La gestion des contacteurs est associée aux ECMU. Le CBMU a un rôle de monitoring des C/Bs et RCCBs, pas de pilotage des contacteurs."
+        },
+        {
+          "id": "C",
+          "text": "Le CBMU ne concerne que les disjoncteurs 28 VDC et ignore les circuits 115 VAC.",
+          "is_correct": false,
+          "explanation": "Le schéma montre une surveillance des C/Bs en 28 VDC et 115 VAC. Le périmètre du CBMU ne se limite donc pas au seul 28 VDC."
+        },
+        {
+          "id": "D",
+          "text": "Le CBMU surveille l’état des C/Bs et des RCCBs.",
+          "is_correct": true,
+          "explanation": "Le CBMU est bien l’unité de surveillance des disjoncteurs et des RCCBs. Il ne les commande pas directement, il en contrôle l’état et signale leurs statuts."
+        },
+        {
+          "id": "E",
+          "text": "Le CBMU n’apparaît que sur les panneaux mécaniques, jamais sur l’ECAM.",
+          "is_correct": false,
+          "explanation": "Le CBMU est relié à une page ECAM dédiée aux C/B. Il y indique les disjoncteurs surveillés lorsqu’ils sont déclenchés ou retirés manuellement."
+        }
+      ],
+      "coverage_label": "CBMU",
+      "learning_objective": "Identifier le rôle du CBMU dans la surveillance des disjoncteurs et des RCCBs.",
+      "correction_summary": "La bonne réponse est celle qui associe le CBMU à la surveillance des C/Bs et des RCCBs. Le piège classique consiste à lui attribuer la distribution de puissance ou la commande des contacteurs.",
+      "course_clarification": "Un C/B est un circuit breaker, c’est-à-dire un disjoncteur. Le CBMU observe leur état et transmet l’information à l’ECAM pour faciliter le diagnostic.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-5-Q2",
+      "prompt": "À propos des ECMU, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les ECMU surveillent directement les RCCBs sur la page C/B ECAM.",
+          "is_correct": false,
+          "explanation": "La surveillance des RCCBs et des C/Bs est associée au CBMU. Les ECMU sont liées à la gestion des contacteurs, pas au monitoring des disjoncteurs."
+        },
+        {
+          "id": "B",
+          "text": "Les ECMU gèrent les contacteurs électriques.",
+          "is_correct": true,
+          "explanation": "Les Electrical Contactor Management Units sont précisément les unités de gestion des contacteurs. Elles structurent la commande des contacteurs dans le réseau électrique."
+        },
+        {
+          "id": "C",
+          "text": "Les ECMU remplacent les blocs de distribution AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION.",
+          "is_correct": false,
+          "explanation": "Les blocs de distribution de charge sont des sorties vers les charges. Les ECMU agissent en amont sur la gestion des contacteurs, sans se substituer à ces blocs."
+        },
+        {
+          "id": "D",
+          "text": "Les ECMU servent uniquement à afficher l’état des sources sur la page AC ECAM.",
+          "is_correct": false,
+          "explanation": "L’affichage des sources et de leur connexion au réseau concerne la page AC de l’ECAM. Les ECMU ne sont pas décrites comme des unités d’affichage."
+        },
+        {
+          "id": "E",
+          "text": "Les ECMU n’interviennent pas dans l’AC & DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Le schéma relie les ECMU aux contacteurs du système AC & DC. Elles participent donc bien à la structure de commande et de gestion du réseau."
+        }
+      ],
+      "coverage_label": "ECMU",
+      "learning_objective": "Reconnaître la fonction des ECMU dans la gestion des contacteurs.",
+      "correction_summary": "La bonne réponse associe les ECMU à la gestion des contacteurs. Le piège est de les confondre avec le CBMU, qui surveille les disjoncteurs.",
+      "course_clarification": "Un contacteur est un organe de commutation de puissance. Les ECMU encadrent sa gestion pour organiser les liaisons électriques dans les réseaux AC et DC.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-5-Q3",
+      "prompt": "Sur la chaîne fonctionnelle des contacteurs, quelle proposition est juste ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les AC & DC CONTACTORS alimentent ensuite AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION.",
+          "is_correct": true,
+          "explanation": "Le schéma relie les contacteurs aux blocs de distribution de charge. Ils constituent donc une étape intermédiaire entre le système AC/DC et les charges."
+        },
+        {
+          "id": "B",
+          "text": "AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION alimentent directement les contacteurs.",
+          "is_correct": false,
+          "explanation": "L’architecture indiquée va dans l’autre sens : les contacteurs précèdent les blocs de distribution de charge. Inverser ce sens fait perdre la logique du synoptique."
+        },
+        {
+          "id": "C",
+          "text": "Les contacteurs ne concernent que l’AC et pas le DC.",
+          "is_correct": false,
+          "explanation": "Le marquage AC & DC CONTACTORS montre que la gestion concerne les deux domaines. Le réseau n’est pas limité à l’AC."
+        },
+        {
+          "id": "D",
+          "text": "Les contacteurs sont situés en aval des charges pour couper les récepteurs individuellement.",
+          "is_correct": false,
+          "explanation": "Le schéma les place en amont de la distribution de charge. Ils organisent la répartition de l’énergie, sans être décrits comme des coupe-circuits de chaque récepteur."
+        },
+        {
+          "id": "E",
+          "text": "Les contacteurs sont indépendants de tout système AC & DC.",
+          "is_correct": false,
+          "explanation": "Le bloc central du schéma est explicitement AC & DC SYSTEM. Les contacteurs sont raccordés à cet ensemble, donc ils en dépendent fonctionnellement."
+        }
+      ],
+      "coverage_label": "AC & DC CONTACTORS / LOAD DISTRIBUTION",
+      "learning_objective": "Lire le sens des liaisons entre système, contacteurs et distribution de charge.",
+      "correction_summary": "La bonne lecture place les contacteurs entre le système AC/DC et les blocs de distribution de charge. Le piège est d’inverser l’ordre des blocs ou de séparer artificiellement AC et DC.",
+      "course_clarification": "La distribution de charge est la sortie vers les consommateurs. Les contacteurs servent à organiser cette sortie à partir du réseau principal AC & DC.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-5-Q4",
+      "prompt": "Dans la page C/B ECAM, quelle affirmation correspond au comportement décrit ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La page C/B ECAM sert à commander directement les contacteurs électriques.",
+          "is_correct": false,
+          "explanation": "La page C/B ECAM est associée au suivi des disjoncteurs, pas à la commande des contacteurs. Elle donne de l’information de statut, pas une commande de puissance."
+        },
+        {
+          "id": "B",
+          "text": "Les C/B surveillés sont généralement de couleur rouge.",
+          "is_correct": false,
+          "explanation": "La mention donnée est au contraire qu’ils sont généralement verts. Rouge serait un contresens par rapport au code indiqué."
+        },
+        {
+          "id": "C",
+          "text": "La page C/B ECAM ne montre que les C/B non surveillés.",
+          "is_correct": false,
+          "explanation": "Le rôle de la page est de lister les disjoncteurs suivis et leurs statuts. Elle n’est pas limitée aux éléments non surveillés."
+        },
+        {
+          "id": "D",
+          "text": "Le CBMU n’a aucun lien avec la page ECAM.",
+          "is_correct": false,
+          "explanation": "Le CBMU est explicitement relié à la page C/B ECAM. C’est par cette page que le statut des disjoncteurs surveillés est présenté."
+        },
+        {
+          "id": "E",
+          "text": "Un C/B surveillé déclenché ou tiré manuellement est indiqué sur la page ECAM.",
+          "is_correct": true,
+          "explanation": "Le texte précise que le CBMU signale sur l’ECAM tout C/B surveillé déclenché ou retiré manuellement. C’est la fonction de retour d’état attendue."
+        }
+      ],
+      "coverage_label": "C/B ECAM PAGE",
+      "learning_objective": "Interpréter la signification d’un statut de disjoncteur sur l’ECAM.",
+      "correction_summary": "La bonne réponse est celle qui relie le CBMU à l’affichage des C/B surveillés sur l’ECAM. Le piège est de confondre surveillance et commande, ou d’inverser la couleur habituelle des C/B surveillés.",
+      "course_clarification": "La page C/B ECAM est un écran de suivi. Elle remonte l’état des disjoncteurs surveillés, notamment s’ils ont déclenché ou été tirés manuellement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-5-Q5",
+      "prompt": "À propos du ground service network et du MAINT BUS ON, quelle proposition est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quand le switch est sur ON, tout le réseau AC et DC est forcément energisé.",
+          "is_correct": false,
+          "explanation": "Le texte indique l’inverse : l’alimentation du réseau de service se fait sans energiser tout le réseau. L’effet recherché est justement une alimentation partielle et ciblée."
+        },
+        {
+          "id": "B",
+          "text": "Le ground service network est alimenté uniquement par les générateurs de vol principaux.",
+          "is_correct": false,
+          "explanation": "Le schéma mentionne EXTERNAL POWER A ONLY comme alimentation du réseau de service au sol. Il ne s’agit pas des générateurs principaux."
+        },
+        {
+          "id": "C",
+          "text": "Le switch MAINT BUS ON permet d’alimenter le ground service network sans energiser tout le réseau électrique.",
+          "is_correct": true,
+          "explanation": "Le schéma précise que ce commutateur sert à alimenter le réseau de service au sol sans mettre sous tension l’ensemble du réseau électrique. Il isole donc la fonction de service du reste du réseau."
+        },
+        {
+          "id": "D",
+          "text": "TR 2 relie exclusivement le réseau de service au sol à l’AC GND NETWORK, sans rapport avec le DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "TR 2 est représenté comme un lien entre la partie AC et la partie DC du schéma. Réduire son rôle à l’AC seul ne correspond pas au synoptique."
+        },
+        {
+          "id": "E",
+          "text": "Le panneau FWD CABIN C/B PANEL (5001VE) n’est pas associé au MAINT BUS ON.",
+          "is_correct": false,
+          "explanation": "Le schéma situe précisément l’interrupteur MAINT BUS ON dans le FWD CABIN C/B PANEL (5001VE). Le lien entre les deux est donc bien présent."
+        }
+      ],
+      "coverage_label": "GROUND SERVICE NETWORK / MAINT BUS ON",
+      "learning_objective": "Comprendre l’effet du switch MAINT BUS ON sur l’alimentation du réseau de service au sol.",
+      "correction_summary": "La bonne réponse est celle qui limite l’alimentation au ground service network sans mettre sous tension tout le réseau. Le piège consiste à croire que ce switch energise l’ensemble des réseaux AC et DC.",
+      "course_clarification": "Un réseau de service au sol sert aux besoins de maintenance ou d’assistance au sol. Ici, l’alimentation est ciblée via EXTERNAL POWER A ONLY, pour éviter d’énergiser inutilement tout le système.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S7",
+  "anchor_slide_id": "S7-5",
+  "question_count_target": 5,
+  "title": "QCM - Lien entre supervision, contacteurs et load distribution"
+}

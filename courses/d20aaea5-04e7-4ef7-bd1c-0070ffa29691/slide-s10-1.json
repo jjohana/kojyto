@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S10-1",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S10-1-Q1",
+      "prompt": "À propos du rôle des amortisseurs oléopneumatiques, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ils servent d’abord à augmenter le rebond après le premier impact.",
+          "is_correct": false,
+          "explanation": "Le but est au contraire de dissiper l’énergie absorbée pour éviter le rebond et stabiliser l’avion après l’atterrissage."
+        },
+        {
+          "id": "B",
+          "text": "Ils suppriment toute dissipation d’énergie pour conserver l’énergie mécanique.",
+          "is_correct": false,
+          "explanation": "Un amortisseur doit justement dissiper une grande partie de l’énergie reçue ; sinon le train restituerait le choc sous forme de rebond."
+        },
+        {
+          "id": "C",
+          "text": "Ils n’interviennent qu’en vol et pas au roulage.",
+          "is_correct": false,
+          "explanation": "Ils assurent aussi la suspension de l’avion au roulage, quelle que soit la charge ou l’état de la piste."
+        },
+        {
+          "id": "D",
+          "text": "Ils absorbent l’énergie due à la vitesse verticale de l’avion à l’impact.",
+          "is_correct": true,
+          "explanation": "Au contact du sol, la vitesse verticale se transforme en énergie qu’il faut absorber progressivement pour limiter le choc transmis à la cellule."
+        },
+        {
+          "id": "E",
+          "text": "Ils remplacent le freinage des roues lors de l’atterrissage.",
+          "is_correct": false,
+          "explanation": "Le freinage des roues est une fonction distincte ; l’amortisseur gère l’absorption du choc vertical et la suspension."
+        }
+      ],
+      "coverage_label": "Amortisseurs oléopneumatiques : rôle",
+      "learning_objective": "Identifier l’énergie absorbée par l’amortisseur et distinguer son rôle de la fonction de freinage.",
+      "correction_summary": "La seule affirmation vraie décrit l’absorption de l’énergie liée à la vitesse verticale à l’impact. Le piège classique est de confondre absorption du choc et freinage des roues.",
+      "course_clarification": "L’amortisseur transforme une partie de l’énergie de l’impact en pertes internes, surtout par le laminage hydraulique. Il sert aussi à maintenir une suspension efficace au roulage.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S10-1-Q2",
+      "prompt": "Concernant l’amortisseur oléopneumatique et son gonflage, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le gonflage de précharge se fait avec de l’oxygène pur pour améliorer la compression.",
+          "is_correct": false,
+          "explanation": "La chambre est gonflée à l’azote, pas à l’oxygène ; l’oxygène pur au contact de corps gras présente un risque d’explosion."
+        },
+        {
+          "id": "B",
+          "text": "Au repos, les chambres de gaz et hydraulique sont au maximum de leur volume utile.",
+          "is_correct": true,
+          "explanation": "Quand l’amortisseur est détendu, il présente son volume maximal ; il pourra ensuite se comprimer lors de l’impact."
+        },
+        {
+          "id": "C",
+          "text": "L’amortisseur comporte toujours trois chambres de gaz et aucune chambre hydraulique.",
+          "is_correct": false,
+          "explanation": "La configuration indiquée est 1 ou 2 chambres de gaz et 1 chambre hydraulique, pas trois chambres de gaz seules."
+        },
+        {
+          "id": "D",
+          "text": "Le gaz comprimé n’intervient pas dans l’absorption de l’impact.",
+          "is_correct": false,
+          "explanation": "Le gaz, en particulier l’azote, participe à l’absorption en se comprimant et en stockant temporairement l’énergie."
+        },
+        {
+          "id": "E",
+          "text": "Le volume minimal est obtenu quand l’amortisseur est au repos et non comprimé.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : au repos, l’ensemble est au maximum de son volume ; la compression réduit le volume disponible."
+        }
+      ],
+      "coverage_label": "Amortisseur oléopneumatique : structure et gonflage",
+      "learning_objective": "Reconnaître la constitution de l’amortisseur et la règle de gonflage à l’azote.",
+      "correction_summary": "La bonne réponse rappelle que l’amortisseur est détendu au repos et gonflé à l’azote. Le piège essentiel est l’oxygène : il est interdit à cause du risque d’explosion en présence de corps gras.",
+      "course_clarification": "L’azote sert de gaz de précharge : il est compressible et participe à l’amortissement. La chambre hydraulique complète l’action en imposant des pertes par laminage lors du mouvement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S10-1-Q3",
+      "prompt": "Sur le fonctionnement en trois temps d’un amortisseur oléopneumatique, quelle proposition est juste ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pendant la compression, l’hydraulique est chassée et l’azote se comprime.",
+          "is_correct": true,
+          "explanation": "À l’impact, le piston entraîne le déplacement du liquide et la réduction du volume de gaz, ce qui permet de stocker l’énergie progressivement."
+        },
+        {
+          "id": "B",
+          "text": "Pendant la détente, l’azote se comprime encore davantage pour freiner le mouvement.",
+          "is_correct": false,
+          "explanation": "En détente, le gaz se détend au contraire ; il restitue de l’énergie tout en restant freiné par le circuit hydraulique."
+        },
+        {
+          "id": "C",
+          "text": "Le clapet de freinage reste ouvert en permanence pour accélérer les mouvements.",
+          "is_correct": false,
+          "explanation": "Le clapet se ferme dans la phase de détente selon le schéma décrit, afin d’orienter le liquide vers le diaphragme et de ralentir le déplacement."
+        },
+        {
+          "id": "D",
+          "text": "Le laminage hydraulique n’intervient qu’au moment du décollage.",
+          "is_correct": false,
+          "explanation": "Le laminage hydraulique agit lors des mouvements de l’amortisseur, notamment pendant la détente après l’impact, pour dissiper l’énergie."
+        },
+        {
+          "id": "E",
+          "text": "L’équilibrage des pressions sert à supprimer toute suspension au roulage.",
+          "is_correct": false,
+          "explanation": "L’équilibrage vise à compenser le poids de l’avion et à stabiliser l’ensemble ; il ne supprime pas la fonction de suspension."
+        }
+      ],
+      "coverage_label": "Fonctionnement en 3 temps",
+      "learning_objective": "Décrire l’enchaînement compression-détente-équilibrage et le rôle du laminage hydraulique.",
+      "correction_summary": "La phase correcte est celle de compression : l’hydraulique est chassée et l’azote se comprime. L’erreur fréquente consiste à inverser compression et détente, ou à oublier que le laminage hydraulique ralentit le mouvement.",
+      "course_clarification": "Le ralentissement ne vient pas seulement du gaz : il dépend aussi de l’écoulement du liquide à travers le diaphragme et les passages calibrés. Cela permet une absorption progressive de l’énergie d’impact.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S10-1-Q4",
+      "prompt": "À propos de la cinématique de descente du train d’atterrissage, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La sortie du train commence par le verrouillage bas de la contrefiche avant l’ouverture des trappes.",
+          "is_correct": false,
+          "explanation": "La séquence donnée est inverse : ouverture et descente des trappes, déverrouillage du crochet, puis descente du train et verrouillage bas."
+        },
+        {
+          "id": "B",
+          "text": "Le vérin de manœuvre sert uniquement au verrouillage mécanique train bas.",
+          "is_correct": false,
+          "explanation": "Le vérin de manœuvre assure la remontée et la descente du train ; le verrouillage bas est confié à la contrefiche et à la griffe."
+        },
+        {
+          "id": "C",
+          "text": "Le boîtier d’accrochage est utilisé pour confirmer la position basse du train après l’atterrissage.",
+          "is_correct": false,
+          "explanation": "Le boîtier d’accrochage confirme surtout la position haute ; la position basse est verrouillée mécaniquement par la contrefiche."
+        },
+        {
+          "id": "D",
+          "text": "La descente du train ne nécessite jamais le déverrouillage du crochet.",
+          "is_correct": false,
+          "explanation": "Le déverrouillage du crochet fait partie de la séquence de sortie du train avant la descente effective."
+        },
+        {
+          "id": "E",
+          "text": "Le train verrouillé haut l’est par le boîtier d’accrochage, avec le galet engagé dans le crochet.",
+          "is_correct": true,
+          "explanation": "Le schéma indique explicitement que la position haute est maintenue par un boîtier d’accrochage, le galet étant pris dans le crochet."
+        }
+      ],
+      "coverage_label": "Cinématiques descente trains d’atterrissage",
+      "learning_objective": "Reconstituer l’ordre des étapes de sortie du train et identifier les organes de verrouillage.",
+      "correction_summary": "La bonne réponse associe la position haute au boîtier d’accrochage. Le piège principal est l’ordre des actions lors de la sortie : trappes, déverrouillage, descente, puis verrouillage bas.",
+      "course_clarification": "La cinématique de sortie est séquencée pour éviter un mouvement incontrôlé. Le verrouillage haut et le verrouillage bas ne sont pas assurés par les mêmes organes.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S10-1-Q5",
+      "prompt": "Concernant la sécurité au sol et la commande de secours des trains, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La commande de secours permet la rentrée des trains en cas de panne du circuit normal.",
+          "is_correct": false,
+          "explanation": "Le secours ne fonctionne que dans le sens sortie ; il ne sert pas à rentrer les trains."
+        },
+        {
+          "id": "B",
+          "text": "Les broches de sécurité sont placées sur les dispositifs de verrouillage haut pendant le tractage.",
+          "is_correct": false,
+          "explanation": "Les broches de sécurité se placent sur les dispositifs de verrouillage bas pour bloquer mécaniquement les trains au sol."
+        },
+        {
+          "id": "C",
+          "text": "Le levier est verrouillé mécaniquement au sol pour interdire la rentrée lorsqu’un amortisseur est comprimé.",
+          "is_correct": true,
+          "explanation": "La sécurité au sol empêche une rentrée intempestive si l’avion est posé et qu’un amortisseur est écrasé ; un déverrouillage électrique peut être prévu par solénoïde."
+        },
+        {
+          "id": "D",
+          "text": "Le levier de commande comporte trois positions fixes correspondant à montée, neutre et descente.",
+          "is_correct": false,
+          "explanation": "La commande normale décrite est un levier à deux positions, avec un cran pour chaque position, agissant sur le sélecteur de train."
+        },
+        {
+          "id": "E",
+          "text": "Le secours des trains fonctionne dans les deux sens, sortie et rentrée, selon les avions.",
+          "is_correct": false,
+          "explanation": "Le point clé est qu’il ne fonctionne que dans le sens sortie, que l’action soit hydraulique ou mécanique."
+        }
+      ],
+      "coverage_label": "Commande de secours et sécurité au sol",
+      "learning_objective": "Distinguer sécurité au sol, commande normale et commande de secours du train d’atterrissage.",
+      "correction_summary": "La réponse exacte porte sur le verrouillage mécanique du levier au sol quand un amortisseur est comprimé. Le piège majeur est de croire que le secours permet aussi la rentrée des trains, alors qu’il ne sert qu’à la sortie.",
+      "course_clarification": "La sécurité au sol évite une rentrée accidentelle pendant l’immobilisation ou le tractage. La commande de secours est prévue pour sortir le train en cas de défaillance du système normal, pas pour le replier.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S10",
+  "anchor_slide_id": "S10-1",
+  "question_count_target": 5,
+  "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe"
+}

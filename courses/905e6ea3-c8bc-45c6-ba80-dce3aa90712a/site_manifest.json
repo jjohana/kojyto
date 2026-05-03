@@ -1,340 +1,376 @@
 {
-  "site_build_version": 3,
+  "site_build_version": 6,
   "viewer_mode": "user",
-  "page_count": 37,
+  "page_count": 41,
   "slide_count": 20,
-  "quiz_count": 17,
+  "quiz_count": 21,
   "pages": [
     {
-      "page_id": "SL01",
+      "page_id": "s1_s2",
       "kind": "slide",
-      "badge": "SL01",
-      "title": "Présentation du cours et du module",
-      "subtitle": "Situer le cours dans le Bac Pro Aéronautique et annoncer les grands thèmes du module « L’individu dans l’organisation ».",
-      "href": "sl01.html",
-      "json_href": "sl01.json"
+      "badge": "s1_s2",
+      "title": "Couverture et sommaire du module « L’individu dans l’organisation »",
+      "subtitle": "Identifier le support, son autrice et les grandes thématiques annoncées.",
+      "href": "s1-s2.html",
+      "json_href": "s1-s2.json"
     },
     {
-      "page_id": "subpart::S1",
+      "page_id": "slide::s1_s2",
       "kind": "quiz",
-      "badge": "QCM S1",
-      "title": "QCM - Présentation du cours et du module",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s1.html",
-      "json_href": "subpart-s1.json"
+      "badge": "QCM s1_s2",
+      "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s1-s2.html",
+      "json_href": "slide-s1-s2.json"
     },
     {
-      "page_id": "SL02",
+      "page_id": "s3",
       "kind": "slide",
-      "badge": "SL02",
+      "badge": "s3",
       "title": "Découverte des métiers de l’aéronautique",
-      "subtitle": "Comprendre la diversité des professions aéronautiques et le rôle complémentaire de chaque famille de métiers.",
-      "href": "sl02.html",
-      "json_href": "sl02.json"
+      "subtitle": "Identifier les grandes familles de métiers du secteur et situer le pilote parmi d’autres fonctions essentielles.",
+      "href": "s3.html",
+      "json_href": "s3.json"
     },
     {
-      "page_id": "SL03",
+      "page_id": "slide::s3",
+      "kind": "quiz",
+      "badge": "QCM s3",
+      "title": "QCM - Découverte des métiers de l’aéronautique",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s3.html",
+      "json_href": "slide-s3.json"
+    },
+    {
+      "page_id": "s4",
       "kind": "slide",
-      "badge": "SL03",
+      "badge": "s4",
       "title": "Ingénieur en aéronautique",
-      "subtitle": "Décrire la contribution de l’ingénieur à la conception, aux essais et à l’amélioration des aéronefs.",
-      "href": "sl03.html",
-      "json_href": "sl03.json"
+      "subtitle": "Identifier les missions et les champs de collaboration de l’ingénieur aéronautique.",
+      "href": "s4.html",
+      "json_href": "s4.json"
     },
     {
-      "page_id": "subpart::S2.2",
+      "page_id": "slide::s4",
       "kind": "quiz",
-      "badge": "QCM S2.2",
+      "badge": "QCM s4",
       "title": "QCM - Ingénieur en aéronautique",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s2-2.html",
-      "json_href": "subpart-s2-2.json"
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s4.html",
+      "json_href": "slide-s4.json"
     },
     {
-      "page_id": "SL04",
+      "page_id": "s5",
       "kind": "slide",
-      "badge": "SL04",
+      "badge": "s5",
       "title": "Pilote de ligne",
-      "subtitle": "Expliquer les responsabilités du pilote avant, pendant et après le vol.",
-      "href": "sl04.html",
-      "json_href": "sl04.json"
+      "subtitle": "Repérer les responsabilités du pilote de ligne et les conditions d’accès au métier.",
+      "href": "s5.html",
+      "json_href": "s5.json"
     },
     {
-      "page_id": "subpart::S2.3",
+      "page_id": "slide::s5",
       "kind": "quiz",
-      "badge": "QCM S2.3",
+      "badge": "QCM s5",
       "title": "QCM - Pilote de ligne",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s2-3.html",
-      "json_href": "subpart-s2-3.json"
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s5.html",
+      "json_href": "slide-s5.json"
     },
     {
-      "page_id": "SL05",
+      "page_id": "s6",
       "kind": "slide",
-      "badge": "SL05",
+      "badge": "s6",
       "title": "Mécanicien moteur / mécanicien aéronautique",
-      "subtitle": "Identifier les tâches essentielles du mécanicien chargé des moteurs et de la maintenance technique.",
-      "href": "sl05.html",
-      "json_href": "sl05.json"
+      "subtitle": "Comprendre le rôle du mécanicien aéronautique dans la maintenance et la sécurité.",
+      "href": "s6.html",
+      "json_href": "s6.json"
     },
     {
-      "page_id": "subpart::S2.4",
+      "page_id": "slide::s6",
       "kind": "quiz",
-      "badge": "QCM S2.4",
+      "badge": "QCM s6",
       "title": "QCM - Mécanicien moteur / mécanicien aéronautique",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s2-4.html",
-      "json_href": "subpart-s2-4.json"
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s6.html",
+      "json_href": "slide-s6.json"
     },
     {
-      "page_id": "SL06",
+      "page_id": "s7",
       "kind": "slide",
-      "badge": "SL06",
-      "title": "Avitailleur / technicien avitailleur",
-      "subtitle": "Comprendre le rôle de l’avitailleur dans l’approvisionnement des avions en carburant.",
-      "href": "sl06.html",
-      "json_href": "sl06.json"
+      "badge": "s7",
+      "title": "Avitailleur",
+      "subtitle": "Identifier la mission de ravitaillement carburant et ses contraintes techniques.",
+      "href": "s7.html",
+      "json_href": "s7.json"
     },
     {
-      "page_id": "subpart::S2.5",
+      "page_id": "slide::s7",
       "kind": "quiz",
-      "badge": "QCM S2.5",
-      "title": "QCM - Avitailleur / technicien avitailleur",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s2-5.html",
-      "json_href": "subpart-s2-5.json"
+      "badge": "QCM s7",
+      "title": "QCM - Avitailleur",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s7.html",
+      "json_href": "slide-s7.json"
     },
     {
-      "page_id": "SL07",
+      "page_id": "s8",
       "kind": "slide",
-      "badge": "SL07",
-      "title": "Aiguilleur du ciel / contrôleur de trafic aérien",
-      "subtitle": "Décrire le travail de coordination et de sécurisation du trafic aérien.",
-      "href": "sl07.html",
-      "json_href": "sl07.json"
+      "badge": "s8",
+      "title": "Aiguilleur du ciel",
+      "subtitle": "Comprendre le rôle de contrôle et de coordination du trafic aérien.",
+      "href": "s8.html",
+      "json_href": "s8.json"
     },
     {
-      "page_id": "subpart::S2.6",
+      "page_id": "slide::s8",
       "kind": "quiz",
-      "badge": "QCM S2.6",
-      "title": "QCM - Aiguilleur du ciel / contrôleur de trafic aérien",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s2-6.html",
-      "json_href": "subpart-s2-6.json"
+      "badge": "QCM s8",
+      "title": "QCM - Aiguilleur du ciel",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s8.html",
+      "json_href": "slide-s8.json"
     },
     {
-      "page_id": "SL08",
+      "page_id": "s9",
       "kind": "slide",
-      "badge": "SL08",
-      "title": "Chef d’escale : coordonner une escale de bout en bout",
-      "subtitle": "Comprendre comment le chef d’escale synchronise les opérations aéroportuaires pendant une escale.",
-      "href": "sl08.html",
-      "json_href": "sl08.json"
+      "badge": "s9",
+      "title": "Chef d’escale",
+      "subtitle": "Saisir les responsabilités de coordination au sol lors d’une escale.",
+      "href": "s9.html",
+      "json_href": "s9.json"
     },
     {
-      "page_id": "subpart::S2.7",
+      "page_id": "slide::s9",
       "kind": "quiz",
-      "badge": "QCM S2.7",
+      "badge": "QCM s9",
       "title": "QCM - Chef d’escale",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s2-7.html",
-      "json_href": "subpart-s2-7.json"
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s9.html",
+      "json_href": "slide-s9.json"
     },
     {
-      "page_id": "SL09",
+      "page_id": "s10",
       "kind": "slide",
-      "badge": "SL09",
+      "badge": "s10",
       "title": "Technicien d’essai",
-      "subtitle": "Expliquer le rôle du technicien d’essai dans le contrôle de conformité des systèmes aéronautiques.",
-      "href": "sl09.html",
-      "json_href": "sl09.json"
+      "subtitle": "Identifier la fonction d’essai et de validation des composants et systèmes aéronautiques.",
+      "href": "s10.html",
+      "json_href": "s10.json"
     },
     {
-      "page_id": "subpart::S2.8",
+      "page_id": "slide::s10",
       "kind": "quiz",
-      "badge": "QCM S2.8",
+      "badge": "QCM s10",
       "title": "QCM - Technicien d’essai",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s2-8.html",
-      "json_href": "subpart-s2-8.json"
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s10.html",
+      "json_href": "slide-s10.json"
     },
     {
-      "page_id": "SL10",
+      "page_id": "s11_s12",
       "kind": "slide",
-      "badge": "SL10",
-      "title": "Le salarié dans l’organisation",
-      "subtitle": "Montrer comment un savoir-faire métier devient une fonction dans l’entreprise, puis un cadre juridique de travail.",
-      "href": "sl10.html",
-      "json_href": "sl10.json"
+      "badge": "s11_s12",
+      "title": "Ouverture : droits et devoirs du salarié / contrat de travail",
+      "subtitle": "Installer la transition vers la relation salarié-entreprise et ses règles de base.",
+      "href": "s11-s12.html",
+      "json_href": "s11-s12.json"
     },
     {
-      "page_id": "SL11",
+      "page_id": "slide::s11_s12",
+      "kind": "quiz",
+      "badge": "QCM s11_s12",
+      "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s11-s12.html",
+      "json_href": "slide-s11-s12.json"
+    },
+    {
+      "page_id": "s13",
       "kind": "slide",
-      "badge": "SL11",
+      "badge": "s13",
       "title": "Les droits du salarié",
-      "subtitle": "Identifier les principales protections accordées au salarié dans l’entreprise.",
-      "href": "sl11.html",
-      "json_href": "sl11.json"
+      "subtitle": "Identifier les principaux droits reconnus au salarié.",
+      "href": "s13.html",
+      "json_href": "s13.json"
     },
     {
-      "page_id": "subpart::S3.2",
+      "page_id": "slide::s13",
       "kind": "quiz",
-      "badge": "QCM S3.2",
+      "badge": "QCM s13",
       "title": "QCM - Les droits du salarié",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s3-2.html",
-      "json_href": "subpart-s3-2.json"
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s13.html",
+      "json_href": "slide-s13.json"
     },
     {
-      "page_id": "SL12",
+      "page_id": "s14",
       "kind": "slide",
-      "badge": "SL12",
+      "badge": "s14",
       "title": "Les devoirs du salarié",
-      "subtitle": "Comprendre que les devoirs du salarié traduisent un **engagement professionnel** concret, en contrepartie de ses droits dans l’entreprise.",
-      "href": "sl12.html",
-      "json_href": "sl12.json"
+      "subtitle": "Repérer les obligations principales imposées au salarié.",
+      "href": "s14.html",
+      "json_href": "s14.json"
     },
     {
-      "page_id": "subpart::S3.3",
+      "page_id": "slide::s14",
       "kind": "quiz",
-      "badge": "QCM S3.3",
+      "badge": "QCM s14",
       "title": "QCM - Les devoirs du salarié",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s3-3.html",
-      "json_href": "subpart-s3-3.json"
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s14.html",
+      "json_href": "slide-s14.json"
     },
     {
-      "page_id": "SL13",
+      "page_id": "s15",
       "kind": "slide",
-      "badge": "SL13",
+      "badge": "s15",
       "title": "Le contrat de travail",
-      "subtitle": "Définir le contrat de travail et distinguer ses formes principales ainsi que ses modalités de rupture.",
-      "href": "sl13.html",
-      "json_href": "sl13.json"
+      "subtitle": "Comprendre la définition, les formes et les éléments essentiels du contrat de travail.",
+      "href": "s15.html",
+      "json_href": "s15.json"
     },
     {
-      "page_id": "subpart::S3.4",
+      "page_id": "slide::s15",
       "kind": "quiz",
-      "badge": "QCM S3.4",
+      "badge": "QCM s15",
       "title": "QCM - Le contrat de travail",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s3-4.html",
-      "json_href": "subpart-s3-4.json"
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s15.html",
+      "json_href": "slide-s15.json"
     },
     {
-      "page_id": "SL14",
+      "page_id": "s16",
       "kind": "slide",
-      "badge": "SL14",
+      "badge": "s16",
       "title": "TP – L’individu dans l’organisation",
-      "subtitle": "Introduire le travail pratique d’application sur les métiers, les droits et les devoirs du salarié.",
-      "href": "sl14.html",
-      "json_href": "sl14.json"
+      "subtitle": "Situer la page de transition vers le travail pratique du module.",
+      "href": "s16.html",
+      "json_href": "s16.json"
     },
     {
-      "page_id": "subpart::S4",
+      "page_id": "slide::s16",
       "kind": "quiz",
-      "badge": "QCM S4",
-      "title": "QCM - TP – L’individu dans l’organisation : découverte des métiers et droits/devoirs",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s4.html",
-      "json_href": "subpart-s4.json"
+      "badge": "QCM s16",
+      "title": "QCM - TP – L’individu dans l’organisation",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s16.html",
+      "json_href": "slide-s16.json"
     },
     {
-      "page_id": "SL15",
+      "page_id": "s17",
       "kind": "slide",
-      "badge": "SL15",
+      "badge": "s17",
+      "title": "Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »",
+      "subtitle": "Repérer l’entrée dans la partie consacrée aux exigences de santé, sécurité et qualité.",
+      "href": "s17.html",
+      "json_href": "s17.json"
+    },
+    {
+      "page_id": "slide::s17",
+      "kind": "quiz",
+      "badge": "QCM s17",
+      "title": "QCM - Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s17.html",
+      "json_href": "slide-s17.json"
+    },
+    {
+      "page_id": "s18",
+      "kind": "slide",
+      "badge": "s18",
       "title": "Santé en entreprise aéronautique",
-      "subtitle": "Repérer les principaux risques professionnels et les mesures de prévention.",
-      "href": "sl15.html",
-      "json_href": "sl15.json"
+      "subtitle": "Identifier les risques professionnels et les mesures de prévention liées à la santé au travail.",
+      "href": "s18.html",
+      "json_href": "s18.json"
     },
     {
-      "page_id": "SL16",
-      "kind": "slide",
-      "badge": "SL16",
-      "title": "Sécurité aéronautique : prévenir, signaler, corriger",
-      "subtitle": "Identifier les dangers majeurs et les dispositifs de gestion de la sécurité.",
-      "href": "sl16.html",
-      "json_href": "sl16.json"
-    },
-    {
-      "page_id": "subpart::S5.2",
+      "page_id": "slide::s18",
       "kind": "quiz",
-      "badge": "QCM S5.2",
-      "title": "QCM - La sécurité en entreprise aéronautique",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s5-2.html",
-      "json_href": "subpart-s5-2.json"
+      "badge": "QCM s18",
+      "title": "QCM - Santé en entreprise aéronautique",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s18.html",
+      "json_href": "slide-s18.json"
     },
     {
-      "page_id": "SL17",
+      "page_id": "s19",
       "kind": "slide",
-      "badge": "SL17",
+      "badge": "s19",
+      "title": "Sécurité en entreprise aéronautique",
+      "subtitle": "Comprendre la prévention des accidents et les dispositifs de sécurité du secteur.",
+      "href": "s19.html",
+      "json_href": "s19.json"
+    },
+    {
+      "page_id": "slide::s19",
+      "kind": "quiz",
+      "badge": "QCM s19",
+      "title": "QCM - Sécurité en entreprise aéronautique",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s19.html",
+      "json_href": "slide-s19.json"
+    },
+    {
+      "page_id": "s20",
+      "kind": "slide",
+      "badge": "s20",
       "title": "Qualité en entreprise aéronautique",
-      "subtitle": "Relier normes, contrôles et amélioration continue pour garantir la conformité des produits et des opérations.",
-      "href": "sl17.html",
-      "json_href": "sl17.json"
+      "subtitle": "Identifier le rôle de la qualité, les normes et les outils de maîtrise de la conformité.",
+      "href": "s20.html",
+      "json_href": "s20.json"
     },
     {
-      "page_id": "subpart::S5.3",
+      "page_id": "slide::s20",
       "kind": "quiz",
-      "badge": "QCM S5.3",
-      "title": "QCM - La qualité en entreprise aéronautique",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s5-3.html",
-      "json_href": "subpart-s5-3.json"
+      "badge": "QCM s20",
+      "title": "QCM - Qualité en entreprise aéronautique",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s20.html",
+      "json_href": "slide-s20.json"
     },
     {
-      "page_id": "SL18",
+      "page_id": "s21",
       "kind": "slide",
-      "badge": "SL18",
-      "title": "Santé, sécurité et qualité : une logique intégrée",
-      "subtitle": "Montrer que la santé des personnes, la sécurité des opérations et la qualité des produits sont indissociables.",
-      "href": "sl18.html",
-      "json_href": "sl18.json"
+      "badge": "s21",
+      "title": "Interaction entre santé, sécurité et qualité",
+      "subtitle": "Montrer les liens entre conditions de travail, prévention des risques et qualité des produits.",
+      "href": "s21.html",
+      "json_href": "s21.json"
     },
     {
-      "page_id": "subpart::S5.4",
+      "page_id": "slide::s21",
       "kind": "quiz",
-      "badge": "QCM S5.4",
+      "badge": "QCM s21",
       "title": "QCM - Interaction entre santé, sécurité et qualité",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s5-4.html",
-      "json_href": "subpart-s5-4.json"
+      "subtitle": "4 questions - correction immédiate",
+      "href": "slide-s21.html",
+      "json_href": "slide-s21.json"
     },
     {
-      "page_id": "SL19",
+      "page_id": "s22",
       "kind": "slide",
-      "badge": "SL19",
-      "title": "Rémunération dans le secteur aéronautique",
-      "subtitle": "Lire la logique de rémunération selon les métiers et l’expérience.",
-      "href": "sl19.html",
-      "json_href": "sl19.json"
+      "badge": "s22",
+      "title": "Rémunération et parcours professionnels",
+      "subtitle": "Repérer les éléments de rémunération et les voies d’évolution de carrière dans le secteur aéronautique.",
+      "href": "s22.html",
+      "json_href": "s22.json"
     },
     {
-      "page_id": "SL20",
-      "kind": "slide",
-      "badge": "SL20",
-      "title": "Parcours professionnels dans l’aéronautique",
-      "subtitle": "Identifier les trajectoires de carrière possibles et comprendre les conditions d’évolution vers la spécialisation, l’expertise ou l’encadrement.",
-      "href": "sl20.html",
-      "json_href": "sl20.json"
-    },
-    {
-      "page_id": "subpart::S6.2",
+      "page_id": "slide::s22",
       "kind": "quiz",
-      "badge": "QCM S6.2",
-      "title": "QCM - Les parcours professionnels",
-      "subtitle": "5 questions - correction immÃ©diate",
-      "href": "subpart-s6-2.html",
-      "json_href": "subpart-s6-2.json"
+      "badge": "QCM s22",
+      "title": "QCM - Rémunération et parcours professionnels",
+      "subtitle": "5 questions - correction immédiate",
+      "href": "slide-s22.html",
+      "json_href": "slide-s22.json"
     },
     {
       "page_id": "final::validation",
       "kind": "quiz",
       "badge": "Validation finale",
-      "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique — Cartographie du cours",
-      "subtitle": "25 questions tirees au sort sur 50 - correction finale",
+      "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique",
+      "subtitle": "25 questions tirées au sort sur 99 - correction finale",
       "href": "final-validation.html",
       "json_href": "final-validation.json"
     }

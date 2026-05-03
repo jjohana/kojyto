@@ -1,0 +1,128 @@
+{
+  "slide_id": "S4-3",
+  "subpart_id": "S4",
+  "title": "Sources associées : BATTERY, STATIC INVERTER, EMER GEN",
+  "objective": "Situer les batteries, le STATIC INVERTER et l’EMER GEN dans la logique d’alimentation DC, en distinguant alimentation normale et secours.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s4-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Rôle des éléments associés dans la chaîne DC",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Fonction dans l’architecture",
+          "Point clé de lecture"
+        ],
+        [
+          "BATTERY 1 / BATTERY 2",
+          "Sources de **secours** et de maintien des circuits associés ; elles alimentent aussi la chaîne de charge via les circuits prévus.",
+          "Elles ne représentent pas l’alimentation principale : elles prennent le relais quand la génération normale n’est plus disponible."
+        ],
+        [
+          "STATIC INVERTER",
+          "Convertit le **DC** des batteries en **AC** pour alimenter le réseau essentiel quand aucune source AC normale n’est disponible.",
+          "Il appartient à la logique de secours ; il n’est pas une source primaire de production."
+        ],
+        [
+          "EMER GEN",
+          "Générateur d’**urgence** intégré à la logique de sauvegarde et surveillé par son **EMER GEN GCU**.",
+          "Il complète la chaîne de secours pour maintenir les alimentations indispensables."
+        ],
+        [
+          "BCL (Battery Charge Limiter)",
+          "Assure la gestion de la **charge batterie** dans la distribution DC.",
+          "À conserver comme repère fonctionnel : il sépare charge, protection et connexion des batteries au réseau."
+        ],
+        [
+          "APU BATTERY",
+          "Batterie associée à l’**APU** et intégrée aux circuits DC et associés.",
+          "Elle apparaît comme source ou relais dans l’architecture, au même titre que les autres éléments de stockage."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture pratique du schéma",
+      "text": null,
+      "bullets": [
+        "Distinguer d’abord les **sources principales** des **sources de secours** : les éléments en bas de l’architecture servent à la génération normale, puis aux relais et à la sauvegarde.",
+        "Repérer les liaisons entre **batteries**, **BCL** et circuits associés : elles structurent la charge, l’isolement et l’alimentation des bus concernés.",
+        "Associer le **STATIC INVERTER** à la continuité de service en cas de perte des sources AC normales ; associer l’**EMER GEN** à la logique d’urgence.",
+        "Conserver les acronymes tels quels : **BCL**, **BATTERY**, **STATIC INVERTER**, **EMER GEN**, **APU BATTERY**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Skybrary — Aircraft Electrical Systems",
+      "locator": "batteries, inverter, essential bus",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-electrical-systems"
+    },
+    {
+      "source_type": "web",
+      "label": "Skybrary — Aircraft Batteries",
+      "locator": "rôle secours et démarrage",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-batteries"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus Safety First — Preventing loss of engine generators",
+      "locator": "configuration électrique d’urgence A320 Family",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Accident Report 2/2008 — SKYbrary PDF",
+      "locator": "research",
+      "url": "https://skybrary.aero/sites/default/files/bookshelf/782.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Electrical Problems: Guidance for Flight Crews — SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/electrical-problems-guidance-flight-crews"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Batteries | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-batteries?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Electrical Systems | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-electrical-systems?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050&utm_source=openai",
+      "locator": "research",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050&utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Le schéma DC général place BATTERY 1, BATTERY 2, STATIC INVERTER, EMER GEN et APU BATTERY dans la même logique d’alimentation et de circuits associés. La page d’urgence montre clairement le basculement vers la chaîne de secours quand les sources normales ne sont plus disponibles.",
+  "teacher_notes": "Faire verbaliser la différence entre **production normale**, **charge des batteries** et **secours**. Insister sur le rôle du **BCL** comme repère de distribution/charge, puis faire relier chaque élément à sa fonction dans la chaîne DC."
+}

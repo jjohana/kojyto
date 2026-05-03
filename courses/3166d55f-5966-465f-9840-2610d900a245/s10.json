@@ -1,0 +1,79 @@
+{
+  "slide_id": "S10",
+  "subpart_id": "6.3",
+  "title": "Mouvement circulaire uniforme (MCU)",
+  "objective": "Relier vitesse linéaire, vitesse angulaire et accélération normale dans un mouvement circulaire uniforme.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s10-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture physique",
+      "text": null,
+      "bullets": [
+        "En **MCU**, la vitesse angulaire **ω** est constante : la rotation est uniforme, donc **α = dω/dt = 0**.",
+        "La vitesse linéaire **v** garde une norme constante mais sa direction change en permanence ; la liaison géométrique est **v = ωR** avec **R** en m, **ω** en rad/s et **v** en m/s.",
+        "Comme **α = 0**, l’accélération tangentielle est nulle : **a_t = 0**. L’accélération restante est la **normale** **a_n**, dirigée vers le centre de rotation.",
+        "Pour une pale d’hélice de **R = 0,6 m** et **ω = 120 rad/s**, on obtient **v = 72 m/s** puis **a_n = 8640 m/s²** ; la contrainte mécanique devient alors très élevée."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations clés",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\omega = \\dfrac{d\\theta}{dt} = \\text{cste},\\quad \\alpha = 0,\\quad v = \\omega R,\\quad a_t = \\alpha R = 0,\\quad a_n = \\omega^2 R = \\dfrac{v^2}{R}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Uniform circular motion - Britannica",
+      "locator": "Définition du MCU, vitesse constante en norme et accélération vers le centre",
+      "url": "https://www.britannica.com/science/uniform-circular-motion"
+    },
+    {
+      "source_type": "web",
+      "label": "6.2 Uniform Circular Motion - OpenStax",
+      "locator": "Relations a_c = v²/r et a_c = rω²",
+      "url": "https://openstax.org/books/physics/pages/6-2-uniform-circular-motion"
+    },
+    {
+      "source_type": "web",
+      "label": "Ch. 6 Key Equations - Physics | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/physics/pages/6-key-equations"
+    },
+    {
+      "source_type": "web",
+      "label": "Rotation, Moving Axis, Dynamics - Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/science/mechanics/Rotation-about-a-moving-axis"
+    },
+    {
+      "source_type": "web",
+      "label": "Uniform circular motion | Centripetal Force, Angular Velocity & Acceleration | Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/science/uniform-circular-motion?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Les grandeurs angulaires sont posées avec θ, ω et α, puis reliées aux grandeurs linéaires. L’exemple de l’hélice montre directement v = ωR et une accélération normale très élevée.",
+  "teacher_notes": "Faire distinguer vitesse constante en norme et changement permanent de direction. Vérifier systématiquement les unités : rad/s, m/s et m/s²."
+}

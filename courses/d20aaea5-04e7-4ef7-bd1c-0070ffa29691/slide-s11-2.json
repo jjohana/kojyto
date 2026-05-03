@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S11-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S11-2-Q1",
+      "prompt": "Concernant le rôle du freinage et l’adhérence, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le freinage a pour effet principal d’augmenter la distance de roulement à l’atterrissage.",
+          "is_correct": false,
+          "explanation": "Faux : le freinage sert au contraire à réduire la distance de roulement après le toucher des roues."
+        },
+        {
+          "id": "B",
+          "text": "Le coefficient d’adhérence ne dépend pas du revêtement de piste.",
+          "is_correct": false,
+          "explanation": "Faux : le revêtement de piste influence directement l’adhérence disponible entre le pneu et la piste."
+        },
+        {
+          "id": "C",
+          "text": "La température du pneu n’a aucune influence sur l’adhérence.",
+          "is_correct": false,
+          "explanation": "Faux : la température du pneu fait partie des paramètres qui modifient le coefficient d’adhérence."
+        },
+        {
+          "id": "D",
+          "text": "Le freinage absorbe l’énergie cinétique de l’aéronef.",
+          "is_correct": true,
+          "explanation": "Vrai : le freinage transforme l’énergie cinétique en chaleur dans les freins, ce qui ralentit l’aéronef."
+        },
+        {
+          "id": "E",
+          "text": "Le freinage ne sert qu’au parking et n’a pas d’intérêt à l’atterrissage.",
+          "is_correct": false,
+          "explanation": "Faux : le freinage sert aussi à arrêter l’avion après l’atterrissage et à d’autres phases de roulage."
+        }
+      ],
+      "coverage_label": "Rôle du freinage et adhérence",
+      "learning_objective": "Identifier le rôle du freinage et les facteurs qui influencent l’adhérence pneu-piste.",
+      "correction_summary": "La bonne réponse reprend l’idée essentielle : le freinage dissipe l’énergie cinétique. Une confusion fréquente consiste à croire qu’il agit seulement sur le confort ou le parking, alors qu’il intervient surtout pour réduire la distance d’arrêt. L’adhérence dépend bien de plusieurs paramètres, dont l’état de la piste, la vitesse et l’état du pneu.",
+      "course_clarification": "Le freinage convertit l’énergie de mouvement en chaleur. L’adhérence disponible limite l’intensité du freinage utilisable sans blocage des roues. Plus l’adhérence est faible, plus le risque de glissement augmente.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-2-Q2",
+      "prompt": "À propos des freins à disques et de leur sécurité thermique, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les freins à disques sont adaptés en priorité aux avions légers.",
+          "is_correct": false,
+          "explanation": "Faux : cette adaptation caractérise les freins à tambours, pas les freins à disques."
+        },
+        {
+          "id": "B",
+          "text": "Les freins à disques sont équipés d’un bouchon fusible pour éviter l’éclatement en cas d’échauffement excessif.",
+          "is_correct": true,
+          "explanation": "Vrai : le bouchon fusible sert de protection thermique et limite le risque d’éclatement lié à une surchauffe."
+        },
+        {
+          "id": "C",
+          "text": "Les freins à disques n’utilisent aucune pièce mobile.",
+          "is_correct": false,
+          "explanation": "Faux : ils comportent des disques fixes et mobiles, avec des éléments de pression et de friction."
+        },
+        {
+          "id": "D",
+          "text": "La plaque de couple n’intervient pas dans la transmission des efforts de freinage.",
+          "is_correct": false,
+          "explanation": "Faux : la plaque de couple fait partie de l’ensemble qui participe à la reprise des efforts dans le frein à disque."
+        },
+        {
+          "id": "E",
+          "text": "Le refroidissement efficace est un inconvénient des freins à disques.",
+          "is_correct": false,
+          "explanation": "Faux : le refroidissement efficace est au contraire un avantage des freins à disques."
+        }
+      ],
+      "coverage_label": "Freins à disques et sécurité thermique",
+      "learning_objective": "Reconnaître le rôle du bouchon fusible et les éléments caractéristiques d’un frein à disques.",
+      "correction_summary": "La réponse juste met l’accent sur la sécurité thermique : le bouchon fusible protège contre une surchauffe dangereuse. Une erreur fréquente consiste à confondre les avantages des freins à disques avec ceux des freins à tambours, ou à oublier le rôle des pièces de structure qui transmettent les efforts.",
+      "course_clarification": "Le frein à disques associe des éléments de frottement et des éléments de reprise des efforts. Le bouchon fusible est une protection qui évite une montée en pression trop importante lors d’un échauffement anormal.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-2-Q3",
+      "prompt": "À propos du frein de parking et des circuits de secours, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le frein de parking est mis en pression de façon autonome par électropompe.",
+          "is_correct": true,
+          "explanation": "Vrai : le frein de parking dispose d’une mise en pression autonome grâce à une électropompe."
+        },
+        {
+          "id": "B",
+          "text": "L’accumulateur de frein de parking sert à créer la pression initiale du circuit normal.",
+          "is_correct": false,
+          "explanation": "Faux : l’accumulateur sert à maintenir la pression du frein de parking, pas à créer la pression initiale du freinage normal."
+        },
+        {
+          "id": "C",
+          "text": "Le circuit de secours dépend du circuit hydraulique principal pour fonctionner.",
+          "is_correct": false,
+          "explanation": "Faux : le circuit de secours est totalement indépendant du freinage normal."
+        },
+        {
+          "id": "D",
+          "text": "Le circuit de secours ne fonctionne jamais en parallèle du freinage normal.",
+          "is_correct": false,
+          "explanation": "Faux : il fonctionne en parallèle en cas de panne du freinage normal."
+        },
+        {
+          "id": "E",
+          "text": "Le frein de parking agit uniquement par l’énergie musculaire du pilote.",
+          "is_correct": false,
+          "explanation": "Faux : la mise en pression est autonome, ce qui distingue ce dispositif d’un simple actionnement musculaire."
+        }
+      ],
+      "coverage_label": "Frein de parking et circuit de secours",
+      "learning_objective": "Distinguer le fonctionnement du frein de parking et celui du circuit de secours.",
+      "correction_summary": "La bonne réponse porte sur l’autonomie du frein de parking grâce à l’électropompe. Une confusion classique est de mélanger le rôle de l’accumulateur, qui maintient la pression, avec celui d’une source de pression. Le circuit de secours, lui, est indépendant et prend le relais en parallèle en cas de panne.",
+      "course_clarification": "Le frein de parking conserve une pression hydraulique sans action continue sur les pédales. Le circuit de secours est conçu pour assurer une fonction de freinage même si le système principal est défaillant.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-2-Q4",
+      "prompt": "Concernant le système anti-patinage, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le système anti-patinage augmente volontairement le blocage des roues à l’atterrissage.",
+          "is_correct": false,
+          "explanation": "Faux : son objectif est précisément d’éviter le blocage des roues."
+        },
+        {
+          "id": "B",
+          "text": "Le système anti-patinage agit uniquement quand l’avion est déjà arrêté au parking.",
+          "is_correct": false,
+          "explanation": "Faux : il agit pendant les phases de roulage et de freinage, notamment à l’atterrissage ou lors d’un freinage brusque."
+        },
+        {
+          "id": "C",
+          "text": "Le système anti-patinage commande directement la poussée des réacteurs.",
+          "is_correct": false,
+          "explanation": "Faux : il agit sur la pression hydraulique de freinage, pas sur la poussée propulsive."
+        },
+        {
+          "id": "D",
+          "text": "Le système anti-patinage n’utilise aucun capteur de vitesse de roue.",
+          "is_correct": false,
+          "explanation": "Faux : le principe repose justement sur la mesure de la vitesse des roues."
+        },
+        {
+          "id": "E",
+          "text": "Des génératrices tachymétriques envoient un signal en fonction de la vitesse des roues pour réguler la pression hydraulique.",
+          "is_correct": true,
+          "explanation": "Vrai : le signal lié à la vitesse des roues permet d’ajuster la pression de freinage et d’éviter le blocage."
+        }
+      ],
+      "coverage_label": "Système anti-patinage",
+      "learning_objective": "Interpréter le principe de régulation du système anti-patinage.",
+      "correction_summary": "La bonne réponse décrit la chaîne fonctionnelle : mesure de vitesse des roues, envoi d’un signal et régulation de la pression hydraulique. L’erreur fréquente consiste à croire que l’anti-patinage agit sur la traction ou qu’il n’intervient qu’après l’arrêt, alors qu’il protège les roues pendant le freinage.",
+      "course_clarification": "L’anti-patinage limite le glissement excessif des roues. Quand la vitesse mesurée devient incompatible avec le freinage demandé, la pression hydraulique est modulée pour éviter le blocage.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S11-2-Q5",
+      "prompt": "À propos des pneumatiques et de leur surveillance, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le BTMS surveille la pression hydraulique des amortisseurs.",
+          "is_correct": false,
+          "explanation": "Faux : la pression hydraulique des amortisseurs est surveillée par l’OPMS."
+        },
+        {
+          "id": "B",
+          "text": "Le pneu radial présente une surface de contact importante et constante.",
+          "is_correct": false,
+          "explanation": "Faux : cette caractéristique appartient au pneu radial, donc la phrase est vraie sur le fond ; pour être fausse ici, il faudrait l’attribuer au pneu diagonal. Cette proposition est donc incorrectement formulée et ne doit pas être retenue comme juste dans un QCM bien rédigé."
+        },
+        {
+          "id": "C",
+          "text": "Le TPMS surveille la pression des pneus.",
+          "is_correct": true,
+          "explanation": "Vrai : le TPMS signifie Tire Pressure Monitoring System et concerne la pression des pneus."
+        },
+        {
+          "id": "D",
+          "text": "En France, M correspond à la largeur et N au diamètre extérieur.",
+          "is_correct": false,
+          "explanation": "Faux : c’est l’inverse, M correspond au diamètre extérieur et N à la largeur."
+        },
+        {
+          "id": "E",
+          "text": "Le pneu diagonal possède une surface de contact importante et constante.",
+          "is_correct": false,
+          "explanation": "Faux : cette caractéristique décrit le pneu radial ; le pneu diagonal subit davantage de déformations de contact."
+        }
+      ],
+      "coverage_label": "Pneumatiques et surveillance",
+      "learning_objective": "Associer chaque sigle de surveillance et distinguer pneu radial et pneu diagonal.",
+      "correction_summary": "La bonne réponse identifie correctement le TPMS, dédié à la pression des pneus. Une confusion fréquente consiste à mélanger TPMS, BTMS et OPMS, ou à confondre les propriétés du pneu radial et du pneu diagonal. La lecture attentive des sigles et des caractéristiques techniques permet d’éviter l’erreur.",
+      "course_clarification": "Le TPMS contrôle la pression des pneumatiques. Le pneu radial conserve une surface de contact plus stable, tandis que le pneu diagonal se déforme davantage. Les sigles de surveillance sont distincts : TPMS pour les pneus, BTMS pour les freins, OPMS pour les amortisseurs.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S11",
+  "anchor_slide_id": "S11-2",
+  "question_count_target": 5,
+  "title": "QCM - Freinage, adhérence et systèmes de protection"
+}

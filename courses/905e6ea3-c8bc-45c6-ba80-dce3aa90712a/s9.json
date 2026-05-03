@@ -1,0 +1,76 @@
+{
+  "slide_id": "s9",
+  "subpart_id": "s9",
+  "title": "Chef d’escale",
+  "objective": "Saisir les responsabilités de coordination au sol lors d’une escale.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s9-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Coordonner toute l’escale",
+      "text": "Le **chef d’escale** supervise les opérations au sol pour les **passagers** et l’**avion** pendant la rotation.",
+      "bullets": [
+        "Il coordonne les **services aux passagers**, la **gestion des bagages**, le **fret**, les **opérations aériennes**, le **ravitaillement** et l’organisation des **équipages**.",
+        "Il veille au bon déroulement de l’**embarquement** et au respect des **procédures** et des **normes aéroportuaires**.",
+        "La coordination s’appuie sur des standards de **ground handling** : chargement, déchargement, embarquement, débarquement, ravitaillement et sécurisation de l’avion pendant l’escale."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Réagir vite en cas d’imprévu",
+      "text": "En situation perturbée, il reste le **premier point de décision** pour garder l’escale sous contrôle.",
+      "bullets": [
+        "Il traite rapidement les **retards**, les **annulations**, les problèmes de **bagages** et les difficultés rencontrées avec des **passagers**.",
+        "Il s’appuie sur des réponses **standardisées** et sur la **remontée rapide des incidents** pour limiter l’impact sur l’exploitation.",
+        "Les compétences clés sont la **gestion**, la **communication**, la **résolution de problèmes** et la maîtrise des **réglementations aériennes**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "IATA — Ground Ops Standards",
+      "locator": "coordination au sol, standardisation des procédures, opérations d’escale",
+      "url": "https://www.iata.org/en/programs/ops-infra/ground-operations/ground-ops-standards/"
+    },
+    {
+      "source_type": "web",
+      "label": "EASA — Ground handling regulation",
+      "locator": "périmètre du ground handling et gestion des risques",
+      "url": "https://www.easa.europa.eu/en/newsroom-and-events/press-releases/easa-proposes-first-eu-wide-regulation-ground-handling"
+    },
+    {
+      "source_type": "web",
+      "label": "IATA — IATA Ground Operations Manual (IGOM)",
+      "locator": "research",
+      "url": "https://www.iata.org/en/publications/manuals/iata-ground-operations-manual/"
+    },
+    {
+      "source_type": "web",
+      "label": "ICAO — Airport, Aircraft, Crew and Cargo Module",
+      "locator": "research",
+      "url": "https://www.icao.int/cart/Airports-Module"
+    }
+  ],
+  "course_reference_note": "La fiche décrit le rôle du chef d’escale comme coordinateur central des opérations au sol. Elle insiste sur la prise en charge des passagers, des bagages, du fret et des imprévus.",
+  "teacher_notes": "Faire repérer la chaîne de coordination : passagers, bagages, fret, avion, équipages. Faire formuler un exemple d’imprévu et la réaction attendue."
+}

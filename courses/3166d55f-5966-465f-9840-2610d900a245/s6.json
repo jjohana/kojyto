@@ -1,0 +1,78 @@
+{
+  "slide_id": "S6",
+  "subpart_id": "5",
+  "title": "Accélération : définition et unité",
+  "objective": "Définir l’accélération comme dérivée de la vitesse et en donner l’unité.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s6-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture physique et unité",
+      "text": null,
+      "bullets": [
+        "**\\(\\vec a\\)** mesure un changement de **norme** de la vitesse (accélérer ou ralentir) ou un changement de **direction** ; une trajectoire courbe peut donc donner une accélération même si la vitesse garde la même valeur.",
+        "L’unité du Système international (SI) est le **mètre par seconde carrée** : \\(\\mathrm{m\\cdot s^{-2}}\\). Elle traduit une variation de vitesse exprimée en \\(\\mathrm{m\\cdot s^{-1}}\\) par unité de temps.",
+        "Un **mouvement uniforme** peut exister avec **\\(a=0\\)** : la vitesse reste constante, donc le mobile se déplace sans modification de sa vitesse ni de sa direction."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation centrale",
+      "text": "L’accélération décrit la variation temporelle du **vecteur vitesse**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\vec a = \\frac{d\\vec v}{dt} = \\frac{d^2\\vec r}{dt^2}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "OpenStax — Acceleration",
+      "locator": "définition de l’accélération",
+      "url": "https://openstax.org/books/physics/pages/3-1-acceleration"
+    },
+    {
+      "source_type": "web",
+      "label": "BIPM — Seconde",
+      "locator": "unité de temps du SI",
+      "url": "https://www.bipm.org/fr/si-base-units/second"
+    },
+    {
+      "source_type": "web",
+      "label": "3.4 Motion with Constant Acceleration - University Physics Volume 1 | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/3-4-motion-with-constant-acceleration"
+    },
+    {
+      "source_type": "web",
+      "label": "2.4 Acceleration - College Physics 2e | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/college-physics-2e/pages/2-4-acceleration"
+    },
+    {
+      "source_type": "web",
+      "label": "3.1 Acceleration - Physics | OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/physics/pages/3-1-acceleration?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Définir l’accélération par la dérivation temporelle de la vitesse, puis rappeler l’unité et le cas où la vitesse reste constante. La relation avec la position permet de lire directement la seconde dérivée.",
+  "teacher_notes": "Insister sur la distinction entre **mouvement** et **accélération** : un mobile peut être en déplacement sans changer de vitesse. Vérifier que les élèves savent relier la notation vectorielle à l’idée de variation de norme ou de direction."
+}

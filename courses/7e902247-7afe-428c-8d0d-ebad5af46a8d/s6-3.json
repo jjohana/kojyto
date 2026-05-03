@@ -1,0 +1,64 @@
+{
+  "slide_id": "S6-3",
+  "subpart_id": "S6",
+  "title": "Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2",
+  "objective": "Localiser les interfaces qui relient le service au sol aux réseaux AC et DC.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s6-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Repérage des interfaces",
+      "text": null,
+      "bullets": [
+        "Le **FWD CABIN C/B PANEL (5001VE)** porte la commande **MAINT BUS ON** : c’est le point d’action pour mettre en service le réseau de service au sol.",
+        "Le schéma distingue deux domaines, **DC SYSTEM** et **AC SYSTEM**, chacun relié à son réseau de masse : **DC GND NETWORK** et **AC GND NETWORK**.",
+        "Les traits colorés et pointillés matérialisent les chemins d’alimentation et aident à suivre les liaisons sans confondre les zones de puissance et les commandes."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture du chemin d’alimentation",
+      "text": null,
+      "bullets": [
+        "Le bloc **TR 2** fait l’interface entre la partie **AC** et la partie **DC** ; il relie les deux réseaux au sein de l’architecture de service au sol.",
+        "Par lecture du schéma, **EXTERNAL POWER A ONLY** alimente le réseau de service au sol quand **MAINT BUS ON** est sélectionné, sans energiser tout le réseau électrique.",
+        "À retenir : repérer d’abord **5001VE**, puis **TR 2**, puis les deux réseaux de masse pour reconstituer le chemin complet de l’énergie. Un **transformer rectifier unit (TRU)** convertit l’**AC** en **DC** ; cette fonction éclaire le rôle d’interface de **TR 2**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "AIRCRAFT CHARACTERISTICS - AIRPORT AND MAINTENANCE PLANNING (A330-700L)",
+      "locator": "Service électrique / external power / maintenance bus",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2023-08/ac_a330-700l_jul2023.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Transformer Rectifier Unit (TRU)",
+      "locator": "Fonction de conversion AC vers DC",
+      "url": "https://skybrary.aero/index.php/articles/transformer-rectifier-unit-tru"
+    }
+  ],
+  "course_reference_note": "Le schéma situe le réseau de service au sol entre les parties AC et DC. Le repérage passe par le panneau 5001VE, TR 2 et les deux réseaux de masse.",
+  "teacher_notes": "Faire lire le chemin dans l’ordre : **MAINT BUS ON** → **EXTERNAL POWER A ONLY** → **TR 2** → **DC GND NETWORK / AC GND NETWORK**. Insister sur la distinction entre repérage d’interface et rôle fonctionnel des blocs."
+}

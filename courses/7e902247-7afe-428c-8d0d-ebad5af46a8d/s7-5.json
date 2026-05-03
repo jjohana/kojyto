@@ -1,0 +1,109 @@
+{
+  "slide_id": "S7-5",
+  "subpart_id": "S7",
+  "title": "De la supervision à la distribution des charges",
+  "objective": "Lire le synoptique électrique dans l’ordre : surveillance, commande, puis répartition vers les charges.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s7-5-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Chaîne fonctionnelle du synoptique",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Niveau",
+          "Bloc repère",
+          "Rôle",
+          "Message à retenir"
+        ],
+        [
+          "Supervision des protections",
+          "CBMU + disjoncteurs (C/B)",
+          "Le **Circuit Breaker Monitoring Unit** (CBMU) relève l’état des disjoncteurs et signale les déclenchements ou les ouvertures manuelles sur la page **ECAM** (Electronic Centralized Aircraft Monitor).",
+          "La protection est suivie ; elle n’assure pas la distribution."
+        ],
+        [
+          "Commande des liaisons",
+          "ECMU + contacteurs AC/DC",
+          "Les **Electrical Contactor Management Units** (ECMU) pilotent les contacteurs du réseau AC/DC et autorisent les basculements utiles.",
+          "La commande prépare la répartition des bus."
+        ],
+        [
+          "Distribution finale",
+          "AC LOAD DISTRIBUTION / DC LOAD DISTRIBUTION",
+          "Ces blocs matérialisent la sortie vers les consommateurs en **courant alternatif (AC)** et **courant continu (DC)**.",
+          "La charge reçoit l’énergie après la surveillance et la commutation."
+        ],
+        [
+          "Lecture du schéma",
+          "Ordre de parcours",
+          "Lire d’abord les états et commandes, puis la chaîne de distribution.",
+          "**Supervision → contacteurs → charges**."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Méthode de lecture",
+      "text": null,
+      "bullets": [
+        "Repérer d’abord les **états** affichés par la page **ECAM** : ils donnent le diagnostic, pas l’alimentation elle-même.",
+        "Identifier ensuite les **contacteurs** gérés par les **ECMU** : ce sont eux qui connectent ou isolent les bus.",
+        "Finir par les zones **AC LOAD DISTRIBUTION** et **DC LOAD DISTRIBUTION**, qui indiquent vers quelles charges l’énergie est répartie."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "14 CFR § 25.1357 Circuit protective devices",
+      "locator": "article sur les dispositifs de protection de circuit",
+      "url": "https://ecfr.io/Title-14/Section-25.1357"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus A330 (RR Trent 700) ATA 24 Electrical Power Training Manual",
+      "locator": "sections CBMU / ECMU / load distribution",
+      "url": "https://studylib.net/doc/27905455/ata-24---electrical-power"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Power Distribution | Astronics",
+      "locator": "research",
+      "url": "https://www.astronics.com/product?productgroup=Aircraft+Electrical+Power+Systems&subproduct=aircraft+power+distribution"
+    },
+    {
+      "source_type": "web",
+      "label": "14 CFR § 25.1357 Circuit protective devices - Code of Federal Regulations",
+      "locator": "research",
+      "url": "https://ecfr.io/Title-14/Section-25.1357?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Power Distribution | Astronics",
+      "locator": "research",
+      "url": "https://www.astronics.com/product?productgroup=Aircraft+Electrical+Power+Systems&subproduct=aircraft+power+distribution&utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Les pages 6 à 8 articulent la page **ECAM**, le réseau de service au sol et le synoptique **CBMU/ECMU**. La lecture attendue va des fonctions de **surveillance** aux blocs de **distribution** AC/DC.",
+  "teacher_notes": "Faire souligner la différence entre surveillance, commande et distribution. Insister sur l’ordre de lecture du synoptique : protections, contacteurs, puis charges."
+}

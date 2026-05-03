@@ -1,0 +1,72 @@
+{
+  "slide_id": "S1-2",
+  "subpart_id": "S1",
+  "title": "Exemple numérique et architecture double flux",
+  "objective": "Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s1-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture physique et calcul",
+      "text": null,
+      "bullets": [
+        "**Débits et vitesses** : \\(Q_{ma}\\) et \\(Q_{mc}\\) sont des débits massiques en kg/s ; \\(V_0\\), \\(V_5\\), \\(V'_5\\) et \\(V''_5\\) sont des vitesses en m/s ; \\(T_u\\) s’exprime en newtons (N).",
+        "Le **terme réacteur** vient de l’accélération de l’air ; le **terme fusée** \\(Q_{mc}V_5\\) ajoute l’effet du carburant, distinct du flux d’air principal.",
+        "Le **fan** répartit la poussée entre **flux froid** et **flux chaud** ; la poussée totale est la somme des deux contributions. Exemple : \\(75 \\times (650 - 250) = 30\\,000\\ \\text{N} = 3\\,000\\ \\text{daN}\\)."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations de poussée",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\begin{aligned}\nT_u &= Q_{ma}(V_5 - V_0) + Q_{mc}V_5 \\\\\nT_u &= Q_{ma,\\,froid}(V_5'' - V_0) + Q_{ma,\\,chaud}(V_5' - V_0) + Q_{mc}V_5\n\\end{aligned}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Turbofan Thrust",
+      "locator": "contribution du flux cœur et du flux de contournement",
+      "url": "https://www.grc.nasa.gov/WWW/K-12/BGP/turbfan.html"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Thrust Equation",
+      "locator": "bilan de quantité de mouvement et terme de pression",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-force/"
+    },
+    {
+      "source_type": "web",
+      "label": "What is Thrust? — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/what-is-thrust/"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA HyTEC to Help Jets Burn Less Fuel — NASA",
+      "locator": "research",
+      "url": "https://www.nasa.gov/aeronautics/nasas-hytec-to-help-jets-burn-less-fuel/"
+    }
+  ],
+  "course_reference_note": "La poussée nette est donnée par le terme réacteur, puis complétée par le terme carburant et, pour le double flux, par la somme des flux chaud et froid. L’exemple chiffré aboutit à 30 000 N, soit 3 000 daN.",
+  "teacher_notes": "Faire verbaliser séparément le terme réacteur, le terme fusée et la somme des deux flux. Insister sur le rôle du fan comme partage de la poussée entre flux froid et flux chaud."
+}

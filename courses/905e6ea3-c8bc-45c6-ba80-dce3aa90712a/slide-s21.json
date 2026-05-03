@@ -1,0 +1,179 @@
+{
+  "quiz_id": "slide::s21",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s21_q1",
+      "prompt": "Concernant le lien entre santé, sécurité et qualité, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La qualité des produits dépend uniquement des machines et jamais des conditions de travail.",
+          "is_correct": false,
+          "explanation": "Les conditions de travail comptent aussi, car fatigue, stress ou mauvaise préparation peuvent provoquer des erreurs qui affectent la qualité."
+        },
+        {
+          "id": "B",
+          "text": "Une bonne qualité peut être obtenue même si les risques professionnels sont totalement négligés.",
+          "is_correct": false,
+          "explanation": "Négliger les risques augmente la probabilité d’erreurs, d’incidents et de non-conformités, ce qui dégrade la qualité."
+        },
+        {
+          "id": "C",
+          "text": "La santé des employés n’a aucun effet sur les erreurs de fabrication ou de maintenance.",
+          "is_correct": false,
+          "explanation": "Une baisse de vigilance ou de forme physique peut au contraire favoriser des erreurs humaines."
+        },
+        {
+          "id": "D",
+          "text": "La santé et la sécurité des employés influencent directement la qualité des produits.",
+          "is_correct": true,
+          "explanation": "La relation est directe : de mauvaises conditions de santé ou de sécurité peuvent dégrader la réalisation du travail et donc la qualité du produit final."
+        },
+        {
+          "id": "E",
+          "text": "La sécurité et la qualité sont deux notions sans lien entre elles dans une activité industrielle.",
+          "is_correct": false,
+          "explanation": "Elles sont liées : une activité sûre limite les erreurs et contribue à un produit conforme."
+        }
+      ],
+      "coverage_label": "Interaction entre santé, sécurité et qualité",
+      "learning_objective": "Identifier le lien direct entre conditions de travail et qualité du produit.",
+      "correction_summary": "La bonne affirmation est celle qui relie directement santé/sécurité et qualité. Le piège consiste à séparer artificiellement les conditions de travail de la conformité du produit.",
+      "course_clarification": "La santé et la sécurité concernent les personnes, mais leurs effets se voient aussi sur le produit final. Quand un salarié travaille dans de bonnes conditions, les erreurs diminuent et la qualité progresse.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s21_q2",
+      "prompt": "À propos de SMS et QMS, quelle proposition est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "SMS désigne un système de maintenance spécialisé dans les messages courts.",
+          "is_correct": false,
+          "explanation": "Ici, SMS ne renvoie pas aux messages téléphoniques, mais à un système de management de la sécurité."
+        },
+        {
+          "id": "B",
+          "text": "SMS signifie Safety Management System et QMS signifie Quality Management System.",
+          "is_correct": true,
+          "explanation": "Ces deux sigles désignent respectivement le système de management de la sécurité et le système de management de la qualité."
+        },
+        {
+          "id": "C",
+          "text": "QMS signifie Quick Maintenance Service.",
+          "is_correct": false,
+          "explanation": "QMS correspond à Quality Management System, c’est-à-dire le système de management de la qualité."
+        },
+        {
+          "id": "D",
+          "text": "SMS et QMS sont des sigles sans rapport avec la gestion d’entreprise.",
+          "is_correct": false,
+          "explanation": "Ils sont justement liés à l’organisation et au pilotage de la sécurité et de la qualité."
+        },
+        {
+          "id": "E",
+          "text": "QMS concerne uniquement la sécurité des personnes et pas la qualité.",
+          "is_correct": false,
+          "explanation": "Le sigle QMS vise la qualité ; la sécurité des personnes relève du SMS."
+        }
+      ],
+      "coverage_label": "SMS et QMS",
+      "learning_objective": "Reconnaître les sigles SMS et QMS et leur signification exacte.",
+      "correction_summary": "La seule bonne réponse donne l’intitulé complet des deux sigles. Le piège classique est de confondre QMS avec un autre terme ou de croire que SMS parle de téléphonie.",
+      "course_clarification": "SMS = Safety Management System : il organise la sécurité. QMS = Quality Management System : il organise la qualité. Les deux fonctionnent ensemble pour réduire les erreurs et améliorer le résultat.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s21_q3",
+      "prompt": "Quel énoncé décrit correctement l'effet d'un technicien fatigué ou mal formé ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un technicien fatigué ou mal formé peut commettre une erreur de maintenance qui affecte la sécurité et la qualité de l’avion.",
+          "is_correct": true,
+          "explanation": "La fatigue ou un manque de formation augmente le risque d’erreur humaine, et cette erreur peut avoir des conséquences à la fois sur la sécurité et sur la qualité."
+        },
+        {
+          "id": "B",
+          "text": "La fatigue améliore la précision des gestes techniques.",
+          "is_correct": false,
+          "explanation": "La fatigue diminue généralement la vigilance et la concentration, ce qui augmente le risque d’erreur."
+        },
+        {
+          "id": "C",
+          "text": "Une mauvaise formation n’a de conséquence que sur la rapidité d’exécution, jamais sur la sécurité.",
+          "is_correct": false,
+          "explanation": "Un manque de formation peut conduire à des gestes incorrects ou incomplets, donc à des risques pour la sécurité."
+        },
+        {
+          "id": "D",
+          "text": "Une erreur de maintenance ne peut jamais avoir d’impact sur la qualité de l’avion.",
+          "is_correct": false,
+          "explanation": "Une maintenance mal réalisée peut créer un défaut, un dysfonctionnement ou une non-conformité, donc nuire à la qualité."
+        },
+        {
+          "id": "E",
+          "text": "La sécurité et la qualité sont protégées même si l’opérateur est épuisé.",
+          "is_correct": false,
+          "explanation": "L’épuisement favorise les oublis et les mauvaises décisions, ce qui fragilise la sécurité et la qualité."
+        }
+      ],
+      "coverage_label": "Erreur de maintenance et conséquences",
+      "learning_objective": "Relier fatigue, défaut de formation, erreur de maintenance et conséquences sur sécurité/qualité.",
+      "correction_summary": "L’énoncé vrai relie la fatigue ou le manque de formation à une erreur de maintenance puis à ses effets. Le piège est de sous-estimer l’impact d’une erreur humaine sur deux dimensions à la fois.",
+      "course_clarification": "Une maintenance mal faite peut créer un défaut invisible au départ mais dangereux ensuite. La formation et la vigilance sont donc essentielles pour éviter les incidents et préserver la qualité.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s21_q4",
+      "prompt": "Quelle affirmation correspond à une culture d’entreprise intégrée en matière de sécurité et de qualité ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Une culture intégrée sépare totalement la sécurité de la qualité.",
+          "is_correct": false,
+          "explanation": "Au contraire, l’objectif est de les combiner pour qu’elles se renforcent mutuellement."
+        },
+        {
+          "id": "B",
+          "text": "Une culture intégrée repose seulement sur la productivité, sans prendre en compte les risques.",
+          "is_correct": false,
+          "explanation": "La productivité ne suffit pas : il faut aussi gérer les risques et la qualité pour obtenir un fonctionnement fiable."
+        },
+        {
+          "id": "C",
+          "text": "Le SMS remplace le QMS lorsqu’une entreprise veut améliorer ses résultats.",
+          "is_correct": false,
+          "explanation": "Les deux systèmes ont des rôles différents et complémentaires ; l’un ne remplace pas l’autre."
+        },
+        {
+          "id": "D",
+          "text": "Le QMS ne concerne que les produits finis et jamais l’organisation du travail.",
+          "is_correct": false,
+          "explanation": "Le management de la qualité s’appuie aussi sur l’organisation des tâches et des प्रक्रédures, pas seulement sur le contrôle final."
+        },
+        {
+          "id": "E",
+          "text": "Une culture d’entreprise intégrée combine SMS et QMS.",
+          "is_correct": true,
+          "explanation": "L’idée centrale est de relier la gestion de la sécurité et la gestion de la qualité dans une même logique d’organisation."
+        }
+      ],
+      "coverage_label": "Culture d’entreprise intégrée",
+      "learning_objective": "Comprendre l’intérêt d’une culture qui articule sécurité et qualité dans une même organisation.",
+      "correction_summary": "La bonne réponse met ensemble SMS et QMS dans une logique commune. Le piège consiste à croire qu’il faut choisir entre sécurité et qualité alors qu’elles se renforcent.",
+      "course_clarification": "Une culture intégrée veut dire que la sécurité et la qualité sont pensées ensemble dans l’organisation. Cela aide à prévenir les erreurs, à sécuriser le travail et à produire conforme.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s21",
+  "anchor_slide_id": "s21",
+  "question_count_target": 4,
+  "title": "QCM - Interaction entre santé, sécurité et qualité"
+}

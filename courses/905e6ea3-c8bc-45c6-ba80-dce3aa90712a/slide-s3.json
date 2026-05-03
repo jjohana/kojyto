@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s3_q1",
+      "prompt": "Quel énoncé correspond à l’idée générale présentée sur les métiers de l’aéronautique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le secteur se limite aux fonctions de pilote de ligne.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse de l’idée mise en avant : le pilotage n’est qu’un métier parmi d’autres."
+        },
+        {
+          "id": "B",
+          "text": "Les métiers de l’aéronautique sont tous identiques dans leurs missions.",
+          "is_correct": false,
+          "explanation": "Le support insiste au contraire sur la variété des tâches et des domaines d’activité."
+        },
+        {
+          "id": "C",
+          "text": "L’aéronautique n’évolue pas et reste un domaine figé.",
+          "is_correct": false,
+          "explanation": "Le secteur est présenté comme en évolution constante, donc pas comme un domaine immobile."
+        },
+        {
+          "id": "D",
+          "text": "Le secteur aéronautique offre une grande variété de métiers qui vont bien au-delà du seul pilotage.",
+          "is_correct": true,
+          "explanation": "L’idée centrale est bien la diversité des métiers : le pilotage est présenté comme un métier emblématique, mais pas comme l’unique débouché."
+        },
+        {
+          "id": "E",
+          "text": "Le secteur ne propose qu’une seule voie professionnelle.",
+          "is_correct": false,
+          "explanation": "La diversité des carrières est précisément mise en avant, ce qui exclut l’idée d’une seule voie."
+        }
+      ],
+      "coverage_label": "Découverte des métiers de l’aéronautique",
+      "learning_objective": "Identifier l’idée générale de diversité des métiers dans l’aéronautique.",
+      "correction_summary": "La bonne réponse met en avant la diversité des métiers et le fait que le pilotage n’est qu’un exemple. Le piège consiste à réduire le secteur au seul métier de pilote.",
+      "course_clarification": "L’aéronautique regroupe plusieurs activités professionnelles liées aux aéronefs et au trafic aérien. L’enjeu est de comprendre que le secteur ouvre des carrières variées, pas seulement en cabine de pilotage.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s3_q2",
+      "prompt": "Parmi les propositions suivantes, laquelle décrit correctement la place du pilote d’avion ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le pilote d’avion est le seul métier important de l’aéronautique.",
+          "is_correct": false,
+          "explanation": "Le document insiste justement sur l’existence d’une grande variété d’autres métiers."
+        },
+        {
+          "id": "B",
+          "text": "Le pilote d’avion est présenté comme un métier emblématique parmi d’autres métiers du secteur.",
+          "is_correct": true,
+          "explanation": "Le texte le met en avant, mais précise qu’il ne représente qu’une partie des métiers possibles."
+        },
+        {
+          "id": "C",
+          "text": "Le pilote d’avion travaille uniquement sans interaction avec d’autres acteurs.",
+          "is_correct": false,
+          "explanation": "Le pilotage s’accompagne d’échanges avec les contrôleurs aériens et l’équipage."
+        },
+        {
+          "id": "D",
+          "text": "Le métier de pilote ne demande aucune formation spécifique.",
+          "is_correct": false,
+          "explanation": "Une formation spécialisée et l’obtention de la licence européenne ATPL sont nécessaires."
+        },
+        {
+          "id": "E",
+          "text": "Le pilote n’a pas à assurer la sécurité du vol.",
+          "is_correct": false,
+          "explanation": "La sécurité de l’avion et des passagers fait partie de ses responsabilités essentielles."
+        }
+      ],
+      "coverage_label": "Pilote de ligne",
+      "learning_objective": "Comprendre que le pilote est un métier important mais non exclusif, avec des responsabilités précises.",
+      "correction_summary": "Le pilote est bien un métier emblématique, mais il s’inscrit dans un ensemble plus large. Le piège est de croire qu’il résume à lui seul tout le secteur.",
+      "course_clarification": "Un métier emblématique sert souvent d’exemple visible pour un domaine. Ici, il faut retenir que le pilotage est central, mais qu’il coexiste avec d’autres fonctions techniques et organisationnelles.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s3_q3",
+      "prompt": "Quel énoncé correspond le mieux au domaine de la conception en aéronautique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La conception d’un avion fait partie des domaines cités parmi les carrières du secteur.",
+          "is_correct": true,
+          "explanation": "Le texte cite explicitement la conception comme l’un des domaines qui rendent le secteur varié."
+        },
+        {
+          "id": "B",
+          "text": "La conception ne concerne jamais les avions, seulement les trains.",
+          "is_correct": false,
+          "explanation": "La formulation du support relie bien la conception au domaine aéronautique et aux avions."
+        },
+        {
+          "id": "C",
+          "text": "La conception est présentée comme étrangère aux métiers de l’aéronautique.",
+          "is_correct": false,
+          "explanation": "Au contraire, elle est donnée comme un exemple de voie professionnelle du secteur."
+        },
+        {
+          "id": "D",
+          "text": "La conception remplace complètement les autres métiers techniques.",
+          "is_correct": false,
+          "explanation": "Le document parle d’un éventail de carrières, donc la conception n’efface pas les autres métiers."
+        },
+        {
+          "id": "E",
+          "text": "La conception n’a aucun lien avec l’évolution du secteur.",
+          "is_correct": false,
+          "explanation": "Le secteur est décrit comme en évolution constante, ce qui rend la conception pleinement intégrée à ses transformations."
+        }
+      ],
+      "coverage_label": "Conception aéronautique",
+      "learning_objective": "Repérer la conception comme un domaine professionnel du secteur aéronautique.",
+      "correction_summary": "La conception est bien une voie citée parmi les métiers de l’aéronautique. Le piège est de l’écarter au profit du seul pilotage.",
+      "course_clarification": "La conception regroupe les activités liées à la création et à l’amélioration des aéronefs. Elle s’inscrit dans des métiers techniques et d’ingénierie.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s3_q4",
+      "prompt": "Quel énoncé est exact à propos de la sécurité du trafic aérien ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La sécurité du trafic aérien n’a aucun lien avec les métiers de l’aéronautique.",
+          "is_correct": false,
+          "explanation": "Elle est au contraire nommée comme un domaine important du secteur."
+        },
+        {
+          "id": "B",
+          "text": "La sécurité du trafic aérien concerne uniquement la vente de billets.",
+          "is_correct": false,
+          "explanation": "La vente de billets relève d’un autre univers ; ici, il s’agit de la circulation aérienne et de sa sécurité."
+        },
+        {
+          "id": "C",
+          "text": "La sécurité du trafic aérien est identique à la maintenance des moteurs.",
+          "is_correct": false,
+          "explanation": "Ce sont deux domaines distincts : l’un concerne l’organisation et la sûreté du trafic, l’autre l’entretien technique."
+        },
+        {
+          "id": "D",
+          "text": "La sécurité du trafic aérien exclut toute carrière technique.",
+          "is_correct": false,
+          "explanation": "Le secteur mêle justement des métiers techniques, organisationnels et de contrôle."
+        },
+        {
+          "id": "E",
+          "text": "La sécurité du trafic aérien est l’un des domaines cités pour illustrer la diversité des métiers.",
+          "is_correct": true,
+          "explanation": "Le texte mentionne explicitement la sécurité du trafic aérien parmi les carrières à explorer."
+        }
+      ],
+      "coverage_label": "Sécurité du trafic aérien",
+      "learning_objective": "Associer la sécurité du trafic aérien à un domaine professionnel du secteur.",
+      "correction_summary": "La sécurité du trafic aérien fait bien partie des domaines mis en avant. Le piège est de la confondre avec des tâches commerciales ou avec la maintenance.",
+      "course_clarification": "La sécurité du trafic aérien vise à faire circuler les aéronefs dans de bonnes conditions de sûreté. Elle mobilise des métiers spécifiques, souvent en lien avec la coordination et le contrôle.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s3_q5",
+      "prompt": "Quel énoncé décrit correctement la maintenance dans l’aéronautique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La maintenance consiste à ne jamais vérifier les appareils.",
+          "is_correct": false,
+          "explanation": "La maintenance implique justement des contrôles, de l’entretien et des interventions techniques."
+        },
+        {
+          "id": "B",
+          "text": "La maintenance ne sert pas à la sécurité des appareils et des passagers.",
+          "is_correct": false,
+          "explanation": "Le support relie la maintenance à la sécurité, car elle permet de garantir le bon fonctionnement des appareils."
+        },
+        {
+          "id": "C",
+          "text": "La maintenance fait partie des domaines mis en avant parmi les carrières du secteur.",
+          "is_correct": true,
+          "explanation": "Le texte cite la maintenance comme un exemple de voie professionnelle à explorer."
+        },
+        {
+          "id": "D",
+          "text": "La maintenance est indépendante de l’évolution des technologies.",
+          "is_correct": false,
+          "explanation": "Le secteur évolue constamment, ce qui impose une veille technique et des mises à jour régulières."
+        },
+        {
+          "id": "E",
+          "text": "La maintenance concerne uniquement les passagers et pas les aéronefs.",
+          "is_correct": false,
+          "explanation": "Le cœur du métier porte sur les aéronefs et leurs systèmes, pas sur les passagers eux-mêmes."
+        }
+      ],
+      "coverage_label": "Maintenance aéronautique",
+      "learning_objective": "Identifier la maintenance comme un métier technique lié à la sécurité et à l’évolution technologique.",
+      "correction_summary": "La maintenance est bien un domaine clé du secteur, directement lié à la sécurité. Le piège est de la réduire à une activité secondaire ou sans lien avec la technique.",
+      "course_clarification": "La maintenance regroupe l’inspection, l’entretien et les réparations des appareils. Elle est indispensable pour garder les aéronefs sûrs et opérationnels.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s3",
+  "anchor_slide_id": "s3",
+  "question_count_target": 5,
+  "title": "QCM - Découverte des métiers de l’aéronautique"
+}

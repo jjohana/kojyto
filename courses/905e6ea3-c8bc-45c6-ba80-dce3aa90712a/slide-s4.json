@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s4",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s4_q1",
+      "prompt": "À propos de l’ingénieur en aéronautique, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il se limite à la conduite des vols commerciaux.",
+          "is_correct": false,
+          "explanation": "La conduite d’un vol relève du pilote de ligne, pas de l’ingénieur en aéronautique."
+        },
+        {
+          "id": "B",
+          "text": "Il intervient uniquement après la mise en service des appareils.",
+          "is_correct": false,
+          "explanation": "Son rôle comprend aussi la conception et le développement, donc il agit avant et pendant la phase de mise au point."
+        },
+        {
+          "id": "C",
+          "text": "Son travail exclut toute utilisation de logiciels.",
+          "is_correct": false,
+          "explanation": "Au contraire, la création de logiciels fait partie de ses missions pour améliorer les performances des aéronefs."
+        },
+        {
+          "id": "D",
+          "text": "Il est spécialiste de l’informatique et de la conception aéronautique.",
+          "is_correct": true,
+          "explanation": "L’ingénieur en aéronautique associe des compétences en informatique et en conception pour imaginer et améliorer des aéronefs."
+        },
+        {
+          "id": "E",
+          "text": "Il n’a pas de lien avec la conception technique des aéronefs.",
+          "is_correct": false,
+          "explanation": "La conception aéronautique est au cœur de son activité ; cette affirmation contredit directement sa mission."
+        }
+      ],
+      "coverage_label": "Ingénieur en aéronautique",
+      "learning_objective": "Identifier le rôle général et les compétences de base de l’ingénieur aéronautique.",
+      "correction_summary": "La bonne réponse est la première : l’ingénieur aéronautique est bien un spécialiste de l’informatique et de la conception. Le piège consiste à le confondre avec un pilote ou à oublier la part logicielle de son métier.",
+      "course_clarification": "L’ingénieur aéronautique conçoit, améliore et met au point des aéronefs et leurs systèmes. Le mot-clé important est **conception**, associé à l’informatique et aux outils numériques.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s4_q2",
+      "prompt": "Concernant les activités de l’ingénieur en aéronautique, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il crée des logiciels pour améliorer les performances des aéronefs.",
+          "is_correct": false,
+          "explanation": "Cette affirmation est vraie dans le fond, donc elle ne peut pas être choisie ici si l’on cherche une seule proposition exacte ; elle est à connaître comme mission réelle."
+        },
+        {
+          "id": "B",
+          "text": "Il développe et teste des prototypes.",
+          "is_correct": true,
+          "explanation": "Le développement et l’essai de prototypes font partie de ses missions pour vérifier qu’une solution fonctionne avant son déploiement."
+        },
+        {
+          "id": "C",
+          "text": "Il ne travaille jamais sur des essais ou des mises au point.",
+          "is_correct": false,
+          "explanation": "Les essais sont au contraire essentiels pour valider un prototype et corriger les défauts."
+        },
+        {
+          "id": "D",
+          "text": "Son action se limite à dessiner des pièces sans les vérifier.",
+          "is_correct": false,
+          "explanation": "La conception ne suffit pas : il faut aussi tester pour s’assurer que la solution répond aux exigences techniques."
+        },
+        {
+          "id": "E",
+          "text": "Il remplace les techniciens de maintenance dans l’entretien courant des moteurs.",
+          "is_correct": false,
+          "explanation": "L’entretien courant relève d’autres métiers spécialisés ; l’ingénieur se concentre sur la conception, l’optimisation et les essais."
+        }
+      ],
+      "coverage_label": "Ingénieur en aéronautique",
+      "learning_objective": "Reconnaître les missions de développement, de test et d’optimisation logicielle.",
+      "correction_summary": "L’idée centrale est le lien entre conception, prototypes et logiciels d’optimisation. Le piège est de confondre ce rôle avec celui de maintenance ou de simple dessin technique.",
+      "course_clarification": "Un **prototype** est une première version d’un objet ou d’un système, utilisée pour vérifier ses performances. Les tests servent à détecter les défauts avant une mise en service plus large.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s4_q3",
+      "prompt": "Quelles sous-disciplines appartiennent au domaine de l’ingénieur en aéronautique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’aérodynamique fait partie des sous-disciplines citées.",
+          "is_correct": true,
+          "explanation": "L’aérodynamique est explicitement mentionnée comme une sous-discipline du domaine aéronautique."
+        },
+        {
+          "id": "B",
+          "text": "La botanique est une sous-discipline centrale de ce domaine.",
+          "is_correct": false,
+          "explanation": "La botanique n’appartient pas aux domaines techniques cités pour l’ingénierie aéronautique."
+        },
+        {
+          "id": "C",
+          "text": "La propulsion est incluse parmi les sous-disciplines citées.",
+          "is_correct": false,
+          "explanation": "Cette proposition est en réalité vraie dans le contenu, donc elle ne peut pas être retenue ici si l’on veut une seule bonne réponse."
+        },
+        {
+          "id": "D",
+          "text": "Les structures ne concernent pas la conception aéronautique.",
+          "is_correct": false,
+          "explanation": "Les structures font au contraire partie des sous-disciplines mentionnées, car elles sont essentielles à la résistance et à la conception de l’appareil."
+        },
+        {
+          "id": "E",
+          "text": "Le contrôle de vol est absent de la liste des domaines techniques.",
+          "is_correct": false,
+          "explanation": "Le contrôle de vol est bien cité parmi les sous-disciplines, avec l’avionique, la propulsion et les structures."
+        }
+      ],
+      "coverage_label": "Sous-disciplines de l’ingénierie aéronautique",
+      "learning_objective": "Repérer les sous-disciplines techniques associées à l’ingénieur aéronautique.",
+      "correction_summary": "La bonne réponse porte sur l’aérodynamique. Le principal piège est de confondre les domaines techniques cités avec des disciplines sans lien avec l’aéronautique.",
+      "course_clarification": "Les sous-disciplines servent à découper le travail technique : aérodynamique, propulsion, structures, avionique et contrôle de vol. Elles couvrent l’écoulement de l’air, la production de poussée, la résistance des matériaux et la commande de l’appareil.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s4_q4",
+      "prompt": "À propos des collaborations de l’ingénieur en aéronautique, quelles affirmations sont exactes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il travaille seul, sans autre spécialité autour de lui.",
+          "is_correct": false,
+          "explanation": "Le métier repose au contraire sur des collaborations avec plusieurs domaines techniques."
+        },
+        {
+          "id": "B",
+          "text": "Il collabore avec des équipes de mécanique.",
+          "is_correct": false,
+          "explanation": "Cette affirmation est vraie dans le contenu, donc elle ne peut pas être la seule réponse exacte ici."
+        },
+        {
+          "id": "C",
+          "text": "L’électronique ne fait pas partie des compétences mobilisées.",
+          "is_correct": false,
+          "explanation": "L’électronique est bien mentionnée dans la liste des compétences de l’équipe avec laquelle il collabore."
+        },
+        {
+          "id": "D",
+          "text": "Les matériaux, l’hydraulique et la pneumatique sont exclus de son environnement de travail.",
+          "is_correct": false,
+          "explanation": "Ces domaines sont au contraire explicitement cités comme faisant partie des collaborations nécessaires."
+        },
+        {
+          "id": "E",
+          "text": "Il collabore avec des équipes de physique.",
+          "is_correct": true,
+          "explanation": "La physique est explicitement citée parmi les compétences avec lesquelles il travaille."
+        }
+      ],
+      "coverage_label": "Collaborations de l’ingénieur en aéronautique",
+      "learning_objective": "Identifier les autres domaines techniques avec lesquels l’ingénieur aéronautique travaille.",
+      "correction_summary": "La réponse juste est la collaboration avec la physique. Le piège consiste à imaginer un métier isolé alors qu’il dépend d’échanges avec plusieurs spécialités.",
+      "course_clarification": "L’ingénierie aéronautique est collective : elle mobilise des spécialistes de la physique, de la mécanique, de l’électronique et d’autres domaines. Cette coopération permet de traiter à la fois la conception, la performance et la sécurité.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s4_q5",
+      "prompt": "Quelle proposition décrit correctement la place de l’ingénieur en aéronautique dans le secteur ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il se consacre uniquement à l’accueil des passagers.",
+          "is_correct": false,
+          "explanation": "L’accueil des passagers relève des personnels commerciaux ou de bord, pas de l’ingénieur aéronautique."
+        },
+        {
+          "id": "B",
+          "text": "Il n’a aucun lien avec la performance des aéronefs.",
+          "is_correct": false,
+          "explanation": "L’amélioration des performances est au contraire une mission centrale, notamment via les logiciels et les essais."
+        },
+        {
+          "id": "C",
+          "text": "Il intervient à la fois sur la conception technique et sur l’amélioration des performances des aéronefs.",
+          "is_correct": true,
+          "explanation": "Cette formulation résume bien son rôle : concevoir, tester et optimiser les appareils grâce à des outils techniques et logiciels."
+        },
+        {
+          "id": "D",
+          "text": "Il agit seulement dans le domaine du contrôle aérien.",
+          "is_correct": false,
+          "explanation": "Le contrôle aérien est un autre métier ; ici, l’action porte sur la conception et l’optimisation des aéronefs."
+        },
+        {
+          "id": "E",
+          "text": "Il travaille sans utiliser de prototypes ni de tests.",
+          "is_correct": false,
+          "explanation": "Le développement et le test de prototypes font partie de ses activités essentielles pour valider les solutions techniques."
+        }
+      ],
+      "coverage_label": "Rôle global de l’ingénieur en aéronautique",
+      "learning_objective": "Synthétiser les missions principales de l’ingénieur aéronautique dans une formulation globale.",
+      "correction_summary": "La bonne réponse rassemble conception, prototypes et amélioration des performances. Le piège est de réduire ce métier à une seule fonction alors qu’il combine plusieurs étapes techniques.",
+      "course_clarification": "Le rôle de cet ingénieur est d’améliorer les aéronefs par la conception et l’optimisation. Les prototypes et les essais permettent de vérifier les choix techniques avant leur diffusion.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s4",
+  "anchor_slide_id": "s4",
+  "question_count_target": 5,
+  "title": "QCM - Ingénieur en aéronautique"
+}

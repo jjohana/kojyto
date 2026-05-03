@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::s16",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "s16_q1",
+      "prompt": "À propos de la page de transition du TP, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle contient un schéma technique détaillé au centre de la page.",
+          "is_correct": false,
+          "explanation": "Aucun schéma n’est visible ; la page est composée uniquement d’un fond de présentation et de texte de titre."
+        },
+        {
+          "id": "B",
+          "text": "Elle présente un tableau comparatif avec des données chiffrées.",
+          "is_correct": false,
+          "explanation": "Il n’y a pas de tableau sur cette page, seulement une mise en forme de couverture."
+        },
+        {
+          "id": "C",
+          "text": "Elle est entièrement remplie de paragraphes explicatifs sur les métiers.",
+          "is_correct": false,
+          "explanation": "La page ne développe pas un contenu narratif long : elle sert surtout de page de transition et de couverture."
+        },
+        {
+          "id": "D",
+          "text": "Elle correspond à une page de titre ou de couverture de TP.",
+          "is_correct": true,
+          "explanation": "La présentation générale sert d’entrée au travail pratique : le titre est mis en avant et la page n’introduit pas directement un contenu technique détaillé."
+        },
+        {
+          "id": "E",
+          "text": "Elle affiche un graphique d’analyse en bas de page.",
+          "is_correct": false,
+          "explanation": "Aucun graphique n’apparaît ; l’élément principal est le bandeau de titre."
+        }
+      ],
+      "coverage_label": "Page de titre ou de couverture de TP",
+      "learning_objective": "Identifier la fonction d’une page de couverture de TP.",
+      "correction_summary": "La bonne réponse est celle qui reconnaît une page de titre ou de couverture. Le piège consiste à confondre cette page avec une page de contenu technique.",
+      "course_clarification": "Une page de couverture sert à annoncer le thème et à structurer l’entrée dans le TP. Elle ne présente pas encore de démonstration, de schéma ou de tableau.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s16_q2",
+      "prompt": "Quel élément de mise en forme est bien présent sur la page ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le fond est vert avec un quadrillage technique visible.",
+          "is_correct": false,
+          "explanation": "Le fond mentionné est bleu, pas vert, et il n’y a pas de quadrillage technique."
+        },
+        {
+          "id": "B",
+          "text": "Le fond de présentation est bleu avec un léger motif circulaire.",
+          "is_correct": true,
+          "explanation": "La page est décrite comme ayant un fond bleu, avec un motif discret de type circulaire, ce qui participe à son aspect de couverture."
+        },
+        {
+          "id": "C",
+          "text": "La page comporte un fond blanc sans aucun motif.",
+          "is_correct": false,
+          "explanation": "Le fond n’est pas entièrement blanc : un bandeau bleu occupe la zone centrale."
+        },
+        {
+          "id": "D",
+          "text": "La mise en page repose sur un fond noir à forte contrastation.",
+          "is_correct": false,
+          "explanation": "Aucun fond noir n’est décrit ; la charte visuelle est dominée par le bleu et le blanc."
+        },
+        {
+          "id": "E",
+          "text": "Un schéma technique recouvre le fond de la page.",
+          "is_correct": false,
+          "explanation": "Le fond est décoratif, pas technique : aucun schéma n’est visible."
+        }
+      ],
+      "coverage_label": "Fond de présentation bleu",
+      "learning_objective": "Reconnaître l’élément graphique principal d’une page de couverture.",
+      "correction_summary": "L’élément correct est le fond bleu avec un motif discret. Le piège est d’inventer une décoration technique ou un fond d’une autre couleur.",
+      "course_clarification": "Le fond de présentation donne l’identité visuelle de la page. Ici, il reste sobre et sert surtout à mettre en valeur le titre.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s16_q3",
+      "prompt": "Quel constat sur les éléments visuels de la page est exact ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aucun schéma, tableau, graphique ou illustration technique n’est visible.",
+          "is_correct": true,
+          "explanation": "La page est explicitement décrite comme dépourvue d’éléments techniques ; elle ne contient que du texte de présentation et des éléments de mise en forme."
+        },
+        {
+          "id": "B",
+          "text": "Un schéma de maintenance occupe la moitié de la page.",
+          "is_correct": false,
+          "explanation": "Aucun schéma n’apparaît ; la page est une couverture, pas une planche d’explication technique."
+        },
+        {
+          "id": "C",
+          "text": "Un tableau synthétique compare plusieurs métiers.",
+          "is_correct": false,
+          "explanation": "Il n’y a pas de tableau visible, seulement une organisation simple du titre et du fond."
+        },
+        {
+          "id": "D",
+          "text": "Un graphique circulaire présente les droits du salarié.",
+          "is_correct": false,
+          "explanation": "Le motif circulaire est décoratif, pas un graphique de contenu."
+        },
+        {
+          "id": "E",
+          "text": "Une illustration technique d’aéronef est placée en arrière-plan.",
+          "is_correct": false,
+          "explanation": "Aucune illustration technique n’est signalée sur la page."
+        }
+      ],
+      "coverage_label": "Absence d’éléments techniques",
+      "learning_objective": "Vérifier l’absence de schéma, tableau ou graphique sur une page de couverture.",
+      "correction_summary": "La seule affirmation correcte est l’absence d’éléments techniques visibles. Le piège est de confondre un motif décoratif avec un schéma de contenu.",
+      "course_clarification": "Une page de couverture peut comporter des éléments graphiques simples sans devenir une page technique. Ici, rien n’indique un support d’analyse ou de calcul.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s16_q4",
+      "prompt": "Quel élément de sécurité visuelle est mentionné sur la page ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un logo coloré unique apparaît en bas à droite sans répétition.",
+          "is_correct": false,
+          "explanation": "Il ne s’agit pas d’un logo isolé, mais d’un filigrane répété sur toute la page."
+        },
+        {
+          "id": "B",
+          "text": "Le nom de l’institut est inscrit dans un tableau au centre.",
+          "is_correct": false,
+          "explanation": "Aucun tableau n’est visible ; le nom apparaît en filigrane diagonal."
+        },
+        {
+          "id": "C",
+          "text": "La page ne comporte aucune surimpression de texte.",
+          "is_correct": false,
+          "explanation": "Un filigrane est bien présent en surimpression diagonale répétée."
+        },
+        {
+          "id": "D",
+          "text": "Le filigrane est horizontal et placé uniquement dans l’en-tête.",
+          "is_correct": false,
+          "explanation": "La disposition signalée est diagonale et répétée, pas horizontale dans un en-tête."
+        },
+        {
+          "id": "E",
+          "text": "Un filigrane diagonal répété « IAAG – Institut Aéronautique Amaury de la Grange » est présent.",
+          "is_correct": true,
+          "explanation": "La page est recouverte en diagonale par un filigrane répété, ce qui constitue un repère visuel clair de la mise en page."
+        }
+      ],
+      "coverage_label": "Filigrane diagonal répété",
+      "learning_objective": "Identifier correctement la présence et la forme d’un filigrane sur une page.",
+      "correction_summary": "L’élément correct est le filigrane diagonal répété portant le nom de l’institut. Le piège est de le prendre pour un logo simple ou un élément d’en-tête.",
+      "course_clarification": "Un filigrane est un texte ou motif transparent placé en arrière-plan. Ici, il sert à marquer visuellement le document sur toute la page.",
+      "source_refs": []
+    },
+    {
+      "question_id": "s16_q5",
+      "prompt": "Quel intitulé correspond à la page observée ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "« Schéma de maintenance des réacteurs » est l’intitulé principal visible.",
+          "is_correct": false,
+          "explanation": "Aucun schéma technique ni intitulé de maintenance des réacteurs n’apparaît sur cette page."
+        },
+        {
+          "id": "B",
+          "text": "« Bilan financier annuel » est le thème affiché.",
+          "is_correct": false,
+          "explanation": "La page ne traite pas de finance ; elle annonce un TP sur l’individu dans l’organisation."
+        },
+        {
+          "id": "C",
+          "text": "« TP – L’individu dans l’organisation : Découverte des métiers et droits/devoirs » est un intitulé cohérent avec la page.",
+          "is_correct": true,
+          "explanation": "Le titre visible correspond à une page de TP portant sur l’individu dans l’organisation et l’entrée dans le travail pratique."
+        },
+        {
+          "id": "D",
+          "text": "« Analyse des performances moteur » est écrit au centre de la page.",
+          "is_correct": false,
+          "explanation": "Le centre de la page est occupé par un titre de TP, pas par une analyse moteur."
+        },
+        {
+          "id": "E",
+          "text": "« Mode opératoire de fabrication » est le titre principal.",
+          "is_correct": false,
+          "explanation": "Le contenu visible relève d’une couverture de TP et non d’un mode opératoire de fabrication."
+        }
+      ],
+      "coverage_label": "Intitulé de la page de TP",
+      "learning_objective": "Associer le bon titre à une page de transition de TP.",
+      "correction_summary": "Le bon intitulé est celui du TP sur l’individu dans l’organisation et la découverte des métiers/droits et devoirs. Le piège consiste à proposer des thèmes techniques sans rapport avec la page.",
+      "course_clarification": "Le titre d’une couverture indique le thème général du travail à venir. Il doit être lu comme un repère d’entrée, pas comme une consigne technique détaillée.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "s16",
+  "anchor_slide_id": "s16",
+  "question_count_target": 5,
+  "title": "QCM - TP – L’individu dans l’organisation"
+}

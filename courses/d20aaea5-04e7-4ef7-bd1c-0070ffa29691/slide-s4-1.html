@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Lire le diagramme d’écoulement du CFM56-5</title>
+  <title>QCM - Taux de dilution et exemples de moteurs</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -485,6 +485,29 @@ html[data-embed="1"] body::after {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
 }
 
 .block {
@@ -1536,6 +1559,19 @@ html[data-embed="1"] .review-card {
 }
 </style>
   
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]],
+      },
+      svg: {
+        fontCache: "global",
+      },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  
 </head>
 <body class="viewer-user page-quiz">
   <div class="page-shell with-site-nav">
@@ -1560,49 +1596,49 @@ html[data-embed="1"] .review-card {
         
         <a class="sidebar-slide" href="s1-1.html">
           <strong>S1-1</strong>
-          <span>Origine de la poussée et terme réacteur</span>
+          <span>Origine de la poussée : terme réacteur</span>
           
-          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          <span>Installer le principe physique de la poussée nette et son expression de base.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-1.html">
           <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée et terme réacteur</span>
+          <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-2.html">
           <strong>S1-2</strong>
-          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>Exemple numérique et architecture double flux</span>
           
-          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-2.html">
           <strong>QCM S1-2</strong>
-          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>QCM - Exemple numérique et architecture double flux</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-3.html">
           <strong>S1-3</strong>
-          <span>Exemple chiffré et répartition des forces internes</span>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-3.html">
           <strong>QCM S1-3</strong>
-          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1610,7 +1646,7 @@ html[data-embed="1"] .review-card {
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
-          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
           
         </a>
         
@@ -1618,431 +1654,431 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s2-2.html">
           <strong>S2-2</strong>
-          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>Repères de consommation et surveillance moteur</span>
           
-          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s2-2.html">
           <strong>QCM S2-2</strong>
-          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s2-3.html">
-          <strong>S2-3</strong>
-          <span>Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s2-3.html">
-          <strong>QCM S2-3</strong>
-          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-1.html">
           <strong>S3-1</strong>
-          <span>Principe propulsif du turbopropulseur</span>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
-          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-1.html">
           <strong>QCM S3-1</strong>
-          <span>QCM - Principe propulsif du turbopropulseur</span>
+          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-2.html">
           <strong>S3-2</strong>
-          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
-          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-2.html">
           <strong>QCM S3-2</strong>
-          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
+          
+          <span>Définir et comparer les rendements à chaque étage du moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - Rendements de la chaîne propulsive</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s4-1.html">
           <strong>S4-1</strong>
-          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>Taux de dilution et familles de moteurs</span>
           
-          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
           
         </a>
         
         <a class="sidebar-slide active" href="slide-s4-1.html">
           <strong>QCM S4-1</strong>
-          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>QCM - Taux de dilution et exemples de moteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>Principe du turbopropulseur</span>
+          
+          <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - Principe du turbopropulseur</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-1.html">
           <strong>S5-1</strong>
-          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
-          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          <span>Décrire les organes de sortie d’un GTR simple flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-1.html">
           <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-2.html">
           <strong>S5-2</strong>
-          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-2.html">
           <strong>QCM S5-2</strong>
-          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s6-1.html">
           <strong>S6-1</strong>
-          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>Post-combustion et bruit de tuyère</span>
           
-          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s6-1.html">
           <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>QCM - Post-combustion et bruit de tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-2.html">
-          <strong>S6-2</strong>
-          <span>Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-2.html">
-          <strong>QCM S6-2</strong>
-          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-3.html">
-          <strong>S6-3</strong>
-          <span>Tuyère supersonique convergente-divergente</span>
-          
-          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-3.html">
-          <strong>QCM S6-3</strong>
-          <span>QCM - Tuyère supersonique convergente-divergente</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s7-1.html">
           <strong>S7-1</strong>
-          <span>Traitement acoustique de la tuyère</span>
+          <span>But et formule de la poussée inverse</span>
           
-          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s7-1.html">
           <strong>QCM S7-1</strong>
-          <span>QCM - Traitement acoustique de la tuyère</span>
+          <span>QCM - But et formule de la poussée inverse</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>Poussée inverse : efficacité, limites et choix des flux</span>
+          
+          <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
+          
+          <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-1.html">
           <strong>S8-1</strong>
-          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-1.html">
           <strong>QCM S8-1</strong>
-          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-2.html">
           <strong>S8-2</strong>
-          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          <span>Inverseur pneumatique : organes et séquence</span>
           
-          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-2.html">
           <strong>QCM S8-2</strong>
-          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-1.html">
           <strong>S9-1</strong>
-          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
-          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-1.html">
           <strong>QCM S9-1</strong>
-          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-2.html">
           <strong>S9-2</strong>
-          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          <span>Types de trains et composition</span>
           
-          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          <span>Distinguer les architectures de base et les éléments constitutifs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-2.html">
           <strong>QCM S9-2</strong>
-          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          <span>QCM - Types de trains et composition</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-3.html">
+          <strong>S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-3.html">
+          <strong>QCM S9-3</strong>
+          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-1.html">
           <strong>S10-1</strong>
-          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-1.html">
           <strong>QCM S10-1</strong>
-          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-2.html">
           <strong>S10-2</strong>
-          <span>Composition générale d’un train d’atterrissage</span>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          <span>Décrire la séquence compression-détente-équilibrage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-2.html">
           <strong>QCM S10-2</strong>
-          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-3.html">
+          <strong>S10-3</strong>
+          <span>États du train, verrouillages et sécurités</span>
+          
+          <span>Présenter la cinématique des trains et les sécurités associées.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-3.html">
+          <strong>QCM S10-3</strong>
+          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s11-1.html">
           <strong>S11-1</strong>
-          <span>Géométrie du train et dispositions des roues</span>
+          <span>Voyants, roues et pneumatiques</span>
           
-          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s11-1.html">
           <strong>QCM S11-1</strong>
-          <span>QCM - Géométrie du train et dispositions des roues</span>
+          <span>QCM - Voyants, roues et pneumatiques</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-2.html">
+          <strong>S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
+          
+          <span>Décrire les circuits de freinage et leurs sécurités.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-2.html">
+          <strong>QCM S11-2</strong>
+          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-3.html">
+          <strong>S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-3.html">
+          <strong>QCM S11-3</strong>
+          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s12-1.html">
           <strong>S12-1</strong>
-          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
-          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s12-1.html">
           <strong>QCM S12-1</strong>
-          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s12-2.html">
-          <strong>S12-2</strong>
-          <span>Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s12-2.html">
-          <strong>QCM S12-2</strong>
-          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s13-1.html">
-          <strong>S13-1</strong>
-          <span>Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s13-1.html">
-          <strong>QCM S13-1</strong>
-          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-1.html">
-          <strong>S14-1</strong>
-          <span>Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-1.html">
-          <strong>QCM S14-1</strong>
-          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-2.html">
-          <strong>S14-2</strong>
-          <span>Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-2.html">
-          <strong>QCM S14-2</strong>
-          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-1.html">
-          <strong>S15-1</strong>
-          <span>Circuits de freinage et freins à disques</span>
-          
-          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-1.html">
-          <strong>QCM S15-1</strong>
-          <span>QCM - Circuits de freinage et freins à disques</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-2.html">
-          <strong>S15-2</strong>
-          <span>Anti-skid et anti-brake</span>
-          
-          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-2.html">
-          <strong>QCM S15-2</strong>
-          <span>QCM - Anti-skid et anti-brake</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s16-1.html">
-          <strong>S16-1</strong>
-          <span>QCM : les repères essentiels sur les atterrisseurs</span>
-          
-          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s16-1.html">
-          <strong>QCM S16-1</strong>
-          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="final-validation.html">
           <strong>Validation finale</strong>
-          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          <span>25 questions tirées au sort sur 149 - correction finale</span>
           
         </a>
         
@@ -2054,7 +2090,7 @@ html[data-embed="1"] .review-card {
       
       <div class="slide-toolbar">
         <div class="toolbar-meta">
-          <span>Page 18/61</span>
+          <span>Page 20/61</span>
           
           <span>QCM</span>
         </div>
@@ -2066,7 +2102,7 @@ html[data-embed="1"] .review-card {
           <a class="nav-link" href="s4-1.html">Précédent</a>
           
           
-          <a class="nav-link" href="s5-1.html">Suivante</a>
+          <a class="nav-link" href="s4-2.html">Suivante</a>
           
         </div>
       </div>
@@ -2076,7 +2112,7 @@ html[data-embed="1"] .review-card {
         <section class="quiz-hero">
           <div>
             <p class="eyebrow">QCM</p>
-            <h1>QCM - Lire le diagramme d’écoulement du CFM56-5</h1>
+            <h1>QCM - Taux de dilution et exemples de moteurs</h1>
             <p>
               
               QCM intermédiaire avec correction immédiate question par question.
@@ -2093,14 +2129,14 @@ html[data-embed="1"] .review-card {
           id="quiz-app"
           class="quiz-app-shell"
           data-viewer-mode="user"
-          data-next-href="s5-1.html"
+          data-next-href="s4-2.html"
           data-home-href="index.html"
         ></section>
       </section>
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S4-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S4-1-Q1", "prompt": "Dans le diagramme d’écoulement du CFM56-5, quelle affirmation décrit correctement la distinction entre les deux flux ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le flux secondaire traverse uniquement la chambre de combustion avant de contourner le moteur.", "is_correct": false, "explanation": "Le flux secondaire ne passe pas par la chambre de combustion. Il contourne le noyau moteur dans la veine annulaire externe, appelée aussi by-pass."}, {"id": "B", "text": "Le flux primaire est le flux extérieur de by-pass autour du moteur.", "is_correct": false, "explanation": "C’est l’inverse : le flux extérieur correspond au flux secondaire. Le flux primaire est le flux central du cœur moteur."}, {"id": "C", "text": "Les deux flux ont exactement les mêmes conditions de température et de pression tout au long du moteur.", "is_correct": false, "explanation": "Le schéma montre au contraire des évolutions différentes entre les deux flux. Le flux primaire subit compression, combustion et détente, alors que le flux secondaire reste beaucoup plus modéré."}, {"id": "D", "text": "Le **flux primaire** correspond au cœur moteur, où les gaz traversent les compresseurs, la chambre de combustion, la turbine puis la tuyère.", "is_correct": true, "explanation": "C’est bien le flux primaire : il suit l’axe central du moteur et traverse les organes principaux du noyau moteur. C’est ce flux qui concentre les échanges thermodynamiques les plus intenses."}, {"id": "E", "text": "Le diagramme ne distingue pas les zones internes du moteur, il ne montre que la sortie de la tuyère.", "is_correct": false, "explanation": "Le document représente au contraire le moteur en coupe avec ses différentes zones. Les courbes sont reliées aux parties du moteur pour visualiser l’évolution des grandeurs le long de l’écoulement."}], "coverage_label": "", "learning_objective": "Identifier correctement le flux primaire et le flux secondaire sur un turboréacteur double flux.", "correction_summary": "La bonne réponse est celle qui associe le flux primaire au noyau moteur et le flux secondaire au by-pass. Le piège classique consiste à inverser les deux flux ou à croire qu’ils suivent la même trajectoire. Le diagramme sert justement à distinguer leurs rôles respectifs dans le moteur.", "course_clarification": "Dans un turboréacteur double flux, le **flux primaire** traverse le cœur moteur : compresseur, chambre de combustion, turbine et tuyère. Le **flux secondaire** contourne ce cœur dans la veine annulaire externe, sans combustion. Cette séparation permet de mieux comprendre comment le moteur partage le débit d’air entre production de poussée et fonctionnement interne. Elle est essentielle pour lire les courbes de température, de pression et de vitesse sur le schéma.", "source_refs": []}, {"question_id": "S4-1-Q2", "prompt": "À propos de la courbe de température sur le diagramme, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La température du flux primaire reste constante du fan jusqu’à la tuyère.", "is_correct": false, "explanation": "Le diagramme montre au contraire une variation importante. Une température constante ne correspond pas au fonctionnement d’un turboréacteur, où compression, combustion et détente modifient fortement l’état du gaz."}, {"id": "B", "text": "La température du flux primaire augmente fortement jusqu’au cœur moteur, puis décroît vers l’aval.", "is_correct": true, "explanation": "C’est exactement le comportement visible sur le graphe : forte montée dans la zone centrale, puis baisse après la zone chaude du moteur. Cela traduit l’apport d’énergie de la combustion puis la détente des gaz."}, {"id": "C", "text": "La température atteint son minimum dans la chambre de combustion.", "is_correct": false, "explanation": "La chambre de combustion est justement la zone où la température devient très élevée. Le minimum se situe au début de l’écoulement, avant l’apport de chaleur."}, {"id": "D", "text": "Le flux secondaire présente une température beaucoup plus élevée que le flux primaire au cœur moteur.", "is_correct": false, "explanation": "Le flux secondaire reste beaucoup plus froid que le flux primaire sur le diagramme. Il ne subit pas la combustion, donc sa température demeure nettement plus basse."}, {"id": "E", "text": "La température augmente seulement après la sortie de la tuyère, car les gaz se réchauffent dans l’air extérieur.", "is_correct": false, "explanation": "Le schéma montre l’inverse : la température chute après les zones de détente et de sortie. Le refroidissement vers l’aval est cohérent avec l’expansion des gaz et leur mélange avec l’environnement."}], "coverage_label": "", "learning_objective": "Lire l’évolution de la température le long du flux primaire et distinguer son comportement de celui du flux secondaire.", "correction_summary": "La bonne idée à retenir est que la température monte fortement dans la partie chaude du moteur, puis redescend vers l’aval. Le piège est de confondre cette évolution avec une température stable ou de l’attribuer au flux secondaire. Le schéma met en évidence un écart net entre les deux flux.", "course_clarification": "La **température** augmente dans le flux primaire car l’air est comprimé puis chauffé par la combustion. Après la turbine et la tuyère, les gaz se détendent et la température diminue. Le flux secondaire, qui contourne le cœur moteur, reste à une température plus faible car il n’est pas directement chauffé par la combustion. Lire cette courbe aide à localiser les zones où l’énergie thermique est ajoutée puis récupérée.", "source_refs": []}, {"question_id": "S4-1-Q3", "prompt": "Concernant la pression totale sur le diagramme, quelle affirmation correspond au cours ?", "difficulty": "easy", "options": [{"id": "A", "text": "La pression totale augmente par compression, atteint un maximum au cœur moteur, puis chute après la turbine et la tuyère.", "is_correct": true, "explanation": "C’est la lecture attendue du graphe : montée progressive dans les organes de compression, maximum au cœur, puis diminution nette après la détente dans la turbine et la tuyère. La pression totale résume bien l’effet du travail aérodynamique et mécanique sur le gaz."}, {"id": "B", "text": "La pression totale diminue continuellement dès l’entrée du moteur jusqu’à la sortie.", "is_correct": false, "explanation": "Le schéma montre d’abord une augmentation de pression due à la compression. Une décroissance continue ne correspondrait pas au fonctionnement normal d’un turboréacteur."}, {"id": "C", "text": "Le maximum de pression se situe après la tuyère, dans le flux extérieur.", "is_correct": false, "explanation": "Le maximum est atteint dans la zone du cœur moteur, avant la forte chute liée à la détente. Après la tuyère, la pression revient proche de l’ambiante, donc elle ne peut pas rester maximale."}, {"id": "D", "text": "Le flux secondaire subit la même chute de pression que le flux primaire à travers la turbine.", "is_correct": false, "explanation": "La turbine agit principalement sur le flux primaire, au cœur moteur. Le flux secondaire est surtout dérivé autour du noyau ; il n’évolue pas de la même façon sur le diagramme."}, {"id": "E", "text": "La pression totale n’est pas représentée sur ce schéma, seul le débit massique y figure.", "is_correct": false, "explanation": "Le document contient bien un graphe de pression totale, avec une échelle en bar. Le débit massique n’est pas la grandeur suivie sur cette page."}], "coverage_label": "", "learning_objective": "Interpréter la courbe de pression totale et relier ses variations aux étapes de compression et de détente.", "correction_summary": "La bonne réponse associe la compression à une montée de pression, puis la turbine et la tuyère à une chute de pression. Le piège est de croire que la pression décroît partout, alors que le compresseur la fait d’abord augmenter. Le maximum se situe au cœur moteur, pas en sortie.", "course_clarification": "La **pression totale** augmente lorsque l’air est comprimé par les compresseurs. Elle est maximale au voisinage du cœur moteur, puis chute quand les gaz cèdent de l’énergie à la turbine et se détendent dans la tuyère. Le flux secondaire reste proche de la pression ambiante et suit une évolution plus faible. Cette lecture permet de relier la thermodynamique du moteur à son fonctionnement mécanique.", "source_refs": []}, {"question_id": "S4-1-Q4", "prompt": "À propos de la courbe de vitesse sur le diagramme, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La vitesse est maximale dans la zone de compression, avant toute détente.", "is_correct": false, "explanation": "La zone de compression n’est pas celle où la vitesse atteint son maximum sur le schéma. Le maximum apparaît plus loin, au voisinage de la turbine et de la tuyère, où le gaz est fortement accéléré."}, {"id": "B", "text": "La vitesse reste identique dans tout le moteur car le débit est conservé.", "is_correct": false, "explanation": "Un débit conservé n’implique pas une vitesse constante : la section de passage et les échanges d’énergie peuvent modifier la vitesse. Le graphe montre justement des variations importantes le long du moteur."}, {"id": "C", "text": "Le flux secondaire atteint toujours une vitesse supérieure à celle du flux primaire au cœur moteur.", "is_correct": false, "explanation": "Le schéma ne montre pas une supériorité systématique du flux secondaire. Les vitesses varient selon la zone considérée, et le cœur moteur peut présenter des accélérations fortes après la turbine et la tuyère."}, {"id": "D", "text": "La vitesse ne change qu’à l’extérieur du moteur, sans lien avec les éléments internes.", "is_correct": false, "explanation": "La courbe est reliée aux différentes parties internes du moteur. Les variations de vitesse sont précisément associées au passage dans les organes du moteur, donc elles ne se produisent pas seulement à l’extérieur."}, {"id": "E", "text": "La vitesse croît progressivement puis augmente fortement au passage turbine/tuyère avant diffusion.", "is_correct": true, "explanation": "C’est la dynamique générale montrée par le graphe : accélération modérée dans certaines zones, puis nette accélération à la sortie des organes de détente et dans la tuyère. Cette accélération traduit la transformation de l’énergie du gaz en vitesse d’écoulement."}], "coverage_label": "", "learning_objective": "Lire l’évolution de la vitesse d’écoulement et identifier les zones de forte accélération.", "correction_summary": "La bonne lecture est celle d’une vitesse qui augmente le long du moteur et qui s’accélère fortement après la turbine et dans la tuyère. Le piège est de penser que la vitesse serait constante ou maximale dès l’entrée. Le diagramme relie clairement cette accélération aux zones de détente.", "course_clarification": "La **vitesse** du gaz n’évolue pas de façon uniforme : elle dépend des changements de pression, de section et d’énergie dans le moteur. Dans ce diagramme, elle augmente d’abord progressivement, puis augmente fortement au passage de la turbine et de la tuyère. Cette hausse correspond à la transformation de l’énergie interne du gaz en énergie cinétique. Lire cette courbe aide à comprendre où le moteur accélère l’écoulement pour produire la poussée.", "source_refs": []}, {"question_id": "S4-1-Q5", "prompt": "Quel est le rôle principal du diagramme d’écoulement des gaz du CFM56-5 ?", "difficulty": "easy", "options": [{"id": "A", "text": "Donner uniquement la consommation spécifique du moteur en lb/h.SHP.", "is_correct": false, "explanation": "La consommation spécifique concerne une autre partie du cours et un autre type de schéma. Le diagramme de la page 7 ne sert pas à calculer une consommation, mais à lire l’évolution des grandeurs du gaz."}, {"id": "B", "text": "Montrer seulement la forme extérieure du moteur sans information physique.", "is_correct": false, "explanation": "Le schéma n’est pas purement géométrique : il est accompagné de courbes et de repères de grandeurs physiques. Il sert donc à interpréter le fonctionnement interne, pas seulement l’apparence du moteur."}, {"id": "C", "text": "Relier les évolutions de température, de pression et de vitesse aux zones du moteur pour faire le lien entre thermodynamique, mécanique et aérodynamique.", "is_correct": true, "explanation": "C’est exactement l’objectif du diagramme : mettre en correspondance les grandeurs physiques et les éléments du moteur. On peut ainsi suivre le gaz tout au long du flux primaire et du flux secondaire."}, {"id": "D", "text": "Comparer la poussée de l’hélice et la puissance sur arbre d’un turbopropulseur.", "is_correct": false, "explanation": "Cela correspond aux formules de la page précédente, pas au diagramme CFM56-5. Ici, on étudie un turboréacteur double flux et les grandeurs du flux gazeux."}, {"id": "E", "text": "Remplacer les équations de la thermodynamique par un simple schéma de maintenance.", "is_correct": false, "explanation": "Le document ne se limite pas à un dessin de maintenance. Il synthétise des relations physiques entre les zones du moteur et les courbes mesurées ou représentées."}], "coverage_label": "", "learning_objective": "Comprendre la fonction d’un diagramme moteur comme outil de synthèse des grandeurs physiques le long de l’écoulement.", "correction_summary": "La bonne réponse insiste sur le rôle de synthèse du diagramme : il relie les zones du moteur aux variations de température, pression et vitesse. Le piège est de le prendre pour un simple dessin ou de confondre cette page avec les formules de turbopropulseur. Ici, l’enjeu est l’interprétation physique du fonctionnement du CFM56-5.", "course_clarification": "Ce type de diagramme est un **outil de lecture** du moteur. Il relie les différentes zones du turboréacteur aux grandeurs thermodynamiques et aérodynamiques mesurées le long de l’écoulement. Il permet de comprendre comment compression, combustion, détente et accélération se succèdent dans le moteur. En pratique, il sert à visualiser le lien entre la structure du moteur et le comportement des gaz.", "source_refs": []}], "subpart_id": "S4", "anchor_slide_id": "S4-1", "question_count_target": 5, "title": "QCM - Lire le diagramme d’écoulement du CFM56-5"}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S4-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S4-1-Q1", "prompt": "À propos du taux de dilution d’un réacteur, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le taux de dilution s’écrit \\(T = \\dfrac{Q_{mi}}{Q_{me}}\\).", "is_correct": false, "explanation": "Faux : cette écriture inverse le rapport. Elle échange flux chaud et flux froid, donc elle ne correspond pas à la définition attendue."}, {"id": "B", "text": "Le taux de dilution compare la pression totale à l’entrée et à la sortie de la tuyère.", "is_correct": false, "explanation": "Faux : cette grandeur n’est pas un rapport de pressions. Elle compare deux débits de masse, pas des pressions."}, {"id": "C", "text": "Le taux de dilution est défini comme un rapport de température entre le flux froid et le flux chaud.", "is_correct": false, "explanation": "Faux : les températures ne servent pas à définir ce ratio. Ici, seule la comparaison des débits de masse est pertinente."}, {"id": "D", "text": "Le taux de dilution s’écrit \\(T = \\dfrac{Q_{me}}{Q_{mi}}\\), soit le rapport du flux froid sur le flux chaud.", "is_correct": true, "explanation": "Vrai : la notation donnée relie bien le débit de masse externe (flux froid) au débit interne (flux chaud). C’est l’écriture à reconnaître pour interpréter un by-pass ratio."}, {"id": "E", "text": "Un taux de dilution supérieur à 1 signifie forcément un moteur à faible dilution.", "is_correct": false, "explanation": "Faux : un taux supérieur à 1 correspond au contraire à une forte dilution, typique des moteurs subsoniques modernes."}], "coverage_label": "Taux de dilution", "learning_objective": "Identifier l’expression du by-pass ratio et distinguer les grandeurs utilisées dans sa définition.", "correction_summary": "Le raisonnement attendu consiste à reconnaître que le taux de dilution compare deux débits de masse : le flux froid sur le flux chaud. L’erreur la plus fréquente consiste à inverser le rapport ou à le confondre avec une grandeur de pression ou de température.", "course_clarification": "Le taux de dilution, ou by-pass ratio, mesure la part d’air qui contourne le générateur de gaz par rapport à l’air qui le traverse. Il s’écrit \\(T = \\dfrac{Q_{me}}{Q_{mi}}\\), avec le flux froid au numérateur et le flux chaud au dénominateur.", "source_refs": []}, {"question_id": "S4-1-Q2", "prompt": "Quel classement associe correctement un moteur à son taux de dilution ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le Trent 1000 a un taux de dilution voisin de 0,3.", "is_correct": false, "explanation": "Faux : 0,3 correspond à un moteur à faible dilution comme le Conway ou le M88, pas au Trent 1000."}, {"id": "B", "text": "Le PW4168 monté sur A330 a un taux de dilution voisin de 5.", "is_correct": true, "explanation": "Vrai : cet exemple appartient aux moteurs à forte dilution, avec une valeur donnée autour de 5."}, {"id": "C", "text": "Le GE90-115B a un taux de dilution voisin de 0,34.", "is_correct": false, "explanation": "Faux : 0,34 correspond au F404-GE402. Le GE90-115B est au contraire un moteur à forte dilution, autour de 9."}, {"id": "D", "text": "Le PW307D sur Falcon 8X a un taux de dilution voisin de 11.", "is_correct": false, "explanation": "Faux : 11 correspond au Trent 1000. Le PW307D est donné autour de 4."}, {"id": "E", "text": "Le PW JT8D a un taux de dilution voisin de 5.", "is_correct": false, "explanation": "Faux : le PW JT8D est cité avec un taux de dilution faible, autour de 0,9."}], "coverage_label": "Exemples de moteurs et taux de dilution", "learning_objective": "Associer un moteur d’exemple à sa classe de taux de dilution.", "correction_summary": "Il faut comparer chaque moteur à la valeur numérique indiquée. La confusion fréquente consiste à permuter les moteurs à faible dilution et les moteurs à forte dilution, alors que les ordres de grandeur sont très différents.", "course_clarification": "Les moteurs à faible dilution ont un by-pass ratio inférieur à 1, tandis que les moteurs de transport modernes ont souvent un by-pass ratio nettement supérieur à 1. Les exemples donnés permettent surtout de mémoriser des ordres de grandeur.", "source_refs": []}, {"question_id": "S4-1-Q3", "prompt": "Quel couple moteur–valeur de taux de dilution est correctement associé à une application supersonique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le SNECMA M88 du Rafale est donné avec un taux de dilution de 0,3.", "is_correct": true, "explanation": "Vrai : c’est l’exemple supersonique à faible dilution explicitement cité avec la valeur 0,3."}, {"id": "B", "text": "Le Rolls-Royce Conway du B707 est donné avec un taux de dilution de 11.", "is_correct": false, "explanation": "Faux : 11 correspond au Trent 1000. Le Conway est au contraire donné autour de 0,3."}, {"id": "C", "text": "Le Kuznetsov NK144 du Tu-144 est donné avec un taux de dilution de 5.", "is_correct": false, "explanation": "Faux : le NK144 est un moteur supersonique à faible dilution, autour de 0,6."}, {"id": "D", "text": "Le General Electric F404-GE402 du F18 Hornet est donné avec un taux de dilution de 0,9.", "is_correct": false, "explanation": "Faux : 0,9 correspond au PW JT8D. Le F404-GE402 est donné autour de 0,34."}, {"id": "E", "text": "Le PW4168 de l’A330 est un exemple de moteur supersonique à faible dilution.", "is_correct": false, "explanation": "Faux : le PW4168 est un moteur de transport subsonique à forte dilution, autour de 5."}], "coverage_label": "Moteurs supersoniques à faible dilution", "learning_objective": "Identifier un moteur supersonique à faible taux de dilution et sa valeur caractéristique.", "correction_summary": "Le raisonnement attendu repose sur l’association entre l’application supersonique et le faible taux de dilution. L’erreur classique consiste à attribuer à un moteur les valeurs d’un autre exemple voisin ou à confondre les familles subsoniques et supersoniques.", "course_clarification": "Les moteurs supersoniques cités ont tous un taux de dilution inférieur à 1. Dans les exemples donnés, le M88 est à 0,3, le F404-GE402 à 0,34 et le NK144 à 0,6.", "source_refs": []}, {"question_id": "S4-1-Q4", "prompt": "À propos des relations de puissance d’un turbopropulseur, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La relation entre puissance et traction de l’hélice est \\(P = T \\times V_0 \\times \\eta_h\\).", "is_correct": false, "explanation": "Faux : la relation donnée est \\(P \\times \\eta_h = T \\times V_0\\). Le rendement se place donc de l’autre côté de l’égalité."}, {"id": "B", "text": "La puissance sur l’arbre est indépendante du couple.", "is_correct": false, "explanation": "Faux : le couple est une grandeur déterminante de la puissance transmise par l’hélice."}, {"id": "C", "text": "La vitesse de rotation de l’hélice doit être exprimée en tours par minute sans conversion dans la formule.", "is_correct": false, "explanation": "Faux : la formule comporte le facteur \\(60\\) pour convertir les tours par minute en tours par seconde dans l’expression de la puissance."}, {"id": "D", "text": "L’hélice fournit une poussée mais ne délivre jamais de puissance.", "is_correct": false, "explanation": "Faux : l’hélice transforme la puissance mécanique en traction. Elle est bien associée à une puissance sur l’arbre."}, {"id": "E", "text": "La puissance sur l’arbre vérifie \\(P = C \\times \\dfrac{2\\pi N_h}{60}\\).", "is_correct": true, "explanation": "Vrai : la puissance dépend du couple sur l’arbre et de la vitesse de rotation de l’hélice, avec cette écriture exacte."}], "coverage_label": "Puissance d’un turbopropulseur", "learning_objective": "Lire et utiliser la formule reliant couple, vitesse de rotation et puissance sur l’arbre.", "correction_summary": "Il faut reconnaître que la puissance sur l’arbre dépend du couple et de la vitesse de rotation. Une confusion fréquente consiste à mélanger la relation de puissance propulsive \\(P\\eta_h = TV_0\\) avec la formule de puissance mécanique \\(P = C\\,2\\pi N_h/60\\).", "course_clarification": "Dans un turbopropulseur, l’hélice transforme la puissance mécanique fournie sur l’arbre en traction. La relation \\(P = C \\times \\dfrac{2\\pi N_h}{60}\\) relie directement le couple et la vitesse de rotation à la puissance.", "source_refs": []}, {"question_id": "S4-1-Q5", "prompt": "À propos de l’ESHP et de la consommation spécifique d’un turbopropulseur, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Pour le PW120, 2 000 SHP et 250 lb de poussée résiduelle donnent 1 900 ESHP.", "is_correct": false, "explanation": "Faux : le calcul correct est \\(2000 + 250/2{,}5 = 2100\\) ESHP."}, {"id": "B", "text": "La consommation spécifique s’écrit \\(C_{sp} = \\dfrac{P}{C_h}\\).", "is_correct": false, "explanation": "Faux : l’écriture correcte est l’inverse, soit \\(C_{sp} = \\dfrac{C_h}{P}\\)."}, {"id": "C", "text": "La puissance totale équivalente s’écrit \\(\\mathrm{ESHP} = \\mathrm{SHP} + \\dfrac{\\text{Jet Thrust}}{2{,}5}\\).", "is_correct": true, "explanation": "Vrai : la poussée résiduelle est convertie en puissance équivalente avec le facteur 2,5 indiqué."}, {"id": "D", "text": "La consommation spécifique est exprimée uniquement en newtons par heure.", "is_correct": false, "explanation": "Faux : les unités données sont du type \\(\\mathrm{kg/h.W}\\) ou \\(\\mathrm{lb/h.SHP}\\), pas des newtons par heure."}, {"id": "E", "text": "Le PW127F est cité avec une consommation spécifique de 0,459 lb/h.SHP au décollage.", "is_correct": false, "explanation": "Faux : la valeur donnée est 0,459 lb.h.SHP au Take Off, pas une écriture inversée ni une autre unité."}], "coverage_label": "ESHP et consommation spécifique", "learning_objective": "Utiliser la formule de l’ESHP et reconnaître l’expression de la consommation spécifique.", "correction_summary": "Le raisonnement attendu consiste à convertir la poussée résiduelle en puissance équivalente avec le facteur 2,5, puis à distinguer clairement puissance et consommation spécifique. La confusion fréquente est d’inverser la formule de \\(C_{sp}\\) ou de mal lire l’unité associée au résultat.", "course_clarification": "L’ESHP additionne la puissance sur l’arbre et l’équivalent de la poussée résiduelle. La consommation spécifique compare la masse de carburant consommée à la puissance fournie, ce qui permet de comparer des turbopropulseurs entre eux.", "source_refs": []}], "subpart_id": "S4", "anchor_slide_id": "S4-1", "question_count_target": 5, "title": "QCM - Taux de dilution et exemples de moteurs"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2236,11 +2272,11 @@ html[data-embed="1"] .review-card {
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
           description.textContent =
-            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
         }
       }
 

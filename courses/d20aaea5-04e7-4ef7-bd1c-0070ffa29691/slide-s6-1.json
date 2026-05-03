@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S6-1",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S6-1-Q1",
+      "prompt": "Concernant la **post-combustion (P.C.)**, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle a lieu avant le compresseur pour augmenter directement la pression d’admission.",
+          "is_correct": false,
+          "explanation": "La post-combustion n’agit pas en amont du compresseur. Elle intervient après les turbines, dans la partie aval de la tuyère."
+        },
+        {
+          "id": "B",
+          "text": "Elle supprime toute consommation supplémentaire de carburant en phase de forte poussée.",
+          "is_correct": false,
+          "explanation": "Au contraire, la P.C. entraîne une consommation très importante de carburant. Le support indique une consommation de 2 à 3 fois celle du fonctionnement normal."
+        },
+        {
+          "id": "C",
+          "text": "Elle est compatible avec une tuyère à section fixe sans adaptation géométrique.",
+          "is_correct": false,
+          "explanation": "La présence de post-combustion impose une **section variable** pour adapter le passage des gaz et conserver un fonctionnement correct de la tuyère."
+        },
+        {
+          "id": "D",
+          "text": "Elle réalise une deuxième combustion après les turbines en utilisant l’oxygène contenu dans l’air de refroidissement.",
+          "is_correct": true,
+          "explanation": "La post-combustion ajoute du combustible après les turbines et exploite l’oxygène encore disponible dans l’air de refroidissement. C’est bien une combustion supplémentaire située en aval de la turbine."
+        },
+        {
+          "id": "E",
+          "text": "Elle diminue la vitesse des gaz éjectés afin de réduire la poussée.",
+          "is_correct": false,
+          "explanation": "L’intérêt de la P.C. est inverse : augmenter la poussée utile en augmentant la vitesse des gaz éjectés."
+        }
+      ],
+      "coverage_label": "Post-combustion (P.C.)",
+      "learning_objective": "Identifier le principe de la post-combustion et sa position dans la chaîne propulsive.",
+      "correction_summary": "La bonne affirmation décrit une combustion supplémentaire après les turbines, utilisant l’oxygène restant. Le piège principal consiste à la confondre avec une combustion en amont ou avec une réduction de la vitesse d’éjection.",
+      "course_clarification": "La post-combustion est une phase d’appoint pour augmenter temporairement la poussée. Elle s’accompagne d’une forte surconsommation et nécessite une géométrie variable de tuyère.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S6-1-Q2",
+      "prompt": "À propos des effets de la **post-combustion** sur la poussée et la consommation, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "À 11 000 m et M = 2, elle ne peut produire qu’un gain inférieur à +10 % de Tu.",
+          "is_correct": false,
+          "explanation": "Le gain indiqué à 11 000 m et M = 2 est bien plus élevé : il est supérieur à +100 % de Tu."
+        },
+        {
+          "id": "B",
+          "text": "Au sol, elle peut donner environ +40 % à +50 % de Tu pour environ +100 % de Csp.",
+          "is_correct": true,
+          "explanation": "Le support donne explicitement cet ordre de grandeur au sol : la poussée utile augmente d’environ 40 % à 50 % pour une augmentation d’environ 100 % de la consommation spécifique."
+        },
+        {
+          "id": "C",
+          "text": "À 11 000 m et M = 1, elle impose toujours une hausse de Csp de 100 %.",
+          "is_correct": false,
+          "explanation": "À 11 000 m et M = 1, l’augmentation de Csp indiquée est de +60 %, pas de 100 %."
+        },
+        {
+          "id": "D",
+          "text": "Son intérêt est de diminuer Tu en réduisant la vitesse des gaz éjectés.",
+          "is_correct": false,
+          "explanation": "La logique propulsive est inverse : la post-combustion sert à **augmenter** Tu en augmentant la vitesse des gaz éjectés."
+        },
+        {
+          "id": "E",
+          "text": "À 11 000 m et M = 2, le gain de Tu est nul malgré une consommation accrue.",
+          "is_correct": false,
+          "explanation": "Le document indique au contraire un gain de Tu de plus de 100 % dans cette configuration, pour environ +30 % de Csp."
+        }
+      ],
+      "coverage_label": "Gains de poussée et consommation",
+      "learning_objective": "Lire et comparer les ordres de grandeur de gain de poussée et de surconsommation selon les conditions de vol.",
+      "correction_summary": "Les gains ne sont pas les mêmes selon l’altitude et le Mach : ils augmentent avec des effets très marqués en croisière rapide. Le piège est de confondre les pourcentages de Tu et de Csp ou d’inverser leur évolution.",
+      "course_clarification": "Tu désigne la poussée utile. Csp désigne une consommation spécifique liée au coût en carburant pour obtenir cette poussée supplémentaire.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S6-1-Q3",
+      "prompt": "Quel élément est indispensable lorsqu’une tuyère fonctionne avec **post-combustion** ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Une section variable de la tuyère.",
+          "is_correct": true,
+          "explanation": "La post-combustion impose une adaptation de la géométrie de sortie ; le support précise explicitement l’utilisation d’une section variable."
+        },
+        {
+          "id": "B",
+          "text": "Une suppression complète de toute commande de géométrie.",
+          "is_correct": false,
+          "explanation": "La commande géométrique reste nécessaire, au contraire, pour ajuster la section de passage des gaz pendant la P.C."
+        },
+        {
+          "id": "C",
+          "text": "Un compresseur supplémentaire placé après les turbines.",
+          "is_correct": false,
+          "explanation": "La post-combustion ne repose pas sur un compresseur ajouté après la turbine ; elle agit par réchauffement et accélération des gaz en aval."
+        },
+        {
+          "id": "D",
+          "text": "Une réduction de la section de sortie à valeur fixe pour stabiliser la flamme.",
+          "is_correct": false,
+          "explanation": "Le support parle d’une **section variable**, pas d’une section fixe réduite. La stabilisation de la combustion ne remplace pas l’adaptation de géométrie."
+        },
+        {
+          "id": "E",
+          "text": "L’interdiction d’augmenter la vitesse des gaz éjectés.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : la post-combustion vise justement à accroître la vitesse des gaz éjectés pour augmenter la poussée."
+        }
+      ],
+      "coverage_label": "Géométrie variable de tuyère",
+      "learning_objective": "Associer la post-combustion à l’exigence de section variable de la tuyère.",
+      "correction_summary": "La post-combustion ne se conçoit pas avec une tuyère à géométrie figée. Le point clé est l’adaptation de la section pour permettre le surcroît de débit et de poussée.",
+      "course_clarification": "Une section variable permet de modifier l’ouverture de la tuyère selon le régime. Cela devient nécessaire dès qu’on ajoute une combustion après les turbines.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S6-1-Q4",
+      "prompt": "Pour réduire le bruit d’une **tuyère**, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il faut empêcher tout mélange entre le jet et l’atmosphère pour supprimer les turbulences.",
+          "is_correct": false,
+          "explanation": "Le document recommande l’inverse : le mélange contrôlé et la dilution du jet réduisent la zone de bruit."
+        },
+        {
+          "id": "B",
+          "text": "Il faut augmenter uniquement la température des gaz sans modifier leur dispersion.",
+          "is_correct": false,
+          "explanation": "La réduction du bruit est liée à la structure du jet et à sa dilution, pas à une simple hausse de température."
+        },
+        {
+          "id": "C",
+          "text": "Il faut concentrer le jet dans une veine plus étroite pour diminuer les remous.",
+          "is_correct": false,
+          "explanation": "Concentrer le jet va à l’encontre de la dilution recherchée. Le traitement acoustique vise au contraire à le déformer et le diviser."
+        },
+        {
+          "id": "D",
+          "text": "Il faut transformer les turbulences en vibrations exclusivement à haute fréquence.",
+          "is_correct": false,
+          "explanation": "Le texte décrit plutôt une évolution des hautes fréquences vers des basses fréquences quand la vitesse diminue et que les turbulences augmentent."
+        },
+        {
+          "id": "E",
+          "text": "Il faut favoriser la dilution en augmentant la surface de contact entre les gaz éjectés et l’air ambiant.",
+          "is_correct": true,
+          "explanation": "Le principe indiqué est bien d’augmenter les échanges entre le jet rapide et l’air ambiant pour diluer le jet et réduire la zone de bruit."
+        }
+      ],
+      "coverage_label": "Traitement acoustique de la tuyère",
+      "learning_objective": "Comprendre la logique de dilution du jet pour réduire le bruit en sortie.",
+      "correction_summary": "La bonne stratégie consiste à augmenter le contact entre le jet et l’air ambiant afin de diluer les gaz rapides. Le piège est de croire qu’il faut simplement bloquer le mélange, alors que la dilution est recherchée.",
+      "course_clarification": "La dilution correspond à un mélange plus large du jet avec l’air extérieur. En pratique, elle permet de réduire l’intensité et l’étendue de la zone bruyante.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S6-1-Q5",
+      "prompt": "Parmi les solutions suivantes, laquelle fait partie des moyens cités pour le **traitement acoustique** de la tuyère ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les ailettes de compresseur à calage variable.",
+          "is_correct": false,
+          "explanation": "Ce dispositif appartient à la partie compresseur et n’est pas cité comme solution acoustique de sortie de tuyère."
+        },
+        {
+          "id": "B",
+          "text": "Les injecteurs de carburant du foyer comme unique moyen de réduction du bruit.",
+          "is_correct": false,
+          "explanation": "Les injecteurs de combustion ne constituent pas la solution acoustique citée ici ; les solutions mentionnées concernent la tuyère et son écoulement de sortie."
+        },
+        {
+          "id": "C",
+          "text": "Les buses à lobes.",
+          "is_correct": true,
+          "explanation": "Les buses à lobes sont explicitement citées comme une solution pour déformer et diviser le jet afin d’augmenter la dilution."
+        },
+        {
+          "id": "D",
+          "text": "Les volets de frein aérodynamique de l’aile.",
+          "is_correct": false,
+          "explanation": "Les freins aérodynamiques ne sont pas une solution acoustique de tuyère. Le support cite des dispositifs agissant directement sur le jet éjecté."
+        },
+        {
+          "id": "E",
+          "text": "Les sondes de température placées dans la chambre de combustion.",
+          "is_correct": false,
+          "explanation": "Ces sondes servent au contrôle thermique, pas à la réduction du bruit en sortie de tuyère."
+        }
+      ],
+      "coverage_label": "Solutions acoustiques citées",
+      "learning_objective": "Identifier les solutions de réduction du bruit explicitement mentionnées.",
+      "correction_summary": "Les solutions citées sont des dispositifs qui modifient le jet en sortie, comme les buses à lobes. Le piège consiste à proposer des éléments de propulsion ou de mesure qui n’agissent pas sur l’acoustique de la tuyère.",
+      "course_clarification": "Les buses à lobes, les buses à tuyaux d’orgue et les panneaux acoustiques visent tous à augmenter la dilution ou à absorber une partie du bruit. Ils agissent donc sur la structure du jet ou sur l’énergie acoustique.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S6",
+  "anchor_slide_id": "S6-1",
+  "question_count_target": 5,
+  "title": "QCM - Post-combustion et bruit de tuyère"
+}

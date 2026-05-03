@@ -1,0 +1,78 @@
+{
+  "slide_id": "s17",
+  "subpart_id": "s17",
+  "title": "Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »",
+  "objective": "Repérer l’entrée dans la partie consacrée aux exigences de santé, sécurité et qualité.",
+  "layout": "title",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s17-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "hero",
+      "title": "Santé, sécurité et qualité en entreprise aéronautique",
+      "text": "Page de **lancement** du nouveau thème : un titre centré dans un large bandeau **bleu foncé** sur fond blanc, sans tableau ni schéma. Le visuel reste volontairement **sobre** et signalé par le filigrane diagonal répété **IAAG – Institut Aéronautique Amaury de la Grange**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Repères visuels à retenir",
+      "text": null,
+      "bullets": [
+        "Composition très épurée : **aucun graphique**, **aucun tableau**, **aucun schéma** visible.",
+        "Titre mis en valeur au centre, dans une logique de **couverture** ou d’ouverture de partie.",
+        "Filigrane diagonal répété **IAAG** sur toute la page, indice d’un support institutionnel et non d’une page technique."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "ICAO — SARPs (Safety Management)",
+      "locator": "référence générale",
+      "url": "https://www.icao.int/safety/safetymanagement/pages/sarps.aspx"
+    },
+    {
+      "source_type": "web",
+      "label": "EASA — Part-145",
+      "locator": "référence générale",
+      "url": "https://www.easa.europa.eu/en/the-agency/faqs/part-145"
+    },
+    {
+      "source_type": "web",
+      "label": "ISO — ISO 9001:2015",
+      "locator": "référence générale",
+      "url": "https://www.iso.org/standard/62085.html"
+    },
+    {
+      "source_type": "web",
+      "label": "EASA — Continuing Airworthiness Organisations",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/easa-and-you/aircraft-products/continuing-airworthiness-organisations"
+    },
+    {
+      "source_type": "web",
+      "label": "IAQG — IA9100",
+      "locator": "research",
+      "url": "https://iaqg.org/ia9100"
+    }
+  ],
+  "course_reference_note": "La page ouvre la partie « Santé, sécurité et qualité » avec une mise en page de couverture très sobre. Le titre centré et le filigrane IAAG suffisent à identifier l’entrée dans le nouveau thème.",
+  "teacher_notes": "Faire repérer les indices d’ouverture avant d’entrer dans les sous-parties sur la santé, la sécurité et la qualité. Insister sur la sobriété de la page et sur le rôle du titre comme signal de transition."
+}

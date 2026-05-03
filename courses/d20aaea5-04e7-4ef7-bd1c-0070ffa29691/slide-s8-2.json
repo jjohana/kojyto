@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S8-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S8-2_Q1",
+      "prompt": "À propos de l’ensemble inverseur à énergie pneumatique, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’ensemble inverseur est constitué d’une seule couronne mobile actionnée par un vérin unique.",
+          "is_correct": false,
+          "explanation": "Faux : la structure n’est pas monobloc et l’actionnement ne repose pas sur un seul vérin."
+        },
+        {
+          "id": "B",
+          "text": "Les volets obturateurs servent uniquement à augmenter la vitesse du flux secondaire.",
+          "is_correct": false,
+          "explanation": "Faux : les volets servent à fermer le conduit de la soufflante lors de la mise en inverse, pas à accélérer le flux."
+        },
+        {
+          "id": "C",
+          "text": "Les grilles déviatrices sont absentes du dispositif et sont remplacées par des buses orientables.",
+          "is_correct": false,
+          "explanation": "Faux : les grilles déviatrices font partie de la description du système."
+        },
+        {
+          "id": "D",
+          "text": "L’ensemble inverseur est constitué de deux parties appelées demi-capots, actionnées chacune par trois vérins à vis.",
+          "is_correct": true,
+          "explanation": "C’est exact : le dispositif décrit comporte bien deux demi-capots, et chacun est manœuvré par 3 vérins à vis."
+        },
+        {
+          "id": "E",
+          "text": "Le dispositif de commande ne comporte aucun mécanisme d’interdiction.",
+          "is_correct": false,
+          "explanation": "Faux : un mécanisme d’interdiction est explicitement inclus dans la chaîne de commande."
+        }
+      ],
+      "coverage_label": "Description de l’ensemble inverseur pneumatique",
+      "learning_objective": "Identifier les organes principaux d’un inverseur pneumatique.",
+      "correction_summary": "La bonne réponse reprend la description exacte de l’ensemble inverseur : deux demi-capots et trois vérins à vis par partie. La confusion fréquente consiste à mélanger cette structure avec une simple couronne mobile ou à attribuer aux volets un rôle de propulsion au lieu d’obturation.",
+      "course_clarification": "Un inverseur pneumatique comporte une partie mobile en deux demi-capots. Leur déplacement commande la déviation du flux, tandis que les volets ferment le conduit de la soufflante.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S8-2_Q2",
+      "prompt": "Quelle affirmation décrit correctement la chaîne de commande de l’inverseur ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La chaîne de commande se limite à une manette et à un simple câble mécanique sans organe intermédiaire.",
+          "is_correct": false,
+          "explanation": "Faux : la chaîne comporte plusieurs organes de commande et de distribution, pas seulement une liaison mécanique simple."
+        },
+        {
+          "id": "B",
+          "text": "La chaîne de commande comprend notamment une manette d’inversion, un sélecteur de commande, une vanne de régulation et une vanne d’isolement.",
+          "is_correct": true,
+          "explanation": "C’est exact : ces organes font partie de la chaîne de commande décrite pour l’inverseur."
+        },
+        {
+          "id": "C",
+          "text": "Le moteur pneumatique tourne dans un seul sens, sans possibilité d’inversion de rotation.",
+          "is_correct": false,
+          "explanation": "Faux : le moteur pneumatique est indiqué comme ayant deux sens de rotation."
+        },
+        {
+          "id": "D",
+          "text": "La régulation de vitesse est absente car le débit pneumatique est toujours maximal.",
+          "is_correct": false,
+          "explanation": "Faux : une régulation de vitesse est bien prévue dans le mécanisme d’entraînement."
+        },
+        {
+          "id": "E",
+          "text": "Les transmissions flexibles n’interviennent pas dans l’actionnement du système.",
+          "is_correct": false,
+          "explanation": "Faux : les transmissions flexibles sont explicitement mentionnées dans la chaîne de commande."
+        }
+      ],
+      "coverage_label": "Chaîne de commande de l’inverseur",
+      "learning_objective": "Reconnaître les éléments de la chaîne de commande et d’entraînement.",
+      "correction_summary": "Il fallait repérer les organes réellement cités dans la chaîne de commande. L’erreur classique est de réduire le système à un seul levier alors qu’il combine des organes de sélection, de régulation et de transmission.",
+      "course_clarification": "La chaîne de commande regroupe la manette, les organes de sélection et de sécurité, puis le dispositif qui transforme la commande en mouvement de l’inverseur.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S8-2_Q3",
+      "prompt": "À propos de l’essai de l’inverseur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’essai de l’inverseur peut être réalisé pneumatiquement à partir du collecteur de soutirage par l’intermédiaire d’un clapet 3 voies.",
+          "is_correct": true,
+          "explanation": "C’est exact : le texte précise bien cette possibilité d’essai pneumatique."
+        },
+        {
+          "id": "B",
+          "text": "L’essai ne peut être fait qu’en vol, lorsque la poussée est maximale.",
+          "is_correct": false,
+          "explanation": "Faux : l’essai est prévu au sol ou par commande dédiée, pas en vol à poussée maximale."
+        },
+        {
+          "id": "C",
+          "text": "L’essai est réalisé uniquement avec une alimentation hydraulique externe.",
+          "is_correct": false,
+          "explanation": "Faux : l’énoncé mentionne une alimentation pneumatique, pas hydraulique, pour l’essai décrit."
+        },
+        {
+          "id": "D",
+          "text": "L’essai impose obligatoirement le démontage des demi-capots avant toute vérification.",
+          "is_correct": false,
+          "explanation": "Faux : aucun démontage n’est demandé pour l’essai décrit."
+        },
+        {
+          "id": "E",
+          "text": "L’essai exclut toute commande manuelle car une manivelle est interdite.",
+          "is_correct": false,
+          "explanation": "Faux : une vérification manuelle avec une manivelle est bien mentionnée comme possibilité."
+        }
+      ],
+      "coverage_label": "Essai de l’inverseur",
+      "learning_objective": "Distinguer les modes d’essai pneumatique et manuel de l’inverseur.",
+      "correction_summary": "La réponse juste associe l’essai pneumatique au collecteur de soutirage et au clapet 3 voies. La confusion fréquente consiste à croire que seul un essai électrique ou hydraulique est possible, alors qu’une manœuvre manuelle est aussi prévue.",
+      "course_clarification": "Un essai peut être pneumatique, avec l’air prélevé sur le collecteur de soutirage, ou manuel, avec une manivelle selon l’équipement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S8-2_Q4",
+      "prompt": "Quelle phrase décrit correctement la séquence de passage en inversion ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les demi-capots se déplacent vers l’avant pour découvrir les grilles déviatrices.",
+          "is_correct": false,
+          "explanation": "Faux : le déplacement décrit est vers l’arrière, pas vers l’avant."
+        },
+        {
+          "id": "B",
+          "text": "Les volets ouvrent le conduit de la soufflante pour augmenter le débit vers l’arrière.",
+          "is_correct": false,
+          "explanation": "Faux : les volets ferment le conduit de la soufflante au moment de la mise en inverse."
+        },
+        {
+          "id": "C",
+          "text": "Le mécanisme d’interdiction empêche toute augmentation de la poussée inverse.",
+          "is_correct": false,
+          "explanation": "Faux : il permet au contraire de poursuivre le déplacement de la manette vers l’arrière et d’augmenter la poussée inverse."
+        },
+        {
+          "id": "D",
+          "text": "Les aérofreins sortent automatiquement pendant la poussée positive sans action sur les manettes d’inversion.",
+          "is_correct": false,
+          "explanation": "Faux : la sortie automatique des aérofreins est liée au déplacement vers l’arrière des manettes d’inversion pendant l’atterrissage ou l’arrêt décollage."
+        },
+        {
+          "id": "E",
+          "text": "Le sélecteur de commande est placé en inversion, puis le mécanisme d’entraînement alimente l’inverseur dans le sens inversion.",
+          "is_correct": true,
+          "explanation": "C’est exact : la séquence commence par le positionnement du sélecteur en inversion, suivi de l’alimentation du mécanisme d’entraînement dans le bon sens."
+        }
+      ],
+      "coverage_label": "Séquence de fonctionnement en inversion",
+      "learning_objective": "Reconstituer l’ordre des actions lors du passage en poussée inverse.",
+      "correction_summary": "Il fallait suivre la chronologie exacte : sélection de l’inversion, alimentation du mécanisme, recul des demi-capots, découverte des grilles et fermeture du conduit par les volets. L’erreur habituelle est d’inverser le sens du mouvement ou le rôle des volets.",
+      "course_clarification": "La mise en inverse suit toujours une logique commande → entraînement → déplacement des organes → modification du flux. Le mécanisme d’interdiction autorise ensuite l’augmentation de la poussée inverse.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S8-2_Q5",
+      "prompt": "Quelle affirmation sur les sécurités et limitations de l’inversion de poussée est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le reverse est autorisé à toute vitesse, car il protège le moteur contre l’ingestion.",
+          "is_correct": false,
+          "explanation": "Faux : la vitesse minimale d’utilisation est justement imposée pour éviter l’ingestion de gaz chauds et de projections."
+        },
+        {
+          "id": "B",
+          "text": "La poussée n’est jamais réduite automatiquement en cas de sortie intempestive des inverseurs en vol.",
+          "is_correct": false,
+          "explanation": "Faux : une réduction automatique de la poussée est prévue dans ce cas."
+        },
+        {
+          "id": "C",
+          "text": "Le reverse est inutilisable en dessous d’une vitesse avion fixée afin d’éviter l’ingestion des gaz chauds.",
+          "is_correct": true,
+          "explanation": "C’est exact : la limitation de vitesse est donnée pour éviter l’ingestion des gaz chauds et les risques associés."
+        },
+        {
+          "id": "D",
+          "text": "La durée maximale d’utilisation n’existe pas, puisque le dispositif supporte un échauffement illimité.",
+          "is_correct": false,
+          "explanation": "Faux : une durée maxi est fixée pour limiter l’échauffement des dispositifs et des structures voisines."
+        },
+        {
+          "id": "E",
+          "text": "Le jet dévié ne peut pas soulever de corps étrangers aspirables par le moteur.",
+          "is_correct": false,
+          "explanation": "Faux : le flux dévié peut au contraire soulever des cailloux ou autres éléments aspirés ensuite par le moteur."
+        }
+      ],
+      "coverage_label": "Limitations et sécurités de l’inverseur",
+      "learning_objective": "Appliquer les limitations d’utilisation et les sécurités associées au reverse.",
+      "correction_summary": "La bonne réponse reprend la limitation de vitesse, qui protège contre l’ingestion de gaz chauds. La confusion fréquente consiste à voir le reverse comme une protection universelle, alors qu’il impose aussi des contraintes de vitesse, de durée et de sécurité en vol.",
+      "course_clarification": "L’inversion de poussée n’est pas utilisable partout ni tout le temps : elle est limitée par la vitesse, la durée d’emploi et des sécurités qui réduisent automatiquement la poussée en cas de situation anormale.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S8",
+  "anchor_slide_id": "S8-2",
+  "question_count_target": 5,
+  "title": "QCM - Dispositif pneumatique et séquence de fonctionnement"
+}

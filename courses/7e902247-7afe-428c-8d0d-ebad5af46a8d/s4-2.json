@@ -1,0 +1,102 @@
+{
+  "slide_id": "S4-2",
+  "subpart_id": "S4",
+  "title": "TR 1, TR 2, TR ESS et APU TR",
+  "objective": "Identifier le rôle des transformateur-rectificateurs dans l’alimentation du réseau DC.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s4-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repères et fonction sur le synoptique",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Repère",
+          "Fonction",
+          "Lecture utile"
+        ],
+        [
+          "**TR 1**",
+          "Convertit l’alimentation **AC** en énergie **DC** pour le réseau électrique continu.",
+          "Repère de conversion central sur le schéma."
+        ],
+        [
+          "**TR 2**",
+          "Convertit lui aussi l’**AC** vers le **DC** pour participer à la distribution continue.",
+          "Même logique de fonctionnement que TR 1."
+        ],
+        [
+          "**TR ESS**",
+          "Alimente le **DC essentiel** à partir de la chaîne de conversion dédiée.",
+          "Bloc lié aux fonctions prioritaires en **DC**."
+        ],
+        [
+          "**APU TR**",
+          "Assure la conversion associée à l’**APU** pour contribuer au **DC SYSTEM**.",
+          "Relie la source issue de l’APU au réseau continu."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Les blocs **TR** ne sont pas des sources primaires : ils jouent le rôle de **convertisseurs** entre la partie **AC** et la partie **DC**.",
+        "Le repérage **TR 1**, **TR 2**, **TR ESS** et **APU TR** sert à suivre le chemin d’alimentation du **DC SYSTEM** sans confondre génération et conversion.",
+        "Le sigle **TR** reste le repère clé à identifier en priorité sur le synoptique."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Définition à retenir",
+      "text": "**TR** = **Transformer Rectifier** : bloc de **conversion AC/DC** qui participe à l’alimentation du **DC SYSTEM**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Transformer Rectifier Unit (TRU) | SKYbrary Aviation Safety",
+      "locator": "Définition du TRU comme convertisseur AC/DC pour l’alimentation électrique avion",
+      "url": "https://skybrary.aero/index.php/articles/transformer-rectifier-unit-tru"
+    },
+    {
+      "source_type": "web",
+      "label": "Rectifier | SKYbrary Aviation Safety",
+      "locator": "Principe de redressement : conversion du courant alternatif en courant continu",
+      "url": "https://skybrary.aero/articles/rectifier"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA-H-8083-31A — Airframe Handbook, Volume 2",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/2022-06/amt_airframe_hb_vol_2.pdf"
+    }
+  ],
+  "course_reference_note": "Le synoptique DC place les blocs TR 1, TR 2, TR ESS et APU TR entre le **AC SYSTEM** et le **DC SYSTEM**. Le repère **TR** renvoie à **Transformer Rectifier**.",
+  "teacher_notes": "Faire repérer les quatre blocs TR sur le schéma, puis faire associer chaque repère à la fonction de conversion AC vers DC. Insister sur la différence entre **source** d’énergie et **convertisseur**."
+}

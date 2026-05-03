@@ -1,0 +1,113 @@
+{
+  "slide_id": "S17",
+  "subpart_id": "12",
+  "title": "Applications aéronautiques typiques",
+  "objective": "Relier les notions de cinématique à des situations concrètes du domaine aéronautique.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s17-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Quatre exemples aéronautiques types",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Situation",
+          "Modélisation",
+          "Dérivation / mesure",
+          "Représentation utile"
+        ],
+        [
+          "Déploiement du train d’atterrissage",
+          "Mouvement composé de **translation** et de **rotation** autour d’un axe.",
+          "Suivre l’angle, la position des vérins et l’ordre des phases pour décrire le mécanisme.",
+          "Schéma des positions successives et évolution de l’angle en fonction du temps."
+        ],
+        [
+          "Montée d’un avion au décollage",
+          "Altitude **h(t)** et vitesse verticale associée.",
+          "La vitesse de montée est **dh/dt** ; l’accélération se lit sur la pente de **v(t)**.",
+          "Courbes **h(t)**, **v(t)** et **a(t)** pour qualifier la phase de décollage."
+        ],
+        [
+          "Trajectoire d’un drone par GPS",
+          "Coordonnées **x(t), y(t), z(t)** fournies par le système de positionnement par satellite (**GPS**).",
+          "Calcul des vitesses sur chaque axe puis de la norme de la vitesse.",
+          "Trajectoire plane ou spatiale, avec profil des vitesses au cours du temps."
+        ],
+        [
+          "Pales d’hélice",
+          "Rotation d’angle **θ(t)** de rayon **R**.",
+          "Utiliser **ω = dθ/dt**, puis **v = ωR** et **a_n = ω²R** pour estimer les efforts.",
+          "Courbe de **ω(t)** et mise en relation avec les contraintes mécaniques."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture commune des situations",
+      "text": null,
+      "bullets": [
+        "**Modéliser** une position, une hauteur ou un angle par une fonction du temps pour décrire le mouvement avant tout calcul.",
+        "**Dériver** la grandeur choisie pour obtenir la vitesse puis l’accélération ; la pente d’une courbe fournit directement une information cinématique.",
+        "**Représenter** par des courbes temporelles ou une trajectoire pour vérifier le sens du mouvement, repérer les variations et interpréter les sollicitations mécaniques."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations de base à mobiliser",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "v=\\frac{dx}{dt},\\qquad a=\\frac{dv}{dt},\\qquad \\omega=\\frac{d\\theta}{dt},\\qquad v=\\omega R,\\qquad a_t=\\alpha R,\\qquad a_n=\\omega^2R=\\frac{v^2}{R}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NASA — Forces in a Climb",
+      "locator": "montée d’un avion et angle de montée",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/forces-in-a-climb/"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA — GPS",
+      "locator": "suivi de position et de trajectoire par GPS",
+      "url": "https://www.nasa.gov/directorates/somd/space-communications-navigation-program/gps/"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — Transport Airplane Landing Gear Retracting Mechanism",
+      "locator": "mécanisme de rétraction du train d’atterrissage",
+      "url": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1019764"
+    },
+    {
+      "source_type": "web",
+      "label": "Propellers | Glenn Research Center | NASA",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/propellers/"
+    }
+  ],
+  "course_reference_note": "Les grandeurs angulaires, les liens linéaires/angulaires et les méthodes graphiques servent de base aux exemples retenus. Le train d’atterrissage, la montée, le GPS et l’hélice prolongent directement ces relations.",
+  "teacher_notes": "Faire identifier pour chaque situation la variable suivie, la dérivée utile et le graphique associé. Insister sur l’unité des vitesses angulaires en rad/s et sur le lien entre rotation et contraintes mécaniques."
+}

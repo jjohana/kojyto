@@ -1,0 +1,82 @@
+{
+  "slide_id": "s10",
+  "subpart_id": "s10",
+  "title": "Technicien d’essai",
+  "objective": "Identifier la fonction d’essai et de validation des composants et systèmes aéronautiques.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s10-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Chaîne de travail",
+      "text": null,
+      "bullets": [
+        "Préparer et **installer les équipements de test** avant l’essai pour disposer d’un banc ou d’un dispositif fiable.",
+        "**Exécuter les essais** sur l’équipement concerné, puis **collecter les données** mesurées pendant le fonctionnement.",
+        "**Analyser les résultats** pour vérifier la conformité aux exigences de **sécurité** et de **qualité**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Éléments concernés",
+      "text": null,
+      "bullets": [
+        "Les essais peuvent porter sur les **moteurs**, les **systèmes électroniques** et les **structures** de l’aéronef.",
+        "Ils concernent aussi les **systèmes hydrauliques** et les **systèmes de navigation**.",
+        "La logique attendue reste la même : **tester**, **mesurer**, puis **valider** ou signaler l’écart."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "OnisepTV - Technicien d'essais en aéronautique",
+      "locator": "rôle et essais au sol sur les systèmes de l’avion ou de l’hélicoptère",
+      "url": "https://oniseptv.onisep.fr/video/technicien-ne-d-039-essais-en-aeronautique"
+    },
+    {
+      "source_type": "web",
+      "label": "Onisep - Technicien / Technicienne d'essais",
+      "locator": "bancs d’essais, mesures et analyse des performances",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/technicien-technicienne-d-essais"
+    },
+    {
+      "source_type": "web",
+      "label": "Brevet de technicien supérieur Aéronautique - France Compétences",
+      "locator": "research",
+      "url": "https://certifpro.francecompetences.fr/api/fiches/refActivity/24240/467984"
+    },
+    {
+      "source_type": "web",
+      "label": "Brevet de technicien supérieur Aéronautique - France Compétences (activité)",
+      "locator": "research",
+      "url": "https://www.francecompetences.fr/wp-json/api/v1/activity/export/24240/467984"
+    },
+    {
+      "source_type": "web",
+      "label": "Laboratory Testing - Airbus",
+      "locator": "research",
+      "url": "https://www.aircraft.airbus.com/en/services/expand/engineering-design-services/laboratory-testing"
+    }
+  ],
+  "course_reference_note": "Le passage présente le technicien d’essai comme un acteur des tests sur les composants et systèmes d’avions. Il insiste sur la suite préparation, essais, collecte et analyse des données.",
+  "teacher_notes": "Faire ressortir la chaîne **test → mesure → analyse** et nommer clairement les familles de systèmes. Niveau Bac Pro : rester concret, sans entrer dans les procédures de certification."
+}

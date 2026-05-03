@@ -1,0 +1,82 @@
+{
+  "slide_id": "s7",
+  "subpart_id": "s7",
+  "title": "Avitailleur",
+  "objective": "Identifier la mission de ravitaillement carburant et ses contraintes techniques.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s7-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Mission et quantité",
+      "text": null,
+      "bullets": [
+        "**Ravitaillement** : il alimente les avions en carburant et applique avec précision la quantité de kérosène demandée.",
+        "La quantité dépend du **poids**, de la **distance** à parcourir et des **conditions météo** ; l’objectif est d’embarquer juste ce qu’il faut pour la mission.",
+        "La consigne du pilote sert de repère opérationnel avant le transfert du carburant sur l’appareil."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Opérations et contrôles",
+      "text": null,
+      "bullets": [
+        "Il manipule les **équipements de transfert** et vérifie les **systèmes d’alimentation** de l’avion pendant l’opération.",
+        "Après chaque avitaillement, il prélève un **échantillon** pour contrôler la **qualité du carburant** et limiter tout risque de contamination.",
+        "Il assure la **traçabilité** avec l’enregistrement des données puis la **facturation** de la prestation ; le poste est généralement rattaché à une **compagnie pétrolière**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "FAA — Technical Discipline: Aviation Fuels",
+      "locator": "Aviation fuels : sécurité, infrastructure et chaîne d’approvisionnement",
+      "url": "https://www.faa.gov/aircraft/air_cert/step/disciplines/aviation_fuels"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — Navigating Around Bad Weather",
+      "locator": "Météo : impact sur la masse et la quantité de carburant embarquée",
+      "url": "https://www.faa.gov/holiday-travel/weather"
+    },
+    {
+      "source_type": "web",
+      "label": "IATA — Technical Fuel",
+      "locator": "Carburant : qualité, contamination et conformité technique",
+      "url": "https://www.iata.org/en/programs/ops-infra/fuel/technical-fuel/"
+    },
+    {
+      "source_type": "web",
+      "label": "IATA — Fuel Data Standards",
+      "locator": "research",
+      "url": "https://www.iata.org/en/programs/ops-infra/fuel/data-standards/"
+    },
+    {
+      "source_type": "web",
+      "label": "IATA — Fuel Servicing Guidelines",
+      "locator": "research",
+      "url": "https://www.iata.org/en/publications/manuals/tech-fuel-servicing-guidelines/"
+    }
+  ],
+  "course_reference_note": "La page présente le technicien avitailleur comme l’acteur du ravitaillement en kérosène. Elle insiste sur la quantité exacte, le contrôle qualité et la traçabilité de l’opération.",
+  "teacher_notes": "Faire repérer la chaîne complète : besoin de carburant, transfert, contrôle qualité, enregistrement et facturation. Insister sur le fait que la météo et la masse de l’avion modifient la quantité à embarquer."
+}

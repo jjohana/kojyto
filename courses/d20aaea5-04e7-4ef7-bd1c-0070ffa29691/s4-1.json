@@ -1,0 +1,195 @@
+{
+  "slide_id": "S4-1",
+  "subpart_id": "S4",
+  "title": "Taux de dilution et familles de moteurs",
+  "objective": "Relier le taux de dilution aux familles de turboréacteurs.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s4-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Classement des moteurs selon T",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "**Catégorie**",
+          "**Moteur**",
+          "**Appareil**",
+          "**T**",
+          "**Lecture**"
+        ],
+        [
+          "Faible dilution",
+          "Rolls-Royce Conway",
+          "B707, DC8",
+          "0,3",
+          "Moteur à jet rapide, adapté aux avions subsoniques rapides"
+        ],
+        [
+          "Faible dilution",
+          "Pratt & Whitney JT8D",
+          "B727, Caravelle 12, MD80",
+          "0,9",
+          "Faible dilution, encore proche du cœur"
+        ],
+        [
+          "Faible dilution",
+          "SNECMA M88",
+          "Rafale",
+          "0,3",
+          "Configuration cohérente avec un domaine de vol rapide"
+        ],
+        [
+          "Faible dilution",
+          "General Electric F404-GE402",
+          "F/A-18 Hornet",
+          "0,34",
+          "Moteur de combat, jet rapide"
+        ],
+        [
+          "Faible dilution",
+          "Kuznetsov NK144",
+          "Tu-144",
+          "0,6",
+          "Faible dilution associée à un avion supersonique"
+        ],
+        [
+          "Forte dilution",
+          "Pratt & Whitney PW307D",
+          "Falcon 8X",
+          "≈ 4",
+          "Plus de masse d’air déplacée à plus faible vitesse"
+        ],
+        [
+          "Forte dilution",
+          "Pratt & Whitney PW4168",
+          "A330",
+          "≈ 5",
+          "Optimisé pour le transport subsonique"
+        ],
+        [
+          "Forte dilution",
+          "Trent 1000",
+          "A350, B787",
+          "≈ 11",
+          "Très forte dilution, efficacité propulsive élevée"
+        ],
+        [
+          "Forte dilution",
+          "GE90-115B",
+          "B777",
+          "≈ 9",
+          "Forte dilution pour gros porteur subsonique"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "**T < 1** : la dilution est faible, le **flux chaud** reste dominant et la vitesse du jet est plus élevée ; cette logique convient aux appareils rapides et, selon les cas cités, aux domaines **subsonique rapide** ou **supersonique**.",
+        "**T > 1** : la dilution est forte, davantage d’air est accéléré à plus faible vitesse ; on gagne en **efficacité propulsive** pour le transport **subsonique**.",
+        "Le classement utile est donc simple : **faible dilution = jet rapide** ; **forte dilution = rendement propulsif supérieur**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation de base",
+      "text": "Le **taux de dilution** compare le débit du **flux froid** à celui du **flux chaud**. Il est **sans unité**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "T = \\frac{Q_{me}}{Q_{mi}} = \\frac{\\text{flux froid}}{\\text{flux chaud}}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "SKYbrary - Bypass Ratio",
+      "locator": "Définition du rapport de dilution entre flux contournant et flux cœur",
+      "url": "https://skybrary.aero/index.php/articles/bypass-ratio"
+    },
+    {
+      "source_type": "web",
+      "label": "Britannica - Low-bypass turbofans and turbojets",
+      "locator": "Lien entre faible dilution, jet rapide et usage supersonique",
+      "url": "https://www.britannica.com/technology/jet-engine/Low-bypass-turbofans-and-turbojets"
+    },
+    {
+      "source_type": "web",
+      "label": "Rolls-Royce Conway / Trent: Delivering continuous improvement",
+      "locator": "research",
+      "url": "https://www.rolls-royce.com/media/our-stories/discover/2024/trent-striving-for-continuous-improvement.aspx"
+    },
+    {
+      "source_type": "web",
+      "label": "JT8D Engine | Pratt & Whitney",
+      "locator": "research",
+      "url": "https://www.prattwhitney.com/products/commercial-engines/jt8d"
+    },
+    {
+      "source_type": "web",
+      "label": "M88 - Proven performance and reliability | Safran",
+      "locator": "research",
+      "url": "https://www.safran-group.com/products-services/m88-proven-performance-and-reliability"
+    },
+    {
+      "source_type": "web",
+      "label": "F404 turbofan engines | GE Aerospace",
+      "locator": "research",
+      "url": "https://www.geaerospace.com/sites/default/files/datasheet-F404-Family.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Discover Engines | Trent 1000 | Rolls-Royce",
+      "locator": "research",
+      "url": "https://discoverengines.rolls-royce.com/trent-1000"
+    },
+    {
+      "source_type": "web",
+      "label": "Turbofan Engine | SKYbrary",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/turbofan-engine"
+    },
+    {
+      "source_type": "web",
+      "label": "Jet engine - Medium, High, Ultrahigh Bypass | Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/technology/jet-engine/Medium-bypass-turbofans-high-bypass-turbofans-and-ultrahigh-bypass-engines"
+    },
+    {
+      "source_type": "web",
+      "label": "Turbofan Engine | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/turbofan-engine?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Bypass Ratio | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/bypass-ratio?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La relation **T = Qme / Qmi** sert de repère pour distinguer **faible** et **forte dilution**. Les moteurs cités sont rangés selon leur valeur de **T** et leur domaine d’emploi.",
+  "teacher_notes": "Faire lire le tableau en deux familles : **T < 1** puis **T > 1**. Insister sur l’effet opérationnel : plus **T** est faible, plus le jet est rapide ; plus **T** est élevé, plus l’efficacité propulsive augmente sur avion subsonique."
+}

@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S7",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S7-5-Q1",
+      "prompt": "À propos de l’accélération d’un point en mouvement, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération est la variation de la position dans le temps.",
+          "is_correct": false,
+          "explanation": "La variation de la position correspond au déplacement ou à la vitesse selon la grandeur considérée, pas à l’accélération. L’accélération concerne la vitesse."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération a pour unité le mètre \\((m)\\).",
+          "is_correct": false,
+          "explanation": "L’unité de l’accélération est \\(m\\cdot s^{-2}\\), car il s’agit d’une variation de vitesse par unité de temps."
+        },
+        {
+          "id": "C",
+          "text": "Une accélération n’existe que si la vitesse est nulle.",
+          "is_correct": false,
+          "explanation": "Un mobile peut avoir une vitesse non nulle et être accéléré, par exemple dans un virage ou lors d’un freinage."
+        },
+        {
+          "id": "D",
+          "text": "L’accélération s’écrit \\(a=\\dfrac{dv}{dt}=\\dfrac{d^2r}{dt^2}\\).",
+          "is_correct": true,
+          "explanation": "C’est la définition vectorielle de l’accélération : elle mesure la variation temporelle de la vitesse, et donc aussi la dérivée seconde du vecteur position."
+        },
+        {
+          "id": "E",
+          "text": "L’accélération est toujours parallèle au déplacement.",
+          "is_correct": false,
+          "explanation": "L’accélération peut être tangentielle ou normale ; elle n’est donc pas forcément parallèle au déplacement."
+        }
+      ],
+      "coverage_label": "Accélération",
+      "learning_objective": "Identifier la définition mathématique de l’accélération et sa signification physique.",
+      "correction_summary": "La bonne affirmation donne la définition de l’accélération comme dérivée de la vitesse, ou dérivée seconde de la position. Le piège classique consiste à la confondre avec la position, le déplacement ou la vitesse.",
+      "course_clarification": "L’accélération mesure comment la vitesse change au cours du temps. Elle peut traduire une variation de la norme de la vitesse ou une variation de sa direction.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-5-Q2",
+      "prompt": "Concernant les composantes tangentielle et normale de l’accélération, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La composante normale \\(a_n\\) traduit une variation de la norme de \\(v\\).",
+          "is_correct": false,
+          "explanation": "La composante normale modifie surtout la direction de la vitesse, pas sa norme."
+        },
+        {
+          "id": "B",
+          "text": "La composante tangentielle \\(a_t\\) traduit une variation de la norme de \\(v\\).",
+          "is_correct": true,
+          "explanation": "La composante tangentielle agit dans la direction de la vitesse et modifie sa valeur : elle peut donc faire accélérer ou ralentir le mobile."
+        },
+        {
+          "id": "C",
+          "text": "La composante tangentielle est dirigée vers le centre de courbure.",
+          "is_correct": false,
+          "explanation": "La direction vers le centre de courbure correspond à la composante normale, pas à la composante tangentielle."
+        },
+        {
+          "id": "D",
+          "text": "La composante normale est nulle dès que la vitesse n’est pas constante.",
+          "is_correct": false,
+          "explanation": "La composante normale dépend de la courbure de la trajectoire et de la vitesse ; elle peut exister même si la vitesse garde une norme constante."
+        },
+        {
+          "id": "E",
+          "text": "La composante tangentielle ne peut jamais ralentir un mobile.",
+          "is_correct": false,
+          "explanation": "Si \\(a_t\\) est opposée au sens du mouvement, elle diminue la norme de la vitesse : elle ralentit donc le mobile."
+        }
+      ],
+      "coverage_label": "Composante tangentielle",
+      "learning_objective": "Distinguer l’effet de la composante tangentielle sur la norme de la vitesse.",
+      "correction_summary": "La composante tangentielle correspond à la variation de la norme de la vitesse. L’erreur fréquente est de lui attribuer un effet sur la direction, alors que c’est le rôle de la composante normale.",
+      "course_clarification": "La direction tangentielle suit la trajectoire au point considéré. Quand \\(a_t\\) est positive, la vitesse augmente ; quand elle est opposée au mouvement, elle diminue.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-5-Q3",
+      "prompt": "À propos de la composante normale de l’accélération, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La composante normale \\(a_n\\) est dirigée vers le centre de courbure.",
+          "is_correct": true,
+          "explanation": "Par définition, \\(a_n\\) est la composante qui accompagne la courbure de la trajectoire et pointe vers le centre de courbure."
+        },
+        {
+          "id": "B",
+          "text": "La composante normale est toujours tangentielle à la trajectoire.",
+          "is_correct": false,
+          "explanation": "Une composante tangentielle suit la tangente ; la composante normale est au contraire perpendiculaire à cette tangente."
+        },
+        {
+          "id": "C",
+          "text": "La composante normale sert à augmenter ou diminuer la norme de \\(v\\).",
+          "is_correct": false,
+          "explanation": "La norme de la vitesse est modifiée par la composante tangentielle, tandis que la composante normale change la direction."
+        },
+        {
+          "id": "D",
+          "text": "La composante normale est nulle dans tout mouvement circulaire.",
+          "is_correct": false,
+          "explanation": "En mouvement circulaire, la direction de la vitesse change en permanence, donc \\(a_n\\) est justement non nulle."
+        },
+        {
+          "id": "E",
+          "text": "La composante normale ne dépend jamais de la vitesse.",
+          "is_correct": false,
+          "explanation": "La relation donnée est \\(a_n=\\dfrac{v^2}{R}\\) : elle dépend bien de la vitesse au carré."
+        }
+      ],
+      "coverage_label": "Composante normale",
+      "learning_objective": "Reconnaître le rôle directionnel de la composante normale et son orientation.",
+      "correction_summary": "La composante normale est liée au changement de direction et pointe vers le centre de courbure. Le piège est de la confondre avec une composante qui ferait varier la valeur de la vitesse.",
+      "course_clarification": "La normale est perpendiculaire à la trajectoire au point considéré. Elle devient importante dès qu’il y a courbure, même si la vitesse garde la même norme.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-5-Q4",
+      "prompt": "Dans l’expression \\(a_n=\\dfrac{v^2}{R}\\), quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Si \\(R\\) augmente, \\(a_n\\) augmente aussi à vitesse constante.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : à vitesse constante, \\(a_n\\) diminue quand \\(R\\) augmente."
+        },
+        {
+          "id": "B",
+          "text": "La formule montre que \\(a_n\\) est proportionnelle à \\(v\\) et non à \\(v^2\\).",
+          "is_correct": false,
+          "explanation": "La dépendance correcte est quadratique : doubler la vitesse multiplie \\(a_n\\) par 4 si \\(R\\) reste inchangé."
+        },
+        {
+          "id": "C",
+          "text": "Si \\(v=0\\), alors \\(a_n\\) est nécessairement infinie.",
+          "is_correct": false,
+          "explanation": "Si \\(v=0\\), la formule donne \\(a_n=0\\) dans ce modèle ; il n’y a pas d’accélération normale liée au mouvement circulaire."
+        },
+        {
+          "id": "D",
+          "text": "L’unité de \\(a_n\\) est \\(m\\cdot s^{-1}\\).",
+          "is_correct": false,
+          "explanation": "Comme toute accélération, \\(a_n\\) s’exprime en \\(m\\cdot s^{-2}\\), et non en unité de vitesse."
+        },
+        {
+          "id": "E",
+          "text": "À vitesse donnée, une courbure plus forte correspond à un rayon \\(R\\) plus petit et donc à une accélération normale plus grande.",
+          "is_correct": true,
+          "explanation": "Comme \\(a_n\\) est inversement proportionnelle à \\(R\\), diminuer le rayon augmente la composante normale pour une même vitesse."
+        }
+      ],
+      "coverage_label": "Formule de l’accélération normale",
+      "learning_objective": "Utiliser la relation \\(a_n=v^2/R\\) pour interpréter l’effet de la vitesse et du rayon de courbure.",
+      "correction_summary": "La formule montre qu’une vitesse plus grande ou un rayon plus petit augmente l’accélération normale. Le principal piège est d’oublier la dépendance en \\(v^2\\) ou d’inverser l’effet du rayon.",
+      "course_clarification": "Le rayon \\(R\\) mesure la courbure locale de la trajectoire : plus \\(R\\) est petit, plus la trajectoire est serrée. À vitesse constante, cela exige une accélération normale plus importante.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-5-Q5",
+      "prompt": "Dans un virage d’avion, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La composante normale est forcément nulle puisque la vitesse est constante.",
+          "is_correct": false,
+          "explanation": "Même avec une vitesse de norme constante, la direction change dans un virage ; la composante normale est donc non nulle."
+        },
+        {
+          "id": "B",
+          "text": "La composante tangentielle est toujours plus grande que la composante normale dans un virage.",
+          "is_correct": false,
+          "explanation": "Aucune règle générale n’impose cela ; l’exemple donné souligne au contraire qu’\\(a_t\\) peut être faible alors que \\(a_n\\) est importante."
+        },
+        {
+          "id": "C",
+          "text": "La composante tangentielle peut être faible alors que la composante normale est importante.",
+          "is_correct": true,
+          "explanation": "Dans un virage, l’essentiel de l’accélération peut servir à changer la direction du mouvement ; la variation de la norme de la vitesse peut rester faible."
+        },
+        {
+          "id": "D",
+          "text": "Un virage ne peut pas être décrit par une accélération.",
+          "is_correct": false,
+          "explanation": "Un virage implique une variation de direction, donc une accélération, au moins normale."
+        },
+        {
+          "id": "E",
+          "text": "La composante normale est dirigée dans le sens du déplacement.",
+          "is_correct": false,
+          "explanation": "La composante normale est dirigée vers le centre de courbure, donc pas dans le sens du déplacement."
+        }
+      ],
+      "coverage_label": "Application : virage d’avion",
+      "learning_objective": "Interpréter la présence simultanée d’une faible composante tangentielle et d’une forte composante normale dans une situation de virage.",
+      "correction_summary": "Dans un virage, l’enjeu principal est le changement de direction, donc la composante normale peut dominer. Le piège est de croire qu’une vitesse constante exclut toute accélération.",
+      "course_clarification": "Un mouvement peut avoir une norme de vitesse presque constante et être quand même accéléré. Dès que la trajectoire est courbe, la direction de la vitesse change et impose une composante normale.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "5",
+  "anchor_slide_id": "S7",
+  "question_count_target": 5,
+  "title": "QCM - Accélération tangentielle et normale"
+}

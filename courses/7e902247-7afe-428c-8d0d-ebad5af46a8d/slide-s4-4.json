@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S4-4",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S4-4-Q1",
+      "prompt": "Concernant l’alimentation de l’APU STARTER, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’APU STARTER est alimenté uniquement par les IDGs des moteurs.",
+          "is_correct": false,
+          "explanation": "Les IDGs participent à la génération AC générale, mais ils ne constituent pas la chaîne dédiée indiquée pour le démarrage de l’APU."
+        },
+        {
+          "id": "B",
+          "text": "L’APU STARTER est alimenté par le STATIC INVERTER.",
+          "is_correct": false,
+          "explanation": "Le STATIC INVERTER intervient dans l’alimentation de secours AC, pas dans la chaîne de démarrage de l’APU."
+        },
+        {
+          "id": "C",
+          "text": "L’APU STARTER est alimenté directement par les BATTERY 1 et 2 sans autre élément.",
+          "is_correct": false,
+          "explanation": "Les batteries 1 et 2 sont intégrées à l’architecture DC générale, mais le chemin demandé pour le démarrage APU passe par l’APU TR et l’APU BATTERY."
+        },
+        {
+          "id": "D",
+          "text": "L’APU STARTER est alimenté via l’APU TR et l’APU BATTERY.",
+          "is_correct": true,
+          "explanation": "Le schéma relie explicitement le STARTER de l’APU au couple **APU TR / APU BATTERY**. C’est la chaîne dédiée au démarrage de l’APU, et non une alimentation prise directement sur le DC SYSTEM sans intermédiaire."
+        },
+        {
+          "id": "E",
+          "text": "L’APU STARTER dépend uniquement de l’EXTERNAL POWER A ou B.",
+          "is_correct": false,
+          "explanation": "L’alimentation externe sert au réseau AC au sol, mais le démarrage de l’APU est présenté avec une chaîne spécifique différente."
+        }
+      ],
+      "coverage_label": "APU STARTER",
+      "learning_objective": "Identifier la chaîne d’alimentation dédiée au démarrage de l’APU.",
+      "correction_summary": "La bonne réponse est celle qui relie l’APU STARTER à l’APU TR et à l’APU BATTERY. Le piège consiste à confondre cette chaîne dédiée avec les autres sources de l’architecture électrique générale.",
+      "course_clarification": "L’APU TR est un transformateur-redresseur associé à l’APU. L’APU BATTERY intervient aussi dans cette chaîne de démarrage, qui est distincte de l’alimentation générale du DC SYSTEM.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-4-Q2",
+      "prompt": "À propos de l’APU BATTERY, quelle proposition est juste ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’APU BATTERY alimente les IDGs en fonctionnement normal.",
+          "is_correct": false,
+          "explanation": "Les IDGs sont des générateurs entraînés par les moteurs et ne sont pas alimentés par l’APU BATTERY."
+        },
+        {
+          "id": "B",
+          "text": "L’APU BATTERY intervient dans la chaîne dédiée au démarrage de l’APU.",
+          "is_correct": true,
+          "explanation": "Le schéma place explicitement l’APU BATTERY dans la boucle d’alimentation du STARTER de l’APU, ce qui en fait un élément de la séquence de démarrage."
+        },
+        {
+          "id": "C",
+          "text": "L’APU BATTERY remplace à elle seule l’APU TR dans la chaîne de démarrage.",
+          "is_correct": false,
+          "explanation": "Le support associe l’APU BATTERY à l’APU TR ; il ne montre pas une suppression de l’APU TR au profit de la batterie seule."
+        },
+        {
+          "id": "D",
+          "text": "L’APU BATTERY est le seul élément qui alimente tout le DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Le DC SYSTEM reçoit l’alimentation de plusieurs sources et convertisseurs ; l’APU BATTERY n’en assure pas seule l’ensemble."
+        },
+        {
+          "id": "E",
+          "text": "L’APU BATTERY est reliée à la logique de contrôle des GCUs des moteurs.",
+          "is_correct": false,
+          "explanation": "Les GCUs de moteur pilotent les générateurs associés aux moteurs. L’APU BATTERY appartient à une autre chaîne fonctionnelle."
+        }
+      ],
+      "coverage_label": "APU BATTERY",
+      "learning_objective": "Situer le rôle de l’APU BATTERY dans la séquence de démarrage de l’APU.",
+      "correction_summary": "L’APU BATTERY fait partie de la chaîne de démarrage de l’APU. L’erreur classique est de lui attribuer un rôle de source générale pour tout le réseau électrique.",
+      "course_clarification": "L’APU BATTERY n’est pas présentée comme une source générale du réseau, mais comme une ressource intégrée à la séquence de démarrage. Elle fonctionne avec l’APU TR pour alimenter le STARTER de l’APU.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-4-Q3",
+      "prompt": "Quelle affirmation décrit correctement le lien entre APU TR et APU BATTERY ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le chemin d’alimentation du STARTER de l’APU est spécifique à la séquence APU.",
+          "is_correct": true,
+          "explanation": "Le schéma insiste sur une chaîne dédiée au démarrage de l’APU : on ne parle pas d’un chemin générique du DC SYSTEM, mais d’un circuit spécifique."
+        },
+        {
+          "id": "B",
+          "text": "L’APU TR est la seule source utilisable pour tous les consommateurs DC.",
+          "is_correct": false,
+          "explanation": "Le DC SYSTEM est alimenté par plusieurs éléments ; l’APU TR n’est qu’un des composants de cette architecture."
+        },
+        {
+          "id": "C",
+          "text": "L’APU BATTERY sert uniquement à l’alimentation des moteurs en vol.",
+          "is_correct": false,
+          "explanation": "Les moteurs en vol sont liés aux IDGs, pas à l’APU BATTERY. Cette batterie est intégrée à la chaîne APU."
+        },
+        {
+          "id": "D",
+          "text": "L’APU TR ne peut pas intervenir dans l’alimentation de l’APU STARTER.",
+          "is_correct": false,
+          "explanation": "Le schéma montre au contraire l’APU TR dans la chaîne reliant l’alimentation à l’APU STARTER."
+        },
+        {
+          "id": "E",
+          "text": "L’APU BATTERY est indépendante de toute fonction liée à l’APU.",
+          "is_correct": false,
+          "explanation": "La batterie porte justement le nom d’APU BATTERY et participe à la séquence de démarrage de l’APU."
+        }
+      ],
+      "coverage_label": "Lien APU TR / APU BATTERY",
+      "learning_objective": "Lire une chaîne d’alimentation dédiée et reconnaître la relation fonctionnelle entre deux blocs.",
+      "correction_summary": "La bonne lecture est celle d’un chemin spécifique au démarrage de l’APU, où l’APU TR et l’APU BATTERY sont liés. Le piège est de raisonner comme s’il s’agissait d’une alimentation DC générale.",
+      "course_clarification": "Un chemin d’alimentation dédié signifie qu’il ne sert qu’à une fonction précise. Ici, cette fonction est le démarrage de l’APU, avec une association explicite entre l’APU TR et l’APU BATTERY.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-4-Q4",
+      "prompt": "Sur l’architecture de génération DC, quelle affirmation est correcte au sujet de l’APU TR ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’APU TR est un générateur entraîné par le moteur, comme un IDG.",
+          "is_correct": false,
+          "explanation": "Un TR est un **Transformer Rectifier** : il convertit une alimentation AC en DC. Ce n’est pas un générateur mécanique de type IDG."
+        },
+        {
+          "id": "B",
+          "text": "L’APU TR est la même chose que l’APU STARTER.",
+          "is_correct": false,
+          "explanation": "Ce sont deux fonctions différentes : l’un est un convertisseur/alimentation, l’autre est l’organe de démarrage de l’APU."
+        },
+        {
+          "id": "C",
+          "text": "L’APU TR remplace les batteries 1 et 2 dans tous les cas.",
+          "is_correct": false,
+          "explanation": "Les batteries 1 et 2 restent des éléments distincts de l’architecture DC, et l’APU TR ne les remplace pas globalement."
+        },
+        {
+          "id": "D",
+          "text": "L’APU TR n’a aucun lien avec le réseau électrique de bord.",
+          "is_correct": false,
+          "explanation": "Le schéma le relie explicitement à la partie DC du réseau, donc il a bien un rôle dans l’alimentation électrique de bord."
+        },
+        {
+          "id": "E",
+          "text": "L’APU TR participe à l’alimentation du DC SYSTEM.",
+          "is_correct": true,
+          "explanation": "Le schéma de génération DC place l’APU TR parmi les éléments qui fournissent ou participent à l’alimentation du DC SYSTEM."
+        }
+      ],
+      "coverage_label": "APU TR",
+      "learning_objective": "Distinguer le rôle d’un transformer rectifier dans la génération DC et son lien avec l’APU.",
+      "correction_summary": "L’APU TR est un élément de conversion participant au DC SYSTEM. Le piège principal est de le confondre avec un générateur IDG ou avec l’APU STARTER.",
+      "course_clarification": "TR signifie **Transformer Rectifier** : il transforme de l’AC en DC. Dans l’architecture présentée, l’APU TR est aussi associé à l’alimentation nécessaire au démarrage de l’APU.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-4-Q5",
+      "prompt": "Quelle proposition décrit le mieux la logique d’alimentation mise en avant pour l’APU STARTER ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La chaîne de démarrage de l’APU dépend exclusivement des IDGs et de l’AC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Les IDGs alimentent l’AC SYSTEM en général, mais ils ne sont pas la chaîne explicitement associée au STARTER de l’APU."
+        },
+        {
+          "id": "B",
+          "text": "L’APU STARTER est alimenté sans aucun lien avec une batterie.",
+          "is_correct": false,
+          "explanation": "La batterie apparaît justement dans la chaîne dédiée, via l’APU BATTERY."
+        },
+        {
+          "id": "C",
+          "text": "La chaîne de démarrage de l’APU s’inscrit dans une architecture électrique spécifique, distincte de l’alimentation générale du DC SYSTEM.",
+          "is_correct": true,
+          "explanation": "Le schéma isole une logique particulière autour de l’APU STARTER, avec l’APU TR et l’APU BATTERY, ce qui la distingue de la distribution DC générale."
+        },
+        {
+          "id": "D",
+          "text": "L’APU STARTER est alimenté uniquement par l’EMER GEN.",
+          "is_correct": false,
+          "explanation": "L’EMER GEN appartient à la logique d’alimentation de secours, sans être la chaîne indiquée pour le démarrage de l’APU."
+        },
+        {
+          "id": "E",
+          "text": "L’APU STARTER relève des circuits des batteries 1 et 2 sans passer par un élément dédié.",
+          "is_correct": false,
+          "explanation": "Le schéma ne montre pas un branchement direct depuis BATTERY 1 et 2 vers le STARTER ; il met en avant une chaîne spécifique avec l’APU TR et l’APU BATTERY."
+        }
+      ],
+      "coverage_label": "Chaîne d’alimentation APU",
+      "learning_objective": "Comprendre qu’un démarrage APU utilise une chaîne dédiée et non une simple alimentation DC générale.",
+      "correction_summary": "La bonne réponse insiste sur la spécificité de la chaîne de démarrage de l’APU. Le piège consiste à mélanger cette fonction avec les sources AC/DC générales de l’avion.",
+      "course_clarification": "Une chaîne dédiée regroupe les éléments nécessaires à une seule fonction. Ici, elle sert au démarrage de l’APU et implique l’APU TR ainsi que l’APU BATTERY.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S4",
+  "anchor_slide_id": "S4-4",
+  "question_count_target": 5,
+  "title": "QCM - APU BATTERY et alimentation de l’APU STARTER"
+}

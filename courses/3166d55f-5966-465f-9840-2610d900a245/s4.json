@@ -1,0 +1,66 @@
+{
+  "slide_id": "S4",
+  "subpart_id": "4",
+  "title": "Vitesse instantanée",
+  "objective": "Relier la vitesse instantanée à la dérivée du vecteur position et à la géométrie de la trajectoire.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s4-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture physique et géométrique",
+      "text": null,
+      "bullets": [
+        "**Vecteur** : \\(\\vec v(t)\\) traduit la variation de la position \\(\\vec r(t)\\) avec le temps ; ses composantes sont les dérivées de \\(x(t)\\), \\(y(t)\\) et \\(z(t)\\).",
+        "**Tangente** : au point considéré, la direction de \\(\\vec v\\) est **tangente** à la trajectoire ; son sens est celui du **déplacement**.",
+        "**Norme** : la vitesse au sens usuel vaut \\(\\|\\vec v\\|=ds/dt\\), en **m·s⁻¹** dans le Système international (SI)."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Définition vectorielle",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\vec v(t)=\\frac{d\\vec r(t)}{dt}=\\frac{dx(t)}{dt}\\,\\vec i+\\frac{dy(t)}{dt}\\,\\vec j+\\frac{dz(t)}{dt}\\,\\vec k\\\\[4pt]\\|\\vec v\\|=\\frac{ds}{dt}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "OpenStax — Displacement and Velocity Vectors",
+      "locator": "Définition vectorielle et tangence de la vitesse instantanée",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "source_type": "web",
+      "label": "NIST — SI Units",
+      "locator": "Unité de vitesse du Système international",
+      "url": "https://www.nist.gov/node/432176"
+    },
+    {
+      "source_type": "web",
+      "label": "2.2 Speed and Velocity — OpenStax",
+      "locator": "research",
+      "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity"
+    }
+  ],
+  "course_reference_note": "La position est repérée par le vecteur \\(\\vec r(t)\\). La vitesse instantanée est sa dérivée temporelle et se lit sur la trajectoire par la tangente et le sens du déplacement.",
+  "teacher_notes": "Insister sur la différence entre **vecteur vitesse** et **vitesse scalaire**. Faire verbaliser le lien entre dérivation des coordonnées et lecture géométrique locale."
+}

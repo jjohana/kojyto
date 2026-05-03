@@ -1,0 +1,64 @@
+{
+  "slide_id": "s11_s12",
+  "subpart_id": "s11_s12",
+  "title": "Ouverture : droits et devoirs du salarié / contrat de travail",
+  "objective": "Installer la transition vers la relation salarié-entreprise et ses règles de base.",
+  "layout": "title",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s11-s12-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "hero",
+      "title": "Du métier à la relation de travail",
+      "text": "Le **salarié** apporte ses compétences et son temps pour contribuer aux objectifs de l’entreprise. En retour, il poursuit aussi ses propres objectifs : **salaire**, **développement professionnel** et **reconnaissance**. Cette relation repose sur un **intérêt mutuel** et sur le respect des **obligations contractuelles**.\n\nLe salarié occupe une **fonction précise** dans l’organisation : il agit avec la **hiérarchie**, les **collègues** et les **processus** de travail. La suite pose les **droits**, les **devoirs** et le **contrat de travail** qui encadrent cette place.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Glossaire du détachement des salariés — Ministère du Travail et des Solidarités",
+      "locator": "lien de subordination : pouvoir de donner des ordres, contrôler l’exécution et sanctionner les manquements",
+      "url": "https://travail-emploi.gouv.fr/droit-du-travail/detachement-des-salaries-posting-of-employees/detachement-des-salaries/article/glossaire"
+    },
+    {
+      "source_type": "web",
+      "label": "Comment se distingue le travailleur indépendant du salarié ? — entreprendre.service-public.fr",
+      "locator": "différence par le lien de subordination et l’intégration dans l’organisation",
+      "url": "https://entreprendre.service-public.fr/vosdroits/F1691"
+    },
+    {
+      "source_type": "web",
+      "label": "Le contrat à durée déterminée (CDD) — Ministère du Travail et des Solidarités",
+      "locator": "research",
+      "url": "https://travail-emploi.gouv.fr/droit-du-travail/les-contrats-de-travail/article/le-contrat-a-duree-determinee-cdd"
+    },
+    {
+      "source_type": "web",
+      "label": "Comment cumuler les statuts de salarié et de micro-entrepreneur ? — entreprendre.service-public.fr",
+      "locator": "research",
+      "url": "https://entreprendre.service-public.fr/vosdroits/F23264"
+    },
+    {
+      "source_type": "web",
+      "label": "Glossaire du détachement des salariés | Travail-emploi.gouv.fr | Ministère du Travail et des Solidarités",
+      "locator": "research",
+      "url": "https://travail-emploi.gouv.fr/droit-du-travail/detachement-des-salaries-posting-of-employees/detachement-des-salaries/article/glossaire?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Page d’ouverture de la partie. Elle installe le passage vers la relation salarié-entreprise, puis vers les droits, les devoirs et le contrat de travail.",
+  "teacher_notes": "Faire apparaître d’emblée l’idée clé : la relation de travail est à la fois une coopération et un cadre juridique. Insister sur la place du salarié dans l’organisation avant d’entrer dans les droits et obligations."
+}

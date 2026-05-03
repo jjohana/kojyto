@@ -1,0 +1,179 @@
+{
+  "quiz_id": "slide::S20",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S20-Q1",
+      "prompt": "Quelle affirmation décrit le mieux le rôle de la cinématique en aéronautique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle remplace l’étude des grandeurs de mouvement par une analyse des forces uniquement.",
+          "is_correct": false,
+          "explanation": "Les forces relèvent de la dynamique, pas de la cinématique. Ici, l’objet est la description du mouvement, pas l’origine des forces."
+        },
+        {
+          "id": "B",
+          "text": "Elle ne concerne que les trajectoires rectilignes à vitesse constante.",
+          "is_correct": false,
+          "explanation": "La cinématique s’applique à des mouvements variés, rectilignes ou curvilignes, uniformes ou non. La rotation et les accélérations sont aussi au programme."
+        },
+        {
+          "id": "C",
+          "text": "Elle se limite à l’étude des phénomènes thermiques dans les aéronefs.",
+          "is_correct": false,
+          "explanation": "Les phénomènes thermiques ne sont pas l’objet de la cinématique. Cette discipline traite des mouvements et de leurs grandeurs associées."
+        },
+        {
+          "id": "D",
+          "text": "Elle sert à décrire les mouvements des systèmes aéronautiques à partir de grandeurs comme la position, la vitesse et l’accélération.",
+          "is_correct": true,
+          "explanation": "La cinématique décrit le mouvement sans étudier les causes qui le produisent. En aéronautique, elle permet de représenter la position, la vitesse et l’accélération d’un objet ou d’un mécanisme."
+        },
+        {
+          "id": "E",
+          "text": "Elle dispense de toute écriture d’équation pour analyser un mouvement.",
+          "is_correct": false,
+          "explanation": "L’étude du mouvement repose justement sur des équations et leur interprétation physique. Les formules permettent de calculer et prévoir l’évolution des grandeurs."
+        }
+      ],
+      "coverage_label": "Place de la cinématique",
+      "learning_objective": "Identifier la fonction de la cinématique dans l’analyse du mouvement aéronautique.",
+      "correction_summary": "La bonne affirmation est celle qui associe la cinématique à la description du mouvement par des grandeurs comme position, vitesse et accélération. Le piège consiste à la confondre avec la dynamique, qui traite des forces.",
+      "course_clarification": "La cinématique décrit comment un système se déplace, sans chercher pourquoi il se déplace. En aéronautique, elle fournit les grandeurs nécessaires pour analyser un train d’atterrissage, une hélice ou une trajectoire.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S20-Q2",
+      "prompt": "Quelles relations traduisent correctement le lien entre cinématique et prévision du comportement d’un système réel ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’interprétation physique des équations est inutile dès que les calculs sont exacts.",
+          "is_correct": false,
+          "explanation": "Un calcul correct ne suffit pas si le résultat n’est pas compris physiquement. L’interprétation permet de vérifier la cohérence du résultat et de le relier à la réalité."
+        },
+        {
+          "id": "B",
+          "text": "La maîtrise des équations permet d’analyser des situations réelles et d’en prévoir l’évolution.",
+          "is_correct": true,
+          "explanation": "Les équations cinématiques servent à relier les grandeurs mesurées et à anticiper leur évolution dans le temps. C’est ce qui rend possible l’analyse d’un système réel."
+        },
+        {
+          "id": "C",
+          "text": "La prévision d’un mouvement réel repose uniquement sur le hasard des mesures.",
+          "is_correct": false,
+          "explanation": "La prévision ne dépend pas du hasard mais de modèles, d’équations et de mesures exploitées correctement. Les mesures servent à valider ou ajuster le modèle."
+        },
+        {
+          "id": "D",
+          "text": "Les grandeurs cinématiques n’ont aucun intérêt pour un système mécanique réel.",
+          "is_correct": false,
+          "explanation": "Au contraire, elles sont indispensables pour décrire et anticiper le comportement mécanique. Elles servent à quantifier le mouvement avant d’étudier ses causes."
+        },
+        {
+          "id": "E",
+          "text": "Une équation n’est utile que si elle n’a aucune signification physique.",
+          "is_correct": false,
+          "explanation": "Une équation sans sens physique ne permet pas d’interpréter un phénomène réel. La bonne démarche consiste à calculer et à comprendre ce que représente le résultat."
+        }
+      ],
+      "coverage_label": "Analyse et prévision des systèmes réels",
+      "learning_objective": "Vérifier que l’élève sait relier équations cinématiques, analyse physique et prévision du comportement.",
+      "correction_summary": "L’idée correcte est que les équations ne servent pas seulement à calculer, mais aussi à analyser et prévoir un mouvement réel. Le piège est de croire qu’un résultat numérique suffit sans interprétation physique.",
+      "course_clarification": "Une équation cinématique met en relation des grandeurs mesurables comme la position, la vitesse et l’accélération. Son intérêt pratique est de prédire un comportement mécanique, puis de comparer cette prédiction aux mesures.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S20-Q3",
+      "prompt": "Quel énoncé correspond à la place de la cinématique dans les prolongements techniques de l’aéronautique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle sert de base à la dynamique, à la mécanique du vol et aux simulations numériques.",
+          "is_correct": true,
+          "explanation": "La cinématique fournit la description du mouvement qui sera ensuite utilisée dans d’autres domaines. La dynamique, la mécanique du vol et la simulation numérique s’appuient sur cette base."
+        },
+        {
+          "id": "B",
+          "text": "Elle intervient uniquement après les calculs de résistance des matériaux.",
+          "is_correct": false,
+          "explanation": "La cinématique n’est pas limitée à l’étape finale d’un calcul de structure. Elle intervient en amont pour décrire les mouvements et alimenter d’autres modèles."
+        },
+        {
+          "id": "C",
+          "text": "Elle n’est pas utilisée dans les simulations numériques.",
+          "is_correct": false,
+          "explanation": "Les simulations numériques nécessitent justement des lois de mouvement et des grandeurs cinématiques. Elles permettent de représenter l’évolution d’un système dans le temps."
+        },
+        {
+          "id": "D",
+          "text": "Elle remplace la mécanique du vol dans l’étude des trajectoires.",
+          "is_correct": false,
+          "explanation": "La mécanique du vol mobilise aussi d’autres notions, notamment les forces et les performances aérodynamiques. La cinématique en est une base, pas un remplacement complet."
+        },
+        {
+          "id": "E",
+          "text": "Elle n’a aucun lien avec la dynamique.",
+          "is_correct": false,
+          "explanation": "La dynamique prend le relais de la cinématique pour étudier les forces responsables du mouvement. Les deux domaines sont liés, mais ils ne répondent pas à la même question."
+        }
+      ],
+      "coverage_label": "Prolongements vers dynamique et simulation",
+      "learning_objective": "Reconnaître les domaines qui s’appuient sur la cinématique en aéronautique.",
+      "correction_summary": "La bonne réponse relie la cinématique à la dynamique, à la mécanique du vol et aux simulations numériques. Le piège est de la réduire à une étude isolée alors qu’elle sert de base à d’autres outils d’analyse.",
+      "course_clarification": "La dynamique étudie les causes du mouvement, tandis que la cinématique en décrit les caractéristiques. En pratique, cette description sert aussi à construire des modèles de simulation et à analyser des performances de vol.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S20-Q4",
+      "prompt": "Quelle affirmation résume correctement les compétences attendues pour exploiter la cinématique en aéronautique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Il suffit de connaître les noms des grandeurs sans savoir les utiliser.",
+          "is_correct": false,
+          "explanation": "Connaître le vocabulaire ne permet pas d’analyser un mouvement. Il faut savoir relier les grandeurs, poser les équations et exploiter les résultats."
+        },
+        {
+          "id": "B",
+          "text": "Les compétences cinématiques sont inutiles pour un technicien aéronautique.",
+          "is_correct": false,
+          "explanation": "Elles sont au contraire indispensables pour analyser des trajectoires, des rotations et des accélérations. Elles font partie des bases techniques du domaine."
+        },
+        {
+          "id": "C",
+          "text": "L’interprétation physique peut être remplacée par une conversion d’unités automatique.",
+          "is_correct": false,
+          "explanation": "La conversion d’unités ne remplace pas la compréhension du phénomène. Une valeur correcte en unités peut rester incohérente si l’interprétation est mauvaise."
+        },
+        {
+          "id": "D",
+          "text": "Les équations de mouvement ne servent que pour des exercices purement théoriques.",
+          "is_correct": false,
+          "explanation": "Ces équations servent aussi à des applications concrètes comme l’étude d’hélices, de trains d’atterrissage ou de trajectoires. Elles ont donc une utilité opérationnelle."
+        },
+        {
+          "id": "E",
+          "text": "Il faut maîtriser les équations et leur interprétation physique pour travailler efficacement sur des systèmes aéronautiques.",
+          "is_correct": true,
+          "explanation": "La maîtrise des formules ne suffit pas si leur sens physique n’est pas compris. L’objectif est de savoir calculer, vérifier et interpréter un mouvement réel."
+        }
+      ],
+      "coverage_label": "Compétences et maîtrise des équations",
+      "learning_objective": "Vérifier la compréhension de l’utilité opérationnelle des équations cinématiques et de leur interprétation.",
+      "correction_summary": "L’énoncé correct insiste sur le binôme calcul + interprétation physique, indispensable en aéronautique. Le piège est de réduire la compétence à la mémorisation ou à la seule conversion d’unités.",
+      "course_clarification": "Une équation de cinématique sert à produire un résultat exploitable, mais aussi à vérifier si ce résultat a du sens. Dans un contexte aéronautique, cette rigueur est nécessaire pour éviter les erreurs d’analyse et de sécurité.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "15",
+  "anchor_slide_id": "S20",
+  "question_count_target": 4,
+  "title": "QCM - Conclusion"
+}

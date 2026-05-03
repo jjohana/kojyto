@@ -1,0 +1,92 @@
+{
+  "slide_id": "S3-4",
+  "subpart_id": "S3",
+  "title": "Réseau AC essentiel et indisponibilité des sources normales",
+  "objective": "Distinguer le réseau AC général du réseau AC essentiel en situation dégradée.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s3-4-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Hiérarchie des alimentations AC",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Bloc",
+          "Réseau AC général",
+          "Réseau AC essentiel"
+        ],
+        [
+          "Sources",
+          "En vol, les **IDG** (Integrated Drive Generator, générateur entraîné par moteur) alimentent le **AC SYSTEM** ; l’**APU** (groupe auxiliaire de puissance) peut aussi fournir de l’AC via son générateur.",
+          "Quand les sources normales ne sont plus disponibles, une partie du réseau reste alimentée par le **générateur d’urgence (EMER GEN)** ou par l’**onduleur statique (static inverter)** alimenté par les batteries."
+        ],
+        [
+          "Rôle",
+          "Assurer l’alimentation **normale** des consommateurs AC.",
+          "Maintenir une alimentation **minimale** sur les charges essentielles."
+        ],
+        [
+          "Commande / surveillance",
+          "Chaque **IDG** est contrôlé et surveillé par sa **GCU** (Generator Control Unit) ; l’APU est associée à la **GAPCU** (Ground and Auxiliary Power Control Unit).",
+          "L’**EMER GEN** est contrôlé et surveillé par l’**EMER GCU** ; la chaîne batteries → onduleur statique prend le relais pour une partie du réseau."
+        ],
+        [
+          "Idée clé",
+          "Le réseau principal fournit l’énergie tant que les sources normales sont disponibles.",
+          "Le réseau essentiel ne remplace pas tout le **AC SYSTEM** : il garantit la continuité de service indispensable en mode dégradé."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "**AC** (courant alternatif) : le réseau général distribue l’énergie disponible en régime normal ; le réseau essentiel ne couvre qu’une partie des usages.",
+        "La logique de secours est simple : si les sources normales sont absentes, les **batteries** alimentent l’**onduleur statique**, qui fournit l’AC nécessaire au réseau essentiel.",
+        "L’**EMER GEN** apparaît comme une autre source de secours, commandée et surveillée à part ; il ne faut pas le confondre avec la chaîne batteries–onduleur statique."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "FAA AC 25.1362-1 — Electrical Supplies for Emergency Conditions",
+      "locator": "Principe des alimentations électriques en conditions d’urgence et maintien des fonctions essentielles.",
+      "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_25.1362-1.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA AC 25-22 — Certification of Transport Airplane Mechanical Systems",
+      "locator": "Notion de charges essentielles et maintien d’alimentation après défaillance d’une source ou d’un dispositif de stockage.",
+      "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_25-22.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA Airplane Flying Handbook — chapitre 15",
+      "locator": "Rappel du rôle d’un inverter : conversion du DC en AC.",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/16_afh_ch15.pdf"
+    }
+  ],
+  "course_reference_note": "La page sur la génération AC montre les sources normales : **IDG** et **APU GEN**. La page d’urgence montre la bascule vers le **AC Essential electrical system network** quand ces sources ne sont plus disponibles.",
+  "teacher_notes": "Faire verbaliser la hiérarchie : réseau AC général d’abord, puis réseau AC essentiel en secours. Insister sur la continuité minimale d’alimentation et sur la distinction entre **EMER GEN** et **batteries → onduleur statique**."
+}

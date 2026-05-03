@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S3-3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S3-3-Q1",
+      "prompt": "À propos de la chaîne des puissances d’un turboréacteur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La puissance utile est notée \\(P_{tt}\\) et correspond à la puissance propulsive.",
+          "is_correct": false,
+          "explanation": "\\(P_{tt}\\) désigne la puissance thermique théorique, pas la puissance utile. La puissance propulsive est notée \\(P_p\\)."
+        },
+        {
+          "id": "B",
+          "text": "La puissance cinétique réelle s’écrit \\(P_{tr} = Q_{ma} \\times C_p (T_5-T_0)\\).",
+          "is_correct": false,
+          "explanation": "Cette expression correspond aux pertes par source froide, pas à la puissance cinétique réelle. La puissance cinétique réelle vaut \\(\\tfrac12 Q_{ma}(V_5^2-V_0^2)\\)."
+        },
+        {
+          "id": "C",
+          "text": "La puissance propulsive est égale à \\(\\tfrac12 Q_{ma}(V_5^2-V_0^2)\\).",
+          "is_correct": false,
+          "explanation": "Cette écriture est celle de la puissance cinétique réelle \\(P_{tr}\\), pas de la puissance propulsive. La puissance propulsive dépend de la poussée et de la vitesse de vol : \\(P_p = T_u \\times V_0\\)."
+        },
+        {
+          "id": "D",
+          "text": "La puissance calorifique vaut \\(P_c = Q_{mc} \\times P_{ci}\\).",
+          "is_correct": true,
+          "explanation": "C’est la relation donnée pour la puissance apportée par la combustion du carburant par unité de temps. Elle relie le débit massique de carburant et son pouvoir calorifique inférieur."
+        },
+        {
+          "id": "E",
+          "text": "La puissance thermique théorique est égale à la puissance calorifique sans aucune perte.",
+          "is_correct": false,
+          "explanation": "La puissance thermique théorique est inférieure à \\(P_c\\) car une partie de l’énergie est perdue vers la source froide. On a donc \\(P_{tt} = P_c - P_{sf}\\)."
+        }
+      ],
+      "coverage_label": "Puissances du turboréacteur",
+      "learning_objective": "Identifier les différentes puissances et la relation de base de la puissance calorifique.",
+      "correction_summary": "La bonne relation est celle de la puissance calorifique : \\(P_c = Q_{mc} \\times P_{ci}\\). Le piège consiste à confondre puissance thermique, puissance cinétique et puissance propulsive.",
+      "course_clarification": "\\(Q_{mc}\\) est le débit massique de carburant et \\(P_{ci}\\) le pouvoir calorifique inférieur. Cette puissance représente l’énergie libérée par seconde par la combustion.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-3-Q2",
+      "prompt": "À propos du rendement propulsif, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le rendement propulsif est maximal lorsque \\(V_5\\) est très supérieur à \\(V_0\\).",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : si \\(V_5\\) devient beaucoup plus grand que \\(V_0\\), une grande partie de l’énergie part dans le jet et le rendement diminue. Le meilleur rendement est obtenu quand \\(V_5\\) est proche de \\(V_0\\)."
+        },
+        {
+          "id": "B",
+          "text": "On peut écrire \\(\\eta_p = \\dfrac{2V_0}{V_5+V_0}\\) lorsque \\(T_u = Q_{ma}(V_5-V_0)\\).",
+          "is_correct": true,
+          "explanation": "En remplaçant la poussée dans l’expression du rendement propulsif, on obtient bien cette forme simplifiée. Elle montre que le rendement augmente quand la vitesse d’éjection se rapproche de la vitesse de vol."
+        },
+        {
+          "id": "C",
+          "text": "La formule \\(\\eta_p = \\dfrac{P_p}{P_{tr}}\\) définit le rendement global.",
+          "is_correct": false,
+          "explanation": "\\(\\eta_p\\) est le rendement propulsif, pas le rendement global. Le rendement global est \\(\\eta_g = \\dfrac{P_p}{P_c}\\)."
+        },
+        {
+          "id": "D",
+          "text": "Pour un turboréacteur simple flux, l’ordre de grandeur de \\(\\eta_p\\) est 0,04 à 0,07.",
+          "is_correct": false,
+          "explanation": "La plage donnée est beaucoup plus élevée. L’ordre de grandeur attendu est 0,4 à 0,7 pour un GTR simple flux."
+        },
+        {
+          "id": "E",
+          "text": "Le rendement propulsif dépend directement du grand débit d’air, qui ne joue aucun rôle dans son amélioration.",
+          "is_correct": false,
+          "explanation": "Le grand débit d’air est justement important pour améliorer \\(\\eta_p\\), car il permet d’accélérer une grande masse d’air avec une faible variation de vitesse. Cela réduit les pertes cinétiques dans le jet."
+        }
+      ],
+      "coverage_label": "Rendement propulsif",
+      "learning_objective": "Interpréter la formule du rendement propulsif et relier son amélioration à la vitesse d’éjection.",
+      "correction_summary": "La bonne écriture est \\(\\eta_p = \\dfrac{2V_0}{V_5+V_0}\\). Le piège principal est de croire qu’un jet très rapide améliore le rendement : c’est l’inverse.",
+      "course_clarification": "Le rendement propulsif mesure la part de la puissance cinétique du jet transformée en puissance utile de propulsion. Plus la vitesse de jet est proche de la vitesse de l’avion, plus les pertes par tourbillons et énergie résiduelle sont faibles.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-3-Q3",
+      "prompt": "À propos des rendements \\(\\eta_{tt}\\), \\(\\eta_i\\), \\(\\eta_p\\), \\(\\eta_{tr}\\) et \\(\\eta_g\\), quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le rendement global s’écrit \\(\\eta_g = \\dfrac{P_p}{P_c}\\).",
+          "is_correct": true,
+          "explanation": "C’est la définition donnée pour le rendement global : il compare la puissance propulsive utile à la puissance calorifique fournie par le carburant."
+        },
+        {
+          "id": "B",
+          "text": "Le rendement thermique théorique s’écrit \\(\\eta_{tt} = \\dfrac{P_c}{P_{tt}}\\).",
+          "is_correct": false,
+          "explanation": "Le rapport est inversé. Le rendement thermique théorique est \\(\\eta_{tt} = \\dfrac{P_{tt}}{P_c}\\)."
+        },
+        {
+          "id": "C",
+          "text": "Le rendement intermédiaire est défini par \\(\\eta_i = \\dfrac{P_{tt}}{P_{tr}}\\).",
+          "is_correct": false,
+          "explanation": "L’écriture correcte est \\(\\eta_i = \\dfrac{P_{tr}}{P_{tt}}\\). Il faut respecter le sens des conversions d’énergie dans la chaîne."
+        },
+        {
+          "id": "D",
+          "text": "Le rendement transitoire est \\(\\eta_{tr} = \\dfrac{P_p}{P_c}\\).",
+          "is_correct": false,
+          "explanation": "Cette expression correspond au rendement global, pas au rendement transitoire. Le rendement transitoire est \\(\\eta_{tr} = \\dfrac{P_{tr}}{P_c}\\)."
+        },
+        {
+          "id": "E",
+          "text": "Le rendement propulsif est \\(\\eta_p = \\dfrac{P_c}{P_p}\\).",
+          "is_correct": false,
+          "explanation": "Le rendement propulsif compare la puissance utile à la puissance cinétique réelle : \\(\\eta_p = \\dfrac{P_p}{P_{tr}}\\). L’inversion des rapports fausse complètement l’interprétation physique."
+        }
+      ],
+      "coverage_label": "Rendements de la chaîne propulsive",
+      "learning_objective": "Associer chaque rendement à son rapport de puissances correct.",
+      "correction_summary": "Le bon repère est la chaîne \\(P_c \\to P_{tt} \\to P_{tr} \\to P_p\\). Le piège classique est d’inverser les numérateurs et dénominateurs.",
+      "course_clarification": "Chaque rendement mesure une étape précise de conversion d’énergie. La cohérence des rapports permet de suivre les pertes à chaque étage du moteur.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-3-Q4",
+      "prompt": "À propos des ordres de grandeur des rendements, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le rendement propulsif d’un GTR double flux est typiquement de 0,18 à 0,4.",
+          "is_correct": false,
+          "explanation": "Cette plage correspond au rendement global, pas au rendement propulsif. Pour un double flux, \\(\\eta_p\\) est plutôt de 0,7 à 0,9."
+        },
+        {
+          "id": "B",
+          "text": "Le rendement propulsif d’un GTR simple flux est typiquement de 0,7 à 0,9.",
+          "is_correct": false,
+          "explanation": "Cette plage est trop élevée pour un simple flux. Le simple flux est plutôt entre 0,4 et 0,7."
+        },
+        {
+          "id": "C",
+          "text": "Le rendement global est plus élevé que le rendement propulsif dans tous les cas.",
+          "is_correct": false,
+          "explanation": "Le rendement global est en général plus faible, car il rapporte la puissance utile à la puissance chimique initiale, alors que le rendement propulsif ne regarde qu’une étape intermédiaire."
+        },
+        {
+          "id": "D",
+          "text": "Les deux types de turboréacteur ont le même ordre de grandeur de rendement propulsif.",
+          "is_correct": false,
+          "explanation": "Les ordres de grandeur sont différents : le double flux est meilleur en rendement propulsif que le simple flux. Le grand débit d’air améliore l’efficacité de propulsion."
+        },
+        {
+          "id": "E",
+          "text": "Le rendement global est donné dans une plage de 0,18 à 0,4.",
+          "is_correct": true,
+          "explanation": "C’est la plage indiquée pour \\(\\eta_g\\). Elle reste plus faible que le rendement propulsif, car elle inclut toutes les pertes de la chaîne énergétique."
+        }
+      ],
+      "coverage_label": "Ordres de grandeur des rendements",
+      "learning_objective": "Reconnaître les plages de valeurs associées aux différents rendements selon le type de turboréacteur.",
+      "correction_summary": "Le rendement global est plus faible que le rendement propulsif, avec une plage de 0,18 à 0,4. Le piège consiste à échanger les ordres de grandeur du simple flux et du double flux.",
+      "course_clarification": "Un double flux accélère une plus grande masse d’air avec une variation de vitesse plus faible, ce qui améliore le rendement propulsif. Le rendement global reste limité par toutes les pertes énergétiques de la chaîne.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-3-Q5",
+      "prompt": "Sur le diagramme d’écoulement des gaz d’un turboréacteur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La pression totale du flux secondaire atteint une valeur proche de 26 bar.",
+          "is_correct": false,
+          "explanation": "Le flux secondaire reste proche de 1 bar avec de faibles variations. La forte pression appartient au flux primaire."
+        },
+        {
+          "id": "B",
+          "text": "La vitesse du flux primaire ne dépasse jamais 200 m/s.",
+          "is_correct": false,
+          "explanation": "Le diagramme montre au contraire un pic de vitesse très élevé dans le flux primaire, avec une valeur visible autour de 784 m/s."
+        },
+        {
+          "id": "C",
+          "text": "Le flux primaire atteint une température maximale nettement supérieure à celle du flux secondaire.",
+          "is_correct": true,
+          "explanation": "Le graphique montre une forte montée en température dans le flux primaire, liée à la combustion puis à l’expansion dans le moteur. Le flux secondaire reste beaucoup plus froid."
+        },
+        {
+          "id": "D",
+          "text": "Les courbes de température, pression totale et vitesse ne distinguent pas le flux primaire du flux secondaire.",
+          "is_correct": false,
+          "explanation": "Le diagramme sépare explicitement les deux flux. Cette distinction permet de suivre l’évolution des grandeurs thermodynamiques dans le moteur."
+        },
+        {
+          "id": "E",
+          "text": "Le flux secondaire présente la même évolution de température que le flux primaire au niveau de la chambre de combustion.",
+          "is_correct": false,
+          "explanation": "Le flux secondaire ne traverse pas la combustion, donc sa température n’évolue pas comme celle du flux primaire. C’est précisément ce contraste qui apparaît sur le diagramme."
+        }
+      ],
+      "coverage_label": "Diagramme d’écoulement des gaz",
+      "learning_objective": "Lire les grandeurs thermodynamiques associées aux flux primaire et secondaire sur un diagramme moteur.",
+      "correction_summary": "Le flux primaire subit la combustion et atteint donc des niveaux de température, de pression et de vitesse beaucoup plus élevés. Le piège est de confondre les deux flux alors qu’ils n’évoluent pas de la même manière.",
+      "course_clarification": "Le flux primaire traverse le cœur du moteur ; le flux secondaire contourne la chambre de combustion. Le diagramme sert à visualiser l’évolution de la température, de la pression totale et de la vitesse dans ces deux veines d’air.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S3",
+  "anchor_slide_id": "S3-3",
+  "question_count_target": 5,
+  "title": "QCM - Rendements de la chaîne propulsive"
+}

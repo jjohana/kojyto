@@ -1,0 +1,70 @@
+{
+  "slide_id": "s6",
+  "subpart_id": "s6",
+  "title": "Mécanicien moteur / mécanicien aéronautique",
+  "objective": "Comprendre le rôle du mécanicien aéronautique dans la maintenance et la sécurité.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s6-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Missions de maintenance",
+      "text": null,
+      "bullets": [
+        "Démonter, remonter et inspecter minutieusement les moteurs pour repérer toute **défaillance**, même minime.",
+        "Réaliser une **maintenance préventive** : contrôler, régler et remplacer les pièces défectueuses avant la panne.",
+        "Garantir la **sécurité** des appareils et des passagers grâce à des vérifications rigoureuses et à la traçabilité des interventions."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Compétences et qualités attendues",
+      "text": null,
+      "bullets": [
+        "Connaître les différents **types de moteurs d’aéronefs**, leur fonctionnement et leur entretien ; savoir lire la documentation technique et suivre les procédures de maintenance.",
+        "Assurer une **veille technique** et se former régulièrement pour rester à jour face à l’évolution des technologies et des outils.",
+        "Faire preuve de **patience**, de **sens de l’observation**, de rigueur et de sang-froid pour détecter les défauts et intervenir avec précision."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Onisep — Mécanicien / Mécanicienne d'entretien d'avion",
+      "locator": "vocabulaire métier et qualités attendues",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/mecanicien-mecanicienne-d-entretien-d-avion/pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "EASA — formation maintenance aéronautique",
+      "locator": "données de maintenance, inspections et enregistrement des travaux",
+      "url": "https://www.easa.europa.eu/en/downloads/528/en"
+    },
+    {
+      "source_type": "web",
+      "label": "Ingénieur / Ingénieure maintenance aéronautique - Onisep",
+      "locator": "research",
+      "url": "https://www.onisep.fr/ressources/univers-metier/metiers/ingenieur-ingenieure-maintenance-aeronautique/pdf"
+    }
+  ],
+  "course_reference_note": "La page dédiée au mécanicien moteur présente les gestes clés du métier : démonter, inspecter, réparer ou remplacer. Elle insiste aussi sur la veille technique et sur les qualités de patience et d’observation.",
+  "teacher_notes": "Faire repérer aux élèves la chaîne d’action : **observer → diagnostiquer → réparer → sécuriser**. Insister sur le vocabulaire métier et sur l’idée qu’une petite anomalie peut avoir un impact sur la sécurité."
+}

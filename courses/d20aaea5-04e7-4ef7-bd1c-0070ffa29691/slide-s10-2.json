@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S10-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S10-2-Q1",
+      "prompt": "Concernant le fonctionnement en trois temps d’un amortisseur oléopneumatique, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pendant la compression, l’azote se détend pour augmenter le volume de la chambre.",
+          "is_correct": false,
+          "explanation": "La détente de l’azote intervient en phase 2, pas en compression. En compression, le gaz est au contraire comprimé."
+        },
+        {
+          "id": "B",
+          "text": "Le clapet de freinage se ferme dès le début de la compression pour accélérer le mouvement.",
+          "is_correct": false,
+          "explanation": "Le freinage hydraulique intervient en détente : la fermeture du clapet limite le débit du liquide et ralentit le mouvement."
+        },
+        {
+          "id": "C",
+          "text": "L’équilibrage des pressions correspond à la phase où le train est verrouillé haut.",
+          "is_correct": false,
+          "explanation": "L’équilibrage des pressions sert à compenser le poids de l’avion après les échanges de fluide et de gaz. Il ne décrit pas un verrouillage du train."
+        },
+        {
+          "id": "D",
+          "text": "Pendant la compression, l’hydraulique est chassée et l’azote se comprime.",
+          "is_correct": true,
+          "explanation": "La première phase correspond bien à une compression : le liquide hydraulique est déplacé et le gaz est comprimé, ce qui emmagasine l’énergie de l’impact."
+        },
+        {
+          "id": "E",
+          "text": "Le liquide ne circule jamais par un diaphragme dans l’amortisseur.",
+          "is_correct": false,
+          "explanation": "Le passage du liquide par le diaphragme fait partie de la phase de détente et contribue au laminage hydraulique."
+        }
+      ],
+      "coverage_label": "Fonctionnement en trois temps de l’amortisseur",
+      "learning_objective": "Identifier la phase de compression dans la séquence de fonctionnement d’un amortisseur oléopneumatique.",
+      "correction_summary": "La bonne réponse est celle qui décrit la compression : le liquide hydraulique est chassé et l’azote se comprime. Le piège consiste à confondre cette phase avec la détente, où apparaît le freinage hydraulique.",
+      "course_clarification": "Un amortisseur oléopneumatique associe un gaz et un fluide. La compression stocke l’énergie, puis la détente la restitue de façon freinée avant l’équilibrage final.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S10-2-Q2",
+      "prompt": "Au sujet de la phase de détente de l’amortisseur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La détente correspond à une augmentation de la pression de l’azote jusqu’à sa valeur maximale.",
+          "is_correct": false,
+          "explanation": "La détente d’un gaz s’accompagne d’une diminution de pression relative, pas d’une augmentation jusqu’au maximum."
+        },
+        {
+          "id": "B",
+          "text": "L’azote se détend, le clapet de freinage se ferme et le laminage hydraulique ralentit le mouvement.",
+          "is_correct": true,
+          "explanation": "C’est exactement le rôle de la phase 2 : la détente du gaz s’accompagne d’un passage du liquide qui est freiné, ce qui amortit le retour."
+        },
+        {
+          "id": "C",
+          "text": "Le liquide passe librement sans restriction, ce qui annule tout effet d’amortissement.",
+          "is_correct": false,
+          "explanation": "Le point essentiel est au contraire le laminage hydraulique : le passage du liquide est freiné pour réduire la vitesse du mouvement."
+        },
+        {
+          "id": "D",
+          "text": "Le diaphragme empêche tout déplacement de fluide pendant cette phase.",
+          "is_correct": false,
+          "explanation": "Le liquide passe justement par le diaphragme pendant la détente ; c’est ce passage contrôlé qui participe au freinage."
+        },
+        {
+          "id": "E",
+          "text": "Cette phase supprime le besoin d’un équilibre final des pressions.",
+          "is_correct": false,
+          "explanation": "Après la détente, il reste une phase d’équilibrage des pressions pour revenir à une situation compatible avec le poids de l’avion."
+        }
+      ],
+      "coverage_label": "Fonctionnement en trois temps de l’amortisseur",
+      "learning_objective": "Reconnaître les mécanismes de freinage hydraulique pendant la détente.",
+      "correction_summary": "La bonne réponse associe détente de l’azote, fermeture du clapet et laminage hydraulique. Le piège est de croire que la détente libère complètement le fluide : le passage reste freiné.",
+      "course_clarification": "Le laminage hydraulique désigne un écoulement ralenti du liquide à travers un passage réduit. Cette résistance transforme une partie de l’énergie en chaleur et limite le rebond.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S10-2-Q3",
+      "prompt": "À propos de la troisième phase du fonctionnement de l’amortisseur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’équilibrage des pressions permet de compenser le poids de l’avion.",
+          "is_correct": true,
+          "explanation": "La phase 3 sert à stabiliser l’amortisseur à un état compatible avec la charge supportée par le train, donc avec le poids de l’avion."
+        },
+        {
+          "id": "B",
+          "text": "L’équilibrage des pressions correspond à l’expulsion brutale du liquide hors de l’amortisseur.",
+          "is_correct": false,
+          "explanation": "L’expulsion brutale du liquide décrit plutôt la compression initiale, pas l’étape d’équilibrage final."
+        },
+        {
+          "id": "C",
+          "text": "L’azote est encore comprimé davantage pour augmenter la hauteur du train.",
+          "is_correct": false,
+          "explanation": "L’objectif n’est pas d’augmenter sans limite la compression du gaz, mais d’atteindre un équilibre de pression adapté à la charge."
+        },
+        {
+          "id": "D",
+          "text": "Le mouvement est accéléré par le laminage hydraulique pour faire rebondir l’avion.",
+          "is_correct": false,
+          "explanation": "Le laminage hydraulique a l’effet inverse : il ralentit le mouvement et évite le rebond après l’impact."
+        },
+        {
+          "id": "E",
+          "text": "Cette phase supprime toute fonction de suspension au roulage.",
+          "is_correct": false,
+          "explanation": "L’amortisseur conserve au contraire sa fonction de suspension au roulage ; l’équilibrage contribue à maintenir cette capacité."
+        }
+      ],
+      "coverage_label": "Fonctionnement en trois temps de l’amortisseur",
+      "learning_objective": "Comprendre le rôle de l’équilibrage final des pressions dans le maintien de l’avion.",
+      "correction_summary": "La phase finale sert à équilibrer les pressions pour supporter le poids de l’avion. L’erreur classique est de la confondre avec une phase d’expulsion ou de freinage supplémentaire.",
+      "course_clarification": "L’équilibrage n’est pas une nouvelle compression : c’est l’état stabilisé après l’amortissement. Il prépare la suspension au roulage et au maintien de l’appareil au sol.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S10-2-Q4",
+      "prompt": "Dans la séquence de fonctionnement d’un amortisseur, quelle proposition décrit correctement l’enchaînement des phases ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Détente, puis compression, puis verrouillage mécanique du train bas.",
+          "is_correct": false,
+          "explanation": "Le verrouillage mécanique du train bas concerne la cinématique du train, pas les phases internes de l’amortisseur, et l’ordre des phases est inversé."
+        },
+        {
+          "id": "B",
+          "text": "Équilibrage des pressions, puis compression, puis détente.",
+          "is_correct": false,
+          "explanation": "L’équilibrage est la dernière étape, pas la première. Il vient après les échanges de fluide et de gaz liés à l’impact."
+        },
+        {
+          "id": "C",
+          "text": "Compression, puis équilibrage, puis détente rapide sans freinage.",
+          "is_correct": false,
+          "explanation": "L’équilibrage ne précède pas la détente, et la détente n’est pas libre : elle est freinée par le laminage hydraulique."
+        },
+        {
+          "id": "D",
+          "text": "Détente libre sans intervention de l’azote, puis compression du liquide seulement.",
+          "is_correct": false,
+          "explanation": "Le gaz joue un rôle central dans l’amortissement, et la compression concerne l’ensemble du système fluide-gaz, pas le liquide seul."
+        },
+        {
+          "id": "E",
+          "text": "Compression, puis détente freinée, puis équilibrage des pressions.",
+          "is_correct": true,
+          "explanation": "L’ordre donné reprend fidèlement la chronologie : d’abord la compression, ensuite la détente avec freinage hydraulique, enfin l’équilibrage final."
+        }
+      ],
+      "coverage_label": "Fonctionnement en trois temps de l’amortisseur",
+      "learning_objective": "Reconstituer l’ordre des trois phases du fonctionnement de l’amortisseur.",
+      "correction_summary": "La bonne chronologie est compression, détente freinée, puis équilibrage des pressions. Le principal piège est d’inverser les phases ou de leur attribuer des fonctions qui relèvent du train lui-même.",
+      "course_clarification": "La chronologie est essentielle pour comprendre l’absorption d’énergie. Chaque étape correspond à une évolution différente du gaz et du liquide dans l’amortisseur.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S10-2-Q5",
+      "prompt": "À propos de l’utilité de l’amortisseur au moment de l’atterrissage, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’amortisseur sert uniquement à augmenter la traînée en vol.",
+          "is_correct": false,
+          "explanation": "La réduction de la traînée en vol est liée à la rentrée du train, pas au rôle de l’amortisseur."
+        },
+        {
+          "id": "B",
+          "text": "L’amortisseur empêche toute suspension au roulage pour rigidifier le train.",
+          "is_correct": false,
+          "explanation": "Il assure au contraire la suspension de l’avion au roulage en s’adaptant aux efforts et aux irrégularités."
+        },
+        {
+          "id": "C",
+          "text": "L’amortisseur absorbe l’énergie liée à la vitesse verticale de l’avion à l’impact.",
+          "is_correct": true,
+          "explanation": "C’est sa fonction essentielle : il reçoit l’énergie de l’impact et la dissipe pour protéger la structure et les occupants."
+        },
+        {
+          "id": "D",
+          "text": "L’énergie d’impact est stockée sans être dissipée afin de provoquer un rebond important.",
+          "is_correct": false,
+          "explanation": "L’objectif est justement d’éviter le rebond après le premier impact : la plus grande partie de l’énergie est dissipée."
+        },
+        {
+          "id": "E",
+          "text": "Le rôle de l’amortisseur dépend seulement de la couleur du train et non des charges.",
+          "is_correct": false,
+          "explanation": "Le comportement de l’amortisseur dépend de paramètres physiques comme la charge, l’état de la piste, les efforts de freinage et la cinématique du train."
+        }
+      ],
+      "coverage_label": "Fonctionnement en trois temps de l’amortisseur",
+      "learning_objective": "Relier le rôle mécanique de l’amortisseur à l’absorption et à la dissipation d’énergie à l’atterrissage.",
+      "correction_summary": "La bonne proposition rappelle que l’amortisseur absorbe l’énergie de l’impact vertical et limite le rebond. Le piège consiste à le réduire à une simple pièce de confort ou à lui attribuer une fonction sans rapport avec l’atterrissage.",
+      "course_clarification": "L’amortisseur protège l’avion en transformant une partie de l’énergie verticale en pertes contrôlées. Il contribue aussi à la tenue au sol lors du roulage et des freinages.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S10",
+  "anchor_slide_id": "S10-2",
+  "question_count_target": 5,
+  "title": "QCM - Fonctionnement en trois temps de l’amortisseur"
+}

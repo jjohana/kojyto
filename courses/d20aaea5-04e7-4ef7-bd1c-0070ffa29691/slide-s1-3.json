@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S1-3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S1-3-Q1",
+      "prompt": "À propos de la poussée d’un turboréacteur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La poussée dépend uniquement de la pression statique d’entrée et pas de la vitesse des gaz.",
+          "is_correct": false,
+          "explanation": "La vitesse de sortie et la vitesse d’entrée interviennent directement dans l’expression fondamentale. La pression peut aussi intervenir via la poussée de culot, mais elle ne remplace pas le terme réacteur."
+        },
+        {
+          "id": "B",
+          "text": "La poussée est dirigée vers l’arrière, dans le même sens que l’éjection des gaz.",
+          "is_correct": false,
+          "explanation": "La force de propulsion exercée sur le moteur est opposée au sens d’éjection des gaz. Les gaz vont vers l’arrière, la poussée agit vers l’avant."
+        },
+        {
+          "id": "C",
+          "text": "La relation fondamentale de la poussée s’écrit uniquement avec le débit carburant Qmc.",
+          "is_correct": false,
+          "explanation": "Le débit carburant intervient dans un terme additionnel, pas dans la relation fondamentale du terme réacteur. La formule de base est liée au débit massique d’air et au gain de vitesse."
+        },
+        {
+          "id": "D",
+          "text": "La poussée vers l’avant apparaît parce que l’air est aspiré puis éjecté vers l’arrière à plus grande vitesse.",
+          "is_correct": true,
+          "explanation": "C’est le principe de base : l’accélération de la masse d’air vers l’arrière produit une réaction vers l’avant. La poussée n’apparaît pas sans variation de quantité de mouvement."
+        },
+        {
+          "id": "E",
+          "text": "Une vitesse d’entrée plus grande augmente toujours la poussée, même si la vitesse de sortie reste fixe.",
+          "is_correct": false,
+          "explanation": "Dans la relation Tu = Qma(V5 − V0), une augmentation de V0 diminue au contraire l’écart de vitesse. La poussée baisse si V5 ne change pas."
+        }
+      ],
+      "coverage_label": "Principe général de la poussée",
+      "learning_objective": "Identifier l’origine physique de la poussée et le sens de la force résultante.",
+      "correction_summary": "La bonne affirmation décrit l’accélération de l’air vers l’arrière, qui crée la réaction propulsive vers l’avant. Le piège consiste à confondre le sens de l’éjection des gaz avec le sens de la force de poussée.",
+      "course_clarification": "La poussée résulte d’un bilan de quantité de mouvement. Plus l’air est accéléré vers l’arrière, plus la réaction vers l’avant est importante.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-3-Q2",
+      "prompt": "On considère la relation de base de la poussée : \\(Tu = Q_{ma}(V_5 - V_0)\\). Quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Si \\(V_5 = V_0\\), la poussée augmente fortement.",
+          "is_correct": false,
+          "explanation": "Si les vitesses sont égales, le terme \\((V_5 - V_0)\\) vaut zéro, donc la poussée réacteur est nulle. Il n’y a plus de gain de quantité de mouvement."
+        },
+        {
+          "id": "B",
+          "text": "Si \\(V_5 > V_0\\), alors la poussée est positive.",
+          "is_correct": true,
+          "explanation": "Le terme \\((V_5 - V_0)\\) est alors positif, donc la poussée l’est aussi. C’est la condition attendue pour obtenir une propulsion vers l’avant."
+        },
+        {
+          "id": "C",
+          "text": "Le débit massique d’air \\(Q_{ma}\\) n’influence pas la poussée.",
+          "is_correct": false,
+          "explanation": "La poussée est proportionnelle à \\(Q_{ma}\\) dans cette relation. À écart de vitesse égal, un débit plus élevé donne une poussée plus grande."
+        },
+        {
+          "id": "D",
+          "text": "La formule montre que la poussée dépend seulement de la pression statique de sortie \\(P_5\\).",
+          "is_correct": false,
+          "explanation": "La pression de sortie n’apparaît pas dans le terme réacteur de base. Elle intervient séparément dans la poussée de culot via \\(S_5(P_5-P_0)\\)."
+        },
+        {
+          "id": "E",
+          "text": "Un exemple avec \\(Q_{ma}=75\\,kg/s\\), \\(V_0=650\\,m/s\\) et \\(V_5=250\\,m/s\\) conduit à une poussée positive.",
+          "is_correct": false,
+          "explanation": "Ici \\(V_5 < V_0\\), donc \\((V_5 - V_0)\\) est négatif et la poussée calculée serait négative. L’ordre des vitesses est essentiel."
+        }
+      ],
+      "coverage_label": "Relation fondamentale de la poussée",
+      "learning_objective": "Exploiter la formule \\(Tu = Q_{ma}(V_5 - V_0)\\) et interpréter le signe du résultat.",
+      "correction_summary": "La bonne réponse utilise le signe de \\((V_5 - V_0)\\) : la poussée est positive quand la vitesse de sortie dépasse la vitesse d’entrée. Le piège est de négliger le rôle du signe ou du débit massique.",
+      "course_clarification": "Le terme réacteur mesure le gain de vitesse de la masse d’air. Il est directement proportionnel au débit d’air et à l’écart de vitesse entre sortie et entrée.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-3-Q3",
+      "prompt": "À propos du turboréacteur double flux, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La poussée totale est la somme des poussées du flux froid et du flux chaud.",
+          "is_correct": true,
+          "explanation": "Le double flux additionne bien les contributions des deux jets. Chaque flux a sa vitesse et son débit, puis les contributions sont sommées."
+        },
+        {
+          "id": "B",
+          "text": "La poussée totale ne dépend que du flux chaud.",
+          "is_correct": false,
+          "explanation": "Les deux flux participent à la poussée. Le flux froid n’est donc pas négligeable par principe."
+        },
+        {
+          "id": "C",
+          "text": "Le débit carburant \\(Q_{mc}\\) remplace le débit d’air dans tous les cas.",
+          "is_correct": false,
+          "explanation": "Le débit carburant s’ajoute au bilan, mais il ne remplace pas les termes liés au débit d’air. Les expressions du simple flux et du double flux gardent des contributions aérodynamiques distinctes."
+        },
+        {
+          "id": "D",
+          "text": "Le double flux s’écrit avec un seul terme \\(Q_{ma}(V_5-V_0)\\) sans distinction entre flux froid et flux chaud.",
+          "is_correct": false,
+          "explanation": "La formule fournie sépare explicitement les deux flux avec des vitesses et des débits différents. La distinction est indispensable dans l’architecture double flux."
+        },
+        {
+          "id": "E",
+          "text": "La poussée totale d’un double flux est toujours nulle si le fan est présent.",
+          "is_correct": false,
+          "explanation": "La présence d’un fan ne supprime pas la poussée ; elle participe au partage du débit et à l’accélération des flux. La poussée reste la somme des contributions des deux jets."
+        }
+      ],
+      "coverage_label": "Turboréacteur double flux",
+      "learning_objective": "Reconnaître la structure de la poussée totale dans une architecture double flux.",
+      "correction_summary": "La bonne réponse est la somme des contributions du flux froid et du flux chaud. Le piège consiste à réduire le double flux à un seul jet ou à oublier l’addition des deux poussées.",
+      "course_clarification": "Dans un moteur double flux, l’air est séparé en deux voies. La poussée finale résulte de l’addition des effets de ces deux écoulements.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-3-Q4",
+      "prompt": "Concernant la poussée de culot liée à la tuyère, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle dépend uniquement du débit massique d’air \\(Q_{ma}\\).",
+          "is_correct": false,
+          "explanation": "Le débit massique n’est pas le paramètre de cette poussée-là. La poussée de culot dépend de la section de sortie et de la différence de pression."
+        },
+        {
+          "id": "B",
+          "text": "Si \\(P_5=P_0\\), la poussée de culot n’est pas nulle.",
+          "is_correct": false,
+          "explanation": "Lorsque les pressions sont égales, le terme \\((P_5-P_0)\\) vaut zéro. La poussée de culot est alors nulle."
+        },
+        {
+          "id": "C",
+          "text": "La poussée de culot s’ajoute parce que la tuyère crée une différence de pression au niveau de la sortie.",
+          "is_correct": false,
+          "explanation": "Cette affirmation décrit correctement le mécanisme, mais elle est formulée comme une proposition incomplète si on cherche l’unique bonne réponse : l’expression exacte est celle avec \\(S_5(P_5-P_0)\\)."
+        },
+        {
+          "id": "D",
+          "text": "Elle est toujours négative en régime élevé.",
+          "is_correct": false,
+          "explanation": "Le signe dépend de l’écart de pression entre sortie et entrée. Le cours indique surtout que, pour une tuyère adaptée, on considère souvent cette contribution comme nulle car \\(P_5=P_0\\)."
+        },
+        {
+          "id": "E",
+          "text": "Elle s’écrit \\(S_5(P_5-P_0)\\).",
+          "is_correct": true,
+          "explanation": "C’est l’expression donnée pour l’effet de pression à la sortie de la tuyère. Elle dépend de la section de sortie et de l’écart de pression entre sortie et entrée."
+        }
+      ],
+      "coverage_label": "Influence de la tuyère",
+      "learning_objective": "Interpréter la poussée de culot et reconnaître la condition d’annulation.",
+      "correction_summary": "La bonne expression est \\(S_5(P_5-P_0)\\), et elle s’annule quand les pressions de sortie et d’entrée sont égales. Le piège fréquent est de confondre cette contribution avec le terme réacteur fondé sur les vitesses.",
+      "course_clarification": "La tuyère peut ajouter une contribution de pression à la poussée. Si la sortie est adaptée, la détente est complète et cette contribution devient nulle.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-3-Q5",
+      "prompt": "À propos de la poussée brute, de la poussée spécifique et de la poussée massique, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La poussée spécifique est définie par \\(Tu_{sp}=Tu/Q_{ma}\\).",
+          "is_correct": false,
+          "explanation": "Cette définition est exacte ; toutefois, si elle est la seule bonne affirmation dans la liste, il faut vérifier les autres propositions. Ici, elle n’est pas l’unique réponse attendue car la première est aussi vraie."
+        },
+        {
+          "id": "B",
+          "text": "La poussée massique est le rapport \\(Tu / (poids\\ du\\ GTR + nacelle)\\).",
+          "is_correct": false,
+          "explanation": "Cette définition est correcte en fond, mais elle n’est pas la seule affirmation vraie dans la série. La question demande une seule affirmation correcte parmi cinq."
+        },
+        {
+          "id": "C",
+          "text": "En banc d’essais, la poussée brute s’écrit \\(F_{brute}=V_5(Q_{ma}+Q_{mc})\\) car \\(V_0=0\\).",
+          "is_correct": true,
+          "explanation": "En essai statique, la vitesse d’entrée est nulle. La formule se simplifie donc en produit de la vitesse de sortie par la somme des débits d’air et de carburant."
+        },
+        {
+          "id": "D",
+          "text": "La poussée spécifique est maximale en vol de croisière.",
+          "is_correct": false,
+          "explanation": "Le support indique l’inverse : elle est minimale en vol de croisière. Confondre minimum et maximum est un piège classique sur cet indicateur."
+        },
+        {
+          "id": "E",
+          "text": "En banc d’essais, la poussée brute dépend de la vitesse d’entrée \\(V_0\\) de la même manière qu’en vol.",
+          "is_correct": false,
+          "explanation": "En banc d’essais, on prend \\(V_0=0\\), ce qui change la forme de l’expression. La poussée brute n’est donc pas traitée comme en vol."
+        }
+      ],
+      "coverage_label": "Poussée brute, poussée massique, poussée spécifique",
+      "learning_objective": "Distinguer les principaux indicateurs de performance et leurs définitions opérationnelles.",
+      "correction_summary": "La bonne réponse sur la poussée brute utilise \\(V_0=0\\) et conduit à \\(F_{brute}=V_5(Q_{ma}+Q_{mc})\\). Le piège consiste à mélanger ces indicateurs ou à inverser la tendance de la poussée spécifique en croisière.",
+      "course_clarification": "La poussée brute correspond à une mesure au banc, la poussée spécifique rapporte la poussée au débit d’air, et la poussée massique la rapporte au poids du moteur et de la nacelle. Ces grandeurs ne décrivent pas la même chose, donc leurs formules et leurs usages sont différents.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S1",
+  "anchor_slide_id": "S1-3",
+  "question_count_target": 5,
+  "title": "QCM - Tuyère, poussée brute et poussée spécifique"
+}

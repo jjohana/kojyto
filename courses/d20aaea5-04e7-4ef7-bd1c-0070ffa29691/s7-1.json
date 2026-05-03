@@ -1,0 +1,86 @@
+{
+  "slide_id": "S7-1",
+  "subpart_id": "S7",
+  "title": "But et formule de la poussée inverse",
+  "objective": "Poser le freinage aérodynamique au sol et sa loi de poussée.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s7-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Rôle au moment de l’atterrissage",
+      "text": null,
+      "bullets": [
+        "**Créer une poussée négative** permet de réduire la distance nécessaire à l’atterrissage en ajoutant un freinage aérodynamique au sol.",
+        "**Soulager les freins** est utile quand la vitesse est encore élevée et que le poids apparent sur les roues reste faible ; l’effet est aussi précieux sur piste mouillée, neigeuse ou givrée.",
+        "Les inverseurs de poussée sont utilisables dans les différentes configurations d’atterrissage, mais ils ne sont pas pris en compte dans les calculs de distance homologuée d’atterrissage et d’accélération-arrêt."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture de la formule sur GTR simple flux",
+      "text": null,
+      "bullets": [
+        "**TREV** désigne la poussée inverse ; **Qma** représente le débit massique ; **Vo** est la vitesse de l’avion ; **V''5** traduit la vitesse du jet après déviation.",
+        "Sur un **GTR simple flux**, des demi-coquilles ou des volets commandés par vérins dévient les gaz vers l’avant : la composante de vitesse s’oppose alors au mouvement de l’avion.",
+        "La poussée reverse augmente quand **Vo** ou **V''5** augmente ; au voisinage de faibles vitesses, l’efficacité baisse et le risque de **pompage** apparaît."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Expression de la poussée inverse",
+      "text": "La déviation du jet vers l’avant crée une force de freinage, d’où une poussée de signe négatif.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "T_{REV}=Q_{ma}(-V''_5-V_o)=-Q_{ma}(V''_5+V_o)"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Fokker 100 | Federal Aviation Administration",
+      "locator": "Piste humide ou glissante : rôle de la reverse dans la décélération et le soulagement des freins.",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/PT-MRK"
+    },
+    {
+      "source_type": "web",
+      "label": "Easy Access Rules for Large Aeroplanes (CS-25) | EASA",
+      "locator": "Cadre de performance : crédit reverse encadré selon les conditions d’exploitation et de certification.",
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-large-aeroplanes-cs-25?page=51"
+    },
+    {
+      "source_type": "web",
+      "label": "Easy Access Rules for Large Aeroplanes (CS-25) - Revision from January 2023 | EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-large-aeroplanes-cs-25?page=6"
+    },
+    {
+      "source_type": "web",
+      "label": "Boeing 727-95 | Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/N1963"
+    }
+  ],
+  "course_reference_note": "La page sur l’inverseur de poussée fixe le but, le principe sur GTR simple flux et l’expression de TREV. Elle rappelle aussi la limite d’emploi dans les calculs homologués.",
+  "teacher_notes": "Faire lire la formule de gauche à droite : la déviation du jet vers l’avant inverse le signe de la poussée. Insister sur l’usage au sol : réduction de distance, soulagement des freins et efficacité dépendante de la vitesse et de l’adhérence."
+}

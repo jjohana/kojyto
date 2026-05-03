@@ -1,0 +1,114 @@
+{
+  "slide_id": "S4-2",
+  "subpart_id": "S4",
+  "title": "Principe du turbopropulseur",
+  "objective": "Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s4-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Relations essentielles",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Relation",
+          "Écriture",
+          "Lecture"
+        ],
+        [
+          "Puissance-propulsion",
+          "P\\,\\eta_h = T\\,V_0",
+          "P : puissance moteur (W) ; \\u03b7h : rendement de l’hélice (≈ 0,8) ; T : traction (N) ; V0 : vitesse de vol (m/s)."
+        ],
+        [
+          "Puissance sur l’arbre",
+          "P = C \\u00d7 2\\u03c0Nh / 60",
+          "C : couple (N·m) ; Nh : vitesse de rotation (tr/min). La grandeur utile est d’abord la **Shaft Horse Power (SHP)**."
+        ],
+        [
+          "Puissance totale équivalente",
+          "ESHP = SHP + Jet Thrust / 2,5",
+          "**Equivalent Shaft Horse Power (ESHP)** : on ajoute la poussée résiduelle des gaz d’échappement, faible mais non nulle."
+        ],
+        [
+          "Consommation spécifique",
+          "Csp = Ch / P",
+          "**Csp** compare le débit de carburant à la puissance fournie ; elle s’exprime en kg/h·W ou lb/h·SHP."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture opérationnelle",
+      "text": null,
+      "bullets": [
+        "L’hélice est efficace quand elle accélère une **grande masse d’air** avec une variation de vitesse modérée : c’est la raison du bon rendement propulsif à basse vitesse.",
+        "La chaîne utile est : **turbine → réducteur → hélice**. Le générateur de gaz ne produit pas directement la traction ; il fournit l’énergie mécanique sur l’arbre.",
+        "Exemple **PW120 (ATR42)** : 2 000 SHP et 250 lb de **poussée résiduelle** donnent **2 100 ESHP** ; la contribution du jet reste secondaire par rapport à la puissance sur l’arbre."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation de base",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "P\\,\\eta_h = T\\,V_0"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Turboprop Engine",
+      "locator": "id:turbo",
+      "url": "https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/aturbp.html"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — Airplane Flying Handbook, chapter on propeller-driven aircraft",
+      "locator": "id:afh-prop",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/16_afh_ch15.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Propellers — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/propellers/"
+    },
+    {
+      "source_type": "web",
+      "label": "What is Power? — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/power/"
+    },
+    {
+      "source_type": "web",
+      "label": "Propeller Thrust — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/propeller-thrust/"
+    }
+  ],
+  "course_reference_note": "Les pages 6 et 7 posent les relations de puissance du turbopropulseur, avec l’exemple PW120 et la définition de la consommation spécifique. La poussée résiduelle et la puissance totale équivalente y sont aussi précisées.",
+  "teacher_notes": "Insister sur l’enchaînement puissance moteur → puissance sur l’arbre → traction. Faire remarquer que l’intérêt du turbopropulseur est maximal à basse vitesse, lorsque l’hélice convertit efficacement la puissance en poussée."
+}

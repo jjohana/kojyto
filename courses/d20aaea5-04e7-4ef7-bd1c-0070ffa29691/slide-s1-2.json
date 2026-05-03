@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S1-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S1-2-Q1",
+      "prompt": "Quelle expression correspond au terme réacteur de la poussée ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tu = Qma \\(V0 - V5\\).",
+          "is_correct": false,
+          "explanation": "Faux : l’ordre des vitesses est inversé. La sortie est plus rapide que l’entrée, donc on prend \\(V5 - V0\\)."
+        },
+        {
+          "id": "B",
+          "text": "Tu = Qmc \\(V5 - V0\\).",
+          "is_correct": false,
+          "explanation": "Faux : \\(Qmc\\) est le débit carburant, pas le débit d’air du terme réacteur."
+        },
+        {
+          "id": "C",
+          "text": "Tu = Qma \\(V5 + V0\\).",
+          "is_correct": false,
+          "explanation": "Faux : la poussée dépend d’une différence de vitesses, pas d’une somme."
+        },
+        {
+          "id": "D",
+          "text": "Tu = Qma \\(V5 - V0\\).",
+          "is_correct": true,
+          "explanation": "Vrai : la poussée due au seul débit d’air correspond au débit massique d’air multiplié par le gain de vitesse entre l’entrée et la sortie."
+        },
+        {
+          "id": "E",
+          "text": "Tu = Qma \\(V5\\).",
+          "is_correct": false,
+          "explanation": "Faux : il manque la vitesse d’entrée \\(V0\\), donc l’expression n’est pas complète."
+        }
+      ],
+      "coverage_label": "Terme réacteur",
+      "learning_objective": "Identifier l’expression du terme réacteur de la poussée.",
+      "correction_summary": "La bonne lecture consiste à repérer que la poussée provient de l’augmentation de vitesse de l’air entre l’entrée et la sortie. Beaucoup d’erreurs viennent d’un mauvais sens de soustraction ou de la confusion entre débit d’air et débit carburant.",
+      "course_clarification": "Le terme réacteur s’écrit \\(Tu = Qma(V5 - V0)\\). Il mesure l’effet de l’accélération de l’air aspiré puis éjecté vers l’arrière.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-2-Q2",
+      "prompt": "Avec \\(Qma = 75\\,kg/s\\), \\(V0 = 250\\,m/s\\) et \\(V5 = 650\\,m/s\\), quelle valeur de poussée est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "\\(Tu = 3\\,000\\,N\\).",
+          "is_correct": false,
+          "explanation": "Faux : cette valeur est dix fois trop faible. La conversion correcte donne \\(30\\,000\\,N\\), puis \\(3\\,000\\,daN\\)."
+        },
+        {
+          "id": "B",
+          "text": "\\(Tu = 30\\,000\\,N = 3\\,000\\,daN\\).",
+          "is_correct": true,
+          "explanation": "Vrai : on applique \\(Tu = Qma(V5 - V0) = 75 \\times (650 - 250) = 75 \\times 400 = 30\\,000\\,N\\), soit \\(3\\,000\\,daN\\)."
+        },
+        {
+          "id": "C",
+          "text": "\\(Tu = 30\\,000\\,daN\\).",
+          "is_correct": false,
+          "explanation": "Faux : \\(30\\,000\\,N\\) correspond à \\(3\\,000\\,daN\\), pas à \\(30\\,000\\,daN\\)."
+        },
+        {
+          "id": "D",
+          "text": "\\(Tu = 18\\,750\\,N\\).",
+          "is_correct": false,
+          "explanation": "Faux : ce résultat ne correspond pas à la différence de vitesses imposée par les données numériques."
+        },
+        {
+          "id": "E",
+          "text": "\\(Tu = 75\\times 650\\,N\\).",
+          "is_correct": false,
+          "explanation": "Faux : il faut soustraire \\(V0\\) à \\(V5\\). Multiplier seulement par \\(V5\\) oublie la vitesse d’entrée."
+        }
+      ],
+      "coverage_label": "Calcul de poussée",
+      "learning_objective": "Calculer une poussée à partir du débit d’air et des vitesses.",
+      "correction_summary": "Le calcul attendu est direct : on remplace dans \\(Tu = Qma(V5 - V0)\\), puis on convertit en daN si besoin. Une confusion fréquente consiste à oublier la soustraction de \\(V0\\) ou à se tromper dans la conversion N/daN.",
+      "course_clarification": "La poussée augmente avec le débit d’air et avec l’écart \\(V5 - V0\\). Ici, l’écart vaut \\(400\\,m/s\\), donc la poussée vaut \\(30\\,000\\,N\\).",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-2-Q3",
+      "prompt": "Dans une architecture double flux, comment s’exprime la poussée totale ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle est la somme des poussées du flux froid et du flux chaud.",
+          "is_correct": true,
+          "explanation": "Vrai : la poussée totale résulte de l’addition des contributions des deux flux, froid et chaud."
+        },
+        {
+          "id": "B",
+          "text": "Elle correspond uniquement à la poussée du flux chaud.",
+          "is_correct": false,
+          "explanation": "Faux : le flux froid contribue aussi à la poussée totale."
+        },
+        {
+          "id": "C",
+          "text": "Elle correspond uniquement à la poussée du flux froid.",
+          "is_correct": false,
+          "explanation": "Faux : le flux chaud participe également à la poussée."
+        },
+        {
+          "id": "D",
+          "text": "Elle est égale à la différence entre la poussée du flux chaud et celle du flux froid.",
+          "is_correct": false,
+          "explanation": "Faux : on additionne les deux contributions, on ne les soustrait pas."
+        },
+        {
+          "id": "E",
+          "text": "Elle est obtenue en multipliant les deux poussées de flux.",
+          "is_correct": false,
+          "explanation": "Faux : il n’y a pas de multiplication entre les poussées des deux flux."
+        }
+      ],
+      "coverage_label": "Double flux",
+      "learning_objective": "Distinguer la poussée d’un turboreacteur double flux de celle d’un simple flux.",
+      "correction_summary": "Il faut lire la logique d’addition des contributions : flux froid + flux chaud. L’erreur classique consiste à croire qu’un seul flux domine ou à remplacer la somme par une différence.",
+      "course_clarification": "En double flux, le fan répartit le débit d’air en deux chemins. La poussée globale est la somme des effets du flux froid et du flux chaud.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-2-Q4",
+      "prompt": "Quel est le terme associé au débit carburant dans la formule complète de poussée ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "\\(Qma \\times V5\\).",
+          "is_correct": false,
+          "explanation": "Faux : ce produit correspond au débit d’air, pas au débit carburant."
+        },
+        {
+          "id": "B",
+          "text": "\\(Qmc \\times (V5 - V0)\\).",
+          "is_correct": false,
+          "explanation": "Faux : le terme carburant est écrit avec \\(V5\\) seul, sans retrancher \\(V0\\)."
+        },
+        {
+          "id": "C",
+          "text": "\\(S5(P5 - P0)\\).",
+          "is_correct": false,
+          "explanation": "Faux : c’est la poussée de culot, liée à la différence de pression à la sortie."
+        },
+        {
+          "id": "D",
+          "text": "\\(Qmc / V5\\).",
+          "is_correct": false,
+          "explanation": "Faux : le support indique un produit, pas un quotient."
+        },
+        {
+          "id": "E",
+          "text": "\\(Qmc \\times V5\\).",
+          "is_correct": true,
+          "explanation": "Vrai : le terme lié au carburant s’écrit bien comme le produit du débit carburant par la vitesse d’éjection des gaz."
+        }
+      ],
+      "coverage_label": "Terme fusée",
+      "learning_objective": "Lire correctement le terme carburant dans la formule de poussée.",
+      "correction_summary": "Le terme carburant ajoute un effet de type fusée à la poussée réacteur. La confusion fréquente est de le mélanger avec le terme d’air ou avec la poussée de culot, alors que la forme attendue est un produit simple \\(Qmc \\times V5\\).",
+      "course_clarification": "Le débit carburant contribue à la poussée via \\(Qmc \\times V5\\). C’est un ajout séparé du terme réacteur \\(Qma(V5 - V0)\\).",
+      "source_refs": []
+    },
+    {
+      "question_id": "S1-2-Q5",
+      "prompt": "Que vaut la poussée de culot lorsque \\(P5 = P0\\) ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle est maximale.",
+          "is_correct": false,
+          "explanation": "Faux : une poussée de culot n’apparaît que s’il existe une différence de pression non nulle."
+        },
+        {
+          "id": "B",
+          "text": "Elle devient égale à \\(S5P5\\).",
+          "is_correct": false,
+          "explanation": "Faux : il faut bien la différence \\(P5 - P0\\), pas la pression de sortie seule."
+        },
+        {
+          "id": "C",
+          "text": "Elle est nulle.",
+          "is_correct": true,
+          "explanation": "Vrai : si \\(P5 = P0\\), alors \\(S5(P5 - P0) = 0\\), donc la poussée de culot disparaît."
+        },
+        {
+          "id": "D",
+          "text": "Elle change seulement avec \\(Qmc\\).",
+          "is_correct": false,
+          "explanation": "Faux : la poussée de culot dépend de la pression à la sortie et de la pression d’entrée, pas du débit carburant."
+        },
+        {
+          "id": "E",
+          "text": "Elle s’écrit \\(Qma(V5 - V0)\\).",
+          "is_correct": false,
+          "explanation": "Faux : cette écriture correspond au terme réacteur, pas à la poussée de culot."
+        }
+      ],
+      "coverage_label": "Poussée de culot",
+      "learning_objective": "Interpréter la condition d’annulation de la poussée de culot.",
+      "correction_summary": "Le raisonnement attendu est simple : si les pressions de sortie et d’entrée sont égales, la différence de pression est nulle, donc le terme de culot disparaît. Une erreur fréquente consiste à confondre ce terme de pression avec le terme réacteur.",
+      "course_clarification": "La poussée de culot vaut \\(S5(P5 - P0)\\). Elle est nulle dès que \\(P5 = P0\\).",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S1",
+  "anchor_slide_id": "S1-2",
+  "question_count_target": 5,
+  "title": "QCM - Exemple numérique et architecture double flux"
+}

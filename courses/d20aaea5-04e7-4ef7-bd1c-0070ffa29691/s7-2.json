@@ -1,0 +1,80 @@
+{
+  "slide_id": "S7-2",
+  "subpart_id": "S7",
+  "title": "Poussée inverse : efficacité, limites et choix des flux",
+  "objective": "Comparer les architectures simple flux et double flux et situer les limites d’utilisation.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s7-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Limites d’emploi et intérêt du double flux",
+      "text": null,
+      "bullets": [
+        "En **simple flux**, des demi-coquilles ou volets dévient les gaz vers l’avant : la poussée inverse crée une **force de freinage** utile après l’atterrissage.",
+        "Ordres de grandeur : **$T_{REV} \\approx 50\\%$ de $T_u$ maxi**, mais elle doit diminuer quand **$V_o$** baisse ; sous **60 kt**, elle n’est plus qu’environ **14 %**.",
+        "À faible vitesse sol, le reverse expose à l’**ingestion de gaz chauds** et au **pompage** ; il devient donc moins pertinent en fin de décélération.",
+        "Dans un **groupe turboréacteur (GTR) double flux** à fort taux de dilution, la poussée vient surtout du **flux secondaire** : l’inversion est alors réservée à ce flux, ce qui simplifie le système.",
+        "Cette suppression sur le flux primaire améliore la **fiabilité**, réduit la **masse** et le **coût d’entretien**, augmente l’**endurance** et limite les risques sans perdre l’efficacité opérationnelle."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Équation de la poussée inverse",
+      "text": "Le signe négatif traduit une poussée dirigée vers l’avant. La poussée inverse augmente quand **$V_o$** augmente ou quand la vitesse du jet inversé **$V''_5$** augmente. Pour accroître **$Q_{ma}V''_5$**, il faut augmenter **$Q_{ma}$** : cela correspond à la **mise en poussée inverse**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "T_{REV}=-Q_{ma}\\,(V''_5+V_o)\\qquad \\text{avec } Q_{ma}\\text{ le débit massique d’air, }V_o\\text{ la vitesse avion et }V''_5\\text{ la vitesse du jet inversé.}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "FAA Airplane Flying Handbook — reverse thrust",
+      "locator": "chapitre sur la poussée inverse",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "SKYbrary — Turbofan engine",
+      "locator": "section sur la répartition de poussée dans les moteurs double flux",
+      "url": "https://skybrary.aero/index.php/articles/turbofan-engine"
+    },
+    {
+      "source_type": "web",
+      "label": "Reverse Thrust — SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/reverse-thrust"
+    },
+    {
+      "source_type": "web",
+      "label": "Thrust reverser with variable nozzle — NASA Technical Reports Server",
+      "locator": "research",
+      "url": "https://ntrs.nasa.gov/citations/20080004632"
+    },
+    {
+      "source_type": "web",
+      "label": "Fokker 100 — FAA Lessons Learned",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/PT-MRK"
+    }
+  ],
+  "course_reference_note": "La page consacrée à l’inverseur de poussée donne la relation de poussée inverse, des ordres de grandeur et la limite de vitesse autour de 60 kt. Elle distingue aussi le cas du simple flux et celui du double flux à fort taux de dilution.",
+  "teacher_notes": "Faire verbaliser le lien entre **vitesse avion** et **utilité du reverse** : plus la vitesse diminue, plus l’intérêt baisse et plus le risque augmente. Insister sur la logique du **flux secondaire** dans les moteurs double flux modernes."
+}

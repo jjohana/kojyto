@@ -1,0 +1,72 @@
+{
+  "slide_id": "S6-2",
+  "subpart_id": "S6",
+  "title": "MAINT BUS : alimentation du réseau de service",
+  "objective": "Montrer que, switch MAINT BUS sur ON, le réseau de service au sol est alimenté par **EXT PWR A ONLY** sans mettre sous tension tout le réseau électrique.",
+  "layout": "quote",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s6-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Principe d’alimentation",
+      "text": "Le **maintenance bus** sert à alimenter le **ground service network** sans energiser tout le réseau électrique. Quand le switch est en position **ON**, l’alimentation vient de **EXT PWR A ONLY**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Chaîne à retenir",
+      "text": null,
+      "bullets": [
+        "**MAINT BUS ON** est la condition de service : elle autorise l’alimentation du réseau demandé depuis **EXT PWR A ONLY**.",
+        "Le synoptique distingue **DC SYSTEM**, **DC GND NETWORK**, **AC SYSTEM** et **AC GND NETWORK** : la lecture se fait sur les réseaux de masse, pas sur l’ensemble des bus.",
+        "Le chemin reste **limité au réseau de service** ; l’objectif est d’alimenter le besoin sol sans étendre l’activation au reste de la distribution électrique."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus A330-700L Aircraft Characteristics – Airport and Maintenance Planning",
+      "locator": "maintenance bus switch / bulkhead door / belly door",
+      "url": "https://aircraft.airbus.com/sites/g/files/jlcbta126/files/2024-11/AC_A330-700L_1124.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "A330-700L Aircraft Characteristics – Airport and Maintenance Planning (PDF Airbus)",
+      "locator": "research",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2024-11/AC_A330-700L_1124.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "A330 Technical Training Manual – Electrical Power (copie web consultée)",
+      "locator": "research",
+      "url": "https://www.scribd.com/document/969964697/24-ELECTRICAL-POWER"
+    },
+    {
+      "source_type": "web",
+      "label": "A330 Electrical Power Training Manual | PDF | Electric Power System | Electric Power",
+      "locator": "research",
+      "url": "https://www.scribd.com/document/969964697/24-ELECTRICAL-POWER?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Le schéma du réseau de service au sol montre le switch **MAINT BUS** sur le panneau avant cabine et l’alimentation par **EXT PWR A ONLY**. La lecture attendue suit la position **ON** et le chemin de service associé.",
+  "teacher_notes": "Faire repérer la condition **ON** puis demander à l’élève de nommer la source (**EXT PWR A ONLY**) et le réseau alimenté (**ground service network**). Insister sur l’idée de **sélectivité** : service au sol, pas alimentation générale."
+}

@@ -1,0 +1,128 @@
+{
+  "slide_id": "s14",
+  "subpart_id": "s14",
+  "title": "Les devoirs du salarié",
+  "objective": "Repérer les obligations principales imposées au salarié.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s14-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Quatre obligations à connaître",
+      "text": "Chaque obligation se traduit par des comportements observables au poste de travail.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Obligation",
+          "Ce qu’elle demande",
+          "Repère concret"
+        ],
+        [
+          "**Obligation de travail**",
+          "Être **assidu**, **ponctuel** et réaliser les missions confiées avec sérieux.",
+          "Arriver à l’heure, tenir son poste et prévenir en cas d’empêchement."
+        ],
+        [
+          "**Loyauté et confidentialité**",
+          "Protéger les informations **techniques** et **industrielles** qui doivent rester internes.",
+          "Ne pas divulguer de plans, de procédés ou de données sensibles."
+        ],
+        [
+          "**Respect du règlement intérieur**",
+          "Appliquer les règles de **discipline**, de **sécurité** et de **qualité** fixées dans l’entreprise.",
+          "Suivre les consignes, les procédures et les normes de l’**Organisation internationale de normalisation (ISO)** lorsqu’elles s’appliquent."
+        ],
+        [
+          "**Obligation de sécurité**",
+          "Respecter les procédures de sécurité et **signaler les risques**.",
+          "Utiliser les protections prévues et alerter dès qu’une situation devient dangereuse."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "L’exécution du contrat de travail se fait de **bonne foi** : sérieux, coopération et respect des engagements vont ensemble.",
+        "Dans l’aéronautique, la **qualité** ne se limite pas au résultat final : elle passe aussi par les procédures, la traçabilité et le respect des consignes de sécurité.",
+        "Ces devoirs se **complètent** : bien travailler, rester loyal, respecter les règles internes et protéger la sécurité relèvent d’une même exigence professionnelle."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Article L1222-1 - Code du travail - Légifrance",
+      "locator": "Exécution du contrat de travail de bonne foi",
+      "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006900858/2025-10-25"
+    },
+    {
+      "source_type": "web",
+      "label": "Santé et sécurité au travail : obligations du salarié | Service-Public.fr",
+      "locator": "Respect des consignes et signalement des dangers",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F35101"
+    },
+    {
+      "source_type": "web",
+      "label": "Règlement intérieur d'une entreprise | Service-Public.fr",
+      "locator": "Règles de santé, sécurité et discipline",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1905"
+    },
+    {
+      "source_type": "web",
+      "label": "ISO 9001:2015 - Quality management systems — Requirements | ISO",
+      "locator": "research",
+      "url": "https://www.iso.org/standard/62085.html?iframeView=true"
+    },
+    {
+      "source_type": "web",
+      "label": "Safety Management System and Management System — the integrated approach | EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/domains/safety-management/safety-management-system-sms"
+    },
+    {
+      "source_type": "web",
+      "label": "Article L1222-1 - Code du travail - Légifrance",
+      "locator": "research",
+      "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006900858/2025-10-25?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Santé et sécurité au travail : obligations du salarié | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F35101?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Règlement intérieur d'une entreprise | Service-Public.fr",
+      "locator": "research",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1905?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "ISO 9001:2015 - Quality management systems — Requirements",
+      "locator": "research",
+      "url": "https://www.iso.org/standard/62085.html?iframeView=true&utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Les pages source listent quatre devoirs : travail, loyauté/confidentialité, règlement intérieur et sécurité. Les exemples donnés les relient directement aux exigences de l’aéronautique, notamment la qualité et les normes ISO.",
+  "teacher_notes": "Faire distinguer chaque devoir par un verbe d’action : exécuter, protéger, respecter, signaler. Insister sur le fait qu’un même comportement peut relever à la fois de la discipline, de la sécurité et de la qualité."
+}

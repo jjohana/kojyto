@@ -1,0 +1,96 @@
+{
+  "slide_id": "S5-6",
+  "subpart_id": "S5",
+  "title": "Panneau EMER ELEC PWR : test et commande de secours",
+  "objective": "Identifier les commandes du panneau dédié à la génération électrique d’urgence.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s5-6-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repères du panneau EMER ELEC PWR",
+      "text": "Associer chaque libellé à sa fonction permet de lire rapidement la logique de commande de la source de secours.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Commande",
+          "Fonction",
+          "Lecture opérationnelle"
+        ],
+        [
+          "EMER GEN TEST",
+          "Test de la chaîne d’urgence",
+          "Commande de vérification du fonctionnement de l’alimentation électrique de secours."
+        ],
+        [
+          "LAND RECOVERY",
+          "Remise en configuration « landing recovery »",
+          "Repère de récupération utilisé en situation d’urgence."
+        ],
+        [
+          "ON",
+          "Mise en service",
+          "Repère à lire avec les autres commandes du panneau pour l’activation de la génération d’urgence."
+        ],
+        [
+          "EMER GEN",
+          "Générateur électrique d’urgence",
+          "Source de secours à surveiller et à commander."
+        ],
+        [
+          "MAN ON",
+          "Activation manuelle",
+          "Forçage de l’activation si l’automatisme ne démarre pas le système."
+        ],
+        [
+          "AUTO",
+          "Fonctionnement automatique",
+          "Levier rouge associé au retour en configuration automatique."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Le panneau **EMER ELEC PWR** sert à la **commande** et à la **surveillance** de la génération électrique d’urgence.",
+        "Conserver la désignation **CSM/G** pour la source de secours.",
+        "Distinguer trois usages : **tester** avec EMER GEN TEST, **forcer** avec MAN ON, puis revenir en **AUTO** quand la configuration est rétablie."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus Safety First — Preventing Loss of Engine Generators on A320 Family, A330 and A340 Aircraft",
+      "locator": "Logique de bascule et de récupération de la génération d’urgence",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    },
+    {
+      "source_type": "web",
+      "label": "A330 Learning Objectives Guide | Scribd",
+      "locator": "research",
+      "url": "https://www.scribd.com/document/648281250/330-LOD"
+    }
+  ],
+  "course_reference_note": "Repérer les libellés du panneau EMER ELEC PWR et associer chaque commande à son rôle. Conserver la désignation **CSM/G** pour la source de secours.",
+  "teacher_notes": "Faire verbaliser la différence entre **test**, **activation manuelle** et **retour en AUTO**. Insister sur la lecture du panneau comme ensemble de repères fonctionnels, sans extrapoler au-delà des libellés fournis."
+}

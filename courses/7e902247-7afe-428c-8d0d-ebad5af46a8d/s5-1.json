@@ -1,0 +1,78 @@
+{
+  "slide_id": "S5-1",
+  "subpart_id": "S5",
+  "title": "ECAM ELEC AC : lire la page d’un coup d’œil",
+  "objective": "Lire la page ECAM dédiée à l’électricité AC et comprendre sa logique d’affichage.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s5-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Repères de navigation",
+      "text": null,
+      "bullets": [
+        "Le bandeau **ECAM** identifie l’écran de surveillance central ; **ELEC AC** désigne la page consacrée à l’**électricité en courant alternatif (AC)**.",
+        "L’écran noir central donne une vue synthétique des **sources AC** et de leur connexion au **réseau** électrique.",
+        "Les libellés de page et les zones encadrées servent à passer rapidement de la vue générale aux commandes et aux états surveillés."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Ce que montre le synoptique",
+      "text": null,
+      "bullets": [
+        "Les sources principales visibles sont **GEN 1**, **GEN 2**, **APU GEN** et les entrées externes **EXT A / EXT B** ; leur présence ou leur disponibilité se lit directement sur le synoptique.",
+        "Les valeurs affichées associent tension, fréquence et état thermique : par exemple **115 V / 400 Hz** pour l’AC stabilisée, et des températures **IDG** pour suivre l’échauffement des générateurs intégrés.",
+        "Les barres, liaisons et voyants indiquent comment l’alimentation rejoint les **bus** et les organes de distribution, avec les repères **TR**, **ESS TR**, **BUS TIE** et les commandes de service."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir pour la lecture",
+      "text": null,
+      "bullets": [
+        "Chercher d’abord la **source active**, puis la **liaison au réseau**, et enfin les **paramètres surveillés** ; cet ordre évite de se perdre dans les détails du synoptique.",
+        "La présence d’une valeur comme **27,8 V** ou d’un état de voyant ne se lit pas isolément : elle prend sens dans la structure **sources → bus → distribution**.",
+        "La zone dédiée à l’**énergie électrique d’urgence** et les commandes associées complètent la vue générale sans modifier le rôle principal de la page : surveiller et comprendre l’alimentation AC."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Documentation FlyByWire sur la page ELEC",
+      "locator": "section: page ELEC AC",
+      "url": "https://docs.flybywiresim.com/pilots-corner/a32nx/a32nx-briefing/ecam/sd/elec/"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus Safety First sur les générateurs de la famille A320/A330/A340",
+      "locator": "section: rôle des IDG et de l’APU",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    }
+  ],
+  "course_reference_note": "La page montre le synoptique AC, les sources GEN 1, GEN 2, APU GEN et EXT A / EXT B, puis leur liaison au réseau. Les valeurs essentielles et l’état des organes se lisent directement dans l’ECAM.",
+  "teacher_notes": "Faire repérer d’abord les libellés ECAM et ELEC, puis faire nommer les trois familles d’informations : sources, réseau, paramètres surveillés. Insister sur la lecture globale avant l’identification des détails."
+}

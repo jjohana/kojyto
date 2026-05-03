@@ -1,0 +1,74 @@
+{
+  "slide_id": "S16",
+  "subpart_id": "11",
+  "title": "Approche numérique avec Python",
+  "objective": "Simuler un mouvement discret et estimer numériquement la vitesse puis l’accélération.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s16-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Chaîne de calcul",
+      "text": null,
+      "bullets": [
+        "`numpy.linspace` construit un axe **temps** régulièrement échantillonné : `t = np.linspace(0, 10, 100)` crée 100 instants entre 0 s et 10 s.",
+        "`np.gradient(x, t)` estime la **vitesse** à partir des positions `x`, puis `np.gradient(v, t)` estime l’**accélération** à partir de `v`. Si `x` est en mètres et `t` en secondes, alors `v` est en m/s et `a` en m/s².",
+        "L’exemple `x = 4*t + 0.5*t**2` correspond à un mouvement à accélération constante ; les valeurs numériques servent à comparer un modèle avec des mesures discrètes."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Point d’attention",
+      "text": null,
+      "bullets": [
+        "La dérivation numérique exploite des points voisins : le résultat reste de même taille que la série d’entrée, ce qui facilite le traitement de listes de mesures.",
+        "Des données capteur bruitées peuvent fausser la pente ; un filtrage simple, comme une **moyenne glissante**, améliore la lecture avant ou après la dérivation.",
+        "Cette méthode sert surtout à la **validation expérimentale** et à l’analyse rapide de trajectoires échantillonnées."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation centrale",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "v(t) \\approx \\frac{dx}{dt} \\qquad a(t) \\approx \\frac{dv}{dt}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "numpy.gradient — NumPy v2.3 Manual",
+      "locator": "référence API : dérivation numérique par différences finies, entrée et espacement",
+      "url": "https://numpy.org/doc/2.3/reference/generated/numpy.gradient.html"
+    },
+    {
+      "source_type": "web",
+      "label": "numpy.linspace — NumPy v2.3 Manual",
+      "locator": "référence API : génération d’échantillons régulièrement espacés",
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.linspace.html"
+    }
+  ],
+  "course_reference_note": "La position est échantillonnée, puis la pente de `x(t)` fournit `v(t)` et celle de `v(t)` fournit `a(t)`. L’exemple Python montre la chaîne complète sur des données discrètes.",
+  "teacher_notes": "Faire relier l’approximation discrète à la dérivation graphique : position → vitesse → accélération. Insister sur le rôle de `t` comme vecteur d’abscisses et sur l’intérêt d’un filtrage si les mesures sont bruitées."
+}

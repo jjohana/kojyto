@@ -1,0 +1,113 @@
+{
+  "slide_id": "S9-3",
+  "subpart_id": "S9",
+  "title": "Géométrie des trains et dispositions des atterrisseurs",
+  "objective": "Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s9-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Paramètres géométriques à lire sur le train",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Empattement",
+          "Distance entre l’axe des roues de l’atterrisseur auxiliaire et les axes des roues des atterrisseurs principaux.",
+          "Repère l’écartement longitudinal entre l’appui auxiliaire et les appuis principaux."
+        ],
+        [
+          "Voie",
+          "Distance séparant les deux trains principaux.",
+          "Caractérise l’écartement latéral et participe à la stabilité au sol."
+        ],
+        [
+          "Angle de garde",
+          "Angle entre la verticale de l’avion et la droite joignant le **CG** au centre des roues du train principal.",
+          "Situe le train principal par rapport au **centre de gravité (CG)**."
+        ],
+        [
+          "Angle de chasse",
+          "Angle formé par l’axe du fût de train principal et la perpendiculaire à l’axe de symétrie.",
+          "Décrit l’inclinaison longitudinale du fût de train."
+        ],
+        [
+          "Angle de carrossage",
+          "Angle entre le plan de symétrie longitudinal de la roue et le plan de symétrie de l’avion.",
+          "Traduit l’inclinaison latérale de la roue."
+        ],
+        [
+          "Parallélisme",
+          "Angle entre l’axe de la roue principale et le plan de symétrie.",
+          "Se lit comme un réglage d’orientation de la roue principale."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Dispositions des roues et intérêt du bogie",
+      "text": null,
+      "bullets": [
+        "**Roue simple**, **diabolo**, **bogie**, **roue simple en porte-à-faux** et **train à fourche** sont des solutions d’implantation : elles changent le nombre de roues et donc la façon dont la charge est répartie au sol.",
+        "Le **bogie** réduit le diamètre des roues, augmente les points de contact et améliore la sécurité en cas de crevaison ; il aide aussi à mieux répartir la charge sur plusieurs roues.",
+        "Sur les avions plus lourds, multiplier les roues réduit la **charge unitaire** transmise à chaque pneu et améliore l’empreinte au sol."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Repères symboliques",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\begin{aligned}\ne &= d(\\text{axe roue auxiliaire},\\ \\text{axes roues principales})\\\\\nv &= d(\\text{train principal gauche},\\ \\text{train principal droit})\\\\\n\\alpha_g &= \\angle(\\text{verticale},\\ CG\\text{–centre roue})\\\\\n\\alpha_{ch} &= \\angle(\\text{axe du fût},\\ \\perp\\text{ à l’axe de symétrie})\\\\\n\\alpha_{ca} &= \\angle(\\text{plan de symétrie de la roue},\\ \\text{plan de symétrie avion})\\\\\np &= \\angle(\\text{axe de la roue principale},\\ \\text{plan de symétrie})\n\\end{aligned}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Commercial Aircraft Design Characteristics - Airbus",
+      "locator": "configuration générale du train d’atterrissage et répartition multi-roues",
+      "url": "https://www.airbus.com/sites/g/files/jlcbta136/files/2021-11/Airbus-Commercial-Aircraft-CADC.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Easy Access Rules for Aerodromes (EASA)",
+      "locator": "géométrie au sol et paramètres de wheel base",
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-aerodromes-regulation-eu?erules-id=ERULES-1963177438-2173"
+    },
+    {
+      "source_type": "web",
+      "label": "A320 Aircraft Characteristics - Airbus",
+      "locator": "research",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2023-02/Airbus-techdata-AC_A320_0322.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA Order / Construction_5300_7",
+      "locator": "research",
+      "url": "https://www.faa.gov/documentLibrary/media/Order/Construction_5300_7.pdf"
+    }
+  ],
+  "course_reference_note": "Les pages 2 et 3 fixent les définitions de l’empattement, de la voie et des angles associés au train principal. Elles montrent aussi les dispositions usuelles des roues, dont le bogie.",
+  "teacher_notes": "Faire distinguer d’abord les distances (empattement, voie), puis les angles (garde, chasse, carrossage, parallélisme). Faire verbaliser enfin l’intérêt du bogie : plus de points de contact et meilleure répartition de la charge."
+}

@@ -1,0 +1,66 @@
+{
+  "slide_id": "S7-3",
+  "subpart_id": "S7",
+  "title": "Calcul et interprétation de la poussée inverse",
+  "objective": "Exploiter la loi de poussée inverse sur un cas d’utilisation.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s7-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture et usage",
+      "text": null,
+      "bullets": [
+        "**Qma** désigne le **débit massique** du flux, **V''5** la vitesse du jet en mode reverse et **V0** la vitesse de l’avion ; la formule donne d’abord une **intensité**, puis un **sens**.",
+        "Le signe **−** traduit une action opposée au mouvement : la poussée inverse agit comme un **frein aérodynamique** et réduit la distance d’atterrissage.",
+        "En **poussée inverse maxi**, on augmente **Qma** et on dévie le jet vers l’avant ; l’usage reste au sol et la poussée diminue aux faibles vitesses pour limiter le **pompage** et l’ingestion de gaz chauds."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation à retenir",
+      "text": "La grandeur calculée se lit en **valeur absolue** ; le signe négatif sert à interpréter l’action **freinante**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\[|T_{\\mathrm{REV}}| = Q_{ma}\\,(V''_5 + V_0)\\qquad\\text{et}\\qquad T_{\\mathrm{REV}} = -Q_{ma}\\,(V''_5 + V_0)\\]"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "FAA — Fokker 100 | Thrust Reversers",
+      "locator": "principe de redirection du jet et décélération",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/PT-MRK"
+    },
+    {
+      "source_type": "web",
+      "label": "EASA — Easy Access Rules for Large Aeroplanes (CS-25)",
+      "locator": "définition réglementaire du système d’inversion de poussée",
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-large-aeroplanes-cs-25?page=32"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — AC 20-18B, Qualification Testing of Turbojet and Turbofan Engine Thrust Reversers",
+      "locator": "research",
+      "url": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1029466"
+    }
+  ],
+  "course_reference_note": "La relation de poussée inverse est donnée avec le signe négatif et la valeur absolue pour le calcul. Les remarques associées rappellent la déviation du jet vers l’avant, l’effet freinant et la baisse d’efficacité aux faibles vitesses.",
+  "teacher_notes": "Faire verbaliser la différence entre **grandeur calculée** et **sens physique**. Faire repérer ce qui change quand **V0** augmente : la valeur absolue croît, mais l’interprétation reste freinante."
+}

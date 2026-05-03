@@ -1,0 +1,98 @@
+{
+  "slide_id": "S10-1",
+  "subpart_id": "S10",
+  "title": "Amortisseurs oléopneumatiques : rôle et principe",
+  "objective": "Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s10-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Fonctionnement général",
+      "text": null,
+      "bullets": [
+        "L’amortisseur absorbe l’énergie liée à la **vitesse verticale** de l’avion à l’impact, puis dissipe la plus grande partie de cette énergie pour limiter le **rebond** après le premier contact.",
+        "Au **roulage**, il assure la suspension de l’avion malgré les variations de **charge**, l’état de la piste et les efforts de freinage.",
+        "L’amortisseur **oléopneumatique** associe **1 ou 2 chambres de gaz** et **1 chambre hydraulique** ; au repos, les chambres sont au **maximum de leur volume**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Réglage, sécurité et limite d’emploi",
+      "text": null,
+      "bullets": [
+        "Le gonflage se fait à l’**azote** à la pression de **précharge** ; l’**oxygène** est exclu, car l’oxygène pur au contact de corps gras peut provoquer une **explosion**.",
+        "Le type d’amortisseur dépend de la **mission**, du **poids**, des **charges** et du **centrage**, de la **vitesse**, du **nombre et de la disposition des roues**, ainsi que du **type** et de la **pression des pneus**.",
+        "Le **talonnage** correspond à un amortisseur comprimé en butée ; il est contrôlé par le **Dispositif d’Atterrissage Dur (DAD)** sur le fût de train."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Principe d’absorption",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "E_{\\text{impact}} = E_{\\text{stockée par le gaz}} + E_{\\text{dissipée par l’huile}}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus Safety First — Proper Landing Gear Servicing for Safe Operations",
+      "locator": "servicing des amortisseurs de train, huile + azote, pression et température de service",
+      "url": "https://safetyfirst.airbus.com/proper-landing-gear-servicing-for-safe-operations/?airbus-iframe=true&airbus-post=2075"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA GRC — Chapter 5",
+      "locator": "sécurité oxygène, réaction violente avec huiles et graisses",
+      "url": "https://www1.grc.nasa.gov/wp-content/uploads/chapter_05.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus A320 Aircraft Characteristics — Airport and Maintenance Planning",
+      "locator": "research",
+      "url": "https://www.airbus.com/sites/g/files/jlcbta136/files/2023-05/Airbus-techdata-AC-A320_0523.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "https://safetyfirst.airbus.com/proper-landing-gear-servicing-for-safe-operations/?airbus-iframe=true&airbus-post=2075&utm_source=openai",
+      "locator": "research",
+      "url": "https://safetyfirst.airbus.com/proper-landing-gear-servicing-for-safe-operations/?airbus-iframe=true&airbus-post=2075&utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "@AIRBUS\nA320\nAIRCRAFT CHARACTERISTICS\nAIRPORT AND",
+      "locator": "research",
+      "url": "https://www.airbus.com/sites/g/files/jlcbta136/files/2023-05/Airbus-techdata-AC-A320_0523.pdf?utm_source=openai"
+    },
+    {
+      "source_type": "web",
+      "label": "Document \nGLP-QS-8715.1.5\nNumber:\n \nRevision:\nC w/",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/wp-content/uploads/chapter_05.pdf?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Pages 4 à 5 : les amortisseurs de train sont décrits avec leur rôle en impact, roulage et réglage. La sécurité de gonflage et la limite de talonnage y sont également rappelées.",
+  "teacher_notes": "Faire verbaliser le rôle séparé des deux milieux : **gaz = ressort**, **hydraulique = dissipation**. Insister sur la sécurité : azote obligatoire, jamais d’oxygène. Le DAD sert à repérer le talonnage, donc un usage en butée du train."
+}

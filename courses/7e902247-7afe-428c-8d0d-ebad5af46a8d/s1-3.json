@@ -1,0 +1,51 @@
+{
+  "slide_id": "S1-3",
+  "subpart_id": "S1",
+  "title": "GCU : contrôle et surveillance des IDG",
+  "objective": "Expliquer le rôle de la GCU dans la commande et la surveillance des IDG.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s1-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Rôle de la GCU",
+      "text": null,
+      "bullets": [
+        "**GCU (Generator Control Unit)** : unité associée à un **IDG (Integrated Drive Generator)**, elle assure sa **commande** et sa **surveillance**.",
+        "Chaque IDG dépend de sa **GCU** correspondante : la liaison est dédiée à la **source moteur** associée.",
+        "La GCU agit sur la génération **AC** du groupe moteur ; elle ne remplace pas les autres unités de contrôle du système."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture du schéma",
+      "text": null,
+      "bullets": [
+        "Chaque **moteur** possède son **IDG** et sa **GCU** : l’association est **univoque**.",
+        "Les **flèches** du schéma matérialisent le lien fonctionnel entre la **GCU** et l’**IDG**.",
+        "Repérer les couples **GCU → IDG** permet d’identifier rapidement quelle source est contrôlée et surveillée."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [],
+  "course_reference_note": "Le schéma de génération AC montre un IDG par moteur, chacun relié à sa GCU. Les flèches servent à identifier cette association de commande et de surveillance.",
+  "teacher_notes": "Faire repérer sur le schéma les couples GCU/IDG côté moteurs. Insister sur l’association dédiée : une GCU pour un IDG, sans confusion avec l’APU ou la distribution AC."
+}

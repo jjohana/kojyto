@@ -1,0 +1,68 @@
+{
+  "slide_id": "S5-2",
+  "subpart_id": "S5",
+  "title": "Tuyères variables, double flux et adaptation au vol",
+  "objective": "Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s5-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Rôle opérationnel de la géométrie variable",
+      "text": null,
+      "bullets": [
+        "Une **section variable** répartit l’énergie de pression entre la **turbine** et la **tuyère** : elle règle le compromis entre ce que l’on prélève pour entraîner le compresseur et ce qui reste pour accélérer les gaz.",
+        "Quand le **débit massique corrigé (Qmc)** augmente, la variation de section permet d’augmenter la **vitesse de rotation de la turbine (Ntr/mn)** et la **poussée utile (Tu)** sans sortir du domaine de fonctionnement recherché.",
+        "En **post-combustion (PC)**, les gaz deviennent plus chauds et plus volumineux ; la tuyère doit donc s’ouvrir pour éviter une **obstruction thermique** et conserver une éjection efficace.",
+        "Sur un **groupe turboréacteur (GTR) double corps**, la géométrie variable aide à **adapter le moteur au domaine de vol** et à obtenir le réglage attendu selon le régime, la mission et l’activation de la PC.",
+        "Dans un **GTR double flux** à **flux séparés**, le flux primaire se détend dans une tuyère primaire et le flux secondaire dans un conduit annulaire secondaire ; à **flux mélangés**, les deux flux sont réunis avant l’éjection par une seule tuyère, souvent de type co-annulaire."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation entre section et vitesse",
+      "text": "Relation utile pour comprendre l’effet de la géométrie variable dans une tuyère à écoulement compressible. **S** désigne la section, **V** la vitesse d’écoulement et **M** le nombre de Mach.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\frac{dS}{S}=\\frac{dV}{V}(M^2-1)"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NASA — Turbojet Enhancements",
+      "locator": "Variable nozzle / afterburner",
+      "url": "https://www.nasa.gov/special-projects-laboratory-turbojet-enhancements/"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Nozzles",
+      "locator": "Tuyère, flux co-annulaire et post-combustion",
+      "url": "https://www.grc.nasa.gov/WWW/BGH/nozzle.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Special Projects Laboratory - Turbojet Enhancements - NASA",
+      "locator": "research",
+      "url": "https://www.nasa.gov/special-projects-laboratory-turbojet-enhancements"
+    }
+  ],
+  "course_reference_note": "Les pages sur l’échappement présentent la tuyère, la section variable et le cas de la post-combustion. Elles distinguent aussi flux séparés et flux mélangés dans les architectures double flux.",
+  "teacher_notes": "Faire relier la relation sur **S**, **V** et **M** au sens physique : en subsonique, réduire la section accélère l’écoulement ; en supersonique, c’est l’inverse. Insister sur le rôle de la tuyère variable pour le réglage, l’adaptation au vol et l’ouverture en post-combustion."
+}

@@ -1,0 +1,108 @@
+{
+  "slide_id": "S1-3",
+  "subpart_id": "S1",
+  "title": "Tuyère, poussée brute et poussée spécifique",
+  "objective": "Relier la tuyère, les conditions d’essai et les indicateurs de performance.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s1-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Comparer les indicateurs de poussée",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "**Poussée nette**",
+          "\\(T_u\\)",
+          "Bilan utile en vol : effet du jet accéléré, du débit carburant et de la pression de sortie."
+        ],
+        [
+          "**Poussée de culot**",
+          "\\(S_5(P_5-P_0)\\)",
+          "Terme dû à la **tuyère** ; si \\(P_5=P_0\\), il devient nul : tuyère adaptée."
+        ],
+        [
+          "**Poussée brute**",
+          "\\(T_{u,\\text{brute}}=V_5(Q_{ma}+Q_{mc})\\)",
+          "Mesurée au banc d’essais avec **\\(V_0=0\\)** ; elle ne retranche pas l’effet de l’entrée."
+        ],
+        [
+          "**Poussée spécifique**",
+          "\\(T_{u,sp}=T_u/Q_{ma}\\)",
+          "Poussée rapportée au débit d’air : indicateur de comparaison entre moteurs, minimale en **croisière**."
+        ],
+        [
+          "**Poussée massique**",
+          "\\(T_{u,\\text{massique}}=T_u/(\\text{poids GTR + nacelle})\\)",
+          "Rapport de performance ramené au poids de l’ensemble moteur-nacelle."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Repères de lecture",
+      "text": null,
+      "bullets": [
+        "**S5** est la section de sortie de la tuyère, **P5** la pression statique de sortie et **P0** la pression statique ambiante à l’entrée : le rôle de la tuyère se lit donc directement dans l’écart de pression en sortie.",
+        "Au **banc d’essais**, la vitesse d’entrée est prise nulle : on obtient une poussée brute plus élevée que la poussée nette en vol, car l’effet du flux entrant n’est pas retranché.",
+        "La répartition interne des forces sert de repère : **60 %** vers l’avant (réaction du compresseur), **30 %** vers l’avant (gaz de combustion), **10 %** vers l’avant (arbre), **55 %** vers l’arrière (turbine), soit une poussée résultante indiquée de **45 %** vers l’avant."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation de poussée complète",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "T_u = Q_{ma}(V_5 - V_0) + Q_{mc}V_5 + S_5(P_5 - P_0)"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Thrust Force — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-force/"
+    },
+    {
+      "source_type": "web",
+      "label": "Turbojet Thrust — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www.grc.nasa.gov/WWW/k-12/VirtualAero/BottleRocket/airplane/turbth.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Specific Thrust — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www.grc.nasa.gov/www/k-12/airplane/specth.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Thrust Equations Summary — NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-equations-summary/"
+    }
+  ],
+  "course_reference_note": "Les pages 1 et 2 posent le bilan de poussée du turboréacteur et ses variantes : nette, brute, massique et spécifique. Elles relient aussi la tuyère au terme de pression de sortie.",
+  "teacher_notes": "Faire distinguer clairement les trois niveaux : **poussée nette** en vol, **poussée brute** au banc avec \\(V_0=0\\), et **poussée spécifique** pour comparer des moteurs de gabarits différents. Insister sur le fait qu’une tuyère adaptée annule le terme de pression quand \\(P_5=P_0\\)."
+}

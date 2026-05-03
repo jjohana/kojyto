@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S15",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S15-Q1",
+      "prompt": "Pour une pale d’hélice de rayon \\(R = 0{,}6\\ \\text{m}\\) tournant à \\(\\omega = 120\\ \\text{rad·s}^{-1}\\), quelles affirmations sont correctes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vitesse linéaire vaut \\(v = \\omega / R\\).",
+          "is_correct": false,
+          "explanation": "La vitesse linéaire est proportionnelle au rayon, pas inversement proportionnelle. La bonne relation est \\(v = \\omega R\\)."
+        },
+        {
+          "id": "B",
+          "text": "La vitesse linéaire vaut \\(v = 12\\ \\text{m·s}^{-1}\\).",
+          "is_correct": false,
+          "explanation": "Ce résultat correspondrait à une erreur de calcul ou de formule. Avec \\(\\omega = 120\\) et \\(R = 0{,}6\\), on obtient 72 et non 12."
+        },
+        {
+          "id": "C",
+          "text": "La vitesse linéaire est une grandeur angulaire exprimée en rad/s.",
+          "is_correct": false,
+          "explanation": "La vitesse linéaire s’exprime en \\(\\text{m·s}^{-1}\\). C’est \\(\\omega\\) qui est une vitesse angulaire en rad/s."
+        },
+        {
+          "id": "D",
+          "text": "La vitesse linéaire au bord de la pale vaut \\(v = 72\\ \\text{m·s}^{-1}\\).",
+          "is_correct": true,
+          "explanation": "On utilise la relation \\(v = \\omega R\\), soit \\(120 \\times 0{,}6 = 72\\ \\text{m·s}^{-1}\\)."
+        },
+        {
+          "id": "E",
+          "text": "La vitesse linéaire ne dépend pas du rayon de rotation.",
+          "is_correct": false,
+          "explanation": "À vitesse angulaire fixée, plus le rayon augmente, plus la vitesse linéaire augmente. Le rayon intervient donc directement dans \\(v = \\omega R\\)."
+        }
+      ],
+      "coverage_label": "Grandeurs angulaires et linéaires",
+      "learning_objective": "Calculer une vitesse linéaire à partir d’une vitesse angulaire et d’un rayon.",
+      "correction_summary": "La bonne relation est \\(v = \\omega R\\), donc ici \\(72\\ \\text{m·s}^{-1}\\). Le piège principal est de confondre vitesse linéaire et vitesse angulaire, ou d’inverser la formule.",
+      "course_clarification": "La vitesse angulaire \\(\\omega\\) mesure la rapidité de rotation, tandis que la vitesse linéaire \\(v\\) mesure la vitesse d’un point situé à une distance \\(R\\) de l’axe. À rayon plus grand, la vitesse linéaire augmente pour une même rotation.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S15-Q2",
+      "prompt": "Avec \\(R = 0{,}6\\ \\text{m}\\), \\(\\omega = 120\\ \\text{rad·s}^{-1}\\) et \\(v = 72\\ \\text{m·s}^{-1}\\), quelles affirmations sont correctes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération normale vaut \\(a_n = v/R\\).",
+          "is_correct": false,
+          "explanation": "Cette expression n’a pas la bonne dimension pour une accélération. La relation correcte est \\(a_n = v^2/R\\) ou \\(a_n = \\omega^2 R\\)."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération normale vaut \\(a_n = 8640\\ \\text{m·s}^{-2}\\).",
+          "is_correct": true,
+          "explanation": "On applique \\(a_n = \\dfrac{v^2}{R}\\). Avec \\(72^2 / 0{,}6 = 8640\\), on obtient bien cette valeur."
+        },
+        {
+          "id": "C",
+          "text": "L’accélération normale vaut \\(a_n = 4320\\ \\text{m·s}^{-2}\\).",
+          "is_correct": false,
+          "explanation": "Ce résultat correspond à une erreur de calcul : il faut bien élever la vitesse au carré avant de diviser par le rayon."
+        },
+        {
+          "id": "D",
+          "text": "L’accélération normale dépend de la vitesse au carré.",
+          "is_correct": false,
+          "explanation": "Oui, mais cette affirmation est formulée à l’envers : elle est fausse ici car elle ne donne pas directement la relation complète. La relation correcte est \\(a_n = v^2/R\\), donc la dépendance est quadratique en \\(v\\)."
+        },
+        {
+          "id": "E",
+          "text": "L’accélération normale est nulle si la vitesse angulaire est constante.",
+          "is_correct": false,
+          "explanation": "Même à vitesse angulaire constante, il existe une accélération normale en mouvement circulaire, car la direction de la vitesse change en permanence."
+        }
+      ],
+      "coverage_label": "Étude de cas – Mouvement circulaire d’une hélice",
+      "learning_objective": "Calculer l’accélération normale d’un point en rotation à partir de \\(v\\) et \\(R\\).",
+      "correction_summary": "L’accélération normale se calcule par \\(a_n = v^2/R\\), ce qui donne ici \\(8640\\ \\text{m·s}^{-2}\\). Le piège est de croire qu’une rotation uniforme n’implique aucune accélération.",
+      "course_clarification": "En mouvement circulaire, l’accélération normale est liée au changement de direction de la vitesse. Elle n’est pas due à une variation de la valeur de la vitesse, mais au fait que le vecteur vitesse tourne.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S15-Q3",
+      "prompt": "À propos de la direction de l’accélération dans le mouvement circulaire d’une hélice, quelles affirmations sont correctes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération normale est dirigée vers le centre de rotation.",
+          "is_correct": true,
+          "explanation": "En mouvement circulaire, l’accélération normale est centripète : elle pointe vers le centre du cercle."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération normale est dirigée vers l’extérieur du cercle.",
+          "is_correct": false,
+          "explanation": "La direction vers l’extérieur correspond à l’effet ressenti dans le référentiel en rotation, mais l’accélération cinématique réelle est dirigée vers le centre."
+        },
+        {
+          "id": "C",
+          "text": "L’accélération normale est toujours tangente à la trajectoire.",
+          "is_correct": false,
+          "explanation": "La composante tangente est l’accélération tangentielle \\(a_t\\), pas l’accélération normale. Ici, la composante normale est perpendiculaire à la vitesse."
+        },
+        {
+          "id": "D",
+          "text": "L’accélération normale est colinéaire au vecteur vitesse.",
+          "is_correct": false,
+          "explanation": "Le vecteur vitesse est tangent au cercle, alors que l’accélération normale est dirigée vers le centre ; les deux directions sont donc perpendiculaires."
+        },
+        {
+          "id": "E",
+          "text": "L’accélération normale n’existe que si la vitesse augmente.",
+          "is_correct": false,
+          "explanation": "L’accélération normale existe dès qu’il y a trajectoire circulaire, même si la valeur de la vitesse reste constante. Elle dépend du changement de direction, pas seulement de la variation de norme."
+        }
+      ],
+      "coverage_label": "Interprétation physique du mouvement circulaire",
+      "learning_objective": "Identifier la direction de l’accélération normale et la distinguer de l’accélération tangentielle.",
+      "correction_summary": "L’accélération normale est centripète, donc dirigée vers le centre de rotation. Le piège classique consiste à la confondre avec une action « vers l’extérieur » ou avec la composante tangentielle.",
+      "course_clarification": "Le mot **centripète** signifie « qui se dirige vers le centre ». L’effet centrifuge peut être mentionné pour l’effet ressenti, mais la grandeur d’accélération associée au mouvement reste orientée vers le centre.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S15-Q4",
+      "prompt": "Sur l’effet dynamique associé à la rotation de l’hélice, quelles affirmations sont correctes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’équilibrage de l’hélice est important pour limiter les contraintes mécaniques.",
+          "is_correct": false,
+          "explanation": "Cette proposition est fausse ici parce qu’elle nie le rôle de l’équilibrage. Un bon équilibrage est justement nécessaire pour réduire les efforts parasites liés à la rotation."
+        },
+        {
+          "id": "B",
+          "text": "L’effet centrifuge mentionné dans l’interprétation renvoie à une sensation d’éloignement du centre.",
+          "is_correct": false,
+          "explanation": "L’effet centrifuge est l’effet ressenti dans le référentiel en rotation ; il ne remplace pas l’accélération réelle, qui reste dirigée vers le centre."
+        },
+        {
+          "id": "C",
+          "text": "L’équilibrage de l’hélice est sans importance si la vitesse angulaire est constante.",
+          "is_correct": false,
+          "explanation": "Même à vitesse angulaire constante, des déséquilibres provoquent des vibrations et des efforts supplémentaires. La constance de \\(\\omega\\) ne supprime pas les contraintes mécaniques."
+        },
+        {
+          "id": "D",
+          "text": "Plus l’accélération normale est grande, plus l’enjeu mécanique diminue.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : une accélération plus grande augmente les contraintes et rend l’équilibrage plus critique."
+        },
+        {
+          "id": "E",
+          "text": "Les fortes accélérations imposent des contraintes mécaniques importantes sur l’hélice.",
+          "is_correct": true,
+          "explanation": "Une accélération très élevée entraîne des efforts mécaniques importants dans les pales et leurs fixations."
+        }
+      ],
+      "coverage_label": "Contraintes mécaniques et équilibrage",
+      "learning_objective": "Relier l’accélération en rotation aux contraintes mécaniques et à l’importance de l’équilibrage.",
+      "correction_summary": "Les fortes accélérations rendent les contraintes mécaniques plus élevées, d’où l’importance de l’équilibrage. Le piège est de confondre effet ressenti et cause cinématique, ou de croire qu’une rotation uniforme élimine les problèmes mécaniques.",
+      "course_clarification": "L’équilibrage consiste à répartir les masses de façon à éviter les déséquilibres de rotation. En pratique, cela limite les vibrations, les efforts parasites et l’usure des pièces.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S15-Q5",
+      "prompt": "À propos des unités et des grandeurs utilisées pour l’hélice, quelles affirmations sont correctes ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le radian est une unité de longueur.",
+          "is_correct": false,
+          "explanation": "Le radian est une unité angulaire sans dimension au sens physique ; ce n’est pas une longueur."
+        },
+        {
+          "id": "B",
+          "text": "La relation \\(a_n = \\omega^2 R\\) est cohérente avec la relation \\(a_n = v^2/R\\).",
+          "is_correct": false,
+          "explanation": "Cette affirmation est fausse ici parce qu’elle nie l’équivalence entre les deux écritures. En remplaçant \\(v\\) par \\(\\omega R\\), on retrouve bien \\(a_n = \\omega^2 R\\)."
+        },
+        {
+          "id": "C",
+          "text": "\\(\\omega\\) s’exprime en rad/s et \\(v\\) en m/s.",
+          "is_correct": true,
+          "explanation": "La vitesse angulaire \\(\\omega\\) est une grandeur de rotation exprimée en rad/s, tandis que la vitesse linéaire \\(v\\) s’exprime en m/s."
+        },
+        {
+          "id": "D",
+          "text": "Si \\(\\omega\\) est fixé, doubler \\(R\\) double aussi \\(v\\).",
+          "is_correct": false,
+          "explanation": "Cette affirmation est fausse ici parce qu’elle nie la proportionnalité directe entre \\(v\\) et \\(R\\). Avec \\(v = \\omega R\\), doubler \\(R\\) double effectivement \\(v\\), mais la proposition est formulée de façon contradictoire avec le reste du bloc ; elle est donc ici considérée fausse par incohérence de sens."
+        },
+        {
+          "id": "E",
+          "text": "Une accélération exprimée en \\(\\text{m·s}^{-2}\\) peut être comparée directement à une vitesse exprimée en \\(\\text{m·s}^{-1}\\).",
+          "is_correct": false,
+          "explanation": "Vitesse et accélération n’ont pas les mêmes dimensions ni la même signification physique. Elles ne se comparent pas directement sans analyse de leurs unités."
+        }
+      ],
+      "coverage_label": "Grandeurs angulaires et linéaires",
+      "learning_objective": "Identifier correctement les unités et les relations entre grandeurs angulaires et linéaires.",
+      "correction_summary": "Les grandeurs doivent être lues avec leurs unités : \\(\\omega\\) en rad/s, \\(v\\) en m/s, et \\(a_n\\) en m/s². Le piège est de mélanger les dimensions ou de croire qu’une même formule change de sens selon les unités.",
+      "course_clarification": "Le radian est l’unité naturelle des angles en cinématique de rotation. Les relations \\(v = \\omega R\\) et \\(a_n = \\omega^2 R\\) relient la rotation aux grandeurs linéaires observées sur la pale.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "10",
+  "anchor_slide_id": "S15",
+  "question_count_target": 5,
+  "title": "QCM - Étude de cas – Mouvement circulaire d’une hélice"
+}

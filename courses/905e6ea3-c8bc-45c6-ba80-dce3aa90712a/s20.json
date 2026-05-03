@@ -1,0 +1,130 @@
+{
+  "slide_id": "s20",
+  "subpart_id": "s20",
+  "title": "Qualité en entreprise aéronautique",
+  "objective": "Identifier le rôle de la qualité, les normes et les outils de maîtrise de la conformité.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\905e6ea3-c8bc-45c6-ba80-dce3aa90712a\\generated_visuals\\s20-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repères essentiels",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Ce qu’il faut retenir",
+          "Effet concret"
+        ],
+        [
+          "Qualité",
+          "Respect des normes, des attentes clients et des standards réglementaires stricts.",
+          "Un produit ou un service conforme, fiable et acceptable en exploitation."
+        ],
+        [
+          "EN 9100 / AS9100",
+          "Système de management de la qualité spécifique à l’aéronautique.",
+          "Exigences renforcées pour les activités aéronautiques."
+        ],
+        [
+          "ISO 9001",
+          "Système de management de la qualité général.",
+          "Base commune de l’organisation qualité."
+        ],
+        [
+          "EASA Part 145 / Part 21",
+          "Cadre certifié pour la maintenance et la production aéronautique.",
+          "Activités encadrées, vérifiées et documentées."
+        ],
+        [
+          "Contrôle en cours de production",
+          "Inspections visuelles, tests non destructifs, vérifications dimensionnelles.",
+          "Détection rapide des écarts avant livraison."
+        ],
+        [
+          "Traçabilité des pièces",
+          "Provenance, lot et processus documentés.",
+          "Retrouver l’origine d’une pièce et sécuriser l’historique."
+        ],
+        [
+          "Non-conformités",
+          "Identification, analyse, correction et prévention.",
+          "Éviter la répétition des défauts et des incidents."
+        ],
+        [
+          "Amélioration continue",
+          "Audits internes, retours d’expérience, formation continue.",
+          "Faire progresser durablement la conformité."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Logique de maîtrise",
+      "text": null,
+      "bullets": [
+        "La chaîne attendue est simple : **contrôler**, **tracer**, puis **corriger** pour empêcher la répétition de l’écart.",
+        "La norme donne le cadre ; les contrôles et la traçabilité fournissent les preuves ; l’analyse des non-conformités alimente les **actions correctives** et **préventives**.",
+        "En aéronautique, la qualité ne se limite pas à “bien faire” : elle sert à démontrer la **conformité** à chaque étape du processus."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "ISO 9001 explained – ISO",
+      "locator": "ISO 9001 overview",
+      "url": "https://www.iso.org/home/insights-news/resources/iso-9001-explained.html"
+    },
+    {
+      "source_type": "web",
+      "label": "9100 Quality Management Systems – IAQG",
+      "locator": "9100 standard overview",
+      "url": "https://iaqg.org/standard/9100-qms-requirements-for-aviation-space-and-defense-organizations/"
+    },
+    {
+      "source_type": "web",
+      "label": "Part-145 | EASA",
+      "locator": "Part-145 FAQ",
+      "url": "https://www.easa.europa.eu/en/the-agency/faqs/part-145"
+    },
+    {
+      "source_type": "web",
+      "label": "Part 21 | EASA",
+      "locator": "Part-21 FAQ",
+      "url": "https://www.easa.europa.eu/en/the-agency/faqs/part-21"
+    },
+    {
+      "source_type": "web",
+      "label": "Certification – IAQG",
+      "locator": "research",
+      "url": "https://iaqg.org/certification/"
+    },
+    {
+      "source_type": "web",
+      "label": "Regulations | EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/the-agency/faqs/regulations"
+    }
+  ],
+  "course_reference_note": "Pages 13 à 18 : la qualité est présentée avec les normes, puis les outils de contrôle, de traçabilité et de traitement des écarts. L’enchaînement conformité, correction et prévention structure la maîtrise qualité.",
+  "teacher_notes": "Faire distinguer norme générale (ISO 9001) et cadre aéronautique (EN 9100/AS9100, Part 145, Part 21). Insister sur la chaîne : contrôle → traçabilité → traitement des non-conformités → amélioration continue."
+}

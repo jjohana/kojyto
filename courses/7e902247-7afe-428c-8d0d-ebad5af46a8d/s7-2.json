@@ -1,0 +1,66 @@
+{
+  "slide_id": "S7-2",
+  "subpart_id": "S7",
+  "title": "CBMU : surveillance des C/B et des RCCBs",
+  "objective": "Expliquer la fonction de surveillance des disjoncteurs par le CBMU.",
+  "layout": "quote",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s7-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "Rôle du CBMU",
+      "text": "Le **Circuit Breaker Monitoring Unit (CBMU)** surveille l’état des **Circuit Breakers (C/B)** et des **Residual Current Circuit Breakers (RCCB)**. Il signale sur la page **ECAM** les C/B ou RCCB surveillés qui ont **déclenché** ou qui ont été **tirés manuellement**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Repères à retenir",
+      "text": null,
+      "bullets": [
+        "La fonction du **CBMU** est une fonction de **surveillance d’état** : elle remonte l’information vers l’ECAM, sans modifier le fonctionnement du disjoncteur concerné.",
+        "Les C/B surveillés sont **généralement de couleur verte** ; ce code visuel aide à identifier rapidement les disjoncteurs concernés.",
+        "L’alerte visible à l’écran concerne uniquement les C/B et RCCB **surveillés** qui sont **déclenchés** ou **tirés manuellement**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "ATA 24 Electrical Power | Scribd",
+      "locator": "résumé technique CBMU / C/B / RCCB",
+      "url": "https://www.scribd.com/document/966383643/ATA24-SN-AV-v3-0"
+    },
+    {
+      "source_type": "web",
+      "label": "03 ATA 24 Electrical Power | Scribd",
+      "locator": "research",
+      "url": "https://www.scribd.com/document/946108039/03-ATA-24-Electrical-Power"
+    },
+    {
+      "source_type": "web",
+      "label": "ATA24 SN AV v3.0 | PDF | Electric Generator | Electric Power System",
+      "locator": "research",
+      "url": "https://www.scribd.com/document/966383643/ATA24-SN-AV-v3-0?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "La page sur le CBMU indique la surveillance des C/Bs et des RCCBs. Elle précise l’indication sur l’ECAM et le repère visuel vert des C/B surveillés.",
+  "teacher_notes": "Faire distinguer **surveillance** et **commande**. Insister sur la lecture ECAM : **déclenché**, **tiré manuellement** et repère de couleur **verte**."
+}

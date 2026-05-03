@@ -1,0 +1,60 @@
+{
+  "slide_id": "S5-1",
+  "subpart_id": "S5",
+  "title": "Canal d’éjection et rôle de la tuyère",
+  "objective": "Décrire les organes de sortie d’un GTR simple flux.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s5-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Organes de sortie d’un GTR simple flux",
+      "text": null,
+      "bullets": [
+        "Le **canal d’éjection** augmente la vitesse des gaz par **détente** dans un canal convergent ; il participe à la **poussée** en transformant une partie de la pression en vitesse.",
+        "Le **cône de raccordement** amène les gaz d’un écoulement **annulaire** vers un écoulement **cylindrique**, limite les **remous**, redresse l’écoulement grâce aux bras supports et porte les sondes de **température des gaz d’échappement (E.G.T.)**.",
+        "La **tuyère** comprend une **rallonge** et le **canal d’éjection** ; la rallonge décale le plan de sortie, reste cylindrique à section constante, est calorifugée et équipée d’amortisseurs de vibrations. La section peut être **fixe** ou **variable**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Lien entre section et vitesse",
+      "text": "Dans un **écoulement subsonique** (\u001b?M<1\u001b?), la géométrie du conduit pilote l’accélération du jet : une diminution de section favorise l’augmentation de vitesse et la conversion de pression en vitesse.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\frac{\\mathrm dS}{S}=\\frac{\\mathrm dV}{V}(M^2-1)"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Nozzle Design",
+      "locator": "Nozzle Design",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/nozzle-design/"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Rocket Thrust",
+      "locator": "Rocket Thrust",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust/"
+    }
+  ],
+  "course_reference_note": "Le repérage attendu porte sur le cône de raccordement, la rallonge et le canal d’éjection. La géométrie de sortie conditionne la qualité de l’écoulement et la vitesse des gaz.",
+  "teacher_notes": "Faire nommer les trois fonctions clés : redresser, décaler le plan de sortie, accélérer le jet. Insister sur le lien entre **section** et **vitesse** en régime subsonique, puis faire localiser les sondes E.G.T. sur le schéma."
+}

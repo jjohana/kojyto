@@ -1,0 +1,107 @@
+{
+  "slide_id": "S5-4",
+  "subpart_id": "S5",
+  "title": "Panneau AC GENERATION et commandes P/BSW",
+  "objective": "Repérer les P/BSW, les voyants et la chaîne EMER GEN / CSM/G sur le synoptique.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s5-4-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Repères à identifier",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Rôle",
+          "Lecture opérationnelle"
+        ],
+        [
+          "**P/BSW**",
+          "Commandes du panneau AC GENERATION.",
+          "Permettent d’agir sur une fonction tout en gardant une lecture immédiate de l’état associé."
+        ],
+        [
+          "**Voyants**",
+          "Indication de commande, de surveillance ou d’état.",
+          "À interpréter avec la commande voisine : un voyant confirme, signale ou alerte."
+        ],
+        [
+          "**EMER GEN / CSM/G**",
+          "Source électrique de secours.",
+          "À reconnaître comme la chaîne dédiée à l’alimentation d’urgence."
+        ],
+        [
+          "**EMER ELEC PWR**",
+          "Panneau de gestion de la génération électrique d’urgence.",
+          "Les repères visibles servent à tester, commander ou remettre en service la source de secours."
+        ],
+        [
+          "**ECAM AC**",
+          "Synoptique de visualisation des sources AC et de leur connexion au réseau.",
+          "Point de recoupement pour vérifier quelles sources alimentent la génération AC."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture attendue sur le panneau",
+      "text": null,
+      "bullets": [
+        "Lire d’abord le **synoptique ECAM** : il montre les sources AC, leur connexion au réseau et les paramètres essentiels à surveiller.",
+        "Associer chaque **bouton** à son **voyant** ; l’identification se fait par couple commande/indication, pas par un repère isolé.",
+        "Repérer la chaîne **EMER GEN / CSM/G** comme solution de **secours** et la distinguer des sources AC principales."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Définition du sigle",
+      "text": "Le sigle identifie une **commande à poussoir**.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\mathrm{P/BSW} = \\text{Pushbutton Switch}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "System Reset: Use With Caution | Safety First",
+      "locator": "overhead panel / pushbutton-switches",
+      "url": "https://safetyfirst.airbus.com/system-reset-use-with-caution/amp/"
+    },
+    {
+      "source_type": "web",
+      "label": "Preventing Loss of Engine Generators on A320 Family, A330 and A340 Aircraft | Safety First",
+      "locator": "research",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    },
+    {
+      "source_type": "web",
+      "label": "A380 Aircraft Characteristics – Airport and Maintenance Planning",
+      "locator": "research",
+      "url": "https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2023-12/ac_a380_1223.pdf"
+    }
+  ],
+  "course_reference_note": "Le synoptique AC montre les sources et leurs liaisons au réseau. Le panneau AC GENERATION regroupe les P/BSW et les voyants liés à la source de secours EMER GEN / CSM/G.",
+  "teacher_notes": "Faire repérer les repères du panneau puis les faire verbaliser en couple commande/voyant. Insister sur la lecture du synoptique ECAM comme point de contrôle de la source AC et du mode secours."
+}

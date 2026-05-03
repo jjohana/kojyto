@@ -1,0 +1,2500 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QCM - Accélération : définition et unité</title>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("embed") === "1") {
+        document.documentElement.dataset.embed = "1";
+      }
+    }());
+  </script>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #14253a;
+  --ink-soft: #243e58;
+  --muted: #5a6d82;
+  --accent: #0c6e82;
+  --accent-strong: #103b5c;
+  --accent-soft: rgba(12, 110, 130, 0.08);
+  --highlight: #d98524;
+  --paper: #f6f2ea;
+  --panel: rgba(255, 255, 255, 0.9);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --line: rgba(20, 37, 58, 0.1);
+  --line-strong: rgba(20, 37, 58, 0.16);
+  --shadow: 0 24px 60px rgba(20, 37, 58, 0.12);
+  --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
+  --content-width: 1360px;
+  --reading-width: 76ch;
+}
+
+@keyframes ambient-float {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -16px, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes rise-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes panel-sheen {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(220%) skewX(-20deg); }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(12, 110, 130, 0.15), transparent 28%),
+    radial-gradient(circle at 86% 10%, rgba(217, 133, 36, 0.16), transparent 22%),
+    linear-gradient(150deg, #f7f1e7 0%, #eef5f8 50%, #f8fbfe 100%);
+}
+
+body {
+  position: relative;
+  color: var(--ink);
+  font-family: "Aptos", "Segoe UI Variable", "Segoe UI", "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(24px);
+  opacity: 0.6;
+  animation: ambient-float 18s ease-in-out infinite;
+}
+
+body::before {
+  top: 10vh;
+  right: 4vw;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(12, 110, 130, 0.16), transparent 68%);
+}
+
+body::after {
+  bottom: 8vh;
+  left: 3vw;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 133, 36, 0.18), transparent 68%);
+  animation-delay: -7s;
+}
+
+html[data-embed="1"],
+html[data-embed="1"] body {
+  background: transparent;
+}
+
+html[data-embed="1"] body::before,
+html[data-embed="1"] body::after {
+  display: none;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  gap: 22px;
+}
+
+.page-shell.with-site-nav {
+  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+}
+
+.site-sidebar {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  padding: 24px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 28px;
+  background: rgba(250, 252, 253, 0.78);
+  box-shadow: 0 18px 40px rgba(20, 37, 58, 0.08);
+  backdrop-filter: blur(12px);
+  animation: rise-in 520ms ease both;
+}
+
+.site-sidebar h2 {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.4rem;
+}
+
+.site-sidebar p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.site-sidebar nav {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-action,
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.sidebar-action::after,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.sidebar-action:hover,
+.nav-link:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.sidebar-action:hover::after,
+.nav-link:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.sidebar-list {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-slide {
+  display: grid;
+  gap: 4px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.sidebar-slide:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.sidebar-slide.active {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-slide strong {
+  font-size: 0.96rem;
+}
+
+.sidebar-slide span {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: inherit;
+  opacity: 0.88;
+}
+
+.site-main {
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.slide-toolbar {
+  position: sticky;
+  top: 18px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 14px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+  backdrop-filter: blur(12px);
+  animation: rise-in 560ms ease both;
+}
+
+.toolbar-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.slide {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+  box-sizing: border-box;
+  padding: 4px 0 28px;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: minmax(0, 2.8fr) minmax(240px, 0.7fr);
+  padding: 38px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+  box-shadow: var(--shadow);
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.12), transparent 34%),
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -26% auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 68%);
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy::after {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -120px;
+  width: 120px;
+  height: calc(100% + 44px);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transform: skewX(-20deg);
+  animation: panel-sheen 2.8s ease 820ms 1 both;
+  pointer-events: none;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  max-width: none;
+  color: #f6fbff;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.05rem, 2.85vw, 3.35rem);
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  text-shadow: 0 10px 30px rgba(8, 24, 38, 0.14);
+}
+
+.hero-copy .objective {
+  margin: 18px 0 0;
+  max-width: 60ch;
+  color: rgba(246, 251, 255, 0.92);
+  font-size: 1.06rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  color: rgba(246, 251, 255, 0.82);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-meta {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.meta-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(247, 250, 252, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.meta-card:hover {
+  transform: translateY(-2px);
+  background: rgba(247, 250, 252, 0.22);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.meta-label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(246, 251, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.meta-card p {
+  margin: 0;
+  color: #f6fbff;
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.visual-summary-panel {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  animation: rise-in 620ms ease both;
+}
+
+.visual-summary-panel .visual-summary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.visual-summary-panel .visual-summary-title {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.38rem;
+  line-height: 1.12;
+}
+
+.visual-summary-panel .visual-summary-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
+}
+
+.block {
+  position: relative;
+  grid-column: span 12;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 24px 26px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+  animation: rise-in 620ms ease both;
+  animation-delay: calc(var(--stagger, 0) * 85ms);
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(12, 110, 130, 0), rgba(12, 110, 130, 0.32), rgba(217, 133, 36, 0));
+}
+
+.block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(20, 37, 58, 0.1);
+  border-color: rgba(12, 110, 130, 0.14);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.block h2 {
+  margin: 0 0 14px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.42rem;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.block h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(217, 133, 36, 0.75));
+}
+
+.block-body {
+  display: grid;
+  gap: 14px;
+}
+
+.block p,
+.block li,
+.caption,
+.formula-caption,
+.sources-list,
+.review-meta,
+.option-text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.block-body > p,
+.block-body > ul,
+.block-body > blockquote,
+.block-body > .formula-shell {
+  max-width: var(--reading-width);
+}
+
+.block.block-image .block-body,
+.block.block-table .block-body,
+.block.block-sources .block-body {
+  max-width: none;
+}
+
+.block.block-hero {
+  background:
+    linear-gradient(145deg, rgba(20, 37, 58, 0.96), rgba(12, 110, 130, 0.9));
+  color: #f6fbff;
+}
+
+.block.block-hero::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+}
+
+.block.block-hero h2,
+.block.block-hero p,
+.block.block-hero li {
+  color: inherit;
+}
+
+.block.block-hero h2::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.16));
+}
+
+.lead-text {
+  font-size: 1.08rem;
+  line-height: 1.76;
+}
+
+blockquote {
+  margin: 0;
+  padding: 8px 0 8px 18px;
+  border-left: 4px solid var(--highlight);
+  color: #18374d;
+  font-style: italic;
+  line-height: 1.72;
+  font-size: 1.06rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+.bullet-list li {
+  line-height: 1.66;
+  padding-left: 2px;
+}
+
+.bullet-list li::marker {
+  color: var(--accent);
+}
+
+.media {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  background: linear-gradient(180deg, #eef5fb, #f9fbfd);
+}
+
+.media-figure {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.block-image {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.94), rgba(249, 251, 253, 0.98));
+  padding: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.caption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 90ch;
+}
+
+.formula-shell {
+  display: grid;
+  gap: 14px;
+}
+
+.formula-display {
+  overflow-x: auto;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(238, 245, 251, 0.96), rgba(248, 251, 253, 0.96));
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.formula-display mjx-container {
+  margin: 0 auto !important;
+  font-size: 118% !important;
+}
+
+.formula-caption {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 37, 58, 0.08);
+  background: var(--panel-strong);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+  font-size: 0.96rem;
+}
+
+td, th {
+  border: 1px solid var(--line);
+  padding: 12px 13px;
+  text-align: left;
+  vertical-align: top;
+}
+
+tr:first-child td,
+tr:first-child th {
+  background: rgba(12, 110, 130, 0.08);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+tr:nth-child(even):not(:first-child) td {
+  background: rgba(12, 110, 130, 0.03);
+}
+
+.sources-panel {
+  position: relative;
+  margin-top: 56px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(20, 37, 58, 0.06);
+  overflow: hidden;
+  animation: rise-in 680ms ease both;
+}
+
+.sources-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--accent), rgba(217, 133, 36, 0.7));
+}
+
+.sources-title {
+  margin: 0 0 10px;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sources-summary {
+  margin: 0 0 14px;
+  max-width: 88ch;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sources-list {
+  --sources-cols: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: stretch;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.source-ref {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  flex: 0 1 calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  width: min(100%, calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols)));
+  max-width: calc((100% - ((var(--sources-cols) - 1) * 12px)) / var(--sources-cols));
+  padding: 12px 14px;
+  box-sizing: border-box;
+  min-height: 118px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.06), rgba(12, 110, 130, 0.03));
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  text-decoration: none;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: none;
+  line-height: 1.36;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.source-ref:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.16);
+  background: linear-gradient(180deg, rgba(12, 110, 130, 0.09), rgba(12, 110, 130, 0.05));
+}
+
+.source-ref-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--accent-strong);
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.34;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-wrap: pretty;
+}
+
+.source-ref-domain {
+  color: var(--muted);
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.source-ref[href]:hover .source-ref-title {
+  text-decoration: underline;
+}
+
+.sources-list.sources-cols-1 {
+  --sources-cols: 1;
+}
+
+.sources-list.sources-cols-2 {
+  --sources-cols: 2;
+}
+
+.sources-list.sources-cols-3 {
+  --sources-cols: 3;
+}
+
+.sources-list.sources-cols-4 {
+  --sources-cols: 4;
+}
+
+.quiz-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.quiz-hero {
+  display: grid;
+  gap: 18px;
+  padding: 32px 34px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  color: #f6fbff;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation: rise-in 720ms ease both;
+}
+
+.quiz-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 18%, transparent 36%),
+    radial-gradient(circle at 78% 26%, rgba(255, 255, 255, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.quiz-hero h1 {
+  margin: 0;
+  font-family: "Cambria", "Constantia", serif;
+  font-size: clamp(2.1rem, 3.2vw, 3.5rem);
+  line-height: 1.06;
+}
+
+.quiz-hero p {
+  margin: 0;
+  max-width: 72ch;
+  line-height: 1.65;
+  color: rgba(246, 251, 255, 0.92);
+}
+
+.quiz-app-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.quiz-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f6fbff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.quiz-panel,
+.review-card {
+  box-sizing: border-box;
+  width: min(980px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  animation: rise-in 620ms ease both;
+}
+
+.question-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.question-title {
+  margin: 0 0 16px;
+  color: var(--accent-strong);
+  font-family: "Cambria", "Constantia", serif;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.option-list {
+  display: grid;
+  gap: 12px;
+}
+
+.option-item {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(248, 251, 252, 0.9);
+  border: 1px solid rgba(20, 37, 58, 0.10);
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.option-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 110, 130, 0.18);
+  box-shadow: 0 8px 18px rgba(20, 37, 58, 0.06);
+}
+
+.option-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.option-input {
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+
+.option-text {
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.option-explanation {
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.option-correct {
+  border-color: rgba(45, 143, 114, 0.35);
+  background: rgba(230, 247, 239, 0.9);
+}
+
+.option-wrong {
+  border-color: rgba(217, 133, 36, 0.32);
+  background: rgba(255, 244, 230, 0.92);
+}
+
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.quiz-button,
+.quiz-actions a {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(12, 110, 130, 0.08);
+  border: 1px solid rgba(12, 110, 130, 0.12);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.quiz-button::after,
+.quiz-actions a::after {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -120%;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.quiz-button:hover,
+.quiz-actions a:hover {
+  transform: translateY(-1px);
+  background: rgba(12, 110, 130, 0.12);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+
+.quiz-button:hover::after,
+.quiz-actions a:hover::after {
+  opacity: 1;
+  animation: panel-sheen 900ms ease;
+}
+
+.quiz-button.primary {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  border-color: transparent;
+  color: #f6fbff;
+}
+
+.quiz-button.disabled,
+.quiz-actions a.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.results-card {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(248, 251, 252, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.results-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.results-card span {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.review-list {
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.review-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.teaching-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.teaching-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(244, 248, 251, 0.94);
+  border: 1px solid rgba(20, 37, 58, 0.08);
+}
+
+.teaching-card.emphasis {
+  background: rgba(231, 243, 248, 0.96);
+  border-color: rgba(12, 110, 130, 0.18);
+}
+
+.teaching-card .teaching-card-title {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.teaching-card p strong {
+  display: inline;
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.teaching-card p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+html[data-embed="1"] .page-shell {
+  min-height: auto;
+  padding: 0;
+  gap: 0;
+}
+
+html[data-embed="1"] .page-shell.with-site-nav {
+  grid-template-columns: 1fr;
+}
+
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar {
+  display: none;
+}
+
+html[data-embed="1"] .slide,
+html[data-embed="1"] .quiz-shell {
+  max-width: none;
+  min-height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  box-shadow: none;
+}
+
+html[data-embed="1"] .hero-panel,
+html[data-embed="1"] .quiz-hero,
+html[data-embed="1"] .sources-panel,
+html[data-embed="1"] .site-sidebar,
+html[data-embed="1"] .slide-toolbar,
+html[data-embed="1"] .block,
+html[data-embed="1"] .quiz-panel,
+html[data-embed="1"] .review-card {
+  animation: none;
+}
+
+@media (min-width: 1120px) {
+  .slide.layout-simple .content-grid {
+    align-items: stretch;
+  }
+
+  .slide.layout-simple .block {
+    grid-template-rows: auto 1fr;
+  }
+
+  .slide.layout-simple .block-body {
+    align-content: start;
+  }
+
+  .layout-title .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-bullets .block.block-bullets,
+  .layout-bullets .block.block-quote,
+  .layout-bullets .block.block-formula,
+  .layout-two_columns .block:not(.block-hero):not(.block-image):not(.block-sources):not(.block-table) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-bullets .block.block-hero,
+  .layout-bullets .block.block-image,
+  .layout-bullets .block.block-table,
+  .layout-bullets .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-quote .block.block-quote,
+  .layout-table .block.block-table {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-quote .block:not(.block-quote):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-table .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: span 6;
+    height: 100%;
+  }
+
+  .layout-table.layout-table-single-support .block:not(.block-table):not(.block-image):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-table.layout-table-single-support .visual-summary-panel,
+  .layout-table.layout-table-single-support .sources-panel {
+    width: min(100%, calc(var(--content-width) * 0.833333));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .layout-quote .block.block-image,
+  .layout-quote .block.block-table,
+  .layout-quote .block.block-sources,
+  .layout-table .block.block-image,
+  .layout-table .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 2 / span 10;
+  }
+
+  .layout-spotlight .block:not(:first-child):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-spotlight .block.block-image,
+  .layout-spotlight .block.block-table,
+  .layout-spotlight .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block:nth-child(1):not(.block-image):not(.block-table):not(.block-sources),
+  .layout-comparison .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-comparison .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 12;
+  }
+
+  .layout-comparison .block.block-image,
+  .layout-comparison .block.block-table,
+  .layout-comparison .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-magazine .block:nth-child(odd):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 7;
+  }
+
+  .layout-magazine .block:nth-child(even):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 5;
+  }
+
+  .layout-magazine .block.block-image,
+  .layout-magazine .block.block-table,
+  .layout-magazine .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-mosaic .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-mosaic .block.block-image,
+  .layout-mosaic .block.block-table,
+  .layout-mosaic .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-triptych .block:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-triptych .block.block-image,
+  .layout-triptych .block.block-table,
+  .layout-triptych .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-sidebar_focus .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-sidebar_focus .block:nth-child(n+4):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 6;
+  }
+
+  .layout-sidebar_focus .block.block-image,
+  .layout-sidebar_focus .block.block-table,
+  .layout-sidebar_focus .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-dashboard .block:first-child:not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-dashboard .block:nth-child(2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-dashboard .block:nth-child(n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: span 4;
+  }
+
+  .layout-dashboard .block.block-image,
+  .layout-dashboard .block.block-table,
+  .layout-dashboard .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-staggered .block:nth-child(3n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 7;
+  }
+
+  .layout-staggered .block:nth-child(3n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 8 / span 5;
+  }
+
+  .layout-staggered .block:nth-child(3n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 3 / span 8;
+  }
+
+  .layout-staggered .block.block-image,
+  .layout-staggered .block.block-table,
+  .layout-staggered .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-storyline .block:nth-child(4n+1):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 8;
+  }
+
+  .layout-storyline .block:nth-child(4n+2):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 9 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n+3):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 1 / span 4;
+  }
+
+  .layout-storyline .block:nth-child(4n):not(.block-image):not(.block-table):not(.block-sources) {
+    grid-column: 5 / span 8;
+  }
+
+  .layout-storyline .block.block-image,
+  .layout-storyline .block.block-table,
+  .layout-storyline .block.block-sources {
+    grid-column: span 12;
+  }
+
+  .layout-spotlight .block.layout-slot-primary {
+    grid-column: 2 / span 10 !important;
+  }
+
+  .layout-spotlight .block.layout-slot-secondary {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-half {
+    grid-column: span 6 !important;
+  }
+
+  .layout-comparison .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-magazine .block.layout-slot-feature {
+    grid-column: span 7 !important;
+  }
+
+  .layout-magazine .block.layout-slot-support {
+    grid-column: span 5 !important;
+  }
+
+  .layout-mosaic .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-third {
+    grid-column: span 4 !important;
+  }
+
+  .layout-triptych .block.layout-slot-wide {
+    grid-column: span 12 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+    grid-row: span 2;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-sidebar_focus .block.layout-slot-support {
+    grid-column: span 6 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-primary {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-sidebar {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-dashboard .block.layout-slot-card {
+    grid-column: span 4 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-a {
+    grid-column: 1 / span 7 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-b {
+    grid-column: 8 / span 5 !important;
+  }
+
+  .layout-staggered .block.layout-slot-stagger-c {
+    grid-column: 3 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-a {
+    grid-column: 1 / span 8 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-b {
+    grid-column: 9 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-c {
+    grid-column: 1 / span 4 !important;
+  }
+
+  .layout-storyline .block.layout-slot-story-d {
+    grid-column: 5 / span 8 !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .page-shell.with-site-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell {
+    padding: 14px;
+  }
+
+  .site-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .block {
+    padding: 18px;
+  }
+
+  .slide-toolbar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-panel,
+  .quiz-hero {
+    padding: 26px 22px;
+  }
+
+  .hero-copy h1,
+  .quiz-hero h1 {
+    max-width: none;
+  }
+
+  .sources-list {
+    justify-content: stretch;
+  }
+
+  .source-ref,
+  .sources-list.sources-count-1 .source-ref,
+  .sources-list.sources-count-2 .source-ref,
+  .sources-list.sources-count-4 .source-ref {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]],
+      },
+      svg: {
+        fontCache: "global",
+      },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  
+</head>
+<body class="viewer-user page-quiz">
+  <div class="page-shell with-site-nav">
+    
+    <aside class="site-sidebar">
+      <h2>Cinematique BTS Aero</h2>
+      <p>Parcours épuré avec navigation et QCM.</p>
+      <nav>
+        
+        <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
+        
+        
+        
+        <a class="sidebar-action" href="index.html">Sommaire</a>
+        
+        
+        <a class="sidebar-action" href="deck.html">Vue deck</a>
+        
+        
+      </nav>
+      <div class="sidebar-list">
+        
+        <a class="sidebar-slide" href="s1.html">
+          <strong>S1</strong>
+          <span>Introduction à la cinématique</span>
+          
+          <span>Distinguer la cinématique de la dynamique et situer son rôle en aéronautique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s1.html">
+          <strong>QCM S1</strong>
+          <span>QCM - Introduction à la cinématique</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s2.html">
+          <strong>S2</strong>
+          <span>Système, point matériel et référentiel</span>
+          
+          <span>Identifier l’objet étudié, la simplification en point matériel et le référentiel de description.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s2.html">
+          <strong>QCM S2</strong>
+          <span>QCM - Système, point matériel et référentiel</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3.html">
+          <strong>S3</strong>
+          <span>Trajectoire et position</span>
+          
+          <span>Définir la trajectoire et relier la position temporelle à l’étude du mouvement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3.html">
+          <strong>QCM S3</strong>
+          <span>QCM - Trajectoire et position</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4.html">
+          <strong>S4</strong>
+          <span>Vitesse instantanée</span>
+          
+          <span>Relier la vitesse instantanée à la dérivée du vecteur position et à la géométrie de la trajectoire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4.html">
+          <strong>QCM S4</strong>
+          <span>QCM - Vitesse instantanée</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5.html">
+          <strong>S5</strong>
+          <span>Vitesse moyenne et mesures de vitesse</span>
+          
+          <span>Compléter la notion de vitesse par la vitesse moyenne et les moyens de mesure.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5.html">
+          <strong>QCM S5</strong>
+          <span>QCM - Vitesse moyenne et mesures de vitesse</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s6.html">
+          <strong>S6</strong>
+          <span>Accélération : définition et unité</span>
+          
+          <span>Définir l’accélération comme dérivée de la vitesse et en donner l’unité.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide active" href="slide-s6.html">
+          <strong>QCM S6</strong>
+          <span>QCM - Accélération : définition et unité</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7.html">
+          <strong>S7</strong>
+          <span>Accélération tangentielle et normale</span>
+          
+          <span>Distinguer les composantes de l’accélération et relier chacune à son effet.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7.html">
+          <strong>QCM S7</strong>
+          <span>QCM - Accélération tangentielle et normale</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s8.html">
+          <strong>S8</strong>
+          <span>MRU : vitesse constante et loi horaire linéaire</span>
+          
+          <span>Relier vitesse constante, accélération nulle et expression de la position.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s8.html">
+          <strong>QCM S8</strong>
+          <span>QCM - Mouvement rectiligne uniforme (MRU)</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9.html">
+          <strong>S9</strong>
+          <span>Mouvement rectiligne uniformément accéléré (MRUA)</span>
+          
+          <span>Utiliser les lois horaires du MRUA avec accélération constante.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9.html">
+          <strong>QCM S9</strong>
+          <span>QCM - Mouvement rectiligne uniformément accéléré (MRUA)</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10.html">
+          <strong>S10</strong>
+          <span>Mouvement circulaire uniforme (MCU)</span>
+          
+          <span>Relier vitesse linéaire, vitesse angulaire et accélération normale dans un mouvement circulaire uniforme.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10.html">
+          <strong>QCM S10</strong>
+          <span>QCM - Mouvement circulaire uniforme (MCU)</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11.html">
+          <strong>S11</strong>
+          <span>Mouvement circulaire accéléré</span>
+          
+          <span>Identifier la variation de ω et relier accélération tangentielle et accélération angulaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11.html">
+          <strong>QCM S11</strong>
+          <span>QCM - Mouvement circulaire accéléré</span>
+          
+          <span>4 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s12.html">
+          <strong>S12</strong>
+          <span>Équations horaires et trajectoires</span>
+          
+          <span>Éliminer le temps pour obtenir l’équation de trajectoire et exploiter la règle de la chaîne.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s12.html">
+          <strong>QCM S12</strong>
+          <span>QCM - Équations horaires et trajectoires</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s13.html">
+          <strong>S13</strong>
+          <span>Grandeurs angulaires et linéaires</span>
+          
+          <span>Maîtriser les grandeurs angulaires et leurs liens avec les grandeurs linéaires.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s13.html">
+          <strong>QCM S13</strong>
+          <span>QCM - Grandeurs angulaires et linéaires</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s14.html">
+          <strong>S14</strong>
+          <span>Méthodes graphiques et expérimentales</span>
+          
+          <span>Exploiter des courbes et des mesures expérimentales pour déterminer vitesse, accélération et déplacement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s14.html">
+          <strong>QCM S14</strong>
+          <span>QCM - Méthodes graphiques et expérimentales</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s15.html">
+          <strong>S15</strong>
+          <span>Étude de cas – Mouvement circulaire d’une hélice</span>
+          
+          <span>Appliquer les formules du mouvement circulaire à une hélice et interpréter l’effet dynamique associé.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s15.html">
+          <strong>QCM S15</strong>
+          <span>QCM - Étude de cas – Mouvement circulaire d’une hélice</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s16.html">
+          <strong>S16</strong>
+          <span>Approche numérique avec Python</span>
+          
+          <span>Simuler un mouvement discret et estimer numériquement la vitesse puis l’accélération.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s16.html">
+          <strong>QCM S16</strong>
+          <span>QCM - Approche numérique avec Python</span>
+          
+          <span>4 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s17.html">
+          <strong>S17</strong>
+          <span>Applications aéronautiques typiques</span>
+          
+          <span>Relier les notions de cinématique à des situations concrètes du domaine aéronautique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s17.html">
+          <strong>QCM S17</strong>
+          <span>QCM - Applications aéronautiques typiques</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s18.html">
+          <strong>S18</strong>
+          <span>Formulaire récapitulatif</span>
+          
+          <span>Conserver les relations fondamentales à mobiliser dans les calculs de cinématique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s18.html">
+          <strong>QCM S18</strong>
+          <span>QCM - Formulaire récapitulatif</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s19.html">
+          <strong>S19</strong>
+          <span>Erreurs fréquentes à éviter</span>
+          
+          <span>Repérer les erreurs classiques de calcul, d’unités et de référentiel en cinématique.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s19.html">
+          <strong>QCM S19</strong>
+          <span>QCM - Erreurs fréquentes à éviter</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s20.html">
+          <strong>S20</strong>
+          <span>Conclusion</span>
+          
+          <span>Retenir la place centrale de la cinématique dans l’aéronautique et ses prolongements vers la dynamique et la simulation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s20.html">
+          <strong>QCM S20</strong>
+          <span>QCM - Conclusion</span>
+          
+          <span>4 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="final-validation.html">
+          <strong>Validation finale</strong>
+          <span>Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)</span>
+          
+          <span>25 questions tirées au sort sur 97 - correction finale</span>
+          
+        </a>
+        
+      </div>
+    </aside>
+    
+
+    <main class="site-main">
+      
+      <div class="slide-toolbar">
+        <div class="toolbar-meta">
+          <span>Page 12/41</span>
+          
+          <span>QCM</span>
+        </div>
+        <div class="toolbar-actions">
+          
+          <a class="nav-link" href="../../index.html">Catalogue</a>
+          
+          
+          <a class="nav-link" href="s6.html">Précédent</a>
+          
+          
+          <a class="nav-link" href="s7.html">Suivante</a>
+          
+        </div>
+      </div>
+      
+
+      <section class="quiz-shell">
+        <section class="quiz-hero">
+          <div>
+            <p class="eyebrow">QCM</p>
+            <h1>QCM - Accélération : définition et unité</h1>
+            <p>
+              
+              QCM intermédiaire avec correction immédiate question par question.
+              
+            </p>
+          </div>
+          <div class="quiz-meta">
+            <span class="meta-pill">5 questions</span>
+            
+          </div>
+        </section>
+
+        <section
+          id="quiz-app"
+          class="quiz-app-shell"
+          data-viewer-mode="user"
+          data-next-href="s7.html"
+          data-home-href="index.html"
+        ></section>
+      </section>
+    </main>
+  </div>
+
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S6", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S6-Q1", "prompt": "À propos de l’accélération, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’accélération s’écrit \\(a = \\dfrac{dr}{dt}\\).", "is_correct": false, "explanation": "Cette dérivée décrit la vitesse, pas l’accélération. L’accélération apparaît à l’étape suivante, quand on dérive encore la vitesse par rapport au temps."}, {"id": "B", "text": "L’accélération mesure uniquement la distance parcourue par unité de temps.", "is_correct": false, "explanation": "La distance par unité de temps correspond à la vitesse. L’accélération caractérise au contraire la variation de cette vitesse au cours du temps."}, {"id": "C", "text": "L’accélération est une grandeur sans dimension.", "is_correct": false, "explanation": "Elle possède une unité physique : le mètre par seconde carrée. Une grandeur sans dimension n’aurait pas d’unité, ce qui n’est pas le cas ici."}, {"id": "D", "text": "L’accélération s’écrit \\(a = \\dfrac{dv}{dt} = \\dfrac{d^2 r}{dt^2}\\).", "is_correct": true, "explanation": "L’accélération est bien la dérivée temporelle de la vitesse, et donc la dérivée seconde du vecteur position. Cette écriture relie directement accélération, vitesse et position."}, {"id": "E", "text": "L’accélération est toujours dirigée dans le sens du mouvement.", "is_correct": false, "explanation": "Sa direction dépend de la variation de la vitesse, pas forcément du sens du déplacement. Par exemple, une accélération peut être opposée au mouvement lors d’un freinage."}], "coverage_label": "Accélération : définition et unité", "learning_objective": "Identifier l’accélération comme dérivée temporelle de la vitesse et comme dérivée seconde de la position.", "correction_summary": "La bonne réponse est celle qui relie l’accélération à la dérivation temporelle de la vitesse. Le piège classique consiste à confondre accélération et vitesse, ou à oublier la dérivée seconde de la position.", "course_clarification": "L’accélération décrit comment la vitesse évolue au cours du temps. Elle peut traduire une variation de norme, une variation de direction, ou les deux.", "source_refs": []}, {"question_id": "S6-Q2", "prompt": "Quelle proposition décrit correctement l’unité de l’accélération ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’unité SI de l’accélération est \\(\\mathrm{m\\cdot s^{-1}}\\).", "is_correct": false, "explanation": "Cette unité correspond à une vitesse. L’accélération ajoute une division par le temps, ce qui donne \\(\\mathrm{m\\cdot s^{-2}}\\)."}, {"id": "B", "text": "L’unité SI de l’accélération est \\(\\mathrm{m\\cdot s^{-2}}\\).", "is_correct": true, "explanation": "L’unité demandée est bien le mètre par seconde carrée. Elle vient du fait que l’on divise une vitesse \\(\\mathrm{m\\cdot s^{-1}}\\) par un temps \\(\\mathrm{s}\\)."}, {"id": "C", "text": "L’unité SI de l’accélération est le newton \\(\\mathrm{N}\\).", "is_correct": false, "explanation": "Le newton est une unité de force, pas d’accélération. Même si force et accélération sont liées en dynamique, leurs unités restent différentes."}, {"id": "D", "text": "L’unité SI de l’accélération est \\(\\mathrm{m^2\\cdot s^{-1}}\\).", "is_correct": false, "explanation": "Cette unité ne correspond ni à une vitesse ni à une accélération. Elle ne traduit pas une variation de vitesse dans le temps."}, {"id": "E", "text": "L’unité SI de l’accélération est \\(\\mathrm{s^{-1}}\\).", "is_correct": false, "explanation": "L’unité \\(\\mathrm{s^{-1}}\\) peut apparaître dans d’autres contextes, mais pas pour l’accélération définie ici. L’accélération conserve une dimension de longueur divisée par le temps au carré."}], "coverage_label": "Accélération : définition et unité", "learning_objective": "Reconnaître l’unité SI de l’accélération et la distinguer de celle de la vitesse.", "correction_summary": "L’unité correcte est \\(\\mathrm{m\\cdot s^{-2}}\\). Le piège est de confondre l’accélération avec la vitesse ou avec une grandeur de mécanique différente comme la force.", "course_clarification": "Une accélération s’obtient en divisant une variation de vitesse par un temps. Son unité est donc une vitesse par seconde, soit \\(\\mathrm{m\\cdot s^{-2}}\\).", "source_refs": []}, {"question_id": "S6-Q3", "prompt": "À propos du lien entre accélération et mouvement, quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Un mouvement peut exister avec \\(a=0\\) si la vitesse reste constante.", "is_correct": true, "explanation": "Si la vitesse ne varie ni en norme ni en direction, sa dérivée temporelle est nulle. Le mobile se déplace alors, mais sans accélération."}, {"id": "B", "text": "Dès qu’un objet se déplace, son accélération est forcément non nulle.", "is_correct": false, "explanation": "Un mouvement rectiligne uniforme est un contre-exemple : le mobile se déplace à vitesse constante et son accélération est nulle."}, {"id": "C", "text": "Si l’accélération est nulle, le mobile est forcément immobile.", "is_correct": false, "explanation": "L’absence d’accélération n’implique pas l’absence de mouvement. Elle signifie seulement que la vitesse est constante."}, {"id": "D", "text": "Une accélération nulle signifie nécessairement que la trajectoire est un point.", "is_correct": false, "explanation": "Une trajectoire réduite à un point correspond à l’immobilité, mais ce n’est pas la seule situation possible. Un mouvement rectiligne uniforme a une trajectoire et une vitesse constantes avec \\(a=0\\)."}, {"id": "E", "text": "Une accélération nulle implique toujours une vitesse nulle.", "is_correct": false, "explanation": "La vitesse peut être non nulle tout en restant constante. C’est précisément le cas d’un mouvement sans accélération."}], "coverage_label": "Accélération : définition et unité", "learning_objective": "Comprendre qu’un mouvement peut être uniforme avec accélération nulle.", "correction_summary": "La réponse correcte rappelle qu’un mobile peut se déplacer à vitesse constante avec \\(a=0\\). Le piège est de croire que mouvement et accélération non nulle sont toujours liés.", "course_clarification": "L’accélération mesure une variation de vitesse. Si la vitesse reste constante, la dérivée est nulle, même si le mobile est en déplacement.", "source_refs": []}, {"question_id": "S6-Q4", "prompt": "Quelle affirmation est correcte sur les composantes de l’accélération ?", "difficulty": "easy", "options": [{"id": "A", "text": "La composante tangentielle \\(a_t\\) est dirigée vers le centre de courbure.", "is_correct": false, "explanation": "Cette direction correspond à la composante normale. La composante tangentielle est, elle, portée par la tangente à la trajectoire."}, {"id": "B", "text": "La composante normale \\(a_n\\) traduit uniquement une variation de la norme de \\(v\\).", "is_correct": false, "explanation": "La composante normale est associée au changement de direction de la vitesse, pas au changement de sa norme. Elle agit même si la vitesse garde la même valeur."}, {"id": "C", "text": "La composante normale \\(a_n\\) est nulle dès que la trajectoire est courbe.", "is_correct": false, "explanation": "Dans une trajectoire courbe, la direction de la vitesse change, donc une composante normale existe. Elle n’est nulle que lorsque la trajectoire est rectiligne."}, {"id": "D", "text": "La composante tangentielle et la composante normale ont la même signification physique.", "is_correct": false, "explanation": "Elles décrivent deux effets différents : variation de norme pour l’une, variation de direction pour l’autre. Les confondre fait perdre la lecture physique de l’accélération."}, {"id": "E", "text": "La composante tangentielle \\(a_t\\) traduit une variation de la norme de \\(v\\).", "is_correct": true, "explanation": "La composante tangentielle est liée à l’augmentation ou à la diminution de la vitesse scalaire. Elle correspond donc à accélérer ou ralentir le mobile."}], "coverage_label": "Accélération : définition et unité", "learning_objective": "Distinguer les rôles respectifs des composantes tangentielle et normale de l’accélération.", "correction_summary": "La bonne réponse associe \\(a_t\\) à la variation de la norme de la vitesse et \\(a_n\\) à la variation de direction. Le piège principal est d’inverser leurs rôles physiques.", "course_clarification": "L’accélération se décompose en une partie tangentielle et une partie normale. La première modifie la valeur de la vitesse, la seconde modifie son orientation.", "source_refs": []}, {"question_id": "S6-Q5", "prompt": "Concernant la composante normale de l’accélération, quelle proposition est juste ?", "difficulty": "easy", "options": [{"id": "A", "text": "La composante normale vaut \\(a_n = \\dfrac{R}{v^2}\\).", "is_correct": false, "explanation": "Cette expression inverse la relation correcte. La composante normale augmente avec \\(v^2\\) et diminue quand le rayon \\(R\\) augmente."}, {"id": "B", "text": "La composante normale est dirigée tangentiellement à la trajectoire.", "is_correct": false, "explanation": "La direction tangentielle correspond à \\(a_t\\). La composante normale est, au contraire, dirigée vers le centre de courbure."}, {"id": "C", "text": "La composante normale est donnée par \\(a_n = \\dfrac{v^2}{R}\\).", "is_correct": true, "explanation": "C’est bien la relation donnée pour la composante normale. Elle montre que cette accélération dépend de la vitesse et du rayon de courbure de la trajectoire."}, {"id": "D", "text": "La composante normale est nulle dans un virage.", "is_correct": false, "explanation": "Dans un virage, la direction de la vitesse change, donc la composante normale est précisément présente. Elle n’est nulle que si la trajectoire est rectiligne."}, {"id": "E", "text": "Si la vitesse augmente, la composante normale disparaît.", "is_correct": false, "explanation": "L’augmentation de la vitesse n’annule pas la composante normale ; au contraire, comme \\(a_n\\propto v^2\\), elle peut devenir plus grande. La disparition dépend de la courbure, pas de la seule variation de vitesse."}], "coverage_label": "Accélération : définition et unité", "learning_objective": "Utiliser la formule de la composante normale et relier son rôle à la courbure de la trajectoire.", "correction_summary": "La relation correcte est \\(a_n = v^2/R\\), avec une direction vers le centre de courbure. Le piège est de confondre le sens de variation avec la formule elle-même.", "course_clarification": "La composante normale apparaît dès que la trajectoire n’est pas rectiligne. Plus la vitesse est grande ou plus le rayon de courbure est petit, plus \\(a_n\\) est importante.", "source_refs": []}], "subpart_id": "5", "anchor_slide_id": "S6", "question_count_target": 5, "title": "QCM - Accélération : définition et unité"}</script>
+  <script>
+    (function () {
+      const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
+      const app = document.getElementById("quiz-app");
+      const viewerMode = app.dataset.viewerMode || "user";
+      const isMaster = viewerMode === "master";
+      const nextHref = app.dataset.nextHref || "";
+      const homeHref = app.dataset.homeHref || "index.html";
+      const storageKey = "static-quiz::" + viewerMode + "::" + quiz.quiz_id;
+      const finalQuizDrawCount = 25;
+
+      function normalizeCoverageLabel(question) {
+        if (question.coverage_label) {
+          return String(question.coverage_label).trim();
+        }
+        if (Array.isArray(question.source_refs)) {
+          const courseRef = question.source_refs.find((ref) => ref && ref.source_type === "course");
+          if (courseRef) {
+            return String(courseRef.label || courseRef.locator || question.question_id).trim();
+          }
+        }
+        return String(question.question_id || "");
+      }
+
+      function shuffle(items) {
+        const copy = items.slice();
+        for (let index = copy.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          const current = copy[index];
+          copy[index] = copy[swapIndex];
+          copy[swapIndex] = current;
+        }
+        return copy;
+      }
+
+      function selectBalancedQuestionIds() {
+        if (quiz.quiz_type !== "final") {
+          return [];
+        }
+        const sampleSize = Math.min(finalQuizDrawCount, quiz.questions.length);
+        const buckets = new Map();
+        quiz.questions.forEach((question) => {
+          const label = normalizeCoverageLabel(question);
+          if (!buckets.has(label)) {
+            buckets.set(label, []);
+          }
+          buckets.get(label).push(question.question_id);
+        });
+        const labels = shuffle(Array.from(buckets.keys()));
+        labels.forEach((label) => {
+          buckets.set(label, shuffle(buckets.get(label)));
+        });
+        const selected = [];
+        while (selected.length < sampleSize) {
+          let progressed = false;
+          labels.forEach((label) => {
+            if (selected.length >= sampleSize) {
+              return;
+            }
+            const bucket = buckets.get(label) || [];
+            if (!bucket.length) {
+              return;
+            }
+            selected.push(bucket.pop());
+            buckets.set(label, bucket);
+            progressed = true;
+          });
+          if (!progressed) {
+            break;
+          }
+        }
+        return selected;
+      }
+
+      function getQuestions() {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(state.questionIds) ? state.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        const sampled = ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+        return sampled.length ? sampled : quiz.questions.slice(0, Math.min(finalQuizDrawCount, quiz.questions.length));
+      }
+
+      function buildInitialState() {
+        return {
+          currentIndex: 0,
+          answers: {},
+          evaluated: {},
+          submitted: false,
+          finished: false,
+          questionIds: quiz.quiz_type === "final" ? selectBalancedQuestionIds() : [],
+        };
+      }
+
+      function loadState() {
+        try {
+          const raw = window.localStorage.getItem(storageKey);
+          if (!raw) {
+            return buildInitialState();
+          }
+          const candidate = Object.assign(buildInitialState(), JSON.parse(raw));
+          if (quiz.quiz_type === "final" && (!Array.isArray(candidate.questionIds) || !candidate.questionIds.length)) {
+            candidate.questionIds = selectBalancedQuestionIds();
+          }
+          const total = getQuestionsForState(candidate).length;
+          candidate.currentIndex = total ? Math.max(0, Math.min(candidate.currentIndex || 0, total - 1)) : 0;
+          return candidate;
+        } catch (error) {
+          return buildInitialState();
+        }
+      }
+
+      function getQuestionsForState(candidateState) {
+        if (quiz.quiz_type !== "final") {
+          return quiz.questions;
+        }
+        const ids = Array.isArray(candidateState.questionIds) ? candidateState.questionIds : [];
+        const questionMap = new Map(quiz.questions.map((question) => [question.question_id, question]));
+        return ids.map((questionId) => questionMap.get(questionId)).filter(Boolean);
+      }
+
+      let state = loadState();
+
+      function syncFinalQuizHero() {
+        if (quiz.quiz_type !== "final" || quiz.questions.length <= finalQuizDrawCount) {
+          return;
+        }
+        const hero = document.querySelector(".quiz-hero");
+        if (!hero) {
+          return;
+        }
+        const description = hero.querySelector("p:not(.eyebrow)");
+        if (description) {
+          description.textContent =
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
+        }
+        const metaPills = hero.querySelectorAll(".meta-pill");
+        if (metaPills.length) {
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
+        }
+      }
+
+      function persist() {
+        window.localStorage.setItem(storageKey, JSON.stringify(state));
+      }
+
+      function restartQuiz() {
+        state = buildInitialState();
+        persist();
+        render();
+      }
+
+      function getQuestion(index) {
+        return getQuestions()[index];
+      }
+
+      function getCorrectIds(question) {
+        return question.options.filter((option) => option.is_correct).map((option) => option.id);
+      }
+
+      function isMulti(question) {
+        return getCorrectIds(question).length > 1;
+      }
+
+      function getSelected(questionId) {
+        return Array.isArray(state.answers[questionId]) ? state.answers[questionId] : [];
+      }
+
+      function setSelected(question, values) {
+        state.answers[question.question_id] = values;
+        persist();
+      }
+
+      function sameSelection(left, right) {
+        if (left.length !== right.length) {
+          return false;
+        }
+        const leftSorted = left.slice().sort();
+        const rightSorted = right.slice().sort();
+        return leftSorted.every((value, index) => value === rightSorted[index]);
+      }
+
+      function scoreQuestion(question) {
+        return sameSelection(getSelected(question.question_id), getCorrectIds(question));
+      }
+
+      function scoreQuiz() {
+        const questions = getQuestions();
+        let correct = 0;
+        questions.forEach((question) => {
+          if (scoreQuestion(question)) {
+            correct += 1;
+          }
+        });
+        return {
+          correct: correct,
+          total: questions.length,
+          percent: questions.length ? Math.round((correct / questions.length) * 100) : 0,
+        };
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function formatRichText(value) {
+        const escaped = escapeHtml(value || "");
+        return escaped
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\n/g, "<br>");
+      }
+
+      function queueMathJax() {
+        if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+          window.MathJax.typesetPromise([app]).catch(function () {});
+        }
+      }
+
+      function renderSources(question) {
+        if (!Array.isArray(question.source_refs) || !question.source_refs.length) {
+          return "";
+        }
+        const webRefs = question.source_refs.filter((ref) => ref.source_type === "web");
+        if (!webRefs.length) {
+          return "";
+        }
+        const items = webRefs
+          .map((ref) => {
+            if (ref.url) {
+              return "<a href='" + escapeHtml(ref.url) + "' target='_blank' rel='noreferrer'>" + escapeHtml(ref.label) + "</a>";
+            }
+            return "<span>" + escapeHtml(ref.label) + "</span>";
+          })
+          .join("");
+        return "<div class='review-meta'><span><strong>" + (isMaster ? "Références web" : "Sources web") + "</strong></span>" + items + "</div>";
+      }
+
+      function renderQuestionMeta(question) {
+        if (!isMaster) {
+          return renderSources(question);
+        }
+        return (
+          "<div class='review-meta'>" +
+            "<span><strong>Objectif</strong> " + formatRichText(question.learning_objective || "") + "</span>" +
+            renderSources(question) +
+          "</div>"
+        );
+      }
+
+      function renderTeachingPanel(question) {
+        const cards = [];
+        if (question.learning_objective) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>Objectif de la question</strong>" +
+              "<p>" + formatRichText(question.learning_objective) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.correction_summary) {
+          cards.push(
+            "<article class='teaching-card emphasis'>" +
+              "<strong class='teaching-card-title'>Pourquoi cette correction</strong>" +
+              "<p>" + formatRichText(question.correction_summary) + "</p>" +
+            "</article>"
+          );
+        }
+        if (question.course_clarification) {
+          cards.push(
+            "<article class='teaching-card'>" +
+              "<strong class='teaching-card-title'>A retenir</strong>" +
+              "<p>" + formatRichText(question.course_clarification) + "</p>" +
+            "</article>"
+          );
+        }
+        if (!cards.length) {
+          return "";
+        }
+        return "<section class='teaching-grid'>" + cards.join("") + "</section>";
+      }
+
+      function renderOption(question, option, mode) {
+        const selected = getSelected(question.question_id);
+        const selectedSet = new Set(selected);
+        const evaluated = state.evaluated[question.question_id];
+        const reveal = mode === "review" || !!evaluated || state.submitted;
+        let classes = "option-item";
+        if (reveal && option.is_correct) {
+          classes += " option-correct";
+        } else if (reveal && selectedSet.has(option.id) && !option.is_correct) {
+          classes += " option-wrong";
+        }
+        const inputType = isMulti(question) ? "checkbox" : "radio";
+        const checked = selectedSet.has(option.id) ? " checked" : "";
+        const disabled = reveal ? " disabled" : "";
+        const name = "q-" + question.question_id;
+        let explanation = "";
+        if (reveal && (isMaster || option.is_correct || selectedSet.has(option.id))) {
+          explanation = "<div class='option-explanation'>" + formatRichText(option.explanation || "") + "</div>";
+        }
+        return (
+          "<label class='" + classes + "'>" +
+            "<div class='option-head'>" +
+              "<input class='option-input' type='" + inputType + "' name='" + name + "' value='" + escapeHtml(option.id) + "'" + checked + disabled + ">" +
+              "<div>" +
+                "<div class='option-text'>" + formatRichText(option.text) + "</div>" +
+              "</div>" +
+            "</div>" +
+            explanation +
+          "</label>"
+        );
+      }
+
+      function renderQuestionPanel(question) {
+        const selected = getSelected(question.question_id);
+        const evaluated = state.evaluated[question.question_id];
+        const questions = getQuestions();
+        const indexLabel = "Question " + (state.currentIndex + 1) + "/" + questions.length;
+        let actions = "";
+
+        if (quiz.quiz_type === "subpart") {
+          if (!evaluated) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='validate-question'" + (selected.length ? "" : " disabled") + ">Valider ma réponse</button>" +
+              "</div>";
+          } else if (state.currentIndex < questions.length - 1) {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='next-question'>Question suivante</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          } else {
+            actions =
+              "<div class='quiz-actions'>" +
+                "<button type='button' class='quiz-button primary' data-action='finish-subpart'>Terminer le QCM</button>" +
+                "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              "</div>";
+          }
+        } else {
+          actions =
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='prev-question'" + (state.currentIndex === 0 ? " disabled" : "") + ">Question précédente</button>" +
+              "<button type='button' class='quiz-button' data-action='next-question'" + (state.currentIndex >= questions.length - 1 ? " disabled" : "") + ">Question suivante</button>" +
+              "<button type='button' class='quiz-button primary' data-action='submit-final'>Soumettre le QCM final</button>" +
+            "</div>";
+        }
+
+        return (
+          "<section class='quiz-panel'>" +
+            "<p class='question-kicker'>" + indexLabel + "</p>" +
+            "<h2 class='question-title'>" + formatRichText(question.prompt) + "</h2>" +
+            renderQuestionMeta(question) +
+            "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "single")).join("") + "</div>" +
+            ((!!evaluated || state.submitted) ? renderTeachingPanel(question) : "") +
+            actions +
+          "</section>"
+        );
+      }
+
+      function renderSubpartSummary() {
+        const score = scoreQuiz();
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat du QCM</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer ce QCM</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>";
+      }
+
+      function renderFinalSummary() {
+        const score = scoreQuiz();
+        const questions = getQuestions();
+        const review = questions.map((question, index) => {
+          const correct = scoreQuestion(question);
+          return (
+            "<article class='review-card'>" +
+              "<p class='question-kicker'>Question " + (index + 1) + "/" + questions.length + "</p>" +
+              "<h3 class='question-title'>" + formatRichText(question.prompt) + "</h3>" +
+              renderQuestionMeta(question) +
+              "<div class='option-list'>" + question.options.map((option) => renderOption(question, option, "review")).join("") + "</div>" +
+              renderTeachingPanel(question) +
+              "<div class='review-meta'><span><strong>Résultat</strong> " + (correct ? "Correct" : "Incorrect") + "</span></div>" +
+            "</article>"
+          );
+        }).join("");
+        let continueLink = "";
+        if (nextHref) {
+          continueLink = "<a href='" + escapeHtml(nextHref) + "'>Continuer le parcours</a>";
+        }
+        app.innerHTML =
+          "<section class='review-card'>" +
+            "<h2 class='question-title'>Résultat final</h2>" +
+            "<div class='results-grid'>" +
+              "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
+              "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
+            "</div>" +
+            "<div class='quiz-actions'>" +
+              "<button type='button' class='quiz-button' data-action='restart'>Recommencer le QCM final</button>" +
+              continueLink +
+              "<a href='" + escapeHtml(homeHref) + "'>Retour au sommaire</a>" +
+            "</div>" +
+          "</section>" +
+          "<section class='review-list'>" + review + "</section>";
+      }
+
+      function render() {
+        syncFinalQuizHero();
+        if (quiz.quiz_type === "subpart" && state.finished) {
+          renderSubpartSummary();
+          queueMathJax();
+          return;
+        }
+        if (quiz.quiz_type === "final" && state.submitted) {
+          renderFinalSummary();
+          queueMathJax();
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        app.innerHTML = renderQuestionPanel(question);
+        queueMathJax();
+      }
+
+      app.addEventListener("change", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLInputElement) || !target.name.startsWith("q-")) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+        if (quiz.quiz_type === "subpart" && state.evaluated[question.question_id]) {
+          return;
+        }
+        const selected = Array.from(app.querySelectorAll("input[name='q-" + question.question_id + "']:checked"))
+          .map((input) => input.value);
+        setSelected(question, selected);
+        render();
+      });
+
+      app.addEventListener("click", function (event) {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) {
+          return;
+        }
+        const action = target.dataset.action;
+        if (!action) {
+          return;
+        }
+        const question = getQuestion(state.currentIndex);
+
+        if (action === "restart") {
+          restartQuiz();
+          return;
+        }
+
+        if (action === "next-question" && state.currentIndex < getQuestions().length - 1) {
+          state.currentIndex += 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "prev-question" && state.currentIndex > 0) {
+          state.currentIndex -= 1;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "validate-question") {
+          const selected = getSelected(question.question_id);
+          if (!selected.length) {
+            return;
+          }
+          state.evaluated[question.question_id] = {
+            selected: selected,
+            correct: getCorrectIds(question),
+            is_correct: scoreQuestion(question),
+          };
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "finish-subpart") {
+          state.finished = true;
+          persist();
+          render();
+          return;
+        }
+
+        if (action === "submit-final") {
+          state.submitted = true;
+          persist();
+          render();
+        }
+      });
+
+      render();
+    }());
+  </script>
+</body>
+</html>

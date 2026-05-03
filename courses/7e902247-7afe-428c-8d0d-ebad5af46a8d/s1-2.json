@@ -1,0 +1,64 @@
+{
+  "slide_id": "S1-2",
+  "subpart_id": "S1",
+  "title": "IDG : implantation sur moteur et liaison mécanique",
+  "objective": "Décrire l’implantation d’un IDG sur moteur et sa connexion mécanique.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s1-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Implantation sur le moteur",
+      "text": null,
+      "bullets": [
+        "Un **Integrated Drive Generator (IDG)** est associé à **chaque moteur** : la répartition est une relation un pour un, sans mutualisation entre moteurs.",
+        "Chaque IDG est **directement connecté** au **gearbox pad** du moteur correspondant ; le point d’interface mécanique est donc localisé sur le réducteur moteur.",
+        "Le terme **Generator (GEN)** désigne le générateur de la chaîne électrique AC représentée autour de l’IDG."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Chaîne mécanique et contrôle",
+      "text": null,
+      "bullets": [
+        "La génération est **entraînée par le moteur** via cette liaison mécanique : la rotation du moteur alimente la production électrique.",
+        "La connexion directe au **gearbox pad** impose de repérer l’IDG sur le moteur correspondant lors de la lecture du synoptique.",
+        "Chaque IDG est **contrôlé et surveillé** par sa **Generator Control Unit (GCU)** ; une source technique d’appui le situe sur le **réducteur accessoires moteur** (*engine accessory gearbox*)."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus Safety First — Preventing Loss of Engine Generators on A320 Family, A330 and A340 Aircraft",
+      "locator": "IDG monté sur moteur, entraînement mécanique et surveillance GCU",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    },
+    {
+      "source_type": "web",
+      "label": "Boeing Distribution — Integrated Drive Generator 761574B=8D",
+      "locator": "research",
+      "url": "https://shop.boeing.com/cpd/bdi_761574b=8d#UkRfQkRJ"
+    }
+  ],
+  "course_reference_note": "Le schéma place un IDG par moteur, relié directement au gearbox pad du moteur correspondant. La chaîne visible est moteur → IDG → AC SYSTEM, avec surveillance par la GCU associée.",
+  "teacher_notes": "Faire repérer la chaîne moteur → gearbox pad → IDG et insister sur le lien direct entre le moteur et la génération AC."
+}

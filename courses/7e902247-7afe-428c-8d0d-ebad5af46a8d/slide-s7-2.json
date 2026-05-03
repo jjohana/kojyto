@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S7-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S7-2-Q1",
+      "prompt": "Quel énoncé décrit correctement le rôle du **CBMU** ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le CBMU pilote directement la gestion des contacteurs électriques.",
+          "is_correct": false,
+          "explanation": "La gestion des contacteurs est assurée par les **ECMU** ; le CBMU a un rôle de surveillance des disjoncteurs, pas de pilotage des contacteurs."
+        },
+        {
+          "id": "B",
+          "text": "Le CBMU transforme l’énergie AC en énergie DC pour alimenter les charges.",
+          "is_correct": false,
+          "explanation": "La conversion AC/DC n’est pas sa mission. Le CBMU observe des états de protection et signale des statuts sur l’ECAM."
+        },
+        {
+          "id": "C",
+          "text": "Le CBMU sert uniquement à mesurer la température des IDG.",
+          "is_correct": false,
+          "explanation": "La mesure des températures d’IDG concerne la supervision des sources électriques, pas la fonction du CBMU."
+        },
+        {
+          "id": "D",
+          "text": "Le CBMU surveille l’état des C/Bs et des RCCBs.",
+          "is_correct": true,
+          "explanation": "C’est exactement la fonction indiquée : le CBMU contrôle le statut des disjoncteurs surveillés et des RCCBs."
+        },
+        {
+          "id": "E",
+          "text": "Le CBMU remplace la distribution AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION.",
+          "is_correct": false,
+          "explanation": "Les blocs de distribution d’énergie sont distincts du CBMU ; celui-ci ne distribue pas l’énergie, il surveille des protections."
+        }
+      ],
+      "coverage_label": "CBMU : surveillance des C/B et des RCCBs",
+      "learning_objective": "Identifier la fonction principale du CBMU dans la surveillance électrique.",
+      "correction_summary": "La bonne réponse est celle qui associe le CBMU à la surveillance des C/Bs et des RCCBs. Le piège consiste à lui attribuer un rôle de commande ou de distribution d’énergie.",
+      "course_clarification": "Un CBMU est une unité de surveillance. Il observe l’état de certains disjoncteurs et transmet l’information utile à l’affichage ECAM.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-2-Q2",
+      "prompt": "Que signale le **CBMU** sur la page **C/B ECAM** ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La position des contacteurs AC & DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Les contacteurs AC & DC SYSTEM sont gérés par les ECMU et la distribution associée, pas par l’indication d’un déclenchement de C/B."
+        },
+        {
+          "id": "B",
+          "text": "Tout C/B surveillé qui est déclenché ou tiré manuellement.",
+          "is_correct": true,
+          "explanation": "Le texte précise que le CBMU indique sur l’ECAM les C/B surveillés qui ont déclenché ou qui ont été tirés manuellement."
+        },
+        {
+          "id": "C",
+          "text": "Le niveau de carburant des réservoirs électriques.",
+          "is_correct": false,
+          "explanation": "Aucun lien avec la surveillance des disjoncteurs : la page C/B ECAM concerne les protections électriques."
+        },
+        {
+          "id": "D",
+          "text": "Uniquement les sources AC principales comme GEN 1 et GEN 2.",
+          "is_correct": false,
+          "explanation": "GEN 1 et GEN 2 relèvent d’une autre page de supervision électrique ; la page C/B ECAM liste des disjoncteurs et leurs statuts."
+        },
+        {
+          "id": "E",
+          "text": "Les valeurs de fréquence 400 Hz des générateurs.",
+          "is_correct": false,
+          "explanation": "La fréquence 400 Hz concerne la surveillance des sources AC, pas l’affichage des états de C/B surveillés."
+        }
+      ],
+      "coverage_label": "CBMU : indication sur la page C/B ECAM",
+      "learning_objective": "Reconnaître l’information affichée par le CBMU sur la page ECAM.",
+      "correction_summary": "Le CBMU signale les C/B surveillés qui ont déclenché ou qui ont été tirés à la main. Le piège est de confondre cette page avec celle des sources électriques ou des contacteurs.",
+      "course_clarification": "La page C/B ECAM centralise les états des disjoncteurs surveillés. Un état anormal y apparaît pour attirer l’attention sur une protection ouverte ou actionnée manuellement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-2-Q3",
+      "prompt": "À propos des C/B surveillés par le **CBMU**, quel énoncé est correct ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les C/B surveillés sont généralement de couleur verte.",
+          "is_correct": true,
+          "explanation": "C’est la convention visuelle donnée : les C/B surveillés sont généralement verts."
+        },
+        {
+          "id": "B",
+          "text": "Les C/B surveillés sont généralement de couleur rouge.",
+          "is_correct": false,
+          "explanation": "Le rouge n’est pas la couleur indiquée pour les C/B surveillés ; le support associe plutôt le vert à ces C/B."
+        },
+        {
+          "id": "C",
+          "text": "La couleur des C/B surveillés est toujours jaune, sans exception.",
+          "is_correct": false,
+          "explanation": "Le document parle d’une couleur généralement verte, donc pas d’une couleur unique imposée comme jaune."
+        },
+        {
+          "id": "D",
+          "text": "La couleur n’a aucun intérêt car aucun repérage visuel n’existe.",
+          "is_correct": false,
+          "explanation": "Au contraire, le cours associe une couleur visuelle aux C/B surveillés pour les repérer rapidement."
+        },
+        {
+          "id": "E",
+          "text": "La couleur verte signifie que le C/B a forcément déclenché.",
+          "is_correct": false,
+          "explanation": "Vert ne veut pas dire déclenché ; il s’agit d’un repérage visuel des C/B surveillés, pas d’un statut de défaut."
+        }
+      ],
+      "coverage_label": "Couleur des C/B surveillés",
+      "learning_objective": "Mémoriser le code visuel associé aux C/B surveillés.",
+      "correction_summary": "La bonne information à retenir est la couleur verte des C/B surveillés. Le piège classique est de confondre code visuel et état de déclenchement.",
+      "course_clarification": "Le vert sert ici à repérer visuellement les C/B surveillés. La couleur ne décrit pas, à elle seule, un défaut ou un déclenchement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-2-Q4",
+      "prompt": "Quels éléments sont explicitement associés à la surveillance du **CBMU** ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les **ECMU** et les contacteurs AC & DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Les ECMU pilotent la gestion des contacteurs, mais ce n’est pas l’objet de surveillance du CBMU."
+        },
+        {
+          "id": "B",
+          "text": "Les générateurs **GEN 1** et **GEN 2**.",
+          "is_correct": false,
+          "explanation": "Ces éléments appartiennent à la supervision des sources AC, pas à la fonction du CBMU sur les disjoncteurs."
+        },
+        {
+          "id": "C",
+          "text": "Les bus de charge **AC LOAD DISTRIBUTION** et **DC LOAD DISTRIBUTION**.",
+          "is_correct": false,
+          "explanation": "Ces bus relèvent de la distribution électrique ; le CBMU ne surveille pas directement ces blocs dans la fonction décrite ici."
+        },
+        {
+          "id": "D",
+          "text": "Le levier **EMER GEN MAN ON**.",
+          "is_correct": false,
+          "explanation": "Ce levier concerne la génération électrique d’urgence, pas la surveillance des C/Bs et des RCCBs."
+        },
+        {
+          "id": "E",
+          "text": "Les **C/Bs** et les **RCCBs**.",
+          "is_correct": true,
+          "explanation": "Le schéma et le texte mentionnent explicitement que le CBMU surveille l’état des C/Bs et des RCCBs."
+        }
+      ],
+      "coverage_label": "Éléments surveillés par le CBMU",
+      "learning_objective": "Distinguer les équipements surveillés par le CBMU des autres éléments du réseau électrique.",
+      "correction_summary": "Le CBMU est lié aux C/Bs et aux RCCBs. Le piège est de mélanger cette surveillance avec la gestion des contacteurs ou la supervision des générateurs.",
+      "course_clarification": "Un C/B est un circuit breaker, donc une protection électrique. Un RCCB est aussi une protection surveillée par le CBMU sur la page ECAM.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S7-2-Q5",
+      "prompt": "Parmi les affirmations suivantes, laquelle est correcte concernant les unités de gestion et de surveillance ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le **CBMU** est l’unité qui pilote les contacteurs AC & DC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Le CBMU surveille les disjoncteurs ; le pilotage des contacteurs relève des ECMU."
+        },
+        {
+          "id": "B",
+          "text": "Les **ECMU** servent à afficher l’état des C/B et des RCCBs sur la page C/B ECAM.",
+          "is_correct": false,
+          "explanation": "L’affichage des C/B et RCCBs sur la page ECAM est la fonction du CBMU, pas des ECMU."
+        },
+        {
+          "id": "C",
+          "text": "Les **ECMU** pilotent la gestion des contacteurs électriques.",
+          "is_correct": true,
+          "explanation": "C’est le rôle attribué aux ECMU : elles assurent la gestion des contacteurs électriques."
+        },
+        {
+          "id": "D",
+          "text": "Les **C/Bs** sont gérés par les ECMU comme des contacteurs de puissance.",
+          "is_correct": false,
+          "explanation": "Un C/B est une protection de circuit, pas un contacteur de puissance. Il ne remplit donc pas la même fonction."
+        },
+        {
+          "id": "E",
+          "text": "Le CBMU distribue directement l’énergie vers AC LOAD DISTRIBUTION et DC LOAD DISTRIBUTION.",
+          "is_correct": false,
+          "explanation": "La distribution d’énergie est assurée par les blocs de distribution et les contacteurs associés ; le CBMU ne fait que superviser des protections."
+        }
+      ],
+      "coverage_label": "ECMU et CBMU",
+      "learning_objective": "Associer correctement chaque unité à sa fonction : gestion des contacteurs ou surveillance des disjoncteurs.",
+      "correction_summary": "Les ECMU gèrent les contacteurs, tandis que le CBMU surveille les C/Bs et les RCCBs. Le piège est d’inverser les rôles entre pilotage et surveillance.",
+      "course_clarification": "Une ECMU agit sur des contacteurs électriques. Le CBMU, lui, remonte l’état des protections et alerte sur leur statut via l’ECAM.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S7",
+  "anchor_slide_id": "S7-2",
+  "question_count_target": 5,
+  "title": "QCM - CBMU : surveillance des C/B et des RCCBs"
+}

@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S3-4",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S3-4-Q1",
+      "prompt": "Concernant le réseau AC général et le réseau AC essentiel, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le réseau AC essentiel alimente en permanence l’ensemble du AC SYSTEM en fonctionnement normal.",
+          "is_correct": false,
+          "explanation": "Le réseau AC essentiel n'est pas l'alimentation principale en régime normal ; il intervient en secours pour maintenir une continuité minimale."
+        },
+        {
+          "id": "B",
+          "text": "Le réseau AC général est réservé uniquement à l'alimentation des batteries.",
+          "is_correct": false,
+          "explanation": "Le réseau AC général distribue l'énergie AC du système, il ne se limite pas à la recharge ou à l'alimentation des batteries."
+        },
+        {
+          "id": "C",
+          "text": "Le réseau AC essentiel est indépendant de toute logique de secours.",
+          "is_correct": false,
+          "explanation": "Au contraire, il appartient à la logique de secours et est activé dans une situation dégradée."
+        },
+        {
+          "id": "D",
+          "text": "Le réseau AC essentiel prend le relais lorsque les sources normales ne sont plus disponibles.",
+          "is_correct": true,
+          "explanation": "C'est l'idée centrale du mode dégradé : quand les alimentations normales ne sont pas disponibles, une partie minimale de l'alimentation AC reste assurée par le réseau AC essentiel."
+        },
+        {
+          "id": "E",
+          "text": "Le réseau AC essentiel ne peut pas recevoir d'énergie en l'absence de sources normales.",
+          "is_correct": false,
+          "explanation": "Le schéma montre justement une alimentation de secours possible via le static inverter alimenté par les batteries."
+        }
+      ],
+      "coverage_label": "Réseau AC essentiel",
+      "learning_objective": "Distinguer le réseau AC général du réseau AC essentiel en situation dégradée.",
+      "correction_summary": "La bonne idée est que le réseau AC essentiel assure une continuité minimale quand les sources normales ne sont plus disponibles. Le piège consiste à confondre réseau principal et réseau de secours.",
+      "course_clarification": "Le réseau AC général correspond à la distribution AC normale. Le réseau AC essentiel désigne la partie maintenue en situation dégradée pour conserver les fonctions prioritaires.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-4-Q2",
+      "prompt": "Lorsque aucune autre source AC n'est disponible, quelle affirmation décrit correctement l'alimentation de secours ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les batteries alimentent directement le AC SYSTEM sans convertisseur intermédiaire.",
+          "is_correct": false,
+          "explanation": "Le schéma montre un passage par le STATIC INVERTER ; les batteries ne fournissent pas directement l'énergie AC au réseau."
+        },
+        {
+          "id": "B",
+          "text": "Un static inverter alimenté par les batteries peut fournir une partie du AC system appelée AC Essential electrical system network.",
+          "is_correct": true,
+          "explanation": "C'est exactement la solution de secours indiquée : les batteries alimentent le static inverter, qui alimente ensuite une partie du réseau AC essentielle."
+        },
+        {
+          "id": "C",
+          "text": "Le STATIC INVERTER transforme une alimentation DC en alimentation AC de secours.",
+          "is_correct": false,
+          "explanation": "L'équipement est bien un onduleur statique : il sert à convertir une énergie fournie par les batteries pour alimenter une partie du réseau AC."
+        },
+        {
+          "id": "D",
+          "text": "L'AC Essential electrical system network correspond à l'ensemble complet du AC SYSTEM.",
+          "is_correct": false,
+          "explanation": "Il s'agit seulement d'une partie du système AC, utilisée pour la continuité minimale, pas de la totalité du réseau."
+        },
+        {
+          "id": "E",
+          "text": "Le static inverter est alimenté par les IDG et par l'APU GEN en priorité.",
+          "is_correct": false,
+          "explanation": "Le schéma précise au contraire que cette solution intervient quand les autres sources AC ne sont plus disponibles."
+        }
+      ],
+      "coverage_label": "STATIC INVERTER et batteries",
+      "learning_objective": "Identifier la chaîne batteries \u001a static inverter \u001a réseau AC essentiel.",
+      "correction_summary": "La chaîne correcte est : batteries \u001a static inverter \u001a partie essentielle du réseau AC. Le piège est de croire à une alimentation directe ou à un usage des sources normales en même temps.",
+      "course_clarification": "Un static inverter convertit une alimentation batterie pour produire du AC. Cette solution ne couvre qu'une partie prioritaire du réseau AC, pas tout le système.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-4-Q3",
+      "prompt": "À propos de l'alimentation des batteries et du static inverter, quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "BATTERY 1 et BATTERY 2 alimentent le STATIC INVERTER.",
+          "is_correct": true,
+          "explanation": "C'est la relation explicitement mise en avant par le schéma : les batteries fournissent l'énergie au static inverter."
+        },
+        {
+          "id": "B",
+          "text": "Le STATIC INVERTER charge BATTERY 1 et BATTERY 2 pendant le vol.",
+          "is_correct": false,
+          "explanation": "La fonction montrée est l'alimentation du convertisseur par les batteries, pas leur recharge par celui-ci."
+        },
+        {
+          "id": "C",
+          "text": "BATTERY 1 alimente uniquement l'EMER GEN GCU.",
+          "is_correct": false,
+          "explanation": "L'EMER GEN GCU est l'unité de commande et de surveillance de l'EMER GEN ; le schéma ne présente pas BATTERY 1 comme son alimentation exclusive."
+        },
+        {
+          "id": "D",
+          "text": "BATTERY 2 remplace à elle seule l'ensemble des sources AC normales.",
+          "is_correct": false,
+          "explanation": "Une seule batterie ne remplace pas toutes les sources normales ; la logique affichée passe par le static inverter et seulement pour une partie du réseau AC."
+        },
+        {
+          "id": "E",
+          "text": "Les batteries n'interviennent jamais dans une alimentation AC de secours.",
+          "is_correct": false,
+          "explanation": "Le schéma montre précisément leur rôle dans la chaîne de secours via le static inverter."
+        }
+      ],
+      "coverage_label": "BATTERY 1 / BATTERY 2",
+      "learning_objective": "Repérer le rôle des batteries dans l'alimentation de secours du réseau AC.",
+      "correction_summary": "Les deux batteries alimentent le static inverter, qui fournit ensuite une partie du réseau AC essentiel. Le piège est d'inverser le sens de l'énergie ou de surestimer le rôle d'une seule batterie.",
+      "course_clarification": "Les batteries sont des sources DC utilisées ici comme énergie de secours. Elles n'alimentent pas directement le réseau AC : elles passent par le static inverter.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-4-Q4",
+      "prompt": "Sur la commande de l'EMER GEN, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L'EMER GEN fonctionne sans aucune unité de contrôle dédiée.",
+          "is_correct": false,
+          "explanation": "Le schéma indique au contraire une unité dédiée : l'EMER GEN GCU."
+        },
+        {
+          "id": "B",
+          "text": "L'EMER GEN GCU est le même bloc que le STATIC INVERTER.",
+          "is_correct": false,
+          "explanation": "Ce sont deux éléments distincts du schéma : l'un contrôle l'EMER GEN, l'autre convertit l'énergie pour le réseau AC essentiel."
+        },
+        {
+          "id": "C",
+          "text": "Le CSM/G Generator Control Unit ne surveille que les batteries.",
+          "is_correct": false,
+          "explanation": "Le texte l'associe à l'EMER GEN, pas à une surveillance des batteries seules."
+        },
+        {
+          "id": "D",
+          "text": "L'EMER GEN GCU commande exclusivement l'APU GEN.",
+          "is_correct": false,
+          "explanation": "L'APU GEN est associé à d'autres blocs de contrôle ; l'EMER GEN GCU est lié à l'EMER GEN."
+        },
+        {
+          "id": "E",
+          "text": "L'EMER GEN est commandé et surveillé par l'EMER GEN GCU, aussi appelé CSM/G Generator Control Unit.",
+          "is_correct": true,
+          "explanation": "Le texte du schéma donne explicitement cette double fonction de commande et de surveillance, ainsi que l'autre nom de l'unité."
+        }
+      ],
+      "coverage_label": "EMER GEN GCU",
+      "learning_objective": "Identifier le rôle de l'EMER GEN GCU et son appellation alternative.",
+      "correction_summary": "La bonne réponse relie l'EMER GEN à son unité de contrôle dédiée, l'EMER GEN GCU ou CSM/G Generator Control Unit. Le piège est de confondre ce bloc avec les autres unités de contrôle du schéma.",
+      "course_clarification": "Une GCU est une unité de contrôle et de surveillance du générateur associé. Ici, l'EMER GEN GCU est le bloc spécifique de l'EMER GEN, distinct des autres contrôleurs.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-4-Q5",
+      "prompt": "Comment l'indisponibilité des sources normales est-elle mise en évidence sur le schéma de secours ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Des croix vertes montrent que les sources normales sont disponibles et prioritaires.",
+          "is_correct": false,
+          "explanation": "Le marquage visible est rouge et non vert ; il exprime l'indisponibilité, pas la disponibilité."
+        },
+        {
+          "id": "B",
+          "text": "Le schéma montre que seules les sources extérieures sont indisponibles, tandis que les IDG restent disponibles.",
+          "is_correct": false,
+          "explanation": "Les croix rouges concernent aussi les IDG/ENG et l'APU, pas seulement les sources externes."
+        },
+        {
+          "id": "C",
+          "text": "Des croix rouges barrent IDG/ENG, EXTERNAL POWER A & B et APU pour signaler l'indisponibilité de ces sources.",
+          "is_correct": true,
+          "explanation": "Le schéma utilise des croix rouges sur ces blocs pour montrer qu'ils sont écartés ou indisponibles dans la situation dégradée."
+        },
+        {
+          "id": "D",
+          "text": "L'APU est représenté comme la seule source normale encore utilisable.",
+          "is_correct": false,
+          "explanation": "Le schéma de secours montre l'ensemble des sources normales écartées, y compris l'APU."
+        },
+        {
+          "id": "E",
+          "text": "Aucune marque visuelle ne permet de distinguer le mode dégradé du mode normal.",
+          "is_correct": false,
+          "explanation": "La présence des croix rouges est précisément l'indice visuel qui distingue la situation dégradée."
+        }
+      ],
+      "coverage_label": "Indisponibilité des sources normales",
+      "learning_objective": "Interpréter les indices visuels indiquant l'indisponibilité des sources normales.",
+      "correction_summary": "Les croix rouges signalent l'indisponibilité des sources normales : IDG/ENG, EXTERNAL POWER A & B et APU. Le piège consiste à mal lire la couleur ou à oublier qu'elles sont toutes barrées.",
+      "course_clarification": "Une croix rouge sur un bloc signifie qu'il n'est pas retenu pour alimenter le réseau dans cette configuration. Le schéma met ainsi en avant le passage vers l'alimentation de secours.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S3",
+  "anchor_slide_id": "S3-4",
+  "question_count_target": 5,
+  "title": "QCM - Réseau AC essentiel et indisponibilité des sources normales"
+}

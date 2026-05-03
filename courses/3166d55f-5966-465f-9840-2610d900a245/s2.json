@@ -1,0 +1,60 @@
+{
+  "slide_id": "S2",
+  "subpart_id": "2",
+  "title": "Système, point matériel et référentiel",
+  "objective": "Identifier l’objet étudié, la simplification en point matériel et le référentiel de description.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Trois notions à distinguer",
+      "text": null,
+      "bullets": [
+        "**Système étudié** : objet dont on veut décrire le mouvement ; il peut s’agir d’un piston, d’une hélice, d’un avion ou d’un chariot.",
+        "**Point matériel** : modèle de simplification où l’objet est ramené à un point unique ; sa masse est alors considérée comme concentrée en ce point.",
+        "**Référentiel** : cadre de description du mouvement ; le **référentiel terrestre** sert pour le mouvement global, le **référentiel lié à l’aéronef** pour les mouvements internes. Le choix du référentiel modifie l’écriture du mouvement."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Vecteur position du point M",
+      "text": "Dans un repère cartésien, la position de M est décrite par ses coordonnées. Les vecteurs unitaires **i**, **j** et **k** portent les axes du repère.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\vec r(t)=x(t)\\,\\vec i+y(t)\\,\\vec j+z(t)\\,\\vec k"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "University Physics Volume 1 – 4.5 Relative Motion in One and Two Dimensions (OpenStax)",
+      "locator": "section 4.5",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-5-relative-motion-in-one-and-two-dimensions"
+    },
+    {
+      "source_type": "web",
+      "label": "Cinématique et Trajectoires — Programmation Scientifique avec Python (Université Claude Bernard Lyon 1)",
+      "locator": "cours de cinématique",
+      "url": "https://perso.univ-lyon1.fr/marc.buffat/COURS/BOOK_PYTHON_SCIENTIFIQUE_HTML/MGC2028L/cours/OutilsMeca_cinematique.html"
+    }
+  ],
+  "course_reference_note": "La distinction entre **système**, **point matériel** et **référentiel** apparaît dès l’introduction. La position de M est ensuite écrite sous forme vectorielle avec les coordonnées x(t), y(t), z(t).",
+  "teacher_notes": "Faire verbaliser la différence entre l’objet réel et son modèle de point matériel. Insister sur l’idée clé : le mouvement est décrit relativement à un référentiel choisi, sans changer l’objet observé."
+}

@@ -1,0 +1,47 @@
+{
+  "slide_id": "S13",
+  "subpart_id": "8",
+  "title": "Grandeurs angulaires et linéaires",
+  "objective": "Maîtriser les grandeurs angulaires et leurs liens avec les grandeurs linéaires.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s13-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Définitions et application",
+      "text": null,
+      "bullets": [
+        "**θ** est l’**angle** de rotation, exprimé en **radians** ; **ω** est la **vitesse angulaire** ; **α** est l’**accélération angulaire**. Les unités associées sont respectivement **rad**, **rad/s** et **rad/s²**.",
+        "Les grandeurs **linéaires** décrivent l’effet au point situé à la distance **R** de l’axe : **v** est la vitesse tangentielle, **a_t** l’accélération tangentielle et **a_n** l’accélération normale, dirigée vers le centre.",
+        "Pour une **hélice** de rayon **0,8 m** tournant à **1500 tr/min**, on obtient **ω = 1500 × 2π / 60 ≈ 157 rad/s** puis **v = ωR ≈ 126 m/s** au bout de pale. La conversion **tr/min → rad/s** est indispensable avant tout calcul."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations de base",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\theta\\ \\text{en rad} \\qquad \\omega=\\frac{d\\theta}{dt}\\ \\text{(rad/s)} \\qquad \\alpha=\\frac{d\\omega}{dt}\\ \\text{(rad/s}^2\\text{)}\\\\[4pt] v=\\omega R \\qquad a_t=\\alpha R \\qquad a_n=\\omega^2R=\\frac{v^2}{R}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [],
+  "course_reference_note": "Grandeurs angulaires de base : θ, ω et α, avec leurs unités. Les liens avec les grandeurs linéaires et l’exemple d’hélice donnent l’application immédiate.",
+  "teacher_notes": "Faire lire d’abord les unités, puis la chaîne logique θ → ω → α → v/a. Insister sur le fait que les grandeurs linéaires concernent un point situé à la distance R de l’axe."
+}

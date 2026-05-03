@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S4-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S4-2-Q1",
+      "prompt": "À propos du rendement propulsif d’un turbopropulseur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le rendement propulsif est meilleur quand on accélère une faible masse d’air à très grande vitesse.",
+          "is_correct": false,
+          "explanation": "Cette stratégie est plutôt défavorable au rendement propulsif, car une forte énergie cinétique est perdue dans le jet."
+        },
+        {
+          "id": "B",
+          "text": "La traction efficace est obtenue sans intervention de l’hélice.",
+          "is_correct": false,
+          "explanation": "L’hélice est précisément l’organe qui transforme la puissance disponible en traction utile."
+        },
+        {
+          "id": "C",
+          "text": "La puissance utile n’est pas liée à la vitesse de vol.",
+          "is_correct": false,
+          "explanation": "La relation donnée relie bien puissance, traction et vitesse de vol : la vitesse intervient directement dans l’équilibre énergétique."
+        },
+        {
+          "id": "D",
+          "text": "Il faut accélérer une grande masse d’air pour obtenir un rendement propulsif intéressant.",
+          "is_correct": true,
+          "explanation": "C’est le principe recherché : l’hélice permet de donner une variation de quantité de mouvement à beaucoup d’air plutôt qu’à peu d’air très vite."
+        },
+        {
+          "id": "E",
+          "text": "Le gaz d’échappement assure à lui seul la totalité de la traction.",
+          "is_correct": false,
+          "explanation": "Le document distingue la traction fournie par l’hélice et une éventuelle poussée résiduelle des gaz, qui reste secondaire."
+        }
+      ],
+      "coverage_label": "Principe du turbopropulseur",
+      "learning_objective": "Identifier le principe physique qui explique l’efficacité propulsive de l’hélice.",
+      "correction_summary": "La bonne idée est d’accélérer une grande masse d’air : l’hélice crée la traction utile avec un bon rendement. Le piège est de confondre propulsion efficace et jet très rapide.",
+      "course_clarification": "L’hélice transforme une puissance mécanique en traction. Le point clé est le déplacement d’un grand débit d’air avec une variation de vitesse modérée, ce qui limite les pertes.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-2-Q2",
+      "prompt": "Pour la relation puissance-propulsion d’un turbopropulseur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le rendement d’hélice vaut ici exactement 1,2.",
+          "is_correct": false,
+          "explanation": "Le document indique au contraire une valeur voisine de 0,8 pour \\(\\eta_h\\), pas une valeur supérieure à 1."
+        },
+        {
+          "id": "B",
+          "text": "La relation s’écrit \\(P \\times \\eta_h = T \\times V_0\\).",
+          "is_correct": true,
+          "explanation": "Cette égalité relie la puissance moteur utile à la puissance propulsive, avec le rendement d’hélice \\(\\eta_h\\)."
+        },
+        {
+          "id": "C",
+          "text": "La traction est exprimée en watts et la puissance en newtons.",
+          "is_correct": false,
+          "explanation": "Les unités sont inverses de cette proposition : la puissance s’exprime en watts et la traction en newtons."
+        },
+        {
+          "id": "D",
+          "text": "La vitesse de vol \\(V_0\\) n’intervient pas dans la relation.",
+          "is_correct": false,
+          "explanation": "La vitesse de vol est au contraire un terme essentiel de la relation, car la puissance propulsive dépend de \\(T\\) et de \\(V_0\\)."
+        },
+        {
+          "id": "E",
+          "text": "Le rendement d’hélice est noté \\(\\eta_h\\) et il est pris voisin de 0,2.",
+          "is_correct": false,
+          "explanation": "La valeur donnée dans le support est voisine de 0,8, ce qui traduit un rendement élevé de l’hélice."
+        }
+      ],
+      "coverage_label": "Puissances",
+      "learning_objective": "Lire et utiliser la relation entre puissance, traction, vitesse de vol et rendement d’hélice.",
+      "correction_summary": "La formule correcte est \\(P\\eta_h = TV_0\\) avec \\(\\eta_h \\approx 0{,}8\\). Le piège classique est d’inverser les grandeurs ou de négliger la vitesse de vol.",
+      "course_clarification": "Cette relation exprime une conversion de puissance en traction utile. À vitesse donnée, plus \\(T\\) est grande, plus la puissance requise augmente.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-2-Q3",
+      "prompt": "À propos de la puissance sur l’arbre d’un turbopropulseur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La puissance sur l’arbre s’écrit \\(P = C \\times \\dfrac{2\\pi N_h}{60}\\).",
+          "is_correct": true,
+          "explanation": "La formule donnée relie directement la puissance au couple \\(C\\) et à la vitesse de rotation de l’hélice \\(N_h\\)."
+        },
+        {
+          "id": "B",
+          "text": "La puissance sur l’arbre dépend uniquement de la poussée résiduelle.",
+          "is_correct": false,
+          "explanation": "La poussée résiduelle intervient dans l’ESHP, pas dans la définition de base de la puissance sur l’arbre."
+        },
+        {
+          "id": "C",
+          "text": "Dans cette formule, \\(N_h\\) représente la vitesse de vol.",
+          "is_correct": false,
+          "explanation": "\\(N_h\\) désigne la vitesse de rotation de l’hélice, pas la vitesse de l’avion."
+        },
+        {
+          "id": "D",
+          "text": "Le couple \\(C\\) s’exprime en newtons par seconde.",
+          "is_correct": false,
+          "explanation": "Le couple s’exprime en newton-mètre, car il combine une force et un bras de levier."
+        },
+        {
+          "id": "E",
+          "text": "Le facteur \\(60\\) sert à convertir les watts en chevaux-vapeur.",
+          "is_correct": false,
+          "explanation": "Le \\(60\\) vient de la conversion des tours par minute en tours par seconde dans l’expression de la vitesse angulaire."
+        }
+      ],
+      "coverage_label": "Puissances",
+      "learning_objective": "Relier la puissance sur l’arbre au couple et à la vitesse de rotation de l’hélice.",
+      "correction_summary": "La bonne expression est \\(P = C\\,2\\pi N_h/60\\). Le piège est de confondre vitesse de rotation, vitesse de vol et unités du couple.",
+      "course_clarification": "La puissance mécanique transmise à l’hélice dépend de ce que fournit l’arbre. Le couple mesure l’effort de rotation, et la vitesse de rotation transforme cet effort en puissance.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-2-Q4",
+      "prompt": "Concernant la puissance totale équivalente ESHP, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 SHP fournit environ 25 lb de poussée résiduelle.",
+          "is_correct": false,
+          "explanation": "La valeur donnée est d’environ 2,5 lb de poussée résiduelle pour 1 SHP, soit dix fois moins que cette proposition."
+        },
+        {
+          "id": "B",
+          "text": "L’exemple PW120 conduit à \\(ESHP = 2050\\).",
+          "is_correct": false,
+          "explanation": "Avec 2 000 SHP et 250 lb de poussée résiduelle, on obtient \\(2000 + 250/2,5 = 2100\\), pas 2050."
+        },
+        {
+          "id": "C",
+          "text": "La poussée résiduelle est exprimée en watts dans la formule.",
+          "is_correct": false,
+          "explanation": "Le support indique une expression en livres (lb) pour la poussée résiduelle, pas en watts."
+        },
+        {
+          "id": "D",
+          "text": "ESHP correspond uniquement à la puissance fournie par la turbine, sans terme supplémentaire.",
+          "is_correct": false,
+          "explanation": "L’ESHP intègre justement une contribution additionnelle liée à la poussée résiduelle des gaz d’échappement."
+        },
+        {
+          "id": "E",
+          "text": "La relation est \\(ESHP = SHP + \\dfrac{Jet\\ Thrust}{2,5}\\).",
+          "is_correct": true,
+          "explanation": "Cette écriture additionne la puissance sur l’arbre et l’équivalent en puissance de la poussée résiduelle."
+        }
+      ],
+      "coverage_label": "Puissances",
+      "learning_objective": "Interpréter l’ESHP et réaliser un calcul simple avec la poussée résiduelle.",
+      "correction_summary": "L’ESHP additionne la puissance sur l’arbre et un équivalent de la poussée résiduelle. Le piège est d’oublier le coefficient 2,5 ou de mal convertir l’exemple numérique.",
+      "course_clarification": "La poussée résiduelle n’est pas négligeable dans certains cas, mais elle reste traduite en puissance équivalente. Cela permet de comparer plus facilement les performances globales.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-2-Q5",
+      "prompt": "À propos de la consommation spécifique d’un turbopropulseur, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle s’exprime uniquement en newtons.",
+          "is_correct": false,
+          "explanation": "Le document indique des unités de type kg/h.W ou lb/h.SHP, donc des rapports de consommation sur puissance, pas des newtons."
+        },
+        {
+          "id": "B",
+          "text": "Une valeur plus faible de \\(C_{sp}\\) signifie une consommation plus élevée à puissance égale.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : une consommation spécifique plus faible traduit une meilleure efficacité."
+        },
+        {
+          "id": "C",
+          "text": "La consommation spécifique s’écrit \\(C_{sp} = \\dfrac{C_h}{P}\\).",
+          "is_correct": true,
+          "explanation": "Cette formule relie la masse de carburant consommée à la puissance fournie, ce qui permet une comparaison des performances."
+        },
+        {
+          "id": "D",
+          "text": "Le support donne comme exemple le PW127F avec \\(C_{sp} = 0{,}459\\) lb.h.SHP.",
+          "is_correct": false,
+          "explanation": "L’exemple mentionne bien 0,459 lb/h.SHP au take-off, pas lb.h.SHP dans une autre écriture ni une autre valeur."
+        },
+        {
+          "id": "E",
+          "text": "La consommation spécifique ne sert pas à comparer des moteurs entre eux.",
+          "is_correct": false,
+          "explanation": "Le document précise au contraire qu’elle permet de comparer les turbopropulseurs entre eux."
+        }
+      ],
+      "coverage_label": "Consommation spécifique",
+      "learning_objective": "Lire la définition de la consommation spécifique et en comprendre l’intérêt comparatif.",
+      "correction_summary": "La consommation spécifique est un rapport carburant/puissance : plus elle est faible, plus le moteur est efficace. Le piège est de confondre une grandeur de consommation avec une grandeur de force.",
+      "course_clarification": "Cette grandeur mesure le carburant nécessaire pour produire une puissance donnée. Elle sert à comparer l’efficacité de différents moteurs ou de différents régimes de fonctionnement.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S4",
+  "anchor_slide_id": "S4-2",
+  "question_count_target": 5,
+  "title": "QCM - Principe du turbopropulseur"
+}

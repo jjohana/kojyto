@@ -1,0 +1,108 @@
+{
+  "slide_id": "S11-3",
+  "subpart_id": "S11",
+  "title": "Anti-patinage, pneus, dirigibilité et surveillance",
+  "objective": "Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s11-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Dispositif",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "**Anti-skid**",
+          "Des génératrices tachymétriques mesurent la vitesse de chaque roue et modulent la pression hydraulique.",
+          "Évite le **blocage** au sol, au freinage brusque ou si la roue tourne trop vite à l’atterrissage."
+        ],
+        [
+          "**Autobrake** / anti-brake",
+          "Freinage automatique avec taux de décélération sélectionné par le pilote, après l’impact et sans action sur les pédales.",
+          "Sécurise l’arrêt jusqu’à l’immobilisation de l’aéronef."
+        ],
+        [
+          "**Pneumatique diagonal**",
+          "Nappes croisées ; la bande de roulement subit toutes les flexions des flancs.",
+          "Déformation importante de la surface de contact."
+        ],
+        [
+          "**Pneumatique radial**",
+          "Carcasse souple disposée radialement et ceinturée métalliquement.",
+          "Surface de contact **large et constante**."
+        ],
+        [
+          "**Dimensions M, N, A**",
+          "En France : **M** et **N** en millimètres, **A** en pouces ; à l’étranger, toutes les cotes sont en pouces.",
+          "**M** = diamètre extérieur ; **N** = largeur ; **A** = diamètre de jante."
+        ],
+        [
+          "**Usures et défauts**",
+          "Sous-gonflé, correct, surgonflé ; défauts : **méplat** et **coupure**.",
+          "L’état du pneu renseigne sur la pression de gonflage et sur le niveau de sécurité au roulage."
+        ],
+        [
+          "**Shimmy** / anti-shimmy",
+          "Phénomène vibratoire observé sur les roues libres à une certaine vitesse ; correction par vérin à double ressorts ou vérin hydraulique.",
+          "Réduit les oscillations du train avant."
+        ],
+        [
+          "**Dirigeabilité** / rappel dans l’axe",
+          "Orientation de la roue avant, parfois des roues principales, depuis les palonniers ou un volant ; système de came rétractable pour recentrer.",
+          "Maintient l’axe au décollage et à l’atterrissage."
+        ],
+        [
+          "**Surveillance**",
+          "TPMS (Tire Pressure Monitoring System), BTMS (Brake Temperature Monitoring System), OPMS (Oleo Pressure Monitoring System).",
+          "Alerte précoce sur la pression des pneus, la température des freins et la pression hydraulique des amortisseurs."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Freinage assisté : proportionnalité",
+      "text": "La pression hydraulique envoyée aux freins reste proportionnelle à l’effort sur la pédale tant que le système fonctionne normalement. Ici, **P\\_{frein}** désigne la pression de freinage, **F\\_{pédale}** l’effort appliqué par le pilote, et **k** le coefficient de proportionnalité.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "P_{\\text{frein}} = k\\,F_{\\text{pédale}}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "AC 25-22 - Brakes and Braking Systems Certification Tests and Analysis",
+      "locator": "FAA Advisory Circular",
+      "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_25-22.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "AC 20-97B - Aircraft Tire Maintenance and Operational Practices with Change 1",
+      "locator": "FAA Advisory Circular",
+      "url": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/22044"
+    },
+    {
+      "source_type": "web",
+      "label": "Boeing 737-700 | Federal Aviation Administration",
+      "locator": "research",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/N471WN"
+    }
+  ],
+  "course_reference_note": "Pages 6 et 7 : freinage direct et assisté, anti-skid, autobrake, pneus, shimmy, dirigibilité et surveillance. Les alertes TPMS, BTMS, OPMS et BRAKES HOT sont à mémoriser.",
+  "teacher_notes": "Faire relier chaque ligne à un risque concret : perte d’adhérence, vibration, échauffement ou dérive d’axe. Insister sur le lien entre pression de gonflage, usure du pneu et sécurité au roulage."
+}

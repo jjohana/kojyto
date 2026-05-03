@@ -1,0 +1,112 @@
+{
+  "slide_id": "S5",
+  "subpart_id": "4",
+  "title": "Vitesse moyenne et mesures de vitesse",
+  "objective": "Compléter la notion de vitesse par la vitesse moyenne et les moyens de mesure.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s5-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Comparer la vitesse moyenne, la vitesse instantanée et les instruments",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Idée clé"
+        ],
+        [
+          "**Vitesse moyenne**",
+          "Rapport entre la **distance parcourue** \\(\\Delta s\\) et la **durée** \\(\\Delta t\\) sur l’intervalle \\([t_1,t_2]\\)."
+        ],
+        [
+          "**Vitesse instantanée**",
+          "Valeur de la vitesse à un **instant précis** ; elle met en évidence les variations du mouvement."
+        ],
+        [
+          "**Anémomètre**",
+          "Mesure une **vitesse de l’air** : pertinent quand on observe l’écoulement autour d’un aéronef."
+        ],
+        [
+          "**GPS (Global Positioning System)**",
+          "Fournit une vitesse liée à la **position par rapport au sol** ; utile pour la navigation."
+        ],
+        [
+          "**Tachymètre**",
+          "Mesure la **vitesse de rotation** d’un arbre, d’un moteur ou d’une pièce tournante."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir pour choisir la mesure",
+      "text": null,
+      "bullets": [
+        "La **vitesse moyenne** lisse les variations : elle décrit un déplacement global, mais pas les changements instantanés de rythme ou de direction.",
+        "Le bon instrument dépend du **phénomène observé** et du **référentiel** : vitesse de l’air, vitesse par rapport au sol ou vitesse de rotation ne se mesurent pas avec le même outil."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relation de base",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "v_m = \\frac{\\Delta s}{\\Delta t} \\quad ; \\quad v(t)=\\frac{ds}{dt}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "OpenStax — Instantaneous Velocity and Speed",
+      "locator": "distinction vitesse moyenne / instantanée",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/3-2-instantaneous-velocity-and-speed"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Pitot-Static Tube / Speedometer",
+      "locator": "mesure de la vitesse de l’air",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/pitot-static-tube-speedometer/"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — GPS",
+      "locator": "position, vitesse et temps",
+      "url": "https://www.faa.gov/about/office_org/headquarters_offices/ato/service_units/techops/navservices/gnss/gps"
+    },
+    {
+      "source_type": "web",
+      "label": "Tachometer — Encyclopaedia Britannica",
+      "locator": "research",
+      "url": "https://www.britannica.com/technology/tachometer"
+    },
+    {
+      "source_type": "web",
+      "label": "Meteorological Measurement System – Instruments — NASA",
+      "locator": "research",
+      "url": "https://www.nasa.gov/meteorological-measurement-system-instruments/"
+    }
+  ],
+  "course_reference_note": "La vitesse moyenne est donnée par le rapport distance parcourue / durée écoulée. La mesure de la vitesse dépend du contexte : air, sol ou rotation.",
+  "teacher_notes": "Faire verbaliser la différence entre **moyenne** et **instantanée** avant de choisir l’instrument adapté. Insister sur le **référentiel** : un GPS ne mesure pas la même vitesse qu’un anémomètre ou un tachymètre."
+}

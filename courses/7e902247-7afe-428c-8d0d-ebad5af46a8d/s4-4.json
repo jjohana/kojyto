@@ -1,0 +1,93 @@
+{
+  "slide_id": "S4-4",
+  "subpart_id": "S4",
+  "title": "APU BATTERY et alimentation de l’APU STARTER",
+  "objective": "Décrire la chaîne d’alimentation dédiée au démarrage de l’APU.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s4-4-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Chaîne d’alimentation du démarrage APU",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Rôle dans la chaîne",
+          "Point clé"
+        ],
+        [
+          "**APU BATTERY**",
+          "Source de **courant continu (DC)** pour l’amorçage du démarrage.",
+          "Elle fournit l’énergie initiale de la séquence dédiée à l’APU."
+        ],
+        [
+          "**APU TR**",
+          "**Transformateur-redresseur (TR)** : conversion et mise à disposition de l’énergie DC pour la chaîne APU.",
+          "Il s’inscrit dans le chemin d’alimentation lié au démarrage, pas dans une alimentation générale indifférenciée."
+        ],
+        [
+          "**APU STARTER**",
+          "Démarreur de l’APU alimenté via **APU TR / APU BATTERY**.",
+          "Le chemin d’alimentation reste spécifique à la séquence de démarrage APU."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture opérationnelle",
+      "text": null,
+      "bullets": [
+        "La **batterie APU** joue le rôle de source de départ : elle permet d’engager la séquence quand l’APU n’est pas encore autonome.",
+        "Le **TR** assure la partie conversion/rectification utile à la chaîne de démarrage ; la tension disponible est alors adaptée au **starter APU**.",
+        "Une fois l’APU lancé, la logique d’alimentation change : on ne lit plus la même chaîne que pour le démarrage initial."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "SKYbrary — Auxiliary Power Unit (APU)",
+      "locator": "APU start and electrical role",
+      "url": "https://skybrary.aero/index.php/articles/auxiliary-power-unit-apu"
+    },
+    {
+      "source_type": "web",
+      "label": "SKYbrary — Transformer Rectifier Unit (TRU)",
+      "locator": "TRU conversion AC to DC",
+      "url": "https://skybrary.aero/index.php/articles/transformer-rectifier-unit-tru"
+    },
+    {
+      "source_type": "web",
+      "label": "Safety Investigation Report (PDF) — SKYbrary Bookshelf",
+      "locator": "research",
+      "url": "https://skybrary.aero/sites/default/files/bookshelf/3014.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Batteries | SKYbrary Aviation Safety",
+      "locator": "research",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-batteries?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Le schéma DC GENERAL fait apparaître le **STARTER APU** relié à **APU TR** et **APU BATTERY**. La chaîne de démarrage est dédiée et lisible comme un chemin spécifique.",
+  "teacher_notes": "Insister sur la lecture en chaîne : **APU BATTERY** pour l’amorçage, **APU TR** pour la conversion/mise à disposition de l’énergie, puis **APU STARTER**. Éviter de confondre cette séquence avec l’alimentation générale du réseau DC."
+}

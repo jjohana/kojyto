@@ -1,0 +1,66 @@
+{
+  "slide_id": "S20",
+  "subpart_id": "15",
+  "title": "Conclusion",
+  "objective": "Retenir la place centrale de la cinématique dans l’aéronautique et ses prolongements vers la dynamique et la simulation.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s20-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "La **cinématique** relie la position, la vitesse et l’accélération ; elle donne une lecture fiable du mouvement avant tout calcul de force ou de performance.",
+        "Les grandeurs **angulaires** et **linéaires** restent indissociables en aéronautique : \u0003c9 s’exprime en rad/s, \u0003b1 en rad/s², et le rayon R permet de passer d’une rotation à un effet mesurable sur une pale, un rotor ou un organe mobile.",
+        "La **dynamique** complète cette description en intégrant les forces, tandis que la **simulation numérique** sert à tester, vérifier et prévoir le comportement d’un système réel à partir d’un modèle."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations de base",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "v=\\frac{dx}{dt},\\quad a=\\frac{dv}{dt},\\quad v=\\omega R,\\quad a_t=\\alpha R,\\quad a_n=\\omega^2R=\\frac{v^2}{R}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Technical Discipline: Dynamic Systems | Federal Aviation Administration",
+      "locator": "rubrique Dynamic Systems",
+      "url": "https://www.faa.gov/aircraft/air_cert/step/disciplines/dynamic_systems"
+    },
+    {
+      "source_type": "web",
+      "label": "Flight Simulation - NASA",
+      "locator": "page Flight Simulation",
+      "url": "https://www.nasa.gov/setmo/flight-simulation/"
+    },
+    {
+      "source_type": "web",
+      "label": "Aviary: A New NASA Software Platform for Aircraft Modelling - NASA",
+      "locator": "research",
+      "url": "https://www.nasa.gov/aeronautics/aviary-software-overview/"
+    }
+  ],
+  "course_reference_note": "Clôture sur la chaîne utile : décrire un mouvement, calculer ses grandeurs, puis interpréter ses effets. Les relations de base restent celles de la vitesse, de l’accélération et du mouvement circulaire.",
+  "teacher_notes": "Faire relier les trois niveaux : cinématique → dynamique → simulation. Insister sur la cohérence des unités et sur l’interprétation physique de ω, α, v, a_t et a_n."
+}

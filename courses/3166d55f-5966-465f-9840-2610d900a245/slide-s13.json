@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S13",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S13-Q1",
+      "prompt": "À propos des grandeurs angulaires utilisées pour décrire une rotation, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vitesse angulaire est notée \\(\\alpha\\) et s’exprime en rad/s.",
+          "is_correct": false,
+          "explanation": "\\(\\alpha\\) désigne l’accélération angulaire, pas la vitesse angulaire. La vitesse angulaire est notée \\(\\omega\\) et s’exprime en rad/s."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération angulaire est définie par \\(\\alpha = d\\theta/dt\\).",
+          "is_correct": false,
+          "explanation": "La dérivée de l’angle par rapport au temps donne la vitesse angulaire \\(\\omega\\), pas l’accélération angulaire."
+        },
+        {
+          "id": "C",
+          "text": "La vitesse angulaire s’exprime en m/s.",
+          "is_correct": false,
+          "explanation": "Le m/s est une unité de vitesse linéaire. La vitesse angulaire s’exprime en rad/s."
+        },
+        {
+          "id": "D",
+          "text": "L’angle est noté \\(\\theta\\) et s’exprime en radians.",
+          "is_correct": true,
+          "explanation": "L’angle de rotation est bien repéré par \\(\\theta\\) et l’unité attendue est le radian."
+        },
+        {
+          "id": "E",
+          "text": "L’accélération angulaire s’exprime en rad/s.",
+          "is_correct": false,
+          "explanation": "L’accélération angulaire est une variation de \\(\\omega\\) par unité de temps, donc son unité est rad/s²."
+        }
+      ],
+      "coverage_label": "Grandeurs angulaires",
+      "learning_objective": "Identifier les grandeurs angulaires \\(\\theta\\), \\(\\omega\\), \\(\\alpha\\) et leurs unités.",
+      "correction_summary": "La seule affirmation correcte est celle qui associe \\(\\theta\\) au radian. Le piège classique consiste à confondre les notations \\(\\omega\\) et \\(\\alpha\\), ou à donner à l’angle une unité de vitesse.",
+      "course_clarification": "L’angle décrit la position de rotation, la vitesse angulaire décrit sa variation dans le temps, et l’accélération angulaire décrit la variation de cette vitesse. Les unités doivent rester cohérentes : rad, rad/s et rad/s².",
+      "source_refs": []
+    },
+    {
+      "question_id": "S13-Q2",
+      "prompt": "Sur les relations entre grandeurs angulaires et dérivées temporelles, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération angulaire vérifie \\(\\alpha = d\\theta/dt\\).",
+          "is_correct": false,
+          "explanation": "Cette dérivée définit \\(\\omega\\), pas \\(\\alpha\\). L’accélération angulaire est la dérivée de \\(\\omega\\)."
+        },
+        {
+          "id": "B",
+          "text": "La vitesse angulaire vérifie \\(\\omega = d\\theta/dt\\).",
+          "is_correct": true,
+          "explanation": "La vitesse angulaire est bien la dérivée temporelle de l’angle de rotation."
+        },
+        {
+          "id": "C",
+          "text": "La vitesse angulaire est la dérivée de \\(\\alpha\\) par rapport au temps.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse de la définition donnée : \\(\\alpha\\) est la dérivée de \\(\\omega\\), pas l’inverse."
+        },
+        {
+          "id": "D",
+          "text": "L’accélération angulaire vérifie \\(\\alpha = d\\omega/dt\\).",
+          "is_correct": false,
+          "explanation": "L’accélération angulaire est bien définie ainsi ; cette proposition est donc vraie et ne doit pas être cochée ici."
+        },
+        {
+          "id": "E",
+          "text": "L’angle \\(\\theta\\) est la dérivée de \\(\\omega\\) par rapport au temps.",
+          "is_correct": false,
+          "explanation": "La dérivée de \\(\\omega\\) donne \\(\\alpha\\). Pour obtenir \\(\\theta\\), il faut intégrer la vitesse angulaire."
+        }
+      ],
+      "coverage_label": "Dérivées temporelles en rotation",
+      "learning_objective": "Relier correctement \\(\\theta\\), \\(\\omega\\) et \\(\\alpha\\) via les dérivées temporelles.",
+      "correction_summary": "La bonne réponse est la définition de \\(\\omega\\) comme dérivée de \\(\\theta\\). Le piège est de permuter les dérivées : \\(\\alpha\\) dérive de \\(\\omega\\), pas de \\(\\theta\\) directement.",
+      "course_clarification": "En rotation, la lecture des dérivées suit une chaîne simple : angle \\(\\rightarrow\\) vitesse angulaire \\(\\rightarrow\\) accélération angulaire. Cette hiérarchie sert à passer d’une description géométrique à une description dynamique.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S13-Q3",
+      "prompt": "Pour un point situé à la distance \\(R\\) de l’axe de rotation, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vitesse linéaire vérifie \\(v = \\omega R\\).",
+          "is_correct": true,
+          "explanation": "C’est la relation de liaison entre la grandeur angulaire \\(\\omega\\) et la vitesse tangentielle \\(v\\) au rayon \\(R\\)."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération tangentielle vérifie \\(a_t = \\omega R\\).",
+          "is_correct": false,
+          "explanation": "\\(\\omega R\\) donne une vitesse linéaire, pas une accélération. L’accélération tangentielle est liée à \\(\\alpha\\)."
+        },
+        {
+          "id": "C",
+          "text": "L’accélération normale vérifie \\(a_n = \\alpha R\\).",
+          "is_correct": false,
+          "explanation": "\\(\\alpha R\\) correspond à l’accélération tangentielle. L’accélération normale dépend de \\(\\omega^2\\)."
+        },
+        {
+          "id": "D",
+          "text": "La vitesse linéaire vérifie \\(v = \\alpha R\\).",
+          "is_correct": false,
+          "explanation": "Cette relation est fausse : \\(\\alpha R\\) décrit une variation de vitesse tangentielle, pas la vitesse elle-même."
+        },
+        {
+          "id": "E",
+          "text": "L’accélération normale vérifie \\(a_n = vR\\).",
+          "is_correct": false,
+          "explanation": "La bonne écriture est \\(a_n = \\omega^2R\\) ou encore \\(a_n = v^2/R\\). Le produit \\(vR\\) n’a pas la bonne dimension."
+        }
+      ],
+      "coverage_label": "Liens angulaires-linéaires",
+      "learning_objective": "Associer correctement \\(v\\), \\(a_t\\) et \\(a_n\\) aux grandeurs angulaires.",
+      "correction_summary": "La seule relation correcte ici est \\(v=\\omega R\\). Le piège principal est de confondre vitesse et accélération, ou de permuter \\(\\alpha\\) et \\(\\omega\\).",
+      "course_clarification": "La vitesse linéaire d’un point en rotation est tangentielle au cercle décrit par ce point. L’accélération se décompose en une composante tangentielle liée à \\(\\alpha\\) et une composante normale liée à \\(\\omega\\).",
+      "source_refs": []
+    },
+    {
+      "question_id": "S13-Q4",
+      "prompt": "À propos de l’exemple de l’hélice de rayon 0,8 m tournant à 1500 tr/min, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vitesse linéaire vaut environ \\(v = 157\\) m/s.",
+          "is_correct": false,
+          "explanation": "157 m/s correspond ici à la vitesse angulaire en rad/s, pas à la vitesse linéaire. La vitesse linéaire se calcule ensuite par \\(v=\\omega R\\)."
+        },
+        {
+          "id": "B",
+          "text": "La vitesse linéaire vaut environ \\(v = 126\\) m/s.",
+          "is_correct": false,
+          "explanation": "Cette valeur est bien celle annoncée pour l’exemple ; elle est donc vraie et ne doit pas être cochée ici."
+        },
+        {
+          "id": "C",
+          "text": "Le rayon \\(R\\) n’intervient pas dans le calcul de \\(v\\).",
+          "is_correct": false,
+          "explanation": "Le rayon intervient directement dans \\(v=\\omega R\\). À vitesse angulaire fixée, plus \\(R\\) augmente, plus la vitesse linéaire augmente."
+        },
+        {
+          "id": "D",
+          "text": "1500 tr/min correspond à 15 tr/s.",
+          "is_correct": false,
+          "explanation": "1500 tr/min correspondent à 25 tr/s, car on divise par 60 et non par 100."
+        },
+        {
+          "id": "E",
+          "text": "La vitesse angulaire vaut environ \\(\\omega = 157\\) rad/s.",
+          "is_correct": true,
+          "explanation": "La conversion de 1500 tr/min conduit bien à environ 157 rad/s après passage en secondes et en radians."
+        }
+      ],
+      "coverage_label": "Conversion tr/min vers rad/s",
+      "learning_objective": "Savoir convertir une vitesse de rotation en rad/s et en déduire une vitesse linéaire.",
+      "correction_summary": "La bonne proposition est la valeur de \\(\\omega\\). Le piège est de confondre la vitesse angulaire avec la vitesse linéaire, ou de mal convertir les tours par minute.",
+      "course_clarification": "Une vitesse donnée en tr/min doit être convertie en rad/s avant d’utiliser \\(v=\\omega R\\). Le rayon fixe ensuite la vitesse tangentielle du point étudié.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S13-Q5",
+      "prompt": "Sur les composantes d’accélération en mouvement circulaire, quelle proposition est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération normale vérifie \\(a_n = \\alpha R\\).",
+          "is_correct": false,
+          "explanation": "\\(\\alpha R\\) correspond à la composante tangentielle, pas à la composante normale."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération normale vérifie \\(a_n = \\omega^2R\\).",
+          "is_correct": false,
+          "explanation": "Cette relation est bien correcte et donc ne doit pas être cochée ici."
+        },
+        {
+          "id": "C",
+          "text": "L’accélération tangentielle vérifie \\(a_t = \\alpha R\\).",
+          "is_correct": true,
+          "explanation": "Cette relation relie l’accélération tangentielle à l’accélération angulaire et au rayon de rotation."
+        },
+        {
+          "id": "D",
+          "text": "L’accélération tangentielle est indépendante de \\(R\\).",
+          "is_correct": false,
+          "explanation": "Le rayon intervient directement dans \\(a_t = \\alpha R\\) ; à \\(\\alpha\\) fixé, la composante tangentielle augmente avec \\(R\\)."
+        },
+        {
+          "id": "E",
+          "text": "L’accélération normale est nulle dès que \\(\\alpha = 0\\).",
+          "is_correct": false,
+          "explanation": "Même si \\(\\alpha=0\\), il peut rester une accélération normale si la rotation se fait à vitesse angulaire constante non nulle : \\(a_n = \\omega^2R\\)."
+        }
+      ],
+      "coverage_label": "Accélérations tangentielle et normale",
+      "learning_objective": "Distinguer \\(a_t\\) et \\(a_n\\) et associer chacune à la bonne formule.",
+      "correction_summary": "La seule proposition correcte est celle sur \\(a_t\\). Le piège est de croire que l’absence d’accélération angulaire annule toute accélération alors que la composante normale peut rester non nulle.",
+      "course_clarification": "L’accélération tangentielle traduit la variation de la valeur de la vitesse, tandis que l’accélération normale traduit le changement de direction. En mouvement circulaire, ces deux effets peuvent coexister ou non selon la situation.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "8",
+  "anchor_slide_id": "S13",
+  "question_count_target": 5,
+  "title": "QCM - Grandeurs angulaires et linéaires"
+}

@@ -1,0 +1,109 @@
+{
+  "slide_id": "S4-1",
+  "subpart_id": "S4",
+  "title": "Architecture DC : vue d’ensemble",
+  "objective": "Présenter les grandes familles de sources qui alimentent le système électrique continu (DC SYSTEM) et garder visibles les liaisons avec le système électrique alternatif (AC SYSTEM).",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s4-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Familles de sources et fonctions",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "**Famille**",
+          "**Éléments visibles**",
+          "**Rôle dans l’architecture**",
+          "**Lecture rapide**"
+        ],
+        [
+          "Réseau amont AC",
+          "générateurs à entraînement direct intégrés (Integrated Drive Generator, **IDG**), générateur de l’unité auxiliaire de puissance (Auxiliary Power Unit, **APU GEN**), alimentation externe",
+          "alimente le **AC SYSTEM**, qui sert de source amont pour la génération DC",
+          "la chaîne part d’abord du réseau AC"
+        ],
+        [
+          "Conversion AC → DC",
+          "transformeurs-redresseurs (Transformer Rectifier, **TR**), dont les chaînes **TR 1**, **TR 2**, **ESS** et **APU TR**",
+          "convertit l’AC en courant continu pour le **DC SYSTEM**",
+          "c’est le cœur de la génération DC"
+        ],
+        [
+          "Batteries et gestion de charge",
+          "Battery 1, Battery 2, APU Battery, limiteurs de charge batterie (Battery Charge Limiter, **BCL**)",
+          "assure la réserve d’énergie et la charge contrôlée des batteries",
+          "continuité de service en cas de perte des sources normales"
+        ],
+        [
+          "Secours et maintien partiel",
+          "générateur de secours (**EMER GEN**), inverter statique (**STATIC INVERTER**), EMER GEN GCU",
+          "maintient une alimentation minimale quand les sources normales disparaissent",
+          "la logique de secours reste liée aux batteries et au réseau AC"
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "Le **DC SYSTEM** ne part pas d’une source isolée : il résulte d’une architecture où le **AC SYSTEM** alimente des **convertisseurs** (TR), tandis que les **batteries** assurent la réserve et l’appoint.",
+        "Les blocs de commande, comme les **Generator Control Units (GCU)**, le **Ground and Auxiliary Power Control Unit (GAPCU)** et l’**EMER GEN GCU**, rappellent que la génération électrique doit rester **contrôlée**, **surveillée** et **hiérarchisée**.",
+        "La liaison **AC SYSTEM → TR → DC SYSTEM** doit rester le fil conducteur ; les batteries et le secours complètent la chaîne sans en changer la logique."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Aircraft Electrical Systems — SKYbrary Aviation Safety",
+      "locator": "vue d’ensemble des systèmes électriques",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-electrical-systems"
+    },
+    {
+      "source_type": "web",
+      "label": "Transformer Rectifier Unit (TRU) — SKYbrary Aviation Safety",
+      "locator": "conversion AC vers DC",
+      "url": "https://skybrary.aero/index.php/articles/transformer-rectifier-unit-tru"
+    },
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook (FAA-H-8083-3C), Chapter 15",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/16_afh_ch15.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Aircraft Electrical Systems — Safety First Airbus",
+      "locator": "research",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    },
+    {
+      "source_type": "web",
+      "label": "Chapter 4 Engine Ignition & Electrical Systems — FAA",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/06_amtp_ch4.pdf"
+    }
+  ],
+  "course_reference_note": "La vue d’ensemble relie les sources AC, les convertisseurs et les batteries autour du DC SYSTEM. Les liaisons avec le AC SYSTEM restent la trame principale.",
+  "teacher_notes": "Faire identifier d’abord la chaîne amont AC → TR → DC, puis ajouter les batteries et le secours. Insister sur la fonction des blocs de contrôle et sur la hiérarchie des sources."
+}

@@ -1,0 +1,119 @@
+{
+  "slide_id": "S3-3",
+  "subpart_id": "S3",
+  "title": "Rendements de la chaîne propulsive",
+  "objective": "Définir et comparer les rendements à chaque étage du moteur.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s3-3-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Comparer les étages de conversion",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Rendement",
+          "Expression",
+          "Sens physique"
+        ],
+        [
+          "**ηtt**",
+          "Ptt / Pc",
+          "Part du **rendement thermique total** : puissance utile issue de la combustion par rapport à la puissance chimique du carburant."
+        ],
+        [
+          "**ηi**",
+          "Ptr / Ptt",
+          "Part convertie en **puissance interne** disponible après les pertes internes du moteur."
+        ],
+        [
+          "**ηp**",
+          "Pp / Ptr",
+          "Part transformée en **puissance propulsive** ; elle dépend directement de l’efficacité à accélérer l’air."
+        ],
+        [
+          "**ηtr**",
+          "Ptr / Pc",
+          "Rendement de transmission entre la puissance chimique et la puissance transmise au stade suivant."
+        ],
+        [
+          "**ηg**",
+          "Pp / Pc",
+          "**Rendement global** : puissance propulsive obtenue pour la puissance chimique fournie."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Lecture physique et ordres de grandeur",
+      "text": null,
+      "bullets": [
+        "**Pp** est la puissance utile en propulsion ; **Pc** est la puissance chimique du carburant ; **Ptt** et **Ptr** repèrent des puissances intermédiaires de la chaîne. Les grandeurs doivent rester cohérentes dans les unités du support.",
+        "Le rendement propulsif augmente quand la poussée est obtenue avec une faible augmentation de vitesse du jet : plus le **débit d’air** est grand, plus il devient facile de garder **V5** proche de **V0** et de limiter l’énergie perdue dans le sillage.",
+        "Ordres de grandeur à retenir : **ηp ≈ 0,4 à 0,7** pour un **GTR simple flux** ; **0,7 à 0,9** pour un **GTR double flux**. Le **rendement global ηg** est donné entre **0,18 et 0,4**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Chaîne des rendements",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "\\eta_{tt}=\\frac{P_{tt}}{P_c},\\quad \\eta_i=\\frac{P_{tr}}{P_{tt}},\\quad \\eta_p=\\frac{P_p}{P_{tr}},\\quad \\eta_{tr}=\\frac{P_{tr}}{P_c},\\quad \\eta_g=\\frac{P_p}{P_c}\\\\[4pt]\\eta_p=\\frac{T_u\\,V_0}{\\tfrac12\\,Q_{ma}\\left(V_{5}^{2}-V_{0}^{2}\\right)}\\;\\Rightarrow\\; \\eta_p=\\frac{2V_0}{V_5+V_0}"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Thrust Force",
+      "locator": "poussée et débit massique",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-force/"
+    },
+    {
+      "source_type": "web",
+      "label": "NASA Glenn Research Center — Turbofan Thrust",
+      "locator": "efficacité propulsive et fort taux de dilution",
+      "url": "https://www.grc.nasa.gov/WWW/K-12/BGP/turbfan.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Turboprop Thrust | NASA Glenn Research Center",
+      "locator": "research",
+      "url": "https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/turbprp.html"
+    },
+    {
+      "source_type": "web",
+      "label": "Overall propulsion system efficiency (NASA Technical Memorandum 78653)",
+      "locator": "research",
+      "url": "https://ntrs.nasa.gov/api/citations/19780022179/downloads/19780022179.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "Smaller is Better for Jet Engines | NASA",
+      "locator": "research",
+      "url": "https://www.nasa.gov/aeronautics/smaller-is-better-for-jet-engines/"
+    }
+  ],
+  "course_reference_note": "Les formules des rendements et les ordres de grandeur sont repris des pages 6 et 7. Le schéma de chaîne met en regard les pertes internes, la source froide et les pertes par tourbillons.",
+  "teacher_notes": "Faire verbaliser le sens de chaque rapport : puissance chimique, puissance transmise, puissance propulsive. Insister sur l’idée clé : un grand débit d’air améliore ηp car il permet de produire la poussée avec une variation de vitesse plus faible."
+}

@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S5-2",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S5-2-Q1",
+      "prompt": "Quelle affirmation décrit correctement le rôle d’une section variable sur la tuyère ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle supprime toute transformation de pression en vitesse dans le canal d’éjection.",
+          "is_correct": false,
+          "explanation": "Faux : le canal d’éjection transforme justement la pression en vitesse pour créer la poussée."
+        },
+        {
+          "id": "B",
+          "text": "Elle ne sert qu’à refroidir la veine gazeuse sans effet sur le fonctionnement du réacteur.",
+          "is_correct": false,
+          "explanation": "Faux : son rôle est aérodynamique et de réglage, pas seulement thermique."
+        },
+        {
+          "id": "C",
+          "text": "Elle impose toujours une section fixe, quel que soit le régime de vol.",
+          "is_correct": false,
+          "explanation": "Faux : une section variable est précisément utilisée quand l’adaptation au régime impose un réglage."
+        },
+        {
+          "id": "D",
+          "text": "Elle permet de répartir l’énergie de pression entre la turbine et la tuyère.",
+          "is_correct": true,
+          "explanation": "Vrai : la variation de section sert à ajuster la répartition de l’énergie de pression disponible entre les organes amont et la tuyère."
+        },
+        {
+          "id": "E",
+          "text": "Elle agit uniquement sur le cône de raccordement et jamais sur la tuyère.",
+          "is_correct": false,
+          "explanation": "Faux : la section variable concerne la tuyère ou son col, pas seulement le cône de raccordement."
+        }
+      ],
+      "coverage_label": "Section variable de tuyère",
+      "learning_objective": "Identifier le rôle d’une section variable dans la répartition des pressions.",
+      "correction_summary": "Il faut relier la section variable à son effet principal : elle adapte la tuyère en fonction des besoins du moteur. La confusion fréquente consiste à croire qu’elle sert seulement à guider l’écoulement, alors qu’elle permet surtout d’ajuster la répartition d’énergie de pression et le fonctionnement global.",
+      "course_clarification": "Une section variable permet de modifier la géométrie de la tuyère pour adapter l’écoulement, la pression disponible et le fonctionnement du réacteur.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-2-Q2",
+      "prompt": "Quelle proposition correspond au cas d’un GTR double flux à flux mélangés ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le flux primaire est détendu dans une tuyère primaire et le flux secondaire dans un conduit annulaire séparé.",
+          "is_correct": false,
+          "explanation": "Faux : cela décrit le cas des flux séparés, avec deux voies d’éjection distinctes."
+        },
+        {
+          "id": "B",
+          "text": "Les deux flux sont mélangés avant l’éjection par une seule tuyère.",
+          "is_correct": true,
+          "explanation": "Vrai : dans ce cas, le flux primaire et le flux secondaire sont réunis avant la sortie, puis éjectés par une seule tuyère."
+        },
+        {
+          "id": "C",
+          "text": "Chaque flux est éjecté par une tuyère totalement indépendante et les deux ne se rencontrent jamais.",
+          "is_correct": false,
+          "explanation": "Faux : cela correspond à une séparation des flux, pas à un mélange avant éjection."
+        },
+        {
+          "id": "D",
+          "text": "Le mélange a lieu uniquement après la sortie de la tuyère dans le jet externe.",
+          "is_correct": false,
+          "explanation": "Faux : le mélange, ici, se fait avant l’éjection, en amont de la tuyère unique."
+        },
+        {
+          "id": "E",
+          "text": "Le flux secondaire traverse uniquement la turbine avant d’être mélangé au flux primaire.",
+          "is_correct": false,
+          "explanation": "Faux : le flux secondaire ne traverse pas la turbine ; il contourne le cœur du moteur dans un double flux."
+        }
+      ],
+      "coverage_label": "Double flux à flux mélangés",
+      "learning_objective": "Distinguer flux mélangés et flux séparés dans un turboréacteur double flux.",
+      "correction_summary": "Le point clé est l’emplacement du mélange. En flux mélangés, un seul jet sort après réunion des deux flux. L’erreur classique consiste à confondre cette architecture avec le cas des flux séparés, où chaque flux garde sa propre voie d’éjection.",
+      "course_clarification": "Dans un double flux à flux mélangés, les deux flux se rejoignent avant la sortie et passent par une seule tuyère.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-2-Q3",
+      "prompt": "Dans le domaine subsonique, quelle relation entre section et vitesse est correcte pour une tuyère convergente à géométrie variable ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Si M < 1, une diminution de section entraîne une augmentation de vitesse.",
+          "is_correct": true,
+          "explanation": "Vrai : en régime subsonique, le rétrécissement accélère l’écoulement, donc la vitesse augmente quand la section diminue."
+        },
+        {
+          "id": "B",
+          "text": "Si M < 1, une diminution de section entraîne toujours une diminution de vitesse.",
+          "is_correct": false,
+          "explanation": "Faux : c’est l’inverse dans le domaine subsonique pour une tuyère convergente."
+        },
+        {
+          "id": "C",
+          "text": "Si M < 1, une augmentation de section entraîne une augmentation de vitesse.",
+          "is_correct": false,
+          "explanation": "Faux : en subsonique, une augmentation de section ralentit l’écoulement."
+        },
+        {
+          "id": "D",
+          "text": "Si M > 1, une diminution de section entraîne une augmentation de vitesse dans la partie convergente.",
+          "is_correct": false,
+          "explanation": "Faux : en supersonique, l’effet de la section s’inverse selon la géométrie adaptée ; cette phrase ne décrit pas le cas demandé."
+        },
+        {
+          "id": "E",
+          "text": "La vitesse est indépendante de la section tant que l’écoulement est compressible.",
+          "is_correct": false,
+          "explanation": "Faux : la variation de section agit directement sur la vitesse, comme l’indique la relation de l’écoulement compressible."
+        }
+      ],
+      "coverage_label": "Écoulement subsonique et section",
+      "learning_objective": "Appliquer la relation section-vitesse en régime subsonique.",
+      "correction_summary": "Il faut appliquer la règle de la tuyère convergente en subsonique : rétrécir accélère l’écoulement. La confusion fréquente vient du fait qu’on inverse parfois le comportement entre subsonique et supersonique.",
+      "course_clarification": "En subsonique, une section plus faible accélère le gaz : la tuyère convergente augmente donc la vitesse quand la section diminue.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-2-Q4",
+      "prompt": "Quelle affirmation décrit correctement l’état d’une tuyère dite adaptée ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Si M5 = 0, le rapport critique vaut nécessairement 1.",
+          "is_correct": false,
+          "explanation": "Faux : la notion de rapport critique est reliée à l’écoulement sonique en sortie, pas à un Mach nul."
+        },
+        {
+          "id": "B",
+          "text": "Une tuyère adaptée impose toujours P5 > P∞.",
+          "is_correct": false,
+          "explanation": "Faux : adaptée signifie ici que la pression de sortie coïncide avec la pression ambiante, donc P5 = P∞."
+        },
+        {
+          "id": "C",
+          "text": "Le rapport Pt4/P5 ne dépend jamais du régime du réacteur.",
+          "is_correct": false,
+          "explanation": "Faux : le rapport de pression varie avec l’état de fonctionnement et le niveau d’énergie disponible en amont."
+        },
+        {
+          "id": "D",
+          "text": "Une tuyère adaptée correspond forcément à un écoulement supersonique dans toute la veine.",
+          "is_correct": false,
+          "explanation": "Faux : l’adaptation décrite ici concerne le cas de sortie sonique au seuil critique, pas un supersonique partout."
+        },
+        {
+          "id": "E",
+          "text": "Si M5 = 1, alors Rc = Pt4/P5 ≈ 2 et P5 = P∞.",
+          "is_correct": true,
+          "explanation": "Vrai : le texte associe la vitesse sonique en sortie à un rapport critique voisin de 2 et à une pression de sortie égale à la pression ambiante."
+        }
+      ],
+      "coverage_label": "Rapport critique et tuyère adaptée",
+      "learning_objective": "Reconnaître la condition d’adaptation d’une tuyère convergente.",
+      "correction_summary": "La bonne lecture consiste à relier le taux de détente au passage sonique en sortie. L’erreur classique est de confondre tuyère adaptée et écoulement supersonique général, alors que l’adaptation indiquée ici correspond à l’égalité entre pression de sortie et pression ambiante.",
+      "course_clarification": "Une tuyère adaptée a une pression de sortie égale à la pression ambiante : elle est correctement réglée pour le fonctionnement visé.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S5-2-Q5",
+      "prompt": "Quelle proposition décrit correctement une tuyère supersonique à géométrie variable ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elle ne possède jamais de col, car le Mach reste toujours inférieur à 1.",
+          "is_correct": false,
+          "explanation": "Faux : le col est au contraire l’élément clé du passage à M = 1."
+        },
+        {
+          "id": "B",
+          "text": "Dans le divergent, la section diminue pour augmenter la vitesse supersonique.",
+          "is_correct": false,
+          "explanation": "Faux : en supersonique, le divergent a une section croissante pour permettre l’accélération."
+        },
+        {
+          "id": "C",
+          "text": "Elle comporte un convergent, un col et un divergent, avec M = 1 au col.",
+          "is_correct": true,
+          "explanation": "Vrai : la tuyère supersonique est décrite avec ces trois parties, et le col correspond au passage sonique."
+        },
+        {
+          "id": "D",
+          "text": "Le convergent sert à rendre l’écoulement supersonique avant le col.",
+          "is_correct": false,
+          "explanation": "Faux : dans le convergent, l’écoulement reste subsonique jusqu’au col."
+        },
+        {
+          "id": "E",
+          "text": "La section variable n’a aucun lien avec l’adaptation au Mach de vol.",
+          "is_correct": false,
+          "explanation": "Faux : le divergent et le réglage de section servent justement à adapter la tuyère au Mach de vol."
+        }
+      ],
+      "coverage_label": "Tuyère supersonique à géométrie variable",
+      "learning_objective": "Identifier l’architecture et le rôle des zones d’une tuyère supersonique.",
+      "correction_summary": "Il faut reconnaître la structure convergent-col-divergent et le rôle du col à Mach 1. Une erreur fréquente consiste à inverser le comportement de la section dans le divergent ou à oublier que cette géométrie sert aussi à l’adaptation au vol.",
+      "course_clarification": "Une tuyère supersonique utilise un convergent, un col et un divergent ; le col fixe le passage sonique et le divergent règle l’accélération en supersonique.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S5",
+  "anchor_slide_id": "S5-2",
+  "question_count_target": 5,
+  "title": "QCM - Tuyères variables, double flux et adaptation au vol"
+}

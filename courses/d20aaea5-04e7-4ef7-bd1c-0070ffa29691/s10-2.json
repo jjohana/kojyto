@@ -1,0 +1,93 @@
+{
+  "slide_id": "S10-2",
+  "subpart_id": "S10",
+  "title": "Fonctionnement en trois temps de l’amortisseur",
+  "objective": "Décrire la séquence compression-détente-équilibrage.",
+  "layout": "table",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s10-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "table",
+      "title": "Chronologie de fonctionnement",
+      "text": "Chaque phase combine mouvement mécanique, circulation du fluide et action du gaz.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Phase",
+          "Ce qui se passe",
+          "Rôle mécanique"
+        ],
+        [
+          "**Compression**",
+          "L’arrivée du choc chasse le fluide hydraulique et **l’azote** se comprime.",
+          "L’énergie de l’impact est absorbée et stockée dans le gaz."
+        ],
+        [
+          "**Détente**",
+          "L’azote se détend, le **clapet de freinage** se ferme, le liquide passe par le diaphragme.",
+          "Le **laminage hydraulique** ralentit le retour et limite le rebond."
+        ],
+        [
+          "**Équilibrage**",
+          "Les pressions se stabilisent à l’état de repos.",
+          "La pression interne compense le poids de l’avion et maintient le train en appui."
+        ]
+      ],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "À retenir",
+      "text": null,
+      "bullets": [
+        "L’amortisseur associe un **gaz compressible** et un **liquide hydraulique** : le gaz absorbe le choc, le liquide règle la vitesse de déplacement.",
+        "La phase de **freinage hydraulique** est décisive pour éviter les oscillations après l’atterrissage.",
+        "L’**équilibrage** correspond à l’état statique : le train supporte la charge sans mouvement parasite."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "FAA – January/February 2020 (article sur le shock/oleo strut)",
+      "locator": "amortisseur oléopneumatique : gaz comprimé, fluide hydraulique, absorption de l’énergie, réduction du rebond",
+      "url": "https://www.faa.gov/sites/faa.gov/files/2022-01/JanFeb2020.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA – Airframe Handbook / FAA-H-8083-5 (landing gear shock absorber)",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-5.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "EASA – Easy Access Rules for Large Aeroplanes (CS-25), critères de poids statique et shock strut",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-large-aeroplanes-cs-25?page=25"
+    },
+    {
+      "source_type": "web",
+      "label": "January/February 2020",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/2022-01/JanFeb2020.pdf?utm_source=openai"
+    }
+  ],
+  "course_reference_note": "Les pages 4 et 5 montrent la logique générale du train d’atterrissage : manœuvre, verrouillage et sécurité. Ici, on isole la séquence interne de l’amortisseur en trois temps.",
+  "teacher_notes": "Faire verbaliser le rôle distinct du gaz et du liquide : le gaz amortit, le liquide freine. Insister sur l’idée d’équilibre final comme état de repos sous la charge de l’avion."
+}

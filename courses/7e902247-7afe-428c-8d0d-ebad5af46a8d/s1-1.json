@@ -1,0 +1,71 @@
+{
+  "slide_id": "S1-1",
+  "subpart_id": "S1",
+  "title": "Génération AC en vol : panorama des sources",
+  "objective": "Identifier les sources principales qui alimentent le système électrique alternatif (AC SYSTEM) en vol et leur organisation générale.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s1-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Sources d’alimentation AC en vol",
+      "text": null,
+      "bullets": [
+        "En vol, l’**AC SYSTEM** est alimenté principalement par les **Integrated Drive Generators (IDG)** entraînés par les moteurs : il y a **un IDG par moteur**, directement raccordé au boîtier moteur (gearbox pad).",
+        "Le **générateur de l’APU (Auxiliary Power Unit, APU GEN)** constitue aussi une source capable d’alimenter l’AC SYSTEM lorsque cela est nécessaire.",
+        "L’IDG est l’ensemble **génération + entraînement à vitesse constante** qui fournit une énergie AC exploitable pour le réseau de bord."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Organisation générale et blocs de commande",
+      "text": null,
+      "bullets": [
+        "La chaîne visible est simple : **production** de l’énergie, **contrôle/surveillance**, puis **distribution** vers le réseau AC de bord.",
+        "Chaque générateur moteur est associé à sa **Generator Control Unit (GCU)** ; l’APU est associé à la **Ground and Auxiliary Power Control Unit (GAPCU)**.",
+        "Le synoptique relie donc clairement les **IDG**, l’**APU GEN**, les unités de contrôle (**GCU**, **GAPCU**) et le **AC SYSTEM**.",
+        "Cette architecture met en évidence les sources disponibles en vol, sans détailler ici les logiques de sélection ou de transfert."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airbus Safety First — Preventing loss of engine generators on A320 family, A330 and A340 aircraft",
+      "locator": "rôle des IDG et du GCU",
+      "url": "https://safetyfirst.airbus.com/preventing-loss-of-engine-generators-on-a320-family-a330-and-a340-aircraft/?airbus-iframe=true&airbus-post=2050"
+    },
+    {
+      "source_type": "web",
+      "label": "Skybrary — Integrated Drive Generator (IDG)",
+      "locator": "définition de l’IDG",
+      "url": "https://skybrary.aero/index.php/articles/integrated-drive-generator-idg"
+    },
+    {
+      "source_type": "web",
+      "label": "Airbus — APU trial press release",
+      "locator": "research",
+      "url": "https://www.airbus.com/en/newsroom/press-releases/2023-06-airbus-to-trial-in-flight-auxiliary-power-entirely-generated-by"
+    }
+  ],
+  "course_reference_note": "Le schéma de référence présente l’alimentation AC en vol par les IDG des moteurs, avec un IDG par moteur. L’APU GEN et les blocs GCU / GAPCU complètent le panorama des sources et de leur commande.",
+  "teacher_notes": "Faire repérer la chaîne logique source → contrôle → réseau. Faire mémoriser les acronymes de base : IDG, APU GEN, GCU, GAPCU et AC SYSTEM."
+}

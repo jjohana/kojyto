@@ -1,0 +1,117 @@
+{
+  "slide_id": "S11-1",
+  "subpart_id": "S11",
+  "title": "Voyants, roues et pneumatiques",
+  "objective": "Reconnaître les états de surveillance et les familles de roues/pneus.",
+  "layout": "bullets",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\d20aaea5-04e7-4ef7-bd1c-0070ffa29691\\generated_visuals\\s11-1-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Surveillance et alerte TNS",
+      "text": null,
+      "bullets": [
+        "Le voyant Train Non Sorti (TNS) est une alerte visuelle ou un flash du levier, associée à une alarme sonore si le train n’est pas sorti à trop basse altitude avec une configuration d’atterrissage défavorable, notamment manette des gaz réduite, vitesse faible ou volets hypersortis.",
+        "La surveillance moderne des trains et des roues s’appuie aussi sur la pression des pneus (Tire Pressure Monitoring System, TPMS), la température des freins (Brake Temperature Monitoring System, BTMS) et la pression hydraulique des amortisseurs (Oleo Pressure Monitoring System, OPMS).",
+        "Une surtempérature des freins est signalée par un voyant dédié, le message \"BRAKES HOT\" sur le panneau central d’alarme et un gong mono-coup."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "quote",
+      "title": "États cabine à reconnaître",
+      "text": "3 verts allumés : 3 trains verrouillés bas. Voyant rouge : manœuvre train ou trappes non verrouillées hautes.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Notation des dimensions de pneu",
+      "text": "Repère utile pour lire la dimension normalisée.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "M \\times N - A"
+    },
+    {
+      "kind": "table",
+      "title": "Familles de roues et de pneumatiques",
+      "text": null,
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [
+        [
+          "Élément",
+          "Principe",
+          "Point clé"
+        ],
+        [
+          "Roue monobloc",
+          "Pneu monté en force sur un seul élément.",
+          "Soumise à de fortes charges ; surtout utilisée sur avions légers."
+        ],
+        [
+          "Roue à flasque mobile",
+          "La flasque amovible laisse passer le pneu sans écarter le talon.",
+          "Montage plus simple ; bouchon fusible thermique."
+        ],
+        [
+          "Roue à moyeu divisé",
+          "Deux parties de roue assemblées pour serrer le pneu.",
+          "Architecture pratique pour la maintenance ; proche de la roue split décrite par l’Administration fédérale de l’aviation (FAA)."
+        ],
+        [
+          "Pneu diagonal",
+          "Nappes croisées.",
+          "La bande de roulement subit toutes les flexions des flancs ; déformation plus importante."
+        ],
+        [
+          "Pneu radial",
+          "Carcasse souple radiale et ceinturée.",
+          "Surface de contact au sol plus grande et plus constante."
+        ]
+      ],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Airplane Flying Handbook (FAA-H-8083-3C)",
+      "locator": "Chapitre 12, indications de train et avertisseur de configuration",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/13_afh_ch12.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "MAT-CSM 32-45-01 – Revision F: 1 January 2021",
+      "locator": "Section sur split wheel et removable flange",
+      "url": "https://www.faasafety.gov/files/gslac/courses/content/269/1100/Michelin%20ALC-269%20CSM%202021.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "U.S. Department of Transportation – Master Minimum Equipment List (Falcon 6X)",
+      "locator": "Entrées TPMS et Brake Temperature Sensor",
+      "url": "https://www.faa.gov/aircraft/draft_docs/mmel/MMEL_DA-6X_Rev_2_Draft.pdf"
+    }
+  ],
+  "course_reference_note": "Repère les indications cabine aux pages 4 et 5, puis les roues et pneumatiques aux pages 6 et 7. Les états lumineux, les architectures de roue et la surveillance de pression/température y sont regroupés pour un repérage rapide.",
+  "teacher_notes": "Faire associer d’abord chaque voyant à l’état du train, puis faire distinguer les trois architectures de roue et les deux types de pneu. Rappeler que la notation M × N - A sert à lire la dimension du pneumatique."
+}

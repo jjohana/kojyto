@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S8",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S8-Q1",
+      "prompt": "À propos du mouvement rectiligne uniforme (MRU), quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le MRU est caractérisé par une vitesse qui augmente linéairement avec le temps.",
+          "is_correct": false,
+          "explanation": "Une vitesse qui varie linéairement avec le temps correspond à un mouvement accéléré, pas à un MRU."
+        },
+        {
+          "id": "B",
+          "text": "Dans un MRU, la trajectoire est nécessairement circulaire.",
+          "is_correct": false,
+          "explanation": "Une trajectoire circulaire relève d’un mouvement circulaire, alors que le MRU est rectiligne."
+        },
+        {
+          "id": "C",
+          "text": "Dans un MRU, la vitesse change de direction à chaque instant.",
+          "is_correct": false,
+          "explanation": "Si la direction change, le mouvement n’est plus rectiligne. En MRU, la direction reste fixe."
+        },
+        {
+          "id": "D",
+          "text": "Le MRU correspond à un déplacement sur une droite à vitesse constante.",
+          "is_correct": true,
+          "explanation": "La trajectoire est rectiligne et la vitesse garde la même valeur au cours du temps. C’est précisément la définition du MRU."
+        },
+        {
+          "id": "E",
+          "text": "Le MRU est un mouvement pour lequel la position reste constante.",
+          "is_correct": false,
+          "explanation": "Une position constante décrit un objet immobile, pas un mouvement."
+        }
+      ],
+      "coverage_label": "Mouvement rectiligne uniforme (MRU)",
+      "learning_objective": "Identifier la définition du MRU à partir de la nature de la trajectoire et de la vitesse.",
+      "correction_summary": "La bonne affirmation associe une trajectoire rectiligne et une vitesse constante. Le piège classique est de confondre vitesse constante et position constante.",
+      "course_clarification": "Rectiligne signifie que la trajectoire est une droite. Uniforme signifie que la valeur de la vitesse ne change pas au cours du temps.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S8-Q2",
+      "prompt": "Dans un MRU, quelle affirmation sur l’accélération est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’accélération est constante et strictement positive.",
+          "is_correct": false,
+          "explanation": "Une accélération constante et positive correspond à un mouvement uniformément accéléré, pas à un MRU."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération est nulle : \\(a = 0\\).",
+          "is_correct": true,
+          "explanation": "En MRU, la vitesse est constante ; sa dérivée par rapport au temps est donc nulle, ce qui donne \\(a = 0\\)."
+        },
+        {
+          "id": "C",
+          "text": "L’accélération est nulle seulement si la vitesse vaut zéro.",
+          "is_correct": false,
+          "explanation": "Un objet peut se déplacer à vitesse constante non nulle avec une accélération nulle. L’accélération dépend de la variation de la vitesse, pas de sa valeur."
+        },
+        {
+          "id": "D",
+          "text": "L’accélération est dirigée vers le centre de courbure.",
+          "is_correct": false,
+          "explanation": "Cette propriété concerne un mouvement curviligne ou circulaire, alors qu’en MRU la trajectoire est une droite."
+        },
+        {
+          "id": "E",
+          "text": "L’accélération vaut \\(v/t\\) en MRU.",
+          "is_correct": false,
+          "explanation": "La relation \\(v/t\\) n’est pas la définition de l’accélération ; ici, l’accélération est nulle car la vitesse est constante."
+        }
+      ],
+      "coverage_label": "Mouvement rectiligne uniforme (MRU)",
+      "learning_objective": "Relier vitesse constante et accélération nulle dans le MRU.",
+      "correction_summary": "En MRU, la vitesse ne varie pas, donc l’accélération est nulle. Le piège est de confondre valeur de la vitesse et variation de la vitesse.",
+      "course_clarification": "L’accélération mesure une variation de vitesse au cours du temps. Si cette variation est nulle, alors \\(a = 0\\), même si l’objet se déplace.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S8-Q3",
+      "prompt": "Quelle écriture correspond à la loi horaire d’un MRU sur l’axe \\(x\\) ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "\\(x(t) = x_0 + vt\\)",
+          "is_correct": true,
+          "explanation": "C’est la loi horaire du MRU : la position évolue linéairement avec le temps, à partir de la position initiale \\(x_0\\)."
+        },
+        {
+          "id": "B",
+          "text": "\\(x(t) = x_0 + \\frac12 at^2\\)",
+          "is_correct": false,
+          "explanation": "Cette expression correspond à un mouvement uniformément accéléré lorsque l’accélération est constante, pas à un MRU."
+        },
+        {
+          "id": "C",
+          "text": "\\(x(t) = vt\\) uniquement, quelle que soit la position initiale.",
+          "is_correct": false,
+          "explanation": "Il manque la position initiale \\(x_0\\). Sans elle, l’expression n’est vraie que si l’origine est choisie à la position de départ."
+        },
+        {
+          "id": "D",
+          "text": "\\(x(t) = x_0 - vt^2\\)",
+          "is_correct": false,
+          "explanation": "La dépendance en \\(t^2\\) indique une évolution non linéaire, incompatible avec un MRU."
+        },
+        {
+          "id": "E",
+          "text": "\\(x(t) = x_0 + \\frac{v}{t}\\)",
+          "is_correct": false,
+          "explanation": "Cette écriture ne décrit pas une position qui varie linéairement avec le temps et ne correspond pas à la cinématique du MRU."
+        }
+      ],
+      "coverage_label": "Mouvement rectiligne uniforme (MRU)",
+      "learning_objective": "Reconnaître et utiliser la loi horaire du MRU.",
+      "correction_summary": "La loi correcte est linéaire en temps : \\(x(t)=x_0+vt\\). Le principal piège est de confondre MRU et mouvement accéléré, où apparaît un terme en \\(t^2\\).",
+      "course_clarification": "\\(x_0\\) est la position à l’instant initial, et \\(v\\) reste constant. La position varie donc régulièrement, d’une même quantité à chaque intervalle de temps égal.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S8-Q4",
+      "prompt": "On considère un mobile en MRU. Quelle proposition est vraie si \\(v>0\\) ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La pente de la courbe \\(x(t)\\) vaut toujours zéro.",
+          "is_correct": false,
+          "explanation": "La pente de \\(x(t)\\) correspond à la vitesse. Si \\(v>0\\), cette pente est positive, pas nulle."
+        },
+        {
+          "id": "B",
+          "text": "La courbe \\(x(t)\\) est une parabole.",
+          "is_correct": false,
+          "explanation": "Une parabole apparaît quand la position dépend de \\(t^2\\). En MRU, la dépendance est linéaire."
+        },
+        {
+          "id": "C",
+          "text": "La vitesse change de signe à chaque instant.",
+          "is_correct": false,
+          "explanation": "En MRU, la vitesse reste constante. Elle ne change donc ni de valeur ni de signe."
+        },
+        {
+          "id": "D",
+          "text": "L’accélération est forcément égale à \\(v\\).",
+          "is_correct": false,
+          "explanation": "L’accélération n’est pas égale à la vitesse ; en MRU, elle est nulle alors que la vitesse peut être non nulle."
+        },
+        {
+          "id": "E",
+          "text": "La position \\(x(t)\\) augmente linéairement avec le temps.",
+          "is_correct": true,
+          "explanation": "Avec \\(x(t)=x_0+vt\\) et \\(v>0\\), la position croît de façon linéaire quand le temps augmente."
+        }
+      ],
+      "coverage_label": "Mouvement rectiligne uniforme (MRU)",
+      "learning_objective": "Interpréter la loi horaire du MRU et sa conséquence graphique.",
+      "correction_summary": "Avec \\(v>0\\), la position augmente linéairement et la courbe \\(x(t)\\) est une droite croissante. Le piège est de confondre une loi linéaire avec une parabole ou avec une vitesse variable.",
+      "course_clarification": "La pente de \\(x(t)\\) est égale à la vitesse. Une droite de pente constante traduit donc une vitesse constante.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S8-Q5",
+      "prompt": "Quel énoncé décrit correctement l’intérêt du MRU en cinématique ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le MRU est le modèle le plus général de tous les mouvements.",
+          "is_correct": false,
+          "explanation": "Le MRU est un cas particulier très simple, pas un modèle général."
+        },
+        {
+          "id": "B",
+          "text": "Le MRU permet de décrire un mouvement dont l’accélération varie au cours du temps.",
+          "is_correct": false,
+          "explanation": "Si l’accélération varie, on n’est plus dans le cadre du MRU, puisque l’accélération doit être nulle."
+        },
+        {
+          "id": "C",
+          "text": "Le MRU sert de référence simple pour comparer d’autres mouvements.",
+          "is_correct": true,
+          "explanation": "Le MRU est un modèle très simple, utile comme point de comparaison pour analyser des mouvements plus complexes."
+        },
+        {
+          "id": "D",
+          "text": "Le MRU n’a aucun intérêt pratique car il ne sert jamais de référence.",
+          "is_correct": false,
+          "explanation": "Au contraire, sa simplicité en fait un modèle de base pour analyser et comparer d’autres situations."
+        },
+        {
+          "id": "E",
+          "text": "Le MRU impose une trajectoire courbe.",
+          "is_correct": false,
+          "explanation": "Le MRU est rectiligne : la trajectoire est une droite, pas une courbe."
+        }
+      ],
+      "coverage_label": "Mouvement rectiligne uniforme (MRU)",
+      "learning_objective": "Comprendre le rôle du MRU comme modèle de référence en cinématique.",
+      "correction_summary": "Le MRU est un cas simple utilisé comme étalon de comparaison pour d’autres mouvements. Le piège est de lui attribuer un rôle de modèle général ou une trajectoire courbe.",
+      "course_clarification": "Un modèle de référence simplifie l’étude avant d’aborder des mouvements plus complexes. Ici, la simplicité vient de la trajectoire rectiligne et de la vitesse constante.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "6.1",
+  "anchor_slide_id": "S8",
+  "question_count_target": 5,
+  "title": "QCM - Mouvement rectiligne uniforme (MRU)"
+}

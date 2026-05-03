@@ -1,0 +1,70 @@
+{
+  "slide_id": "S3-2",
+  "subpart_id": "S3",
+  "title": "Batteries et STATIC INVERTER",
+  "objective": "Montrer la chaîne BATTERY 1 / BATTERY 2 → STATIC INVERTER → réseau AC essentiel, et préciser le caractère dégradé de cette alimentation.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\7e902247-7afe-428c-8d0d-ebad5af46a8d\\generated_visuals\\s3-2-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Chaîne d’alimentation de secours",
+      "text": null,
+      "bullets": [
+        "**BATTERY 1** et **BATTERY 2** alimentent l’**onduleur statique (STATIC INVERTER)**.",
+        "L’onduleur statique transforme le **courant continu (DC)** des batteries en **courant alternatif (AC)**.",
+        "Le **STATIC INVERTER** peut fournir une partie du **AC system**, en particulier le **réseau électrique AC essentiel (AC Essential electrical system network)**."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Quand ce mode intervient",
+      "text": null,
+      "bullets": [
+        "Cette alimentation est utilisée quand les autres sources AC ne sont pas disponibles : **Integrated Drive Generators (IDG)**, générateur de l’**APU (APU GEN)**, **alimentation externe (EXT PWR)** et **générateur de secours (EMER GEN)**.",
+        "Il s’agit d’une **situation dégradée** : la priorité est de maintenir les fonctions essentielles, pas d’alimenter l’ensemble du réseau AC.",
+        "La cible reste le **réseau AC essentiel**, pour assurer la continuité des équipements indispensables."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Aircraft Electrical Systems — SKYbrary",
+      "locator": "static inverter et bus AC essentiel",
+      "url": "https://skybrary.aero/index.php/articles/aircraft-electrical-systems"
+    },
+    {
+      "source_type": "web",
+      "label": "Inverter — SKYbrary",
+      "locator": "conversion DC vers AC",
+      "url": "https://skybrary.aero/articles/inverter"
+    },
+    {
+      "source_type": "web",
+      "label": "Easy Access Rules for Aircrew — EASA",
+      "locator": "research",
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-aircrew?erules-id=ERULES-1963177438-10559"
+    }
+  ],
+  "course_reference_note": "La page de génération AC de secours relie BATTERY 1 et 2 au STATIC INVERTER, puis au AC SYSTEM. Le texte associé précise que le réseau AC essentiel est alimenté en l’absence des autres sources AC.",
+  "teacher_notes": "Faire suivre clairement la chaîne d’énergie, puis insister sur la finalité : maintenir le **réseau AC essentiel** en mode **dégradé**."
+}

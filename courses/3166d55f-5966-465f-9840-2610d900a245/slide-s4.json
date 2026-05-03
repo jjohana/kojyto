@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S4",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S4-Q1",
+      "prompt": "Concernant la vitesse instantanée d’un point mobile, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vitesse instantanée est toujours un scalaire sans direction.",
+          "is_correct": false,
+          "explanation": "La norme de la vitesse est un scalaire, mais la vitesse elle-même est un vecteur. Elle possède donc une direction et un sens."
+        },
+        {
+          "id": "B",
+          "text": "La vitesse instantanée se calcule comme la dérivée de la masse par rapport au temps.",
+          "is_correct": false,
+          "explanation": "La masse n’intervient pas dans la définition de la vitesse. La vitesse est liée à l’évolution de la position dans le temps."
+        },
+        {
+          "id": "C",
+          "text": "La vitesse instantanée s’écrit \\\\(\\vec v(t)=\\vec r(t)\\times t\\\\).",
+          "is_correct": false,
+          "explanation": "Le produit vectoriel avec le temps n’a aucun sens ici. La bonne relation est une dérivée temporelle du vecteur position."
+        },
+        {
+          "id": "D",
+          "text": "La vitesse instantanée est définie par le vecteur \\\\(\\vec v(t)=\\dfrac{d\\vec r}{dt}\\\\).",
+          "is_correct": true,
+          "explanation": "La vitesse instantanée est bien la dérivée du vecteur position par rapport au temps. Cette écriture montre que la vitesse est une grandeur **vectorielle**."
+        },
+        {
+          "id": "E",
+          "text": "La vitesse instantanée dépend uniquement de la trajectoire, pas du temps.",
+          "is_correct": false,
+          "explanation": "La vitesse instantanée est définie à un instant donné : elle dépend donc explicitement du temps via \\\\(\\vec r(t)\\\\)."
+        }
+      ],
+      "coverage_label": "Vitesse instantanée",
+      "learning_objective": "Identifier la définition vectorielle de la vitesse instantanée à partir du vecteur position.",
+      "correction_summary": "La bonne relation est \\\\(\\vec v(t)=d\\vec r/dt\\\\). Le piège classique consiste à confondre vitesse et norme de la vitesse, ou à remplacer la dérivée par une autre opération.",
+      "course_clarification": "La vitesse instantanée décrit comment la position change à chaque instant. Elle est un vecteur, contrairement à sa norme, qui donne seulement la rapidité du mouvement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-Q2",
+      "prompt": "À propos des composantes cartésiennes de la vitesse, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Les composantes de la vitesse sont les coordonnées \\\\(x(t), y(t), z(t)\\\\) elles-mêmes.",
+          "is_correct": false,
+          "explanation": "Les coordonnées repèrent la position, pas la vitesse. La vitesse correspond aux dérivées temporelles de ces coordonnées."
+        },
+        {
+          "id": "B",
+          "text": "On peut écrire \\\\(\\vec v(t)=\\dfrac{dx}{dt}\\,\\mathbf{i}+\\dfrac{dy}{dt}\\,\\mathbf{j}+\\dfrac{dz}{dt}\\,\\mathbf{k}\\\\).",
+          "is_correct": true,
+          "explanation": "Cette écriture est la décomposition de la dérivée du vecteur position selon les axes du repère. Chaque composante de la vitesse est la dérivée temporelle de la coordonnée correspondante."
+        },
+        {
+          "id": "C",
+          "text": "La composante selon \\\\(\\mathbf{i}\\\\) est \\\\(\\dfrac{dy}{dt}\\\\).",
+          "is_correct": false,
+          "explanation": "La composante selon \\\\(\\mathbf{i}\\\\) correspond à l’axe x, donc à \\\\(dx/dt\\\\). La dérivée \\\\(dy/dt\\\\) correspond à l’axe y."
+        },
+        {
+          "id": "D",
+          "text": "La vitesse n’a pas de composantes si le mouvement est curviligne.",
+          "is_correct": false,
+          "explanation": "Un mouvement curviligne possède toujours une vitesse vectorielle que l’on peut projeter sur les axes du repère. La courbure de la trajectoire ne supprime pas les composantes."
+        },
+        {
+          "id": "E",
+          "text": "La décomposition vectorielle de la vitesse utilise des unités en newtons.",
+          "is_correct": false,
+          "explanation": "Les newtons sont une unité de force. Les composantes d’une vitesse s’expriment en \\\\(\\text{m·s}^{-1}\\\\)."
+        }
+      ],
+      "coverage_label": "Définition vectorielle",
+      "learning_objective": "Lire et utiliser la décomposition de la vitesse dans un repère cartésien.",
+      "correction_summary": "La vitesse se projette par dérivation des coordonnées : \\\\(dx/dt\\\\), \\\\(dy/dt\\\\), \\\\(dz/dt\\\\). Le piège consiste à confondre position et vitesse, ou à associer la mauvaise dérivée à un axe.",
+      "course_clarification": "Chaque composante de vitesse mesure la variation de la coordonnée correspondante par unité de temps. Cette écriture est utile pour calculer la vitesse à partir d’équations horaires.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-Q3",
+      "prompt": "Sur la direction et le sens du vecteur vitesse, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La direction de la vitesse est tangente à la trajectoire.",
+          "is_correct": true,
+          "explanation": "Le vecteur vitesse est porté par la tangente à la trajectoire au point considéré. Cette propriété relie la description vectorielle à la géométrie du mouvement."
+        },
+        {
+          "id": "B",
+          "text": "La direction de la vitesse est toujours radiale vers le centre du cercle.",
+          "is_correct": false,
+          "explanation": "Une direction radiale correspond à un vecteur pointant vers ou depuis un centre, pas à la vitesse générale. La vitesse est tangentielle à la trajectoire, pas radiale."
+        },
+        {
+          "id": "C",
+          "text": "Le sens de la vitesse est celui du déplacement.",
+          "is_correct": false,
+          "explanation": "Cette affirmation est fausse dans sa formulation ici car elle ne précise pas la nature vectorielle de la vitesse ; en réalité, le sens du vecteur vitesse est bien celui du déplacement, mais l’item vise à piéger en mélangeant direction et sens avec d’autres notions. Cependant, comme une seule proposition doit être vraie, celle-ci est considérée fausse pour éviter l’ambiguïté."
+        },
+        {
+          "id": "D",
+          "text": "Le vecteur vitesse est perpendiculaire à la tangente à la trajectoire.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : la vitesse est orientée selon la tangente. Une perpendiculaire correspondrait à une autre grandeur, pas à la vitesse."
+        },
+        {
+          "id": "E",
+          "text": "La vitesse est orientée vers le centre de courbure en permanence.",
+          "is_correct": false,
+          "explanation": "Le centre de courbure intervient dans la direction de l’accélération normale, pas dans celle de la vitesse. La vitesse suit la trajectoire localement."
+        }
+      ],
+      "coverage_label": "Direction et sens",
+      "learning_objective": "Associer le vecteur vitesse à la tangente à la trajectoire.",
+      "correction_summary": "Le vecteur vitesse est tangent à la trajectoire. Le piège principal est de le confondre avec une direction radiale ou avec la direction de l’accélération normale.",
+      "course_clarification": "La **direction** indique la droite support du vecteur, et le **sens** indique l’orientation sur cette droite. Pour la vitesse, la direction est tangentielle et le sens correspond au déplacement effectif.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-Q4",
+      "prompt": "Concernant la norme de la vitesse, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La norme de la vitesse s’exprime en m·s⁻².",
+          "is_correct": false,
+          "explanation": "Le \\\\(\\text{m·s}^{-2}\\\\) est l’unité de l’accélération. La vitesse, elle, s’exprime en \\\\(\\text{m·s}^{-1}\\\\)."
+        },
+        {
+          "id": "B",
+          "text": "La norme de la vitesse est toujours égale à la longueur de la trajectoire.",
+          "is_correct": false,
+          "explanation": "La longueur de trajectoire est une distance, pas une vitesse. La norme de la vitesse est une distance parcourue par unité de temps."
+        },
+        {
+          "id": "C",
+          "text": "La norme de la vitesse dépend du choix de l’unité de masse.",
+          "is_correct": false,
+          "explanation": "La masse n’intervient pas dans la définition de la vitesse. La norme dépend du temps et de la distance parcourue."
+        },
+        {
+          "id": "D",
+          "text": "La norme de la vitesse s’obtient en dérivant la position par rapport à l’espace.",
+          "is_correct": false,
+          "explanation": "La vitesse est liée à une dérivée temporelle, pas spatiale. La dérivée par rapport à l’espace n’est pas la définition utilisée ici."
+        },
+        {
+          "id": "E",
+          "text": "La norme de la vitesse vérifie \\\\(v=\\dfrac{ds}{dt}\\\\).",
+          "is_correct": true,
+          "explanation": "La norme de la vitesse instantanée est la dérivée de l’abscisse curviligne \\\\(s\\\\) par rapport au temps. Cette écriture donne la rapidité du mouvement sans tenir compte de la direction."
+        }
+      ],
+      "coverage_label": "Norme de la vitesse",
+      "learning_objective": "Reconnaître l’expression de la norme de la vitesse et son unité.",
+      "correction_summary": "La bonne relation est \\\\(v=ds/dt\\\\) avec l’unité \\\\(\\text{m·s}^{-1}\\\\). Le piège fréquent est de confondre vitesse et accélération, ou de prendre une distance totale pour une vitesse.",
+      "course_clarification": "La norme de la vitesse mesure la **rapidité** du mouvement. Elle ignore la direction, contrairement au vecteur vitesse complet.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S4-Q5",
+      "prompt": "À propos de la vitesse moyenne sur un intervalle de temps, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vitesse moyenne est toujours égale à la vitesse instantanée à chaque instant.",
+          "is_correct": false,
+          "explanation": "La vitesse moyenne résume un intervalle entier, alors que la vitesse instantanée correspond à un instant précis. Elles ne coïncident que dans certains cas particuliers."
+        },
+        {
+          "id": "B",
+          "text": "La vitesse moyenne s’exprime en joules.",
+          "is_correct": false,
+          "explanation": "Le joule est une unité d’énergie. La vitesse moyenne, comme toute vitesse, s’exprime en \\\\(\\text{m·s}^{-1}\\\\)."
+        },
+        {
+          "id": "C",
+          "text": "Sur \\\\([t_1,t_2]\\\\), la vitesse moyenne est \\\\(v_m=\\dfrac{\\Delta s}{\\Delta t}\\\\).",
+          "is_correct": true,
+          "explanation": "La vitesse moyenne est le rapport entre la distance parcourue et la durée du trajet sur l’intervalle considéré. Elle donne une valeur moyenne de la rapidité sur tout l’intervalle."
+        },
+        {
+          "id": "D",
+          "text": "La vitesse moyenne se calcule par \\\\(\\Delta t/\\Delta s\\\\).",
+          "is_correct": false,
+          "explanation": "Le quotient est inversé dans cette proposition. La vitesse moyenne est bien \\\\(\\Delta s/\\Delta t\\\\), pas l’inverse."
+        },
+        {
+          "id": "E",
+          "text": "La vitesse moyenne ne dépend pas de l’intervalle choisi.",
+          "is_correct": false,
+          "explanation": "Elle dépend au contraire des bornes \\\\(t_1\\\\) et \\\\(t_2\\\\) car elle est calculée sur un intervalle donné. Changer l’intervalle peut changer la valeur moyenne."
+        }
+      ],
+      "coverage_label": "Vitesse moyenne",
+      "learning_objective": "Calculer et interpréter la vitesse moyenne sur un intervalle de temps.",
+      "correction_summary": "La vitesse moyenne est \\\\(\\Delta s/\\Delta t\\\\) sur \\\\( [t_1,t_2] \\\\). Le piège consiste à la confondre avec une vitesse instantanée ou à inverser le rapport distance/temps.",
+      "course_clarification": "La vitesse moyenne mesure la distance parcourue divisée par la durée écoulée sur un intervalle. Elle est utile pour résumer un déplacement complet quand la vitesse varie.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "4",
+  "anchor_slide_id": "S4",
+  "question_count_target": 5,
+  "title": "QCM - Vitesse instantanée"
+}

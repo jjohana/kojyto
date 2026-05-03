@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Composition générale d’un train d’atterrissage</title>
+  <title>QCM - Fonctionnement en trois temps de l’amortisseur</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -485,6 +485,29 @@ html[data-embed="1"] body::after {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.narration-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  animation: rise-in 580ms ease both;
+}
+
+.narration-panel strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.narration-panel audio {
+  width: 100%;
 }
 
 .block {
@@ -1560,49 +1583,49 @@ html[data-embed="1"] .review-card {
         
         <a class="sidebar-slide" href="s1-1.html">
           <strong>S1-1</strong>
-          <span>Origine de la poussée et terme réacteur</span>
+          <span>Origine de la poussée : terme réacteur</span>
           
-          <span>Comprendre comment un turboréacteur crée une poussée par variation de vitesse de la masse d’air.</span>
+          <span>Installer le principe physique de la poussée nette et son expression de base.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-1.html">
           <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée et terme réacteur</span>
+          <span>QCM - Origine de la poussée : terme réacteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-2.html">
           <strong>S1-2</strong>
-          <span>Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>Exemple numérique et architecture double flux</span>
           
-          <span>Distinguer les différentes contributions qui complètent la poussée nette d’un turboréacteur.</span>
+          <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-2.html">
           <strong>QCM S1-2</strong>
-          <span>QCM - Poussée nette : terme fusée, poussée de culot et poussée brute</span>
+          <span>QCM - Exemple numérique et architecture double flux</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s1-3.html">
           <strong>S1-3</strong>
-          <span>Exemple chiffré et répartition des forces internes</span>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>Appliquer la formule de poussée et interpréter la répartition des forces internes dans le moteur.</span>
+          <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s1-3.html">
           <strong>QCM S1-3</strong>
-          <span>QCM - Exemple chiffré et répartition des forces internes</span>
+          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
@@ -1610,7 +1633,7 @@ html[data-embed="1"] .review-card {
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
-          <span>Définir les indicateurs de consommation utilisés pour comparer les moteurs.</span>
+          <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
           
         </a>
         
@@ -1618,431 +1641,431 @@ html[data-embed="1"] .review-card {
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s2-2.html">
           <strong>S2-2</strong>
-          <span>Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>Repères de consommation et surveillance moteur</span>
           
-          <span>Relier l’énergie chimique du carburant à la puissance propulsive effectivement disponible.</span>
+          <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s2-2.html">
           <strong>QCM S2-2</strong>
-          <span>QCM - Puissances du réacteur : calorifique, thermique et utile</span>
+          <span>QCM - Repères de consommation et surveillance moteur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s2-3.html">
-          <strong>S2-3</strong>
-          <span>Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>Expliquer le sens physique des rendements du moteur et leur ordre de grandeur selon l’architecture.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s2-3.html">
-          <strong>QCM S2-3</strong>
-          <span>QCM - Rendements du turboréacteur et taux de dilution</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-1.html">
           <strong>S3-1</strong>
-          <span>Principe propulsif du turbopropulseur</span>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
-          <span>Identifier le rôle de l’hélice dans la production de traction et la logique énergétique du turbopropulseur.</span>
+          <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-1.html">
           <strong>QCM S3-1</strong>
-          <span>QCM - Principe propulsif du turbopropulseur</span>
+          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s3-2.html">
           <strong>S3-2</strong>
-          <span>Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
-          <span>Savoir calculer la puissance d’arbre et la puissance totale équivalente d’un turbopropulseur.</span>
+          <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s3-2.html">
           <strong>QCM S3-2</strong>
-          <span>QCM - Puissance sur l’arbre, SHP et E.S.H.P.</span>
+          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-3.html">
+          <strong>S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
+          
+          <span>Définir et comparer les rendements à chaque étage du moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-3.html">
+          <strong>QCM S3-3</strong>
+          <span>QCM - Rendements de la chaîne propulsive</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s3-4.html">
+          <strong>S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s3-4.html">
+          <strong>QCM S3-4</strong>
+          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          
+          <span>4 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s4-1.html">
           <strong>S4-1</strong>
-          <span>Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>Taux de dilution et familles de moteurs</span>
           
-          <span>Interpréter un diagramme de moteur pour relier les grandeurs thermodynamiques et aérodynamiques le long du flux.</span>
+          <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s4-1.html">
           <strong>QCM S4-1</strong>
-          <span>QCM - Lire le diagramme d’écoulement du CFM56-5</span>
+          <span>QCM - Taux de dilution et exemples de moteurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s4-2.html">
+          <strong>S4-2</strong>
+          <span>Principe du turbopropulseur</span>
+          
+          <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s4-2.html">
+          <strong>QCM S4-2</strong>
+          <span>QCM - Principe du turbopropulseur</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-1.html">
           <strong>S5-1</strong>
-          <span>Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
-          <span>Comprendre comment l’échappement transforme la pression en vitesse de jet.</span>
+          <span>Décrire les organes de sortie d’un GTR simple flux.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-1.html">
           <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection, cône de raccordement et tuyère</span>
+          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s5-2.html">
           <strong>S5-2</strong>
-          <span>Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>Distinguer les principales architectures d’échappement d’un turboréacteur double flux.</span>
+          <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s5-2.html">
           <strong>QCM S5-2</strong>
-          <span>QCM - Géométries de sortie : flux séparés, flux mélangés et section variable</span>
+          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s5-3.html">
+          <strong>S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s5-3.html">
+          <strong>QCM S5-3</strong>
+          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s6-1.html">
           <strong>S6-1</strong>
-          <span>Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>Post-combustion et bruit de tuyère</span>
           
-          <span>Identifier le rôle de la post-combustion et ses conséquences sur la performance et la consommation.</span>
+          <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s6-1.html">
           <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion : intérêt, architecture et coût en carburant</span>
+          <span>QCM - Post-combustion et bruit de tuyère</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-2.html">
-          <strong>S6-2</strong>
-          <span>Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>Relier la variation de section à la vitesse en subsonique, puis identifier la condition de tuyère adaptée quand la sortie atteint le régime critique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-2.html">
-          <strong>QCM S6-2</strong>
-          <span>QCM - Tuyère convergente : régime subsonique et adaptation</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s6-3.html">
-          <strong>S6-3</strong>
-          <span>Tuyère supersonique convergente-divergente</span>
-          
-          <span>Expliquer le fonctionnement d’une tuyère supersonique et le rôle du col.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s6-3.html">
-          <strong>QCM S6-3</strong>
-          <span>QCM - Tuyère supersonique convergente-divergente</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s7-1.html">
           <strong>S7-1</strong>
-          <span>Traitement acoustique de la tuyère</span>
+          <span>But et formule de la poussée inverse</span>
           
-          <span>Relier l’évolution du jet à l’apparition du bruit et aux solutions de réduction acoustique.</span>
+          <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s7-1.html">
           <strong>QCM S7-1</strong>
-          <span>QCM - Traitement acoustique de la tuyère</span>
+          <span>QCM - But et formule de la poussée inverse</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-2.html">
+          <strong>S7-2</strong>
+          <span>Poussée inverse : efficacité, limites et choix des flux</span>
+          
+          <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-2.html">
+          <strong>QCM S7-2</strong>
+          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s7-3.html">
+          <strong>S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
+          
+          <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s7-3.html">
+          <strong>QCM S7-3</strong>
+          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-1.html">
           <strong>S8-1</strong>
-          <span>Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>Comprendre comment la déviation du jet crée une force longitudinale négative à l’atterrissage, et dans quelles limites l’inverseur aide au freinage.</span>
+          <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-1.html">
           <strong>QCM S8-1</strong>
-          <span>QCM - Inverseur de poussée : but, principe et poussée reverse</span>
+          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s8-2.html">
           <strong>S8-2</strong>
-          <span>Inverseur sur flux secondaire dans les architectures double flux</span>
+          <span>Inverseur pneumatique : organes et séquence</span>
           
-          <span>Comparer les architectures anciennes et modernes d’inversion de poussée pour comprendre pourquoi l’inversion du seul flux secondaire est privilégiée sur les moteurs récents.</span>
+          <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s8-2.html">
           <strong>QCM S8-2</strong>
-          <span>QCM - Inverseur sur flux secondaire et architectures double flux</span>
+          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-1.html">
           <strong>S9-1</strong>
-          <span>Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
-          <span>Identifier les organes de commande et comprendre les interverrouillages qui rendent la manœuvre sûre au sol et impossible en vol.</span>
+          <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-1.html">
           <strong>QCM S9-1</strong>
-          <span>QCM - Commande pneumatique de l’inverseur : sécurités et organes</span>
+          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s9-2.html">
           <strong>S9-2</strong>
-          <span>Séquence d’un inverseur de poussée et voyants associés</span>
+          <span>Types de trains et composition</span>
           
-          <span>Comprendre la succession des états de l’inverseur, depuis la mise en inversion jusqu’au retour en poussée positive, et relier chaque phase aux voyants.</span>
+          <span>Distinguer les architectures de base et les éléments constitutifs.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s9-2.html">
           <strong>QCM S9-2</strong>
-          <span>QCM - Séquence de fonctionnement et indications de l’inverseur</span>
+          <span>QCM - Types de trains et composition</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s9-3.html">
+          <strong>S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s9-3.html">
+          <strong>QCM S9-3</strong>
+          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-1.html">
           <strong>S10-1</strong>
-          <span>Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>Identifier les fonctions du train d’atterrissage, les efforts qu’il subit et les principales architectures de trains.</span>
+          <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s10-1.html">
           <strong>QCM S10-1</strong>
-          <span>QCM - Rôle des atterrisseurs, efforts et types de trains</span>
+          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s10-2.html">
           <strong>S10-2</strong>
-          <span>Composition générale d’un train d’atterrissage</span>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>Connaître les principaux sous-ensembles d’un train et les contraintes de construction.</span>
+          <span>Décrire la séquence compression-détente-équilibrage.</span>
           
         </a>
         
         <a class="sidebar-slide active" href="slide-s10-2.html">
           <strong>QCM S10-2</strong>
-          <span>QCM - Composition générale d’un train d’atterrissage</span>
+          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s10-3.html">
+          <strong>S10-3</strong>
+          <span>États du train, verrouillages et sécurités</span>
+          
+          <span>Présenter la cinématique des trains et les sécurités associées.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s10-3.html">
+          <strong>QCM S10-3</strong>
+          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s11-1.html">
           <strong>S11-1</strong>
-          <span>Géométrie du train et dispositions des roues</span>
+          <span>Voyants, roues et pneumatiques</span>
           
-          <span>Maîtriser le vocabulaire géométrique associé aux trains d’atterrissage et aux configurations de roues.</span>
+          <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s11-1.html">
           <strong>QCM S11-1</strong>
-          <span>QCM - Géométrie du train et dispositions des roues</span>
+          <span>QCM - Voyants, roues et pneumatiques</span>
           
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-2.html">
+          <strong>S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
+          
+          <span>Décrire les circuits de freinage et leurs sécurités.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-2.html">
+          <strong>QCM S11-2</strong>
+          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          
+          <span>5 questions - correction immédiate</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="s11-3.html">
+          <strong>S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
+          
+        </a>
+        
+        <a class="sidebar-slide" href="slide-s11-3.html">
+          <strong>QCM S11-3</strong>
+          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="s12-1.html">
           <strong>S12-1</strong>
-          <span>Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
-          <span>Expliquer la constitution de l’amortisseur et les précautions de gonflage.</span>
+          <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
           
         </a>
         
         <a class="sidebar-slide" href="slide-s12-1.html">
           <strong>QCM S12-1</strong>
-          <span>QCM - Amortisseur oléopneumatique : structure et gonflage</span>
+          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s12-2.html">
-          <strong>S12-2</strong>
-          <span>Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>Comprendre le rôle complémentaire du **gaz** et de l’**huile** dans les trois phases de fonctionnement d’un amortisseur oléopneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s12-2.html">
-          <strong>QCM S12-2</strong>
-          <span>QCM - Amortisseur : compression, détente et équilibrage</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s13-1.html">
-          <strong>S13-1</strong>
-          <span>Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>Décrire la cinématique du train escamotable, ses verrouillages et ses sécurités de base.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s13-1.html">
-          <strong>QCM S13-1</strong>
-          <span>QCM - Train escamotable : rentrée, sortie et verrouillages</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-1.html">
-          <strong>S14-1</strong>
-          <span>Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>Présenter les principaux types de roues et apprendre à lire les dimensions d’un pneumatique.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-1.html">
-          <strong>QCM S14-1</strong>
-          <span>QCM - Roues et pneumatiques : types, structure et dimensions</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s14-2.html">
-          <strong>S14-2</strong>
-          <span>Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>Relier l’état des pneus, le shimmy et les systèmes de surveillance du train à la sécurité opérationnelle.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s14-2.html">
-          <strong>QCM S14-2</strong>
-          <span>QCM - Usure, shimmy, dirigabilité et surveillance</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-1.html">
-          <strong>S15-1</strong>
-          <span>Circuits de freinage et freins à disques</span>
-          
-          <span>Comparer le freinage direct et le freinage assisté, puis identifier les éléments d’un frein à disques d’avion.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-1.html">
-          <strong>QCM S15-1</strong>
-          <span>QCM - Circuits de freinage et freins à disques</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s15-2.html">
-          <strong>S15-2</strong>
-          <span>Anti-skid et anti-brake</span>
-          
-          <span>Comprendre les automatismes de sécurité qui optimisent le freinage sans bloquer les roues.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s15-2.html">
-          <strong>QCM S15-2</strong>
-          <span>QCM - Anti-skid et anti-brake</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="s16-1.html">
-          <strong>S16-1</strong>
-          <span>QCM : les repères essentiels sur les atterrisseurs</span>
-          
-          <span>Réviser rapidement les définitions, les fonctions et les choix techniques du train d’atterrissage à partir d’un QCM de réactivation.</span>
-          
-        </a>
-        
-        <a class="sidebar-slide" href="slide-s16-1.html">
-          <strong>QCM S16-1</strong>
-          <span>QCM - Synthèse et entraînement QCM sur les atterrisseurs</span>
-          
-          <span>5 questions - correction immÃ©diate</span>
+          <span>5 questions - correction immédiate</span>
           
         </a>
         
         <a class="sidebar-slide" href="final-validation.html">
           <strong>Validation finale</strong>
-          <span>Validation finale - Cartographie du cours : propulsion aéronautique, échappement, inverseur de poussée et atterrisseurs</span>
+          <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
-          <span>25 questions tirees au sort sur 50 - correction finale</span>
+          <span>25 questions tirées au sort sur 149 - correction finale</span>
           
         </a>
         
@@ -2054,7 +2077,7 @@ html[data-embed="1"] .review-card {
       
       <div class="slide-toolbar">
         <div class="toolbar-meta">
-          <span>Page 42/61</span>
+          <span>Page 50/61</span>
           
           <span>QCM</span>
         </div>
@@ -2066,7 +2089,7 @@ html[data-embed="1"] .review-card {
           <a class="nav-link" href="s10-2.html">Précédent</a>
           
           
-          <a class="nav-link" href="s11-1.html">Suivante</a>
+          <a class="nav-link" href="s10-3.html">Suivante</a>
           
         </div>
       </div>
@@ -2076,7 +2099,7 @@ html[data-embed="1"] .review-card {
         <section class="quiz-hero">
           <div>
             <p class="eyebrow">QCM</p>
-            <h1>QCM - Composition générale d’un train d’atterrissage</h1>
+            <h1>QCM - Fonctionnement en trois temps de l’amortisseur</h1>
             <p>
               
               QCM intermédiaire avec correction immédiate question par question.
@@ -2093,14 +2116,14 @@ html[data-embed="1"] .review-card {
           id="quiz-app"
           class="quiz-app-shell"
           data-viewer-mode="user"
-          data-next-href="s11-1.html"
+          data-next-href="s10-3.html"
           data-home-href="index.html"
         ></section>
       </section>
     </main>
   </div>
 
-  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S10-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S10-2-Q1", "prompt": "Concernant la **composition générale** d’un train d’atterrissage, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Un train d’atterrissage ne comporte jamais de roues, seulement des amortisseurs.", "is_correct": false, "explanation": "Le cours mentionne explicitement les **roues et pneumatiques** parmi les éléments constitutifs du train. Les amortisseurs existent bien, mais ils ne remplacent pas les roues."}, {"id": "B", "text": "Les atterrisseurs principaux servent uniquement à diriger l’avion au sol.", "is_correct": false, "explanation": "La direction au sol peut être assurée par l’orientation des roues avant, et parfois des roues principales, mais ce n’est pas la fonction exclusive des atterrisseurs principaux. Leur rôle est plus large et inclut le support des charges et le roulage."}, {"id": "C", "text": "La roulette de queue est obligatoire sur tous les avions modernes.", "is_correct": false, "explanation": "Le cours précise qu’on a soit des atterrisseurs principaux et avant, soit une roulette de queue **selon la configuration**. Il n’existe donc pas d’obligation universelle de roulette de queue."}, {"id": "D", "text": "Un train d’atterrissage comprend des atterrisseurs principaux et un atterrisseur avant, ou une roulette de queue selon la configuration.", "is_correct": true, "explanation": "C’est bien la structure de base indiquée par le cours : l’avion peut être équipé d’un train tricycle avec une roue avant, ou d’un train classique avec une roulette de queue. La composition varie donc selon l’architecture choisie."}, {"id": "E", "text": "Les freins ne font pas partie du train d’atterrissage mais uniquement du système moteur.", "is_correct": false, "explanation": "Le cours classe au contraire les **freins et leur système de commande** parmi les sous-ensembles du train. Les freins participent au ralentissement de l’avion après l’atterrissage."}], "coverage_label": "", "learning_objective": "Identifier les principaux sous-ensembles qui composent un train d’atterrissage.", "correction_summary": "La bonne réponse est celle qui cite les atterrisseurs principaux et l’atterrisseur avant, ou la roulette de queue selon la configuration. Le piège classique consiste à croire qu’un train est seulement un ensemble de roues : il comprend aussi les freins, les pneumatiques et des dispositifs de commande. Retenir que la composition varie selon le type de train.", "course_clarification": "Le **train d’atterrissage** regroupe plusieurs sous-ensembles qui assurent le support, le roulage et l’arrêt de l’avion au sol. Selon l’architecture, on trouve des atterrisseurs principaux et un atterrisseur avant, ou bien une **roulette de queue**. Le train inclut aussi les roues, les pneumatiques, les freins et leur commande. En pratique, il ne sert pas seulement à porter l’avion : il contribue aussi à sa manœuvrabilité et à sa sécurité au sol.", "source_refs": []}, {"question_id": "S10-2-Q2", "prompt": "Quelle affirmation décrit correctement un élément **ajouté selon l’emploi de l’aéronef** ?", "difficulty": "easy", "options": [{"id": "A", "text": "Les flotteurs sont utilisés pour augmenter la vitesse de freinage sur piste sèche.", "is_correct": false, "explanation": "Les flotteurs ne servent pas au freinage sur piste ; ils sont destinés aux aéronefs opérant sur l’eau. Leur rôle est lié au support et à la flottabilité, pas au freinage."}, {"id": "B", "text": "Des flotteurs peuvent être ajoutés pour les hydravions.", "is_correct": true, "explanation": "Le cours cite explicitement les **flotteurs** comme équipement ajouté dans le cas des hydravions. Ils remplacent la fonction de contact avec une piste classique en permettant l’exploitation sur l’eau."}, {"id": "C", "text": "Les skis sont réservés aux avions de transport sur porte-avions.", "is_correct": false, "explanation": "Le cours indique que les **skis** sont utilisés pour les pistes enneigées. Ils ne sont pas associés à l’exploitation sur porte-avions."}, {"id": "D", "text": "Les trappes de train remplacent les roues sur les avions de ligne.", "is_correct": false, "explanation": "Les trappes servent à fermer le logement du train lors de la rentrée, elles ne remplacent pas les roues. Les roues restent indispensables au roulage au sol."}, {"id": "E", "text": "Les flotteurs et les skis sont des éléments systématiquement présents sur tous les trains d’atterrissage.", "is_correct": false, "explanation": "Le cours précise qu’ils sont ajoutés **selon l’emploi** : hydravions pour les flotteurs, pistes enneigées pour les skis. Ce sont donc des options de configuration, pas des éléments universels."}], "coverage_label": "", "learning_objective": "Associer les équipements additionnels du train d’atterrissage à leur domaine d’utilisation.", "correction_summary": "La bonne réponse associe les flotteurs aux hydravions. Le principal piège est de confondre les équipements optionnels avec les éléments de base du train. Il faut retenir que ces ajouts dépendent du milieu d’exploitation de l’aéronef.", "course_clarification": "Le cours distingue la **composition de base** du train et les éléments ajoutés selon l’environnement d’exploitation. Les **flotteurs** sont utilisés pour les hydravions, tandis que les **skis** sont prévus pour les pistes enneigées. Ces dispositifs modifient le mode de contact avec le sol ou l’eau. Ils ne font pas partie de tous les trains d’atterrissage, mais seulement de certaines configurations spécialisées.", "source_refs": []}, {"question_id": "S10-2-Q3", "prompt": "À propos du **train escamotable**, quelle proposition est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il comporte un système de rentrée-sortie ainsi que des trappes.", "is_correct": true, "explanation": "Le cours précise que le train escamotable comprend un **système de manœuvre rentrée-sortie** et des **trappes**. Ces éléments permettent de loger le train en vol pour réduire la traînée."}, {"id": "B", "text": "Il reste toujours sorti en vol pour faciliter l’atterrissage.", "is_correct": false, "explanation": "C’est l’inverse de la fonction recherchée : en vol, le train est rentré pour supprimer la traînée. Le fait de le laisser sorti augmenterait la résistance à l’avancement."}, {"id": "C", "text": "Il n’a besoin d’aucun verrouillage en position haute ou basse.", "is_correct": false, "explanation": "Le cours mentionne au contraire des **verrouillages** en position haute et en position basse. Ils sont indispensables pour sécuriser la position du train pendant les phases de vol et de roulage."}, {"id": "D", "text": "Son escamotage est uniquement mécanique et jamais hydraulique ni électrique.", "is_correct": false, "explanation": "Le cours indique que l’escamotage peut être **hydraulique, pneumatique ou électrique**. Il n’est donc pas limité à un seul principe mécanique."}, {"id": "E", "text": "Les trappes sont utilisées pour augmenter la traînée en croisière.", "is_correct": false, "explanation": "Les trappes servent à fermer le logement du train quand celui-ci est rentré, afin de diminuer la traînée. Elles ne sont pas conçues pour l’augmenter."}], "coverage_label": "", "learning_objective": "Identifier la fonction et les éléments constitutifs d’un train d’atterrissage escamotable.", "correction_summary": "La réponse juste est celle qui associe le train escamotable à un système de rentrée-sortie et à des trappes. Le piège principal est d’oublier que l’objectif est de réduire la traînée en vol. Il faut aussi retenir la présence de verrouillages pour sécuriser les positions du train.", "course_clarification": "Un **train escamotable** est un train qui peut être rentré dans la structure de l’avion pendant le vol. Cela permet de **réduire la traînée**, donc d’améliorer les performances aérodynamiques. Le système d’escamotage peut être hydraulique, pneumatique ou électrique selon les aéronefs. Des trappes ferment ensuite le logement du train pour préserver l’écoulement de l’air.", "source_refs": []}, {"question_id": "S10-2-Q4", "prompt": "Quelle affirmation correspond aux **contraintes de construction** d’un train d’atterrissage ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le critère principal est uniquement la couleur du matériau.", "is_correct": false, "explanation": "La couleur n’a aucun rôle dans les exigences fonctionnelles du train. Les critères retenus dans le cours sont mécaniques et structurels, pas esthétiques."}, {"id": "B", "text": "L’aluminium et le titane sont cités comme matériaux utilisés.", "is_correct": false, "explanation": "Le cours mentionne bien l’**aluminium** et le **titane** comme matériaux de construction. Dire qu’ils ne sont pas utilisés contredit directement la source."}, {"id": "C", "text": "La résistance n’est pas importante puisque le train ne subit aucune charge.", "is_correct": false, "explanation": "C’est faux : le train subit le poids de l’avion, l’impact à l’atterrissage, le roulage et le freinage. La résistance est donc une exigence majeure."}, {"id": "D", "text": "Plus le train est lourd, plus il est conforme au cahier des charges.", "is_correct": false, "explanation": "Le cours insiste au contraire sur la recherche de légèreté. Une masse trop élevée dégrade les performances et augmente les efforts structurels."}, {"id": "E", "text": "Le train doit être à la fois léger et résistant.", "is_correct": true, "explanation": "Le cours cite explicitement la **légèreté** et la **résistance** comme critères de construction. Il faut donc concevoir une structure qui limite la masse tout en supportant de fortes charges et sollicitations."}], "coverage_label": "", "learning_objective": "Reconnaître le compromis masse/résistance imposé à la structure du train.", "correction_summary": "La bonne réponse reprend les deux critères de construction donnés par le cours : légèreté et résistance. Le piège est de croire qu’un train doit seulement être robuste ; il doit aussi rester le plus léger possible. Retenir également les matériaux cités, aluminium et titane.", "course_clarification": "La conception d’un train d’atterrissage impose un compromis entre **masse** et **résistance mécanique**. Un train trop lourd pénalise les performances de l’avion, alors qu’un train trop faible ne supporte pas les efforts d’atterrissage et de roulage. Le cours cite l’**aluminium** et le **titane** comme matériaux utilisés pour répondre à cette exigence. En pratique, il faut donc choisir une structure solide sans alourdir inutilement l’aéronef.", "source_refs": []}, {"question_id": "S10-2-Q5", "prompt": "Quelle affirmation sur les **éléments du train d’atterrissage** est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le système d’orientation des roues avant n’a aucun rôle dans la manœuvre au sol.", "is_correct": false, "explanation": "Le cours précise au contraire que l’orientation des roues avant participe à la **manœuvre au sol**. Elle permet la direction et les virages lors du roulage."}, {"id": "B", "text": "Les roues principales ne peuvent jamais être orientées.", "is_correct": false, "explanation": "Le cours indique que l’orientation concerne les roues avant, et **parfois les roues principales**. Dire qu’elles ne peuvent jamais être orientées est donc trop absolu."}, {"id": "C", "text": "On trouve dans le train des roues, des pneumatiques, des freins et un système de commande des freins.", "is_correct": true, "explanation": "Le cours mentionne explicitement les **roues et pneumatiques**, ainsi que les **freins** et leur système de commande. Ces éléments participent au contact avec le sol et au ralentissement de l’avion."}, {"id": "D", "text": "Les freins n’agissent que pendant le décollage.", "is_correct": false, "explanation": "Les freins servent principalement après l’atterrissage et lors du roulage au sol pour ralentir l’avion. Ils ne sont pas réservés au décollage."}, {"id": "E", "text": "Les pneumatiques remplacent les freins dans le train escamotable.", "is_correct": false, "explanation": "Les pneumatiques assurent le contact avec le sol et l’amortissement de certaines sollicitations, mais ils ne remplissent pas la fonction de freinage. Les freins constituent un sous-ensemble distinct du train."}], "coverage_label": "", "learning_objective": "Distinguer les composants du train d’atterrissage et leurs fonctions au sol.", "correction_summary": "La bonne réponse énumère les roues, les pneumatiques, les freins et leur commande. Le piège est de mélanger les fonctions : les pneus assurent le contact avec le sol, tandis que les freins ralentissent l’avion. L’orientation des roues, elle, sert à la direction au sol.", "course_clarification": "Le train d’atterrissage regroupe plusieurs éléments fonctionnels : **roues**, **pneumatiques**, **freins** et système de commande. L’**orientation des roues avant** aide à diriger l’avion pendant le roulage, et parfois certaines roues principales peuvent aussi être orientées. Les pneumatiques ne freinent pas à eux seuls : ils assurent surtout le contact avec le sol et contribuent à l’absorption des efforts. Le freinage reste assuré par un dispositif dédié intégré au train.", "source_refs": []}], "subpart_id": "S10", "anchor_slide_id": "S10-2", "question_count_target": 5, "title": "QCM - Composition générale d’un train d’atterrissage"}</script>
+  <script id="quiz-data" type="application/json">{"quiz_id": "slide::S10-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S10-2-Q1", "prompt": "Concernant le fonctionnement en trois temps d’un amortisseur oléopneumatique, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Pendant la compression, l’azote se détend pour augmenter le volume de la chambre.", "is_correct": false, "explanation": "La détente de l’azote intervient en phase 2, pas en compression. En compression, le gaz est au contraire comprimé."}, {"id": "B", "text": "Le clapet de freinage se ferme dès le début de la compression pour accélérer le mouvement.", "is_correct": false, "explanation": "Le freinage hydraulique intervient en détente : la fermeture du clapet limite le débit du liquide et ralentit le mouvement."}, {"id": "C", "text": "L’équilibrage des pressions correspond à la phase où le train est verrouillé haut.", "is_correct": false, "explanation": "L’équilibrage des pressions sert à compenser le poids de l’avion après les échanges de fluide et de gaz. Il ne décrit pas un verrouillage du train."}, {"id": "D", "text": "Pendant la compression, l’hydraulique est chassée et l’azote se comprime.", "is_correct": true, "explanation": "La première phase correspond bien à une compression : le liquide hydraulique est déplacé et le gaz est comprimé, ce qui emmagasine l’énergie de l’impact."}, {"id": "E", "text": "Le liquide ne circule jamais par un diaphragme dans l’amortisseur.", "is_correct": false, "explanation": "Le passage du liquide par le diaphragme fait partie de la phase de détente et contribue au laminage hydraulique."}], "coverage_label": "Fonctionnement en trois temps de l’amortisseur", "learning_objective": "Identifier la phase de compression dans la séquence de fonctionnement d’un amortisseur oléopneumatique.", "correction_summary": "La bonne réponse est celle qui décrit la compression : le liquide hydraulique est chassé et l’azote se comprime. Le piège consiste à confondre cette phase avec la détente, où apparaît le freinage hydraulique.", "course_clarification": "Un amortisseur oléopneumatique associe un gaz et un fluide. La compression stocke l’énergie, puis la détente la restitue de façon freinée avant l’équilibrage final.", "source_refs": []}, {"question_id": "S10-2-Q2", "prompt": "Au sujet de la phase de détente de l’amortisseur, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La détente correspond à une augmentation de la pression de l’azote jusqu’à sa valeur maximale.", "is_correct": false, "explanation": "La détente d’un gaz s’accompagne d’une diminution de pression relative, pas d’une augmentation jusqu’au maximum."}, {"id": "B", "text": "L’azote se détend, le clapet de freinage se ferme et le laminage hydraulique ralentit le mouvement.", "is_correct": true, "explanation": "C’est exactement le rôle de la phase 2 : la détente du gaz s’accompagne d’un passage du liquide qui est freiné, ce qui amortit le retour."}, {"id": "C", "text": "Le liquide passe librement sans restriction, ce qui annule tout effet d’amortissement.", "is_correct": false, "explanation": "Le point essentiel est au contraire le laminage hydraulique : le passage du liquide est freiné pour réduire la vitesse du mouvement."}, {"id": "D", "text": "Le diaphragme empêche tout déplacement de fluide pendant cette phase.", "is_correct": false, "explanation": "Le liquide passe justement par le diaphragme pendant la détente ; c’est ce passage contrôlé qui participe au freinage."}, {"id": "E", "text": "Cette phase supprime le besoin d’un équilibre final des pressions.", "is_correct": false, "explanation": "Après la détente, il reste une phase d’équilibrage des pressions pour revenir à une situation compatible avec le poids de l’avion."}], "coverage_label": "Fonctionnement en trois temps de l’amortisseur", "learning_objective": "Reconnaître les mécanismes de freinage hydraulique pendant la détente.", "correction_summary": "La bonne réponse associe détente de l’azote, fermeture du clapet et laminage hydraulique. Le piège est de croire que la détente libère complètement le fluide : le passage reste freiné.", "course_clarification": "Le laminage hydraulique désigne un écoulement ralenti du liquide à travers un passage réduit. Cette résistance transforme une partie de l’énergie en chaleur et limite le rebond.", "source_refs": []}, {"question_id": "S10-2-Q3", "prompt": "À propos de la troisième phase du fonctionnement de l’amortisseur, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’équilibrage des pressions permet de compenser le poids de l’avion.", "is_correct": true, "explanation": "La phase 3 sert à stabiliser l’amortisseur à un état compatible avec la charge supportée par le train, donc avec le poids de l’avion."}, {"id": "B", "text": "L’équilibrage des pressions correspond à l’expulsion brutale du liquide hors de l’amortisseur.", "is_correct": false, "explanation": "L’expulsion brutale du liquide décrit plutôt la compression initiale, pas l’étape d’équilibrage final."}, {"id": "C", "text": "L’azote est encore comprimé davantage pour augmenter la hauteur du train.", "is_correct": false, "explanation": "L’objectif n’est pas d’augmenter sans limite la compression du gaz, mais d’atteindre un équilibre de pression adapté à la charge."}, {"id": "D", "text": "Le mouvement est accéléré par le laminage hydraulique pour faire rebondir l’avion.", "is_correct": false, "explanation": "Le laminage hydraulique a l’effet inverse : il ralentit le mouvement et évite le rebond après l’impact."}, {"id": "E", "text": "Cette phase supprime toute fonction de suspension au roulage.", "is_correct": false, "explanation": "L’amortisseur conserve au contraire sa fonction de suspension au roulage ; l’équilibrage contribue à maintenir cette capacité."}], "coverage_label": "Fonctionnement en trois temps de l’amortisseur", "learning_objective": "Comprendre le rôle de l’équilibrage final des pressions dans le maintien de l’avion.", "correction_summary": "La phase finale sert à équilibrer les pressions pour supporter le poids de l’avion. L’erreur classique est de la confondre avec une phase d’expulsion ou de freinage supplémentaire.", "course_clarification": "L’équilibrage n’est pas une nouvelle compression : c’est l’état stabilisé après l’amortissement. Il prépare la suspension au roulage et au maintien de l’appareil au sol.", "source_refs": []}, {"question_id": "S10-2-Q4", "prompt": "Dans la séquence de fonctionnement d’un amortisseur, quelle proposition décrit correctement l’enchaînement des phases ?", "difficulty": "easy", "options": [{"id": "A", "text": "Détente, puis compression, puis verrouillage mécanique du train bas.", "is_correct": false, "explanation": "Le verrouillage mécanique du train bas concerne la cinématique du train, pas les phases internes de l’amortisseur, et l’ordre des phases est inversé."}, {"id": "B", "text": "Équilibrage des pressions, puis compression, puis détente.", "is_correct": false, "explanation": "L’équilibrage est la dernière étape, pas la première. Il vient après les échanges de fluide et de gaz liés à l’impact."}, {"id": "C", "text": "Compression, puis équilibrage, puis détente rapide sans freinage.", "is_correct": false, "explanation": "L’équilibrage ne précède pas la détente, et la détente n’est pas libre : elle est freinée par le laminage hydraulique."}, {"id": "D", "text": "Détente libre sans intervention de l’azote, puis compression du liquide seulement.", "is_correct": false, "explanation": "Le gaz joue un rôle central dans l’amortissement, et la compression concerne l’ensemble du système fluide-gaz, pas le liquide seul."}, {"id": "E", "text": "Compression, puis détente freinée, puis équilibrage des pressions.", "is_correct": true, "explanation": "L’ordre donné reprend fidèlement la chronologie : d’abord la compression, ensuite la détente avec freinage hydraulique, enfin l’équilibrage final."}], "coverage_label": "Fonctionnement en trois temps de l’amortisseur", "learning_objective": "Reconstituer l’ordre des trois phases du fonctionnement de l’amortisseur.", "correction_summary": "La bonne chronologie est compression, détente freinée, puis équilibrage des pressions. Le principal piège est d’inverser les phases ou de leur attribuer des fonctions qui relèvent du train lui-même.", "course_clarification": "La chronologie est essentielle pour comprendre l’absorption d’énergie. Chaque étape correspond à une évolution différente du gaz et du liquide dans l’amortisseur.", "source_refs": []}, {"question_id": "S10-2-Q5", "prompt": "À propos de l’utilité de l’amortisseur au moment de l’atterrissage, quelle affirmation est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’amortisseur sert uniquement à augmenter la traînée en vol.", "is_correct": false, "explanation": "La réduction de la traînée en vol est liée à la rentrée du train, pas au rôle de l’amortisseur."}, {"id": "B", "text": "L’amortisseur empêche toute suspension au roulage pour rigidifier le train.", "is_correct": false, "explanation": "Il assure au contraire la suspension de l’avion au roulage en s’adaptant aux efforts et aux irrégularités."}, {"id": "C", "text": "L’amortisseur absorbe l’énergie liée à la vitesse verticale de l’avion à l’impact.", "is_correct": true, "explanation": "C’est sa fonction essentielle : il reçoit l’énergie de l’impact et la dissipe pour protéger la structure et les occupants."}, {"id": "D", "text": "L’énergie d’impact est stockée sans être dissipée afin de provoquer un rebond important.", "is_correct": false, "explanation": "L’objectif est justement d’éviter le rebond après le premier impact : la plus grande partie de l’énergie est dissipée."}, {"id": "E", "text": "Le rôle de l’amortisseur dépend seulement de la couleur du train et non des charges.", "is_correct": false, "explanation": "Le comportement de l’amortisseur dépend de paramètres physiques comme la charge, l’état de la piste, les efforts de freinage et la cinématique du train."}], "coverage_label": "Fonctionnement en trois temps de l’amortisseur", "learning_objective": "Relier le rôle mécanique de l’amortisseur à l’absorption et à la dissipation d’énergie à l’atterrissage.", "correction_summary": "La bonne proposition rappelle que l’amortisseur absorbe l’énergie de l’impact vertical et limite le rebond. Le piège consiste à le réduire à une simple pièce de confort ou à lui attribuer une fonction sans rapport avec l’atterrissage.", "course_clarification": "L’amortisseur protège l’avion en transformant une partie de l’énergie verticale en pertes contrôlées. Il contribue aussi à la tenue au sol lors du roulage et des freinages.", "source_refs": []}], "subpart_id": "S10", "anchor_slide_id": "S10-2", "question_count_target": 5, "title": "QCM - Fonctionnement en trois temps de l’amortisseur"}</script>
   <script>
     (function () {
       const quiz = JSON.parse(document.getElementById("quiz-data").textContent);
@@ -2236,11 +2259,11 @@ html[data-embed="1"] .review-card {
         const description = hero.querySelector("p:not(.eyebrow)");
         if (description) {
           description.textContent =
-            getQuestions().length + " questions tirees au sort sur " + quiz.questions.length + ", navigation libre et correction apres soumission.";
+            getQuestions().length + " questions tirées au sort sur " + quiz.questions.length + ", navigation libre et correction après soumission.";
         }
         const metaPills = hero.querySelectorAll(".meta-pill");
         if (metaPills.length) {
-          metaPills[0].textContent = getQuestions().length + " questions tirees au sort";
+          metaPills[0].textContent = getQuestions().length + " questions tirées au sort";
         }
       }
 

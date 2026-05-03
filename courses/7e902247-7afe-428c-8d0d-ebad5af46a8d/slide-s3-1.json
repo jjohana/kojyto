@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S3-1",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S3-1_Q1",
+      "prompt": "Concernant l’alimentation AC de secours, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le static inverter est alimenté directement par les IDG de chaque moteur.",
+          "is_correct": false,
+          "explanation": "Les IDG alimentent normalement le réseau AC principal ; le static inverter, lui, est alimenté par les batteries dans la situation de secours."
+        },
+        {
+          "id": "B",
+          "text": "L’AC Essential electrical system network est alimenté uniquement par l’EXTERNAL POWER A au sol.",
+          "is_correct": false,
+          "explanation": "L’EXTERNAL POWER A est une source normale au sol, mais le réseau AC essentiel est ici associé à une alimentation de secours via batteries et static inverter."
+        },
+        {
+          "id": "C",
+          "text": "L’APU GEN alimente toujours le réseau AC essentiel, même quand les batteries sont indisponibles.",
+          "is_correct": false,
+          "explanation": "L’APU GEN fait partie des sources AC normales ou alternatives, mais l’énoncé ne décrit pas une alimentation permanente du réseau essentiel par cette source."
+        },
+        {
+          "id": "D",
+          "text": "Si aucune source AC normale n’est disponible, le static inverter alimenté par les batteries peut fournir une partie du système appelée AC Essential electrical system network.",
+          "is_correct": true,
+          "explanation": "C’est la logique de secours indiquée : les batteries alimentent le STATIC INVERTER, qui peut ensuite fournir une partie du réseau AC essentiel quand les autres sources ne sont plus disponibles."
+        },
+        {
+          "id": "E",
+          "text": "Le réseau AC essentiel et le réseau AC général sont confondus dans la logique de secours.",
+          "is_correct": false,
+          "explanation": "La logique présentée distingue au contraire le réseau AC général du réseau AC essentiel, qui reste alimenté en situation dégradée."
+        }
+      ],
+      "coverage_label": "Génération AC de secours : EMER GEN et static inverter",
+      "learning_objective": "Identifier la source de secours capable d’alimenter le réseau AC essentiel quand les sources normales ne sont plus disponibles.",
+      "correction_summary": "La bonne réponse associe les batteries au STATIC INVERTER, lequel alimente une partie du réseau AC essentiel. Piège classique : confondre cette alimentation dégradée avec les sources AC normales.",
+      "course_clarification": "Le STATIC INVERTER convertit une alimentation continue issue des batteries en AC. L’AC Essential electrical system network correspond à la partie du réseau AC maintenue en mode dégradé.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-1_Q2",
+      "prompt": "À propos des batteries et du STATIC INVERTER, quelle proposition est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le STATIC INVERTER est alimenté par l’EXTERNAL POWER A et B.",
+          "is_correct": false,
+          "explanation": "L’EXTERNAL POWER A et B appartient à l’alimentation externe au sol, pas à la chaîne batterie-inverter de secours."
+        },
+        {
+          "id": "B",
+          "text": "BATTERY 1 et BATTERY 2 alimentent le STATIC INVERTER.",
+          "is_correct": true,
+          "explanation": "Le schéma indique explicitement que les deux batteries fournissent l’énergie au STATIC INVERTER pour permettre la continuité de l’alimentation de secours."
+        },
+        {
+          "id": "C",
+          "text": "BATTERY 1 alimente directement le réseau AC général sans conversion.",
+          "is_correct": false,
+          "explanation": "Une batterie fournit du DC ; pour alimenter de l’AC, il faut un convertisseur comme le STATIC INVERTER."
+        },
+        {
+          "id": "D",
+          "text": "BATTERY 2 remplace l’EMER GEN quand les moteurs sont en fonctionnement normal.",
+          "is_correct": false,
+          "explanation": "L’EMER GEN et les batteries n’ont pas la même fonction : la batterie est liée à la chaîne de secours via le STATIC INVERTER, pas à un remplacement du générateur de secours en régime normal."
+        },
+        {
+          "id": "E",
+          "text": "Le STATIC INVERTER est une source primaire d’AC indépendante de toute batterie.",
+          "is_correct": false,
+          "explanation": "Dans la logique présentée, le STATIC INVERTER dépend des batteries ; il n’est pas présenté comme une source primaire autonome."
+        }
+      ],
+      "coverage_label": "Génération AC de secours : EMER GEN et static inverter",
+      "learning_objective": "Relier correctement les batteries au STATIC INVERTER et distinguer conversion DC/AC et source d’énergie.",
+      "correction_summary": "Les batteries fournissent l’énergie au STATIC INVERTER, qui assure ensuite la conversion vers l’AC. L’erreur fréquente consiste à croire que le convertisseur produit l’énergie sans source d’alimentation.",
+      "course_clarification": "Une batterie stocke de l’énergie électrique en DC. Le STATIC INVERTER sert à transformer cette énergie en AC pour une partie du réseau essentiel.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-1_Q3",
+      "prompt": "Concernant l’EMER GEN, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "L’EMER GEN est commandé et surveillé par l’EMER GEN GCU, aussi appelé CSM/G Generator Control Unit.",
+          "is_correct": true,
+          "explanation": "Le document associe explicitement l’EMER GEN à son unité de contrôle EMER GEN GCU, également nommée CSM/G Generator Control Unit."
+        },
+        {
+          "id": "B",
+          "text": "L’EMER GEN est commandé par le GAPCU et surveillé par les batteries.",
+          "is_correct": false,
+          "explanation": "Le GAPCU est lié à la gestion de l’APU et de l’alimentation auxiliaire, pas à la commande de l’EMER GEN."
+        },
+        {
+          "id": "C",
+          "text": "L’EMER GEN n’a aucun organe de contrôle ou de surveillance.",
+          "is_correct": false,
+          "explanation": "Le schéma mentionne au contraire une unité dédiée, l’EMER GEN GCU, pour commander et surveiller ce générateur."
+        },
+        {
+          "id": "D",
+          "text": "L’EMER GEN GCU alimente directement le réseau AC essentiel sans conversion.",
+          "is_correct": false,
+          "explanation": "Une unité de contrôle ne fournit pas l’énergie de puissance au réseau ; elle pilote et surveille le générateur."
+        },
+        {
+          "id": "E",
+          "text": "L’EMER GEN appartient à la chaîne de secours et est indiqué comme indisponible par une croix rouge sur le schéma.",
+          "is_correct": false,
+          "explanation": "Le schéma met en avant les sources normales barrées par des croix rouges ; l’EMER GEN fait partie de la chaîne de secours, pas des sources normales barrées."
+        }
+      ],
+      "coverage_label": "Génération AC de secours : EMER GEN et static inverter",
+      "learning_objective": "Identifier le rôle de l’EMER GEN GCU et distinguer commande/puissance.",
+      "correction_summary": "L’EMER GEN est bien piloté et surveillé par l’EMER GEN GCU, aussi appelé CSM/G Generator Control Unit. Le piège est de confondre une unité de contrôle avec une source d’énergie.",
+      "course_clarification": "Une GCU gère un générateur : elle assure la commande et la surveillance. La puissance électrique délivrée au réseau vient du générateur, pas de la GCU elle-même.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-1_Q4",
+      "prompt": "Que signifient les croix rouges visibles sur le schéma ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elles indiquent que les batteries sont hors service.",
+          "is_correct": false,
+          "explanation": "Les batteries restent actives dans la chaîne de secours puisqu’elles alimentent le STATIC INVERTER."
+        },
+        {
+          "id": "B",
+          "text": "Elles signifient que l’EMER GEN est coupé du réseau de secours.",
+          "is_correct": false,
+          "explanation": "L’EMER GEN fait partie de la chaîne de secours ; la croix rouge ne le vise pas comme source normale indisponible."
+        },
+        {
+          "id": "C",
+          "text": "Elles représentent une panne du réseau AC essentiel uniquement.",
+          "is_correct": false,
+          "explanation": "Les croix rouges signalent l’indisponibilité de certaines sources d’alimentation, pas une panne du réseau AC essentiel lui-même."
+        },
+        {
+          "id": "D",
+          "text": "Elles montrent que les sources normales restent disponibles mais en mode réduit.",
+          "is_correct": false,
+          "explanation": "La présence d’une croix rouge signifie l’inverse : la source est considérée indisponible ou écartée sur le schéma."
+        },
+        {
+          "id": "E",
+          "text": "Elles marquent l’indisponibilité des sources normales telles que IDG/ENG, EXTERNAL POWER A & B et APU.",
+          "is_correct": true,
+          "explanation": "Le schéma associe les croix rouges aux sources normales écartées ou indisponibles, ce qui fait ressortir la chaîne de secours."
+        }
+      ],
+      "coverage_label": "Génération AC de secours : EMER GEN et static inverter",
+      "learning_objective": "Interpréter correctement un marquage visuel d’indisponibilité sur le schéma électrique.",
+      "correction_summary": "Les croix rouges servent à signaler que les sources normales ne sont pas disponibles. Le piège est de les lire comme un simple mode réduit ou comme un défaut du réseau essentiel.",
+      "course_clarification": "Une croix rouge sur un organe électrique signifie ici qu’il n’est pas retenu comme source disponible dans la situation montrée. Cela met en évidence la logique de bascule vers la secours.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-1_Q5",
+      "prompt": "À propos de la séparation des réseaux, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le réseau AC essentiel reçoit toujours l’alimentation directement des IDG en priorité.",
+          "is_correct": false,
+          "explanation": "Les IDG alimentent normalement le réseau AC principal, alors que le réseau essentiel est surtout mis en avant quand les autres sources ne sont plus disponibles."
+        },
+        {
+          "id": "B",
+          "text": "Le réseau AC général est isolé pour empêcher toute alimentation de secours.",
+          "is_correct": false,
+          "explanation": "L’isolement concerne la logique de séparation des réseaux, mais le but est justement de permettre la continuité d’alimentation du réseau essentiel."
+        },
+        {
+          "id": "C",
+          "text": "La logique présentée distingue le réseau AC général et le réseau AC essentiel.",
+          "is_correct": true,
+          "explanation": "Le schéma met clairement en évidence deux niveaux : le réseau AC général et, en situation dégradée, le réseau AC essentiel maintenu en service."
+        },
+        {
+          "id": "D",
+          "text": "Le réseau AC essentiel ne peut jamais être alimenté en situation dégradée.",
+          "is_correct": false,
+          "explanation": "C’est l’inverse : le réseau essentiel est précisément prévu pour rester alimenté lorsque les sources normales ne sont plus disponibles."
+        },
+        {
+          "id": "E",
+          "text": "Le réseau AC général et le réseau AC essentiel sont deux noms pour la même partie du système.",
+          "is_correct": false,
+          "explanation": "Ils désignent deux ensembles différents : l’un correspond au réseau principal, l’autre à la partie maintenue en secours."
+        }
+      ],
+      "coverage_label": "Génération AC de secours : EMER GEN et static inverter",
+      "learning_objective": "Distinguer le réseau AC général du réseau AC essentiel et comprendre leur rôle en mode dégradé.",
+      "correction_summary": "La distinction entre réseau AC général et réseau AC essentiel est centrale. Le piège consiste à croire qu’il s’agit d’un seul et même réseau, alors que la logique de secours les sépare.",
+      "course_clarification": "Le réseau AC général regroupe l’alimentation normale de l’avion. Le réseau AC essentiel correspond à la partie qui doit rester disponible en cas de perte des sources habituelles.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "S3",
+  "anchor_slide_id": "S3-1",
+  "question_count_target": 5,
+  "title": "QCM - Génération de secours : logique de bascule"
+}

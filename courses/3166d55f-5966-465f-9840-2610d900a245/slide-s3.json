@@ -1,0 +1,221 @@
+{
+  "quiz_id": "slide::S3",
+  "quiz_type": "subpart",
+  "difficulty": "easy",
+  "questions": [
+    {
+      "question_id": "S3-Q1",
+      "prompt": "À propos de la **trajectoire** d’un point matériel, quelle affirmation est correcte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La trajectoire est uniquement la position du point à un instant précis.",
+          "is_correct": false,
+          "explanation": "Une position instantanée correspond à un point à un instant donné, alors que la trajectoire regroupe les positions successives."
+        },
+        {
+          "id": "B",
+          "text": "La trajectoire dépend seulement de la masse du point étudié.",
+          "is_correct": false,
+          "explanation": "La masse n’intervient pas dans la définition de la trajectoire ; ce sont les positions successives dans le temps qui comptent."
+        },
+        {
+          "id": "C",
+          "text": "La trajectoire est toujours rectiligne.",
+          "is_correct": false,
+          "explanation": "Une trajectoire peut être rectiligne, circulaire ou curviligne ; elle n’est donc pas forcément une droite."
+        },
+        {
+          "id": "D",
+          "text": "La trajectoire est l’ensemble des positions successives occupées par le point au cours du temps.",
+          "is_correct": true,
+          "explanation": "C’est la définition attendue : on décrit toutes les positions successives du point, pas seulement une position à un instant donné."
+        },
+        {
+          "id": "E",
+          "text": "La trajectoire s’exprime en m·s⁻¹ dans le SI.",
+          "is_correct": false,
+          "explanation": "Le m·s⁻¹ est une unité de vitesse. La trajectoire relève d’une longueur, donc de l’unité mètre (m)."
+        }
+      ],
+      "coverage_label": "Trajectoire et position",
+      "learning_objective": "Distinguer trajectoire et position instantanée, et reconnaître la définition de la trajectoire.",
+      "correction_summary": "La bonne idée est de retenir que la trajectoire est un ensemble de positions successives, pas une seule position. Le piège classique consiste à confondre trajectoire, position et vitesse.",
+      "course_clarification": "La trajectoire décrit la forme du chemin suivi par le point M au fil du temps. Elle se mesure comme une grandeur de longueur, donc en mètre (m).",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-Q2",
+      "prompt": "Quelle proposition décrit correctement les **formes possibles** d’une trajectoire ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Une trajectoire ne peut être que circulaire.",
+          "is_correct": false,
+          "explanation": "Le cercle n’est qu’un cas particulier ; la trajectoire peut aussi être rectiligne ou curviligne."
+        },
+        {
+          "id": "B",
+          "text": "Une trajectoire peut être rectiligne, circulaire ou curviligne.",
+          "is_correct": true,
+          "explanation": "Ces trois formes sont explicitement distinguées : droite, cercle ou courbe quelconque."
+        },
+        {
+          "id": "C",
+          "text": "Une trajectoire curviligne est forcément un cercle.",
+          "is_correct": false,
+          "explanation": "Curviligne signifie simplement « en courbe » ; un cercle est un cas particulier, mais toute courbe n’est pas un cercle."
+        },
+        {
+          "id": "D",
+          "text": "Une trajectoire rectiligne correspond à une courbe quelconque.",
+          "is_correct": false,
+          "explanation": "Rectiligne veut dire en ligne droite ; ce n’est pas une courbe."
+        },
+        {
+          "id": "E",
+          "text": "Une trajectoire n’a pas de forme géométrique identifiable.",
+          "is_correct": false,
+          "explanation": "La forme de la trajectoire est justement un élément essentiel de son étude : droite, cercle ou courbe."
+        }
+      ],
+      "coverage_label": "Trajectoire et position",
+      "learning_objective": "Identifier les trois grandes formes de trajectoire et éviter les confusions entre elles.",
+      "correction_summary": "Il faut reconnaître les trois formes attendues : rectiligne, circulaire et curviligne. Le piège est de prendre un cas particulier pour une définition générale.",
+      "course_clarification": "Rectiligne signifie « en ligne droite », circulaire signifie « sur un cercle », et curviligne désigne une courbe quelconque. Cette classification sert ensuite à analyser le mouvement.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-Q3",
+      "prompt": "À propos du **vecteur position** \\(\\mathbf{r}(t)\\), quelle affirmation est exacte ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le vecteur position dépend du temps.",
+          "is_correct": true,
+          "explanation": "La position évolue au cours du mouvement : \\(\\mathbf{r}(t)\\) est donc une fonction du temps."
+        },
+        {
+          "id": "B",
+          "text": "Le vecteur position est indépendant du temps.",
+          "is_correct": false,
+          "explanation": "S’il était indépendant du temps, le point resterait immobile. La dépendance en temps est précisément ce qui permet de décrire le mouvement."
+        },
+        {
+          "id": "C",
+          "text": "Le vecteur position a pour unité le mètre par seconde.",
+          "is_correct": false,
+          "explanation": "Le m·s⁻¹ correspond à une vitesse. Un vecteur position est une longueur, donc il s’exprime en mètre (m)."
+        },
+        {
+          "id": "D",
+          "text": "Le vecteur position sert directement à mesurer une force.",
+          "is_correct": false,
+          "explanation": "La position ne mesure pas une force ; elle localise le point dans l’espace à un instant donné."
+        },
+        {
+          "id": "E",
+          "text": "La dépendance de \\(\\mathbf{r}(t)\\) en temps ne permet pas d’étudier la vitesse.",
+          "is_correct": false,
+          "explanation": "Au contraire, la variation temporelle de \\(\\mathbf{r}(t)\\) permet ensuite de déterminer la vitesse puis l’accélération."
+        }
+      ],
+      "coverage_label": "Trajectoire et position",
+      "learning_objective": "Lire la signification temporelle du vecteur position et relier cette dépendance à l’étude du mouvement.",
+      "correction_summary": "Le vecteur position est une grandeur qui varie avec le temps, ce qui permet de décrire le mouvement. Le piège est de le confondre avec une grandeur statique ou avec une vitesse.",
+      "course_clarification": "\\(\\mathbf{r}(t)\\) localise le point M à l’instant \\(t\\). Sa variation temporelle est la base du calcul de la vitesse, puis de l’accélération.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-Q4",
+      "prompt": "Quelle affirmation relie correctement la **position temporelle** à la suite de l’étude du mouvement ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vitesse et l’accélération se déterminent sans utiliser la position.",
+          "is_correct": false,
+          "explanation": "En cinématique, la position temporelle est justement la donnée de départ qui permet de calculer ces grandeurs par dérivation."
+        },
+        {
+          "id": "B",
+          "text": "L’accélération est une grandeur indépendante de toute évolution temporelle.",
+          "is_correct": false,
+          "explanation": "L’accélération traduit une variation de la vitesse dans le temps ; elle est donc intrinsèquement liée à l’évolution temporelle."
+        },
+        {
+          "id": "C",
+          "text": "La position temporelle ne sert qu’à donner une unité de longueur.",
+          "is_correct": false,
+          "explanation": "L’unité de longueur est bien le mètre, mais l’intérêt principal de la position temporelle est de permettre l’étude du mouvement."
+        },
+        {
+          "id": "D",
+          "text": "La trajectoire ne peut pas être déduite de la position temporelle.",
+          "is_correct": false,
+          "explanation": "Les coordonnées ou le vecteur position en fonction du temps servent justement à reconstruire la trajectoire en éliminant le temps si besoin."
+        },
+        {
+          "id": "E",
+          "text": "La dépendance du vecteur position au temps permet ensuite de déterminer la vitesse et l’accélération.",
+          "is_correct": true,
+          "explanation": "C’est la chaîne logique attendue : à partir de la position en fonction du temps, on dérive pour obtenir la vitesse puis l’accélération."
+        }
+      ],
+      "coverage_label": "Trajectoire et position",
+      "learning_objective": "Comprendre le rôle de la position en fonction du temps dans le calcul des grandeurs cinématiques.",
+      "correction_summary": "La relation essentielle est : position temporelle → vitesse → accélération. Le piège est de séparer ces grandeurs alors qu’elles sont liées par la dérivation.",
+      "course_clarification": "En cinématique, la position est la donnée de base. La vitesse est la dérivée temporelle de la position, et l’accélération est la dérivée temporelle de la vitesse.",
+      "source_refs": []
+    },
+    {
+      "question_id": "S3-Q5",
+      "prompt": "Quel énoncé est correct à propos de l’**unité** associée à la position ou à la trajectoire ?",
+      "difficulty": "easy",
+      "options": [
+        {
+          "id": "A",
+          "text": "La longueur s’exprime en newton (N).",
+          "is_correct": false,
+          "explanation": "Le newton est une unité de force, pas de longueur."
+        },
+        {
+          "id": "B",
+          "text": "La longueur s’exprime en pascal (Pa).",
+          "is_correct": false,
+          "explanation": "Le pascal est une unité de pression, sans rapport avec une position spatiale."
+        },
+        {
+          "id": "C",
+          "text": "Dans le SI, la longueur s’exprime en mètre (m).",
+          "is_correct": true,
+          "explanation": "La position et la trajectoire relèvent d’une grandeur de longueur ; l’unité SI correspondante est bien le mètre."
+        },
+        {
+          "id": "D",
+          "text": "La longueur s’exprime en seconde (s).",
+          "is_correct": false,
+          "explanation": "La seconde mesure le temps. Une trajectoire est une grandeur d’espace, pas de durée."
+        },
+        {
+          "id": "E",
+          "text": "La longueur s’exprime en mètre par seconde (m·s⁻¹).",
+          "is_correct": false,
+          "explanation": "Le m·s⁻¹ est une unité de vitesse. Une position ou une trajectoire s’exprime en mètres."
+        }
+      ],
+      "coverage_label": "Trajectoire et position",
+      "learning_objective": "Associer correctement l’unité SI de longueur à la position et à la trajectoire.",
+      "correction_summary": "La bonne unité à retenir est le mètre (m). Le piège fréquent est de confondre longueur, temps, vitesse et force.",
+      "course_clarification": "La trajectoire et la position décrivent un espace parcouru ou localisé ; elles se mesurent donc en mètres. Les unités comme s, m·s⁻¹ ou N correspondent à d’autres grandeurs.",
+      "source_refs": []
+    }
+  ],
+  "subpart_id": "3",
+  "anchor_slide_id": "S3",
+  "question_count_target": 5,
+  "title": "QCM - Trajectoire et position"
+}

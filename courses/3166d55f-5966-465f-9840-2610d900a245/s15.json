@@ -1,0 +1,66 @@
+{
+  "slide_id": "S15",
+  "subpart_id": "10",
+  "title": "Étude de cas – Mouvement circulaire d’une hélice",
+  "objective": "Appliquer les formules du mouvement circulaire à une hélice et interpréter l’effet dynamique associé.",
+  "layout": "two_columns",
+  "blocks": [
+    {
+      "kind": "image",
+      "title": "Synthese visuelle",
+      "text": "",
+      "bullets": [],
+      "image_url": null,
+      "image_path": "C:\\Users\\Jean-JacquesOhana\\Documents\\Python_Projects\\Generate_Lessons\\storage\\courses\\3166d55f-5966-465f-9840-2610d900a245\\generated_visuals\\s15-visual.png",
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "bullets",
+      "title": "Calcul et interprétation",
+      "text": null,
+      "bullets": [
+        "**Vitesse linéaire** : \\(v = \\omega R = 120 \\times 0{,}6 = 72\\ \\text{m/s}\\). La pale se déplace très vite à sa périphérie.",
+        "**Accélération normale** : \\(a_n = v^2/R = 72^2/0{,}6 = 8\\,640\\ \\text{m/s}^2\\). Elle reste **dirigée vers le centre de rotation** : c’est l’accélération **centripète** (l’effet ressenti peut être décrit comme centrifuge).",
+        "**Conséquence mécanique** : ces fortes accélérations imposent des **contraintes mécaniques** élevées ; un bon **équilibrage** limite les vibrations et protège l’hélice."
+      ],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": null
+    },
+    {
+      "kind": "formula",
+      "title": "Relations à utiliser",
+      "text": "Données : **R = 0,6 m** et **ω = 120 rad/s**. On cherche la vitesse linéaire puis l’accélération normale.",
+      "bullets": [],
+      "image_url": null,
+      "image_path": null,
+      "rows": [],
+      "latex": "v=\\omega R \\qquad a_n=\\frac{v^2}{R}=\\omega^2R"
+    }
+  ],
+  "course_refs": [],
+  "web_refs": [
+    {
+      "source_type": "web",
+      "label": "Britannica — Centripetal acceleration",
+      "locator": "v = ωR et a = v²/r, accélération vers le centre",
+      "url": "https://www.britannica.com/science/centripetal-acceleration"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — AC 20-37E",
+      "locator": "équilibrage dynamique des hélices et réduction des vibrations",
+      "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-37E_Ed_Upd.pdf"
+    },
+    {
+      "source_type": "web",
+      "label": "FAA — FAA-H-8083-32A, Aviation Maintenance Technician Handbook: Powerplant (Volume 2)",
+      "locator": "research",
+      "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-32-AMT-Powerplant-Vol-2.pdf"
+    }
+  ],
+  "course_reference_note": "L’exemple d’hélice reprend les relations **v = ωR** et **a_n = v²/R**. Il met en évidence l’accélération vers le centre et l’enjeu d’équilibrage associé.",
+  "teacher_notes": "Faire verbaliser l’ordre des calculs : donnée de départ, formule, substitution numérique, puis interprétation physique. Insister sur l’unité de ω en rad/s et sur le sens de a_n vers le centre."
+}

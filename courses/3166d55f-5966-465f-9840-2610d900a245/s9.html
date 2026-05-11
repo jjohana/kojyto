@@ -499,11 +499,38 @@ html[data-embed="1"] body::after {
   animation: rise-in 580ms ease both;
 }
 
+.narration-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .narration-panel strong {
   color: var(--accent-strong);
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.narration-retry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 8px 12px;
+  border: 1px solid rgba(12, 110, 130, 0.18);
+  border-radius: 12px;
+  background: rgba(12, 110, 130, 0.08);
+  color: var(--accent-strong);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.narration-retry[hidden] {
+  display: none;
 }
 
 .narration-panel audio {
@@ -1963,6 +1990,60 @@ html[data-embed="1"] .review-card {
           </div>
         </section>
 
+        
+        <section class="narration-panel">
+          <div class="narration-panel-header">
+            <strong>Narration audio</strong>
+            <button class="narration-retry" type="button" data-audio-retry hidden>Lire l'audio</button>
+          </div>
+          <audio controls preload="auto" autoplay data-slide-audio>
+            <source src="audio/slides/s9.mp3" type="audio/mpeg">
+          </audio>
+        </section>
+        <script>
+          (function () {
+            const audio = document.querySelector("[data-slide-audio]");
+            if (!audio) {
+              return;
+            }
+            const storageKey = "kojyto:narration-autoplay";
+            const panel = audio.closest(".narration-panel");
+            const retryButton = panel ? panel.querySelector("[data-audio-retry]") : null;
+            const rememberAudioIntent = function () {
+              try {
+                window.sessionStorage.setItem(storageKey, "1");
+              } catch (error) {
+                // Storage can be disabled; audio playback still works from the button.
+              }
+            };
+            const revealRetry = function () {
+              if (!retryButton || !panel) {
+                return;
+              }
+              panel.classList.add("is-audio-blocked");
+              retryButton.hidden = false;
+            };
+            const playSlideAudio = function () {
+              const playback = audio.play();
+              if (!playback || typeof playback.then !== "function") {
+                rememberAudioIntent();
+                return;
+              }
+              playback.then(rememberAudioIntent).catch(revealRetry);
+            };
+            if (retryButton) {
+              retryButton.addEventListener("click", function () {
+                panel.classList.remove("is-audio-blocked");
+                retryButton.hidden = true;
+                playSlideAudio();
+              });
+            }
+            document.querySelectorAll(".nav-link[href], .sidebar-slide[href]").forEach(function (link) {
+              link.addEventListener("click", rememberAudioIntent);
+            });
+            window.addEventListener("load", playSlideAudio, { once: true });
+          }());
+        </script>
         
 
         

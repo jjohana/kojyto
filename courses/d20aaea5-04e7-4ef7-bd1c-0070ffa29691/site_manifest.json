@@ -1,10 +1,11 @@
 {
-  "site_build_version": 15,
-  "cache_token": "15-dcf62998e60b",
+  "site_build_version": 16,
+  "cache_token": "16-bb90dbe9d276",
   "viewer_mode": "user",
   "page_count": 61,
   "slide_count": 30,
   "quiz_count": 31,
+  "audio_page_count": 0,
   "pages": [
     {
       "page_id": "S1-1",

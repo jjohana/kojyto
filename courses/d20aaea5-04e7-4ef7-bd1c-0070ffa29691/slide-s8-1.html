@@ -10,6 +10,9 @@
       if (params.get("embed") === "1") {
         document.documentElement.dataset.embed = "1";
       }
+      if (params.get("deck") === "1") {
+        document.documentElement.dataset.deck = "1";
+      }
     }());
   </script>
   <style>
@@ -280,6 +283,9 @@ html[data-embed="1"] body::after {
   gap: 12px;
   margin-top: 18px;
   padding: 16px 18px;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid var(--line);
@@ -288,19 +294,34 @@ html[data-embed="1"] body::after {
 
 .gamification-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px 12px;
   color: var(--accent-strong);
   font-weight: 700;
+  min-width: 0;
+}
+
+.gamification-header strong {
+  min-width: 0;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
 .gamification-header span {
+  flex: 0 1 auto;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 6px 10px;
   border-radius: 999px;
   background: rgba(217, 133, 36, 0.12);
   color: #7b4b11;
   font-size: 0.84rem;
+  line-height: 1.15;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .gamification-bar {
@@ -320,17 +341,20 @@ html[data-embed="1"] body::after {
 
 .gamification-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
   gap: 10px;
+  min-width: 0;
 }
 
 .gamification-stats span {
   display: grid;
   gap: 2px;
+  min-width: 0;
 }
 
 .gamification-stats strong {
   color: var(--accent-strong);
+  overflow-wrap: anywhere;
 }
 
 .gamification-stats small,
@@ -1321,6 +1345,22 @@ html[data-embed="1"] .review-card {
   animation: none;
 }
 
+html[data-deck="1"] .slide-toolbar,
+html[data-deck="1"] .sidebar-action[href$="deck.html"] {
+  display: none;
+}
+
+html[data-deck="1"] .page-shell {
+  min-height: auto;
+  padding: 0;
+}
+
+html[data-deck="1"] .site-sidebar {
+  top: 0;
+  max-height: 100vh;
+  border-radius: 0;
+}
+
 @media (min-width: 1120px) {
   .slide.layout-simple .content-grid {
     align-items: stretch;
@@ -1703,15 +1743,15 @@ html[data-embed="1"] .review-card {
       <section class="gamification-panel" data-gamification-widget>
         <div class="gamification-header">
           <strong>Progression QCM</strong>
-          <span data-gamification-medal>Aucune medaille</span>
+          <span data-gamification-medal>Aucune médaille</span>
         </div>
         <div class="gamification-bar"><span data-gamification-bar></span></div>
         <div class="gamification-stats">
           <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
-          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>terminés</small></span>
           <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
         </div>
-        <p data-gamification-next>Prochaine: Bronze</p>
+        <p data-gamification-next>Prochaine : Bronze</p>
       </section>
       
       <div class="sidebar-list">
@@ -2620,7 +2660,7 @@ html[data-embed="1"] .review-card {
   </div>
 
   
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-4b117e5af5a9", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "QCM - Origine de la poussée : terme réacteur", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "QCM - Exemple numérique et architecture double flux", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "QCM - Tuyère, poussée brute et poussée spécifique", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "QCM - Consommation horaire et consommation spécifique", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "QCM - Repères de consommation et surveillance moteur", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "QCM - Puissance calorifique et puissance thermique théorique", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "QCM - Puissance thermique réelle et puissance propulsive", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "QCM - Rendements de la chaîne propulsive", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "QCM - Lecture du diagramme d’écoulement des gaz", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "QCM - Taux de dilution et exemples de moteurs", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "QCM - Principe du turbopropulseur", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "QCM - Canal d’éjection et rôle de la tuyère", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "QCM - Tuyères variables, double flux et adaptation au vol", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "QCM - Tuyère convergente, rapport critique et supersonique", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "QCM - Post-combustion et bruit de tuyère", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "QCM - But et formule de la poussée inverse", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "QCM - Poussée inverse en double flux et ordres de grandeur", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "QCM - Calcul et interprétation de la poussée inverse", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S8-1", "quiz_type": "subpart", "title": "QCM - Commandes, sécurités et limitations de l’inverseur", "href": "slide-s8-1.html", "base_xp": 100}, {"quiz_id": "slide::S8-2", "quiz_type": "subpart", "title": "QCM - Dispositif pneumatique et séquence de fonctionnement", "href": "slide-s8-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-1", "quiz_type": "subpart", "title": "QCM - Rôle et fonctions du train d’atterrissage", "href": "slide-s9-1.html", "base_xp": 100}, {"quiz_id": "slide::S9-2", "quiz_type": "subpart", "title": "QCM - Types de trains et composition", "href": "slide-s9-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-3", "quiz_type": "subpart", "title": "QCM - Géométrie des trains et dispositions des atterrisseurs", "href": "slide-s9-3.html", "base_xp": 100}, {"quiz_id": "slide::S10-1", "quiz_type": "subpart", "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe", "href": "slide-s10-1.html", "base_xp": 100}, {"quiz_id": "slide::S10-2", "quiz_type": "subpart", "title": "QCM - Fonctionnement en trois temps de l’amortisseur", "href": "slide-s10-2.html", "base_xp": 100}, {"quiz_id": "slide::S10-3", "quiz_type": "subpart", "title": "QCM - Rentrée-sortie, verrouillage et secours", "href": "slide-s10-3.html", "base_xp": 100}, {"quiz_id": "slide::S11-1", "quiz_type": "subpart", "title": "QCM - Voyants, roues et pneumatiques", "href": "slide-s11-1.html", "base_xp": 100}, {"quiz_id": "slide::S11-2", "quiz_type": "subpart", "title": "QCM - Freinage, adhérence et systèmes de protection", "href": "slide-s11-2.html", "base_xp": 100}, {"quiz_id": "slide::S11-3", "quiz_type": "subpart", "title": "QCM - Anti-patinage, pneus, dirigibilité et surveillance", "href": "slide-s11-3.html", "base_xp": 100}, {"quiz_id": "slide::S12-1", "quiz_type": "subpart", "title": "QCM - QCM d’entraînement : notions clés des atterrisseurs", "href": "slide-s12-1.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::19-f9843b265de9", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "QCM - Origine de la poussée : terme réacteur", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "QCM - Exemple numérique et architecture double flux", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "QCM - Tuyère, poussée brute et poussée spécifique", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "QCM - Consommation horaire et consommation spécifique", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "QCM - Repères de consommation et surveillance moteur", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "QCM - Puissance calorifique et puissance thermique théorique", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "QCM - Puissance thermique réelle et puissance propulsive", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "QCM - Rendements de la chaîne propulsive", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "QCM - Lecture du diagramme d’écoulement des gaz", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "QCM - Taux de dilution et exemples de moteurs", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "QCM - Principe du turbopropulseur", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "QCM - Canal d’éjection et rôle de la tuyère", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "QCM - Tuyères variables, double flux et adaptation au vol", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "QCM - Tuyère convergente, rapport critique et supersonique", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "QCM - Post-combustion et bruit de tuyère", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "QCM - But et formule de la poussée inverse", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "QCM - Poussée inverse en double flux et ordres de grandeur", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "QCM - Calcul et interprétation de la poussée inverse", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S8-1", "quiz_type": "subpart", "title": "QCM - Commandes, sécurités et limitations de l’inverseur", "href": "slide-s8-1.html", "base_xp": 100}, {"quiz_id": "slide::S8-2", "quiz_type": "subpart", "title": "QCM - Dispositif pneumatique et séquence de fonctionnement", "href": "slide-s8-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-1", "quiz_type": "subpart", "title": "QCM - Rôle et fonctions du train d’atterrissage", "href": "slide-s9-1.html", "base_xp": 100}, {"quiz_id": "slide::S9-2", "quiz_type": "subpart", "title": "QCM - Types de trains et composition", "href": "slide-s9-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-3", "quiz_type": "subpart", "title": "QCM - Géométrie des trains et dispositions des atterrisseurs", "href": "slide-s9-3.html", "base_xp": 100}, {"quiz_id": "slide::S10-1", "quiz_type": "subpart", "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe", "href": "slide-s10-1.html", "base_xp": 100}, {"quiz_id": "slide::S10-2", "quiz_type": "subpart", "title": "QCM - Fonctionnement en trois temps de l’amortisseur", "href": "slide-s10-2.html", "base_xp": 100}, {"quiz_id": "slide::S10-3", "quiz_type": "subpart", "title": "QCM - Rentrée-sortie, verrouillage et secours", "href": "slide-s10-3.html", "base_xp": 100}, {"quiz_id": "slide::S11-1", "quiz_type": "subpart", "title": "QCM - Voyants, roues et pneumatiques", "href": "slide-s11-1.html", "base_xp": 100}, {"quiz_id": "slide::S11-2", "quiz_type": "subpart", "title": "QCM - Freinage, adhérence et systèmes de protection", "href": "slide-s11-2.html", "base_xp": 100}, {"quiz_id": "slide::S11-3", "quiz_type": "subpart", "title": "QCM - Anti-patinage, pneus, dirigibilité et surveillance", "href": "slide-s11-3.html", "base_xp": 100}, {"quiz_id": "slide::S12-1", "quiz_type": "subpart", "title": "QCM - QCM d’entraînement : notions clés des atterrisseurs", "href": "slide-s12-1.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");
@@ -2701,7 +2741,7 @@ html[data-embed="1"] .review-card {
     const total = quizzes.length;
     const percent = total ? Math.round((completedCount / total) * 100) : 0;
     const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
-    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let currentMedal = { label: "Aucune médaille", threshold_percent: 0 };
     let nextMedal = null;
     medals.forEach(function (medal) {
       const threshold = Number(medal.threshold_percent || 0);
@@ -2735,10 +2775,10 @@ html[data-embed="1"] .review-card {
     setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
     setText("[data-gamification-xp]", summary.xp + " XP");
     setText("[data-gamification-level]", "Niveau " + summary.level);
-    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune médaille");
     setText(
       "[data-gamification-next]",
-      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+      summary.nextMedal ? "Prochaine : " + summary.nextMedal.label : "Parcours complet"
     );
     document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
       element.style.width = summary.percent + "%";

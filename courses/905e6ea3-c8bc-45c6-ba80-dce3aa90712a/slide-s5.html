@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1606,9 +1699,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide" href="s1-s2.html">
+        <a
+          class="sidebar-slide"
+          href="s1-s2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s1_s2</strong>
           <span>Couverture et sommaire du module « L’individu dans l’organisation »</span>
           
@@ -1616,7 +1729,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-s2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-s2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s1_s2"
+        >
           <strong>QCM s1_s2</strong>
           <span>QCM - Couverture et sommaire du module « L’individu dans l’organisation »</span>
           
@@ -1624,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3.html">
+        <a
+          class="sidebar-slide"
+          href="s3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s3</strong>
           <span>Découverte des métiers de l’aéronautique</span>
           
@@ -1632,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s3"
+        >
           <strong>QCM s3</strong>
           <span>QCM - Découverte des métiers de l’aéronautique</span>
           
@@ -1640,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4.html">
+        <a
+          class="sidebar-slide"
+          href="s4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s4</strong>
           <span>Ingénieur en aéronautique</span>
           
@@ -1648,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s4"
+        >
           <strong>QCM s4</strong>
           <span>QCM - Ingénieur en aéronautique</span>
           
@@ -1656,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5.html">
+        <a
+          class="sidebar-slide"
+          href="s5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s5</strong>
           <span>Pilote de ligne</span>
           
@@ -1664,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide active" href="slide-s5.html">
+        <a
+          class="sidebar-slide active"
+          href="slide-s5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s5"
+        >
           <strong>QCM s5</strong>
           <span>QCM - Pilote de ligne</span>
           
@@ -1672,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6.html">
+        <a
+          class="sidebar-slide"
+          href="s6.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s6</strong>
           <span>Mécanicien moteur / mécanicien aéronautique</span>
           
@@ -1680,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s6"
+        >
           <strong>QCM s6</strong>
           <span>QCM - Mécanicien moteur / mécanicien aéronautique</span>
           
@@ -1688,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7.html">
+        <a
+          class="sidebar-slide"
+          href="s7.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s7</strong>
           <span>Avitailleur</span>
           
@@ -1696,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s7"
+        >
           <strong>QCM s7</strong>
           <span>QCM - Avitailleur</span>
           
@@ -1704,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8.html">
+        <a
+          class="sidebar-slide"
+          href="s8.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s8</strong>
           <span>Aiguilleur du ciel</span>
           
@@ -1712,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s8"
+        >
           <strong>QCM s8</strong>
           <span>QCM - Aiguilleur du ciel</span>
           
@@ -1720,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9.html">
+        <a
+          class="sidebar-slide"
+          href="s9.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s9</strong>
           <span>Chef d’escale</span>
           
@@ -1728,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s9"
+        >
           <strong>QCM s9</strong>
           <span>QCM - Chef d’escale</span>
           
@@ -1736,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10.html">
+        <a
+          class="sidebar-slide"
+          href="s10.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s10</strong>
           <span>Technicien d’essai</span>
           
@@ -1744,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s10"
+        >
           <strong>QCM s10</strong>
           <span>QCM - Technicien d’essai</span>
           
@@ -1752,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11-s12.html">
+        <a
+          class="sidebar-slide"
+          href="s11-s12.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s11_s12</strong>
           <span>Ouverture : droits et devoirs du salarié / contrat de travail</span>
           
@@ -1760,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11-s12.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11-s12.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s11_s12"
+        >
           <strong>QCM s11_s12</strong>
           <span>QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »</span>
           
@@ -1768,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s13.html">
+        <a
+          class="sidebar-slide"
+          href="s13.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s13</strong>
           <span>Les droits du salarié</span>
           
@@ -1776,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s13.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s13.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s13"
+        >
           <strong>QCM s13</strong>
           <span>QCM - Les droits du salarié</span>
           
@@ -1784,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s14.html">
+        <a
+          class="sidebar-slide"
+          href="s14.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s14</strong>
           <span>Les devoirs du salarié</span>
           
@@ -1792,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s14.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s14.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s14"
+        >
           <strong>QCM s14</strong>
           <span>QCM - Les devoirs du salarié</span>
           
@@ -1800,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s15.html">
+        <a
+          class="sidebar-slide"
+          href="s15.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s15</strong>
           <span>Le contrat de travail</span>
           
@@ -1808,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s15.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s15.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s15"
+        >
           <strong>QCM s15</strong>
           <span>QCM - Le contrat de travail</span>
           
@@ -1816,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s16.html">
+        <a
+          class="sidebar-slide"
+          href="s16.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s16</strong>
           <span>TP – L’individu dans l’organisation</span>
           
@@ -1824,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s17.html">
+        <a
+          class="sidebar-slide"
+          href="s17.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s17</strong>
           <span>Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »</span>
           
@@ -1832,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s18.html">
+        <a
+          class="sidebar-slide"
+          href="s18.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s18</strong>
           <span>Santé en entreprise aéronautique</span>
           
@@ -1840,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s18.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s18.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s18"
+        >
           <strong>QCM s18</strong>
           <span>QCM - Santé en entreprise aéronautique</span>
           
@@ -1848,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s19.html">
+        <a
+          class="sidebar-slide"
+          href="s19.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s19</strong>
           <span>Sécurité en entreprise aéronautique</span>
           
@@ -1856,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s19.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s19.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s19"
+        >
           <strong>QCM s19</strong>
           <span>QCM - Sécurité en entreprise aéronautique</span>
           
@@ -1864,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s20.html">
+        <a
+          class="sidebar-slide"
+          href="s20.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s20</strong>
           <span>Qualité en entreprise aéronautique</span>
           
@@ -1872,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s20.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s20.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s20"
+        >
           <strong>QCM s20</strong>
           <span>QCM - Qualité en entreprise aéronautique</span>
           
@@ -1880,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s21.html">
+        <a
+          class="sidebar-slide"
+          href="s21.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s21</strong>
           <span>Interaction entre santé, sécurité et qualité</span>
           
@@ -1888,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s21.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s21.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s21"
+        >
           <strong>QCM s21</strong>
           <span>QCM - Interaction entre santé, sécurité et qualité</span>
           
@@ -1896,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s22.html">
+        <a
+          class="sidebar-slide"
+          href="s22.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s22</strong>
           <span>Rémunération et parcours professionnels</span>
           
@@ -1904,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s22.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s22.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s22"
+        >
           <strong>QCM s22</strong>
           <span>QCM - Rémunération et parcours professionnels</span>
           
@@ -1912,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - Économie-Gestion Bac Pro Aéronautique</span>
           
@@ -2030,6 +2333,180 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-58d39ab4b14f", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::s1_s2", "quiz_type": "subpart", "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »", "href": "slide-s1-s2.html", "base_xp": 100}, {"quiz_id": "slide::s3", "quiz_type": "subpart", "title": "QCM - Découverte des métiers de l’aéronautique", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::s4", "quiz_type": "subpart", "title": "QCM - Ingénieur en aéronautique", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::s5", "quiz_type": "subpart", "title": "QCM - Pilote de ligne", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::s6", "quiz_type": "subpart", "title": "QCM - Mécanicien moteur / mécanicien aéronautique", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::s7", "quiz_type": "subpart", "title": "QCM - Avitailleur", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::s8", "quiz_type": "subpart", "title": "QCM - Aiguilleur du ciel", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::s9", "quiz_type": "subpart", "title": "QCM - Chef d’escale", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::s10", "quiz_type": "subpart", "title": "QCM - Technicien d’essai", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::s11_s12", "quiz_type": "subpart", "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »", "href": "slide-s11-s12.html", "base_xp": 100}, {"quiz_id": "slide::s13", "quiz_type": "subpart", "title": "QCM - Les droits du salarié", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::s14", "quiz_type": "subpart", "title": "QCM - Les devoirs du salarié", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::s15", "quiz_type": "subpart", "title": "QCM - Le contrat de travail", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::s18", "quiz_type": "subpart", "title": "QCM - Santé en entreprise aéronautique", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::s19", "quiz_type": "subpart", "title": "QCM - Sécurité en entreprise aéronautique", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::s20", "quiz_type": "subpart", "title": "QCM - Qualité en entreprise aéronautique", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "slide::s21", "quiz_type": "subpart", "title": "QCM - Interaction entre santé, sécurité et qualité", "href": "slide-s21.html", "base_xp": 100}, {"quiz_id": "slide::s22", "quiz_type": "subpart", "title": "QCM - Rémunération et parcours professionnels", "href": "slide-s22.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::s5", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "s5_q1", "prompt": "Parmi les affirmations suivantes, laquelle correspond au rôle du pilote de ligne ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le pilote de ligne se limite à faire décoller et atterrir l’avion sans autre responsabilité.", "is_correct": false, "explanation": "Le rôle est plus large que le simple pilotage ; il inclut aussi la préparation du vol, la surveillance et la gestion de la communication."}, {"id": "B", "text": "Le pilote de ligne n’a pas à tenir compte de la sécurité des passagers.", "is_correct": false, "explanation": "La sécurité des passagers fait partie intégrante de sa mission, et non une tâche secondaire ou optionnelle."}, {"id": "C", "text": "Le pilote de ligne ne travaille qu’avec les commandes de vol et n’intervient pas sur l’organisation du vol.", "is_correct": false, "explanation": "Il intervient aussi dans l’organisation du vol, notamment par la planification et l’établissement du plan de vol."}, {"id": "D", "text": "Le pilote de ligne assure la sécurité de l’avion et de ses passagers.", "is_correct": true, "explanation": "C’est l’idée centrale présentée pour ce métier : la sécurité de l’appareil et des passagers est sa responsabilité principale."}, {"id": "E", "text": "Le pilote de ligne n’a jamais à réagir en situation d’urgence.", "is_correct": false, "explanation": "Il doit au contraire être capable de réagir rapidement en situation d’urgence, car cela fait partie de ses responsabilités."}], "coverage_label": "Responsabilités du pilote de ligne", "learning_objective": "Identifier la mission principale du pilote de ligne et distinguer cette responsabilité d’un simple acte de pilotage.", "correction_summary": "La bonne réponse est celle qui relie le pilote de ligne à la sécurité de l’avion et des passagers. Le piège consiste à réduire son rôle au seul maniement des commandes.", "course_clarification": "Le pilote de ligne ne se contente pas de piloter. Il participe à la sécurité globale du vol, ce qui implique des décisions, de la vigilance et une gestion complète de l’opération.", "source_refs": []}, {"question_id": "s5_q2", "prompt": "Quelle affirmation décrit correctement la préparation du vol par le pilote de ligne ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il rédige le rapport détaillé uniquement avant le décollage.", "is_correct": false, "explanation": "Le rapport détaillé est rédigé après chaque vol, pas avant le départ."}, {"id": "B", "text": "Il planifie le vol et établit le plan de vol.", "is_correct": true, "explanation": "La préparation du vol comprend bien la planification et la rédaction du plan de vol, qui structurent l’organisation du trajet."}, {"id": "C", "text": "Il remplace l’équipage de cabine pendant la phase de préparation.", "is_correct": false, "explanation": "Aucune indication ne va dans ce sens ; l’équipage conserve ses fonctions propres et le pilote coordonne le vol."}, {"id": "D", "text": "Il n’a pas besoin de plan de vol dès lors que la météo est favorable.", "is_correct": false, "explanation": "Le plan de vol fait partie des tâches prévues, indépendamment du fait que la météo soit favorable ou non."}, {"id": "E", "text": "Il n’intervient jamais dans l’organisation du trajet aérien.", "is_correct": false, "explanation": "C’est faux car la planification du vol et l’établissement du plan de vol font précisément partie de ses responsabilités."}], "coverage_label": "Préparation du vol", "learning_objective": "Reconnaître les tâches de préparation du vol, en particulier la planification et le plan de vol.", "correction_summary": "La bonne réponse porte sur la planification du vol et l’établissement du plan de vol. Le piège est de confondre la préparation avec des tâches d’après-vol ou avec une simple conduite de l’avion.", "course_clarification": "Le plan de vol organise le trajet et les conditions du vol. Cette préparation permet d’anticiper les contraintes et de sécuriser l’opération avant le départ.", "source_refs": []}, {"question_id": "s5_q3", "prompt": "Quelle affirmation correspond aux tâches réalisées pendant le vol ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il vérifie la météo et surveille les systèmes en vol.", "is_correct": true, "explanation": "Pendant le vol, le pilote suit les conditions météo et contrôle le fonctionnement des systèmes pour garantir la sécurité du trajet."}, {"id": "B", "text": "Il surveille uniquement le carburant et ignore les autres systèmes de l’avion.", "is_correct": false, "explanation": "La surveillance concerne les systèmes en vol dans leur ensemble, pas seulement le carburant."}, {"id": "C", "text": "Il n’a plus besoin de regarder la météo une fois l’avion en l’air.", "is_correct": false, "explanation": "La météo reste un élément à vérifier pendant le vol, car les conditions peuvent évoluer."}, {"id": "D", "text": "Il ne communique jamais avec l’équipage pendant le vol.", "is_correct": false, "explanation": "La communication avec l’équipage fait partie du rôle du pilote, y compris pendant l’exécution du vol."}, {"id": "E", "text": "Il attend la fin du vol pour surveiller les systèmes de l’avion.", "is_correct": false, "explanation": "La surveillance des systèmes se fait en vol, car elle sert à détecter rapidement tout problème."}], "coverage_label": "Surveillance en vol", "learning_objective": "Repérer les actions de vigilance menées pendant le vol, notamment la météo et les systèmes de bord.", "correction_summary": "La réponse juste associe le vol à la vérification de la météo et à la surveillance des systèmes. Le piège est de déplacer cette vigilance avant ou après le vol, alors qu’elle est continue pendant le trajet.", "course_clarification": "En vol, le pilote observe l’environnement et le fonctionnement de l’avion. Cette surveillance permet d’anticiper les incidents et d’agir vite si une situation évolue.", "source_refs": []}, {"question_id": "s5_q4", "prompt": "Quelle affirmation décrit correctement l’après-vol ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il rédige ce rapport avant de vérifier la météo du départ.", "is_correct": false, "explanation": "Le rapport intervient après le vol, alors que la vérification météo appartient à la phase de préparation ou de surveillance en vol."}, {"id": "B", "text": "Il n’a aucun compte rendu à faire une fois l’avion posé.", "is_correct": false, "explanation": "Le rapport détaillé après chaque vol est explicitement demandé, donc un compte rendu existe bien."}, {"id": "C", "text": "Il rédige le rapport uniquement en situation d’urgence, et jamais après un vol normal.", "is_correct": false, "explanation": "Le support indique un rapport après chaque vol, sans réserver cette tâche aux seuls cas d’urgence."}, {"id": "D", "text": "Le rapport détaillé remplace la planification du vol.", "is_correct": false, "explanation": "Le rapport d’après-vol n’a pas la même fonction que le plan de vol : l’un rend compte du vol réalisé, l’autre prépare le vol à venir."}, {"id": "E", "text": "Il rédige un rapport détaillé après chaque vol.", "is_correct": true, "explanation": "La rédaction d’un rapport détaillé fait partie des tâches prévues après le vol, afin de laisser une trace utile de l’opération."}], "coverage_label": "Après le vol", "learning_objective": "Distinguer la tâche d’après-vol et la placer au bon moment dans la succession des responsabilités.", "correction_summary": "La bonne réponse identifie le rapport détaillé rédigé après chaque vol. Le piège est de le confondre avec la préparation ou avec une formalité réservée aux incidents.", "course_clarification": "Le rapport après vol sert à garder une trace de l’opération et à faciliter le suivi. Il complète les tâches de préparation et de conduite du vol.", "source_refs": []}, {"question_id": "s5_q5", "prompt": "Quelle affirmation est correcte concernant l’accès au métier de pilote de ligne ?", "difficulty": "easy", "options": [{"id": "A", "text": "Une licence ATPL n’est pas nécessaire si le pilote a déjà piloté un avion léger.", "is_correct": false, "explanation": "Le support mentionne explicitement la nécessité de la licence européenne ATPL, sans exception liée à une expérience sur avion léger."}, {"id": "B", "text": "Une simple formation générale suffit pour exercer ce métier sans autre exigence.", "is_correct": false, "explanation": "La formation doit être spécialisée et s’accompagner de la licence ATPL, donc une formation générale ne suffit pas."}, {"id": "C", "text": "L’obtention de la licence européenne ATPL et une formation spécialisée sont nécessaires.", "is_correct": true, "explanation": "L’accès au métier repose sur une licence européenne ATPL et sur une formation spécialisée, qui sont toutes deux requises."}, {"id": "D", "text": "Aucune licence n’est demandée pour devenir pilote de ligne.", "is_correct": false, "explanation": "C’est contraire à l’exigence indiquée : la licence européenne ATPL est nécessaire."}, {"id": "E", "text": "La formation spécialisée remplace la licence européenne ATPL.", "is_correct": false, "explanation": "Les deux conditions sont distinctes et nécessaires ; l’une ne remplace pas l’autre."}], "coverage_label": "Accès au métier", "learning_objective": "Vérifier les conditions d’accès au métier de pilote de ligne, notamment la licence ATPL et la formation spécialisée.", "correction_summary": "La bonne réponse associe la licence européenne ATPL à une formation spécialisée. Le piège consiste à croire qu’une expérience de pilotage ou une formation générale suffirait à elle seule.", "course_clarification": "L’ATPL est la licence européenne attendue pour ce métier. Elle s’ajoute à une formation spécialisée, ce qui garantit un niveau de préparation adapté aux responsabilités du pilote de ligne.", "source_refs": []}], "subpart_id": "s5", "anchor_slide_id": "s5", "question_count_target": 5, "title": "QCM - Pilote de ligne"}</script>
   <script>
     (function () {
@@ -2234,6 +2711,21 @@ html[data-embed="1"] .review-card {
         };
       }
 
+      function quizRewardXp(score) {
+        if (window.KOJYTO_GAMIFICATION && typeof window.KOJYTO_GAMIFICATION.quizXp === "function") {
+          return window.KOJYTO_GAMIFICATION.quizXp(quiz.quiz_id, score.percent);
+        }
+        return 0;
+      }
+
+      function markCurrentQuizCompleted() {
+        if (!window.KOJYTO_GAMIFICATION || typeof window.KOJYTO_GAMIFICATION.markQuizCompleted !== "function") {
+          return;
+        }
+        const score = scoreQuiz();
+        window.KOJYTO_GAMIFICATION.markQuizCompleted(quiz.quiz_id, score.percent);
+      }
+
       function escapeHtml(value) {
         return String(value)
           .replace(/&/g, "&amp;")
@@ -2410,6 +2902,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2446,6 +2939,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2460,11 +2954,13 @@ html[data-embed="1"] .review-card {
       function render() {
         syncFinalQuizHero();
         if (quiz.quiz_type === "subpart" && state.finished) {
+          markCurrentQuizCompleted();
           renderSubpartSummary();
           queueMathJax();
           return;
         }
         if (quiz.quiz_type === "final" && state.submitted) {
+          markCurrentQuizCompleted();
           renderFinalSummary();
           queueMathJax();
           return;

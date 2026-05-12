@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1606,9 +1699,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide" href="s1-1.html">
+        <a
+          class="sidebar-slide"
+          href="s1-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-1</strong>
           <span>Origine de la poussée : terme réacteur</span>
           
@@ -1616,7 +1729,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-1"
+        >
           <strong>QCM S1-1</strong>
           <span>QCM - Origine de la poussée : terme réacteur</span>
           
@@ -1624,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s1-2.html">
+        <a
+          class="sidebar-slide"
+          href="s1-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-2</strong>
           <span>Exemple numérique et architecture double flux</span>
           
@@ -1632,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-2"
+        >
           <strong>QCM S1-2</strong>
           <span>QCM - Exemple numérique et architecture double flux</span>
           
@@ -1640,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s1-3.html">
+        <a
+          class="sidebar-slide"
+          href="s1-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-3</strong>
           <span>Tuyère, poussée brute et poussée spécifique</span>
           
@@ -1648,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-3"
+        >
           <strong>QCM S1-3</strong>
           <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
@@ -1656,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2-1.html">
+        <a
+          class="sidebar-slide"
+          href="s2-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
@@ -1664,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2-1"
+        >
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
@@ -1672,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2-2.html">
+        <a
+          class="sidebar-slide"
+          href="s2-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2-2</strong>
           <span>Repères de consommation et surveillance moteur</span>
           
@@ -1680,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2-2"
+        >
           <strong>QCM S2-2</strong>
           <span>QCM - Repères de consommation et surveillance moteur</span>
           
@@ -1688,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-1.html">
+        <a
+          class="sidebar-slide"
+          href="s3-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-1</strong>
           <span>Puissance calorifique et puissance thermique théorique</span>
           
@@ -1696,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-1"
+        >
           <strong>QCM S3-1</strong>
           <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
@@ -1704,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-2.html">
+        <a
+          class="sidebar-slide"
+          href="s3-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-2</strong>
           <span>Puissance thermique réelle et puissance propulsive</span>
           
@@ -1712,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-2"
+        >
           <strong>QCM S3-2</strong>
           <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
@@ -1720,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-3.html">
+        <a
+          class="sidebar-slide"
+          href="s3-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-3</strong>
           <span>Rendements de la chaîne propulsive</span>
           
@@ -1728,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-3"
+        >
           <strong>QCM S3-3</strong>
           <span>QCM - Rendements de la chaîne propulsive</span>
           
@@ -1736,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-4.html">
+        <a
+          class="sidebar-slide"
+          href="s3-4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-4</strong>
           <span>Lecture du diagramme d’écoulement des gaz</span>
           
@@ -1744,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-4"
+        >
           <strong>QCM S3-4</strong>
           <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
           
@@ -1752,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-1.html">
+        <a
+          class="sidebar-slide"
+          href="s4-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-1</strong>
           <span>Taux de dilution et familles de moteurs</span>
           
@@ -1760,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-1"
+        >
           <strong>QCM S4-1</strong>
           <span>QCM - Taux de dilution et exemples de moteurs</span>
           
@@ -1768,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-2.html">
+        <a
+          class="sidebar-slide"
+          href="s4-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-2</strong>
           <span>Principe du turbopropulseur</span>
           
@@ -1776,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-2"
+        >
           <strong>QCM S4-2</strong>
           <span>QCM - Principe du turbopropulseur</span>
           
@@ -1784,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-1.html">
+        <a
+          class="sidebar-slide"
+          href="s5-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-1</strong>
           <span>Canal d’éjection et rôle de la tuyère</span>
           
@@ -1792,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-1"
+        >
           <strong>QCM S5-1</strong>
           <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
@@ -1800,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-2.html">
+        <a
+          class="sidebar-slide"
+          href="s5-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-2</strong>
           <span>Tuyères variables, double flux et adaptation au vol</span>
           
@@ -1808,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-2"
+        >
           <strong>QCM S5-2</strong>
           <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
@@ -1816,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-3.html">
+        <a
+          class="sidebar-slide"
+          href="s5-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-3</strong>
           <span>Tuyère convergente, rapport critique et supersonique</span>
           
@@ -1824,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-3"
+        >
           <strong>QCM S5-3</strong>
           <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
           
@@ -1832,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6-1.html">
+        <a
+          class="sidebar-slide"
+          href="s6-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6-1</strong>
           <span>Post-combustion et bruit de tuyère</span>
           
@@ -1840,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6-1"
+        >
           <strong>QCM S6-1</strong>
           <span>QCM - Post-combustion et bruit de tuyère</span>
           
@@ -1848,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-1.html">
+        <a
+          class="sidebar-slide"
+          href="s7-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-1</strong>
           <span>But et formule de la poussée inverse</span>
           
@@ -1856,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide active" href="slide-s7-1.html">
+        <a
+          class="sidebar-slide active"
+          href="slide-s7-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-1"
+        >
           <strong>QCM S7-1</strong>
           <span>QCM - But et formule de la poussée inverse</span>
           
@@ -1864,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-2.html">
+        <a
+          class="sidebar-slide"
+          href="s7-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-2</strong>
           <span>Poussée inverse : efficacité, limites et choix des flux</span>
           
@@ -1872,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-2"
+        >
           <strong>QCM S7-2</strong>
           <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
           
@@ -1880,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-3.html">
+        <a
+          class="sidebar-slide"
+          href="s7-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-3</strong>
           <span>Calcul et interprétation de la poussée inverse</span>
           
@@ -1888,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-3"
+        >
           <strong>QCM S7-3</strong>
           <span>QCM - Calcul et interprétation de la poussée inverse</span>
           
@@ -1896,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8-1.html">
+        <a
+          class="sidebar-slide"
+          href="s8-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S8-1</strong>
           <span>Commandes, sécurités et limitations de l’inverseur</span>
           
@@ -1904,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S8-1"
+        >
           <strong>QCM S8-1</strong>
           <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
@@ -1912,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8-2.html">
+        <a
+          class="sidebar-slide"
+          href="s8-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S8-2</strong>
           <span>Inverseur pneumatique : organes et séquence</span>
           
@@ -1920,7 +2223,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S8-2"
+        >
           <strong>QCM S8-2</strong>
           <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
@@ -1928,7 +2236,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9-1.html">
+        <a
+          class="sidebar-slide"
+          href="s9-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9-1</strong>
           <span>Rôle et fonctions du train d’atterrissage</span>
           
@@ -1936,7 +2249,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9-1"
+        >
           <strong>QCM S9-1</strong>
           <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
@@ -1944,7 +2262,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9-2.html">
+        <a
+          class="sidebar-slide"
+          href="s9-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9-2</strong>
           <span>Types de trains et composition</span>
           
@@ -1952,7 +2275,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9-2"
+        >
           <strong>QCM S9-2</strong>
           <span>QCM - Types de trains et composition</span>
           
@@ -1960,7 +2288,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9-3.html">
+        <a
+          class="sidebar-slide"
+          href="s9-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9-3</strong>
           <span>Géométrie des trains et dispositions des atterrisseurs</span>
           
@@ -1968,7 +2301,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9-3"
+        >
           <strong>QCM S9-3</strong>
           <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
           
@@ -1976,7 +2314,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10-1.html">
+        <a
+          class="sidebar-slide"
+          href="s10-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10-1</strong>
           <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
@@ -1984,7 +2327,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10-1"
+        >
           <strong>QCM S10-1</strong>
           <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
@@ -1992,7 +2340,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10-2.html">
+        <a
+          class="sidebar-slide"
+          href="s10-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10-2</strong>
           <span>Fonctionnement en trois temps de l’amortisseur</span>
           
@@ -2000,7 +2353,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10-2"
+        >
           <strong>QCM S10-2</strong>
           <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
@@ -2008,7 +2366,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10-3.html">
+        <a
+          class="sidebar-slide"
+          href="s10-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10-3</strong>
           <span>États du train, verrouillages et sécurités</span>
           
@@ -2016,7 +2379,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10-3"
+        >
           <strong>QCM S10-3</strong>
           <span>QCM - Rentrée-sortie, verrouillage et secours</span>
           
@@ -2024,7 +2392,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11-1.html">
+        <a
+          class="sidebar-slide"
+          href="s11-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11-1</strong>
           <span>Voyants, roues et pneumatiques</span>
           
@@ -2032,7 +2405,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11-1"
+        >
           <strong>QCM S11-1</strong>
           <span>QCM - Voyants, roues et pneumatiques</span>
           
@@ -2040,7 +2418,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11-2.html">
+        <a
+          class="sidebar-slide"
+          href="s11-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11-2</strong>
           <span>Freinage, adhérence et systèmes de protection</span>
           
@@ -2048,7 +2431,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11-2"
+        >
           <strong>QCM S11-2</strong>
           <span>QCM - Freinage, adhérence et systèmes de protection</span>
           
@@ -2056,7 +2444,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11-3.html">
+        <a
+          class="sidebar-slide"
+          href="s11-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11-3</strong>
           <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
           
@@ -2064,7 +2457,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11-3"
+        >
           <strong>QCM S11-3</strong>
           <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
           
@@ -2072,7 +2470,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s12-1.html">
+        <a
+          class="sidebar-slide"
+          href="s12-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S12-1</strong>
           <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
@@ -2080,7 +2483,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s12-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s12-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S12-1"
+        >
           <strong>QCM S12-1</strong>
           <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
@@ -2088,7 +2496,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
@@ -2206,6 +2619,180 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-4b117e5af5a9", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "QCM - Origine de la poussée : terme réacteur", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "QCM - Exemple numérique et architecture double flux", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "QCM - Tuyère, poussée brute et poussée spécifique", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "QCM - Consommation horaire et consommation spécifique", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "QCM - Repères de consommation et surveillance moteur", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "QCM - Puissance calorifique et puissance thermique théorique", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "QCM - Puissance thermique réelle et puissance propulsive", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "QCM - Rendements de la chaîne propulsive", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "QCM - Lecture du diagramme d’écoulement des gaz", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "QCM - Taux de dilution et exemples de moteurs", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "QCM - Principe du turbopropulseur", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "QCM - Canal d’éjection et rôle de la tuyère", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "QCM - Tuyères variables, double flux et adaptation au vol", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "QCM - Tuyère convergente, rapport critique et supersonique", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "QCM - Post-combustion et bruit de tuyère", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "QCM - But et formule de la poussée inverse", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "QCM - Poussée inverse en double flux et ordres de grandeur", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "QCM - Calcul et interprétation de la poussée inverse", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S8-1", "quiz_type": "subpart", "title": "QCM - Commandes, sécurités et limitations de l’inverseur", "href": "slide-s8-1.html", "base_xp": 100}, {"quiz_id": "slide::S8-2", "quiz_type": "subpart", "title": "QCM - Dispositif pneumatique et séquence de fonctionnement", "href": "slide-s8-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-1", "quiz_type": "subpart", "title": "QCM - Rôle et fonctions du train d’atterrissage", "href": "slide-s9-1.html", "base_xp": 100}, {"quiz_id": "slide::S9-2", "quiz_type": "subpart", "title": "QCM - Types de trains et composition", "href": "slide-s9-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-3", "quiz_type": "subpart", "title": "QCM - Géométrie des trains et dispositions des atterrisseurs", "href": "slide-s9-3.html", "base_xp": 100}, {"quiz_id": "slide::S10-1", "quiz_type": "subpart", "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe", "href": "slide-s10-1.html", "base_xp": 100}, {"quiz_id": "slide::S10-2", "quiz_type": "subpart", "title": "QCM - Fonctionnement en trois temps de l’amortisseur", "href": "slide-s10-2.html", "base_xp": 100}, {"quiz_id": "slide::S10-3", "quiz_type": "subpart", "title": "QCM - Rentrée-sortie, verrouillage et secours", "href": "slide-s10-3.html", "base_xp": 100}, {"quiz_id": "slide::S11-1", "quiz_type": "subpart", "title": "QCM - Voyants, roues et pneumatiques", "href": "slide-s11-1.html", "base_xp": 100}, {"quiz_id": "slide::S11-2", "quiz_type": "subpart", "title": "QCM - Freinage, adhérence et systèmes de protection", "href": "slide-s11-2.html", "base_xp": 100}, {"quiz_id": "slide::S11-3", "quiz_type": "subpart", "title": "QCM - Anti-patinage, pneus, dirigibilité et surveillance", "href": "slide-s11-3.html", "base_xp": 100}, {"quiz_id": "slide::S12-1", "quiz_type": "subpart", "title": "QCM - QCM d’entraînement : notions clés des atterrisseurs", "href": "slide-s12-1.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S7-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S7-Q1", "prompt": "Quel est le but principal de l’inverseur de poussée ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il sert principalement à augmenter la vitesse de l’avion pendant la phase de roulage après l’atterrissage.", "is_correct": false, "explanation": "C’est faux : l’inverseur n’est pas destiné à accélérer, mais à freiner en réduisant l’énergie cinétique de l’avion."}, {"id": "B", "text": "Il remplace les trains d’atterrissage en assurant l’arrêt complet de l’avion sans autre système de freinage.", "is_correct": false, "explanation": "C’est faux : l’inverseur aide au freinage, mais ne remplace pas les freins ni les autres dispositifs d’arrêt."}, {"id": "C", "text": "Il augmente la portance de l’aile au sol pour prolonger la phase de vol après le toucher.", "is_correct": false, "explanation": "C’est faux : au sol, l’objectif est le freinage, pas l’augmentation de la portance."}, {"id": "D", "text": "Il crée une poussée négative pour produire une force de freinage et réduire la distance nécessaire à l’atterrissage.", "is_correct": true, "explanation": "C’est exactement l’objectif recherché : la poussée est orientée en sens opposé au mouvement pour aider au freinage à l’atterrissage."}, {"id": "E", "text": "Il sert uniquement à réduire le bruit de la tuyère pendant la croisière.", "is_correct": false, "explanation": "C’est faux : la réduction du bruit relève d’un autre traitement ; l’inverseur de poussée est lié au freinage à l’atterrissage."}], "coverage_label": "L’inverseur de poussée", "learning_objective": "Identifier la fonction aérodynamique de l’inverseur de poussée à l’atterrissage.", "correction_summary": "La bonne réponse décrit une poussée orientée vers l’avant de l’avion pour freiner au sol. Le piège classique consiste à confondre cette fonction avec l’accélération, la portance ou le traitement acoustique.", "course_clarification": "La poussée inverse agit comme une force de freinage supplémentaire après le toucher. Elle complète les freins de roue en réduisant la distance d’arrêt.", "source_refs": []}, {"question_id": "S7-Q2", "prompt": "Dans quelle situation l’inverseur de poussée est-il particulièrement utile ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il est utile uniquement sur piste sèche et parfaitement adhérente, car il devient inutile ailleurs.", "is_correct": false, "explanation": "C’est faux : son intérêt est justement renforcé lorsque l’adhérence est dégradée."}, {"id": "B", "text": "Il aide au freinage lorsque l’état de la piste n’offre pas une adhérence optimale, par exemple sur piste mouillée, enneigée ou givrée.", "is_correct": true, "explanation": "C’est vrai : le document cite explicitement les pistes peu adhérentes, où l’inverseur complète efficacement le freinage."}, {"id": "C", "text": "Il n’a aucun intérêt au moment où la vitesse de l’avion est élevée et le poids apparent faible.", "is_correct": false, "explanation": "C’est faux : le support précise qu’il soulage les freins quand ils sont les moins efficaces, c’est-à-dire à forte vitesse et avec faible poids apparent."}, {"id": "D", "text": "Il sert à augmenter l’adhérence mécanique entre le pneu et la piste.", "is_correct": false, "explanation": "C’est faux : il agit par aérodynamique sur la poussée, pas en améliorant le frottement roue-piste."}, {"id": "E", "text": "Il doit être utilisé uniquement avant le toucher des roues et jamais pendant le roulage.", "is_correct": false, "explanation": "C’est faux : son rôle est lié au freinage après l’atterrissage, donc pendant la phase de décélération au sol."}], "coverage_label": "L’inverseur de poussée", "learning_objective": "Reconnaître les conditions d’utilisation où l’inverseur de poussée apporte le plus d’aide au freinage.", "correction_summary": "La bonne réponse associe l’inverseur aux pistes peu adhérentes et aux phases où les freins sont moins efficaces. Le piège consiste à penser qu’il ne serait utile que sur piste sèche ou qu’il agirait sur l’adhérence elle-même.", "course_clarification": "L’inverseur ne modifie pas la piste ni les pneus : il ajoute une force de freinage aérodynamique. Son intérêt augmente quand le freinage classique est moins performant.", "source_refs": []}, {"question_id": "S7-Q3", "prompt": "Quelle affirmation est correcte à propos de l’utilisation réglementaire des inverseurs de poussée ?", "difficulty": "easy", "options": [{"id": "A", "text": "Ils sont utilisables dans toutes les configurations d’atterrissage, mais ils ne sont pas pris en compte dans les calculs de distance d’atterrissage et d’accélération/arrêt car ils ne sont pas homologués.", "is_correct": true, "explanation": "C’est la formulation du support : leur utilisation est admise, mais ils sont exclus des calculs réglementaires parce qu’ils ne sont pas homologués."}, {"id": "B", "text": "Ils ne peuvent être utilisés qu’en cas d’atterrissage d’urgence sur piste enneigée.", "is_correct": false, "explanation": "C’est faux : ils sont utilisables dans toutes les configurations d’atterrissage, pas seulement en cas d’urgence."}, {"id": "C", "text": "Ils sont intégrés dans tous les calculs de distance d’atterrissage car ils sont homologués comme freins principaux.", "is_correct": false, "explanation": "C’est faux : le support précise au contraire qu’ils ne sont pas pris en compte dans ces calculs car ils ne sont pas homologués."}, {"id": "D", "text": "Ils remplacent les freins de roue dans les calculs de certification d’arrêt.", "is_correct": false, "explanation": "C’est faux : ils ne remplacent pas les freins de roue et ne sont pas comptés dans les distances réglementaires."}, {"id": "E", "text": "Ils sont interdits dès qu’un avion touche la piste avec une vitesse élevée.", "is_correct": false, "explanation": "C’est faux : le document ne pose pas une telle interdiction ; il indique seulement leur exclusion des calculs d’arrêt."}], "coverage_label": "L’inverseur de poussée", "learning_objective": "Distinguer l’usage opérationnel de l’inverseur de poussée et son statut dans les calculs de distance.", "correction_summary": "La bonne réponse combine deux idées : utilisation possible à l’atterrissage, mais absence des calculs réglementaires d’arrêt. Le piège est de confondre disponibilité opérationnelle et prise en compte homologuée.", "course_clarification": "Un équipement peut être utilisable sans être retenu dans les distances réglementaires. Ici, l’exclusion vient du fait qu’il n’est pas homologué pour ces calculs.", "source_refs": []}, {"question_id": "S7-Q4", "prompt": "Pour un turboréacteur simple flux, quel principe décrit le mieux l’inverseur de poussée ?", "difficulty": "easy", "options": [{"id": "A", "text": "Un simple changement de la forme de l’aile suffit à inverser la direction des gaz.", "is_correct": false, "explanation": "C’est faux : l’inversion concerne la tuyère et ses organes mobiles, pas la géométrie de l’aile."}, {"id": "B", "text": "Les gaz sont déviés vers l’arrière afin d’augmenter la poussée positive au roulage.", "is_correct": false, "explanation": "C’est faux : l’inverseur cherche l’effet opposé, à savoir une force de freinage liée à une déviation vers l’avant."}, {"id": "C", "text": "Le dispositif agit uniquement en fermant les trains d’atterrissage pour freiner l’avion.", "is_correct": false, "explanation": "C’est faux : le freinage par inverseur est aérodynamique et se fait au niveau du flux moteur, pas des trains."}, {"id": "D", "text": "Le flux moteur est supprimé sans aucune pièce mobile ni vérin.", "is_correct": false, "explanation": "C’est faux : le document mentionne des demi-coquilles ou des volets actionnés par vérins, donc des organes mobiles."}, {"id": "E", "text": "Des demi-coquilles ou des volets manœuvrés par vérins hydrauliques ou pneumatiques dévient les gaz vers l’avant.", "is_correct": true, "explanation": "C’est exact : le support décrit ce mécanisme pour les GTR simple flux, avec une déviation du jet vers l’avant."}], "coverage_label": "Cas des GTR simple flux", "learning_objective": "Identifier les organes et le sens de déviation des gaz dans un inverseur de poussée simple flux.", "correction_summary": "La bonne réponse associe bien les demi-coquilles ou volets aux vérins et à une déviation vers l’avant. Le piège est de confondre cette action avec des dispositifs externes à la tuyère ou avec une simple suppression du flux.", "course_clarification": "Sur un simple flux, l’inversion passe par des éléments mobiles placés dans la rallonge de tuyère. Leur action transforme la poussée vers l’arrière en poussée inverse.", "source_refs": []}, {"question_id": "S7-Q5", "prompt": "Quelle expression donne correctement la poussée inverse ?", "difficulty": "easy", "options": [{"id": "A", "text": "TREV = Qma\\,(V''5 - Vo)", "is_correct": false, "explanation": "C’est faux : le signe est incorrect et la différence des vitesses ne correspond pas à la formule donnée."}, {"id": "B", "text": "TREV = +Qma\\,(V''5 + Vo)", "is_correct": false, "explanation": "C’est faux : la poussée inverse est définie avec un signe négatif, puisque la force produite s’oppose au sens de déplacement."}, {"id": "C", "text": "TREV = -Qma\\,(V''5 + Vo)", "is_correct": true, "explanation": "C’est la relation écrite dans le support : la poussée inverse est négative et dépend de la somme des vitesses concernées, multipliée par le débit massique d’air."}, {"id": "D", "text": "TREV = -Qma\\,(V''5 - Vo)", "is_correct": false, "explanation": "C’est faux : le support présente une somme des vitesses, pas une différence, dans l’expression de la poussée inverse."}, {"id": "E", "text": "TREV = Qma\\,(Vo + V''5)", "is_correct": false, "explanation": "C’est faux : il manque le signe négatif qui traduit la nature freinante de la poussée inverse."}], "coverage_label": "Poussée inverse", "learning_objective": "Lire et appliquer la convention de signe de la formule de poussée inverse.", "correction_summary": "La bonne formule comporte un signe moins devant le produit. Le piège le plus fréquent est d’oublier ce signe ou d’écrire une différence au lieu d’une somme des vitesses.", "course_clarification": "La poussée inverse est une force orientée en sens opposé à la propulsion normale. Le signe négatif indique précisément cette action de freinage.", "source_refs": []}], "subpart_id": "S7", "anchor_slide_id": "S7-1", "question_count_target": 5, "title": "QCM - But et formule de la poussée inverse"}</script>
   <script>
     (function () {
@@ -2410,6 +2997,21 @@ html[data-embed="1"] .review-card {
         };
       }
 
+      function quizRewardXp(score) {
+        if (window.KOJYTO_GAMIFICATION && typeof window.KOJYTO_GAMIFICATION.quizXp === "function") {
+          return window.KOJYTO_GAMIFICATION.quizXp(quiz.quiz_id, score.percent);
+        }
+        return 0;
+      }
+
+      function markCurrentQuizCompleted() {
+        if (!window.KOJYTO_GAMIFICATION || typeof window.KOJYTO_GAMIFICATION.markQuizCompleted !== "function") {
+          return;
+        }
+        const score = scoreQuiz();
+        window.KOJYTO_GAMIFICATION.markQuizCompleted(quiz.quiz_id, score.percent);
+      }
+
       function escapeHtml(value) {
         return String(value)
           .replace(/&/g, "&amp;")
@@ -2586,6 +3188,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2622,6 +3225,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2636,11 +3240,13 @@ html[data-embed="1"] .review-card {
       function render() {
         syncFinalQuizHero();
         if (quiz.quiz_type === "subpart" && state.finished) {
+          markCurrentQuizCompleted();
           renderSubpartSummary();
           queueMathJax();
           return;
         }
         if (quiz.quiz_type === "final" && state.submitted) {
+          markCurrentQuizCompleted();
           renderFinalSummary();
           queueMathJax();
           return;

@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1619,9 +1712,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide" href="s1.html">
+        <a
+          class="sidebar-slide"
+          href="s1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1</strong>
           <span>Introduction à la cinématique</span>
           
@@ -1629,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1"
+        >
           <strong>QCM S1</strong>
           <span>QCM - Introduction à la cinématique</span>
           
@@ -1637,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2.html">
+        <a
+          class="sidebar-slide"
+          href="s2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2</strong>
           <span>Système, point matériel et référentiel</span>
           
@@ -1645,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2"
+        >
           <strong>QCM S2</strong>
           <span>QCM - Système, point matériel et référentiel</span>
           
@@ -1653,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3.html">
+        <a
+          class="sidebar-slide"
+          href="s3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3</strong>
           <span>Trajectoire et position</span>
           
@@ -1661,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3"
+        >
           <strong>QCM S3</strong>
           <span>QCM - Trajectoire et position</span>
           
@@ -1669,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4.html">
+        <a
+          class="sidebar-slide"
+          href="s4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4</strong>
           <span>Vitesse instantanée</span>
           
@@ -1677,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4"
+        >
           <strong>QCM S4</strong>
           <span>QCM - Vitesse instantanée</span>
           
@@ -1685,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5.html">
+        <a
+          class="sidebar-slide"
+          href="s5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5</strong>
           <span>Vitesse moyenne et mesures de vitesse</span>
           
@@ -1693,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide active" href="slide-s5.html">
+        <a
+          class="sidebar-slide active"
+          href="slide-s5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5"
+        >
           <strong>QCM S5</strong>
           <span>QCM - Vitesse moyenne et mesures de vitesse</span>
           
@@ -1701,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6.html">
+        <a
+          class="sidebar-slide"
+          href="s6.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6</strong>
           <span>Accélération : définition et unité</span>
           
@@ -1709,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6"
+        >
           <strong>QCM S6</strong>
           <span>QCM - Accélération : définition et unité</span>
           
@@ -1717,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7.html">
+        <a
+          class="sidebar-slide"
+          href="s7.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7</strong>
           <span>Accélération tangentielle et normale</span>
           
@@ -1725,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7"
+        >
           <strong>QCM S7</strong>
           <span>QCM - Accélération tangentielle et normale</span>
           
@@ -1733,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8.html">
+        <a
+          class="sidebar-slide"
+          href="s8.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S8</strong>
           <span>MRU : vitesse constante et loi horaire linéaire</span>
           
@@ -1741,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S8"
+        >
           <strong>QCM S8</strong>
           <span>QCM - Mouvement rectiligne uniforme (MRU)</span>
           
@@ -1749,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9.html">
+        <a
+          class="sidebar-slide"
+          href="s9.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9</strong>
           <span>Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
@@ -1757,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9"
+        >
           <strong>QCM S9</strong>
           <span>QCM - Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
@@ -1765,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10.html">
+        <a
+          class="sidebar-slide"
+          href="s10.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10</strong>
           <span>Mouvement circulaire uniforme (MCU)</span>
           
@@ -1773,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10"
+        >
           <strong>QCM S10</strong>
           <span>QCM - Mouvement circulaire uniforme (MCU)</span>
           
@@ -1781,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11.html">
+        <a
+          class="sidebar-slide"
+          href="s11.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11</strong>
           <span>Mouvement circulaire accéléré</span>
           
@@ -1789,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11"
+        >
           <strong>QCM S11</strong>
           <span>QCM - Mouvement circulaire accéléré</span>
           
@@ -1797,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s12.html">
+        <a
+          class="sidebar-slide"
+          href="s12.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S12</strong>
           <span>Équations horaires et trajectoires</span>
           
@@ -1805,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s12.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s12.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S12"
+        >
           <strong>QCM S12</strong>
           <span>QCM - Équations horaires et trajectoires</span>
           
@@ -1813,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s13.html">
+        <a
+          class="sidebar-slide"
+          href="s13.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S13</strong>
           <span>Grandeurs angulaires et linéaires</span>
           
@@ -1821,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s13.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s13.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S13"
+        >
           <strong>QCM S13</strong>
           <span>QCM - Grandeurs angulaires et linéaires</span>
           
@@ -1829,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s14.html">
+        <a
+          class="sidebar-slide"
+          href="s14.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S14</strong>
           <span>Méthodes graphiques et expérimentales</span>
           
@@ -1837,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s14.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s14.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S14"
+        >
           <strong>QCM S14</strong>
           <span>QCM - Méthodes graphiques et expérimentales</span>
           
@@ -1845,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s15.html">
+        <a
+          class="sidebar-slide"
+          href="s15.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S15</strong>
           <span>Étude de cas – Mouvement circulaire d’une hélice</span>
           
@@ -1853,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s15.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s15.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S15"
+        >
           <strong>QCM S15</strong>
           <span>QCM - Étude de cas – Mouvement circulaire d’une hélice</span>
           
@@ -1861,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s16.html">
+        <a
+          class="sidebar-slide"
+          href="s16.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S16</strong>
           <span>Approche numérique avec Python</span>
           
@@ -1869,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s16.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s16.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S16"
+        >
           <strong>QCM S16</strong>
           <span>QCM - Approche numérique avec Python</span>
           
@@ -1877,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s17.html">
+        <a
+          class="sidebar-slide"
+          href="s17.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S17</strong>
           <span>Applications aéronautiques typiques</span>
           
@@ -1885,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s17.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s17.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S17"
+        >
           <strong>QCM S17</strong>
           <span>QCM - Applications aéronautiques typiques</span>
           
@@ -1893,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s18.html">
+        <a
+          class="sidebar-slide"
+          href="s18.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S18</strong>
           <span>Formulaire récapitulatif</span>
           
@@ -1901,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s18.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s18.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S18"
+        >
           <strong>QCM S18</strong>
           <span>QCM - Formulaire récapitulatif</span>
           
@@ -1909,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s19.html">
+        <a
+          class="sidebar-slide"
+          href="s19.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S19</strong>
           <span>Erreurs fréquentes à éviter</span>
           
@@ -1917,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s19.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s19.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S19"
+        >
           <strong>QCM S19</strong>
           <span>QCM - Erreurs fréquentes à éviter</span>
           
@@ -1925,7 +2223,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s20.html">
+        <a
+          class="sidebar-slide"
+          href="s20.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S20</strong>
           <span>Conclusion</span>
           
@@ -1933,7 +2236,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s20.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s20.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S20"
+        >
           <strong>QCM S20</strong>
           <span>QCM - Conclusion</span>
           
@@ -1941,7 +2249,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)</span>
           
@@ -2059,6 +2372,180 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-0b23328d2d4c", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "QCM - Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "QCM - Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "QCM - Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "QCM - Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "QCM - Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "QCM - Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "QCM - Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "QCM - Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "QCM - Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "QCM - Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "QCM - Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "QCM - Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "QCM - Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "QCM - Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "QCM - Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "QCM - Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S5", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S5-Q1", "prompt": "Quelle affirmation est correcte à propos de la vitesse moyenne sur un intervalle de temps ?", "difficulty": "easy", "options": [{"id": "A", "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta t / \\Delta s\\).", "is_correct": false, "explanation": "Le rapport est inversé ici \\(: \\Delta t / \\Delta s ne\\) donne pas une vitesse. La grandeur recherchée doit être une distance divisée par un temps."}, {"id": "B", "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s \\cdot \\Delta t\\).", "is_correct": false, "explanation": "Un produit distance × temps n’a pas la dimension d’une vitesse. La vitesse moyenne se calcule par un quotient, pas par une multiplication."}, {"id": "C", "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s + \\Delta t\\).", "is_correct": false, "explanation": "Une somme de mètres et de secondes n’a pas de sens physique pour une vitesse. Il faut un rapport entre la distance parcourue et la durée."}, {"id": "D", "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta s / \\Delta t\\).", "is_correct": true, "explanation": "La vitesse moyenne est définie comme le rapport entre la distance parcourue \\(\\Delta s\\) et la durée \\(\\Delta t\\) sur l’intervalle étudié."}, {"id": "E", "text": "Sur l’intervalle \\([t_1,t_2]\\), la vitesse moyenne s’écrit \\(v_m = \\Delta v / \\Delta t\\).", "is_correct": false, "explanation": "\\(\\Delta v / \\Delta t\\) correspond à une variation de vitesse par unité de temps, donc à une accélération. Ce n’est pas la définition de la vitesse moyenne."}], "coverage_label": "Vitesse moyenne et mesures de vitesse", "learning_objective": "Identifier la formule de la vitesse moyenne sur un intervalle de temps.", "correction_summary": "La vitesse moyenne se calcule avec la distance parcourue divisée par la durée \\(: v_m = \\Delta s / \\Delta t\\). Le piège classique consiste à inverser le rapport ou à confondre vitesse moyenne et accélération.", "course_clarification": "\\(\\Delta s\\) représente la distance parcourue entre deux instants et \\(\\Delta t\\) la durée correspondante. La vitesse moyenne donne une valeur globale sur l’intervalle, sans détailler les variations internes du mouvement.", "source_refs": []}, {"question_id": "S5-Q2", "prompt": "Quelle affirmation est correcte à propos de la vitesse moyenne et du mouvement ?", "difficulty": "easy", "options": [{"id": "A", "text": "La vitesse moyenne décrit entièrement les variations instantanées du mouvement.", "is_correct": false, "explanation": "La vitesse moyenne ne contient pas l’information locale nécessaire pour connaître les changements à chaque instant. Elle donne seulement une valeur globale sur l’intervalle."}, {"id": "B", "text": "La vitesse moyenne ne décrit pas les variations instantanées du mouvement.", "is_correct": true, "explanation": "La vitesse moyenne résume le déplacement sur un intervalle entier, mais elle ne donne pas l’évolution instant par instant de la vitesse."}, {"id": "C", "text": "La vitesse moyenne est toujours égale à la vitesse instantanée à tout instant.", "is_correct": false, "explanation": "La vitesse moyenne et la vitesse instantanée peuvent être très différentes si le mouvement varie au cours du temps. Elles ne coïncident pas en général."}, {"id": "D", "text": "La vitesse moyenne permet de connaître la direction instantanée de la trajectoire.", "is_correct": false, "explanation": "La direction instantanée relève de la vitesse à un instant donné, pas de la moyenne sur un intervalle. La vitesse moyenne ne suffit pas pour cela."}, {"id": "E", "text": "La vitesse moyenne remplace la vitesse instantanée pour tout calcul local.", "is_correct": false, "explanation": "Pour étudier un état local du mouvement, il faut la vitesse instantanée. La vitesse moyenne n’est pas un substitut pour une analyse instantanée."}], "coverage_label": "Vitesse moyenne et mesures de vitesse", "learning_objective": "Distinguer la vitesse moyenne d’une information instantanée sur le mouvement.", "correction_summary": "La vitesse moyenne donne une description globale sur un intervalle, pas les variations instantanées. Le piège est de lui attribuer un rôle local qu’elle n’a pas.", "course_clarification": "La vitesse moyenne résume la rapidité moyenne sur une durée donnée. Pour savoir ce qui se passe à un instant précis, il faut la vitesse instantanée.", "source_refs": []}, {"question_id": "S5-Q3", "prompt": "Quelle affirmation est correcte à propos des instruments de mesure de la vitesse en aéronautique ?", "difficulty": "easy", "options": [{"id": "A", "text": "En aéronautique, la vitesse peut être mesurée par un anémomètre, un GPS ou un tachymètre selon le contexte.", "is_correct": true, "explanation": "Le choix de l’instrument dépend de la vitesse recherchée et de la situation d’observation. Les trois instruments cités apparaissent bien comme moyens possibles selon le contexte."}, {"id": "B", "text": "En aéronautique, la vitesse se mesure uniquement avec un baromètre.", "is_correct": false, "explanation": "Un baromètre mesure la pression, pas la vitesse. Il ne peut donc pas être l’unique instrument de mesure de la vitesse."}, {"id": "C", "text": "En aéronautique, la vitesse se mesure uniquement avec un thermomètre.", "is_correct": false, "explanation": "Un thermomètre mesure la température, pas la vitesse. Il ne fournit aucune information directe sur la rapidité du mouvement."}, {"id": "D", "text": "En aéronautique, la vitesse se mesure uniquement avec une règle graduée.", "is_correct": false, "explanation": "Une règle peut aider à mesurer une longueur, mais pas une vitesse sans information de temps. La vitesse est une grandeur liée au déplacement et à la durée."}, {"id": "E", "text": "En aéronautique, la vitesse se mesure uniquement avec une balance.", "is_correct": false, "explanation": "Une balance mesure une masse ou un poids selon le contexte, pas une vitesse. Cet instrument n’est pas adapté à la mesure de la rapidité d’un mouvement."}], "coverage_label": "Vitesse moyenne et mesures de vitesse", "learning_objective": "Associer les instruments de mesure de la vitesse au bon contexte d’usage.", "correction_summary": "Selon le phénomène observé, la vitesse peut être mesurée par un anémomètre, un GPS ou un tachymètre. Le piège consiste à attribuer à ces instruments une mesure qu’ils ne réalisent pas.", "course_clarification": "Un anémomètre sert à mesurer une vitesse de l’air, un GPS peut fournir une vitesse de déplacement et un tachymètre mesure une vitesse de rotation. L’instrument pertinent dépend de la grandeur physique observée.", "source_refs": []}, {"question_id": "S5-Q4", "prompt": "Quelle affirmation est correcte à propos du choix d’un instrument de mesure de la vitesse ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le choix de l’instrument ne dépend jamais du référentiel.", "is_correct": false, "explanation": "Le référentiel influe sur la description du mouvement et donc sur la mesure pertinente. Dire qu’il n’intervient jamais est contraire à la définition du mouvement observé."}, {"id": "B", "text": "Le même instrument convient toujours quel que soit le mouvement étudié.", "is_correct": false, "explanation": "Un instrument adapté à une vitesse de rotation n’est pas forcément adapté à une vitesse de translation. Le contexte de mesure change donc l’instrument pertinent."}, {"id": "C", "text": "Le choix de l’instrument dépend seulement de la couleur de l’objet observé.", "is_correct": false, "explanation": "La couleur d’un objet n’a aucun lien avec la mesure de sa vitesse. Le choix se fait en fonction du phénomène physique étudié."}, {"id": "D", "text": "Le choix de l’instrument dépend seulement de la masse de l’objet observé.", "is_correct": false, "explanation": "La masse n’indique pas comment mesurer la vitesse. Ce qui compte est le type de mouvement et le référentiel dans lequel on l’observe."}, {"id": "E", "text": "Le choix de l’instrument dépend du phénomène observé et du référentiel.", "is_correct": true, "explanation": "La mesure d’une vitesse n’a de sens qu’en précisant ce qui est observé et par rapport à quel référentiel. C’est pourquoi l’instrument dépend du contexte."}], "coverage_label": "Vitesse moyenne et mesures de vitesse", "learning_objective": "Comprendre que le choix d’un capteur de vitesse dépend du phénomène et du référentiel.", "correction_summary": "Le bon instrument dépend à la fois du mouvement étudié et du référentiel choisi. Le piège est de croire qu’un seul appareil convient dans toutes les situations.", "course_clarification": "Le référentiel est le repère par rapport auquel on décrit le mouvement. Un même objet peut donc nécessiter des mesures différentes selon qu’on observe une translation, une rotation ou un déplacement relatif.", "source_refs": []}, {"question_id": "S5-Q5", "prompt": "Quelle affirmation est correcte à propos de la vitesse instantanée ?", "difficulty": "easy", "options": [{"id": "A", "text": "La norme de la vitesse s’écrit \\(v = dt/ds\\).", "is_correct": false, "explanation": "Le rapport est inversé \\(: dt/ds n\\)’est pas une vitesse. La vitesse est bien une variation de distance par unité de temps."}, {"id": "B", "text": "La norme de la vitesse s’exprime en newtons.", "is_correct": false, "explanation": "Le newton est une unité de force, pas de vitesse. La vitesse s’exprime en m·\\(s^{-1}\\)."}, {"id": "C", "text": "La norme de la vitesse s’écrit \\(v = ds/dt\\) et s’exprime en m·\\(s^{-1}\\).", "is_correct": true, "explanation": "La norme de la vitesse correspond à la dérivée de l’abscisse curviligne \\(s\\) par rapport au temps. Son unité SI est le mètre par seconde."}, {"id": "D", "text": "La norme de la vitesse n’a pas d’unité dans le SI.", "is_correct": false, "explanation": "La vitesse est une grandeur physique mesurable et son unité dans le SI est bien le m·\\(s^{-1}\\). Dire qu’elle n’a pas d’unité est faux."}, {"id": "E", "text": "La direction de la vitesse instantanée est normale à la trajectoire.", "is_correct": false, "explanation": "La vitesse instantanée est tangente à la trajectoire, pas normale. La direction normale est associée à la variation de direction, donc à l’accélération normale."}], "coverage_label": "Vitesse moyenne et mesures de vitesse", "learning_objective": "Lire correctement la notation de la vitesse instantanée et son unité.", "correction_summary": "La norme de la vitesse instantanée est \\(v = ds/dt\\) en m·\\(s^{-1}\\). Le piège est de confondre vitesse avec une autre grandeur, ou d’inverser le quotient.", "course_clarification": "La vitesse instantanée décrit la rapidité au voisinage d’un instant donné. Sa direction est tangente à la trajectoire, tandis que sa norme mesure seulement la valeur de la rapidité.", "source_refs": []}], "subpart_id": "4", "anchor_slide_id": "S5", "question_count_target": 5, "title": "QCM - Vitesse moyenne et mesures de vitesse"}</script>
   <script>
     (function () {
@@ -2263,6 +2750,21 @@ html[data-embed="1"] .review-card {
         };
       }
 
+      function quizRewardXp(score) {
+        if (window.KOJYTO_GAMIFICATION && typeof window.KOJYTO_GAMIFICATION.quizXp === "function") {
+          return window.KOJYTO_GAMIFICATION.quizXp(quiz.quiz_id, score.percent);
+        }
+        return 0;
+      }
+
+      function markCurrentQuizCompleted() {
+        if (!window.KOJYTO_GAMIFICATION || typeof window.KOJYTO_GAMIFICATION.markQuizCompleted !== "function") {
+          return;
+        }
+        const score = scoreQuiz();
+        window.KOJYTO_GAMIFICATION.markQuizCompleted(quiz.quiz_id, score.percent);
+      }
+
       function escapeHtml(value) {
         return String(value)
           .replace(/&/g, "&amp;")
@@ -2439,6 +2941,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2475,6 +2978,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2489,11 +2993,13 @@ html[data-embed="1"] .review-card {
       function render() {
         syncFinalQuizHero();
         if (quiz.quiz_type === "subpart" && state.finished) {
+          markCurrentQuizCompleted();
           renderSubpartSummary();
           queueMathJax();
           return;
         }
         if (quiz.quiz_type === "final" && state.submitted) {
+          markCurrentQuizCompleted();
           renderFinalSummary();
           queueMathJax();
           return;

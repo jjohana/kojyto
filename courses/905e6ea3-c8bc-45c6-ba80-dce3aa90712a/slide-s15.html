@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1606,9 +1699,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide" href="s1-s2.html">
+        <a
+          class="sidebar-slide"
+          href="s1-s2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s1_s2</strong>
           <span>Couverture et sommaire du module « L’individu dans l’organisation »</span>
           
@@ -1616,7 +1729,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-s2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-s2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s1_s2"
+        >
           <strong>QCM s1_s2</strong>
           <span>QCM - Couverture et sommaire du module « L’individu dans l’organisation »</span>
           
@@ -1624,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3.html">
+        <a
+          class="sidebar-slide"
+          href="s3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s3</strong>
           <span>Découverte des métiers de l’aéronautique</span>
           
@@ -1632,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s3"
+        >
           <strong>QCM s3</strong>
           <span>QCM - Découverte des métiers de l’aéronautique</span>
           
@@ -1640,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4.html">
+        <a
+          class="sidebar-slide"
+          href="s4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s4</strong>
           <span>Ingénieur en aéronautique</span>
           
@@ -1648,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s4"
+        >
           <strong>QCM s4</strong>
           <span>QCM - Ingénieur en aéronautique</span>
           
@@ -1656,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5.html">
+        <a
+          class="sidebar-slide"
+          href="s5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s5</strong>
           <span>Pilote de ligne</span>
           
@@ -1664,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s5"
+        >
           <strong>QCM s5</strong>
           <span>QCM - Pilote de ligne</span>
           
@@ -1672,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6.html">
+        <a
+          class="sidebar-slide"
+          href="s6.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s6</strong>
           <span>Mécanicien moteur / mécanicien aéronautique</span>
           
@@ -1680,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s6"
+        >
           <strong>QCM s6</strong>
           <span>QCM - Mécanicien moteur / mécanicien aéronautique</span>
           
@@ -1688,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7.html">
+        <a
+          class="sidebar-slide"
+          href="s7.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s7</strong>
           <span>Avitailleur</span>
           
@@ -1696,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s7"
+        >
           <strong>QCM s7</strong>
           <span>QCM - Avitailleur</span>
           
@@ -1704,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8.html">
+        <a
+          class="sidebar-slide"
+          href="s8.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s8</strong>
           <span>Aiguilleur du ciel</span>
           
@@ -1712,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s8"
+        >
           <strong>QCM s8</strong>
           <span>QCM - Aiguilleur du ciel</span>
           
@@ -1720,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9.html">
+        <a
+          class="sidebar-slide"
+          href="s9.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s9</strong>
           <span>Chef d’escale</span>
           
@@ -1728,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s9"
+        >
           <strong>QCM s9</strong>
           <span>QCM - Chef d’escale</span>
           
@@ -1736,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10.html">
+        <a
+          class="sidebar-slide"
+          href="s10.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s10</strong>
           <span>Technicien d’essai</span>
           
@@ -1744,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s10"
+        >
           <strong>QCM s10</strong>
           <span>QCM - Technicien d’essai</span>
           
@@ -1752,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11-s12.html">
+        <a
+          class="sidebar-slide"
+          href="s11-s12.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s11_s12</strong>
           <span>Ouverture : droits et devoirs du salarié / contrat de travail</span>
           
@@ -1760,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11-s12.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11-s12.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s11_s12"
+        >
           <strong>QCM s11_s12</strong>
           <span>QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »</span>
           
@@ -1768,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s13.html">
+        <a
+          class="sidebar-slide"
+          href="s13.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s13</strong>
           <span>Les droits du salarié</span>
           
@@ -1776,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s13.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s13.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s13"
+        >
           <strong>QCM s13</strong>
           <span>QCM - Les droits du salarié</span>
           
@@ -1784,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s14.html">
+        <a
+          class="sidebar-slide"
+          href="s14.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s14</strong>
           <span>Les devoirs du salarié</span>
           
@@ -1792,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s14.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s14.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s14"
+        >
           <strong>QCM s14</strong>
           <span>QCM - Les devoirs du salarié</span>
           
@@ -1800,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s15.html">
+        <a
+          class="sidebar-slide"
+          href="s15.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s15</strong>
           <span>Le contrat de travail</span>
           
@@ -1808,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide active" href="slide-s15.html">
+        <a
+          class="sidebar-slide active"
+          href="slide-s15.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s15"
+        >
           <strong>QCM s15</strong>
           <span>QCM - Le contrat de travail</span>
           
@@ -1816,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s16.html">
+        <a
+          class="sidebar-slide"
+          href="s16.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s16</strong>
           <span>TP – L’individu dans l’organisation</span>
           
@@ -1824,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s17.html">
+        <a
+          class="sidebar-slide"
+          href="s17.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s17</strong>
           <span>Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »</span>
           
@@ -1832,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s18.html">
+        <a
+          class="sidebar-slide"
+          href="s18.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s18</strong>
           <span>Santé en entreprise aéronautique</span>
           
@@ -1840,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s18.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s18.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s18"
+        >
           <strong>QCM s18</strong>
           <span>QCM - Santé en entreprise aéronautique</span>
           
@@ -1848,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s19.html">
+        <a
+          class="sidebar-slide"
+          href="s19.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s19</strong>
           <span>Sécurité en entreprise aéronautique</span>
           
@@ -1856,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s19.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s19.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s19"
+        >
           <strong>QCM s19</strong>
           <span>QCM - Sécurité en entreprise aéronautique</span>
           
@@ -1864,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s20.html">
+        <a
+          class="sidebar-slide"
+          href="s20.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s20</strong>
           <span>Qualité en entreprise aéronautique</span>
           
@@ -1872,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s20.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s20.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s20"
+        >
           <strong>QCM s20</strong>
           <span>QCM - Qualité en entreprise aéronautique</span>
           
@@ -1880,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s21.html">
+        <a
+          class="sidebar-slide"
+          href="s21.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s21</strong>
           <span>Interaction entre santé, sécurité et qualité</span>
           
@@ -1888,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s21.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s21.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s21"
+        >
           <strong>QCM s21</strong>
           <span>QCM - Interaction entre santé, sécurité et qualité</span>
           
@@ -1896,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s22.html">
+        <a
+          class="sidebar-slide"
+          href="s22.html"
+          data-page-kind="slide"
+          
+        >
           <strong>s22</strong>
           <span>Rémunération et parcours professionnels</span>
           
@@ -1904,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s22.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s22.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::s22"
+        >
           <strong>QCM s22</strong>
           <span>QCM - Rémunération et parcours professionnels</span>
           
@@ -1912,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - Économie-Gestion Bac Pro Aéronautique</span>
           
@@ -2030,6 +2333,180 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-58d39ab4b14f", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::s1_s2", "quiz_type": "subpart", "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »", "href": "slide-s1-s2.html", "base_xp": 100}, {"quiz_id": "slide::s3", "quiz_type": "subpart", "title": "QCM - Découverte des métiers de l’aéronautique", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::s4", "quiz_type": "subpart", "title": "QCM - Ingénieur en aéronautique", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::s5", "quiz_type": "subpart", "title": "QCM - Pilote de ligne", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::s6", "quiz_type": "subpart", "title": "QCM - Mécanicien moteur / mécanicien aéronautique", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::s7", "quiz_type": "subpart", "title": "QCM - Avitailleur", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::s8", "quiz_type": "subpart", "title": "QCM - Aiguilleur du ciel", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::s9", "quiz_type": "subpart", "title": "QCM - Chef d’escale", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::s10", "quiz_type": "subpart", "title": "QCM - Technicien d’essai", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::s11_s12", "quiz_type": "subpart", "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »", "href": "slide-s11-s12.html", "base_xp": 100}, {"quiz_id": "slide::s13", "quiz_type": "subpart", "title": "QCM - Les droits du salarié", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::s14", "quiz_type": "subpart", "title": "QCM - Les devoirs du salarié", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::s15", "quiz_type": "subpart", "title": "QCM - Le contrat de travail", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::s18", "quiz_type": "subpart", "title": "QCM - Santé en entreprise aéronautique", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::s19", "quiz_type": "subpart", "title": "QCM - Sécurité en entreprise aéronautique", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::s20", "quiz_type": "subpart", "title": "QCM - Qualité en entreprise aéronautique", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "slide::s21", "quiz_type": "subpart", "title": "QCM - Interaction entre santé, sécurité et qualité", "href": "slide-s21.html", "base_xp": 100}, {"quiz_id": "slide::s22", "quiz_type": "subpart", "title": "QCM - Rémunération et parcours professionnels", "href": "slide-s22.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::s15", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "s15_q1", "prompt": "Quelle affirmation décrit correctement le contrat de travail ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le contrat de travail organise uniquement les relations entre deux entreprises.", "is_correct": false, "explanation": "Un contrat de travail ne relie pas deux entreprises ; il relie un salarié et un employeur."}, {"id": "B", "text": "Le contrat de travail n’impose aucune obligation au salarié.", "is_correct": false, "explanation": "Le salarié a au contraire des obligations, comme travailler, être assidu et respecter les consignes."}, {"id": "C", "text": "Le contrat de travail est un document réservé aux stages scolaires.", "is_correct": false, "explanation": "Un stage n’est pas un contrat de travail au sens donné ici : le document concerne une relation de travail salariée."}, {"id": "D", "text": "Le contrat de travail est un lien juridique entre un salarié et un employeur.", "is_correct": true, "explanation": "Cette définition reprend l’idée essentielle : le contrat crée un lien juridique entre deux parties, avec des droits et des obligations réciproques."}, {"id": "E", "text": "Le contrat de travail supprime le lien juridique entre salarié et employeur.", "is_correct": false, "explanation": "Le contrat ne supprime pas le lien juridique ; il le crée et l’encadre."}], "coverage_label": "Le contrat de travail", "learning_objective": "Identifier la définition juridique du contrat de travail.", "correction_summary": "La bonne réponse est la définition qui relie un salarié et un employeur par un lien juridique. Le piège consiste à confondre ce contrat avec un simple accord informel ou avec d’autres relations professionnelles.", "course_clarification": "Le contrat de travail formalise une relation de travail salariée. Il fixe les droits et les obligations de chacune des parties.", "source_refs": []}, {"question_id": "s15_q2", "prompt": "Quelle affirmation associe correctement les deux principaux types de contrat de travail ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le CDI est un contrat à durée déterminée et le CDD n’a pas de date de fin.", "is_correct": false, "explanation": "C’est l’inverse : le CDI est à durée indéterminée, alors que le CDD est à durée déterminée."}, {"id": "B", "text": "Le CDI apporte de la stabilité et le CDD sert pour des missions ponctuelles ou un remplacement.", "is_correct": true, "explanation": "Cette formulation reprend les deux repères essentiels : le CDI est lié à la stabilité, tandis que le CDD répond à un besoin limité dans le temps ou à un remplacement."}, {"id": "C", "text": "Le CDD est réservé aux emplois permanents sans limite de temps.", "is_correct": false, "explanation": "Le CDD est prévu pour une mission ponctuelle ou un remplacement, pas pour un emploi permanent sans limite."}, {"id": "D", "text": "Le CDI est utilisé uniquement pour remplacer une personne absente.", "is_correct": false, "explanation": "Le remplacement ponctuel correspond au CDD, pas au CDI."}, {"id": "E", "text": "Le CDI et le CDD désignent exactement la même forme de contrat.", "is_correct": false, "explanation": "Les deux sigles renvoient à des formes différentes, avec une durée et un usage distincts."}], "coverage_label": "CDI et CDD", "learning_objective": "Distinguer CDI et CDD à partir de leur durée et de leur usage.", "correction_summary": "Le CDI correspond à une relation stable, alors que le CDD répond à un besoin temporaire comme une mission ponctuelle ou un remplacement. Le piège classique est d’inverser la durée des deux sigles.", "course_clarification": "CDI signifie contrat à durée indéterminée. CDD signifie contrat à durée déterminée et sert pour un besoin limité dans le temps.", "source_refs": []}, {"question_id": "s15_q3", "prompt": "Quelle affirmation est correcte au sujet des contrats spécifiques ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’apprentissage, l’alternance et l’intérim font partie des contrats spécifiques.", "is_correct": true, "explanation": "Ces trois exemples sont explicitement donnés comme des contrats spécifiques liés à des situations particulières d’emploi ou de formation."}, {"id": "B", "text": "L’apprentissage, l’alternance et l’intérim sont des mentions obligatoires du contrat.", "is_correct": false, "explanation": "Ce ne sont pas des mentions obligatoires : ce sont des types de contrats spécifiques."}, {"id": "C", "text": "L’intérim désigne un CDI à durée indéterminée.", "is_correct": false, "explanation": "L’intérim est cité comme un contrat spécifique, pas comme un CDI."}, {"id": "D", "text": "L’alternance est une rupture du contrat de travail.", "is_correct": false, "explanation": "L’alternance est une forme de contrat spécifique, pas une manière de rompre le contrat."}, {"id": "E", "text": "L’apprentissage ne concerne jamais un contrat de travail.", "is_correct": false, "explanation": "L’apprentissage figure parmi les contrats spécifiques ; il est donc bien relié au contrat de travail."}], "coverage_label": "Contrats spécifiques", "learning_objective": "Reconnaître les formes particulières de contrat de travail citées dans le support.", "correction_summary": "Les contrats spécifiques à retenir sont l’apprentissage, l’alternance et l’intérim. Le piège consiste à les confondre avec les mentions du contrat ou avec sa rupture.", "course_clarification": "Ces contrats répondent à des situations particulières d’emploi ou de formation. Ils ne remplacent pas les notions de CDI et de CDD, mais complètent la typologie des contrats.", "source_refs": []}, {"question_id": "s15_q4", "prompt": "Quelle affirmation correspond aux mentions obligatoires d’un contrat de travail ?", "difficulty": "easy", "options": [{"id": "A", "text": "Seul le salaire doit obligatoirement figurer dans le contrat.", "is_correct": false, "explanation": "Le salaire est une mention importante, mais il doit être accompagné d’autres éléments comme l’identité des parties, la fonction, les horaires et la durée."}, {"id": "B", "text": "La durée n’a pas besoin d’être indiquée dans le contrat.", "is_correct": false, "explanation": "La durée fait partie des mentions obligatoires indiquées dans le support."}, {"id": "C", "text": "Les horaires sont facultatifs et ne servent jamais à préciser le travail demandé.", "is_correct": false, "explanation": "Les horaires figurent parmi les mentions obligatoires, car ils encadrent l’organisation du travail."}, {"id": "D", "text": "Le contrat de travail n’a pas besoin d’indiquer la fonction occupée.", "is_correct": false, "explanation": "La fonction doit être précisée pour définir le poste et les missions confiées au salarié."}, {"id": "E", "text": "L’identité des parties, la fonction, le salaire, les horaires et la durée doivent figurer dans le contrat.", "is_correct": true, "explanation": "La liste donnée reprend les mentions obligatoires à connaître : elles permettent d’identifier les parties et de préciser les conditions essentielles de l’emploi."}], "coverage_label": "Mentions obligatoires", "learning_objective": "Identifier les informations essentielles qui doivent apparaître dans un contrat de travail.", "correction_summary": "Les mentions obligatoires sont l’identité des parties, la fonction, le salaire, les horaires et la durée. Le piège est d’en oublier une ou de croire qu’une seule information suffit.", "course_clarification": "Ces mentions servent à cadrer clairement la relation de travail. Elles évitent les ambiguïtés sur le poste, la rémunération et l’organisation du temps de travail.", "source_refs": []}, {"question_id": "s15_q5", "prompt": "Quelle affirmation décrit correctement la rupture du contrat de travail ?", "difficulty": "easy", "options": [{"id": "A", "text": "La rupture du contrat ne peut jamais résulter d’une fin de CDD.", "is_correct": false, "explanation": "La fin d’un CDD est bien l’une des formes de rupture mentionnées."}, {"id": "B", "text": "La rupture du contrat se limite forcément à une démission.", "is_correct": false, "explanation": "La démission n’est qu’une possibilité parmi d’autres ; le licenciement, la rupture conventionnelle et la fin de CDD existent aussi."}, {"id": "C", "text": "La rupture du contrat peut prendre la forme d’une démission, d’un licenciement, d’une rupture conventionnelle ou de la fin d’un CDD.", "is_correct": true, "explanation": "Cette liste correspond exactement aux modes de rupture indiqués : elle regroupe les situations de départ du contrat prévues dans le support."}, {"id": "D", "text": "Un CDI se termine obligatoirement par une fin de CDD.", "is_correct": false, "explanation": "Un CDI et un CDD ne se terminent pas de la même manière : la fin de CDD concerne seulement le CDD."}, {"id": "E", "text": "La rupture conventionnelle n’est pas une forme de rupture du contrat.", "is_correct": false, "explanation": "La rupture conventionnelle figure explicitement parmi les formes de rupture à retenir."}], "coverage_label": "Rupture du contrat de travail", "learning_objective": "Reconnaître les principales formes de rupture du contrat de travail.", "correction_summary": "La rupture peut se faire par démission, licenciement, rupture conventionnelle ou fin de CDD. Le piège consiste à oublier la fin de CDD ou à croire qu’une seule modalité existe.", "course_clarification": "La rupture met fin au contrat de travail. Elle peut venir du salarié, de l’employeur ou résulter de l’échéance prévue pour un CDD.", "source_refs": []}], "subpart_id": "s15", "anchor_slide_id": "s15", "question_count_target": 5, "title": "QCM - Le contrat de travail"}</script>
   <script>
     (function () {
@@ -2234,6 +2711,21 @@ html[data-embed="1"] .review-card {
         };
       }
 
+      function quizRewardXp(score) {
+        if (window.KOJYTO_GAMIFICATION && typeof window.KOJYTO_GAMIFICATION.quizXp === "function") {
+          return window.KOJYTO_GAMIFICATION.quizXp(quiz.quiz_id, score.percent);
+        }
+        return 0;
+      }
+
+      function markCurrentQuizCompleted() {
+        if (!window.KOJYTO_GAMIFICATION || typeof window.KOJYTO_GAMIFICATION.markQuizCompleted !== "function") {
+          return;
+        }
+        const score = scoreQuiz();
+        window.KOJYTO_GAMIFICATION.markQuizCompleted(quiz.quiz_id, score.percent);
+      }
+
       function escapeHtml(value) {
         return String(value)
           .replace(/&/g, "&amp;")
@@ -2410,6 +2902,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2446,6 +2939,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2460,11 +2954,13 @@ html[data-embed="1"] .review-card {
       function render() {
         syncFinalQuizHero();
         if (quiz.quiz_type === "subpart" && state.finished) {
+          markCurrentQuizCompleted();
           renderSubpartSummary();
           queueMathJax();
           return;
         }
         if (quiz.quiz_type === "final" && state.submitted) {
+          markCurrentQuizCompleted();
           renderFinalSummary();
           queueMathJax();
           return;

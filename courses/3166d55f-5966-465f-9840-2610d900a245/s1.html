@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1619,9 +1712,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide active" href="s1.html">
+        <a
+          class="sidebar-slide active"
+          href="s1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1</strong>
           <span>Introduction à la cinématique</span>
           
@@ -1629,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1"
+        >
           <strong>QCM S1</strong>
           <span>QCM - Introduction à la cinématique</span>
           
@@ -1637,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2.html">
+        <a
+          class="sidebar-slide"
+          href="s2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2</strong>
           <span>Système, point matériel et référentiel</span>
           
@@ -1645,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2"
+        >
           <strong>QCM S2</strong>
           <span>QCM - Système, point matériel et référentiel</span>
           
@@ -1653,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3.html">
+        <a
+          class="sidebar-slide"
+          href="s3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3</strong>
           <span>Trajectoire et position</span>
           
@@ -1661,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3"
+        >
           <strong>QCM S3</strong>
           <span>QCM - Trajectoire et position</span>
           
@@ -1669,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4.html">
+        <a
+          class="sidebar-slide"
+          href="s4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4</strong>
           <span>Vitesse instantanée</span>
           
@@ -1677,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4"
+        >
           <strong>QCM S4</strong>
           <span>QCM - Vitesse instantanée</span>
           
@@ -1685,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5.html">
+        <a
+          class="sidebar-slide"
+          href="s5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5</strong>
           <span>Vitesse moyenne et mesures de vitesse</span>
           
@@ -1693,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5"
+        >
           <strong>QCM S5</strong>
           <span>QCM - Vitesse moyenne et mesures de vitesse</span>
           
@@ -1701,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6.html">
+        <a
+          class="sidebar-slide"
+          href="s6.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6</strong>
           <span>Accélération : définition et unité</span>
           
@@ -1709,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6"
+        >
           <strong>QCM S6</strong>
           <span>QCM - Accélération : définition et unité</span>
           
@@ -1717,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7.html">
+        <a
+          class="sidebar-slide"
+          href="s7.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7</strong>
           <span>Accélération tangentielle et normale</span>
           
@@ -1725,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7"
+        >
           <strong>QCM S7</strong>
           <span>QCM - Accélération tangentielle et normale</span>
           
@@ -1733,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8.html">
+        <a
+          class="sidebar-slide"
+          href="s8.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S8</strong>
           <span>MRU : vitesse constante et loi horaire linéaire</span>
           
@@ -1741,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S8"
+        >
           <strong>QCM S8</strong>
           <span>QCM - Mouvement rectiligne uniforme (MRU)</span>
           
@@ -1749,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9.html">
+        <a
+          class="sidebar-slide"
+          href="s9.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9</strong>
           <span>Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
@@ -1757,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9"
+        >
           <strong>QCM S9</strong>
           <span>QCM - Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
@@ -1765,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10.html">
+        <a
+          class="sidebar-slide"
+          href="s10.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10</strong>
           <span>Mouvement circulaire uniforme (MCU)</span>
           
@@ -1773,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10"
+        >
           <strong>QCM S10</strong>
           <span>QCM - Mouvement circulaire uniforme (MCU)</span>
           
@@ -1781,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11.html">
+        <a
+          class="sidebar-slide"
+          href="s11.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11</strong>
           <span>Mouvement circulaire accéléré</span>
           
@@ -1789,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11"
+        >
           <strong>QCM S11</strong>
           <span>QCM - Mouvement circulaire accéléré</span>
           
@@ -1797,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s12.html">
+        <a
+          class="sidebar-slide"
+          href="s12.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S12</strong>
           <span>Équations horaires et trajectoires</span>
           
@@ -1805,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s12.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s12.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S12"
+        >
           <strong>QCM S12</strong>
           <span>QCM - Équations horaires et trajectoires</span>
           
@@ -1813,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s13.html">
+        <a
+          class="sidebar-slide"
+          href="s13.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S13</strong>
           <span>Grandeurs angulaires et linéaires</span>
           
@@ -1821,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s13.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s13.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S13"
+        >
           <strong>QCM S13</strong>
           <span>QCM - Grandeurs angulaires et linéaires</span>
           
@@ -1829,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s14.html">
+        <a
+          class="sidebar-slide"
+          href="s14.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S14</strong>
           <span>Méthodes graphiques et expérimentales</span>
           
@@ -1837,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s14.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s14.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S14"
+        >
           <strong>QCM S14</strong>
           <span>QCM - Méthodes graphiques et expérimentales</span>
           
@@ -1845,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s15.html">
+        <a
+          class="sidebar-slide"
+          href="s15.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S15</strong>
           <span>Étude de cas – Mouvement circulaire d’une hélice</span>
           
@@ -1853,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s15.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s15.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S15"
+        >
           <strong>QCM S15</strong>
           <span>QCM - Étude de cas – Mouvement circulaire d’une hélice</span>
           
@@ -1861,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s16.html">
+        <a
+          class="sidebar-slide"
+          href="s16.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S16</strong>
           <span>Approche numérique avec Python</span>
           
@@ -1869,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s16.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s16.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S16"
+        >
           <strong>QCM S16</strong>
           <span>QCM - Approche numérique avec Python</span>
           
@@ -1877,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s17.html">
+        <a
+          class="sidebar-slide"
+          href="s17.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S17</strong>
           <span>Applications aéronautiques typiques</span>
           
@@ -1885,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s17.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s17.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S17"
+        >
           <strong>QCM S17</strong>
           <span>QCM - Applications aéronautiques typiques</span>
           
@@ -1893,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s18.html">
+        <a
+          class="sidebar-slide"
+          href="s18.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S18</strong>
           <span>Formulaire récapitulatif</span>
           
@@ -1901,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s18.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s18.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S18"
+        >
           <strong>QCM S18</strong>
           <span>QCM - Formulaire récapitulatif</span>
           
@@ -1909,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s19.html">
+        <a
+          class="sidebar-slide"
+          href="s19.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S19</strong>
           <span>Erreurs fréquentes à éviter</span>
           
@@ -1917,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s19.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s19.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S19"
+        >
           <strong>QCM S19</strong>
           <span>QCM - Erreurs fréquentes à éviter</span>
           
@@ -1925,7 +2223,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s20.html">
+        <a
+          class="sidebar-slide"
+          href="s20.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S20</strong>
           <span>Conclusion</span>
           
@@ -1933,7 +2236,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s20.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s20.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S20"
+        >
           <strong>QCM S20</strong>
           <span>QCM - Conclusion</span>
           
@@ -1941,7 +2249,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)</span>
           
@@ -2260,5 +2573,179 @@ html[data-embed="1"] .review-card {
       </article>
     </main>
   </div>
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-0b23328d2d4c", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "QCM - Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "QCM - Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "QCM - Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "QCM - Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "QCM - Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "QCM - Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "QCM - Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "QCM - Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "QCM - Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "QCM - Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "QCM - Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "QCM - Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "QCM - Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "QCM - Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "QCM - Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "QCM - Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
 </body>
 </html>

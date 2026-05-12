@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1606,9 +1699,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide" href="s1.html">
+        <a
+          class="sidebar-slide"
+          href="s1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1</strong>
           <span>Introduction à la cinématique</span>
           
@@ -1616,7 +1729,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1"
+        >
           <strong>QCM S1</strong>
           <span>QCM - Introduction à la cinématique</span>
           
@@ -1624,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2.html">
+        <a
+          class="sidebar-slide"
+          href="s2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2</strong>
           <span>Système, point matériel et référentiel</span>
           
@@ -1632,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2"
+        >
           <strong>QCM S2</strong>
           <span>QCM - Système, point matériel et référentiel</span>
           
@@ -1640,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3.html">
+        <a
+          class="sidebar-slide"
+          href="s3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3</strong>
           <span>Trajectoire et position</span>
           
@@ -1648,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3"
+        >
           <strong>QCM S3</strong>
           <span>QCM - Trajectoire et position</span>
           
@@ -1656,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4.html">
+        <a
+          class="sidebar-slide"
+          href="s4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4</strong>
           <span>Vitesse instantanée</span>
           
@@ -1664,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4"
+        >
           <strong>QCM S4</strong>
           <span>QCM - Vitesse instantanée</span>
           
@@ -1672,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5.html">
+        <a
+          class="sidebar-slide"
+          href="s5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5</strong>
           <span>Vitesse moyenne et mesures de vitesse</span>
           
@@ -1680,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5"
+        >
           <strong>QCM S5</strong>
           <span>QCM - Vitesse moyenne et mesures de vitesse</span>
           
@@ -1688,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6.html">
+        <a
+          class="sidebar-slide"
+          href="s6.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6</strong>
           <span>Accélération : définition et unité</span>
           
@@ -1696,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6"
+        >
           <strong>QCM S6</strong>
           <span>QCM - Accélération : définition et unité</span>
           
@@ -1704,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7.html">
+        <a
+          class="sidebar-slide"
+          href="s7.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7</strong>
           <span>Accélération tangentielle et normale</span>
           
@@ -1712,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7"
+        >
           <strong>QCM S7</strong>
           <span>QCM - Accélération tangentielle et normale</span>
           
@@ -1720,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8.html">
+        <a
+          class="sidebar-slide"
+          href="s8.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S8</strong>
           <span>MRU : vitesse constante et loi horaire linéaire</span>
           
@@ -1728,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S8"
+        >
           <strong>QCM S8</strong>
           <span>QCM - Mouvement rectiligne uniforme (MRU)</span>
           
@@ -1736,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9.html">
+        <a
+          class="sidebar-slide"
+          href="s9.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9</strong>
           <span>Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
@@ -1744,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9"
+        >
           <strong>QCM S9</strong>
           <span>QCM - Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
@@ -1752,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10.html">
+        <a
+          class="sidebar-slide"
+          href="s10.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10</strong>
           <span>Mouvement circulaire uniforme (MCU)</span>
           
@@ -1760,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10"
+        >
           <strong>QCM S10</strong>
           <span>QCM - Mouvement circulaire uniforme (MCU)</span>
           
@@ -1768,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11.html">
+        <a
+          class="sidebar-slide"
+          href="s11.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11</strong>
           <span>Mouvement circulaire accéléré</span>
           
@@ -1776,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11"
+        >
           <strong>QCM S11</strong>
           <span>QCM - Mouvement circulaire accéléré</span>
           
@@ -1784,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s12.html">
+        <a
+          class="sidebar-slide"
+          href="s12.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S12</strong>
           <span>Équations horaires et trajectoires</span>
           
@@ -1792,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s12.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s12.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S12"
+        >
           <strong>QCM S12</strong>
           <span>QCM - Équations horaires et trajectoires</span>
           
@@ -1800,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s13.html">
+        <a
+          class="sidebar-slide"
+          href="s13.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S13</strong>
           <span>Grandeurs angulaires et linéaires</span>
           
@@ -1808,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s13.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s13.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S13"
+        >
           <strong>QCM S13</strong>
           <span>QCM - Grandeurs angulaires et linéaires</span>
           
@@ -1816,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s14.html">
+        <a
+          class="sidebar-slide"
+          href="s14.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S14</strong>
           <span>Méthodes graphiques et expérimentales</span>
           
@@ -1824,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s14.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s14.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S14"
+        >
           <strong>QCM S14</strong>
           <span>QCM - Méthodes graphiques et expérimentales</span>
           
@@ -1832,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s15.html">
+        <a
+          class="sidebar-slide"
+          href="s15.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S15</strong>
           <span>Étude de cas – Mouvement circulaire d’une hélice</span>
           
@@ -1840,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s15.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s15.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S15"
+        >
           <strong>QCM S15</strong>
           <span>QCM - Étude de cas – Mouvement circulaire d’une hélice</span>
           
@@ -1848,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s16.html">
+        <a
+          class="sidebar-slide"
+          href="s16.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S16</strong>
           <span>Approche numérique avec Python</span>
           
@@ -1856,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide active" href="slide-s16.html">
+        <a
+          class="sidebar-slide active"
+          href="slide-s16.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S16"
+        >
           <strong>QCM S16</strong>
           <span>QCM - Approche numérique avec Python</span>
           
@@ -1864,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s17.html">
+        <a
+          class="sidebar-slide"
+          href="s17.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S17</strong>
           <span>Applications aéronautiques typiques</span>
           
@@ -1872,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s17.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s17.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S17"
+        >
           <strong>QCM S17</strong>
           <span>QCM - Applications aéronautiques typiques</span>
           
@@ -1880,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s18.html">
+        <a
+          class="sidebar-slide"
+          href="s18.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S18</strong>
           <span>Formulaire récapitulatif</span>
           
@@ -1888,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s18.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s18.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S18"
+        >
           <strong>QCM S18</strong>
           <span>QCM - Formulaire récapitulatif</span>
           
@@ -1896,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s19.html">
+        <a
+          class="sidebar-slide"
+          href="s19.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S19</strong>
           <span>Erreurs fréquentes à éviter</span>
           
@@ -1904,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s19.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s19.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S19"
+        >
           <strong>QCM S19</strong>
           <span>QCM - Erreurs fréquentes à éviter</span>
           
@@ -1912,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s20.html">
+        <a
+          class="sidebar-slide"
+          href="s20.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S20</strong>
           <span>Conclusion</span>
           
@@ -1920,7 +2223,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s20.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s20.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S20"
+        >
           <strong>QCM S20</strong>
           <span>QCM - Conclusion</span>
           
@@ -1928,7 +2236,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)</span>
           
@@ -2046,6 +2359,180 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-0b23328d2d4c", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "QCM - Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "QCM - Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "QCM - Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "QCM - Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "QCM - Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "QCM - Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "QCM - Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "QCM - Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "QCM - Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "QCM - Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "QCM - Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "QCM - Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "QCM - Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "QCM - Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "QCM - Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "QCM - Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S16", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S16-Q1", "prompt": "Quel énoncé décrit correctement l’usage de `numpy.gradient` pour exploiter des données discrètes de position ?", "difficulty": "easy", "options": [{"id": "A", "text": "`numpy.gradient` calcule uniquement une primitive exacte des données.", "is_correct": false, "explanation": "Une primitive correspond à une intégration, alors que `numpy.gradient` réalise une dérivation numérique. La fonction ne fournit donc pas une intégrale exacte."}, {"id": "B", "text": "`numpy.gradient` ne peut être utilisé qu’avec des fonctions symboliques écrites en notation analytique.", "is_correct": false, "explanation": "La force de `numpy.gradient` est justement de travailler sur des valeurs numériques déjà échantillonnées. Il n’a pas besoin d’une expression symbolique continue."}, {"id": "C", "text": "`numpy.gradient` remplace toute mesure physique et rend les capteurs inutiles.", "is_correct": false, "explanation": "La fonction exploite des données déjà obtenues, mais elle ne crée pas les mesures. Les capteurs restent nécessaires pour fournir les positions ou vitesses discrètes."}, {"id": "D", "text": "`numpy.gradient` permet d’estimer numériquement une dérivée à partir de valeurs discrètes.", "is_correct": true, "explanation": "La fonction calcule une approximation de la dérivée à partir d’échantillons espacés en temps ou en espace. Elle est précisément adaptée aux données mesurées ou simulées sous forme de tableaux."}, {"id": "E", "text": "`numpy.gradient` donne directement la vitesse et l’accélération sans passer par des dérivées successives.", "is_correct": false, "explanation": "Pour obtenir l’accélération à partir d’une position, il faut d’abord dériver la position pour obtenir la vitesse, puis dériver la vitesse. Les deux étapes ne sont pas fusionnées automatiquement."}], "coverage_label": "Approche numérique avec Python", "learning_objective": "Identifier le rôle de `numpy.gradient` dans la dérivation numérique de données discrètes.", "correction_summary": "La bonne idée est que `numpy.gradient` approxime une dérivée à partir d’échantillons. Le piège classique consiste à le confondre avec une intégration ou avec une dérivation symbolique exacte.", "course_clarification": "Une donnée discrète est une suite de valeurs mesurées ou simulées à des instants donnés. La dérivation numérique sert à estimer vitesse ou accélération quand on ne dispose pas d’une expression continue de la position.", "source_refs": []}, {"question_id": "S16-Q2", "prompt": "À propos de l’exemple Python suivant, quel énoncé est correct ?\n```python\nimport numpy as np\nt = np.linspace(0, 10, 100)\nx = 4*t + 0.5*t**2\nv = np.gradient(x, t)\na = np.gradient(v, t)\n```", "difficulty": "easy", "options": [{"id": "A", "text": "`t = np.linspace(0, 10, 100)` produit 10 valeurs de temps entre 0 et 100.", "is_correct": false, "explanation": "`np.linspace(0, 10, 100)` crée 100 points régulièrement répartis entre 0 et 10. Ni le nombre de points ni les bornes ne correspondent à cette proposition."}, {"id": "B", "text": "`a = np.gradient(v, t)` estime l’accélération à partir de la vitesse discrète.", "is_correct": true, "explanation": "L’accélération est la dérivée de la vitesse par rapport au temps. Cette ligne applique donc une dérivation numérique sur `v` pour obtenir une estimation de `a`."}, {"id": "C", "text": "`x = 4*t + 0.5*t**2` représente une accélération constante égale à 4.", "is_correct": false, "explanation": "Cette expression est une position en fonction du temps, pas une accélération. Sa dérivée première donne une vitesse qui varie avec `t`, donc l’accélération n’est pas constante égale à 4."}, {"id": "D", "text": "`v = np.gradient(x, t)` dérive numériquement l’accélération pour obtenir la position.", "is_correct": false, "explanation": "Ici on part de la position `x(t)` pour estimer la vitesse. L’ordre des grandeurs est position → vitesse → accélération, pas l’inverse."}, {"id": "E", "text": "`np.linspace` crée des valeurs aléatoires de temps pour simuler une mesure bruitée.", "is_correct": false, "explanation": "`np.linspace` génère des valeurs régulièrement espacées, sans aléa. Le bruit éventuel vient d’une mesure expérimentale, pas de cette fonction."}], "coverage_label": "Approche numérique avec Python", "learning_objective": "Lire un court code Python et relier chaque ligne à la grandeur cinématique correspondante.", "correction_summary": "La ligne `a = np.gradient(v, t)` correspond bien à une dérivation numérique de la vitesse. Le piège est de confondre l’ordre des grandeurs ou d’attribuer à `linspace` un rôle aléatoire.", "course_clarification": "`np.linspace(a, b, n)` construit `n` valeurs régulièrement espacées entre `a` et `b`. `np.gradient(y, t)` estime la dérivée de `y` par rapport à `t` en utilisant les points disponibles.", "source_refs": []}, {"question_id": "S16-Q3", "prompt": "Quelle affirmation décrit correctement l’intérêt de cette approche numérique en cinématique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Cette approche sert à valider les modèles expérimentaux de déplacement.", "is_correct": true, "explanation": "Les positions calculées ou mesurées peuvent être comparées aux vitesses et accélérations obtenues numériquement. On vérifie ainsi si un modèle de déplacement reste cohérent avec les données observées."}, {"id": "B", "text": "Cette approche remplace toute validation expérimentale par une solution exacte et définitive.", "is_correct": false, "explanation": "La dérivation numérique fournit une estimation à partir de données discrètes, pas une preuve mathématique exacte. Elle aide à confronter un modèle à l’expérience, sans supprimer la phase de validation."}, {"id": "C", "text": "Cette approche n’a d’intérêt que pour les mouvements circulaires.", "is_correct": false, "explanation": "L’exemple porte sur une position en fonction du temps, donc sur une cinématique générale. La dérivation numérique est utile dès qu’on dispose de données discrètes, quel que soit le type de mouvement."}, {"id": "D", "text": "Cette approche interdit l’usage de capteurs et de mesures réelles.", "is_correct": false, "explanation": "Au contraire, elle s’applique très bien à des données issues de capteurs. Ces mesures peuvent ensuite être exploitées pour estimer vitesse et accélération."}, {"id": "E", "text": "Cette approche permet d’obtenir une vitesse moyenne uniquement, jamais une vitesse instantanée approchée.", "is_correct": false, "explanation": "La dérivation numérique vise justement à approcher une grandeur instantanée à partir d’échantillons. Elle ne se limite pas à une moyenne sur un intervalle."}], "coverage_label": "Approche numérique avec Python", "learning_objective": "Comprendre l’objectif pratique de la simulation numérique et de la dérivation numérique en cinématique.", "correction_summary": "L’enjeu est de comparer un modèle à des données discrètes pour vérifier sa cohérence. Le piège est de croire que l’outil numérique remplace l’expérience ou se limite à des moyennes.", "course_clarification": "La validation expérimentale consiste à confronter un modèle aux données observées. En cinématique, on exploite alors des positions, vitesses ou accélérations discrètes pour tester la qualité du modèle.", "source_refs": []}, {"question_id": "S16-Q4", "prompt": "Quel énoncé est exact à propos de la simulation de la cinématique avec Python ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il faut d’abord connaître l’accélération exacte avant de pouvoir calculer la vitesse.", "is_correct": false, "explanation": "L’ordre d’exploitation usuel part de la position pour estimer la vitesse, puis l’accélération. On ne commence pas par une accélération supposée exacte."}, {"id": "B", "text": "Une liste de positions discrètes ne peut jamais servir à estimer une vitesse.", "is_correct": false, "explanation": "La vitesse peut être approchée à partir de la variation de position avec le temps. C’est précisément l’intérêt de la dérivation numérique."}, {"id": "C", "text": "La simulation impose d’utiliser seulement des grandeurs angulaires et jamais des grandeurs linéaires.", "is_correct": false, "explanation": "La démarche décrite porte sur la position, la vitesse et l’accélération, qui sont des grandeurs linéaires dans l’exemple présenté. Les grandeurs angulaires sont traitées ailleurs, mais elles ne sont pas obligatoires ici."}, {"id": "D", "text": "Les listes de valeurs de position suppriment la nécessité d’un pas de temps ou d’un ensemble d’instants.", "is_correct": false, "explanation": "Pour dériver numériquement, il faut relier les valeurs de position à des instants ou à un axe de référence. Sans repérage temporel, la vitesse et l’accélération ne peuvent pas être estimées correctement."}, {"id": "E", "text": "La cinématique peut être simulée à partir de listes de valeurs de position.", "is_correct": true, "explanation": "On peut travailler directement sur des suites de positions échantillonnées, puis en déduire vitesse et accélération par dérivation numérique. L’expression analytique continue n’est pas obligatoire pour commencer."}], "coverage_label": "Approche numérique avec Python", "learning_objective": "Relier des données de position discrètes à une simulation de mouvement et à l’estimation de vitesse et d’accélération.", "correction_summary": "La position discrète suffit pour simuler et dériver numériquement le mouvement. Le piège est d’exiger d’abord une grandeur dérivée ou d’oublier l’importance du repérage temporel.", "course_clarification": "Une liste de valeurs discrètes est une suite finie d’échantillons. Avec un pas de temps connu, on peut estimer les dérivées successives et reconstruire le comportement cinématique.", "source_refs": []}], "subpart_id": "11", "anchor_slide_id": "S16", "question_count_target": 4, "title": "QCM - Approche numérique avec Python"}</script>
   <script>
     (function () {
@@ -2250,6 +2737,21 @@ html[data-embed="1"] .review-card {
         };
       }
 
+      function quizRewardXp(score) {
+        if (window.KOJYTO_GAMIFICATION && typeof window.KOJYTO_GAMIFICATION.quizXp === "function") {
+          return window.KOJYTO_GAMIFICATION.quizXp(quiz.quiz_id, score.percent);
+        }
+        return 0;
+      }
+
+      function markCurrentQuizCompleted() {
+        if (!window.KOJYTO_GAMIFICATION || typeof window.KOJYTO_GAMIFICATION.markQuizCompleted !== "function") {
+          return;
+        }
+        const score = scoreQuiz();
+        window.KOJYTO_GAMIFICATION.markQuizCompleted(quiz.quiz_id, score.percent);
+      }
+
       function escapeHtml(value) {
         return String(value)
           .replace(/&/g, "&amp;")
@@ -2426,6 +2928,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2462,6 +2965,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2476,11 +2980,13 @@ html[data-embed="1"] .review-card {
       function render() {
         syncFinalQuizHero();
         if (quiz.quiz_type === "subpart" && state.finished) {
+          markCurrentQuizCompleted();
           renderSubpartSummary();
           queueMathJax();
           return;
         }
         if (quiz.quiz_type === "final" && state.submitted) {
+          markCurrentQuizCompleted();
           renderFinalSummary();
           queueMathJax();
           return;

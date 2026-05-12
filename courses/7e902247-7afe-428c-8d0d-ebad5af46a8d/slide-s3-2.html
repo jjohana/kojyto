@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1606,9 +1699,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide" href="s1-1.html">
+        <a
+          class="sidebar-slide"
+          href="s1-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-1</strong>
           <span>Génération AC en vol : panorama des sources</span>
           
@@ -1616,7 +1729,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-1"
+        >
           <strong>QCM S1-1</strong>
           <span>QCM - Génération AC en vol : panorama des sources</span>
           
@@ -1624,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s1-2.html">
+        <a
+          class="sidebar-slide"
+          href="s1-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-2</strong>
           <span>IDG : implantation sur moteur et liaison mécanique</span>
           
@@ -1632,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-2"
+        >
           <strong>QCM S1-2</strong>
           <span>QCM - IDG : implantation sur moteur et liaison mécanique</span>
           
@@ -1640,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s1-3.html">
+        <a
+          class="sidebar-slide"
+          href="s1-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-3</strong>
           <span>GCU : contrôle et surveillance des IDG</span>
           
@@ -1648,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-3"
+        >
           <strong>QCM S1-3</strong>
           <span>QCM - GCU : contrôle et surveillance des IDG</span>
           
@@ -1656,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s1-4.html">
+        <a
+          class="sidebar-slide"
+          href="s1-4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-4</strong>
           <span>APU GEN et répartition du contrôle GCU/GAPCU</span>
           
@@ -1664,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-4"
+        >
           <strong>QCM S1-4</strong>
           <span>QCM - APU GEN et répartition du contrôle GCU/GAPCU</span>
           
@@ -1672,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2-1.html">
+        <a
+          class="sidebar-slide"
+          href="s2-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2-1</strong>
           <span>Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
           
@@ -1680,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2-1"
+        >
           <strong>QCM S2-1</strong>
           <span>QCM - Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
           
@@ -1688,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2-2.html">
+        <a
+          class="sidebar-slide"
+          href="s2-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2-2</strong>
           <span>Panneau de puissance externe et réceptacles</span>
           
@@ -1696,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2-2"
+        >
           <strong>QCM S2-2</strong>
           <span>QCM - Panneau de puissance externe et réceptacles</span>
           
@@ -1704,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2-3.html">
+        <a
+          class="sidebar-slide"
+          href="s2-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2-3</strong>
           <span>Raccordement au AC SYSTEM et implantation près du NLG</span>
           
@@ -1712,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2-3"
+        >
           <strong>QCM S2-3</strong>
           <span>QCM - Raccordement au AC SYSTEM et implantation près du NLG</span>
           
@@ -1720,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-1.html">
+        <a
+          class="sidebar-slide"
+          href="s3-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-1</strong>
           <span>Génération de secours : logique de bascule</span>
           
@@ -1728,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-1"
+        >
           <strong>QCM S3-1</strong>
           <span>QCM - Génération de secours : logique de bascule</span>
           
@@ -1736,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-2.html">
+        <a
+          class="sidebar-slide"
+          href="s3-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-2</strong>
           <span>Batteries et STATIC INVERTER</span>
           
@@ -1744,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide active" href="slide-s3-2.html">
+        <a
+          class="sidebar-slide active"
+          href="slide-s3-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-2"
+        >
           <strong>QCM S3-2</strong>
           <span>QCM - Batteries et STATIC INVERTER</span>
           
@@ -1752,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-3.html">
+        <a
+          class="sidebar-slide"
+          href="s3-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-3</strong>
           <span>EMER GEN et EMER GEN GCU</span>
           
@@ -1760,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-3"
+        >
           <strong>QCM S3-3</strong>
           <span>QCM - EMER GEN et EMER GEN GCU</span>
           
@@ -1768,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-4.html">
+        <a
+          class="sidebar-slide"
+          href="s3-4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-4</strong>
           <span>Réseau AC essentiel et indisponibilité des sources normales</span>
           
@@ -1776,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-4"
+        >
           <strong>QCM S3-4</strong>
           <span>QCM - Réseau AC essentiel et indisponibilité des sources normales</span>
           
@@ -1784,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-1.html">
+        <a
+          class="sidebar-slide"
+          href="s4-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-1</strong>
           <span>Architecture DC : vue d’ensemble</span>
           
@@ -1792,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-1"
+        >
           <strong>QCM S4-1</strong>
           <span>QCM - Architecture DC : vue d’ensemble</span>
           
@@ -1800,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-2.html">
+        <a
+          class="sidebar-slide"
+          href="s4-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-2</strong>
           <span>TR 1, TR 2, TR ESS et APU TR</span>
           
@@ -1808,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-2"
+        >
           <strong>QCM S4-2</strong>
           <span>QCM - TR 1, TR 2, TR ESS et APU TR</span>
           
@@ -1816,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-3.html">
+        <a
+          class="sidebar-slide"
+          href="s4-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-3</strong>
           <span>Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
           
@@ -1824,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-3"
+        >
           <strong>QCM S4-3</strong>
           <span>QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
           
@@ -1832,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-4.html">
+        <a
+          class="sidebar-slide"
+          href="s4-4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-4</strong>
           <span>APU BATTERY et alimentation de l’APU STARTER</span>
           
@@ -1840,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-4"
+        >
           <strong>QCM S4-4</strong>
           <span>QCM - APU BATTERY et alimentation de l’APU STARTER</span>
           
@@ -1848,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-5.html">
+        <a
+          class="sidebar-slide"
+          href="s4-5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-5</strong>
           <span>Blocs de contrôle et interfaces avec le DC SYSTEM</span>
           
@@ -1856,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-5.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-5"
+        >
           <strong>QCM S4-5</strong>
           <span>QCM - Blocs de contrôle et interfaces avec le DC SYSTEM</span>
           
@@ -1864,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-1.html">
+        <a
+          class="sidebar-slide"
+          href="s5-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-1</strong>
           <span>ECAM ELEC AC : lire la page d’un coup d’œil</span>
           
@@ -1872,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-1"
+        >
           <strong>QCM S5-1</strong>
           <span>QCM - ECAM ELEC AC : lecture générale de la page</span>
           
@@ -1880,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-2.html">
+        <a
+          class="sidebar-slide"
+          href="s5-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-2</strong>
           <span>Surveillance des sources AC sur l’Electronic Centralized Aircraft Monitor (ECAM)</span>
           
@@ -1888,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-2"
+        >
           <strong>QCM S5-2</strong>
           <span>QCM - Surveillance des sources : GEN 1, GEN 2 et APU GEN</span>
           
@@ -1896,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-3.html">
+        <a
+          class="sidebar-slide"
+          href="s5-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-3</strong>
           <span>Lire les paramètres de surveillance sur la page ECAM AC</span>
           
@@ -1904,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-3"
+        >
           <strong>QCM S5-3</strong>
           <span>QCM - Surveillance des IDG et des paramètres affichés</span>
           
@@ -1912,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-4.html">
+        <a
+          class="sidebar-slide"
+          href="s5-4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-4</strong>
           <span>Panneau AC GENERATION et commandes P/BSW</span>
           
@@ -1920,7 +2223,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-4"
+        >
           <strong>QCM S5-4</strong>
           <span>QCM - Panneau AC GENERATION et commandes P/BSW</span>
           
@@ -1928,7 +2236,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-5.html">
+        <a
+          class="sidebar-slide"
+          href="s5-5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-5</strong>
           <span>Panneau ELEC : sélection des sources et bus</span>
           
@@ -1936,7 +2249,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-5.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-5"
+        >
           <strong>QCM S5-5</strong>
           <span>QCM - Panneau ELEC : sélection des sources et bus</span>
           
@@ -1944,7 +2262,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-6.html">
+        <a
+          class="sidebar-slide"
+          href="s5-6.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-6</strong>
           <span>Panneau EMER ELEC PWR : test et commande de secours</span>
           
@@ -1952,7 +2275,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-6.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-6.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-6"
+        >
           <strong>QCM S5-6</strong>
           <span>QCM - Panneau EMER ELEC PWR : test et commande de secours</span>
           
@@ -1960,7 +2288,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6-1.html">
+        <a
+          class="sidebar-slide"
+          href="s6-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6-1</strong>
           <span>Ground Service Network : principe de fonctionnement</span>
           
@@ -1968,7 +2301,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6-1"
+        >
           <strong>QCM S6-1</strong>
           <span>QCM - Ground Service Network : principe de fonctionnement</span>
           
@@ -1976,7 +2314,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6-2.html">
+        <a
+          class="sidebar-slide"
+          href="s6-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6-2</strong>
           <span>MAINT BUS : alimentation du réseau de service</span>
           
@@ -1984,7 +2327,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6-2"
+        >
           <strong>QCM S6-2</strong>
           <span>QCM - MAINT BUS : alimentation du réseau de service</span>
           
@@ -1992,7 +2340,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6-3.html">
+        <a
+          class="sidebar-slide"
+          href="s6-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6-3</strong>
           <span>Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
           
@@ -2000,7 +2353,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6-3"
+        >
           <strong>QCM S6-3</strong>
           <span>QCM - Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
           
@@ -2008,7 +2366,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-1.html">
+        <a
+          class="sidebar-slide"
+          href="s7-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-1</strong>
           <span>ECMU : gestion des contacteurs</span>
           
@@ -2016,7 +2379,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-1"
+        >
           <strong>QCM S7-1</strong>
           <span>QCM - ECMU : gestion des contacteurs</span>
           
@@ -2024,7 +2392,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-2.html">
+        <a
+          class="sidebar-slide"
+          href="s7-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-2</strong>
           <span>CBMU : surveillance des C/B et des RCCBs</span>
           
@@ -2032,7 +2405,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-2"
+        >
           <strong>QCM S7-2</strong>
           <span>QCM - CBMU : surveillance des C/B et des RCCBs</span>
           
@@ -2040,7 +2418,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-3.html">
+        <a
+          class="sidebar-slide"
+          href="s7-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-3</strong>
           <span>Superviser les disjoncteurs via l’ECAM</span>
           
@@ -2048,7 +2431,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-3"
+        >
           <strong>QCM S7-3</strong>
           <span>QCM - Page ECAM C/B : signalement des déclenchements</span>
           
@@ -2056,7 +2444,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-4.html">
+        <a
+          class="sidebar-slide"
+          href="s7-4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-4</strong>
           <span>AC & DC CONTACTORS : distribution vers les charges</span>
           
@@ -2064,7 +2457,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-4"
+        >
           <strong>QCM S7-4</strong>
           <span>QCM - AC & DC CONTACTORS : distribution vers les charges</span>
           
@@ -2072,7 +2470,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-5.html">
+        <a
+          class="sidebar-slide"
+          href="s7-5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-5</strong>
           <span>De la supervision à la distribution des charges</span>
           
@@ -2080,7 +2483,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-5.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-5"
+        >
           <strong>QCM S7-5</strong>
           <span>QCM - Lien entre supervision, contacteurs et load distribution</span>
           
@@ -2088,7 +2496,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion</span>
           
@@ -2206,6 +2619,180 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-ed4129c06542", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "QCM - Génération AC en vol : panorama des sources", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "QCM - IDG : implantation sur moteur et liaison mécanique", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "QCM - GCU : contrôle et surveillance des IDG", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S1-4", "quiz_type": "subpart", "title": "QCM - APU GEN et répartition du contrôle GCU/GAPCU", "href": "slide-s1-4.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "QCM - Alimentation AC au sol : EXT PWR A et EXT PWR B", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "QCM - Panneau de puissance externe et réceptacles", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S2-3", "quiz_type": "subpart", "title": "QCM - Raccordement au AC SYSTEM et implantation près du NLG", "href": "slide-s2-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "QCM - Génération de secours : logique de bascule", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "QCM - Batteries et STATIC INVERTER", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "QCM - EMER GEN et EMER GEN GCU", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "QCM - Réseau AC essentiel et indisponibilité des sources normales", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "QCM - Architecture DC : vue d’ensemble", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "QCM - TR 1, TR 2, TR ESS et APU TR", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S4-3", "quiz_type": "subpart", "title": "QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN", "href": "slide-s4-3.html", "base_xp": 100}, {"quiz_id": "slide::S4-4", "quiz_type": "subpart", "title": "QCM - APU BATTERY et alimentation de l’APU STARTER", "href": "slide-s4-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-5", "quiz_type": "subpart", "title": "QCM - Blocs de contrôle et interfaces avec le DC SYSTEM", "href": "slide-s4-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "QCM - ECAM ELEC AC : lecture générale de la page", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "QCM - Surveillance des sources : GEN 1, GEN 2 et APU GEN", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "QCM - Surveillance des IDG et des paramètres affichés", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S5-4", "quiz_type": "subpart", "title": "QCM - Panneau AC GENERATION et commandes P/BSW", "href": "slide-s5-4.html", "base_xp": 100}, {"quiz_id": "slide::S5-5", "quiz_type": "subpart", "title": "QCM - Panneau ELEC : sélection des sources et bus", "href": "slide-s5-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-6", "quiz_type": "subpart", "title": "QCM - Panneau EMER ELEC PWR : test et commande de secours", "href": "slide-s5-6.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "QCM - Ground Service Network : principe de fonctionnement", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S6-2", "quiz_type": "subpart", "title": "QCM - MAINT BUS : alimentation du réseau de service", "href": "slide-s6-2.html", "base_xp": 100}, {"quiz_id": "slide::S6-3", "quiz_type": "subpart", "title": "QCM - Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2", "href": "slide-s6-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "QCM - ECMU : gestion des contacteurs", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "QCM - CBMU : surveillance des C/B et des RCCBs", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "QCM - Page ECAM C/B : signalement des déclenchements", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-4", "quiz_type": "subpart", "title": "QCM - AC & DC CONTACTORS : distribution vers les charges", "href": "slide-s7-4.html", "base_xp": 100}, {"quiz_id": "slide::S7-5", "quiz_type": "subpart", "title": "QCM - Lien entre supervision, contacteurs et load distribution", "href": "slide-s7-5.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S3-2", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S3-2-Q1", "prompt": "Quelle affirmation décrit correctement l’alimentation du STATIC INVERTER ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le STATIC INVERTER est alimenté par l’APU GEN.", "is_correct": false, "explanation": "L’APU GEN alimente le réseau AC lorsqu’il est disponible, mais il ne constitue pas l’alimentation du STATIC INVERTER sur la page étudiée."}, {"id": "B", "text": "Le STATIC INVERTER est alimenté par les IDG des moteurs.", "is_correct": false, "explanation": "Les IDG alimentent le AC SYSTEM en fonctionnement normal, tandis que le STATIC INVERTER est présenté comme une solution alimentée par les batteries."}, {"id": "C", "text": "Le STATIC INVERTER est alimenté par l’EMER GEN.", "is_correct": false, "explanation": "L’EMER GEN est un autre moyen d’alimentation de secours, distinct du STATIC INVERTER. Le schéma ne montre pas l’EMER GEN comme source du STATIC INVERTER."}, {"id": "D", "text": "BATTERY 1 et BATTERY 2 alimentent le STATIC INVERTER.", "is_correct": true, "explanation": "Le schéma relie directement BATTERY 1 et BATTERY 2 au STATIC INVERTER. Les batteries constituent donc la source d’alimentation de cet équipement en situation de secours."}, {"id": "E", "text": "Le STATIC INVERTER est alimenté par l’EXTERNAL POWER A & B.", "is_correct": false, "explanation": "L’alimentation externe sert à fournir le AC system au sol, mais elle n’est pas la source du STATIC INVERTER sur le schéma de secours."}], "coverage_label": "Batteries et STATIC INVERTER", "learning_objective": "Identifier la source d’alimentation du STATIC INVERTER dans la chaîne de secours.", "correction_summary": "La bonne affirmation est celle qui relie BATTERY 1 et BATTERY 2 au STATIC INVERTER. Les autres propositions confondent cette chaîne avec les sources AC normales ou externes.", "course_clarification": "Le STATIC INVERTER convertit l’énergie fournie par les batteries pour alimenter une partie du réseau AC. Il intervient quand les sources AC normales ne sont pas disponibles.", "source_refs": []}, {"question_id": "S3-2-Q2", "prompt": "Quelle affirmation est exacte concernant le rôle du STATIC INVERTER ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le STATIC INVERTER fournit tout le réseau AC principal.", "is_correct": false, "explanation": "Le schéma ne lui attribue qu’une partie du réseau AC, pas l’ensemble du AC system. Le réseau principal reste associé aux sources AC normales."}, {"id": "B", "text": "Le STATIC INVERTER peut fournir une partie du AC system.", "is_correct": true, "explanation": "Le texte du support indique explicitement que le STATIC INVERTER peut alimenter une partie du AC system. C’est donc un équipement de secours et non une source de puissance totale."}, {"id": "C", "text": "Le STATIC INVERTER alimente uniquement le DC system.", "is_correct": false, "explanation": "Le rôle décrit est lié au réseau AC, pas au réseau DC. La transformation assurée par l’inverter concerne l’alimentation AC essentielle."}, {"id": "D", "text": "Le STATIC INVERTER ne peut alimenter aucune partie du réseau électrique.", "is_correct": false, "explanation": "Cette phrase contredit directement la fonction indiquée sur le schéma. Le STATIC INVERTER a bien un rôle utile, en particulier pour le réseau AC essentiel."}, {"id": "E", "text": "Le STATIC INVERTER sert uniquement à démarrer l’APU.", "is_correct": false, "explanation": "Aucun élément du schéma ne rattache le STATIC INVERTER au démarrage de l’APU. Sa fonction présentée est l’alimentation d’une partie du réseau AC."}], "coverage_label": "Batteries et STATIC INVERTER", "learning_objective": "Reconnaître la fonction du STATIC INVERTER dans l’architecture électrique AC.", "correction_summary": "Le STATIC INVERTER ne couvre pas tout le réseau AC et ne concerne pas le DC system. Il fournit seulement une partie du AC system en situation dégradée.", "course_clarification": "Un inverter statique convertit une alimentation disponible pour produire de l’AC. Ici, il prend le relais sur une partie du réseau AC lorsque les autres sources ne sont plus disponibles.", "source_refs": []}, {"question_id": "S3-2-Q3", "prompt": "Quelle affirmation correspond au réseau visé par l’alimentation de secours ?", "difficulty": "easy", "options": [{"id": "A", "text": "La partie visée est l’AC Essential electrical system network.", "is_correct": true, "explanation": "Le support nomme explicitement le réseau alimenté dans ce cas : l’AC Essential electrical system network. C’est la partie du réseau AC conservée en mode dégradé."}, {"id": "B", "text": "La partie visée est le DC system.", "is_correct": false, "explanation": "Le texte parle d’un réseau AC essentiel, pas du système DC. Le sigle AC dans l’intitulé est déterminant."}, {"id": "C", "text": "La partie visée est l’AC Main electrical system network.", "is_correct": false, "explanation": "Le schéma distingue le réseau AC général du réseau AC essentiel. L’appellation correcte est bien AC Essential electrical system network."}, {"id": "D", "text": "La partie visée est le réseau d’alimentation externe au sol.", "is_correct": false, "explanation": "L’alimentation externe concerne une autre situation de fonctionnement. Ici, il s’agit de la partie essentielle alimentée par batteries et inverter en secours."}, {"id": "E", "text": "La partie visée est le réseau d’éclairage de piste.", "is_correct": false, "explanation": "Aucun élément du support ne rattache cette architecture à l’éclairage de piste. La cible est un sous-réseau électrique AC essentiel."}], "coverage_label": "AC Essential electrical system network", "learning_objective": "Nommer correctement le réseau AC alimenté en situation dégradée.", "correction_summary": "Le réseau concerné est l’AC Essential electrical system network. Le piège classique consiste à confondre ce réseau essentiel avec le réseau AC général ou avec le DC system.", "course_clarification": "Le réseau AC essentiel regroupe les fonctions prioritaires maintenues quand les sources normales ne sont plus disponibles. Il sert à conserver une alimentation minimale utile au fonctionnement de l’avion.", "source_refs": []}, {"question_id": "S3-2-Q4", "prompt": "Quelle affirmation caractérise la situation d’alimentation par batteries ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’alimentation par batteries correspond à la configuration normale de vol.", "is_correct": false, "explanation": "La configuration normale de vol repose sur les sources AC habituelles, comme les IDG. Les batteries et le STATIC INVERTER apparaissent ici comme solution dégradée."}, {"id": "B", "text": "L’alimentation par batteries est utilisée seulement quand l’EXTERNAL POWER A est disponible.", "is_correct": false, "explanation": "L’EXTERNAL POWER A est une autre source possible, mais elle n’est pas la condition d’emploi du système batteries/inverter. Au contraire, le secours par batteries intervient quand les autres sources manquent."}, {"id": "C", "text": "L’alimentation par batteries remplace exclusivement l’APU GEN en fonctionnement normal.", "is_correct": false, "explanation": "Le texte ne limite pas cette fonction au remplacement de l’APU GEN. Il décrit un cas plus large où aucune autre source AC n’est disponible."}, {"id": "D", "text": "L’alimentation par batteries est une alimentation principale permanente du AC system.", "is_correct": false, "explanation": "Le schéma ne présente pas les batteries comme source principale permanente. Elles alimentent le STATIC INVERTER dans une logique de secours."}, {"id": "E", "text": "L’alimentation par batteries correspond à une situation dégradée.", "is_correct": true, "explanation": "Le support présente cette alimentation comme une solution de secours, utilisée quand les autres sources AC ne sont plus disponibles. Elle correspond donc bien à une situation dégradée."}], "coverage_label": "Situation dégradée", "learning_objective": "Interpréter le statut opérationnel de l’alimentation par batteries.", "correction_summary": "L’alimentation par batteries n’est pas la configuration normale : elle intervient en mode dégradé. Le piège est de la confondre avec une source principale ou avec une simple alimentation externe.", "course_clarification": "Une situation dégradée signifie qu’une solution de secours prend le relais parce que les sources normales ne sont pas disponibles. Ici, les batteries soutiennent le STATIC INVERTER pour maintenir une partie du réseau AC.", "source_refs": []}, {"question_id": "S3-2-Q5", "prompt": "Quelle affirmation est correcte à propos de la disponibilité des autres sources AC ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le static inverter fonctionne seulement quand les IDG, l’APU GEN et l’EXT PWR sont tous disponibles.", "is_correct": false, "explanation": "Le texte indique l’inverse : le STATIC INVERTER est utilisé quand ces autres sources ne sont pas disponibles. Leur disponibilité n’est donc pas la condition d’activation du secours."}, {"id": "B", "text": "L’EMER GEN empêche toujours le static inverter d’alimenter le réseau AC essentiel.", "is_correct": false, "explanation": "Le support ne dit pas cela. Il précise que si aucune autre source AC n’est disponible, le static inverter peut alimenter une partie du réseau AC essentiel."}, {"id": "C", "text": "Si aucune autre source AC n’est disponible, un static inverter alimenté par les batteries peut fournir une partie du AC system.", "is_correct": true, "explanation": "C’est la phrase clé du support : l’absence de IDG, APU GEN, EXT PWR et EMER GEN ouvre la voie à l’alimentation de secours par le STATIC INVERTER alimenté par batteries."}, {"id": "D", "text": "L’EXT PWR A & B est la seule source utilisée en cas de panne des moteurs.", "is_correct": false, "explanation": "L’EXT PWR concerne l’alimentation externe au sol et ne constitue pas la seule solution en cas de perte des moteurs. Le schéma de secours met en avant le STATIC INVERTER alimenté par batteries."}, {"id": "E", "text": "Les batteries alimentent directement les IDG des moteurs.", "is_correct": false, "explanation": "Les IDG sont des générateurs entraînés par les moteurs, pas des récepteurs alimentés par les batteries. La chaîne correcte passe par le STATIC INVERTER."}], "coverage_label": "Logique de secours AC", "learning_objective": "Comprendre la condition de déclenchement de l’alimentation par batteries via le STATIC INVERTER.", "correction_summary": "La bonne réponse combine l’absence des autres sources AC et l’alimentation du STATIC INVERTER par les batteries. Le principal piège est d’inverser la logique : ce n’est pas une alimentation normale mais une solution de dernier recours.", "course_clarification": "Le système de secours intervient quand les sources AC habituelles ne sont plus disponibles. Il permet de maintenir une partie du réseau AC essentiel avec l’énergie fournie par les batteries.", "source_refs": []}], "subpart_id": "S3", "anchor_slide_id": "S3-2", "question_count_target": 5, "title": "QCM - Batteries et STATIC INVERTER"}</script>
   <script>
     (function () {
@@ -2410,6 +2997,21 @@ html[data-embed="1"] .review-card {
         };
       }
 
+      function quizRewardXp(score) {
+        if (window.KOJYTO_GAMIFICATION && typeof window.KOJYTO_GAMIFICATION.quizXp === "function") {
+          return window.KOJYTO_GAMIFICATION.quizXp(quiz.quiz_id, score.percent);
+        }
+        return 0;
+      }
+
+      function markCurrentQuizCompleted() {
+        if (!window.KOJYTO_GAMIFICATION || typeof window.KOJYTO_GAMIFICATION.markQuizCompleted !== "function") {
+          return;
+        }
+        const score = scoreQuiz();
+        window.KOJYTO_GAMIFICATION.markQuizCompleted(quiz.quiz_id, score.percent);
+      }
+
       function escapeHtml(value) {
         return String(value)
           .replace(/&/g, "&amp;")
@@ -2586,6 +3188,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2622,6 +3225,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2636,11 +3240,13 @@ html[data-embed="1"] .review-card {
       function render() {
         syncFinalQuizHero();
         if (quiz.quiz_type === "subpart" && state.finished) {
+          markCurrentQuizCompleted();
           renderSubpartSummary();
           queueMathJax();
           return;
         }
         if (quiz.quiz_type === "final" && state.submitted) {
+          markCurrentQuizCompleted();
           renderFinalSummary();
           queueMathJax();
           return;

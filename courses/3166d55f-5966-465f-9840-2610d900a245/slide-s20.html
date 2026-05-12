@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1606,9 +1699,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide" href="s1.html">
+        <a
+          class="sidebar-slide"
+          href="s1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1</strong>
           <span>Introduction à la cinématique</span>
           
@@ -1616,7 +1729,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1"
+        >
           <strong>QCM S1</strong>
           <span>QCM - Introduction à la cinématique</span>
           
@@ -1624,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2.html">
+        <a
+          class="sidebar-slide"
+          href="s2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2</strong>
           <span>Système, point matériel et référentiel</span>
           
@@ -1632,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2"
+        >
           <strong>QCM S2</strong>
           <span>QCM - Système, point matériel et référentiel</span>
           
@@ -1640,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3.html">
+        <a
+          class="sidebar-slide"
+          href="s3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3</strong>
           <span>Trajectoire et position</span>
           
@@ -1648,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3"
+        >
           <strong>QCM S3</strong>
           <span>QCM - Trajectoire et position</span>
           
@@ -1656,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4.html">
+        <a
+          class="sidebar-slide"
+          href="s4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4</strong>
           <span>Vitesse instantanée</span>
           
@@ -1664,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4"
+        >
           <strong>QCM S4</strong>
           <span>QCM - Vitesse instantanée</span>
           
@@ -1672,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5.html">
+        <a
+          class="sidebar-slide"
+          href="s5.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5</strong>
           <span>Vitesse moyenne et mesures de vitesse</span>
           
@@ -1680,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5"
+        >
           <strong>QCM S5</strong>
           <span>QCM - Vitesse moyenne et mesures de vitesse</span>
           
@@ -1688,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6.html">
+        <a
+          class="sidebar-slide"
+          href="s6.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6</strong>
           <span>Accélération : définition et unité</span>
           
@@ -1696,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6"
+        >
           <strong>QCM S6</strong>
           <span>QCM - Accélération : définition et unité</span>
           
@@ -1704,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7.html">
+        <a
+          class="sidebar-slide"
+          href="s7.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7</strong>
           <span>Accélération tangentielle et normale</span>
           
@@ -1712,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7"
+        >
           <strong>QCM S7</strong>
           <span>QCM - Accélération tangentielle et normale</span>
           
@@ -1720,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8.html">
+        <a
+          class="sidebar-slide"
+          href="s8.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S8</strong>
           <span>MRU : vitesse constante et loi horaire linéaire</span>
           
@@ -1728,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S8"
+        >
           <strong>QCM S8</strong>
           <span>QCM - Mouvement rectiligne uniforme (MRU)</span>
           
@@ -1736,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9.html">
+        <a
+          class="sidebar-slide"
+          href="s9.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9</strong>
           <span>Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
@@ -1744,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9"
+        >
           <strong>QCM S9</strong>
           <span>QCM - Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
@@ -1752,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10.html">
+        <a
+          class="sidebar-slide"
+          href="s10.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10</strong>
           <span>Mouvement circulaire uniforme (MCU)</span>
           
@@ -1760,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10"
+        >
           <strong>QCM S10</strong>
           <span>QCM - Mouvement circulaire uniforme (MCU)</span>
           
@@ -1768,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11.html">
+        <a
+          class="sidebar-slide"
+          href="s11.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11</strong>
           <span>Mouvement circulaire accéléré</span>
           
@@ -1776,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11"
+        >
           <strong>QCM S11</strong>
           <span>QCM - Mouvement circulaire accéléré</span>
           
@@ -1784,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s12.html">
+        <a
+          class="sidebar-slide"
+          href="s12.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S12</strong>
           <span>Équations horaires et trajectoires</span>
           
@@ -1792,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s12.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s12.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S12"
+        >
           <strong>QCM S12</strong>
           <span>QCM - Équations horaires et trajectoires</span>
           
@@ -1800,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s13.html">
+        <a
+          class="sidebar-slide"
+          href="s13.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S13</strong>
           <span>Grandeurs angulaires et linéaires</span>
           
@@ -1808,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s13.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s13.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S13"
+        >
           <strong>QCM S13</strong>
           <span>QCM - Grandeurs angulaires et linéaires</span>
           
@@ -1816,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s14.html">
+        <a
+          class="sidebar-slide"
+          href="s14.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S14</strong>
           <span>Méthodes graphiques et expérimentales</span>
           
@@ -1824,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s14.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s14.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S14"
+        >
           <strong>QCM S14</strong>
           <span>QCM - Méthodes graphiques et expérimentales</span>
           
@@ -1832,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s15.html">
+        <a
+          class="sidebar-slide"
+          href="s15.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S15</strong>
           <span>Étude de cas – Mouvement circulaire d’une hélice</span>
           
@@ -1840,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s15.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s15.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S15"
+        >
           <strong>QCM S15</strong>
           <span>QCM - Étude de cas – Mouvement circulaire d’une hélice</span>
           
@@ -1848,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s16.html">
+        <a
+          class="sidebar-slide"
+          href="s16.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S16</strong>
           <span>Approche numérique avec Python</span>
           
@@ -1856,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s16.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s16.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S16"
+        >
           <strong>QCM S16</strong>
           <span>QCM - Approche numérique avec Python</span>
           
@@ -1864,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s17.html">
+        <a
+          class="sidebar-slide"
+          href="s17.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S17</strong>
           <span>Applications aéronautiques typiques</span>
           
@@ -1872,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s17.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s17.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S17"
+        >
           <strong>QCM S17</strong>
           <span>QCM - Applications aéronautiques typiques</span>
           
@@ -1880,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s18.html">
+        <a
+          class="sidebar-slide"
+          href="s18.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S18</strong>
           <span>Formulaire récapitulatif</span>
           
@@ -1888,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s18.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s18.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S18"
+        >
           <strong>QCM S18</strong>
           <span>QCM - Formulaire récapitulatif</span>
           
@@ -1896,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s19.html">
+        <a
+          class="sidebar-slide"
+          href="s19.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S19</strong>
           <span>Erreurs fréquentes à éviter</span>
           
@@ -1904,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s19.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s19.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S19"
+        >
           <strong>QCM S19</strong>
           <span>QCM - Erreurs fréquentes à éviter</span>
           
@@ -1912,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s20.html">
+        <a
+          class="sidebar-slide"
+          href="s20.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S20</strong>
           <span>Conclusion</span>
           
@@ -1920,7 +2223,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide active" href="slide-s20.html">
+        <a
+          class="sidebar-slide active"
+          href="slide-s20.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S20"
+        >
           <strong>QCM S20</strong>
           <span>QCM - Conclusion</span>
           
@@ -1928,7 +2236,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)</span>
           
@@ -2046,6 +2359,180 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-0b23328d2d4c", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "QCM - Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "QCM - Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "QCM - Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "QCM - Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "QCM - Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "QCM - Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "QCM - Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "QCM - Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "QCM - Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "QCM - Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "QCM - Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "QCM - Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "QCM - Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "QCM - Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "QCM - Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "QCM - Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S20", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S20-Q1", "prompt": "Quelle affirmation décrit correctement le rôle de la cinématique en aéronautique ?", "difficulty": "easy", "options": [{"id": "A", "text": "La cinématique sert d’abord à calculer directement les forces exercées sur un système.", "is_correct": false, "explanation": "Faux : le calcul des forces relève de la dynamique, pas de la cinématique."}, {"id": "B", "text": "La cinématique n’a aucun lien avec l’analyse des mouvements des systèmes aéronautiques.", "is_correct": false, "explanation": "Faux : elle est justement utilisée pour décrire les mouvements dans l’aéronautique."}, {"id": "C", "text": "La cinématique remplace l’étude des équations de mouvement dans les problèmes techniques.", "is_correct": false, "explanation": "Faux : les équations restent indispensables pour modéliser, calculer et interpréter un mouvement."}, {"id": "D", "text": "La cinématique sert à décrire les mouvements avant l’étude des forces qui les provoquent.", "is_correct": true, "explanation": "Vrai : la cinématique s’intéresse au mouvement lui-même, sans analyser les causes mécaniques. C’est précisément ce qui en fait une base pour les étapes suivantes comme la dynamique."}, {"id": "E", "text": "La cinématique se limite aux systèmes immobiles.", "is_correct": false, "explanation": "Faux : elle concerne les systèmes en mouvement, pas les objets au repos."}], "coverage_label": "Rôle de la cinématique", "learning_objective": "Identifier la fonction de la cinématique dans l’analyse des mouvements aéronautiques.", "correction_summary": "La bonne réponse distingue bien le mouvement de ses causes. L’erreur fréquente consiste à confondre cinématique et dynamique : la première décrit, la seconde explique les forces. En aéronautique, cette distinction est essentielle pour passer d’une observation du mouvement à une modélisation exploitable.", "course_clarification": "La cinématique décrit position, vitesse et accélération. Elle ne traite pas des forces ; elle fournit la description du mouvement sur laquelle s’appuient la dynamique, la mécanique du vol et la simulation.", "source_refs": []}, {"question_id": "S20-Q2", "prompt": "Quelle affirmation correspond à la place de la cinématique dans les applications aéronautiques ?", "difficulty": "easy", "options": [{"id": "A", "text": "La cinématique n’intervient pas dans les simulations numériques.", "is_correct": false, "explanation": "Faux : elle alimente au contraire les simulations en fournissant les grandeurs de mouvement à modéliser."}, {"id": "B", "text": "La cinématique constitue une base pour la dynamique, la mécanique du vol et les simulations numériques.", "is_correct": true, "explanation": "Vrai : la conclusion relie explicitement la cinématique à ces trois prolongements. Le mouvement décrit par la cinématique sert ensuite aux modèles dynamiques et aux outils de simulation."}, {"id": "C", "text": "La cinématique remplace la mécanique du vol dans l’analyse d’un aéronef.", "is_correct": false, "explanation": "Faux : la mécanique du vol utilise la cinématique comme base, mais ne s’y réduit pas."}, {"id": "D", "text": "La cinématique est inutile pour étudier un système réel en mouvement.", "is_correct": false, "explanation": "Faux : elle sert précisément à analyser les mouvements réels et à les prévoir."}, {"id": "E", "text": "La cinématique ne concerne que les calculs de statique.", "is_correct": false, "explanation": "Faux : la statique traite des systèmes à l’équilibre, alors que la cinématique décrit le mouvement."}], "coverage_label": "Applications de la cinématique", "learning_objective": "Relier la cinématique aux outils d’analyse et de simulation aéronautiques.", "correction_summary": "Il faut reconnaître que la cinématique n’est pas une fin en soi : elle sert de socle aux modèles plus complets. La confusion fréquente est de croire que la simulation numérique se substitue à la cinématique, alors qu’elle l’utilise comme point de départ pour représenter le mouvement.", "course_clarification": "En aéronautique, la cinématique fournit les grandeurs de mouvement nécessaires aux modèles de dynamique, de mécanique du vol et de simulation numérique. Elle aide à passer de la description du mouvement à son exploitation technique.", "source_refs": []}, {"question_id": "S20-Q3", "prompt": "Quelle affirmation résume correctement l’intérêt des compétences acquises en cinématique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elles permettent d’analyser et de prévoir le comportement de systèmes réels.", "is_correct": true, "explanation": "Vrai : la conclusion insiste sur l’usage opérationnel des compétences acquises pour comprendre et anticiper le comportement de systèmes réels."}, {"id": "B", "text": "Elles servent uniquement à mémoriser des définitions sans application technique.", "is_correct": false, "explanation": "Faux : la cinématique a un objectif pratique d’analyse et de prévision, pas seulement de mémorisation."}, {"id": "C", "text": "Elles ne sont utiles que pour des exemples idéalisés sans rapport avec l’aéronautique.", "is_correct": false, "explanation": "Faux : elles s’appliquent aux systèmes réels rencontrés en aéronautique."}, {"id": "D", "text": "Elles dispensent d’interpréter physiquement les résultats obtenus.", "is_correct": false, "explanation": "Faux : l’interprétation physique est indispensable pour exploiter correctement les calculs."}, {"id": "E", "text": "Elles rendent inutile la modélisation du mouvement.", "is_correct": false, "explanation": "Faux : l’analyse de systèmes réels passe justement par la modélisation du mouvement."}], "coverage_label": "Analyse et prévision des systèmes réels", "learning_objective": "Comprendre que la cinématique sert à analyser et à prévoir le comportement de systèmes réels.", "correction_summary": "La réponse correcte relie directement les calculs à leur usage technique. Une confusion classique consiste à croire qu’un résultat numérique suffit ; en réalité, il faut aussi savoir ce qu’il représente physiquement pour interpréter un système réel et anticiper son évolution.", "course_clarification": "Les grandeurs cinématiques ne sont pas seulement théoriques : elles servent à comprendre un mouvement mesuré, à comparer un modèle à une situation réelle et à prévoir l’évolution d’un système technique.", "source_refs": []}, {"question_id": "S20-Q4", "prompt": "Quelle affirmation est conforme à la conclusion sur les compétences attendues ?", "difficulty": "easy", "options": [{"id": "A", "text": "La maîtrise des équations est inutile si l’on connaît seulement les noms des grandeurs.", "is_correct": false, "explanation": "Faux : connaître les grandeurs sans savoir les utiliser ne permet pas de résoudre un problème technique."}, {"id": "B", "text": "L’interprétation physique des équations est secondaire par rapport à la manipulation des unités.", "is_correct": false, "explanation": "Faux : les unités sont importantes, mais l’interprétation physique reste essentielle pour comprendre le résultat."}, {"id": "C", "text": "Un technicien aéronautique peut se passer des équations de mouvement dans l’analyse d’un système.", "is_correct": false, "explanation": "Faux : les équations de mouvement sont indispensables pour calculer et vérifier le comportement d’un système."}, {"id": "D", "text": "La maîtrise des équations ne concerne que les calculs abstraits sans lien avec les systèmes réels.", "is_correct": false, "explanation": "Faux : la conclusion relie explicitement les équations à l’étude de systèmes réels."}, {"id": "E", "text": "La maîtrise des équations et de leurs interprétations physiques est indispensable au technicien aéronautique.", "is_correct": true, "explanation": "Vrai : la conclusion insiste sur le lien entre calcul, signification physique et pratique professionnelle."}], "coverage_label": "Maîtrise des équations et interprétation physique", "learning_objective": "Reconnaître l’importance des équations et de leur interprétation physique en aéronautique.", "correction_summary": "La bonne réponse rappelle qu’un calcul n’a de valeur technique que s’il est compris physiquement. L’erreur fréquente est de séparer la formule de son sens : en aéronautique, il faut à la fois savoir calculer et savoir interpréter pour agir sur un système réel.", "course_clarification": "Une équation de cinématique donne une relation mathématique entre des grandeurs de mouvement. Son usage correct exige de vérifier les unités, le contexte et la signification physique du résultat obtenu.", "source_refs": []}], "subpart_id": "15", "anchor_slide_id": "S20", "question_count_target": 4, "title": "QCM - Conclusion"}</script>
   <script>
     (function () {
@@ -2250,6 +2737,21 @@ html[data-embed="1"] .review-card {
         };
       }
 
+      function quizRewardXp(score) {
+        if (window.KOJYTO_GAMIFICATION && typeof window.KOJYTO_GAMIFICATION.quizXp === "function") {
+          return window.KOJYTO_GAMIFICATION.quizXp(quiz.quiz_id, score.percent);
+        }
+        return 0;
+      }
+
+      function markCurrentQuizCompleted() {
+        if (!window.KOJYTO_GAMIFICATION || typeof window.KOJYTO_GAMIFICATION.markQuizCompleted !== "function") {
+          return;
+        }
+        const score = scoreQuiz();
+        window.KOJYTO_GAMIFICATION.markQuizCompleted(quiz.quiz_id, score.percent);
+      }
+
       function escapeHtml(value) {
         return String(value)
           .replace(/&/g, "&amp;")
@@ -2426,6 +2928,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2462,6 +2965,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2476,11 +2980,13 @@ html[data-embed="1"] .review-card {
       function render() {
         syncFinalQuizHero();
         if (quiz.quiz_type === "subpart" && state.finished) {
+          markCurrentQuizCompleted();
           renderSubpartSummary();
           queueMathJax();
           return;
         }
         if (quiz.quiz_type === "final" && state.submitted) {
+          markCurrentQuizCompleted();
           renderFinalSummary();
           queueMathJax();
           return;

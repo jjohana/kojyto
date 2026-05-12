@@ -236,6 +236,34 @@ html[data-embed="1"] body::after {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+.sidebar-slide.quiz-completed {
+  border-color: rgba(45, 143, 114, 0.34);
+  background: rgba(230, 247, 239, 0.88);
+}
+
+.sidebar-slide.quiz-completed.active {
+  background: linear-gradient(135deg, rgba(31, 107, 84, 0.96), rgba(45, 143, 114, 0.86));
+  color: #f6fbff;
+}
+
+.sidebar-slide.quiz-completed::after {
+  content: "Termine";
+  display: inline-flex;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45, 143, 114, 0.14);
+  color: #1f6b54;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.sidebar-slide.quiz-completed.active::after {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6fbff;
+}
+
 .sidebar-slide strong {
   font-size: 0.96rem;
 }
@@ -245,6 +273,71 @@ html[data-embed="1"] body::after {
   line-height: 1.45;
   color: inherit;
   opacity: 0.88;
+}
+
+.gamification-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
+}
+
+.gamification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.gamification-header span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(217, 133, 36, 0.12);
+  color: #7b4b11;
+  font-size: 0.84rem;
+}
+
+.gamification-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(20, 37, 58, 0.1);
+  overflow: hidden;
+}
+
+.gamification-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+  transition: width 240ms ease;
+}
+
+.gamification-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 10px;
+}
+
+.gamification-stats span {
+  display: grid;
+  gap: 2px;
+}
+
+.gamification-stats strong {
+  color: var(--accent-strong);
+}
+
+.gamification-stats small,
+.gamification-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .site-main {
@@ -1606,9 +1699,29 @@ html[data-embed="1"] .review-card {
         
         
       </nav>
+      
+      <section class="gamification-panel" data-gamification-widget>
+        <div class="gamification-header">
+          <strong>Progression QCM</strong>
+          <span data-gamification-medal>Aucune medaille</span>
+        </div>
+        <div class="gamification-bar"><span data-gamification-bar></span></div>
+        <div class="gamification-stats">
+          <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
+          <span><strong data-gamification-count>0/0 QCM</strong><small>termines</small></span>
+          <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
+        </div>
+        <p data-gamification-next>Prochaine: Bronze</p>
+      </section>
+      
       <div class="sidebar-list">
         
-        <a class="sidebar-slide" href="s1-1.html">
+        <a
+          class="sidebar-slide"
+          href="s1-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-1</strong>
           <span>Origine de la poussée : terme réacteur</span>
           
@@ -1616,7 +1729,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-1"
+        >
           <strong>QCM S1-1</strong>
           <span>QCM - Origine de la poussée : terme réacteur</span>
           
@@ -1624,7 +1742,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s1-2.html">
+        <a
+          class="sidebar-slide"
+          href="s1-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-2</strong>
           <span>Exemple numérique et architecture double flux</span>
           
@@ -1632,7 +1755,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-2"
+        >
           <strong>QCM S1-2</strong>
           <span>QCM - Exemple numérique et architecture double flux</span>
           
@@ -1640,7 +1768,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s1-3.html">
+        <a
+          class="sidebar-slide"
+          href="s1-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S1-3</strong>
           <span>Tuyère, poussée brute et poussée spécifique</span>
           
@@ -1648,7 +1781,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s1-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s1-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S1-3"
+        >
           <strong>QCM S1-3</strong>
           <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
           
@@ -1656,7 +1794,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2-1.html">
+        <a
+          class="sidebar-slide"
+          href="s2-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
           
@@ -1664,7 +1807,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2-1"
+        >
           <strong>QCM S2-1</strong>
           <span>QCM - Consommation horaire et consommation spécifique</span>
           
@@ -1672,7 +1820,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s2-2.html">
+        <a
+          class="sidebar-slide"
+          href="s2-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S2-2</strong>
           <span>Repères de consommation et surveillance moteur</span>
           
@@ -1680,7 +1833,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s2-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s2-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S2-2"
+        >
           <strong>QCM S2-2</strong>
           <span>QCM - Repères de consommation et surveillance moteur</span>
           
@@ -1688,7 +1846,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-1.html">
+        <a
+          class="sidebar-slide"
+          href="s3-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-1</strong>
           <span>Puissance calorifique et puissance thermique théorique</span>
           
@@ -1696,7 +1859,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-1"
+        >
           <strong>QCM S3-1</strong>
           <span>QCM - Puissance calorifique et puissance thermique théorique</span>
           
@@ -1704,7 +1872,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-2.html">
+        <a
+          class="sidebar-slide"
+          href="s3-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-2</strong>
           <span>Puissance thermique réelle et puissance propulsive</span>
           
@@ -1712,7 +1885,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-2"
+        >
           <strong>QCM S3-2</strong>
           <span>QCM - Puissance thermique réelle et puissance propulsive</span>
           
@@ -1720,7 +1898,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-3.html">
+        <a
+          class="sidebar-slide"
+          href="s3-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-3</strong>
           <span>Rendements de la chaîne propulsive</span>
           
@@ -1728,7 +1911,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-3"
+        >
           <strong>QCM S3-3</strong>
           <span>QCM - Rendements de la chaîne propulsive</span>
           
@@ -1736,7 +1924,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s3-4.html">
+        <a
+          class="sidebar-slide"
+          href="s3-4.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S3-4</strong>
           <span>Lecture du diagramme d’écoulement des gaz</span>
           
@@ -1744,7 +1937,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s3-4.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s3-4.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S3-4"
+        >
           <strong>QCM S3-4</strong>
           <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
           
@@ -1752,7 +1950,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-1.html">
+        <a
+          class="sidebar-slide"
+          href="s4-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-1</strong>
           <span>Taux de dilution et familles de moteurs</span>
           
@@ -1760,7 +1963,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-1"
+        >
           <strong>QCM S4-1</strong>
           <span>QCM - Taux de dilution et exemples de moteurs</span>
           
@@ -1768,7 +1976,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s4-2.html">
+        <a
+          class="sidebar-slide"
+          href="s4-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S4-2</strong>
           <span>Principe du turbopropulseur</span>
           
@@ -1776,7 +1989,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s4-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s4-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S4-2"
+        >
           <strong>QCM S4-2</strong>
           <span>QCM - Principe du turbopropulseur</span>
           
@@ -1784,7 +2002,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-1.html">
+        <a
+          class="sidebar-slide"
+          href="s5-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-1</strong>
           <span>Canal d’éjection et rôle de la tuyère</span>
           
@@ -1792,7 +2015,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-1"
+        >
           <strong>QCM S5-1</strong>
           <span>QCM - Canal d’éjection et rôle de la tuyère</span>
           
@@ -1800,7 +2028,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-2.html">
+        <a
+          class="sidebar-slide"
+          href="s5-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-2</strong>
           <span>Tuyères variables, double flux et adaptation au vol</span>
           
@@ -1808,7 +2041,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-2"
+        >
           <strong>QCM S5-2</strong>
           <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
           
@@ -1816,7 +2054,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s5-3.html">
+        <a
+          class="sidebar-slide"
+          href="s5-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S5-3</strong>
           <span>Tuyère convergente, rapport critique et supersonique</span>
           
@@ -1824,7 +2067,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s5-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s5-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S5-3"
+        >
           <strong>QCM S5-3</strong>
           <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
           
@@ -1832,7 +2080,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s6-1.html">
+        <a
+          class="sidebar-slide"
+          href="s6-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S6-1</strong>
           <span>Post-combustion et bruit de tuyère</span>
           
@@ -1840,7 +2093,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s6-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s6-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S6-1"
+        >
           <strong>QCM S6-1</strong>
           <span>QCM - Post-combustion et bruit de tuyère</span>
           
@@ -1848,7 +2106,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-1.html">
+        <a
+          class="sidebar-slide"
+          href="s7-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-1</strong>
           <span>But et formule de la poussée inverse</span>
           
@@ -1856,7 +2119,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-1"
+        >
           <strong>QCM S7-1</strong>
           <span>QCM - But et formule de la poussée inverse</span>
           
@@ -1864,7 +2132,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-2.html">
+        <a
+          class="sidebar-slide"
+          href="s7-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-2</strong>
           <span>Poussée inverse : efficacité, limites et choix des flux</span>
           
@@ -1872,7 +2145,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-2"
+        >
           <strong>QCM S7-2</strong>
           <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
           
@@ -1880,7 +2158,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s7-3.html">
+        <a
+          class="sidebar-slide"
+          href="s7-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S7-3</strong>
           <span>Calcul et interprétation de la poussée inverse</span>
           
@@ -1888,7 +2171,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s7-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s7-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S7-3"
+        >
           <strong>QCM S7-3</strong>
           <span>QCM - Calcul et interprétation de la poussée inverse</span>
           
@@ -1896,7 +2184,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8-1.html">
+        <a
+          class="sidebar-slide"
+          href="s8-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S8-1</strong>
           <span>Commandes, sécurités et limitations de l’inverseur</span>
           
@@ -1904,7 +2197,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S8-1"
+        >
           <strong>QCM S8-1</strong>
           <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
           
@@ -1912,7 +2210,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s8-2.html">
+        <a
+          class="sidebar-slide"
+          href="s8-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S8-2</strong>
           <span>Inverseur pneumatique : organes et séquence</span>
           
@@ -1920,7 +2223,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s8-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s8-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S8-2"
+        >
           <strong>QCM S8-2</strong>
           <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
           
@@ -1928,7 +2236,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9-1.html">
+        <a
+          class="sidebar-slide"
+          href="s9-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9-1</strong>
           <span>Rôle et fonctions du train d’atterrissage</span>
           
@@ -1936,7 +2249,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9-1"
+        >
           <strong>QCM S9-1</strong>
           <span>QCM - Rôle et fonctions du train d’atterrissage</span>
           
@@ -1944,7 +2262,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9-2.html">
+        <a
+          class="sidebar-slide"
+          href="s9-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9-2</strong>
           <span>Types de trains et composition</span>
           
@@ -1952,7 +2275,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9-2"
+        >
           <strong>QCM S9-2</strong>
           <span>QCM - Types de trains et composition</span>
           
@@ -1960,7 +2288,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s9-3.html">
+        <a
+          class="sidebar-slide"
+          href="s9-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S9-3</strong>
           <span>Géométrie des trains et dispositions des atterrisseurs</span>
           
@@ -1968,7 +2301,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s9-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s9-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S9-3"
+        >
           <strong>QCM S9-3</strong>
           <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
           
@@ -1976,7 +2314,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10-1.html">
+        <a
+          class="sidebar-slide"
+          href="s10-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10-1</strong>
           <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
@@ -1984,7 +2327,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide active" href="slide-s10-1.html">
+        <a
+          class="sidebar-slide active"
+          href="slide-s10-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10-1"
+        >
           <strong>QCM S10-1</strong>
           <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
           
@@ -1992,7 +2340,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10-2.html">
+        <a
+          class="sidebar-slide"
+          href="s10-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10-2</strong>
           <span>Fonctionnement en trois temps de l’amortisseur</span>
           
@@ -2000,7 +2353,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10-2"
+        >
           <strong>QCM S10-2</strong>
           <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
           
@@ -2008,7 +2366,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s10-3.html">
+        <a
+          class="sidebar-slide"
+          href="s10-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S10-3</strong>
           <span>États du train, verrouillages et sécurités</span>
           
@@ -2016,7 +2379,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s10-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s10-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S10-3"
+        >
           <strong>QCM S10-3</strong>
           <span>QCM - Rentrée-sortie, verrouillage et secours</span>
           
@@ -2024,7 +2392,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11-1.html">
+        <a
+          class="sidebar-slide"
+          href="s11-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11-1</strong>
           <span>Voyants, roues et pneumatiques</span>
           
@@ -2032,7 +2405,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11-1"
+        >
           <strong>QCM S11-1</strong>
           <span>QCM - Voyants, roues et pneumatiques</span>
           
@@ -2040,7 +2418,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11-2.html">
+        <a
+          class="sidebar-slide"
+          href="s11-2.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11-2</strong>
           <span>Freinage, adhérence et systèmes de protection</span>
           
@@ -2048,7 +2431,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11-2.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11-2.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11-2"
+        >
           <strong>QCM S11-2</strong>
           <span>QCM - Freinage, adhérence et systèmes de protection</span>
           
@@ -2056,7 +2444,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s11-3.html">
+        <a
+          class="sidebar-slide"
+          href="s11-3.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S11-3</strong>
           <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
           
@@ -2064,7 +2457,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s11-3.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s11-3.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S11-3"
+        >
           <strong>QCM S11-3</strong>
           <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
           
@@ -2072,7 +2470,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="s12-1.html">
+        <a
+          class="sidebar-slide"
+          href="s12-1.html"
+          data-page-kind="slide"
+          
+        >
           <strong>S12-1</strong>
           <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
           
@@ -2080,7 +2483,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="slide-s12-1.html">
+        <a
+          class="sidebar-slide"
+          href="slide-s12-1.html"
+          data-page-kind="quiz"
+          data-quiz-id="slide::S12-1"
+        >
           <strong>QCM S12-1</strong>
           <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
           
@@ -2088,7 +2496,12 @@ html[data-embed="1"] .review-card {
           
         </a>
         
-        <a class="sidebar-slide" href="final-validation.html">
+        <a
+          class="sidebar-slide"
+          href="final-validation.html"
+          data-page-kind="quiz"
+          data-quiz-id="final::validation"
+        >
           <strong>Validation finale</strong>
           <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
           
@@ -2206,6 +2619,180 @@ html[data-embed="1"] .review-card {
     </main>
   </div>
 
+  
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::17-4b117e5af5a9", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "QCM - Origine de la poussée : terme réacteur", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "QCM - Exemple numérique et architecture double flux", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "QCM - Tuyère, poussée brute et poussée spécifique", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "QCM - Consommation horaire et consommation spécifique", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "QCM - Repères de consommation et surveillance moteur", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "QCM - Puissance calorifique et puissance thermique théorique", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "QCM - Puissance thermique réelle et puissance propulsive", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "QCM - Rendements de la chaîne propulsive", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "QCM - Lecture du diagramme d’écoulement des gaz", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "QCM - Taux de dilution et exemples de moteurs", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "QCM - Principe du turbopropulseur", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "QCM - Canal d’éjection et rôle de la tuyère", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "QCM - Tuyères variables, double flux et adaptation au vol", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "QCM - Tuyère convergente, rapport critique et supersonique", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "QCM - Post-combustion et bruit de tuyère", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "QCM - But et formule de la poussée inverse", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "QCM - Poussée inverse en double flux et ordres de grandeur", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "QCM - Calcul et interprétation de la poussée inverse", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S8-1", "quiz_type": "subpart", "title": "QCM - Commandes, sécurités et limitations de l’inverseur", "href": "slide-s8-1.html", "base_xp": 100}, {"quiz_id": "slide::S8-2", "quiz_type": "subpart", "title": "QCM - Dispositif pneumatique et séquence de fonctionnement", "href": "slide-s8-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-1", "quiz_type": "subpart", "title": "QCM - Rôle et fonctions du train d’atterrissage", "href": "slide-s9-1.html", "base_xp": 100}, {"quiz_id": "slide::S9-2", "quiz_type": "subpart", "title": "QCM - Types de trains et composition", "href": "slide-s9-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-3", "quiz_type": "subpart", "title": "QCM - Géométrie des trains et dispositions des atterrisseurs", "href": "slide-s9-3.html", "base_xp": 100}, {"quiz_id": "slide::S10-1", "quiz_type": "subpart", "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe", "href": "slide-s10-1.html", "base_xp": 100}, {"quiz_id": "slide::S10-2", "quiz_type": "subpart", "title": "QCM - Fonctionnement en trois temps de l’amortisseur", "href": "slide-s10-2.html", "base_xp": 100}, {"quiz_id": "slide::S10-3", "quiz_type": "subpart", "title": "QCM - Rentrée-sortie, verrouillage et secours", "href": "slide-s10-3.html", "base_xp": 100}, {"quiz_id": "slide::S11-1", "quiz_type": "subpart", "title": "QCM - Voyants, roues et pneumatiques", "href": "slide-s11-1.html", "base_xp": 100}, {"quiz_id": "slide::S11-2", "quiz_type": "subpart", "title": "QCM - Freinage, adhérence et systèmes de protection", "href": "slide-s11-2.html", "base_xp": 100}, {"quiz_id": "slide::S11-3", "quiz_type": "subpart", "title": "QCM - Anti-patinage, pneus, dirigibilité et surveillance", "href": "slide-s11-3.html", "base_xp": 100}, {"quiz_id": "slide::S12-1", "quiz_type": "subpart", "title": "QCM - QCM d’entraînement : notions clés des atterrisseurs", "href": "slide-s12-1.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script>
+(function () {
+  const dataElement = document.getElementById("gamification-data");
+  if (!dataElement) {
+    return;
+  }
+  let config = {};
+  try {
+    config = JSON.parse(dataElement.textContent || "{}");
+  } catch (error) {
+    return;
+  }
+  const quizzes = Array.isArray(config.quizzes) ? config.quizzes : [];
+  const rules = config.rules || {};
+  const storageKey = config.storage_key || "kojyto:gamification";
+  const levelXp = Number(rules.level_xp || 500);
+  const bonuses = Array.isArray(rules.score_bonuses) ? rules.score_bonuses : [];
+  const medals = Array.isArray(rules.medals) ? rules.medals : [];
+
+  function loadState() {
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      if (!parsed || typeof parsed !== "object") {
+        return { completed: {} };
+      }
+      if (!parsed.completed || typeof parsed.completed !== "object") {
+        parsed.completed = {};
+      }
+      return parsed;
+    } catch (error) {
+      return { completed: {} };
+    }
+  }
+
+  function saveState(state) {
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (error) {
+      // localStorage may be disabled; the quiz still works without persisted rewards.
+    }
+  }
+
+  function scoreBonusXp(score) {
+    const value = Number(score);
+    if (!Number.isFinite(value)) {
+      return 0;
+    }
+    return bonuses.reduce(function (total, bonus) {
+      const threshold = Number(bonus.threshold || 0);
+      const xp = Number(bonus.xp || 0);
+      return value >= threshold ? total + xp : total;
+    }, 0);
+  }
+
+  function quizById(quizId) {
+    return quizzes.find(function (quiz) {
+      return quiz.quiz_id === quizId;
+    });
+  }
+
+  function quizXp(quiz, score) {
+    return Number(quiz && quiz.base_xp ? quiz.base_xp : 0) + scoreBonusXp(score);
+  }
+
+  function summarize(state) {
+    const completed = state.completed || {};
+    let completedCount = 0;
+    let xp = 0;
+    quizzes.forEach(function (quiz) {
+      const record = completed[quiz.quiz_id];
+      if (!record) {
+        return;
+      }
+      completedCount += 1;
+      xp += quizXp(quiz, Number(record.best_score || record.score || 0));
+    });
+    const total = quizzes.length;
+    const percent = total ? Math.round((completedCount / total) * 100) : 0;
+    const level = 1 + Math.floor(Math.max(0, xp) / levelXp);
+    let currentMedal = { label: "Aucune medaille", threshold_percent: 0 };
+    let nextMedal = null;
+    medals.forEach(function (medal) {
+      const threshold = Number(medal.threshold_percent || 0);
+      if (percent >= threshold) {
+        currentMedal = medal;
+      } else if (!nextMedal) {
+        nextMedal = medal;
+      }
+    });
+    return {
+      completed: completed,
+      completedCount: completedCount,
+      total: total,
+      percent: percent,
+      xp: xp,
+      level: level,
+      currentMedal: currentMedal,
+      nextMedal: nextMedal,
+    };
+  }
+
+  function setText(selector, value) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.textContent = value;
+    });
+  }
+
+  function renderGamification() {
+    const summary = summarize(loadState());
+    setText("[data-gamification-percent]", summary.percent + "%");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-xp]", summary.xp + " XP");
+    setText("[data-gamification-level]", "Niveau " + summary.level);
+    setText("[data-gamification-medal]", summary.currentMedal.label || "Aucune medaille");
+    setText(
+      "[data-gamification-next]",
+      summary.nextMedal ? "Prochaine: " + summary.nextMedal.label : "Parcours complet"
+    );
+    document.querySelectorAll("[data-gamification-bar]").forEach(function (element) {
+      element.style.width = summary.percent + "%";
+    });
+    document.querySelectorAll("[data-quiz-id]").forEach(function (element) {
+      const quizId = element.getAttribute("data-quiz-id");
+      const done = !!summary.completed[quizId];
+      element.classList.toggle("quiz-completed", done);
+      element.setAttribute("data-quiz-completed", done ? "1" : "0");
+    });
+    return summary;
+  }
+
+  function markQuizCompleted(quizId, score) {
+    const quiz = quizById(quizId);
+    if (!quiz) {
+      return renderGamification();
+    }
+    const numericScore = Number(score || 0);
+    const state = loadState();
+    const previous = state.completed[quizId] || {};
+    const previousBest = Number(previous.best_score || previous.score || 0);
+    state.completed[quizId] = {
+      score: Number.isFinite(numericScore) ? numericScore : 0,
+      best_score: Math.max(previousBest, Number.isFinite(numericScore) ? numericScore : 0),
+      completed_at: previous.completed_at || new Date().toISOString(),
+    };
+    saveState(state);
+    return renderGamification();
+  }
+
+  window.KOJYTO_GAMIFICATION = {
+    markQuizCompleted: markQuizCompleted,
+    quizXp: function (quizId, score) {
+      return quizXp(quizById(quizId), score);
+    },
+    render: renderGamification,
+    summary: function () {
+      return summarize(loadState());
+    },
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderGamification);
+  } else {
+    renderGamification();
+  }
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey) {
+      renderGamification();
+    }
+  });
+}());
+</script>
+  
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S10-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S10-1-Q1", "prompt": "Quelle affirmation décrit correctement le rôle principal des amortisseurs au moment de l’impact ?", "difficulty": "easy", "options": [{"id": "A", "text": "Ils augmentent la vitesse verticale de l’avion pour réduire la durée du contact avec la piste.", "is_correct": false, "explanation": "Un amortisseur ne cherche pas à accélérer le mouvement vertical ; il le freine progressivement. Augmenter cette vitesse aggraverait le choc au lieu de l’atténuer."}, {"id": "B", "text": "Ils suppriment toute transmission d’effort entre le train et la cellule au moment de l’atterrissage.", "is_correct": false, "explanation": "Le train transmet forcément une partie des efforts à la structure. Le rôle de l’amortisseur est de réduire et d’amortir ces efforts, pas de les annuler totalement."}, {"id": "C", "text": "Ils servent uniquement à corriger le roulage sur piste et n’interviennent pas à l’atterrissage.", "is_correct": false, "explanation": "L’amortisseur intervient justement à l’impact pour absorber l’énergie du choc. Son rôle ne se limite pas au roulage."}, {"id": "D", "text": "Ils absorbent l’énergie liée à la vitesse verticale de l’avion lors du contact avec le sol.", "is_correct": true, "explanation": "L’amortisseur transforme une partie de l’énergie de l’impact en d’autres formes d’énergie pour limiter la violence du choc. La vitesse verticale à l’atterrissage est bien la source de cette énergie à absorber."}, {"id": "E", "text": "Ils remplacent le freinage des roues pendant la phase d’atterrissage.", "is_correct": false, "explanation": "Le freinage des roues est assuré par le système de freinage. L’amortisseur n’a pas cette fonction : il absorbe l’énergie de l’impact et stabilise la suspension."}], "coverage_label": "Rôle des amortisseurs à l’impact", "learning_objective": "Identifier l’énergie que l’amortisseur doit absorber lors du contact avec le sol.", "correction_summary": "La bonne idée est que l’amortisseur absorbe l’énergie liée à la vitesse verticale à l’impact. Le piège est de le confondre avec un organe de freinage ou de croire qu’il supprime tous les efforts.", "course_clarification": "L’énergie à dissiper provient du choc vertical à l’atterrissage. L’amortisseur ne bloque pas le mouvement : il le rend plus progressif pour protéger la structure et les occupants.", "source_refs": []}, {"question_id": "S10-1-Q2", "prompt": "Quelle affirmation est exacte à propos de la dissipation d’énergie par l’amortisseur ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il stocke durablement toute l’énergie absorbée pour la restituer sans perte au décollage suivant.", "is_correct": false, "explanation": "Un amortisseur n’est pas un dispositif de stockage intégral d’énergie. Une grande partie de l’énergie est dissipée, précisément pour éviter le rebond."}, {"id": "B", "text": "Il dissipe la plus grande partie de l’énergie absorbée afin d’éviter le rebond après le premier impact.", "is_correct": true, "explanation": "Après l’absorption initiale, l’amortisseur doit rendre le retour vers l’état initial progressif et amorti. La dissipation limite ainsi le rebond de l’avion sur la piste."}, {"id": "C", "text": "Il amplifie le rebond après le contact afin de faciliter la remise en l’air.", "is_correct": false, "explanation": "Le but est l’inverse : éviter le rebond et stabiliser l’avion. Amplifier le rebond rendrait l’atterrissage dangereux."}, {"id": "D", "text": "Il supprime la nécessité de dissiper l’énergie, car le choc n’en produit pas.", "is_correct": false, "explanation": "L’impact produit bien de l’énergie mécanique à absorber. Le travail de l’amortisseur consiste justement à la dissiper partiellement puis progressivement."}, {"id": "E", "text": "Il agit seulement après plusieurs rebonds, sans effet sur le premier contact.", "is_correct": false, "explanation": "L’action de l’amortisseur commence dès le premier impact. Attendre plusieurs rebonds irait à l’encontre de sa fonction de sécurité."}], "coverage_label": "Dissipation de l’énergie et rebond", "learning_objective": "Expliquer pourquoi l’amortisseur dissipe l’énergie après l’impact initial.", "correction_summary": "L’affirmation correcte est celle qui relie la dissipation d’énergie à la limitation du rebond après le premier contact. Le piège consiste à croire que l’énergie est conservée ou que le rebond est recherché.", "course_clarification": "La dissipation évite un retour brutal de la suspension vers sa position initiale. En pratique, cela rend l’atterrissage plus stable et réduit les sollicitations sur le train.", "source_refs": []}, {"question_id": "S10-1-Q3", "prompt": "Quelle description correspond à un amortisseur oléopneumatique au repos ?", "difficulty": "easy", "options": [{"id": "A", "text": "Il comporte une ou deux chambres de gaz et une chambre hydraulique, avec les chambres au maximum de leur volume au repos.", "is_correct": true, "explanation": "La structure oléopneumatique associe du gaz et du liquide hydraulique. Au repos, les volumes des chambres sont maximisés avant la compression à l’atterrissage."}, {"id": "B", "text": "Il comporte uniquement une chambre hydraulique remplie d’huile, sans gaz comprimé.", "is_correct": false, "explanation": "Un amortisseur oléopneumatique repose justement sur l’association gaz + hydraulique. Sans gaz comprimé, il ne jouerait pas le rôle élastique attendu."}, {"id": "C", "text": "Il comporte uniquement une chambre d’air libre à pression atmosphérique pour amortir le choc.", "is_correct": false, "explanation": "Le gaz utilisé est comprimé et sous précharge, pas simplement de l’air libre. La pression permet d’emmagasiner l’énergie et de soutenir l’avion."}, {"id": "D", "text": "Ses chambres sont au minimum de leur volume au repos, avant toute compression.", "is_correct": false, "explanation": "Au repos, les volumes sont au maximum. La compression survient lors de l’impact et réduit le volume disponible."}, {"id": "E", "text": "Il ne contient aucun élément hydraulique, car le freinage du mouvement est assuré seulement par le gaz.", "is_correct": false, "explanation": "Le liquide hydraulique est indispensable pour le laminage et le ralentissement du mouvement. Le gaz seul ne suffit pas à contrôler finement la détente et la compression."}], "coverage_label": "Structure de l’amortisseur oléopneumatique", "learning_objective": "Reconnaître la composition et l’état de repos d’un amortisseur oléopneumatique.", "correction_summary": "La bonne réponse décrit la combinaison gaz + hydraulique et le volume maximal des chambres au repos. Le piège est d’oublier l’un des deux fluides ou d’inverser l’état de repos et de compression.", "course_clarification": "Un amortisseur oléopneumatique associe un gaz compressible et un liquide peu compressible. Cette architecture permet d’absorber le choc puis de ralentir le retour du train de façon contrôlée.", "source_refs": []}, {"question_id": "S10-1-Q4", "prompt": "Quelle affirmation est correcte lors du gonflage d’un amortisseur oléopneumatique ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’oxygène pur est recommandé car il améliore la sécurité du système en présence de graisse.", "is_correct": false, "explanation": "C’est l’inverse : l’oxygène pur associé à des corps gras présente un risque d’explosion. L’azote est utilisé à la place pour éviter ce danger."}, {"id": "B", "text": "La chambre hydraulique est gonflée à la pression de précharge pour assurer l’élasticité.", "is_correct": false, "explanation": "La pression de précharge concerne la chambre de gaz, pas la chambre hydraulique. Le liquide hydraulique sert surtout au laminage et au ralentissement du mouvement."}, {"id": "C", "text": "Le gonflage à l’azote est interdit car un gaz comprimé empêcherait toute suspension.", "is_correct": false, "explanation": "Le gaz comprimé est au contraire nécessaire pour créer l’effet ressort de l’amortisseur. Sans lui, l’absorption progressive de l’impact serait dégradée."}, {"id": "D", "text": "La pression de précharge n’a aucun rôle dans le fonctionnement de l’amortisseur.", "is_correct": false, "explanation": "La précharge conditionne le comportement initial du gaz et donc la réponse de l’amortisseur. Elle participe directement à la suspension et à l’absorption de l’énergie."}, {"id": "E", "text": "La chambre d’azote doit être gonflée à la pression de précharge, et l’oxygène ne doit jamais être utilisé.", "is_correct": true, "explanation": "L’azote sert de gaz de précharge. L’oxygène est interdit parce que l’oxygène pur peut réagir dangereusement avec des corps gras et provoquer une explosion."}], "coverage_label": "Gonflage à l’azote", "learning_objective": "Connaître le gaz de précharge et le risque lié à l’oxygène.", "correction_summary": "La bonne réponse associe l’azote à la pression de précharge et exclut l’oxygène. Le piège principal est le risque chimique : oxygène pur et corps gras ne doivent jamais être associés.", "course_clarification": "La précharge est la pression initiale donnée au gaz de l’amortisseur. L’azote est choisi car il est adapté au gonflage et évite les réactions dangereuses avec les graisses.", "source_refs": []}, {"question_id": "S10-1-Q5", "prompt": "Quelle affirmation décrit correctement le fonctionnement en trois temps d’un amortisseur oléopneumatique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Pendant la compression, l’azote se détend et le liquide contourne librement le diaphragme sans aucun freinage.", "is_correct": false, "explanation": "La compression correspond au contraire à la compression du gaz, pas à sa détente. Le liquide ne circule pas librement : le freinage hydraulique est essentiel au contrôle du mouvement."}, {"id": "B", "text": "Pendant la détente, le mouvement s’accélère sans freinage pour que le train revienne instantanément à sa position initiale.", "is_correct": false, "explanation": "L’amortisseur ralentit la détente au lieu de l’accélérer. Un retour instantané serait assimilé à un rebond non maîtrisé."}, {"id": "C", "text": "Pendant la compression, l’hydraulique est chassée et l’azote se comprime ; pendant la détente, le clapet de freinage se ferme et le laminage hydraulique ralentit le mouvement.", "is_correct": true, "explanation": "La compression accumule l’énergie dans le gaz, puis la détente est freinée par le passage du liquide et le laminage hydraulique. C’est ce mécanisme qui rend la réponse progressive et évite une détente brutale."}, {"id": "D", "text": "L’équilibrage des pressions sert à supprimer toute influence du poids de l’avion au sol.", "is_correct": false, "explanation": "L’équilibrage des pressions sert à compenser le poids de l’avion, pas à l’ignorer. Il permet de maintenir la suspension dans une position compatible avec la charge supportée."}, {"id": "E", "text": "Le clapet de freinage reste ouvert pendant toute la détente afin d’augmenter le laminage hydraulique.", "is_correct": false, "explanation": "Le texte indique que le clapet de freinage se ferme pendant la détente. Cette fermeture participe au contrôle du débit du liquide et donc au ralentissement du mouvement."}], "coverage_label": "Fonctionnement en 3 temps", "learning_objective": "Décrire les phases compression, détente et équilibrage d’un amortisseur oléopneumatique.", "correction_summary": "La bonne réponse suit l’enchaînement compression, détente freinée, puis équilibrage des pressions. Le piège est de confondre compression et détente ou d’oublier le rôle du laminage hydraulique.", "course_clarification": "Le gaz assure l’effet ressort, tandis que l’hydraulique freine le mouvement. L’équilibrage final permet de tenir compte du poids de l’avion sans faire remonter brutalement le train.", "source_refs": []}], "subpart_id": "S10", "anchor_slide_id": "S10-1", "question_count_target": 5, "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe"}</script>
   <script>
     (function () {
@@ -2410,6 +2997,21 @@ html[data-embed="1"] .review-card {
         };
       }
 
+      function quizRewardXp(score) {
+        if (window.KOJYTO_GAMIFICATION && typeof window.KOJYTO_GAMIFICATION.quizXp === "function") {
+          return window.KOJYTO_GAMIFICATION.quizXp(quiz.quiz_id, score.percent);
+        }
+        return 0;
+      }
+
+      function markCurrentQuizCompleted() {
+        if (!window.KOJYTO_GAMIFICATION || typeof window.KOJYTO_GAMIFICATION.markQuizCompleted !== "function") {
+          return;
+        }
+        const score = scoreQuiz();
+        window.KOJYTO_GAMIFICATION.markQuizCompleted(quiz.quiz_id, score.percent);
+      }
+
       function escapeHtml(value) {
         return String(value)
           .replace(/&/g, "&amp;")
@@ -2586,6 +3188,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Acquis" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2622,6 +3225,7 @@ html[data-embed="1"] .review-card {
             "<div class='results-grid'>" +
               "<article class='results-card'><strong>Score</strong><span>" + score.correct + " / " + score.total + "</span></article>" +
               "<article class='results-card'><strong>Réussite</strong><span>" + score.percent + "%</span></article>" +
+              "<article class='results-card'><strong>XP</strong><span>" + quizRewardXp(score) + " XP</span></article>" +
               "<article class='results-card'><strong>Statut</strong><span>" + (score.percent >= 70 ? "Validé" : "À revoir") + "</span></article>" +
             "</div>" +
             "<div class='quiz-actions'>" +
@@ -2636,11 +3240,13 @@ html[data-embed="1"] .review-card {
       function render() {
         syncFinalQuizHero();
         if (quiz.quiz_type === "subpart" && state.finished) {
+          markCurrentQuizCompleted();
           renderSubpartSummary();
           queueMathJax();
           return;
         }
         if (quiz.quiz_type === "final" && state.submitted) {
+          markCurrentQuizCompleted();
           renderFinalSummary();
           queueMathJax();
           return;

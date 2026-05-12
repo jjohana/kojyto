@@ -324,24 +324,23 @@ html[data-embed="1"] body::after {
 
 .gamification-panel {
   display: grid;
-  gap: 12px;
+  gap: 14px;
   margin-top: 18px;
-  padding: 16px 18px;
+  padding: 18px 20px;
   box-sizing: border-box;
   min-width: 0;
-  overflow: hidden;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.82);
+  overflow: visible;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--line);
   box-shadow: 0 12px 28px rgba(20, 37, 58, 0.06);
 }
 
 .gamification-header {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px 12px;
+  gap: 10px 14px;
   color: var(--accent-strong);
   font-weight: 700;
   min-width: 0;
@@ -354,10 +353,9 @@ html[data-embed="1"] body::after {
 }
 
 .gamification-header span {
-  flex: 0 1 auto;
   max-width: 100%;
   box-sizing: border-box;
-  padding: 6px 10px;
+  padding: 7px 12px;
   border-radius: 999px;
   background: rgba(217, 133, 36, 0.12);
   color: #7b4b11;
@@ -385,8 +383,8 @@ html[data-embed="1"] body::after {
 
 .gamification-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  gap: 12px;
   min-width: 0;
 }
 
@@ -406,6 +404,28 @@ html[data-embed="1"] body::after {
   margin: 0;
   color: var(--muted);
   font-size: 0.82rem;
+}
+
+@media (max-width: 460px) {
+  .gamification-panel {
+    padding: 16px 18px;
+  }
+
+  .gamification-header {
+    grid-template-columns: 1fr;
+  }
+
+  .gamification-header span {
+    justify-self: start;
+  }
+
+  .gamification-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gamification-stats span:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 .site-main {
@@ -1483,6 +1503,14 @@ html[data-deck="1"] .site-sidebar {
   top: 0;
   max-height: 100vh;
   border-radius: 0;
+}
+
+html[data-deck="1"] .page-shell.with-site-nav {
+  grid-template-columns: 1fr;
+}
+
+html[data-deck="1"] .site-sidebar {
+  display: none;
 }
 
 @media (min-width: 1120px) {
@@ -2763,7 +2791,7 @@ html[data-deck="1"] .site-sidebar {
     }());
   </script>
   
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::23-e00d1d233e37", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::s1_s2", "quiz_type": "subpart", "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »", "href": "slide-s1-s2.html", "base_xp": 100}, {"quiz_id": "slide::s3", "quiz_type": "subpart", "title": "QCM - Découverte des métiers de l’aéronautique", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::s4", "quiz_type": "subpart", "title": "QCM - Ingénieur en aéronautique", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::s5", "quiz_type": "subpart", "title": "QCM - Pilote de ligne", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::s6", "quiz_type": "subpart", "title": "QCM - Mécanicien moteur / mécanicien aéronautique", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::s7", "quiz_type": "subpart", "title": "QCM - Avitailleur", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::s8", "quiz_type": "subpart", "title": "QCM - Aiguilleur du ciel", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::s9", "quiz_type": "subpart", "title": "QCM - Chef d’escale", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::s10", "quiz_type": "subpart", "title": "QCM - Technicien d’essai", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::s11_s12", "quiz_type": "subpart", "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »", "href": "slide-s11-s12.html", "base_xp": 100}, {"quiz_id": "slide::s13", "quiz_type": "subpart", "title": "QCM - Les droits du salarié", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::s14", "quiz_type": "subpart", "title": "QCM - Les devoirs du salarié", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::s15", "quiz_type": "subpart", "title": "QCM - Le contrat de travail", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::s18", "quiz_type": "subpart", "title": "QCM - Santé en entreprise aéronautique", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::s19", "quiz_type": "subpart", "title": "QCM - Sécurité en entreprise aéronautique", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::s20", "quiz_type": "subpart", "title": "QCM - Qualité en entreprise aéronautique", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "slide::s21", "quiz_type": "subpart", "title": "QCM - Interaction entre santé, sécurité et qualité", "href": "slide-s21.html", "base_xp": 100}, {"quiz_id": "slide::s22", "quiz_type": "subpart", "title": "QCM - Rémunération et parcours professionnels", "href": "slide-s22.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::24-3d2acaa296e8", "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::s1_s2", "quiz_type": "subpart", "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »", "href": "slide-s1-s2.html", "base_xp": 100}, {"quiz_id": "slide::s3", "quiz_type": "subpart", "title": "QCM - Découverte des métiers de l’aéronautique", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::s4", "quiz_type": "subpart", "title": "QCM - Ingénieur en aéronautique", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::s5", "quiz_type": "subpart", "title": "QCM - Pilote de ligne", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::s6", "quiz_type": "subpart", "title": "QCM - Mécanicien moteur / mécanicien aéronautique", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::s7", "quiz_type": "subpart", "title": "QCM - Avitailleur", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::s8", "quiz_type": "subpart", "title": "QCM - Aiguilleur du ciel", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::s9", "quiz_type": "subpart", "title": "QCM - Chef d’escale", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::s10", "quiz_type": "subpart", "title": "QCM - Technicien d’essai", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::s11_s12", "quiz_type": "subpart", "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »", "href": "slide-s11-s12.html", "base_xp": 100}, {"quiz_id": "slide::s13", "quiz_type": "subpart", "title": "QCM - Les droits du salarié", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::s14", "quiz_type": "subpart", "title": "QCM - Les devoirs du salarié", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::s15", "quiz_type": "subpart", "title": "QCM - Le contrat de travail", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::s18", "quiz_type": "subpart", "title": "QCM - Santé en entreprise aéronautique", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::s19", "quiz_type": "subpart", "title": "QCM - Sécurité en entreprise aéronautique", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::s20", "quiz_type": "subpart", "title": "QCM - Qualité en entreprise aéronautique", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "slide::s21", "quiz_type": "subpart", "title": "QCM - Interaction entre santé, sécurité et qualité", "href": "slide-s21.html", "base_xp": 100}, {"quiz_id": "slide::s22", "quiz_type": "subpart", "title": "QCM - Rémunération et parcours professionnels", "href": "slide-s22.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");

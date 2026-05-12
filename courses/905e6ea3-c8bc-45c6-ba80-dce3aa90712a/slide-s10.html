@@ -729,7 +729,16 @@ html[data-embed="1"] body::after {
   text-transform: uppercase;
 }
 
-.narration-retry {
+.narration-audio-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.narration-retry,
+.narration-speed {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -743,6 +752,12 @@ html[data-embed="1"] body::after {
   font: inherit;
   font-size: 0.86rem;
   font-weight: 700;
+}
+
+.narration-speed.is-active {
+  background: linear-gradient(135deg, rgba(15, 66, 103, 0.96), rgba(12, 110, 130, 0.88));
+  border-color: transparent;
+  color: #f6fbff;
 }
 
 .narration-retry[hidden] {
@@ -2524,7 +2539,10 @@ html[data-deck="1"] .site-sidebar {
         <section class="narration-panel">
           <div class="narration-panel-header">
             <strong>Introduction de l'entrainement</strong>
-            <button class="narration-retry" type="button" data-audio-retry hidden>Lire l'audio</button>
+            <div class="narration-audio-actions">
+              <button class="narration-speed" type="button" data-audio-speed aria-pressed="false" title="Lecture rapide x1.5">Rapide</button>
+              <button class="narration-retry" type="button" data-audio-retry hidden>Lire l'audio</button>
+            </div>
           </div>
           <audio controls preload="auto" autoplay data-slide-audio>
             <source src="audio/quizzes/slide-s10.mp3" type="audio/mpeg">
@@ -2537,14 +2555,39 @@ html[data-deck="1"] .site-sidebar {
               return;
             }
             const storageKey = "kojyto:narration-autoplay";
+            const speedStorageKey = "kojyto:narration-speed";
             const panel = audio.closest(".narration-panel");
             const retryButton = panel ? panel.querySelector("[data-audio-retry]") : null;
+            const speedButton = panel ? panel.querySelector("[data-audio-speed]") : null;
             const rememberAudioIntent = function () {
               try {
                 window.sessionStorage.setItem(storageKey, "1");
               } catch (error) {
                 // Storage can be disabled; audio playback still works from the button.
               }
+            };
+            const readFastAudio = function () {
+              try {
+                return window.sessionStorage.getItem(speedStorageKey) === "fast";
+              } catch (error) {
+                return false;
+              }
+            };
+            const rememberFastAudio = function (isFast) {
+              try {
+                window.sessionStorage.setItem(speedStorageKey, isFast ? "fast" : "normal");
+              } catch (error) {
+                // Storage can be disabled; the current audio element still changes speed.
+              }
+            };
+            const applyPlaybackSpeed = function (isFast) {
+              audio.playbackRate = isFast ? 1.5 : 1;
+              if (!speedButton) {
+                return;
+              }
+              speedButton.classList.toggle("is-active", isFast);
+              speedButton.setAttribute("aria-pressed", isFast ? "true" : "false");
+              speedButton.textContent = isFast ? "Rapide x1.5" : "Rapide";
             };
             const revealRetry = function () {
               if (!retryButton || !panel) {
@@ -2567,6 +2610,16 @@ html[data-deck="1"] .site-sidebar {
                 retryButton.hidden = true;
                 playSlideAudio();
               });
+            }
+            if (speedButton) {
+              applyPlaybackSpeed(readFastAudio());
+              speedButton.addEventListener("click", function () {
+                const isFast = speedButton.getAttribute("aria-pressed") !== "true";
+                applyPlaybackSpeed(isFast);
+                rememberFastAudio(isFast);
+              });
+            } else {
+              applyPlaybackSpeed(readFastAudio());
             }
             document.querySelectorAll(".nav-link[href], .sidebar-slide[href]").forEach(function (link) {
               link.addEventListener("click", rememberAudioIntent);
@@ -2607,7 +2660,7 @@ html[data-deck="1"] .site-sidebar {
     }());
   </script>
   
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::35-de64c81231c8", "legacy_storage_keys": ["kojyto:gamification::24-3d2acaa296e8", "kojyto:gamification::25-af00ebda180b", "kojyto:gamification::26-1ccd7b029ee2", "kojyto:gamification::27-3b1a420970e2", "kojyto:gamification::28-d42db14576c5", "kojyto:gamification::29-aeb86f789f62", "kojyto:gamification::30-ab88faff09cc", "kojyto:gamification::31-ca9dc71adcf7", "kojyto:gamification::32-aab4c36d9b13", "kojyto:gamification::33-cbd8a6c499ac", "kojyto:gamification::34-07b66a478658"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::s1_s2", "quiz_type": "subpart", "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »", "href": "slide-s1-s2.html", "base_xp": 100}, {"quiz_id": "slide::s3", "quiz_type": "subpart", "title": "QCM - Découverte des métiers de l’aéronautique", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::s4", "quiz_type": "subpart", "title": "QCM - Ingénieur en aéronautique", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::s5", "quiz_type": "subpart", "title": "QCM - Pilote de ligne", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::s6", "quiz_type": "subpart", "title": "QCM - Mécanicien moteur / mécanicien aéronautique", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::s7", "quiz_type": "subpart", "title": "QCM - Avitailleur", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::s8", "quiz_type": "subpart", "title": "QCM - Aiguilleur du ciel", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::s9", "quiz_type": "subpart", "title": "QCM - Chef d’escale", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::s10", "quiz_type": "subpart", "title": "QCM - Technicien d’essai", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::s11_s12", "quiz_type": "subpart", "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »", "href": "slide-s11-s12.html", "base_xp": 100}, {"quiz_id": "slide::s13", "quiz_type": "subpart", "title": "QCM - Les droits du salarié", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::s14", "quiz_type": "subpart", "title": "QCM - Les devoirs du salarié", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::s15", "quiz_type": "subpart", "title": "QCM - Le contrat de travail", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::s18", "quiz_type": "subpart", "title": "QCM - Santé en entreprise aéronautique", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::s19", "quiz_type": "subpart", "title": "QCM - Sécurité en entreprise aéronautique", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::s20", "quiz_type": "subpart", "title": "QCM - Qualité en entreprise aéronautique", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "slide::s21", "quiz_type": "subpart", "title": "QCM - Interaction entre santé, sécurité et qualité", "href": "slide-s21.html", "base_xp": 100}, {"quiz_id": "slide::s22", "quiz_type": "subpart", "title": "QCM - Rémunération et parcours professionnels", "href": "slide-s22.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::36-25341f5a65fa", "legacy_storage_keys": ["kojyto:gamification::24-3d2acaa296e8", "kojyto:gamification::25-af00ebda180b", "kojyto:gamification::26-1ccd7b029ee2", "kojyto:gamification::27-3b1a420970e2", "kojyto:gamification::28-d42db14576c5", "kojyto:gamification::29-aeb86f789f62", "kojyto:gamification::30-ab88faff09cc", "kojyto:gamification::31-ca9dc71adcf7", "kojyto:gamification::32-aab4c36d9b13", "kojyto:gamification::33-cbd8a6c499ac", "kojyto:gamification::34-07b66a478658", "kojyto:gamification::35-de64c81231c8"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::s1_s2", "quiz_type": "subpart", "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »", "href": "slide-s1-s2.html", "base_xp": 100}, {"quiz_id": "slide::s3", "quiz_type": "subpart", "title": "QCM - Découverte des métiers de l’aéronautique", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::s4", "quiz_type": "subpart", "title": "QCM - Ingénieur en aéronautique", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::s5", "quiz_type": "subpart", "title": "QCM - Pilote de ligne", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::s6", "quiz_type": "subpart", "title": "QCM - Mécanicien moteur / mécanicien aéronautique", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::s7", "quiz_type": "subpart", "title": "QCM - Avitailleur", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::s8", "quiz_type": "subpart", "title": "QCM - Aiguilleur du ciel", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::s9", "quiz_type": "subpart", "title": "QCM - Chef d’escale", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::s10", "quiz_type": "subpart", "title": "QCM - Technicien d’essai", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::s11_s12", "quiz_type": "subpart", "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »", "href": "slide-s11-s12.html", "base_xp": 100}, {"quiz_id": "slide::s13", "quiz_type": "subpart", "title": "QCM - Les droits du salarié", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::s14", "quiz_type": "subpart", "title": "QCM - Les devoirs du salarié", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::s15", "quiz_type": "subpart", "title": "QCM - Le contrat de travail", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::s18", "quiz_type": "subpart", "title": "QCM - Santé en entreprise aéronautique", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::s19", "quiz_type": "subpart", "title": "QCM - Sécurité en entreprise aéronautique", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::s20", "quiz_type": "subpart", "title": "QCM - Qualité en entreprise aéronautique", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "slide::s21", "quiz_type": "subpart", "title": "QCM - Interaction entre santé, sécurité et qualité", "href": "slide-s21.html", "base_xp": 100}, {"quiz_id": "slide::s22", "quiz_type": "subpart", "title": "QCM - Rémunération et parcours professionnels", "href": "slide-s22.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");

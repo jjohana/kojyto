@@ -66,7 +66,7 @@
           "id": "C",
           "text": "La vitesse linéaire vérifie \\(v = \\alpha R\\).",
           "is_correct": false,
-          "explanation": "La vitesse linéaire est liée à la vitesse angulaire par \\(v = \\omega R. L\\)’expression \\(\\alpha R\\) donne une accélération, pas une vitesse."
+          "explanation": "La vitesse linéaire est liée à la vitesse angulaire par \\(v = \\omega R\\). L’expression \\(\\alpha R\\) donne une accélération, pas une vitesse."
         },
         {
           "id": "D",
@@ -83,8 +83,8 @@
       ],
       "coverage_label": "Mouvement circulaire accéléré",
       "learning_objective": "Relier correctement \\(v, a_t, a_n, \\omega, \\alpha\\) et le rayon \\(R\\).",
-      "correction_summary": "La relation à retenir est \\(a_t = \\alpha R. Il ne\\) faut pas confondre les formules de vitesse et d’accélération, ni mélanger composante tangentielle et composante normale.",
-      "course_clarification": "La vitesse linéaire au bord d’un cercle vaut \\(v = \\omega R. L\\)’accélération tangentielle traduit le changement de vitesse, tandis que l’accélération normale traduit le changement de direction.",
+      "correction_summary": "La relation à retenir est \\(a_t = \\alpha R\\). Il ne faut pas confondre les formules de vitesse et d’accélération, ni mélanger composante tangentielle et composante normale.",
+      "course_clarification": "La vitesse linéaire au bord d’un cercle vaut \\(v = \\omega R\\). L’accélération tangentielle traduit le changement de vitesse, tandis que l’accélération normale traduit le changement de direction.",
       "source_refs": []
     },
     {
@@ -150,7 +150,7 @@
           "id": "C",
           "text": "Dans un mouvement circulaire accéléré, \\(\\omega\\) reste constant tandis que \\(\\alpha = 0\\).",
           "is_correct": false,
-          "explanation": "\\(Si \\alpha = 0\\), la vitesse angulaire ne varie pas : on est alors dans un mouvement circulaire uniforme, pas accéléré."
+          "explanation": "Si \\(\\alpha = 0\\), la vitesse angulaire ne varie pas : on est alors dans un mouvement circulaire uniforme, pas accéléré."
         },
         {
           "id": "D",

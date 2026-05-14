@@ -36,7 +36,7 @@
           "id": "E",
           "text": "La vitesse angulaire \\(\\omega\\) est égale à l'accélération normale \\(a_n\\).",
           "is_correct": false,
-          "explanation": "Ces grandeurs n'ont pas la même définition ni la même unité : \\(\\omega\\) s'exprime en rad/s alors que \\(a_n s'\\)exprime en m/s²."
+          "explanation": "Ces grandeurs n'ont pas la même définition ni la même unité : \\(\\omega\\) s'exprime en rad/s alors que \\(a_n\\) s'exprime en m/s²."
         }
       ],
       "coverage_label": "Mouvement circulaire uniforme (MCU)",
@@ -60,7 +60,7 @@
           "id": "B",
           "text": "\\(v = \\omega R\\).",
           "is_correct": true,
-          "explanation": "La vitesse linéaire d'un point en rotation est proportionnelle à sa distance à l'axe \\(: v = \\omega R\\)."
+          "explanation": "La vitesse linéaire d'un point en rotation est proportionnelle à sa distance à l'axe : \\(v = \\omega R\\)."
         },
         {
           "id": "C",
@@ -96,7 +96,7 @@
           "id": "A",
           "text": "\\(a_n = \\omega^2 R\\).",
           "is_correct": true,
-          "explanation": "L'accélération normale dépend du carré de la vitesse angulaire et du rayon \\(: a_n = \\omega^2 R\\)."
+          "explanation": "L'accélération normale dépend du carré de la vitesse angulaire et du rayon : \\(a_n = \\omega^2 R\\)."
         },
         {
           "id": "B",
@@ -136,7 +136,7 @@
       "options": [
         {
           "id": "A",
-          "text": "L'accélération tangentielle est égale \\(à \\omega^2R\\).",
+          "text": "L'accélération tangentielle est égale à \\(\\omega^2R\\).",
           "is_correct": false,
           "explanation": "\\(\\omega^2R\\) est l'expression de l'accélération normale, pas de l'accélération tangentielle."
         },
@@ -160,7 +160,7 @@
         },
         {
           "id": "E",
-          "text": "L'accélération tangentielle est nulle \\(: a_t = 0\\).",
+          "text": "L'accélération tangentielle est nulle : \\(a_t = 0\\).",
           "is_correct": true,
           "explanation": "En MCU, la norme de la vitesse reste constante ; il n'y a donc pas de variation tangentielle de la vitesse."
         }

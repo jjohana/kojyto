@@ -28,7 +28,7 @@
         },
         {
           "id": "D",
-          "text": "L’accélération est la variation de la vitesse dans le temps \\(: a = \\mathrm{d}v/\\mathrm{d}t = \\mathrm{d}^2r/\\mathrm{d}t^2\\).",
+          "text": "L’accélération est la variation de la vitesse dans le temps : \\(a = \\mathrm{d}v/\\mathrm{d}t = \\mathrm{d}^2r/\\mathrm{d}t^2\\).",
           "is_correct": true,
           "explanation": "Cette écriture relie directement l’accélération à la dérivée temporelle de la vitesse, ou à la dérivée seconde du vecteur position. Elle exprime bien une variation de la vitesse au cours du temps."
         },
@@ -148,7 +148,7 @@
         },
         {
           "id": "C",
-          "text": "La composante normale est égale \\(à a_t\\) dans tous les mouvements.",
+          "text": "La composante normale est égale à \\(a_t\\) dans tous les mouvements.",
           "is_correct": false,
           "explanation": "Les composantes tangentielle et normale n’ont pas le même rôle. L’une agit sur la norme de la vitesse, l’autre sur sa direction."
         },

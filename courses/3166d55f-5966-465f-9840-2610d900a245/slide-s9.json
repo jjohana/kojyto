@@ -84,7 +84,7 @@
       "coverage_label": "Mouvement rectiligne uniformément accéléré (MRUA)",
       "learning_objective": "Reconnaître et utiliser la loi horaire de la vitesse en MRUA.",
       "correction_summary": "La bonne formule est \\(v(t)=v_0+at\\). Le principal piège est de confondre la loi de vitesse avec celle de position, qui contient un terme en \\(t^2\\).",
-      "course_clarification": "\\(v_0\\) est la vitesse à l’instant initial \\(t=0. L\\)’accélération constante \\(a\\) fait varier la vitesse de façon linéaire au cours du temps.",
+      "course_clarification": "\\(v_0\\) est la vitesse à l’instant initial \\(t=0\\). L’accélération constante \\(a\\) fait varier la vitesse de façon linéaire au cours du temps.",
       "source_refs": []
     },
     {
@@ -125,7 +125,7 @@
       ],
       "coverage_label": "Mouvement rectiligne uniformément accéléré (MRUA)",
       "learning_objective": "Choisir la bonne loi horaire de la position en MRUA et repérer le rôle de chaque terme.",
-      "correction_summary": "La bonne loi est \\(x(t)=x_0+v_0t+\\frac12at^2. L\\)’erreur fréquente consiste à permuter les rôles de \\(v_0\\) et de \\(a\\) ou à oublier le facteur \\(\\frac12\\).",
+      "correction_summary": "La bonne loi est \\(x(t)=x_0+v_0t+\\frac12at^2\\). L’erreur fréquente consiste à permuter les rôles de \\(v_0\\) et de \\(a\\) ou à oublier le facteur \\(\\frac12\\).",
       "course_clarification": "\\(x_0\\) est la position initiale. Le terme en \\(t\\) traduit le mouvement dû à la vitesse initiale, et le terme en \\(t^2\\) traduit l’effet de l’accélération constante.",
       "source_refs": []
     },
@@ -150,7 +150,7 @@
           "id": "C",
           "text": "La vitesse diminue toujours quand \\(a>0\\).",
           "is_correct": false,
-          "explanation": "\\(Si a>0\\), le terme \\(at\\) augmente avec le temps, donc la vitesse augmente et ne diminue pas."
+          "explanation": "Si \\(a>0\\), le terme \\(at\\) augmente avec le temps, donc la vitesse augmente et ne diminue pas."
         },
         {
           "id": "D",
@@ -186,7 +186,7 @@
           "id": "B",
           "text": "Le graphe \\(v(t)\\) passe toujours par l’origine.",
           "is_correct": false,
-          "explanation": "Le graphe passe par \\((0, v_0)\\) ; il ne passe par l’origine que \\(si v_0=0\\)."
+          "explanation": "Le graphe passe par \\((0, v_0)\\) ; il ne passe par l’origine que si \\(v_0=0\\)."
         },
         {
           "id": "C",
@@ -198,7 +198,7 @@
           "id": "D",
           "text": "La pente du graphe \\(v(t)\\) vaut toujours zéro.",
           "is_correct": false,
-          "explanation": "La pente est égale à l’accélération \\(a\\), donc elle n’est nulle que \\(si a=0\\)."
+          "explanation": "La pente est égale à l’accélération \\(a\\), donc elle n’est nulle que si \\(a=0\\)."
         },
         {
           "id": "E",

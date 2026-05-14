@@ -148,7 +148,7 @@
         },
         {
           "id": "C",
-          "text": "Une tuyère supersonique comporte un convergent, un col et un divergent ; \\(M=1\\) au col\\(, M<1\\) dans le convergent et \\(M>1\\) dans le divergent.",
+          "text": "Une tuyère supersonique comporte un convergent, un col et un divergent ; \\(M=1\\) au col, \\(M<1\\) dans le convergent et \\(M>1\\) dans le divergent.",
           "is_correct": true,
           "explanation": "C’est la description géométrique et cinématique donnée pour la tuyère supersonique : le col correspond au point sonique, le convergent reste subsonique et le divergent devient supersonique."
         },
@@ -160,7 +160,7 @@
         },
         {
           "id": "E",
-          "text": "Dans le convergent d’une tuyère supersonique\\(, M>1\\) dès l’entrée et \\(M=1\\) au sortir du col.",
+          "text": "Dans le convergent d’une tuyère supersonique, \\(M>1\\) dès l’entrée et \\(M=1\\) au sortir du col.",
           "is_correct": false,
           "explanation": "La répartition indiquée est inversée : le convergent est subsonique, le col est sonique, puis le divergent devient supersonique."
         }

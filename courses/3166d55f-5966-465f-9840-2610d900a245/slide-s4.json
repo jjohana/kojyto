@@ -102,7 +102,7 @@
           "id": "B",
           "text": "La norme vérifie \\(v=\\dfrac{dt}{ds}\\) et s’exprime en s·m⁻¹.",
           "is_correct": false,
-          "explanation": "L’inverse de \\(ds/dt n\\)’est pas une vitesse ; ses unités sont celles d’un temps par distance, donc ce n’est pas la grandeur demandée."
+          "explanation": "L’inverse de \\(ds/dt\\) n’est pas une vitesse ; ses unités sont celles d’un temps par distance, donc ce n’est pas la grandeur demandée."
         },
         {
           "id": "C",

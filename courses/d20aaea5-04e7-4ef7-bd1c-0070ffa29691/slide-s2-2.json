@@ -78,7 +78,7 @@
           "id": "E",
           "text": "\\(Csp = Ch / Tu\\).",
           "is_correct": false,
-          "explanation": "La relation donnée est l'inverse \\(: Csp = Tu / Ch\\). Inverser les termes change le sens physique de l'indicateur."
+          "explanation": "La relation donnée est l'inverse : \\(Csp = Tu / Ch\\). Inverser les termes change le sens physique de l'indicateur."
         }
       ],
       "coverage_label": "Consommation spécifique",
@@ -94,25 +94,25 @@
       "options": [
         {
           "id": "A",
-          "text": "À sec\\(, Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(5000\\ \\mathrm{daN}\\).",
+          "text": "À sec, \\(Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(5000\\ \\mathrm{daN}\\).",
           "is_correct": true,
           "explanation": "C'est la valeur repère indiquée pour le M88 au décollage à sec : consommation spécifique de 1,8 kg/h.daN associée à 5000 daN de poussée."
         },
         {
           "id": "B",
-          "text": "À sec\\(, Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(7500\\ \\mathrm{daN}\\).",
+          "text": "À sec, \\(Csp = 1{,}8\\ \\mathrm{kg/h.daN}\\) pour une poussée de \\(7500\\ \\mathrm{daN}\\).",
           "is_correct": false,
           "explanation": "La poussée de 7500 daN correspond à la version avec postcombustion, pas à la configuration à sec."
         },
         {
           "id": "C",
-          "text": "À sec\\(, Csp = 0{,}33\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(25\\,000\\ \\mathrm{lbf}\\).",
+          "text": "À sec, \\(Csp = 0{,}33\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(25\\,000\\ \\mathrm{lbf}\\).",
           "is_correct": false,
           "explanation": "Cette valeur repère correspond au CFM56-5A1, pas au M88."
         },
         {
           "id": "D",
-          "text": "À sec\\(, Csp = 0{,}84\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(17\\,500\\ \\mathrm{lbf}\\).",
+          "text": "À sec, \\(Csp = 0{,}84\\ \\mathrm{lb/h.lbf}\\) pour une poussée de \\(17\\,500\\ \\mathrm{lbf}\\).",
           "is_correct": false,
           "explanation": "Cette valeur repère correspond au PW JT4, pas au M88."
         },

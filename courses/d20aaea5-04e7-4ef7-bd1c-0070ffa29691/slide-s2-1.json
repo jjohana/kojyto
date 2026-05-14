@@ -168,12 +168,12 @@
       "coverage_label": "Unités de consommation spécifique",
       "learning_objective": "Choisir les unités correctes de \\(Csp\\) et ne pas les confondre avec celles d’un débit ou d’une poussée.",
       "correction_summary": "Les unités attendues sont \\(kg/h.daN\\) ou \\(lb/h.Lbf\\). Le piège est de choisir des unités de débit, de poussée ou de puissance qui ne traduisent pas un rapport à la poussée.",
-      "course_clarification": "Le terme \\(kg/h.daN se\\) lit « kilogrammes par heure et par daN ». Il indique qu’on rapporte une masse de carburant consommée en une heure à une unité de poussée.",
+      "course_clarification": "Le terme \\(kg/h.daN\\) se lit « kilogrammes par heure et par daN ». Il indique qu’on rapporte une masse de carburant consommée en une heure à une unité de poussée.",
       "source_refs": []
     },
     {
       "question_id": "S2-1-Q5",
-      "prompt": "\\(Si Qmc = 3{,}2\\ \\mathrm{kg/s}\\), quelle valeur de \\(Ch\\) est correcte ?",
+      "prompt": "Si \\(Qmc = 3{,}2\\ \\mathrm{kg/s}\\), quelle valeur de \\(Ch\\) est correcte ?",
       "difficulty": "easy",
       "options": [
         {
@@ -186,7 +186,7 @@
           "id": "B",
           "text": "\\(Ch = 1\\,920\\ \\mathrm{kg/h}\\).",
           "is_correct": false,
-          "explanation": "Le calcul correct donne \\(11,520 kg/h\\), donc \\(1,920 kg/h\\) reste nettement trop faible."
+          "explanation": "Le calcul correct donne 11\\,520 \\(kg/h\\), donc 1\\,920 \\(kg/h\\) reste nettement trop faible."
         },
         {
           "id": "C",

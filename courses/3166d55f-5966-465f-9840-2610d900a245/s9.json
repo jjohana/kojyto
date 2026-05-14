@@ -38,8 +38,8 @@
       "image_url": null,
       "image_path": null,
       "rows": [],
-      "latex": "v(t)=v_0+at\\\\x(t)=x_0+v_0t+\\frac{1}{2}at^2",
-      "rendered_latex": "\\[\\begin{gathered}v(t)=v_0+at\\\\x(t)=x_0+v_0t+\\frac{1}{2}at^2\\end{gathered}\\]"
+      "latex": "v(t)=v_0+at\\x(t)=x_0+v_0t+\\frac{1}{2}at^2",
+      "rendered_latex": "\\[v(t)=v_0+at\\x(t)=x_0+v_0t+\\frac{1}{2}at^2\\]"
     }
   ],
   "course_refs": [],

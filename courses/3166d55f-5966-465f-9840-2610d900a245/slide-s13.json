@@ -112,7 +112,7 @@
         },
         {
           "id": "D",
-          "text": "L'accélération angulaire est toujours égale \\(à \\omega^2\\).",
+          "text": "L'accélération angulaire est toujours égale à \\(\\omega^2\\).",
           "is_correct": false,
           "explanation": "\\(\\omega^2\\) apparaît dans l'expression de l'accélération normale \\(a_n\\) via \\(a_n=\\omega^2R\\), pas dans la définition de \\(\\alpha\\)."
         },
@@ -150,7 +150,7 @@
           "id": "C",
           "text": "L'accélération normale vérifie \\(a_n = \\alpha^2 R\\).",
           "is_correct": false,
-          "explanation": "L'accélération normale dépend de \\(\\omega\\) au carré \\(: a_n=\\omega^2R\\). Elle ne dépend pas de \\(\\alpha^2\\)."
+          "explanation": "L'accélération normale dépend de \\(\\omega\\) au carré : \\(a_n=\\omega^2R\\). Elle ne dépend pas de \\(\\alpha^2\\)."
         },
         {
           "id": "D",
@@ -162,7 +162,7 @@
           "id": "E",
           "text": "La vitesse linéaire vérifie \\(v = \\omega R\\).",
           "is_correct": true,
-          "explanation": "Pour un point situé à la distance \\(R\\) de l'axe, la vitesse linéaire est proportionnelle à la vitesse angulaire \\(: v=\\omega R\\)."
+          "explanation": "Pour un point situé à la distance \\(R\\) de l'axe, la vitesse linéaire est proportionnelle à la vitesse angulaire : \\(v=\\omega R\\)."
         }
       ],
       "coverage_label": "Grandeurs angulaires et linéaires",
@@ -192,13 +192,13 @@
           "id": "C",
           "text": "La vitesse angulaire vaut environ \\(157\\ \\text{rad/s}\\) et la vitesse linéaire en bout de pale vaut environ \\(126\\ \\text{m/s}\\).",
           "is_correct": true,
-          "explanation": "La conversion de 1500 tr/min conduit \\(à \\omega \\approx 157\\ \\text{rad/s}\\), puis \\(v=\\omega R\\approx 157\\times 0{,}8 = 126\\ \\text{m/s}\\)."
+          "explanation": "La conversion de 1500 tr/min conduit à \\(\\omega \\approx 157\\ \\text{rad/s}\\), puis \\(v=\\omega R\\approx 157\\times 0{,}8 = 126\\ \\text{m/s}\\)."
         },
         {
           "id": "D",
           "text": "La vitesse linéaire vaut environ \\(0{,}8\\ \\text{m/s}\\).",
           "is_correct": false,
-          "explanation": "Le rayon seul ne suffit pas. Il faut multiplier par la vitesse angulaire \\(: v=\\omega R\\), ce qui donne une valeur bien plus élevée."
+          "explanation": "Le rayon seul ne suffit pas. Il faut multiplier par la vitesse angulaire : \\(v=\\omega R\\), ce qui donne une valeur bien plus élevée."
         },
         {
           "id": "E",

@@ -60,7 +60,7 @@
           "id": "B",
           "text": "La vitesse de montée s’obtient comme la dérivée de la hauteur par rapport au temps.",
           "is_correct": true,
-          "explanation": "Si la hauteur est notée par exemple \\(z(t)\\), alors la vitesse verticale de montée est \\(v_z(t)=\\frac{dz}{dt}. C\\)’est une application directe de la cinématique."
+          "explanation": "Si la hauteur est notée par exemple \\(z(t)\\), alors la vitesse verticale de montée est \\(v_z(t)=\\frac{dz}{dt}\\). C’est une application directe de la cinématique."
         },
         {
           "id": "C",
@@ -162,7 +162,7 @@
           "id": "E",
           "text": "Une mesure de vitesse angulaire permet d’évaluer la vitesse linéaire au bout de la pale avec la relation \\(v=\\omega R\\).",
           "is_correct": true,
-          "explanation": "Pour un point situé à la distance \\(R\\) de l’axe, la vitesse linéaire est proportionnelle à la vitesse angulaire \\(: v=\\omega R. C\\)’est la relation clé pour relier rotation et mouvement linéaire."
+          "explanation": "Pour un point situé à la distance \\(R\\) de l’axe, la vitesse linéaire est proportionnelle à la vitesse angulaire : \\(v=\\omega R\\). C’est la relation clé pour relier rotation et mouvement linéaire."
         }
       ],
       "coverage_label": "Applications aéronautiques typiques — pales d’hélice",

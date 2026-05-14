@@ -30,7 +30,7 @@
           "id": "D",
           "text": "\\(y=\\dfrac{x^2}{16}\\)",
           "is_correct": true,
-          "explanation": "On isole d’abord \\(t\\) à partir de \\(x=4t\\), donc \\(t=x/4\\). En remplaçant dans \\(y=t^2, on\\) obtient bien \\(y=(x/4)^2=x^2/16\\)."
+          "explanation": "On isole d’abord \\(t\\) à partir de \\(x=4t\\), donc \\(t=x/4\\). En remplaçant dans \\(y=t^2\\), on obtient bien \\(y=(x/4)^2=x^2/16\\)."
         },
         {
           "id": "E",
@@ -84,7 +84,7 @@
       "coverage_label": "Équations horaires et trajectoires",
       "learning_objective": "Appliquer la règle de la chaîne pour relier la pente spatiale aux dérivées temporelles.",
       "correction_summary": "La pente instantanée s’écrit \\(\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}\\). Le piège est de confondre ce quotient avec un produit, une somme ou une dérivée seconde.",
-      "course_clarification": "Quand \\(x\\) et \\(y\\) dépendent tous deux du temps, la dérivée \\(dy/dx se\\) calcule en passant par \\(t\\). Cette relation sert à lire la pente locale de la trajectoire à un instant donné.",
+      "course_clarification": "Quand \\(x\\) et \\(y\\) dépendent tous deux du temps, la dérivée \\(dy/dx\\) se calcule en passant par \\(t\\). Cette relation sert à lire la pente locale de la trajectoire à un instant donné.",
       "source_refs": []
     },
     {
@@ -180,7 +180,7 @@
           "id": "A",
           "text": "\\(\\dfrac{1}{2}\\)",
           "is_correct": false,
-          "explanation": "Cette valeur ne correspond pas au quotient des dérivées temporelles \\(à t=2\\). Le bon calcul donne \\(4/4\\), soit 1."
+          "explanation": "Cette valeur ne correspond pas au quotient des dérivées temporelles à \\(t=2\\). Le bon calcul donne \\(4/4\\), soit 1."
         },
         {
           "id": "B",
@@ -209,7 +209,7 @@
       ],
       "coverage_label": "Équations horaires et trajectoires",
       "learning_objective": "Calculer la pente instantanée d’une trajectoire à partir d’équations horaires simples.",
-      "correction_summary": "On applique \\(dy/dx=(dy/dt)/(dx/dt)\\) puis on évalue \\(à t=2\\). Le piège est de confondre la pente avec une coordonnée ou avec une dérivée prise isolément.",
+      "correction_summary": "On applique \\(dy/dx=(dy/dt)/(dx/dt)\\) puis on évalue à \\(t=2\\). Le piège est de confondre la pente avec une coordonnée ou avec une dérivée prise isolément.",
       "course_clarification": "La pente instantanée indique l’inclinaison locale de la trajectoire. Elle se déduit des variations de \\(x\\) et \\(y\\) par rapport au temps, puis par quotient.",
       "source_refs": []
     }

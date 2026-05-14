@@ -12,11 +12,11 @@
           "id": "A",
           "text": "La puissance calorifique s’exprime en \\(\\mathrm{kg/s}\\).",
           "is_correct": false,
-          "explanation": "Faux \\(: \\mathrm{kg/s}\\) est l’unité du débit massique de carburant \\(Q_{mc}\\), pas de la puissance calorifique, qui s’exprime en watts."
+          "explanation": "Faux : \\(\\mathrm{kg/s}\\) est l’unité du débit massique de carburant \\(Q_{mc}\\), pas de la puissance calorifique, qui s’exprime en watts."
         },
         {
           "id": "B",
-          "text": "Pour \\(Q_{mc}=3{,}2\\ \\mathrm{kg/s}, on\\) obtient \\(P_c \\approx 14{,}2\\times10^6\\ \\mathrm{W}\\).",
+          "text": "Pour \\(Q_{mc}=3{,}2\\ \\mathrm{kg/s}\\), on obtient \\(P_c \\approx 14{,}2\\times10^6\\ \\mathrm{W}\\).",
           "is_correct": false,
           "explanation": "Faux : avec \\(P_{ci}=44\\times10^6\\ \\mathrm{J/kg}\\), le calcul donne \\(3{,}2\\times44\\times10^6 = 141{,}7\\times10^6\\ \\mathrm{W}\\), pas \\(14{,}2\\times10^6\\ \\mathrm{W}\\)."
         },
@@ -36,13 +36,13 @@
           "id": "E",
           "text": "\\(P_c\\) représente directement la puissance utile transmise à l’avion.",
           "is_correct": false,
-          "explanation": "Faux \\(: P_c\\) est la puissance chimique libérée par la combustion. La puissance utile apparaît plus loin dans la chaîne énergétique, après plusieurs conversions et pertes."
+          "explanation": "Faux : \\(P_c\\) est la puissance chimique libérée par la combustion. La puissance utile apparaît plus loin dans la chaîne énergétique, après plusieurs conversions et pertes."
         }
       ],
       "coverage_label": "Puissance calorifique et PCI",
       "learning_objective": "Identifier l’expression de la puissance calorifique à partir du débit carburant et du PCI.",
-      "correction_summary": "La bonne relation est \\(P_c = Q_{mc}P_{ci}. L\\)’erreur fréquente consiste à confondre le débit massique \\(Q_{mc}\\), le PCI et la puissance elle-même, ou à oublier que la puissance s’exprime en watts.",
-      "course_clarification": "\\(P_c\\) mesure l’énergie libérée par seconde par le carburant brûlé\\(. Q_{mc}\\) est un débit massique en \\(\\mathrm{kg/s}\\) et \\(P_{ci}\\) est une énergie par kilogramme en \\(\\mathrm{J/kg}\\).",
+      "correction_summary": "La bonne relation est \\(P_c = Q_{mc}P_{ci}\\). L’erreur fréquente consiste à confondre le débit massique \\(Q_{mc}\\), le PCI et la puissance elle-même, ou à oublier que la puissance s’exprime en watts.",
+      "course_clarification": "\\(P_c\\) mesure l’énergie libérée par seconde par le carburant brûlé. \\(Q_{mc}\\) est un débit massique en \\(\\mathrm{kg/s}\\) et \\(P_{ci}\\) est une énergie par kilogramme en \\(\\mathrm{J/kg}\\).",
       "source_refs": []
     },
     {
@@ -78,13 +78,13 @@
           "id": "E",
           "text": "\\(C_p\\) est une puissance exprimée en watts.",
           "is_correct": false,
-          "explanation": "Faux \\(: C_p\\) est une chaleur spécifique, donc une capacité massique en \\(\\mathrm{J/(kg\\cdot K)}\\), pas une puissance."
+          "explanation": "Faux : \\(C_p\\) est une chaleur spécifique, donc une capacité massique en \\(\\mathrm{J/(kg\\cdot K)}\\), pas une puissance."
         }
       ],
       "coverage_label": "Puissance thermique théorique",
       "learning_objective": "Choisir la bonne expression de \\(P_{tt}\\) et interpréter le terme de source froide.",
       "correction_summary": "Il faut partir de \\(P_{tt}=P_c-P_{sf}\\) puis remplacer \\(P_{sf}\\) par \\(Q_{ma}C_p(T_5-T_0)\\). La confusion classique vient du signe de la perte et de l’ordre des températures.",
-      "course_clarification": "La puissance thermique théorique est la puissance disponible après retrait des pertes par source froide \\(: P_{tt}=P_c-P_{sf}\\). Le terme \\(Q_{ma}C_p(T_5-T_0)\\) mesure l’énergie emportée par les gaz chauds et perdue pour la suite de la chaîne.",
+      "course_clarification": "La puissance thermique théorique est la puissance disponible après retrait des pertes par source froide : \\(P_{tt}=P_c-P_{sf}\\). Le terme \\(Q_{ma}C_p(T_5-T_0)\\) mesure l’énergie emportée par les gaz chauds et perdue pour la suite de la chaîne.",
       "source_refs": []
     },
     {
@@ -125,7 +125,7 @@
       ],
       "coverage_label": "Puissance propulsive utile",
       "learning_objective": "Calculer la puissance propulsive à partir de la poussée et de la vitesse de vol.",
-      "correction_summary": "La formule à appliquer est \\(P_p=T_uV_0. L\\)’erreur la plus fréquente est d’oublier la vitesse ou de se tromper d’ordre de grandeur dans le produit.",
+      "correction_summary": "La formule à appliquer est \\(P_p=T_uV_0\\). L’erreur la plus fréquente est d’oublier la vitesse ou de se tromper d’ordre de grandeur dans le produit.",
       "course_clarification": "La puissance propulsive est la puissance utile associée au déplacement de l’avion. Elle augmente avec la poussée et avec la vitesse de vol.",
       "source_refs": []
     },
@@ -150,7 +150,7 @@
           "id": "C",
           "text": "\\(\\eta_p = \\dfrac{P_p}{P_c}\\).",
           "is_correct": false,
-          "explanation": "Faux \\(: P_p/P_c\\) correspond au rendement global \\(\\eta_g\\), pas au rendement propulsif."
+          "explanation": "Faux : \\(P_p/P_c\\) correspond au rendement global \\(\\eta_g\\), pas au rendement propulsif."
         },
         {
           "id": "D",
@@ -167,7 +167,7 @@
       ],
       "coverage_label": "Rendement propulsif",
       "learning_objective": "Reconnaître la formule simplifiée du rendement propulsif et la distinguer des puissances.",
-      "correction_summary": "Le rendement propulsif ne s’écrit pas avec une puissance, mais comme un rapport adimensionnel. La simplification aboutit \\(à \\eta_p=\\frac{2V_0}{V_5+V_0}\\).",
+      "correction_summary": "Le rendement propulsif ne s’écrit pas avec une puissance, mais comme un rapport adimensionnel. La simplification aboutit à \\(\\eta_p=\\frac{2V_0}{V_5+V_0}\\).",
       "course_clarification": "Le rendement propulsif compare la puissance utile à la puissance cinétique disponible dans le jet. Sa forme simplifiée montre qu’il dépend de la vitesse de vol et de la vitesse d’éjection.",
       "source_refs": []
     },
@@ -186,7 +186,7 @@
           "id": "B",
           "text": "\\(\\eta_g = \\dfrac{P_{tt}}{P_c}\\).",
           "is_correct": false,
-          "explanation": "Faux \\(: P_{tt}/P_c\\) définit le rendement thermique théorique, pas le rendement global."
+          "explanation": "Faux : \\(P_{tt}/P_c\\) définit le rendement thermique théorique, pas le rendement global."
         },
         {
           "id": "C",
@@ -198,11 +198,11 @@
           "id": "D",
           "text": "\\(\\eta_g = \\dfrac{P_{tr}}{P_{tt}}\\).",
           "is_correct": false,
-          "explanation": "Faux \\(: P_{tr}/P_{tt}\\) correspond au rendement interne \\(\\eta_i\\), pas au rendement global."
+          "explanation": "Faux : \\(P_{tr}/P_{tt}\\) correspond au rendement interne \\(\\eta_i\\), pas au rendement global."
         },
         {
           "id": "E",
-          "text": "\\(\\eta_g s\\)’exprime en newtons.",
+          "text": "\\(\\eta_g\\) s’exprime en newtons.",
           "is_correct": false,
           "explanation": "Faux : un rendement est sans unité. Les newtons mesurent une force, pas un rendement."
         }
@@ -210,7 +210,7 @@
       "coverage_label": "Rendement global",
       "learning_objective": "Identifier la définition du rendement global dans la chaîne énergétique du turboréacteur.",
       "correction_summary": "Le rendement global compare la puissance utile en sortie à la puissance calorifique apportée par le carburant. La confusion fréquente consiste à le mélanger avec les rendements intermédiaires de la chaîne.",
-      "course_clarification": "Le rendement global mesure l’efficacité totale de la chaîne énergétique \\(: \\eta_g = P_p/P_c. Il\\) résume toutes les pertes entre le carburant et la puissance utile.",
+      "course_clarification": "Le rendement global mesure l’efficacité totale de la chaîne énergétique : \\(\\eta_g = P_p/P_c\\). Il résume toutes les pertes entre le carburant et la puissance utile.",
       "source_refs": []
     }
   ],

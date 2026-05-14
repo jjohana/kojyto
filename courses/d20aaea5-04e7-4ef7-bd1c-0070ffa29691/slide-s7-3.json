@@ -76,7 +76,7 @@
         },
         {
           "id": "E",
-          "text": "La grandeur \\(Q_{ma} n\\)’intervient pas dans le calcul de \\(T_{REV}\\).",
+          "text": "La grandeur \\(Q_{ma}\\) n’intervient pas dans le calcul de \\(T_{REV}\\).",
           "is_correct": false,
           "explanation": "Le débit massique \\(Q_{ma}\\) est bien présent dans la relation et conditionne l’intensité de la poussée. L’ignorer conduirait à une formule incomplète et fausse."
         }
@@ -84,7 +84,7 @@
       "coverage_label": "L’inverseur de poussée",
       "learning_objective": "Lire et interpréter correctement la formule de poussée inverse, y compris le rôle du signe et de la valeur absolue.",
       "correction_summary": "La relation correcte est \\(T_{REV} = -Q_{ma}(V''_5 + V_o)\\) et sa valeur absolue s’en déduit directement. Le piège principal est de confondre le signe, qui indique le sens, avec la valeur numérique utilisée pour le calcul.",
-      "course_clarification": "\\(Q_{ma}\\) désigne le débit massique\\(, V''_5\\) la vitesse du jet à la sortie, et \\(V_o\\) la vitesse de l’avion. Le signe négatif signifie que la force s’oppose au déplacement et produit un freinage.",
+      "course_clarification": "\\(Q_{ma}\\) désigne le débit massique, \\(V''_5\\) la vitesse du jet à la sortie, et \\(V_o\\) la vitesse de l’avion. Le signe négatif signifie que la force s’oppose au déplacement et produit un freinage.",
       "source_refs": []
     },
     {
@@ -160,7 +160,7 @@
         },
         {
           "id": "E",
-          "text": "La poussée inverse doit diminuer lorsque \\(V_o\\) est faible ; le support donne environ 14 % de \\(T_u\\) maxi pour \\(V_o < 60 kt\\), avec risque de pompage et d’ingestion de gaz chauds en dessous de cette vitesse.",
+          "text": "La poussée inverse doit diminuer lorsque \\(V_o\\) est faible ; le support donne environ 14 % de \\(T_u\\) maxi pour \\(V_o < 60\\) kt, avec risque de pompage et d’ingestion de gaz chauds en dessous de cette vitesse.",
           "is_correct": true,
           "explanation": "La baisse de la poussée inverse à basse vitesse est explicitement indiquée, avec un ordre de grandeur de 14 % sous 60 kt. Le piège est de croire qu’il faudrait au contraire maintenir ou augmenter la poussée inverse à très faible vitesse."
         }

@@ -78,7 +78,7 @@
           "id": "E",
           "text": "\\(T_{REV} = -V_o(V''_5 + Q_{ma})\\).",
           "is_correct": false,
-          "explanation": "Cette écriture mélange les grandeurs et ne respecte pas la relation fournie\\(, où Q_{ma}\\) multiplie la somme des vitesses."
+          "explanation": "Cette écriture mélange les grandeurs et ne respecte pas la relation fournie, où \\(Q_{ma}\\) multiplie la somme des vitesses."
         }
       ],
       "coverage_label": "Poussée inverse : formule",
@@ -209,7 +209,7 @@
       ],
       "coverage_label": "Poussée inverse : ordres de grandeur et limites",
       "learning_objective": "Lire les ordres de grandeur de la poussée inverse et repérer la limite d’utilisation à basse vitesse.",
-      "correction_summary": "La bonne réponse associe \\(V_o < 60 kt à\\) une poussée inverse d’environ 14 % de \\(T_u\\) maxi et à un risque de gaz chauds/pompage. Le piège consiste à retenir le chiffre global de 50 % sans tenir compte de la baisse à basse vitesse.",
+      "correction_summary": "La bonne réponse associe \\(V_o < 60\\) kt à une poussée inverse d’environ 14 % de \\(T_u\\) maxi et à un risque de gaz chauds/pompage. Le piège consiste à retenir le chiffre global de 50 % sans tenir compte de la baisse à basse vitesse.",
       "course_clarification": "La poussée inverse n’est pas constante : elle doit être adaptée à la vitesse de l’avion. En dessous d’un certain seuil, l’usage trop important de la reverse peut provoquer une ingestion de gaz chauds et du pompage.",
       "source_refs": []
     }

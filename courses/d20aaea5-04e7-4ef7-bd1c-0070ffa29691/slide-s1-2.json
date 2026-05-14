@@ -22,7 +22,7 @@
         },
         {
           "id": "C",
-          "text": "Le débit massique d’air \\(Q_{ma} s\\)’exprime en newtons.",
+          "text": "Le débit massique d’air \\(Q_{ma}\\) s’exprime en newtons.",
           "is_correct": false,
           "explanation": "\\(Q_{ma}\\) est un débit massique, donc une grandeur en \\(kg/s\\), pas une force. La force apparaît après multiplication par une vitesse."
         },
@@ -30,7 +30,7 @@
           "id": "D",
           "text": "La poussée nette s’écrit \\(Tu = Q_{ma}(V_5 - V_0)\\).",
           "is_correct": true,
-          "explanation": "Cette expression correspond au terme réacteur : la poussée vient de l’écart entre la vitesse d’éjection et la vitesse d’entrée de l’air\\(. Si V_5 > V_0\\), la force est dirigée vers l’avant."
+          "explanation": "Cette expression correspond au terme réacteur : la poussée vient de l’écart entre la vitesse d’éjection et la vitesse d’entrée de l’air. Si \\(V_5 > V_0\\), la force est dirigée vers l’avant."
         },
         {
           "id": "E",
@@ -66,7 +66,7 @@
           "id": "C",
           "text": "Avec \\(Q_{ma}=75\\,kg/s, V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(30\\,000\\,daN\\).",
           "is_correct": false,
-          "explanation": "La conversion est fausse \\(: 1\\,daN = 10\\,N\\). Donc \\(30\\,000\\,N\\) correspondent à \\(3\\,000\\,daN\\), pas à \\(30\\,000\\,daN\\)."
+          "explanation": "La conversion est fausse : \\(1\\,daN = 10\\,N\\). Donc \\(30\\,000\\,N\\) correspondent à \\(3\\,000\\,daN\\), pas à \\(30\\,000\\,daN\\)."
         },
         {
           "id": "D",
@@ -78,13 +78,13 @@
           "id": "E",
           "text": "Avec \\(Q_{ma}=75\\,kg/s, V_0=250\\,m/s\\) et \\(V_5=650\\,m/s\\), la poussée vaut \\(400\\,N\\).",
           "is_correct": false,
-          "explanation": "\\(400\\) est seulement la différence de vitesse \\(V_5-V_0\\), exprimée en \\(m/s. Il\\) manque la multiplication par le débit massique pour obtenir une force."
+          "explanation": "\\(400\\) est seulement la différence de vitesse \\(V_5-V_0\\), exprimée en \\(m/s\\). Il manque la multiplication par le débit massique pour obtenir une force."
         }
       ],
       "coverage_label": "Exemple numérique",
       "learning_objective": "Calculer une poussée à partir d’un débit massique et de vitesses d’entrée/sortie.",
       "correction_summary": "Le calcul donne \\(30\\,000\\,N\\), soit \\(3\\,000\\,daN\\). Le piège principal est d’oublier la multiplication par \\(Q_{ma}\\) ou de confondre newtons et daN.",
-      "course_clarification": "La différence \\(V_5 - V_0\\) vaut ici \\(400\\,m/s\\). En multipliant par \\(75\\,kg/s, on\\) obtient une force de \\(30\\,000\\,N\\).",
+      "course_clarification": "La différence \\(V_5 - V_0\\) vaut ici \\(400\\,m/s\\). En multipliant par \\(75\\,kg/s\\), on obtient une force de \\(30\\,000\\,N\\).",
       "source_refs": []
     },
     {
@@ -144,7 +144,7 @@
           "id": "B",
           "text": "Le terme fusée vaut \\(Q_{mc}V_0\\) et s’ajoute à la poussée nette.",
           "is_correct": false,
-          "explanation": "La vitesse utilisée est celle d’éjection des gaz\\(, V_5\\), pas la vitesse d’entrée \\(V_0\\). Le sens physique du terme est lié au jet sortant."
+          "explanation": "La vitesse utilisée est celle d’éjection des gaz, \\(V_5\\), pas la vitesse d’entrée \\(V_0\\). Le sens physique du terme est lié au jet sortant."
         },
         {
           "id": "C",
@@ -156,7 +156,7 @@
           "id": "D",
           "text": "Le terme fusée ne dépend pas du débit carburant.",
           "is_correct": false,
-          "explanation": "Le débit carburant est précisément la grandeur qui fait apparaître ce terme. Sans \\(Q_{mc}, il n\\)’y a pas de contribution de type fusée."
+          "explanation": "Le débit carburant est précisément la grandeur qui fait apparaître ce terme. Sans \\(Q_{mc}\\), il n’y a pas de contribution de type fusée."
         },
         {
           "id": "E",
@@ -196,7 +196,7 @@
         },
         {
           "id": "D",
-          "text": "\\(Si P_5=P_0\\), la poussée de culot n’est pas nulle.",
+          "text": "Si \\(P_5=P_0\\), la poussée de culot n’est pas nulle.",
           "is_correct": false,
           "explanation": "Quand les pressions sont égales, le terme \\(P_5-P_0\\) vaut zéro. La poussée de culot est donc nulle."
         },

@@ -54,7 +54,7 @@
           "id": "A",
           "text": "\\(x = x_0 + v_0t - \\tfrac12 at^2\\).",
           "is_correct": false,
-          "explanation": "Le signe devant le terme en \\(at^2 n'\\)est pas systématiquement négatif. Avec l'écriture du formulaire, le terme correct est bien \\(+\\tfrac12 at^2\\)."
+          "explanation": "Le signe devant le terme en \\(at^2\\) n'est pas systématiquement négatif. Avec l'écriture du formulaire, le terme correct est bien \\(+\\tfrac12 at^2\\)."
         },
         {
           "id": "B",
@@ -204,7 +204,7 @@
           "id": "E",
           "text": "\\(\\dfrac{dy}{dx} = \\dfrac{dy}{dt}\\,\\dfrac{dx}{dt}\\).",
           "is_correct": false,
-          "explanation": "Le produit des deux dérivées temporelles ne donne pas \\(dy/dx. Il\\) faut au contraire former le rapport \\(\\frac{dy/dt}{dx/dt}\\)."
+          "explanation": "Le produit des deux dérivées temporelles ne donne pas \\(dy/dx\\). Il faut au contraire former le rapport \\(\\frac{dy/dt}{dx/dt}\\)."
         }
       ],
       "coverage_label": "Formulaire récapitulatif",

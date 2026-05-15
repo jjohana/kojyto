@@ -1,6 +1,6 @@
 {
-  "site_build_version": 40,
-  "cache_token": "40-bb68ee1a9547",
+  "site_build_version": 42,
+  "cache_token": "42-84b0f6673b5e",
   "viewer_mode": "user",
   "page_count": 41,
   "slide_count": 20,
@@ -19,8 +19,8 @@
     {
       "page_id": "slide::S1",
       "kind": "quiz",
-      "badge": "QCM S1",
-      "title": "QCM - Introduction à la cinématique",
+      "badge": "Exercice S1",
+      "title": "Introduction à la cinématique",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s1.html",
       "json_href": "slide-s1.json"
@@ -37,8 +37,8 @@
     {
       "page_id": "slide::S2",
       "kind": "quiz",
-      "badge": "QCM S2",
-      "title": "QCM - Système, point matériel et référentiel",
+      "badge": "Exercice S2",
+      "title": "Système, point matériel et référentiel",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s2.html",
       "json_href": "slide-s2.json"
@@ -55,8 +55,8 @@
     {
       "page_id": "slide::S3",
       "kind": "quiz",
-      "badge": "QCM S3",
-      "title": "QCM - Trajectoire et position",
+      "badge": "Exercice S3",
+      "title": "Trajectoire et position",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s3.html",
       "json_href": "slide-s3.json"
@@ -73,8 +73,8 @@
     {
       "page_id": "slide::S4",
       "kind": "quiz",
-      "badge": "QCM S4",
-      "title": "QCM - Vitesse instantanée",
+      "badge": "Exercice S4",
+      "title": "Vitesse instantanée",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s4.html",
       "json_href": "slide-s4.json"
@@ -91,8 +91,8 @@
     {
       "page_id": "slide::S5",
       "kind": "quiz",
-      "badge": "QCM S5",
-      "title": "QCM - Vitesse moyenne et mesures de vitesse",
+      "badge": "Exercice S5",
+      "title": "Vitesse moyenne et mesures de vitesse",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s5.html",
       "json_href": "slide-s5.json"
@@ -109,8 +109,8 @@
     {
       "page_id": "slide::S6",
       "kind": "quiz",
-      "badge": "QCM S6",
-      "title": "QCM - Accélération : définition et unité",
+      "badge": "Exercice S6",
+      "title": "Accélération : définition et unité",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s6.html",
       "json_href": "slide-s6.json"
@@ -127,8 +127,8 @@
     {
       "page_id": "slide::S7",
       "kind": "quiz",
-      "badge": "QCM S7",
-      "title": "QCM - Accélération tangentielle et normale",
+      "badge": "Exercice S7",
+      "title": "Accélération tangentielle et normale",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s7.html",
       "json_href": "slide-s7.json"
@@ -145,8 +145,8 @@
     {
       "page_id": "slide::S8",
       "kind": "quiz",
-      "badge": "QCM S8",
-      "title": "QCM - Mouvement rectiligne uniforme (MRU)",
+      "badge": "Exercice S8",
+      "title": "Mouvement rectiligne uniforme (MRU)",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s8.html",
       "json_href": "slide-s8.json"
@@ -163,8 +163,8 @@
     {
       "page_id": "slide::S9",
       "kind": "quiz",
-      "badge": "QCM S9",
-      "title": "QCM - Mouvement rectiligne uniformément accéléré (MRUA)",
+      "badge": "Exercice S9",
+      "title": "Mouvement rectiligne uniformément accéléré (MRUA)",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s9.html",
       "json_href": "slide-s9.json"
@@ -181,8 +181,8 @@
     {
       "page_id": "slide::S10",
       "kind": "quiz",
-      "badge": "QCM S10",
-      "title": "QCM - Mouvement circulaire uniforme (MCU)",
+      "badge": "Exercice S10",
+      "title": "Mouvement circulaire uniforme (MCU)",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s10.html",
       "json_href": "slide-s10.json"
@@ -199,8 +199,8 @@
     {
       "page_id": "slide::S11",
       "kind": "quiz",
-      "badge": "QCM S11",
-      "title": "QCM - Mouvement circulaire accéléré",
+      "badge": "Exercice S11",
+      "title": "Mouvement circulaire accéléré",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s11.html",
       "json_href": "slide-s11.json"
@@ -217,8 +217,8 @@
     {
       "page_id": "slide::S12",
       "kind": "quiz",
-      "badge": "QCM S12",
-      "title": "QCM - Équations horaires et trajectoires",
+      "badge": "Exercice S12",
+      "title": "Équations horaires et trajectoires",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s12.html",
       "json_href": "slide-s12.json"
@@ -235,8 +235,8 @@
     {
       "page_id": "slide::S13",
       "kind": "quiz",
-      "badge": "QCM S13",
-      "title": "QCM - Grandeurs angulaires et linéaires",
+      "badge": "Exercice S13",
+      "title": "Grandeurs angulaires et linéaires",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s13.html",
       "json_href": "slide-s13.json"
@@ -253,8 +253,8 @@
     {
       "page_id": "slide::S14",
       "kind": "quiz",
-      "badge": "QCM S14",
-      "title": "QCM - Méthodes graphiques et expérimentales",
+      "badge": "Exercice S14",
+      "title": "Méthodes graphiques et expérimentales",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s14.html",
       "json_href": "slide-s14.json"
@@ -271,8 +271,8 @@
     {
       "page_id": "slide::S15",
       "kind": "quiz",
-      "badge": "QCM S15",
-      "title": "QCM - Étude de cas – Mouvement circulaire d’une hélice",
+      "badge": "Exercice S15",
+      "title": "Étude de cas – Mouvement circulaire d’une hélice",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s15.html",
       "json_href": "slide-s15.json"
@@ -289,8 +289,8 @@
     {
       "page_id": "slide::S16",
       "kind": "quiz",
-      "badge": "QCM S16",
-      "title": "QCM - Approche numérique avec Python",
+      "badge": "Exercice S16",
+      "title": "Approche numérique avec Python",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s16.html",
       "json_href": "slide-s16.json"
@@ -307,8 +307,8 @@
     {
       "page_id": "slide::S17",
       "kind": "quiz",
-      "badge": "QCM S17",
-      "title": "QCM - Applications aéronautiques typiques",
+      "badge": "Exercice S17",
+      "title": "Applications aéronautiques typiques",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s17.html",
       "json_href": "slide-s17.json"
@@ -325,8 +325,8 @@
     {
       "page_id": "slide::S18",
       "kind": "quiz",
-      "badge": "QCM S18",
-      "title": "QCM - Formulaire récapitulatif",
+      "badge": "Exercice S18",
+      "title": "Formulaire récapitulatif",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s18.html",
       "json_href": "slide-s18.json"
@@ -343,8 +343,8 @@
     {
       "page_id": "slide::S19",
       "kind": "quiz",
-      "badge": "QCM S19",
-      "title": "QCM - Erreurs fréquentes à éviter",
+      "badge": "Exercice S19",
+      "title": "Erreurs fréquentes à éviter",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s19.html",
       "json_href": "slide-s19.json"
@@ -361,8 +361,8 @@
     {
       "page_id": "slide::S20",
       "kind": "quiz",
-      "badge": "QCM S20",
-      "title": "QCM - Conclusion",
+      "badge": "Exercice S20",
+      "title": "Conclusion",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s20.html",
       "json_href": "slide-s20.json"

@@ -1,6 +1,6 @@
 {
-  "site_build_version": 40,
-  "cache_token": "40-09109eeba27d",
+  "site_build_version": 42,
+  "cache_token": "42-01df73df46ab",
   "viewer_mode": "user",
   "page_count": 39,
   "slide_count": 20,
@@ -19,8 +19,8 @@
     {
       "page_id": "slide::s1_s2",
       "kind": "quiz",
-      "badge": "QCM s1_s2",
-      "title": "QCM - Couverture et sommaire du module « L’individu dans l’organisation »",
+      "badge": "Exercice s1_s2",
+      "title": "Couverture et sommaire du module « L’individu dans l’organisation »",
       "subtitle": "2 questions - correction immédiate",
       "href": "slide-s1-s2.html",
       "json_href": "slide-s1-s2.json"
@@ -37,8 +37,8 @@
     {
       "page_id": "slide::s3",
       "kind": "quiz",
-      "badge": "QCM s3",
-      "title": "QCM - Découverte des métiers de l’aéronautique",
+      "badge": "Exercice s3",
+      "title": "Découverte des métiers de l’aéronautique",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s3.html",
       "json_href": "slide-s3.json"
@@ -55,8 +55,8 @@
     {
       "page_id": "slide::s4",
       "kind": "quiz",
-      "badge": "QCM s4",
-      "title": "QCM - Ingénieur en aéronautique",
+      "badge": "Exercice s4",
+      "title": "Ingénieur en aéronautique",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s4.html",
       "json_href": "slide-s4.json"
@@ -73,8 +73,8 @@
     {
       "page_id": "slide::s5",
       "kind": "quiz",
-      "badge": "QCM s5",
-      "title": "QCM - Pilote de ligne",
+      "badge": "Exercice s5",
+      "title": "Pilote de ligne",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s5.html",
       "json_href": "slide-s5.json"
@@ -91,8 +91,8 @@
     {
       "page_id": "slide::s6",
       "kind": "quiz",
-      "badge": "QCM s6",
-      "title": "QCM - Mécanicien moteur / mécanicien aéronautique",
+      "badge": "Exercice s6",
+      "title": "Mécanicien moteur / mécanicien aéronautique",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s6.html",
       "json_href": "slide-s6.json"
@@ -109,8 +109,8 @@
     {
       "page_id": "slide::s7",
       "kind": "quiz",
-      "badge": "QCM s7",
-      "title": "QCM - Avitailleur",
+      "badge": "Exercice s7",
+      "title": "Avitailleur",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s7.html",
       "json_href": "slide-s7.json"
@@ -127,8 +127,8 @@
     {
       "page_id": "slide::s8",
       "kind": "quiz",
-      "badge": "QCM s8",
-      "title": "QCM - Aiguilleur du ciel",
+      "badge": "Exercice s8",
+      "title": "Aiguilleur du ciel",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s8.html",
       "json_href": "slide-s8.json"
@@ -145,8 +145,8 @@
     {
       "page_id": "slide::s9",
       "kind": "quiz",
-      "badge": "QCM s9",
-      "title": "QCM - Chef d’escale",
+      "badge": "Exercice s9",
+      "title": "Chef d’escale",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s9.html",
       "json_href": "slide-s9.json"
@@ -163,8 +163,8 @@
     {
       "page_id": "slide::s10",
       "kind": "quiz",
-      "badge": "QCM s10",
-      "title": "QCM - Technicien d’essai",
+      "badge": "Exercice s10",
+      "title": "Technicien d’essai",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s10.html",
       "json_href": "slide-s10.json"
@@ -181,8 +181,8 @@
     {
       "page_id": "slide::s11_s12",
       "kind": "quiz",
-      "badge": "QCM s11_s12",
-      "title": "QCM - Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »",
+      "badge": "Exercice s11_s12",
+      "title": "Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s11-s12.html",
       "json_href": "slide-s11-s12.json"
@@ -199,8 +199,8 @@
     {
       "page_id": "slide::s13",
       "kind": "quiz",
-      "badge": "QCM s13",
-      "title": "QCM - Les droits du salarié",
+      "badge": "Exercice s13",
+      "title": "Les droits du salarié",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s13.html",
       "json_href": "slide-s13.json"
@@ -217,8 +217,8 @@
     {
       "page_id": "slide::s14",
       "kind": "quiz",
-      "badge": "QCM s14",
-      "title": "QCM - Les devoirs du salarié",
+      "badge": "Exercice s14",
+      "title": "Les devoirs du salarié",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s14.html",
       "json_href": "slide-s14.json"
@@ -235,8 +235,8 @@
     {
       "page_id": "slide::s15",
       "kind": "quiz",
-      "badge": "QCM s15",
-      "title": "QCM - Le contrat de travail",
+      "badge": "Exercice s15",
+      "title": "Le contrat de travail",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s15.html",
       "json_href": "slide-s15.json"
@@ -271,8 +271,8 @@
     {
       "page_id": "slide::s18",
       "kind": "quiz",
-      "badge": "QCM s18",
-      "title": "QCM - Santé en entreprise aéronautique",
+      "badge": "Exercice s18",
+      "title": "Santé en entreprise aéronautique",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s18.html",
       "json_href": "slide-s18.json"
@@ -289,8 +289,8 @@
     {
       "page_id": "slide::s19",
       "kind": "quiz",
-      "badge": "QCM s19",
-      "title": "QCM - Sécurité en entreprise aéronautique",
+      "badge": "Exercice s19",
+      "title": "Sécurité en entreprise aéronautique",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s19.html",
       "json_href": "slide-s19.json"
@@ -307,8 +307,8 @@
     {
       "page_id": "slide::s20",
       "kind": "quiz",
-      "badge": "QCM s20",
-      "title": "QCM - Qualité en entreprise aéronautique",
+      "badge": "Exercice s20",
+      "title": "Qualité en entreprise aéronautique",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s20.html",
       "json_href": "slide-s20.json"
@@ -325,8 +325,8 @@
     {
       "page_id": "slide::s21",
       "kind": "quiz",
-      "badge": "QCM s21",
-      "title": "QCM - Interaction entre santé, sécurité et qualité",
+      "badge": "Exercice s21",
+      "title": "Interaction entre santé, sécurité et qualité",
       "subtitle": "3 questions - correction immédiate",
       "href": "slide-s21.html",
       "json_href": "slide-s21.json"
@@ -343,8 +343,8 @@
     {
       "page_id": "slide::s22",
       "kind": "quiz",
-      "badge": "QCM s22",
-      "title": "QCM - Rémunération et parcours professionnels",
+      "badge": "Exercice s22",
+      "title": "Rémunération et parcours professionnels",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s22.html",
       "json_href": "slide-s22.json"

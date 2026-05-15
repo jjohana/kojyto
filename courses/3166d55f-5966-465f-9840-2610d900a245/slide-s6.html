@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - Accélération : définition et unité</title>
+  <title>Accélération : définition et unité</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -1667,14 +1667,25 @@ html[data-embed="1"] .quiz-shell {
 }
 
 html[data-embed="1"] .site-main {
-  gap: 8px;
+  gap: 4px;
 }
 
 html[data-embed="1"] .hero-panel {
   grid-template-columns: 1fr;
-  gap: 8px;
-  padding: 14px 18px;
-  border-radius: 20px;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(20, 37, 58, 0.08);
+}
+
+html[data-embed="1"] .quiz-shell {
+  gap: 6px;
+}
+
+html[data-embed="1"] .quiz-hero {
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 16px;
   box-shadow: 0 8px 22px rgba(20, 37, 58, 0.08);
 }
 
@@ -1684,64 +1695,113 @@ html[data-embed="1"] .hero-copy::after {
 }
 
 html[data-embed="1"] .hero-copy h1 {
-  font-size: clamp(1.32rem, 2vw, 2.05rem);
-  line-height: 1.06;
+  font-size: clamp(1.16rem, 1.55vw, 1.66rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+html[data-embed="1"] .quiz-hero h1 {
+  font-size: clamp(1.16rem, 1.55vw, 1.66rem);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
 html[data-embed="1"] .hero-copy .objective {
-  margin-top: 6px;
-  max-width: 95ch;
-  font-size: 0.94rem;
-  line-height: 1.38;
+  margin-top: 3px;
+  max-width: 110ch;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+
+html[data-embed="1"] .quiz-hero p:not(.eyebrow) {
+  max-width: 110ch;
+  font-size: 0.84rem;
+  line-height: 1.25;
 }
 
 html[data-embed="1"] .eyebrow {
-  gap: 7px;
-  margin-bottom: 5px;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  gap: 5px;
+  margin-bottom: 2px;
+  font-size: 0.6rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
 }
 
 html[data-embed="1"] .eyebrow::before {
-  width: 20px;
+  width: 16px;
 }
 
 html[data-embed="1"] .narration-panel {
-  gap: 6px;
-  margin-top: 10px;
-  padding: 10px 12px;
-  border-radius: 16px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  padding: 7px 10px;
+  border-radius: 14px;
   box-shadow: none;
 }
 
+html[data-embed="1"] .narration-panel-header {
+  display: contents;
+}
+
 html[data-embed="1"] .narration-panel strong {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+html[data-embed="1"] .narration-audio-actions {
+  grid-column: 3;
+  grid-row: 1;
+  gap: 6px;
 }
 
 html[data-embed="1"] .narration-retry,
 html[data-embed="1"] .narration-speed {
-  min-height: 30px;
-  padding: 6px 10px;
+  min-height: 28px;
+  padding: 5px 9px;
   border-radius: 10px;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
 }
 
 html[data-embed="1"] .narration-panel audio {
-  height: 38px;
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  height: 32px;
 }
 
 html[data-embed="1"] .visual-summary-panel {
-  gap: 10px;
-  margin-top: 12px;
-  padding: 14px 18px 18px;
-  border-radius: 20px;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 10px 14px 14px;
+  border-radius: 16px;
 }
 
 html[data-embed="1"] .visual-summary-panel .visual-summary-title {
-  font-size: 1.12rem;
-  line-height: 1.08;
+  font-size: 1rem;
+  line-height: 1.02;
+}
+
+@media (max-width: 760px) {
+  html[data-embed="1"] .narration-panel {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  html[data-embed="1"] .narration-panel-header {
+    display: flex;
+  }
+
+  html[data-embed="1"] .narration-panel strong,
+  html[data-embed="1"] .narration-audio-actions,
+  html[data-embed="1"] .narration-panel audio {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
 html[data-embed="1"] .block,
@@ -2212,13 +2272,13 @@ html[data-deck="1"] .site-sidebar {
       
       <section class="gamification-panel" data-gamification-widget>
         <div class="gamification-header">
-          <strong>Progression QCM</strong>
+          <strong>Progression</strong>
           <span data-gamification-medal>Aucune médaille</span>
         </div>
         <div class="gamification-bar"><span data-gamification-bar></span></div>
         <div class="gamification-stats">
           <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
-          <span><strong data-gamification-count>0/0 QCM</strong><small>terminés</small></span>
+          <span><strong data-gamification-count>0/0</strong><small>terminés</small></span>
           <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
         </div>
         <p data-gamification-next>Prochaine : Bronze</p>
@@ -2256,8 +2316,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S1"
         >
-          <strong>QCM S1</strong>
-          <span>QCM - Introduction à la cinématique</span>
+          <strong>Exercice S1</strong>
+          <span>Introduction à la cinématique</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2282,8 +2342,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S2"
         >
-          <strong>QCM S2</strong>
-          <span>QCM - Système, point matériel et référentiel</span>
+          <strong>Exercice S2</strong>
+          <span>Système, point matériel et référentiel</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2308,8 +2368,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3"
         >
-          <strong>QCM S3</strong>
-          <span>QCM - Trajectoire et position</span>
+          <strong>Exercice S3</strong>
+          <span>Trajectoire et position</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2334,8 +2394,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S4"
         >
-          <strong>QCM S4</strong>
-          <span>QCM - Vitesse instantanée</span>
+          <strong>Exercice S4</strong>
+          <span>Vitesse instantanée</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2360,8 +2420,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5"
         >
-          <strong>QCM S5</strong>
-          <span>QCM - Vitesse moyenne et mesures de vitesse</span>
+          <strong>Exercice S5</strong>
+          <span>Vitesse moyenne et mesures de vitesse</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2386,8 +2446,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S6"
         >
-          <strong>QCM S6</strong>
-          <span>QCM - Accélération : définition et unité</span>
+          <strong>Exercice S6</strong>
+          <span>Accélération : définition et unité</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2412,8 +2472,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7"
         >
-          <strong>QCM S7</strong>
-          <span>QCM - Accélération tangentielle et normale</span>
+          <strong>Exercice S7</strong>
+          <span>Accélération tangentielle et normale</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2438,8 +2498,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S8"
         >
-          <strong>QCM S8</strong>
-          <span>QCM - Mouvement rectiligne uniforme (MRU)</span>
+          <strong>Exercice S8</strong>
+          <span>Mouvement rectiligne uniforme (MRU)</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2464,8 +2524,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S9"
         >
-          <strong>QCM S9</strong>
-          <span>QCM - Mouvement rectiligne uniformément accéléré (MRUA)</span>
+          <strong>Exercice S9</strong>
+          <span>Mouvement rectiligne uniformément accéléré (MRUA)</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2490,8 +2550,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S10"
         >
-          <strong>QCM S10</strong>
-          <span>QCM - Mouvement circulaire uniforme (MCU)</span>
+          <strong>Exercice S10</strong>
+          <span>Mouvement circulaire uniforme (MCU)</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2516,8 +2576,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S11"
         >
-          <strong>QCM S11</strong>
-          <span>QCM - Mouvement circulaire accéléré</span>
+          <strong>Exercice S11</strong>
+          <span>Mouvement circulaire accéléré</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2542,8 +2602,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S12"
         >
-          <strong>QCM S12</strong>
-          <span>QCM - Équations horaires et trajectoires</span>
+          <strong>Exercice S12</strong>
+          <span>Équations horaires et trajectoires</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2568,8 +2628,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S13"
         >
-          <strong>QCM S13</strong>
-          <span>QCM - Grandeurs angulaires et linéaires</span>
+          <strong>Exercice S13</strong>
+          <span>Grandeurs angulaires et linéaires</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2594,8 +2654,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S14"
         >
-          <strong>QCM S14</strong>
-          <span>QCM - Méthodes graphiques et expérimentales</span>
+          <strong>Exercice S14</strong>
+          <span>Méthodes graphiques et expérimentales</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2620,8 +2680,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S15"
         >
-          <strong>QCM S15</strong>
-          <span>QCM - Étude de cas – Mouvement circulaire d’une hélice</span>
+          <strong>Exercice S15</strong>
+          <span>Étude de cas – Mouvement circulaire d’une hélice</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2646,8 +2706,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S16"
         >
-          <strong>QCM S16</strong>
-          <span>QCM - Approche numérique avec Python</span>
+          <strong>Exercice S16</strong>
+          <span>Approche numérique avec Python</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2672,8 +2732,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S17"
         >
-          <strong>QCM S17</strong>
-          <span>QCM - Applications aéronautiques typiques</span>
+          <strong>Exercice S17</strong>
+          <span>Applications aéronautiques typiques</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2698,8 +2758,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S18"
         >
-          <strong>QCM S18</strong>
-          <span>QCM - Formulaire récapitulatif</span>
+          <strong>Exercice S18</strong>
+          <span>Formulaire récapitulatif</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2724,8 +2784,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S19"
         >
-          <strong>QCM S19</strong>
-          <span>QCM - Erreurs fréquentes à éviter</span>
+          <strong>Exercice S19</strong>
+          <span>Erreurs fréquentes à éviter</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2750,8 +2810,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S20"
         >
-          <strong>QCM S20</strong>
-          <span>QCM - Conclusion</span>
+          <strong>Exercice S20</strong>
+          <span>Conclusion</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2780,7 +2840,7 @@ html[data-deck="1"] .site-sidebar {
         <div class="toolbar-meta">
           <span>Page 12/41</span>
           
-          <span>QCM</span>
+          <span>Exercice</span>
         </div>
         <div class="toolbar-actions">
           
@@ -2810,18 +2870,15 @@ html[data-deck="1"] .site-sidebar {
       <section class="quiz-shell">
         <section class="quiz-hero">
           <div>
-            <p class="eyebrow">QCM</p>
-            <h1>QCM - Accélération : définition et unité</h1>
+            <p class="eyebrow">Exercice</p>
+            <h1>Accélération : définition et unité</h1>
             <p>
               
-              QCM intermédiaire avec correction immédiate question par question.
+              Correction immédiate question par question.
               
             </p>
           </div>
-          <div class="quiz-meta">
-            <span class="meta-pill">5 questions</span>
-            
-          </div>
+          
         </section>
 
         
@@ -2961,7 +3018,7 @@ html[data-deck="1"] .site-sidebar {
     }());
   </script>
   
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::40-bb68ee1a9547", "legacy_storage_keys": ["kojyto:gamification::24-c1b54d70ed7d", "kojyto:gamification::25-ad99c844b820", "kojyto:gamification::26-1274b22aa3ef", "kojyto:gamification::27-358d76bb1ca9", "kojyto:gamification::28-3f45e6c72a3f", "kojyto:gamification::29-df500a451279", "kojyto:gamification::30-68730106658e", "kojyto:gamification::31-47390f8e29b0", "kojyto:gamification::32-9bdc76b3bfa6", "kojyto:gamification::33-9c8a6049d0ae", "kojyto:gamification::34-47040c144fb1", "kojyto:gamification::35-6eda588d5020", "kojyto:gamification::36-e8566b4c2545", "kojyto:gamification::37-9e8b1486c96c", "kojyto:gamification::38-636e544402a6", "kojyto:gamification::39-8b4ab3ee2365"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "QCM - Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "QCM - Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "QCM - Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "QCM - Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "QCM - Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "QCM - Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "QCM - Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "QCM - Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "QCM - Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "QCM - Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "QCM - Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "QCM - Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "QCM - Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "QCM - Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "QCM - Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "QCM - Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "QCM - Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "QCM - Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::42-84b0f6673b5e", "legacy_storage_keys": ["kojyto:gamification::24-c1b54d70ed7d", "kojyto:gamification::25-ad99c844b820", "kojyto:gamification::26-1274b22aa3ef", "kojyto:gamification::27-358d76bb1ca9", "kojyto:gamification::28-3f45e6c72a3f", "kojyto:gamification::29-df500a451279", "kojyto:gamification::30-68730106658e", "kojyto:gamification::31-47390f8e29b0", "kojyto:gamification::32-9bdc76b3bfa6", "kojyto:gamification::33-9c8a6049d0ae", "kojyto:gamification::34-47040c144fb1", "kojyto:gamification::35-6eda588d5020", "kojyto:gamification::36-e8566b4c2545", "kojyto:gamification::37-9e8b1486c96c", "kojyto:gamification::38-636e544402a6", "kojyto:gamification::39-8b4ab3ee2365", "kojyto:gamification::40-bb68ee1a9547", "kojyto:gamification::41-93894c5a83c5"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");
@@ -3146,7 +3203,7 @@ html[data-deck="1"] .site-sidebar {
   function renderGamification() {
     const summary = summarize(loadState());
     setText("[data-gamification-percent]", summary.percent + "%");
-    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total);
     setText("[data-gamification-xp]", summary.xp + " XP");
     setText("[data-gamification-level]", "Niveau " + summary.level);
     setText("[data-gamification-medal]", summary.medalLabel || "Aucune médaille");

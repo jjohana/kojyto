@@ -1667,14 +1667,25 @@ html[data-embed="1"] .quiz-shell {
 }
 
 html[data-embed="1"] .site-main {
-  gap: 8px;
+  gap: 4px;
 }
 
 html[data-embed="1"] .hero-panel {
   grid-template-columns: 1fr;
-  gap: 8px;
-  padding: 14px 18px;
-  border-radius: 20px;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(20, 37, 58, 0.08);
+}
+
+html[data-embed="1"] .quiz-shell {
+  gap: 6px;
+}
+
+html[data-embed="1"] .quiz-hero {
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 16px;
   box-shadow: 0 8px 22px rgba(20, 37, 58, 0.08);
 }
 
@@ -1684,64 +1695,113 @@ html[data-embed="1"] .hero-copy::after {
 }
 
 html[data-embed="1"] .hero-copy h1 {
-  font-size: clamp(1.32rem, 2vw, 2.05rem);
-  line-height: 1.06;
+  font-size: clamp(1.16rem, 1.55vw, 1.66rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+html[data-embed="1"] .quiz-hero h1 {
+  font-size: clamp(1.16rem, 1.55vw, 1.66rem);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
 html[data-embed="1"] .hero-copy .objective {
-  margin-top: 6px;
-  max-width: 95ch;
-  font-size: 0.94rem;
-  line-height: 1.38;
+  margin-top: 3px;
+  max-width: 110ch;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+
+html[data-embed="1"] .quiz-hero p:not(.eyebrow) {
+  max-width: 110ch;
+  font-size: 0.84rem;
+  line-height: 1.25;
 }
 
 html[data-embed="1"] .eyebrow {
-  gap: 7px;
-  margin-bottom: 5px;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  gap: 5px;
+  margin-bottom: 2px;
+  font-size: 0.6rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
 }
 
 html[data-embed="1"] .eyebrow::before {
-  width: 20px;
+  width: 16px;
 }
 
 html[data-embed="1"] .narration-panel {
-  gap: 6px;
-  margin-top: 10px;
-  padding: 10px 12px;
-  border-radius: 16px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  padding: 7px 10px;
+  border-radius: 14px;
   box-shadow: none;
 }
 
+html[data-embed="1"] .narration-panel-header {
+  display: contents;
+}
+
 html[data-embed="1"] .narration-panel strong {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+html[data-embed="1"] .narration-audio-actions {
+  grid-column: 3;
+  grid-row: 1;
+  gap: 6px;
 }
 
 html[data-embed="1"] .narration-retry,
 html[data-embed="1"] .narration-speed {
-  min-height: 30px;
-  padding: 6px 10px;
+  min-height: 28px;
+  padding: 5px 9px;
   border-radius: 10px;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
 }
 
 html[data-embed="1"] .narration-panel audio {
-  height: 38px;
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  height: 32px;
 }
 
 html[data-embed="1"] .visual-summary-panel {
-  gap: 10px;
-  margin-top: 12px;
-  padding: 14px 18px 18px;
-  border-radius: 20px;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 10px 14px 14px;
+  border-radius: 16px;
 }
 
 html[data-embed="1"] .visual-summary-panel .visual-summary-title {
-  font-size: 1.12rem;
-  line-height: 1.08;
+  font-size: 1rem;
+  line-height: 1.02;
+}
+
+@media (max-width: 760px) {
+  html[data-embed="1"] .narration-panel {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  html[data-embed="1"] .narration-panel-header {
+    display: flex;
+  }
+
+  html[data-embed="1"] .narration-panel strong,
+  html[data-embed="1"] .narration-audio-actions,
+  html[data-embed="1"] .narration-panel audio {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
 html[data-embed="1"] .block,
@@ -2212,13 +2272,13 @@ html[data-deck="1"] .site-sidebar {
       
       <section class="gamification-panel" data-gamification-widget>
         <div class="gamification-header">
-          <strong>Progression QCM</strong>
+          <strong>Progression</strong>
           <span data-gamification-medal>Aucune médaille</span>
         </div>
         <div class="gamification-bar"><span data-gamification-bar></span></div>
         <div class="gamification-stats">
           <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
-          <span><strong data-gamification-count>0/0 QCM</strong><small>terminés</small></span>
+          <span><strong data-gamification-count>0/0</strong><small>terminés</small></span>
           <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
         </div>
         <p data-gamification-next>Prochaine : Bronze</p>
@@ -2256,8 +2316,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S1-1"
         >
-          <strong>QCM S1-1</strong>
-          <span>QCM - Origine de la poussée : terme réacteur</span>
+          <strong>Exercice S1-1</strong>
+          <span>Origine de la poussée : terme réacteur</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2282,8 +2342,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S1-2"
         >
-          <strong>QCM S1-2</strong>
-          <span>QCM - Exemple numérique et architecture double flux</span>
+          <strong>Exercice S1-2</strong>
+          <span>Exemple numérique et architecture double flux</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2308,8 +2368,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S1-3"
         >
-          <strong>QCM S1-3</strong>
-          <span>QCM - Tuyère, poussée brute et poussée spécifique</span>
+          <strong>Exercice S1-3</strong>
+          <span>Tuyère, poussée brute et poussée spécifique</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2334,8 +2394,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S2-1"
         >
-          <strong>QCM S2-1</strong>
-          <span>QCM - Consommation horaire et consommation spécifique</span>
+          <strong>Exercice S2-1</strong>
+          <span>Consommation horaire et consommation spécifique</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2360,8 +2420,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S2-2"
         >
-          <strong>QCM S2-2</strong>
-          <span>QCM - Repères de consommation et surveillance moteur</span>
+          <strong>Exercice S2-2</strong>
+          <span>Repères de consommation et surveillance moteur</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2386,8 +2446,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3-1"
         >
-          <strong>QCM S3-1</strong>
-          <span>QCM - Puissance calorifique et puissance thermique théorique</span>
+          <strong>Exercice S3-1</strong>
+          <span>Puissance calorifique et puissance thermique théorique</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2412,8 +2472,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3-2"
         >
-          <strong>QCM S3-2</strong>
-          <span>QCM - Puissance thermique réelle et puissance propulsive</span>
+          <strong>Exercice S3-2</strong>
+          <span>Puissance thermique réelle et puissance propulsive</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2438,8 +2498,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3-3"
         >
-          <strong>QCM S3-3</strong>
-          <span>QCM - Rendements de la chaîne propulsive</span>
+          <strong>Exercice S3-3</strong>
+          <span>Rendements de la chaîne propulsive</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2464,8 +2524,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3-4"
         >
-          <strong>QCM S3-4</strong>
-          <span>QCM - Lecture du diagramme d’écoulement des gaz</span>
+          <strong>Exercice S3-4</strong>
+          <span>Lecture du diagramme d’écoulement des gaz</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2490,8 +2550,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S4-1"
         >
-          <strong>QCM S4-1</strong>
-          <span>QCM - Taux de dilution et exemples de moteurs</span>
+          <strong>Exercice S4-1</strong>
+          <span>Taux de dilution et exemples de moteurs</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2516,8 +2576,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S4-2"
         >
-          <strong>QCM S4-2</strong>
-          <span>QCM - Principe du turbopropulseur</span>
+          <strong>Exercice S4-2</strong>
+          <span>Principe du turbopropulseur</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2542,8 +2602,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-1"
         >
-          <strong>QCM S5-1</strong>
-          <span>QCM - Canal d’éjection et rôle de la tuyère</span>
+          <strong>Exercice S5-1</strong>
+          <span>Canal d’éjection et rôle de la tuyère</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2568,8 +2628,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-2"
         >
-          <strong>QCM S5-2</strong>
-          <span>QCM - Tuyères variables, double flux et adaptation au vol</span>
+          <strong>Exercice S5-2</strong>
+          <span>Tuyères variables, double flux et adaptation au vol</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2594,8 +2654,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-3"
         >
-          <strong>QCM S5-3</strong>
-          <span>QCM - Tuyère convergente, rapport critique et supersonique</span>
+          <strong>Exercice S5-3</strong>
+          <span>Tuyère convergente, rapport critique et supersonique</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2620,8 +2680,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S6-1"
         >
-          <strong>QCM S6-1</strong>
-          <span>QCM - Post-combustion et bruit de tuyère</span>
+          <strong>Exercice S6-1</strong>
+          <span>Post-combustion et bruit de tuyère</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2646,8 +2706,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7-1"
         >
-          <strong>QCM S7-1</strong>
-          <span>QCM - But et formule de la poussée inverse</span>
+          <strong>Exercice S7-1</strong>
+          <span>But et formule de la poussée inverse</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2672,8 +2732,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7-2"
         >
-          <strong>QCM S7-2</strong>
-          <span>QCM - Poussée inverse en double flux et ordres de grandeur</span>
+          <strong>Exercice S7-2</strong>
+          <span>Poussée inverse en double flux et ordres de grandeur</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2698,8 +2758,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7-3"
         >
-          <strong>QCM S7-3</strong>
-          <span>QCM - Calcul et interprétation de la poussée inverse</span>
+          <strong>Exercice S7-3</strong>
+          <span>Calcul et interprétation de la poussée inverse</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2724,8 +2784,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S8-1"
         >
-          <strong>QCM S8-1</strong>
-          <span>QCM - Commandes, sécurités et limitations de l’inverseur</span>
+          <strong>Exercice S8-1</strong>
+          <span>Commandes, sécurités et limitations de l’inverseur</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2750,8 +2810,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S8-2"
         >
-          <strong>QCM S8-2</strong>
-          <span>QCM - Dispositif pneumatique et séquence de fonctionnement</span>
+          <strong>Exercice S8-2</strong>
+          <span>Dispositif pneumatique et séquence de fonctionnement</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2776,8 +2836,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S9-1"
         >
-          <strong>QCM S9-1</strong>
-          <span>QCM - Rôle et fonctions du train d’atterrissage</span>
+          <strong>Exercice S9-1</strong>
+          <span>Rôle et fonctions du train d’atterrissage</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2802,8 +2862,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S9-2"
         >
-          <strong>QCM S9-2</strong>
-          <span>QCM - Types de trains et composition</span>
+          <strong>Exercice S9-2</strong>
+          <span>Types de trains et composition</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2828,8 +2888,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S9-3"
         >
-          <strong>QCM S9-3</strong>
-          <span>QCM - Géométrie des trains et dispositions des atterrisseurs</span>
+          <strong>Exercice S9-3</strong>
+          <span>Géométrie des trains et dispositions des atterrisseurs</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2854,8 +2914,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S10-1"
         >
-          <strong>QCM S10-1</strong>
-          <span>QCM - Amortisseurs oléopneumatiques : rôle et principe</span>
+          <strong>Exercice S10-1</strong>
+          <span>Amortisseurs oléopneumatiques : rôle et principe</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2880,8 +2940,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S10-2"
         >
-          <strong>QCM S10-2</strong>
-          <span>QCM - Fonctionnement en trois temps de l’amortisseur</span>
+          <strong>Exercice S10-2</strong>
+          <span>Fonctionnement en trois temps de l’amortisseur</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2906,8 +2966,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S10-3"
         >
-          <strong>QCM S10-3</strong>
-          <span>QCM - Rentrée-sortie, verrouillage et secours</span>
+          <strong>Exercice S10-3</strong>
+          <span>Rentrée-sortie, verrouillage et secours</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2932,8 +2992,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S11-1"
         >
-          <strong>QCM S11-1</strong>
-          <span>QCM - Voyants, roues et pneumatiques</span>
+          <strong>Exercice S11-1</strong>
+          <span>Voyants, roues et pneumatiques</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2958,8 +3018,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S11-2"
         >
-          <strong>QCM S11-2</strong>
-          <span>QCM - Freinage, adhérence et systèmes de protection</span>
+          <strong>Exercice S11-2</strong>
+          <span>Freinage, adhérence et systèmes de protection</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2984,8 +3044,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S11-3"
         >
-          <strong>QCM S11-3</strong>
-          <span>QCM - Anti-patinage, pneus, dirigibilité et surveillance</span>
+          <strong>Exercice S11-3</strong>
+          <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -3010,8 +3070,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S12-1"
         >
-          <strong>QCM S12-1</strong>
-          <span>QCM - QCM d’entraînement : notions clés des atterrisseurs</span>
+          <strong>Exercice S12-1</strong>
+          <span>QCM d’entraînement : notions clés des atterrisseurs</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -3379,7 +3439,7 @@ html[data-deck="1"] .site-sidebar {
     }());
   </script>
   
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::40-b775bc241e13", "legacy_storage_keys": ["kojyto:gamification::24-fe511b4eeb85", "kojyto:gamification::25-23e56e2a99ff", "kojyto:gamification::26-8ea9953112a8", "kojyto:gamification::27-338ee7ac1fd1", "kojyto:gamification::28-a59087fb9e37", "kojyto:gamification::29-2c336a0b1138", "kojyto:gamification::30-9679214b2fec", "kojyto:gamification::31-df4f4450fa6b", "kojyto:gamification::32-3fff4bc49a99", "kojyto:gamification::33-f7c36b9d4bf1", "kojyto:gamification::34-c79f6dc54219", "kojyto:gamification::35-206023b77920", "kojyto:gamification::36-43e9a35917c0", "kojyto:gamification::37-d47afc101f22", "kojyto:gamification::38-6e3beacd3dcc", "kojyto:gamification::39-c6c2898eb878"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "QCM - Origine de la poussée : terme réacteur", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "QCM - Exemple numérique et architecture double flux", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "QCM - Tuyère, poussée brute et poussée spécifique", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "QCM - Consommation horaire et consommation spécifique", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "QCM - Repères de consommation et surveillance moteur", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "QCM - Puissance calorifique et puissance thermique théorique", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "QCM - Puissance thermique réelle et puissance propulsive", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "QCM - Rendements de la chaîne propulsive", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "QCM - Lecture du diagramme d’écoulement des gaz", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "QCM - Taux de dilution et exemples de moteurs", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "QCM - Principe du turbopropulseur", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "QCM - Canal d’éjection et rôle de la tuyère", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "QCM - Tuyères variables, double flux et adaptation au vol", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "QCM - Tuyère convergente, rapport critique et supersonique", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "QCM - Post-combustion et bruit de tuyère", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "QCM - But et formule de la poussée inverse", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "QCM - Poussée inverse en double flux et ordres de grandeur", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "QCM - Calcul et interprétation de la poussée inverse", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S8-1", "quiz_type": "subpart", "title": "QCM - Commandes, sécurités et limitations de l’inverseur", "href": "slide-s8-1.html", "base_xp": 100}, {"quiz_id": "slide::S8-2", "quiz_type": "subpart", "title": "QCM - Dispositif pneumatique et séquence de fonctionnement", "href": "slide-s8-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-1", "quiz_type": "subpart", "title": "QCM - Rôle et fonctions du train d’atterrissage", "href": "slide-s9-1.html", "base_xp": 100}, {"quiz_id": "slide::S9-2", "quiz_type": "subpart", "title": "QCM - Types de trains et composition", "href": "slide-s9-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-3", "quiz_type": "subpart", "title": "QCM - Géométrie des trains et dispositions des atterrisseurs", "href": "slide-s9-3.html", "base_xp": 100}, {"quiz_id": "slide::S10-1", "quiz_type": "subpart", "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe", "href": "slide-s10-1.html", "base_xp": 100}, {"quiz_id": "slide::S10-2", "quiz_type": "subpart", "title": "QCM - Fonctionnement en trois temps de l’amortisseur", "href": "slide-s10-2.html", "base_xp": 100}, {"quiz_id": "slide::S10-3", "quiz_type": "subpart", "title": "QCM - Rentrée-sortie, verrouillage et secours", "href": "slide-s10-3.html", "base_xp": 100}, {"quiz_id": "slide::S11-1", "quiz_type": "subpart", "title": "QCM - Voyants, roues et pneumatiques", "href": "slide-s11-1.html", "base_xp": 100}, {"quiz_id": "slide::S11-2", "quiz_type": "subpart", "title": "QCM - Freinage, adhérence et systèmes de protection", "href": "slide-s11-2.html", "base_xp": 100}, {"quiz_id": "slide::S11-3", "quiz_type": "subpart", "title": "QCM - Anti-patinage, pneus, dirigibilité et surveillance", "href": "slide-s11-3.html", "base_xp": 100}, {"quiz_id": "slide::S12-1", "quiz_type": "subpart", "title": "QCM - QCM d’entraînement : notions clés des atterrisseurs", "href": "slide-s12-1.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::42-95954f4923fd", "legacy_storage_keys": ["kojyto:gamification::24-fe511b4eeb85", "kojyto:gamification::25-23e56e2a99ff", "kojyto:gamification::26-8ea9953112a8", "kojyto:gamification::27-338ee7ac1fd1", "kojyto:gamification::28-a59087fb9e37", "kojyto:gamification::29-2c336a0b1138", "kojyto:gamification::30-9679214b2fec", "kojyto:gamification::31-df4f4450fa6b", "kojyto:gamification::32-3fff4bc49a99", "kojyto:gamification::33-f7c36b9d4bf1", "kojyto:gamification::34-c79f6dc54219", "kojyto:gamification::35-206023b77920", "kojyto:gamification::36-43e9a35917c0", "kojyto:gamification::37-d47afc101f22", "kojyto:gamification::38-6e3beacd3dcc", "kojyto:gamification::39-c6c2898eb878", "kojyto:gamification::40-b775bc241e13", "kojyto:gamification::41-8d600d5a2855"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "Origine de la poussée : terme réacteur", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "Exemple numérique et architecture double flux", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "Tuyère, poussée brute et poussée spécifique", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "Consommation horaire et consommation spécifique", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "Repères de consommation et surveillance moteur", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "Puissance calorifique et puissance thermique théorique", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "Puissance thermique réelle et puissance propulsive", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "Rendements de la chaîne propulsive", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "Lecture du diagramme d’écoulement des gaz", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "Taux de dilution et exemples de moteurs", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "Principe du turbopropulseur", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "Canal d’éjection et rôle de la tuyère", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "Tuyères variables, double flux et adaptation au vol", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "Tuyère convergente, rapport critique et supersonique", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "Post-combustion et bruit de tuyère", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "But et formule de la poussée inverse", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "Poussée inverse en double flux et ordres de grandeur", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "Calcul et interprétation de la poussée inverse", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S8-1", "quiz_type": "subpart", "title": "Commandes, sécurités et limitations de l’inverseur", "href": "slide-s8-1.html", "base_xp": 100}, {"quiz_id": "slide::S8-2", "quiz_type": "subpart", "title": "Dispositif pneumatique et séquence de fonctionnement", "href": "slide-s8-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-1", "quiz_type": "subpart", "title": "Rôle et fonctions du train d’atterrissage", "href": "slide-s9-1.html", "base_xp": 100}, {"quiz_id": "slide::S9-2", "quiz_type": "subpart", "title": "Types de trains et composition", "href": "slide-s9-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-3", "quiz_type": "subpart", "title": "Géométrie des trains et dispositions des atterrisseurs", "href": "slide-s9-3.html", "base_xp": 100}, {"quiz_id": "slide::S10-1", "quiz_type": "subpart", "title": "Amortisseurs oléopneumatiques : rôle et principe", "href": "slide-s10-1.html", "base_xp": 100}, {"quiz_id": "slide::S10-2", "quiz_type": "subpart", "title": "Fonctionnement en trois temps de l’amortisseur", "href": "slide-s10-2.html", "base_xp": 100}, {"quiz_id": "slide::S10-3", "quiz_type": "subpart", "title": "Rentrée-sortie, verrouillage et secours", "href": "slide-s10-3.html", "base_xp": 100}, {"quiz_id": "slide::S11-1", "quiz_type": "subpart", "title": "Voyants, roues et pneumatiques", "href": "slide-s11-1.html", "base_xp": 100}, {"quiz_id": "slide::S11-2", "quiz_type": "subpart", "title": "Freinage, adhérence et systèmes de protection", "href": "slide-s11-2.html", "base_xp": 100}, {"quiz_id": "slide::S11-3", "quiz_type": "subpart", "title": "Anti-patinage, pneus, dirigibilité et surveillance", "href": "slide-s11-3.html", "base_xp": 100}, {"quiz_id": "slide::S12-1", "quiz_type": "subpart", "title": "QCM d’entraînement : notions clés des atterrisseurs", "href": "slide-s12-1.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");
@@ -3564,7 +3624,7 @@ html[data-deck="1"] .site-sidebar {
   function renderGamification() {
     const summary = summarize(loadState());
     setText("[data-gamification-percent]", summary.percent + "%");
-    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total);
     setText("[data-gamification-xp]", summary.xp + " XP");
     setText("[data-gamification-level]", "Niveau " + summary.level);
     setText("[data-gamification-medal]", summary.medalLabel || "Aucune médaille");

@@ -1,6 +1,6 @@
 {
-  "site_build_version": 40,
-  "cache_token": "40-b775bc241e13",
+  "site_build_version": 42,
+  "cache_token": "42-95954f4923fd",
   "viewer_mode": "user",
   "page_count": 61,
   "slide_count": 30,
@@ -19,8 +19,8 @@
     {
       "page_id": "slide::S1-1",
       "kind": "quiz",
-      "badge": "QCM S1-1",
-      "title": "QCM - Origine de la poussée : terme réacteur",
+      "badge": "Exercice S1-1",
+      "title": "Origine de la poussée : terme réacteur",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s1-1.html",
       "json_href": "slide-s1-1.json"
@@ -37,8 +37,8 @@
     {
       "page_id": "slide::S1-2",
       "kind": "quiz",
-      "badge": "QCM S1-2",
-      "title": "QCM - Exemple numérique et architecture double flux",
+      "badge": "Exercice S1-2",
+      "title": "Exemple numérique et architecture double flux",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s1-2.html",
       "json_href": "slide-s1-2.json"
@@ -55,8 +55,8 @@
     {
       "page_id": "slide::S1-3",
       "kind": "quiz",
-      "badge": "QCM S1-3",
-      "title": "QCM - Tuyère, poussée brute et poussée spécifique",
+      "badge": "Exercice S1-3",
+      "title": "Tuyère, poussée brute et poussée spécifique",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s1-3.html",
       "json_href": "slide-s1-3.json"
@@ -73,8 +73,8 @@
     {
       "page_id": "slide::S2-1",
       "kind": "quiz",
-      "badge": "QCM S2-1",
-      "title": "QCM - Consommation horaire et consommation spécifique",
+      "badge": "Exercice S2-1",
+      "title": "Consommation horaire et consommation spécifique",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s2-1.html",
       "json_href": "slide-s2-1.json"
@@ -91,8 +91,8 @@
     {
       "page_id": "slide::S2-2",
       "kind": "quiz",
-      "badge": "QCM S2-2",
-      "title": "QCM - Repères de consommation et surveillance moteur",
+      "badge": "Exercice S2-2",
+      "title": "Repères de consommation et surveillance moteur",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s2-2.html",
       "json_href": "slide-s2-2.json"
@@ -109,8 +109,8 @@
     {
       "page_id": "slide::S3-1",
       "kind": "quiz",
-      "badge": "QCM S3-1",
-      "title": "QCM - Puissance calorifique et puissance thermique théorique",
+      "badge": "Exercice S3-1",
+      "title": "Puissance calorifique et puissance thermique théorique",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s3-1.html",
       "json_href": "slide-s3-1.json"
@@ -127,8 +127,8 @@
     {
       "page_id": "slide::S3-2",
       "kind": "quiz",
-      "badge": "QCM S3-2",
-      "title": "QCM - Puissance thermique réelle et puissance propulsive",
+      "badge": "Exercice S3-2",
+      "title": "Puissance thermique réelle et puissance propulsive",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s3-2.html",
       "json_href": "slide-s3-2.json"
@@ -145,8 +145,8 @@
     {
       "page_id": "slide::S3-3",
       "kind": "quiz",
-      "badge": "QCM S3-3",
-      "title": "QCM - Rendements de la chaîne propulsive",
+      "badge": "Exercice S3-3",
+      "title": "Rendements de la chaîne propulsive",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s3-3.html",
       "json_href": "slide-s3-3.json"
@@ -163,8 +163,8 @@
     {
       "page_id": "slide::S3-4",
       "kind": "quiz",
-      "badge": "QCM S3-4",
-      "title": "QCM - Lecture du diagramme d’écoulement des gaz",
+      "badge": "Exercice S3-4",
+      "title": "Lecture du diagramme d’écoulement des gaz",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s3-4.html",
       "json_href": "slide-s3-4.json"
@@ -181,8 +181,8 @@
     {
       "page_id": "slide::S4-1",
       "kind": "quiz",
-      "badge": "QCM S4-1",
-      "title": "QCM - Taux de dilution et exemples de moteurs",
+      "badge": "Exercice S4-1",
+      "title": "Taux de dilution et exemples de moteurs",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s4-1.html",
       "json_href": "slide-s4-1.json"
@@ -199,8 +199,8 @@
     {
       "page_id": "slide::S4-2",
       "kind": "quiz",
-      "badge": "QCM S4-2",
-      "title": "QCM - Principe du turbopropulseur",
+      "badge": "Exercice S4-2",
+      "title": "Principe du turbopropulseur",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s4-2.html",
       "json_href": "slide-s4-2.json"
@@ -217,8 +217,8 @@
     {
       "page_id": "slide::S5-1",
       "kind": "quiz",
-      "badge": "QCM S5-1",
-      "title": "QCM - Canal d’éjection et rôle de la tuyère",
+      "badge": "Exercice S5-1",
+      "title": "Canal d’éjection et rôle de la tuyère",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s5-1.html",
       "json_href": "slide-s5-1.json"
@@ -235,8 +235,8 @@
     {
       "page_id": "slide::S5-2",
       "kind": "quiz",
-      "badge": "QCM S5-2",
-      "title": "QCM - Tuyères variables, double flux et adaptation au vol",
+      "badge": "Exercice S5-2",
+      "title": "Tuyères variables, double flux et adaptation au vol",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s5-2.html",
       "json_href": "slide-s5-2.json"
@@ -253,8 +253,8 @@
     {
       "page_id": "slide::S5-3",
       "kind": "quiz",
-      "badge": "QCM S5-3",
-      "title": "QCM - Tuyère convergente, rapport critique et supersonique",
+      "badge": "Exercice S5-3",
+      "title": "Tuyère convergente, rapport critique et supersonique",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s5-3.html",
       "json_href": "slide-s5-3.json"
@@ -271,8 +271,8 @@
     {
       "page_id": "slide::S6-1",
       "kind": "quiz",
-      "badge": "QCM S6-1",
-      "title": "QCM - Post-combustion et bruit de tuyère",
+      "badge": "Exercice S6-1",
+      "title": "Post-combustion et bruit de tuyère",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s6-1.html",
       "json_href": "slide-s6-1.json"
@@ -289,8 +289,8 @@
     {
       "page_id": "slide::S7-1",
       "kind": "quiz",
-      "badge": "QCM S7-1",
-      "title": "QCM - But et formule de la poussée inverse",
+      "badge": "Exercice S7-1",
+      "title": "But et formule de la poussée inverse",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s7-1.html",
       "json_href": "slide-s7-1.json"
@@ -307,8 +307,8 @@
     {
       "page_id": "slide::S7-2",
       "kind": "quiz",
-      "badge": "QCM S7-2",
-      "title": "QCM - Poussée inverse en double flux et ordres de grandeur",
+      "badge": "Exercice S7-2",
+      "title": "Poussée inverse en double flux et ordres de grandeur",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s7-2.html",
       "json_href": "slide-s7-2.json"
@@ -325,8 +325,8 @@
     {
       "page_id": "slide::S7-3",
       "kind": "quiz",
-      "badge": "QCM S7-3",
-      "title": "QCM - Calcul et interprétation de la poussée inverse",
+      "badge": "Exercice S7-3",
+      "title": "Calcul et interprétation de la poussée inverse",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s7-3.html",
       "json_href": "slide-s7-3.json"
@@ -343,8 +343,8 @@
     {
       "page_id": "slide::S8-1",
       "kind": "quiz",
-      "badge": "QCM S8-1",
-      "title": "QCM - Commandes, sécurités et limitations de l’inverseur",
+      "badge": "Exercice S8-1",
+      "title": "Commandes, sécurités et limitations de l’inverseur",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s8-1.html",
       "json_href": "slide-s8-1.json"
@@ -361,8 +361,8 @@
     {
       "page_id": "slide::S8-2",
       "kind": "quiz",
-      "badge": "QCM S8-2",
-      "title": "QCM - Dispositif pneumatique et séquence de fonctionnement",
+      "badge": "Exercice S8-2",
+      "title": "Dispositif pneumatique et séquence de fonctionnement",
       "subtitle": "4 questions - correction immédiate",
       "href": "slide-s8-2.html",
       "json_href": "slide-s8-2.json"
@@ -379,8 +379,8 @@
     {
       "page_id": "slide::S9-1",
       "kind": "quiz",
-      "badge": "QCM S9-1",
-      "title": "QCM - Rôle et fonctions du train d’atterrissage",
+      "badge": "Exercice S9-1",
+      "title": "Rôle et fonctions du train d’atterrissage",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s9-1.html",
       "json_href": "slide-s9-1.json"
@@ -397,8 +397,8 @@
     {
       "page_id": "slide::S9-2",
       "kind": "quiz",
-      "badge": "QCM S9-2",
-      "title": "QCM - Types de trains et composition",
+      "badge": "Exercice S9-2",
+      "title": "Types de trains et composition",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s9-2.html",
       "json_href": "slide-s9-2.json"
@@ -415,8 +415,8 @@
     {
       "page_id": "slide::S9-3",
       "kind": "quiz",
-      "badge": "QCM S9-3",
-      "title": "QCM - Géométrie des trains et dispositions des atterrisseurs",
+      "badge": "Exercice S9-3",
+      "title": "Géométrie des trains et dispositions des atterrisseurs",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s9-3.html",
       "json_href": "slide-s9-3.json"
@@ -433,8 +433,8 @@
     {
       "page_id": "slide::S10-1",
       "kind": "quiz",
-      "badge": "QCM S10-1",
-      "title": "QCM - Amortisseurs oléopneumatiques : rôle et principe",
+      "badge": "Exercice S10-1",
+      "title": "Amortisseurs oléopneumatiques : rôle et principe",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s10-1.html",
       "json_href": "slide-s10-1.json"
@@ -451,8 +451,8 @@
     {
       "page_id": "slide::S10-2",
       "kind": "quiz",
-      "badge": "QCM S10-2",
-      "title": "QCM - Fonctionnement en trois temps de l’amortisseur",
+      "badge": "Exercice S10-2",
+      "title": "Fonctionnement en trois temps de l’amortisseur",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s10-2.html",
       "json_href": "slide-s10-2.json"
@@ -469,8 +469,8 @@
     {
       "page_id": "slide::S10-3",
       "kind": "quiz",
-      "badge": "QCM S10-3",
-      "title": "QCM - Rentrée-sortie, verrouillage et secours",
+      "badge": "Exercice S10-3",
+      "title": "Rentrée-sortie, verrouillage et secours",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s10-3.html",
       "json_href": "slide-s10-3.json"
@@ -487,8 +487,8 @@
     {
       "page_id": "slide::S11-1",
       "kind": "quiz",
-      "badge": "QCM S11-1",
-      "title": "QCM - Voyants, roues et pneumatiques",
+      "badge": "Exercice S11-1",
+      "title": "Voyants, roues et pneumatiques",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s11-1.html",
       "json_href": "slide-s11-1.json"
@@ -505,8 +505,8 @@
     {
       "page_id": "slide::S11-2",
       "kind": "quiz",
-      "badge": "QCM S11-2",
-      "title": "QCM - Freinage, adhérence et systèmes de protection",
+      "badge": "Exercice S11-2",
+      "title": "Freinage, adhérence et systèmes de protection",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s11-2.html",
       "json_href": "slide-s11-2.json"
@@ -523,8 +523,8 @@
     {
       "page_id": "slide::S11-3",
       "kind": "quiz",
-      "badge": "QCM S11-3",
-      "title": "QCM - Anti-patinage, pneus, dirigibilité et surveillance",
+      "badge": "Exercice S11-3",
+      "title": "Anti-patinage, pneus, dirigibilité et surveillance",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s11-3.html",
       "json_href": "slide-s11-3.json"
@@ -541,8 +541,8 @@
     {
       "page_id": "slide::S12-1",
       "kind": "quiz",
-      "badge": "QCM S12-1",
-      "title": "QCM - QCM d’entraînement : notions clés des atterrisseurs",
+      "badge": "Exercice S12-1",
+      "title": "QCM d’entraînement : notions clés des atterrisseurs",
       "subtitle": "5 questions - correction immédiate",
       "href": "slide-s12-1.html",
       "json_href": "slide-s12-1.json"

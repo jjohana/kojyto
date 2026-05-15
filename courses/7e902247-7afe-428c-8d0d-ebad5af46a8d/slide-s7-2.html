@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QCM - CBMU : surveillance des C/B et des RCCBs</title>
+  <title>CBMU : surveillance des C/B et des RCCBs</title>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -1667,14 +1667,25 @@ html[data-embed="1"] .quiz-shell {
 }
 
 html[data-embed="1"] .site-main {
-  gap: 8px;
+  gap: 4px;
 }
 
 html[data-embed="1"] .hero-panel {
   grid-template-columns: 1fr;
-  gap: 8px;
-  padding: 14px 18px;
-  border-radius: 20px;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(20, 37, 58, 0.08);
+}
+
+html[data-embed="1"] .quiz-shell {
+  gap: 6px;
+}
+
+html[data-embed="1"] .quiz-hero {
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 16px;
   box-shadow: 0 8px 22px rgba(20, 37, 58, 0.08);
 }
 
@@ -1684,64 +1695,113 @@ html[data-embed="1"] .hero-copy::after {
 }
 
 html[data-embed="1"] .hero-copy h1 {
-  font-size: clamp(1.32rem, 2vw, 2.05rem);
-  line-height: 1.06;
+  font-size: clamp(1.16rem, 1.55vw, 1.66rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+html[data-embed="1"] .quiz-hero h1 {
+  font-size: clamp(1.16rem, 1.55vw, 1.66rem);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
 html[data-embed="1"] .hero-copy .objective {
-  margin-top: 6px;
-  max-width: 95ch;
-  font-size: 0.94rem;
-  line-height: 1.38;
+  margin-top: 3px;
+  max-width: 110ch;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+
+html[data-embed="1"] .quiz-hero p:not(.eyebrow) {
+  max-width: 110ch;
+  font-size: 0.84rem;
+  line-height: 1.25;
 }
 
 html[data-embed="1"] .eyebrow {
-  gap: 7px;
-  margin-bottom: 5px;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  gap: 5px;
+  margin-bottom: 2px;
+  font-size: 0.6rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
 }
 
 html[data-embed="1"] .eyebrow::before {
-  width: 20px;
+  width: 16px;
 }
 
 html[data-embed="1"] .narration-panel {
-  gap: 6px;
-  margin-top: 10px;
-  padding: 10px 12px;
-  border-radius: 16px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  padding: 7px 10px;
+  border-radius: 14px;
   box-shadow: none;
 }
 
+html[data-embed="1"] .narration-panel-header {
+  display: contents;
+}
+
 html[data-embed="1"] .narration-panel strong {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+html[data-embed="1"] .narration-audio-actions {
+  grid-column: 3;
+  grid-row: 1;
+  gap: 6px;
 }
 
 html[data-embed="1"] .narration-retry,
 html[data-embed="1"] .narration-speed {
-  min-height: 30px;
-  padding: 6px 10px;
+  min-height: 28px;
+  padding: 5px 9px;
   border-radius: 10px;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
 }
 
 html[data-embed="1"] .narration-panel audio {
-  height: 38px;
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  height: 32px;
 }
 
 html[data-embed="1"] .visual-summary-panel {
-  gap: 10px;
-  margin-top: 12px;
-  padding: 14px 18px 18px;
-  border-radius: 20px;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 10px 14px 14px;
+  border-radius: 16px;
 }
 
 html[data-embed="1"] .visual-summary-panel .visual-summary-title {
-  font-size: 1.12rem;
-  line-height: 1.08;
+  font-size: 1rem;
+  line-height: 1.02;
+}
+
+@media (max-width: 760px) {
+  html[data-embed="1"] .narration-panel {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  html[data-embed="1"] .narration-panel-header {
+    display: flex;
+  }
+
+  html[data-embed="1"] .narration-panel strong,
+  html[data-embed="1"] .narration-audio-actions,
+  html[data-embed="1"] .narration-panel audio {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
 html[data-embed="1"] .block,
@@ -2199,13 +2259,13 @@ html[data-deck="1"] .site-sidebar {
       
       <section class="gamification-panel" data-gamification-widget>
         <div class="gamification-header">
-          <strong>Progression QCM</strong>
+          <strong>Progression</strong>
           <span data-gamification-medal>Aucune médaille</span>
         </div>
         <div class="gamification-bar"><span data-gamification-bar></span></div>
         <div class="gamification-stats">
           <span><strong data-gamification-percent>0%</strong><small>accompli</small></span>
-          <span><strong data-gamification-count>0/0 QCM</strong><small>terminés</small></span>
+          <span><strong data-gamification-count>0/0</strong><small>terminés</small></span>
           <span><strong data-gamification-xp>0 XP</strong><small data-gamification-level>Niveau 1</small></span>
         </div>
         <p data-gamification-next>Prochaine : Bronze</p>
@@ -2243,8 +2303,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S1-1"
         >
-          <strong>QCM S1-1</strong>
-          <span>QCM - Génération AC en vol : panorama des sources</span>
+          <strong>Exercice S1-1</strong>
+          <span>Génération AC en vol : panorama des sources</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2269,8 +2329,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S1-2"
         >
-          <strong>QCM S1-2</strong>
-          <span>QCM - IDG : implantation sur moteur et liaison mécanique</span>
+          <strong>Exercice S1-2</strong>
+          <span>IDG : implantation sur moteur et liaison mécanique</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2295,8 +2355,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S1-3"
         >
-          <strong>QCM S1-3</strong>
-          <span>QCM - GCU : contrôle et surveillance des IDG</span>
+          <strong>Exercice S1-3</strong>
+          <span>GCU : contrôle et surveillance des IDG</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2321,8 +2381,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S1-4"
         >
-          <strong>QCM S1-4</strong>
-          <span>QCM - APU GEN et répartition du contrôle GCU/GAPCU</span>
+          <strong>Exercice S1-4</strong>
+          <span>APU GEN et répartition du contrôle GCU/GAPCU</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2347,8 +2407,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S2-1"
         >
-          <strong>QCM S2-1</strong>
-          <span>QCM - Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
+          <strong>Exercice S2-1</strong>
+          <span>Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2373,8 +2433,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S2-2"
         >
-          <strong>QCM S2-2</strong>
-          <span>QCM - Panneau de puissance externe et réceptacles</span>
+          <strong>Exercice S2-2</strong>
+          <span>Panneau de puissance externe et réceptacles</span>
           
           <span>2 questions - correction immédiate</span>
           
@@ -2399,8 +2459,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S2-3"
         >
-          <strong>QCM S2-3</strong>
-          <span>QCM - Raccordement au AC SYSTEM et implantation près du NLG</span>
+          <strong>Exercice S2-3</strong>
+          <span>Raccordement au AC SYSTEM et implantation près du NLG</span>
           
           <span>1 questions - correction immédiate</span>
           
@@ -2425,8 +2485,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3-1"
         >
-          <strong>QCM S3-1</strong>
-          <span>QCM - Génération de secours : logique de bascule</span>
+          <strong>Exercice S3-1</strong>
+          <span>Génération de secours : logique de bascule</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2451,8 +2511,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3-2"
         >
-          <strong>QCM S3-2</strong>
-          <span>QCM - Batteries et STATIC INVERTER</span>
+          <strong>Exercice S3-2</strong>
+          <span>Batteries et STATIC INVERTER</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2477,8 +2537,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3-3"
         >
-          <strong>QCM S3-3</strong>
-          <span>QCM - EMER GEN et EMER GEN GCU</span>
+          <strong>Exercice S3-3</strong>
+          <span>EMER GEN et EMER GEN GCU</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2503,8 +2563,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S3-4"
         >
-          <strong>QCM S3-4</strong>
-          <span>QCM - Réseau AC essentiel et indisponibilité des sources normales</span>
+          <strong>Exercice S3-4</strong>
+          <span>Réseau AC essentiel et indisponibilité des sources normales</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2529,8 +2589,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S4-1"
         >
-          <strong>QCM S4-1</strong>
-          <span>QCM - Architecture DC : vue d’ensemble</span>
+          <strong>Exercice S4-1</strong>
+          <span>Architecture DC : vue d’ensemble</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2555,8 +2615,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S4-2"
         >
-          <strong>QCM S4-2</strong>
-          <span>QCM - TR 1, TR 2, TR ESS et APU TR</span>
+          <strong>Exercice S4-2</strong>
+          <span>TR 1, TR 2, TR ESS et APU TR</span>
           
           <span>3 questions - correction immédiate</span>
           
@@ -2581,8 +2641,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S4-3"
         >
-          <strong>QCM S4-3</strong>
-          <span>QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
+          <strong>Exercice S4-3</strong>
+          <span>Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2607,8 +2667,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S4-4"
         >
-          <strong>QCM S4-4</strong>
-          <span>QCM - APU BATTERY et alimentation de l’APU STARTER</span>
+          <strong>Exercice S4-4</strong>
+          <span>APU BATTERY et alimentation de l’APU STARTER</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2633,8 +2693,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S4-5"
         >
-          <strong>QCM S4-5</strong>
-          <span>QCM - Blocs de contrôle et interfaces avec le DC SYSTEM</span>
+          <strong>Exercice S4-5</strong>
+          <span>Blocs de contrôle et interfaces avec le DC SYSTEM</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -2659,8 +2719,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-1"
         >
-          <strong>QCM S5-1</strong>
-          <span>QCM - ECAM ELEC AC : lecture générale de la page</span>
+          <strong>Exercice S5-1</strong>
+          <span>ECAM ELEC AC : lecture générale de la page</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2685,8 +2745,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-2"
         >
-          <strong>QCM S5-2</strong>
-          <span>QCM - Surveillance des sources : GEN 1, GEN 2 et APU GEN</span>
+          <strong>Exercice S5-2</strong>
+          <span>Surveillance des sources : GEN 1, GEN 2 et APU GEN</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2711,8 +2771,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-3"
         >
-          <strong>QCM S5-3</strong>
-          <span>QCM - Surveillance des IDG et des paramètres affichés</span>
+          <strong>Exercice S5-3</strong>
+          <span>Surveillance des IDG et des paramètres affichés</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2737,8 +2797,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-4"
         >
-          <strong>QCM S5-4</strong>
-          <span>QCM - Panneau AC GENERATION et commandes P/BSW</span>
+          <strong>Exercice S5-4</strong>
+          <span>Panneau AC GENERATION et commandes P/BSW</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2763,8 +2823,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-5"
         >
-          <strong>QCM S5-5</strong>
-          <span>QCM - Panneau ELEC : sélection des sources et bus</span>
+          <strong>Exercice S5-5</strong>
+          <span>Panneau ELEC : sélection des sources et bus</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2789,8 +2849,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S5-6"
         >
-          <strong>QCM S5-6</strong>
-          <span>QCM - Panneau EMER ELEC PWR : test et commande de secours</span>
+          <strong>Exercice S5-6</strong>
+          <span>Panneau EMER ELEC PWR : test et commande de secours</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2815,8 +2875,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S6-1"
         >
-          <strong>QCM S6-1</strong>
-          <span>QCM - Ground Service Network : principe de fonctionnement</span>
+          <strong>Exercice S6-1</strong>
+          <span>Ground Service Network : principe de fonctionnement</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2841,8 +2901,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S6-2"
         >
-          <strong>QCM S6-2</strong>
-          <span>QCM - MAINT BUS : alimentation du réseau de service</span>
+          <strong>Exercice S6-2</strong>
+          <span>MAINT BUS : alimentation du réseau de service</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2867,8 +2927,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S6-3"
         >
-          <strong>QCM S6-3</strong>
-          <span>QCM - Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
+          <strong>Exercice S6-3</strong>
+          <span>Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2893,8 +2953,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7-1"
         >
-          <strong>QCM S7-1</strong>
-          <span>QCM - ECMU : gestion des contacteurs</span>
+          <strong>Exercice S7-1</strong>
+          <span>ECMU : gestion des contacteurs</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2919,8 +2979,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7-2"
         >
-          <strong>QCM S7-2</strong>
-          <span>QCM - CBMU : surveillance des C/B et des RCCBs</span>
+          <strong>Exercice S7-2</strong>
+          <span>CBMU : surveillance des C/B et des RCCBs</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2945,8 +3005,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7-3"
         >
-          <strong>QCM S7-3</strong>
-          <span>QCM - Page ECAM C/B : signalement des déclenchements</span>
+          <strong>Exercice S7-3</strong>
+          <span>Page ECAM C/B : signalement des déclenchements</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2971,8 +3031,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7-4"
         >
-          <strong>QCM S7-4</strong>
-          <span>QCM - AC & DC CONTACTORS : distribution vers les charges</span>
+          <strong>Exercice S7-4</strong>
+          <span>AC & DC CONTACTORS : distribution vers les charges</span>
           
           <span>5 questions - correction immédiate</span>
           
@@ -2997,8 +3057,8 @@ html[data-deck="1"] .site-sidebar {
           data-page-kind="quiz"
           data-quiz-id="slide::S7-5"
         >
-          <strong>QCM S7-5</strong>
-          <span>QCM - Lien entre supervision, contacteurs et load distribution</span>
+          <strong>Exercice S7-5</strong>
+          <span>Lien entre supervision, contacteurs et load distribution</span>
           
           <span>4 questions - correction immédiate</span>
           
@@ -3027,7 +3087,7 @@ html[data-deck="1"] .site-sidebar {
         <div class="toolbar-meta">
           <span>Page 54/61</span>
           
-          <span>QCM</span>
+          <span>Exercice</span>
         </div>
         <div class="toolbar-actions">
           
@@ -3057,18 +3117,15 @@ html[data-deck="1"] .site-sidebar {
       <section class="quiz-shell">
         <section class="quiz-hero">
           <div>
-            <p class="eyebrow">QCM</p>
-            <h1>QCM - CBMU : surveillance des C/B et des RCCBs</h1>
+            <p class="eyebrow">Exercice</p>
+            <h1>CBMU : surveillance des C/B et des RCCBs</h1>
             <p>
               
-              QCM intermédiaire avec correction immédiate question par question.
+              Correction immédiate question par question.
               
             </p>
           </div>
-          <div class="quiz-meta">
-            <span class="meta-pill">5 questions</span>
-            
-          </div>
+          
         </section>
 
         
@@ -3208,7 +3265,7 @@ html[data-deck="1"] .site-sidebar {
     }());
   </script>
   
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::40-fa83608d6697", "legacy_storage_keys": ["kojyto:gamification::24-3848c8173929", "kojyto:gamification::25-915e878601d0", "kojyto:gamification::26-29a5f7d42a4f", "kojyto:gamification::27-be085b5616d6", "kojyto:gamification::28-ef64e169f79c", "kojyto:gamification::29-41add18375b3", "kojyto:gamification::30-73f3fd7db9f2", "kojyto:gamification::31-06f23fbe874c", "kojyto:gamification::32-d69158f045a0", "kojyto:gamification::33-693b1236b3de", "kojyto:gamification::34-63df4a8f0202", "kojyto:gamification::35-189751f37dd1", "kojyto:gamification::36-fb28ffaf63f2", "kojyto:gamification::37-3c2bb6354b09", "kojyto:gamification::38-0b99efcbb216", "kojyto:gamification::39-b9e0ceaf504a"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "QCM - Génération AC en vol : panorama des sources", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "QCM - IDG : implantation sur moteur et liaison mécanique", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "QCM - GCU : contrôle et surveillance des IDG", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S1-4", "quiz_type": "subpart", "title": "QCM - APU GEN et répartition du contrôle GCU/GAPCU", "href": "slide-s1-4.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "QCM - Alimentation AC au sol : EXT PWR A et EXT PWR B", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "QCM - Panneau de puissance externe et réceptacles", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S2-3", "quiz_type": "subpart", "title": "QCM - Raccordement au AC SYSTEM et implantation près du NLG", "href": "slide-s2-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "QCM - Génération de secours : logique de bascule", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "QCM - Batteries et STATIC INVERTER", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "QCM - EMER GEN et EMER GEN GCU", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "QCM - Réseau AC essentiel et indisponibilité des sources normales", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "QCM - Architecture DC : vue d’ensemble", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "QCM - TR 1, TR 2, TR ESS et APU TR", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S4-3", "quiz_type": "subpart", "title": "QCM - Sources associées : BATTERY, STATIC INVERTER, EMER GEN", "href": "slide-s4-3.html", "base_xp": 100}, {"quiz_id": "slide::S4-4", "quiz_type": "subpart", "title": "QCM - APU BATTERY et alimentation de l’APU STARTER", "href": "slide-s4-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-5", "quiz_type": "subpart", "title": "QCM - Blocs de contrôle et interfaces avec le DC SYSTEM", "href": "slide-s4-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "QCM - ECAM ELEC AC : lecture générale de la page", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "QCM - Surveillance des sources : GEN 1, GEN 2 et APU GEN", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "QCM - Surveillance des IDG et des paramètres affichés", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S5-4", "quiz_type": "subpart", "title": "QCM - Panneau AC GENERATION et commandes P/BSW", "href": "slide-s5-4.html", "base_xp": 100}, {"quiz_id": "slide::S5-5", "quiz_type": "subpart", "title": "QCM - Panneau ELEC : sélection des sources et bus", "href": "slide-s5-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-6", "quiz_type": "subpart", "title": "QCM - Panneau EMER ELEC PWR : test et commande de secours", "href": "slide-s5-6.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "QCM - Ground Service Network : principe de fonctionnement", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S6-2", "quiz_type": "subpart", "title": "QCM - MAINT BUS : alimentation du réseau de service", "href": "slide-s6-2.html", "base_xp": 100}, {"quiz_id": "slide::S6-3", "quiz_type": "subpart", "title": "QCM - Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2", "href": "slide-s6-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "QCM - ECMU : gestion des contacteurs", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "QCM - CBMU : surveillance des C/B et des RCCBs", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "QCM - Page ECAM C/B : signalement des déclenchements", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-4", "quiz_type": "subpart", "title": "QCM - AC & DC CONTACTORS : distribution vers les charges", "href": "slide-s7-4.html", "base_xp": 100}, {"quiz_id": "slide::S7-5", "quiz_type": "subpart", "title": "QCM - Lien entre supervision, contacteurs et load distribution", "href": "slide-s7-5.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::42-f38930a2d8a4", "legacy_storage_keys": ["kojyto:gamification::24-3848c8173929", "kojyto:gamification::25-915e878601d0", "kojyto:gamification::26-29a5f7d42a4f", "kojyto:gamification::27-be085b5616d6", "kojyto:gamification::28-ef64e169f79c", "kojyto:gamification::29-41add18375b3", "kojyto:gamification::30-73f3fd7db9f2", "kojyto:gamification::31-06f23fbe874c", "kojyto:gamification::32-d69158f045a0", "kojyto:gamification::33-693b1236b3de", "kojyto:gamification::34-63df4a8f0202", "kojyto:gamification::35-189751f37dd1", "kojyto:gamification::36-fb28ffaf63f2", "kojyto:gamification::37-3c2bb6354b09", "kojyto:gamification::38-0b99efcbb216", "kojyto:gamification::39-b9e0ceaf504a", "kojyto:gamification::40-fa83608d6697", "kojyto:gamification::41-b0a1b8d6bb24"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "Génération AC en vol : panorama des sources", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "IDG : implantation sur moteur et liaison mécanique", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "GCU : contrôle et surveillance des IDG", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S1-4", "quiz_type": "subpart", "title": "APU GEN et répartition du contrôle GCU/GAPCU", "href": "slide-s1-4.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "Alimentation AC au sol : EXT PWR A et EXT PWR B", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "Panneau de puissance externe et réceptacles", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S2-3", "quiz_type": "subpart", "title": "Raccordement au AC SYSTEM et implantation près du NLG", "href": "slide-s2-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "Génération de secours : logique de bascule", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "Batteries et STATIC INVERTER", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "EMER GEN et EMER GEN GCU", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "Réseau AC essentiel et indisponibilité des sources normales", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "Architecture DC : vue d’ensemble", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "TR 1, TR 2, TR ESS et APU TR", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S4-3", "quiz_type": "subpart", "title": "Sources associées : BATTERY, STATIC INVERTER, EMER GEN", "href": "slide-s4-3.html", "base_xp": 100}, {"quiz_id": "slide::S4-4", "quiz_type": "subpart", "title": "APU BATTERY et alimentation de l’APU STARTER", "href": "slide-s4-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-5", "quiz_type": "subpart", "title": "Blocs de contrôle et interfaces avec le DC SYSTEM", "href": "slide-s4-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "ECAM ELEC AC : lecture générale de la page", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "Surveillance des sources : GEN 1, GEN 2 et APU GEN", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "Surveillance des IDG et des paramètres affichés", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S5-4", "quiz_type": "subpart", "title": "Panneau AC GENERATION et commandes P/BSW", "href": "slide-s5-4.html", "base_xp": 100}, {"quiz_id": "slide::S5-5", "quiz_type": "subpart", "title": "Panneau ELEC : sélection des sources et bus", "href": "slide-s5-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-6", "quiz_type": "subpart", "title": "Panneau EMER ELEC PWR : test et commande de secours", "href": "slide-s5-6.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "Ground Service Network : principe de fonctionnement", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S6-2", "quiz_type": "subpart", "title": "MAINT BUS : alimentation du réseau de service", "href": "slide-s6-2.html", "base_xp": 100}, {"quiz_id": "slide::S6-3", "quiz_type": "subpart", "title": "Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2", "href": "slide-s6-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "ECMU : gestion des contacteurs", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "CBMU : surveillance des C/B et des RCCBs", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "Page ECAM C/B : signalement des déclenchements", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-4", "quiz_type": "subpart", "title": "AC & DC CONTACTORS : distribution vers les charges", "href": "slide-s7-4.html", "base_xp": 100}, {"quiz_id": "slide::S7-5", "quiz_type": "subpart", "title": "Lien entre supervision, contacteurs et load distribution", "href": "slide-s7-5.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");
@@ -3393,7 +3450,7 @@ html[data-deck="1"] .site-sidebar {
   function renderGamification() {
     const summary = summarize(loadState());
     setText("[data-gamification-percent]", summary.percent + "%");
-    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total + " QCM");
+    setText("[data-gamification-count]", summary.completedCount + "/" + summary.total);
     setText("[data-gamification-xp]", summary.xp + " XP");
     setText("[data-gamification-level]", "Niveau " + summary.level);
     setText("[data-gamification-medal]", summary.medalLabel || "Aucune médaille");

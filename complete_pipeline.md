@@ -884,6 +884,10 @@ Current defaults from `src/config.py`:
 | Setting | Current default |
 | --- | --- |
 | text model | `gpt-5.4-mini` |
+| narration script model | `gpt-5.5` |
+| narration script fallback model | `gpt-5.4-mini` |
+| narration TTS model | `gpt-realtime-2` |
+| narration audio QA | `enabled`, transcription model `gpt-4o-mini-transcribe`, `1` retry |
 | image model | `gpt-image-2` |
 | image QA vision model | `gpt-5.4-mini` |
 | default difficulty | `easy` |

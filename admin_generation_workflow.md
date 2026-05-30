@@ -52,8 +52,8 @@ The administrator sees only useful controls: resume after failure, publish when 
    - Reject unsupported file types and oversized files before queuing generation.
 
 2. Pedagogical configuration
-   - Set target level, target slide count, difficulty, content profile, pipeline profile, parallelism, QCM mode and question count.
-   - Set web enrichment policy: enabled/disabled, guide text and preferred domains.
+   - Set target level, target slide count, difficulty, content profile, pipeline profile, parallelism and question count.
+   - Web enrichment is always enabled; guide text and preferred domains can steer the research.
    - Use the default IAAG logo unless a course-specific logo is supplied.
 
 3. Logo and brand handling
@@ -75,7 +75,7 @@ The administrator sees only useful controls: resume after failure, publish when 
    - Build the slide plan.
 
 6. Research and sources
-   - Run slide-scoped web research when enabled.
+   - Run slide-scoped web research.
    - Respect preferred domains where configured.
    - Keep web references on generated slides for admin and learner review.
 
@@ -86,7 +86,7 @@ The administrator sees only useful controls: resume after failure, publish when 
    - Persist slide specs and rendered HTML.
 
 8. QCM generation
-   - Generate intermediate QCMs by slide or by subpart.
+   - Generate one training QCM for each slide.
    - Run automatic quality cleanup.
    - Build the final validation QCM from the cleaned training bank.
    - Persist QCM reports and blocking alerts when the final bank is too small.

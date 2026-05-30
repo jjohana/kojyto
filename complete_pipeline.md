@@ -672,12 +672,12 @@ Current difficulty behavior:
 
 Production app:
 
-- intermediate quizzes per slide or per subpart, depending on the saved run config
+- one intermediate quiz per slide
 - one final quiz per course
 
 HTML harness:
 
-- intermediate quiz mode can be `subpart` or `slide`
+- intermediate quiz generation is aligned to slide mode
 - final quiz remains course-wide
 
 ### 14.4 Question counts
@@ -769,7 +769,6 @@ The manual slide-site harness in `scripts/test_html_slides_generation.py` is the
 | `--content-profile auto|standard|scientific` | Resolve or force the content-generation branch |
 | `--parallelism` | Number of slide jobs in flight |
 | `--skip-quizzes` | Do not generate quiz artifacts |
-| `--intermediate-quiz-mode subpart|slide` | Placement of intermediate quizzes |
 | `--questions-per-intermediate-quiz` | Intermediate quiz size |
 | `--site-only` | Rebuild static site from archived artifacts |
 | `--model` | Override text model for this run |
@@ -949,7 +948,7 @@ Production upload path:
 
 - Production uploads accept only `PDF` and `DOCX`.
 - `PPTX` support is exploratory and exists only in the ad hoc ingestion harness.
-- Production intermediate quizzes support both slide-based anchoring and subpart-based placement.
+- Production intermediate quizzes are generated for each slide.
 - The production orchestrator always uses standard visual mode.
 - The HTML harness currently uses a simplified research policy compared to the production upload form.
 - Source-document images are deliberately excluded from final slide content even when ingestion extracted them successfully.
@@ -983,7 +982,7 @@ streamlit run app.py
 ### 23.5 Slide-anchored quizzes
 
 ```powershell
-.\.python311\python.exe scripts\test_html_slides_generation.py "Documents Examples\AERONEFS ATA 24.pdf" --intermediate-quiz-mode slide --questions-per-intermediate-quiz 5
+.\.python311\python.exe scripts\test_html_slides_generation.py "Documents Examples\AERONEFS ATA 24.pdf" --questions-per-intermediate-quiz 5
 ```
 
 ### 23.6 Rebuild the dual-mode site only

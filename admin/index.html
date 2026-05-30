@@ -540,13 +540,6 @@ tr.clickable:hover { background: #f4f8fa; }
               </select>
             </div>
             <div class="field third">
-              <label for="intermediate_quiz_mode">QCM intermédiaires</label>
-              <select id="intermediate_quiz_mode" name="intermediate_quiz_mode">
-                <option value="subpart">Par sous-partie</option>
-                <option value="slide">Par slide</option>
-              </select>
-            </div>
-            <div class="field third">
               <label for="questions_per_intermediate_quiz">Questions par QCM</label>
               <input id="questions_per_intermediate_quiz" name="questions_per_intermediate_quiz" type="number" min="1" max="20" value="5">
             </div>
@@ -556,9 +549,6 @@ tr.clickable:hover { background: #f4f8fa; }
             <div class="field half">
               <label for="domains_raw">Domaines préférés</label>
               <input id="domains_raw" name="domains_raw" placeholder="onisep.fr, education.gouv.fr">
-            </div>
-            <div class="field half">
-              <label class="inline-check"><input id="external_web" name="external_web" type="checkbox" checked> Enrichissement web actif</label>
             </div>
             <div class="field wide">
               <label for="guide">Consignes pédagogiques</label>
@@ -593,7 +583,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 21:53 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 22:26 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function isLocalApiBaseUrl(value) {
@@ -931,12 +921,12 @@ function deriveGenerationStages(view, slideSpecs, manifest, webRefs, visualCount
     makeStage(1, "validate_documents", "Validation des documents", filenames.length ? "done" : "pending", filenames.length ? `${filenames.length} document(s) reçus.` : "Déposer les documents du cours."),
     makeStage(2, "extract_documents", "Lecture des documents", stageStatusFromStep(extractStep), extractStep.detail || "Extraction du contenu PDF/DOCX."),
     makeStage(3, "pedagogical_analysis", "Analyse pédagogique", contentAnalysisDone ? "done" : stageStatusFromStep(planStep), view.content_analysis?.rationale || "Analyse du niveau, du profil et des objectifs."),
-    makeStage(4, "web_research", "Recherche web et sources", policy.external_web_access === false ? "done" : (webRefs.length ? "done" : stageStatusFromStep(slideStep)), policy.external_web_access === false ? "Enrichissement web non active pour ce cours." : (webRefs.length ? `${webRefs.length} source(s) retenue(s).` : "Sources recherchees pendant la creation des slides.")),
+    makeStage(4, "web_research", "Recherche web et sources", webRefs.length ? "done" : stageStatusFromStep(slideStep), webRefs.length ? `${webRefs.length} source(s) retenue(s).` : "Sources recherchees pendant la creation des slides."),
     makeStage(5, "course_plan", "Plan du cours", stageStatusFromStep(planStep), planStep.detail || "Construction du plan et du decoupage."),
     makeStage(6, "slide_writing", "Rédaction des slides", stageStatusFromStep(slideStep), progress.total_slides ? `${Number(progress.completed_slides || 0)}/${Number(progress.total_slides || 0)} slide(s) prête(s).` : slideStep.detail || "Contenu des slides en attente."),
     makeStage(7, "visuals", "Images et visuels", visualCount ? "done" : stageStatusFromStep(slideStep), visualCount ? `${visualCount} visuel(s) intégré(s).` : "Visuels préparés avec le moteur existant."),
     makeStage(8, "visual_quality", "Contrôle qualité des images", imageAlert ? "attention" : stageStatusFromStep(slideStep), imageAlert ? imageAlert.message : "Aucun logo ni nom d'école ne doit être généré dans les images."),
-    makeStage(9, "intermediate_quizzes", "QCM intermédiaires", state.quizzes.length ? "done" : stageStatusFromStep(quizStep), state.quizzes.length ? `${state.quizzes.length} QCM intermédiaire(s).` : quizStep.detail || "Questions d'entraînement en attente."),
+    makeStage(9, "intermediate_quizzes", "QCM par slide", state.quizzes.length ? "done" : stageStatusFromStep(quizStep), state.quizzes.length ? `${state.quizzes.length} QCM par slide.` : quizStep.detail || "Questions d'entraînement en attente."),
     makeStage(10, "final_quiz", "QCM final", finalCount ? "done" : (stageStatusFromStep(quizStep) === "done" ? "attention" : stageStatusFromStep(quizStep)), finalCount ? `${finalCount} question(s) finales.` : "QCM final à vérifier."),
     makeStage(11, "quiz_cleanup", "Vérification des QCM", cleanupReport ? (Number(cleanupReport.questions_review || 0) ? "attention" : "done") : (stageStatusFromStep(quizStep) === "done" ? "attention" : stageStatusFromStep(quizStep)), cleanupReport ? `${Number(cleanupReport.questions_deleted || 0)} question(s) retirée(s), ${Number(cleanupReport.questions_review || 0)} à vérifier.` : "Nettoyage automatique attendu après les QCM."),
     makeStage(12, "narration_script", "Scénario de narration", narration.slides?.length ? "done" : stageStatusFromStep(narrationScriptStep), narration.slides?.length ? `${narration.slides.length} script(s) rédigé(s).` : narrationScriptStep.detail || "Scénario audio en attente."),
@@ -1205,7 +1195,7 @@ function renderRunConfig(run, policy, analysis) {
     <div class="list-item"><strong>Objectif</strong><small>${escapeHtml(run.target_level || "Niveau à préciser")} | ${Number(run.target_slide_count || 0)} slides visées</small></div>
     <div class="list-item"><strong>QCM</strong><small>${Number(run.questions_per_intermediate_quiz || 0)} question(s) par entraînement.</small></div>
     <div class="list-item"><strong>Profil de contenu</strong><small>${escapeHtml(run.content_profile || "standard")} | ${escapeHtml(analysis.confidence || "à confirmer")}</small></div>
-    <div class="list-item"><strong>Recherche web</strong><small>${policy.external_web_access ? "Active" : "Désactivée"}${(policy.allowed_domains || []).length ? " | " + escapeHtml((policy.allowed_domains || []).join(", ")) : ""}</small></div>
+    <div class="list-item"><strong>Recherche web</strong><small>Active${(policy.allowed_domains || []).length ? " | " + escapeHtml((policy.allowed_domains || []).join(", ")) : ""}</small></div>
   </div>`;
 }
 function renderSlideRegeneration(slides, active) {
@@ -1242,10 +1232,11 @@ async function handleUpload(event) {
   files.forEach((file) => form.append("uploads", file));
   const logo = $("#logo").files && $("#logo").files[0];
   if (logo) form.append("logo", logo);
-  ["guide", "domains_raw", "difficulty", "model_name", "target_slide_count", "target_level", "intermediate_quiz_mode", "questions_per_intermediate_quiz", "pipeline_profile", "content_profile_selection", "parallelism", "logo_url"].forEach((name) => {
+  ["guide", "domains_raw", "difficulty", "model_name", "target_slide_count", "target_level", "questions_per_intermediate_quiz", "pipeline_profile", "content_profile_selection", "parallelism", "logo_url"].forEach((name) => {
     form.append(name, document.getElementById(name).value);
   });
-  form.append("external_web", $("#external_web").checked ? "true" : "false");
+  form.append("intermediate_quiz_mode", "slide");
+  form.append("external_web", "true");
   $("#upload-submit").disabled = true;
   notice("Upload en cours...");
   try {

@@ -197,6 +197,23 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .field.third { grid-column: span 4; }
 .field label { color: var(--accent-strong); font-size: 0.84rem; font-weight: 800; }
 .field small { color: var(--muted); line-height: 1.35; }
+.difficulty-info {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #dbe7ed;
+  border-radius: 8px;
+  background: #f7fbfc;
+}
+.difficulty-info article {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.difficulty-info strong { color: var(--accent-strong); }
+.difficulty-info span { color: var(--muted); font-size: 0.88rem; line-height: 1.4; }
 input, select, textarea {
   width: 100%;
   min-height: 39px;
@@ -413,6 +430,7 @@ tr.clickable:hover { background: #f4f8fa; }
   .topbar { grid-template-columns: 1fr; }
   .top-actions { justify-content: flex-start; }
   .field, .field.half, .field.third { grid-column: span 12; }
+  .difficulty-info { grid-template-columns: 1fr; }
   table { min-width: 640px; }
   .timeline-step { grid-template-columns: 30px minmax(0, 1fr); }
   .timeline-step .status-label { grid-column: 2; justify-self: start; }
@@ -500,9 +518,18 @@ tr.clickable:hover { background: #f4f8fa; }
               <label for="difficulty">Difficulté</label>
               <select id="difficulty" name="difficulty">
                 <option value="easy">Facile</option>
-                <option value="medium">Intermédiaire</option>
                 <option value="hard">Avancée</option>
               </select>
+            </div>
+            <div class="difficulty-info" aria-label="Impact de la difficulté">
+              <article>
+                <strong>Facile</strong>
+                <span>QCM avec une seule bonne réponse par question.</span>
+              </article>
+              <article>
+                <strong>Avancée</strong>
+                <span>QCM avec plusieurs bonnes réponses possibles par question.</span>
+              </article>
             </div>
             <div class="field third">
               <label for="content_profile_selection">Profil de contenu</label>
@@ -566,7 +593,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 21:06 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 21:53 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function isLocalApiBaseUrl(value) {

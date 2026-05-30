@@ -424,23 +424,23 @@ tr.clickable:hover { background: #f4f8fa; }
     <aside class="sidebar">
       <div class="brand">
         <h1>KOJYTO Admin</h1>
-        <p>Creation et publication des cours.</p>
+        <p>Création et publication des cours.</p>
       </div>
       <nav class="nav-list" aria-label="Navigation admin">
-        <button type="button" data-view-target="create" class="active primary-nav" data-runtime-only>Creer un cours</button>
-        <button type="button" data-view-target="dashboard">Cours</button>
-        <button type="button" data-view-target="control" data-runtime-only>Suivi de generation</button>
-        <button type="button" data-view-target="preview" data-runtime-only>Previsualiser</button>
+        <button type="button" data-view-target="create" class="active primary-nav">Créer un cours</button>
+        <button type="button" data-view-target="dashboard">Cours publiés</button>
+        <button type="button" data-view-target="control" data-runtime-only>Suivi de génération</button>
+        <button type="button" data-view-target="preview" data-runtime-only>Prévisualiser</button>
       </nav>
       <div class="side-links">
-        <a id="learner-link" href="https://jjohana.github.io/kojyto/index.html">Site apprenant public</a>
+        <a id="learner-link" href="https://jjohana.github.io/kojyto/index.html">Site apprenant</a>
       </div>
     </aside>
     <main class="main">
       <header class="topbar">
         <div>
-          <h2 id="page-title">Creer un cours</h2>
-          <p id="page-subtitle">Deposer les documents, regler le cours et lancer la generation.</p>
+          <h2 id="page-title">Créer un cours</h2>
+          <p id="page-subtitle">Déposer les documents, régler le cours et lancer la génération.</p>
         </div>
       </header>
       <div class="banner" id="notice" role="status"></div>
@@ -448,15 +448,15 @@ tr.clickable:hover { background: #f4f8fa; }
       <section class="view" id="view-dashboard">
         <div class="metrics">
           <div class="metric"><span>Cours</span><strong id="metric-total">0</strong></div>
-          <div class="metric"><span>Publies</span><strong id="metric-published">0</strong></div>
-          <div class="metric"><span>Prets</span><strong id="metric-ready">0</strong></div>
+          <div class="metric"><span>Publiés</span><strong id="metric-published">0</strong></div>
+          <div class="metric"><span>Prêts</span><strong id="metric-ready">0</strong></div>
           <div class="metric"><span>Actifs</span><strong id="metric-active">0</strong></div>
         </div>
         <section class="panel">
           <div class="panel-head">
             <div>
               <h3>Cours disponibles</h3>
-              <p>Selectionner un cours pour suivre l'avancement, les alertes et la publication.</p>
+              <p>Sélectionner un cours pour suivre l'avancement, les alertes et la publication.</p>
             </div>
             <input id="course-filter" type="search" placeholder="Filtrer les cours">
           </div>
@@ -464,44 +464,44 @@ tr.clickable:hover { background: #f4f8fa; }
         </section>
       </section>
 
-      <section class="view active" id="view-create" data-runtime-only>
+      <section class="view active" id="view-create">
         <section class="panel compact">
           <div class="panel-head">
             <div>
               <h3>Nouveau cours</h3>
-              <p>Deposer 1 a 5 documents PDF/DOCX, configurer la generation, puis lancer le cours.</p>
+              <p>Déposer les documents. KOJYTO génère les slides, les QCM et l'audio.</p>
             </div>
           </div>
           <form id="upload-form" class="form-grid requires-generation">
             <div class="field wide">
               <label for="uploads">Documents source</label>
               <input id="uploads" name="uploads" type="file" multiple accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
-              <small id="upload-count">Aucun fichier selectionne.</small>
+              <small id="upload-count">Aucun fichier sélectionné.</small>
             </div>
             <div class="field wide">
               <label for="logo">Logo optionnel</label>
               <input id="logo" name="logo" type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp">
-              <small>Logo IAAG par defaut.</small>
+              <small>Logo IAAG par défaut.</small>
             </div>
             <div class="field wide">
               <label for="logo_url">URL de logo optionnelle</label>
               <input id="logo_url" name="logo_url" type="url" placeholder="https://exemple.fr/logo.png">
-              <small>Utilisee si aucun fichier logo n'est depose.</small>
+              <small>Utilisée si aucun fichier logo n'est déposé.</small>
             </div>
             <div class="field third">
               <label for="target_level">Niveau</label>
-              <input id="target_level" name="target_level" placeholder="Bac Pro Aeronautique">
+              <input id="target_level" name="target_level" placeholder="Bac Pro Aéronautique">
             </div>
             <div class="field third">
               <label for="target_slide_count">Nombre de slides</label>
               <input id="target_slide_count" name="target_slide_count" type="number" min="1" max="120" value="20">
             </div>
             <div class="field third">
-              <label for="difficulty">Difficulte</label>
+              <label for="difficulty">Difficulté</label>
               <select id="difficulty" name="difficulty">
                 <option value="easy">Facile</option>
-                <option value="medium">Intermediaire</option>
-                <option value="hard">Avancee</option>
+                <option value="medium">Intermédiaire</option>
+                <option value="hard">Avancée</option>
               </select>
             </div>
             <div class="field third">
@@ -513,7 +513,7 @@ tr.clickable:hover { background: #f4f8fa; }
               </select>
             </div>
             <div class="field third">
-              <label for="intermediate_quiz_mode">QCM intermediaires</label>
+              <label for="intermediate_quiz_mode">QCM intermédiaires</label>
               <select id="intermediate_quiz_mode" name="intermediate_quiz_mode">
                 <option value="subpart">Par sous-partie</option>
                 <option value="slide">Par slide</option>
@@ -527,33 +527,33 @@ tr.clickable:hover { background: #f4f8fa; }
             <input id="parallelism" name="parallelism" type="hidden" value="4">
             <input id="model_name" name="model_name" type="hidden" value="">
             <div class="field half">
-              <label for="domains_raw">Domaines preferes</label>
+              <label for="domains_raw">Domaines préférés</label>
               <input id="domains_raw" name="domains_raw" placeholder="onisep.fr, education.gouv.fr">
             </div>
             <div class="field half">
               <label class="inline-check"><input id="external_web" name="external_web" type="checkbox" checked> Enrichissement web actif</label>
             </div>
             <div class="field wide">
-              <label for="guide">Consignes pedagogiques</label>
+              <label for="guide">Consignes pédagogiques</label>
               <textarea id="guide" name="guide" placeholder="Objectifs, public cible, contraintes de style, points a surveiller..."></textarea>
             </div>
             <div class="field wide">
-              <button type="submit" class="primary" id="upload-submit">Creer le cours</button>
+              <button type="submit" class="primary" id="upload-submit">Créer les slides du cours</button>
             </div>
           </form>
         </section>
       </section>
 
       <section class="view" id="view-control" data-runtime-only>
-        <div id="course-detail" class="empty">Selectionner un cours dans le tableau de bord.</div>
+        <div id="course-detail" class="empty">Sélectionner un cours dans le tableau de bord.</div>
       </section>
 
       <section class="view" id="view-preview" data-runtime-only>
         <section class="panel">
           <div class="panel-head">
             <div>
-              <h3>Previsualisation</h3>
-              <p id="preview-caption">Selectionner un cours pret pour afficher la version master ou apprenant.</p>
+              <h3>Prévisualisation</h3>
+              <p id="preview-caption">Sélectionner un cours prêt pour afficher la version master ou apprenant.</p>
             </div>
             <div class="actions-row">
               <button type="button" data-preview-mode="master">Master</button>
@@ -566,7 +566,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 20:41 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 21:06 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function isLocalApiBaseUrl(value) {
@@ -599,10 +599,10 @@ const state = {
 };
 
 const viewLabels = {
-  dashboard: ["Cours", "Liste des cours disponibles."],
-  create: ["Creer un cours", "Deposer les documents, regler le cours et lancer la generation."],
-  control: ["Suivi de generation", "Progression, controles et publication du cours."],
-  preview: ["Previsualiser", "Controle visuel des versions master, apprenant et deck."]
+  dashboard: ["Cours publiés", "Liste des cours disponibles."],
+  create: ["Créer un cours", "Déposer les documents, régler le cours et lancer la génération."],
+  control: ["Suivi de génération", "Progression, contrôles et publication du cours."],
+  preview: ["Prévisualiser", "Contrôle visuel des versions master, apprenant et deck."]
 };
 
 function $(selector) { return document.querySelector(selector); }
@@ -611,6 +611,22 @@ function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   }[char]));
+}
+function displayCourseTitle(value) {
+  let title = String(value || "").replace(/_/g, " ");
+  title = title
+    .replace(/\u00c3\u2030/g, "É")
+    .replace(/\u00c3\u00a9/g, "é")
+    .replace(/\bfiligrane\b/gi, "")
+    .replace(/\s*\+\s*\d+\s*docs?\b/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const normalized = title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  if (normalized === "aeronefs ata 24") return "Aéronefs ATA 24";
+  if (normalized === "cinematique bts aero") return "Cinématique BTS Aéro";
+  if (normalized === "cours 8 du 13 janvier 2026") return "Atterrisseurs et systèmes associés";
+  if (normalized === "economie gestion bac pro aeronautique") return "Économie Gestion Bac Pro Aéronautique";
+  return title;
 }
 function formatDate(value) {
   if (!value) return "n/a";
@@ -641,14 +657,14 @@ function statusLabel(value) {
     completed: "Termine",
     failed: "Erreur bloquante",
     attention: "Attention requise",
-    uploaded: "Documents recus",
+    uploaded: "Documents reçus",
     chunked: "Documents lus",
-    mapped: "Analyse terminee",
+    mapped: "Analyse terminée",
     planned: "Plan valide",
-    slides_built: "Slides pretes",
-    quizzes_built: "QCM prets",
-    ready_to_publish: "Pret a publier",
-    published: "Publie"
+    slides_built: "Slides prêtes",
+    quizzes_built: "QCM prêts",
+    ready_to_publish: "Prêt à publier",
+    published: "Publié"
   };
   return labels[value] || String(value || "En attente").replace(/_/g, " ");
 }
@@ -685,7 +701,7 @@ function setGenerationStatus(ok) {
   const status = $("#api-status");
   if (!dot || !status) return;
   dot.classList.toggle("ok", ok);
-  status.textContent = ok ? "Pret" : "";
+  status.textContent = ok ? "Prêt" : "";
 }
 function setGenerationControlsEnabled(enabled) {
   const refresh = $("#refresh-btn");
@@ -707,7 +723,7 @@ function setView(view) {
 function applyRuntimeMode() {
   const runtime = hasGenerationRuntime();
   document.body.classList.toggle("static-admin", !runtime);
-  if (!runtime && state.view !== "dashboard") {
+  if (!runtime && ["control", "preview"].includes(state.view)) {
     setView("dashboard");
   }
 }
@@ -730,7 +746,7 @@ async function refreshAll({ quiet = false } = {}) {
     if (!quiet) notice("Donnees actualisees.", "ok");
   } catch (error) {
     setGenerationStatus(false);
-    notice("Generation indisponible: " + detailText(error), "error");
+    notice("Génération indisponible: " + detailText(error), "error");
   }
 }
 async function loadCourses() {
@@ -807,7 +823,7 @@ function renderCoursesTable() {
   const filter = ($("#course-filter").value || "").toLowerCase();
   const staticMode = !hasGenerationRuntime();
   const courses = state.courses.filter((course) => {
-    return !filter || [course.title, course.status, course.source_filename, course.id].join(" ").toLowerCase().includes(filter);
+    return !filter || [course.title, displayCourseTitle(course.title), course.status, course.source_filename, course.id].join(" ").toLowerCase().includes(filter);
   });
   if (!courses.length) {
     $("#courses-table").innerHTML = '<div class="empty">Aucun cours disponible.</div>';
@@ -815,13 +831,13 @@ function renderCoursesTable() {
   }
   $("#courses-table").innerHTML = `
     <table>
-      <thead><tr><th>Cours</th><th>Etat</th><th>Publication</th><th>Action</th></tr></thead>
+      <thead><tr><th>Cours</th><th>État</th><th>Publication</th><th>Action</th></tr></thead>
       <tbody>
         ${courses.map((course) => `
           <tr class="clickable" data-select-course="${escapeHtml(course.id)}">
-            <td><div class="course-title"><strong>${escapeHtml(course.title)}</strong><span>${escapeHtml(formatDate(course.created_at))}</span></div></td>
+            <td><div class="course-title"><strong>${escapeHtml(displayCourseTitle(course.title))}</strong><span>${escapeHtml(formatDate(course.created_at))}</span></div></td>
             <td><span class="pill ${statusClass(course.status)}">${escapeHtml(statusLabel(course.status))}</span></td>
-            <td>${course.published ? '<span class="pill published">Publie</span>' : '<span class="pill pending">Non publie</span>'}</td>
+            <td>${course.published ? '<span class="pill published">Publié</span>' : '<span class="pill pending">Non publié</span>'}</td>
             <td>${staticMode && course.public_href ? `<a class="button" href="${escapeHtml(course.public_href)}">Ouvrir</a>` : "Suivre"}</td>
           </tr>
         `).join("")}
@@ -830,8 +846,8 @@ function renderCoursesTable() {
 }
 function cleanDetail(value) {
   return String(value || "")
-    .replace(/job/gi, "operation")
-    .replace(/chunks?/gi, "extraits")
+    .replace(/\bjob\b/gi, "operation")
+    .replace(/\bchunks?\b/gi, "extraits")
     .replace(/[a-f0-9]{8}-[a-f0-9-]{20,}/gi, "")
     .trim();
 }
@@ -885,21 +901,21 @@ function deriveGenerationStages(view, slideSpecs, manifest, webRefs, visualCount
   const contentAnalysisDone = Boolean(view.content_analysis?.status && view.content_analysis.status !== "pending");
 
   const stages = [
-    makeStage(1, "validate_documents", "Validation des documents", filenames.length ? "done" : "pending", filenames.length ? `${filenames.length} document(s) recus.` : "Deposer les documents du cours."),
+    makeStage(1, "validate_documents", "Validation des documents", filenames.length ? "done" : "pending", filenames.length ? `${filenames.length} document(s) reçus.` : "Déposer les documents du cours."),
     makeStage(2, "extract_documents", "Lecture des documents", stageStatusFromStep(extractStep), extractStep.detail || "Extraction du contenu PDF/DOCX."),
-    makeStage(3, "pedagogical_analysis", "Analyse pedagogique", contentAnalysisDone ? "done" : stageStatusFromStep(planStep), view.content_analysis?.rationale || "Analyse du niveau, du profil et des objectifs."),
+    makeStage(3, "pedagogical_analysis", "Analyse pédagogique", contentAnalysisDone ? "done" : stageStatusFromStep(planStep), view.content_analysis?.rationale || "Analyse du niveau, du profil et des objectifs."),
     makeStage(4, "web_research", "Recherche web et sources", policy.external_web_access === false ? "done" : (webRefs.length ? "done" : stageStatusFromStep(slideStep)), policy.external_web_access === false ? "Enrichissement web non active pour ce cours." : (webRefs.length ? `${webRefs.length} source(s) retenue(s).` : "Sources recherchees pendant la creation des slides.")),
     makeStage(5, "course_plan", "Plan du cours", stageStatusFromStep(planStep), planStep.detail || "Construction du plan et du decoupage."),
-    makeStage(6, "slide_writing", "Redaction des slides", stageStatusFromStep(slideStep), progress.total_slides ? `${Number(progress.completed_slides || 0)}/${Number(progress.total_slides || 0)} slide(s) prete(s).` : slideStep.detail || "Contenu des slides en attente."),
-    makeStage(7, "visuals", "Images et visuels", visualCount ? "done" : stageStatusFromStep(slideStep), visualCount ? `${visualCount} visuel(s) integre(s).` : "Visuels prepares avec le moteur existant."),
-    makeStage(8, "visual_quality", "Controle qualite des images", imageAlert ? "attention" : stageStatusFromStep(slideStep), imageAlert ? imageAlert.message : "Aucun logo ni nom d'ecole ne doit etre genere dans les images."),
-    makeStage(9, "intermediate_quizzes", "QCM intermediaires", state.quizzes.length ? "done" : stageStatusFromStep(quizStep), state.quizzes.length ? `${state.quizzes.length} QCM intermediaire(s).` : quizStep.detail || "Questions d'entrainement en attente."),
-    makeStage(10, "final_quiz", "QCM final", finalCount ? "done" : (stageStatusFromStep(quizStep) === "done" ? "attention" : stageStatusFromStep(quizStep)), finalCount ? `${finalCount} question(s) finales.` : "QCM final a verifier."),
-    makeStage(11, "quiz_cleanup", "Verification des QCM", cleanupReport ? (Number(cleanupReport.questions_review || 0) ? "attention" : "done") : (stageStatusFromStep(quizStep) === "done" ? "attention" : stageStatusFromStep(quizStep)), cleanupReport ? `${Number(cleanupReport.questions_deleted || 0)} question(s) retiree(s), ${Number(cleanupReport.questions_review || 0)} a verifier.` : "Nettoyage automatique attendu apres les QCM."),
-    makeStage(12, "narration_script", "Scenario de narration", narration.slides?.length ? "done" : stageStatusFromStep(narrationScriptStep), narration.slides?.length ? `${narration.slides.length} script(s) redige(s).` : narrationScriptStep.detail || "Scenario audio en attente."),
-    makeStage(13, "audio_files", "Fichiers audio", narration.page_audio?.length ? "done" : stageStatusFromStep(narrationAudioStep), narration.page_audio?.length ? `${narration.page_audio.length} fichier(s) audio disponible(s).` : narrationAudioStep.detail || "Generation audio en attente."),
-    makeStage(14, "learner_site", "Assemblage du site", hasSite ? "done" : stageStatusFromStep(siteStep), hasSite ? `${pages.length || 0} page(s) assemblee(s).` : siteStep.detail || "Site apprenant en construction."),
-    makeStage(15, "final_check", "Verification finale", hasBlockingAlert ? "attention" : (hasSite ? "done" : "pending"), hasBlockingAlert ? "Des points bloquants doivent etre controles avant publication." : "Controle final du cours et des artefacts."),
+    makeStage(6, "slide_writing", "Rédaction des slides", stageStatusFromStep(slideStep), progress.total_slides ? `${Number(progress.completed_slides || 0)}/${Number(progress.total_slides || 0)} slide(s) prête(s).` : slideStep.detail || "Contenu des slides en attente."),
+    makeStage(7, "visuals", "Images et visuels", visualCount ? "done" : stageStatusFromStep(slideStep), visualCount ? `${visualCount} visuel(s) intégré(s).` : "Visuels préparés avec le moteur existant."),
+    makeStage(8, "visual_quality", "Contrôle qualité des images", imageAlert ? "attention" : stageStatusFromStep(slideStep), imageAlert ? imageAlert.message : "Aucun logo ni nom d'école ne doit être généré dans les images."),
+    makeStage(9, "intermediate_quizzes", "QCM intermédiaires", state.quizzes.length ? "done" : stageStatusFromStep(quizStep), state.quizzes.length ? `${state.quizzes.length} QCM intermédiaire(s).` : quizStep.detail || "Questions d'entraînement en attente."),
+    makeStage(10, "final_quiz", "QCM final", finalCount ? "done" : (stageStatusFromStep(quizStep) === "done" ? "attention" : stageStatusFromStep(quizStep)), finalCount ? `${finalCount} question(s) finales.` : "QCM final à vérifier."),
+    makeStage(11, "quiz_cleanup", "Vérification des QCM", cleanupReport ? (Number(cleanupReport.questions_review || 0) ? "attention" : "done") : (stageStatusFromStep(quizStep) === "done" ? "attention" : stageStatusFromStep(quizStep)), cleanupReport ? `${Number(cleanupReport.questions_deleted || 0)} question(s) retirée(s), ${Number(cleanupReport.questions_review || 0)} à vérifier.` : "Nettoyage automatique attendu après les QCM."),
+    makeStage(12, "narration_script", "Scénario de narration", narration.slides?.length ? "done" : stageStatusFromStep(narrationScriptStep), narration.slides?.length ? `${narration.slides.length} script(s) rédigé(s).` : narrationScriptStep.detail || "Scénario audio en attente."),
+    makeStage(13, "audio_files", "Fichiers audio", narration.page_audio?.length ? "done" : stageStatusFromStep(narrationAudioStep), narration.page_audio?.length ? `${narration.page_audio.length} fichier(s) audio disponible(s).` : narrationAudioStep.detail || "Génération audio en attente."),
+    makeStage(14, "learner_site", "Assemblage du site", hasSite ? "done" : stageStatusFromStep(siteStep), hasSite ? `${pages.length || 0} page(s) assemblée(s).` : siteStep.detail || "Site apprenant en construction."),
+    makeStage(15, "final_check", "Vérification finale", hasBlockingAlert ? "attention" : (hasSite ? "done" : "pending"), hasBlockingAlert ? "Des points bloquants doivent être contrôlés avant publication." : "Contrôle final du cours et des artefacts."),
     makeStage(16, "publication", "Publication", course.published ? "done" : (["ready_to_publish", "published"].includes(course.status) ? "attention" : "pending"), course.published ? "Cours visible sur le site apprenant." : "Publication disponible quand le cours est pret.")
   ];
   const currentStep = String(progress.current_step || "");
@@ -974,16 +990,16 @@ function renderGenerationHero(course, progress, stages, view) {
   const active = hasActiveGeneration(view);
   const remaining = stages.filter((stage) => stage.status === "pending").length;
   const currentMessage = current?.status === "attention"
-    ? "Une verification est necessaire avant de continuer."
+    ? "Une vérification est nécessaire avant de continuer."
     : active
-      ? "La generation avance automatiquement."
+      ? "La génération avance automatiquement."
       : current?.status === "done"
-        ? "Le parcours est termine."
-        : "La prochaine etape demarrera automatiquement.";
+        ? "Le parcours est terminé."
+        : "La prochaine étape démarrera automatiquement.";
   return `<section class="generation-hero">
     <div class="generation-title">
       <div>
-        <h3>${escapeHtml(course.title)}</h3>
+        <h3>${escapeHtml(displayCourseTitle(course.title))}</h3>
         <p>${escapeHtml(statusLabel(course.status))}</p>
       </div>
       <div class="actions-row">${renderContextualActions(course, stages, view)}</div>
@@ -993,9 +1009,9 @@ function renderGenerationHero(course, progress, stages, view) {
       <div class="progress-bar" aria-label="Progression"><span style="width:${percent}%"></span></div>
     </div>
     <div class="current-work">
-      <strong>${escapeHtml(current?.label || "Generation")}</strong>
+      <strong>${escapeHtml(current?.label || "Génération")}</strong>
       <p>${escapeHtml(current?.detail || progress.message || currentMessage)}</p>
-      <p>${escapeHtml(currentMessage)}${remaining ? ` ${remaining} etape(s) restante(s).` : ""}</p>
+      <p>${escapeHtml(currentMessage)}${remaining ? ` ${remaining} étape(s) restante(s).` : ""}</p>
     </div>
   </section>`;
 }
@@ -1007,10 +1023,10 @@ function renderContextualActions(course, stages, view) {
   const buttons = [];
   if (failed && !active) buttons.push('<button type="button" data-course-action="resume">Reprendre</button>');
   if (ready && !course.published && !blocking && !active) buttons.push('<button type="button" data-course-action="publish" class="primary">Publier</button>');
-  if ((state.quizzes.length || state.finalQuiz) && !active) buttons.push('<button type="button" data-course-action="clean-quizzes">Verifier les QCM</button>');
-  if (slideSpecsFromDeck(state.slideDeck).length && !active) buttons.push('<button type="button" data-course-action="regenerate-narration">Regenerer l\'audio</button>');
+  if ((state.quizzes.length || state.finalQuiz) && !active) buttons.push('<button type="button" data-course-action="clean-quizzes">Vérifier les QCM</button>');
+  if (slideSpecsFromDeck(state.slideDeck).length && !active) buttons.push('<button type="button" data-course-action="regenerate-narration">Régénérer l\'audio</button>');
   if (view.user_site_path) buttons.push(`<a class="button" href="${escapeHtml(apiUrl(`/courses/${encodeURIComponent(course.id)}/site/user/index.html`))}" target="_blank" rel="noopener">Ouvrir apprenant</a>`);
-  if (!active && view.source_manifest?.source_paths?.length) buttons.push('<button type="button" data-course-action="regenerate-full" class="danger">Regenerer le cours</button>');
+  if (!active && view.source_manifest?.source_paths?.length) buttons.push('<button type="button" data-course-action="regenerate-full" class="danger">Régénérer le cours</button>');
   return buttons.join("");
 }
 function renderCourseDetail() {
@@ -1018,7 +1034,7 @@ function renderCourseDetail() {
   const view = state.adminView;
   if (!state.selectedCourseId || !view || !view.course) {
     root.className = "empty";
-    root.textContent = "Selectionner un cours.";
+    root.textContent = "Sélectionner un cours.";
     return;
   }
   root.className = "course-detail-content";
@@ -1035,16 +1051,16 @@ function renderCourseDetail() {
   root.innerHTML = `
     ${renderGenerationHero(course, progress, stages, view)}
     <section class="panel">
-      <h3>Avancement detaille</h3>
+      <h3>Avancement détaillé</h3>
       ${renderTimeline(stages)}
     </section>
     <div class="grid-2">
       <section class="panel">
-        <h3>A verifier</h3>
+        <h3>À vérifier</h3>
         ${renderReviewPanel(view.alerts || [], stages)}
       </section>
       <section class="panel">
-        <h3>Apercu</h3>
+        <h3>Aperçu</h3>
         ${renderPreviewAccess(view, manifest)}
       </section>
     </div>
@@ -1054,13 +1070,13 @@ function renderCourseDetail() {
     </section>
     <div class="grid-2">
       <section class="panel">
-        <h3>Parametres du cours</h3>
+        <h3>Paramètres du cours</h3>
         ${renderSourceManifest(view.source_manifest || {})}
         ${renderRunConfig(view.run_config || {}, view.research_policy || {}, view.content_analysis || {})}
         ${renderCourseSettings(course)}
       </section>
       <section class="panel">
-        <h3>Activite recente</h3>
+        <h3>Activité récente</h3>
         ${renderRecentActivity(view.events || [])}
       </section>
     </div>
@@ -1072,16 +1088,16 @@ function renderReviewPanel(alerts, stages) {
   const attentionStages = stages.filter((stage) => ["attention", "failed"].includes(stage.status));
   const usefulAlerts = (alerts || []).filter((alert) => ["warning", "blocking"].includes(alert.level));
   if (!attentionStages.length && !usefulAlerts.length) {
-    return '<div class="review-grid"><article class="review-item"><strong>Aucun point bloquant</strong><small>Le cours ne demande pas d intervention pour le moment.</small></article></div>';
+    return '<div class="review-grid"><article class="review-item"><strong>Aucun point bloquant</strong><small>Le cours ne demande pas d’intervention pour le moment.</small></article></div>';
   }
   const stageItems = attentionStages.map((stage) => `<article class="review-item"><strong>${escapeHtml(stage.label)}</strong><small>${escapeHtml(stage.detail)}</small></article>`);
-  const alertItems = usefulAlerts.map((alert) => `<article class="review-item"><strong>${escapeHtml(alert.level === "blocking" ? "Bloquant" : "A controler")}</strong><small>${escapeHtml(cleanDetail(alert.message || alert.detail))}</small></article>`);
+  const alertItems = usefulAlerts.map((alert) => `<article class="review-item"><strong>${escapeHtml(alert.level === "blocking" ? "Bloquant" : "À contrôler")}</strong><small>${escapeHtml(cleanDetail(alert.message || alert.detail))}</small></article>`);
   return `<div class="review-grid">${stageItems.concat(alertItems).join("")}</div>`;
 }
 function renderPreviewAccess(view, manifest) {
   const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
   if (!view.user_site_path && !pages.length) {
-    return '<div class="empty">L apercu sera disponible des que le site du cours sera assemble.</div>';
+    return '<div class="empty">L’aperçu sera disponible dès que le site du cours sera assemblé.</div>';
   }
   return `<div class="actions-row">
     <button type="button" data-preview-mode="user" data-open-preview="1" class="primary">Version apprenant</button>
@@ -1098,11 +1114,11 @@ function renderArtifactPanel(view, manifest, slides, webRefs, visualCount, final
   return `<div class="artifact-grid">
     <article class="artifact-card"><strong>Documents</strong><small>${filenames.length || 0} fichier(s) source.</small></article>
     <article class="artifact-card"><strong>Sources web</strong><small>${webRefs.length} source(s) retenue(s).</small></article>
-    <article class="artifact-card"><strong>Slides</strong><small>${slides.length} slide(s) redigee(s).</small></article>
-    <article class="artifact-card"><strong>Images</strong><small>${visualCount} visuel(s) integre(s).</small></article>
-    <article class="artifact-card"><strong>QCM</strong><small>${state.quizzes.length} intermediaire(s), ${intermediateQuestions} question(s), ${finalCount} finale(s).</small></article>
+    <article class="artifact-card"><strong>Slides</strong><small>${slides.length} slide(s) rédigée(s).</small></article>
+    <article class="artifact-card"><strong>Images</strong><small>${visualCount} visuel(s) intégré(s).</small></article>
+    <article class="artifact-card"><strong>QCM</strong><small>${state.quizzes.length} intermédiaire(s), ${intermediateQuestions} question(s), ${finalCount} finale(s).</small></article>
     <article class="artifact-card"><strong>Audio</strong><small>${audioCount} fichier(s) audio.</small></article>
-    <article class="artifact-card"><strong>Site apprenant</strong><small>${pages.length ? `${pages.length} page(s) assemblee(s).` : "En attente d assemblage."}</small></article>
+    <article class="artifact-card"><strong>Site apprenant</strong><small>${pages.length ? `${pages.length} page(s) assemblée(s).` : "En attente d’assemblage."}</small></article>
   </div>`;
 }
 function renderCourseSettings(course) {
@@ -1116,31 +1132,31 @@ function renderCourseSettings(course) {
 }
 function eventLabel(event) {
   const labels = {
-    "job.queued": "Generation demarree",
-    "job.resume_queued": "Reprise demarree",
-    "job.regenerate_full_queued": "Regeneration complete demarree",
-    "job.regenerate_queued": "Regeneration de slide demarree",
-    "job.narration_queued": "Regeneration audio demarree",
-    "job.completed": "Operation terminee",
-    "upload.received": "Documents recus",
+    "job.queued": "Génération démarrée",
+    "job.resume_queued": "Reprise démarrée",
+    "job.regenerate_full_queued": "Régénération complète démarrée",
+    "job.regenerate_queued": "Régénération de slide démarrée",
+    "job.narration_queued": "Régénération audio démarrée",
+    "job.completed": "Opération terminée",
+    "upload.received": "Documents reçus",
     "extract.completed": "Documents lus",
-    "content_profile.resolved": "Profil pedagogique confirme",
+    "content_profile.resolved": "Profil pédagogique confirmé",
     "map.completed": "Plan general construit",
-    "slide.completed": "Slide terminee",
-    "quiz.intermediate.completed": "QCM intermediaire termine",
-    "quiz.quality_cleanup.completed": "QCM verifies",
-    "quiz.final.completed": "QCM final termine",
-    "quiz.completed": "QCM termines",
-    "site.built": "Site apprenant assemble",
-    "site.rebuilt_after_narration": "Audio integre au site",
-    "publish.completed": "Cours publie",
-    "course.title_updated": "Titre mis a jour"
+    "slide.completed": "Slide terminée",
+    "quiz.intermediate.completed": "QCM intermédiaire terminé",
+    "quiz.quality_cleanup.completed": "QCM vérifiés",
+    "quiz.final.completed": "QCM final terminé",
+    "quiz.completed": "QCM terminés",
+    "site.built": "Site apprenant assemblé",
+    "site.rebuilt_after_narration": "Audio intégré au site",
+    "publish.completed": "Cours publié",
+    "course.title_updated": "Titre mis à jour"
   };
-  return labels[event.name] || "Mise a jour";
+  return labels[event.name] || "Mise à jour";
 }
 function renderRecentActivity(events) {
   const recent = (events || []).slice().reverse().slice(0, 6);
-  if (!recent.length) return '<div class="empty">L activite apparaitra ici au lancement du cours.</div>';
+  if (!recent.length) return '<div class="empty">L’activité apparaîtra ici au lancement du cours.</div>';
   return `<div class="activity-list">${recent.map((event) => `
     <div class="activity-item"><strong>${escapeHtml(eventLabel(event))}</strong><small>${escapeHtml(formatDate(event.created_at))}</small></div>
   `).join("")}</div>`;
@@ -1148,9 +1164,9 @@ function renderRecentActivity(events) {
 function renderSourceManifest(manifest) {
   const filenames = Array.isArray(manifest.source_filenames) ? manifest.source_filenames : [];
   const logoMode = manifest.logo_source_type || "default_iaag";
-  const logo = manifest.logo_display_name || manifest.logo_original_filename || manifest.logo_filename || "Logo IAAG par defaut";
+  const logo = manifest.logo_display_name || manifest.logo_original_filename || manifest.logo_filename || "Logo IAAG par défaut";
   const logoDetail = logoMode === "default_iaag"
-    ? "Logo IAAG par defaut"
+    ? "Logo IAAG par défaut"
     : `${logoMode === "url" ? "URL" : "Fichier"} - ${logo}`;
   return `<div class="list">
     <div class="list-item"><strong>Documents</strong><small>${escapeHtml(filenames.join(", ") || "n/a")}</small></div>
@@ -1159,17 +1175,17 @@ function renderSourceManifest(manifest) {
 }
 function renderRunConfig(run, policy, analysis) {
   return `<div class="list">
-    <div class="list-item"><strong>Objectif</strong><small>${escapeHtml(run.target_level || "Niveau a preciser")} | ${Number(run.target_slide_count || 0)} slides visees</small></div>
-    <div class="list-item"><strong>QCM</strong><small>${Number(run.questions_per_intermediate_quiz || 0)} question(s) par entrainement.</small></div>
-    <div class="list-item"><strong>Profil de contenu</strong><small>${escapeHtml(run.content_profile || "standard")} | ${escapeHtml(analysis.confidence || "a confirmer")}</small></div>
-    <div class="list-item"><strong>Recherche web</strong><small>${policy.external_web_access ? "Active" : "Desactivee"}${(policy.allowed_domains || []).length ? " | " + escapeHtml((policy.allowed_domains || []).join(", ")) : ""}</small></div>
+    <div class="list-item"><strong>Objectif</strong><small>${escapeHtml(run.target_level || "Niveau à préciser")} | ${Number(run.target_slide_count || 0)} slides visées</small></div>
+    <div class="list-item"><strong>QCM</strong><small>${Number(run.questions_per_intermediate_quiz || 0)} question(s) par entraînement.</small></div>
+    <div class="list-item"><strong>Profil de contenu</strong><small>${escapeHtml(run.content_profile || "standard")} | ${escapeHtml(analysis.confidence || "à confirmer")}</small></div>
+    <div class="list-item"><strong>Recherche web</strong><small>${policy.external_web_access ? "Active" : "Désactivée"}${(policy.allowed_domains || []).length ? " | " + escapeHtml((policy.allowed_domains || []).join(", ")) : ""}</small></div>
   </div>`;
 }
 function renderSlideRegeneration(slides, active) {
   if (active || !slides.length) return "";
-  return `<section class="panel"><h3>Regenerer une slide</h3><form id="slide-form" class="form-grid">
+  return `<section class="panel"><h3>Régénérer une slide</h3><form id="slide-form" class="form-grid">
     <div class="field half"><label for="slide-id">Slide</label><select id="slide-id">${slides.map((slide) => `<option value="${escapeHtml(slide.page_id)}">${escapeHtml(slide.badge || slide.page_id)} - ${escapeHtml(slide.title || "")}</option>`).join("")}</select></div>
-    <div class="field half"><label>&nbsp;</label><button type="submit">Regenerer</button></div>
+    <div class="field half"><label>&nbsp;</label><button type="submit">Régénérer</button></div>
   </form></section>`;
 }
 async function handleRename(event) {
@@ -1178,7 +1194,7 @@ async function handleRename(event) {
   const form = new FormData(event.currentTarget);
   try {
     await api(`/courses/${encodeURIComponent(state.selectedCourseId)}/title`, { method: "POST", body: form });
-    notice("Titre mis a jour.", "ok");
+    notice("Titre mis à jour.", "ok");
     await refreshAll({ quiet: true });
   } catch (error) {
     notice("Renommage impossible: " + detailText(error), "error");
@@ -1187,12 +1203,12 @@ async function handleRename(event) {
 async function handleUpload(event) {
   event.preventDefault();
   if (!hasGenerationRuntime()) {
-    notice("Generation indisponible.", "error");
+    notice("Génération indisponible.", "error");
     return;
   }
   const files = Array.from($("#uploads").files || []);
   if (files.length < 1 || files.length > 5) {
-    notice("Deposer entre 1 et 5 fichiers PDF/DOCX.", "error");
+    notice("Déposer entre 1 et 5 fichiers PDF/DOCX.", "error");
     return;
   }
   const form = new FormData();
@@ -1209,12 +1225,12 @@ async function handleUpload(event) {
     const result = await api("/courses/upload", { method: "POST", body: form });
     state.selectedCourseId = result.course_id;
     event.currentTarget.reset();
-    $("#upload-count").textContent = "Aucun fichier selectionne.";
-    notice("Generation lancee.", "ok");
+    $("#upload-count").textContent = "Aucun fichier sélectionné.";
+    notice("Génération lancée.", "ok");
     await refreshAll({ quiet: true });
     setView("control");
   } catch (error) {
-    notice("Creation impossible: " + detailText(error), "error");
+    notice("Création impossible: " + detailText(error), "error");
   } finally {
     $("#upload-submit").disabled = false;
   }
@@ -1223,13 +1239,13 @@ async function runCourseAction(action) {
   if (!state.selectedCourseId) return;
   const id = encodeURIComponent(state.selectedCourseId);
   const paths = {
-    resume: [`/courses/${id}/resume`, "Reprise demarree."],
-    publish: [`/courses/${id}/publish`, "Cours publie."],
-    "clean-quizzes": [`/courses/${id}/quizzes/quality-cleanup`, "Verification QCM terminee."],
-    "regenerate-narration": [`/courses/${id}/narration/regenerate`, "Regeneration audio demarree."],
-    "regenerate-full": [`/courses/${id}/regenerate-full`, "Regeneration complete demarree."]
+    resume: [`/courses/${id}/resume`, "Reprise démarrée."],
+    publish: [`/courses/${id}/publish`, "Cours publié."],
+    "clean-quizzes": [`/courses/${id}/quizzes/quality-cleanup`, "Vérification QCM terminée."],
+    "regenerate-narration": [`/courses/${id}/narration/regenerate`, "Régénération audio démarrée."],
+    "regenerate-full": [`/courses/${id}/regenerate-full`, "Régénération complète démarrée."]
   };
-  if (action === "regenerate-full" && !window.confirm("Regenerer tout le cours efface les artefacts courants. Continuer ?")) return;
+  if (action === "regenerate-full" && !window.confirm("Régénérer tout le cours efface les artefacts courants. Continuer ?")) return;
   const spec = paths[action];
   if (!spec) return;
   try {
@@ -1246,10 +1262,10 @@ async function regenerateSelectedSlide(event) {
   const slideId = $("#slide-id").value;
   try {
     await api(`/courses/${encodeURIComponent(state.selectedCourseId)}/slides/${encodeURIComponent(slideId)}/regenerate`, { method: "POST" });
-    notice("Regeneration de slide demarree.", "ok");
+    notice("Régénération de slide démarrée.", "ok");
     await refreshAll({ quiet: true });
   } catch (error) {
-    notice("Regeneration impossible: " + detailText(error), "error");
+    notice("Régénération impossible: " + detailText(error), "error");
   }
 }
 async function exportPages() {
@@ -1265,7 +1281,7 @@ function renderPreview() {
   const frame = $("#preview-frame");
   if (!state.selectedCourseId) {
     frame.removeAttribute("src");
-    $("#preview-caption").textContent = "Selectionner un cours pour ouvrir l'apercu.";
+    $("#preview-caption").textContent = "Sélectionner un cours pour ouvrir l'aperçu.";
     return;
   }
   const id = encodeURIComponent(state.selectedCourseId);
@@ -1276,7 +1292,7 @@ function renderPreview() {
   frame.src = apiUrl(src);
   const labels = { user: "Version apprenant", master: "Version master", deck: "Deck" };
   const course = state.adminView?.course;
-  $("#preview-caption").textContent = `${course?.title || "Cours"} - ${labels[mode] || "Apercu"}`;
+  $("#preview-caption").textContent = `${displayCourseTitle(course?.title || "Cours")} - ${labels[mode] || "Aperçu"}`;
 }
 function bindEvents() {
   $all("[data-view-target]").forEach((button) => button.addEventListener("click", () => setView(button.dataset.viewTarget)));
@@ -1288,7 +1304,7 @@ function bindEvents() {
   $("#upload-form").addEventListener("submit", handleUpload);
   $("#uploads").addEventListener("change", () => {
     const count = ($("#uploads").files || []).length;
-    $("#upload-count").textContent = count ? `${count} fichier(s) selectionne(s).` : "Aucun fichier selectionne.";
+    $("#upload-count").textContent = count ? `${count} fichier(s) sélectionné(s).` : "Aucun fichier sélectionné.";
   });
   document.addEventListener("click", async (event) => {
     const row = event.target.closest("[data-select-course]");

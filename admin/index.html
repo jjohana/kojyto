@@ -122,6 +122,16 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 }
 .backend-config input { min-height: 36px; font-size: 0.88rem; }
 .backend-config small { color: var(--muted); line-height: 1.35; }
+.connection-help {
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid rgba(12, 110, 130, 0.18);
+  border-radius: 8px;
+  background: rgba(12, 110, 130, 0.06);
+}
+.connection-help strong { color: var(--accent-strong); font-size: 0.86rem; }
+.connection-help span { color: var(--muted); font-size: 0.82rem; line-height: 1.35; }
 .site-roles { display: grid; gap: 8px; }
 .site-role {
   display: grid;
@@ -182,6 +192,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .banner.show { display: block; }
 .banner.error { border-color: rgba(169, 52, 52, 0.24); color: var(--danger); background: #fff8f8; }
 .banner.ok { border-color: rgba(39, 111, 85, 0.24); color: var(--ok); background: #f5fbf8; }
+.banner.info { border-color: rgba(12, 110, 130, 0.22); color: var(--accent-strong); background: #f4fbfc; }
 .view { display: none; }
 .view.active { display: grid; gap: 18px; }
 .metrics {
@@ -326,15 +337,19 @@ tr.clickable:hover { background: #f4f8fa; }
       </div>
       <div class="status-pill"><span class="status-dot" id="api-dot"></span><span id="api-status">API...</span></div>
       <div class="backend-config">
-        <label for="api-base-url">API admin securisee</label>
-        <input id="api-base-url" type="url" placeholder="https://api-admin.kojyto.example">
-        <button type="button" id="save-api-base">Connecter</button>
-        <small id="api-origin">API a configurer</small>
+        <label for="api-base-url">URL de l'API KOJYTO</label>
+        <input id="api-base-url" type="url" placeholder="URL HTTPS de l'API deployee">
+        <button type="button" id="save-api-base">Connecter l'API</button>
+        <small id="api-origin">Aucune API deployee configuree</small>
+      </div>
+      <div class="connection-help">
+        <strong>Que renseigner ?</strong>
+        <span>Renseigner ce champ seulement si le backend KOJYTO est deploye en HTTPS. Ne pas mettre le site apprenant ni cette page admin. Sans API connectee, cette page reste une vitrine de controle et ne peut pas creer de cours.</span>
       </div>
       <div class="site-roles" aria-label="Role des sites KOJYTO">
         <div class="site-role"><strong>Site apprenant</strong><span>Vitrine publique et consultation des cours publies.</span></div>
         <div class="site-role"><strong>Site admin</strong><span>Interface de creation, controle, publication et export des cours.</span></div>
-        <div class="site-role"><strong>API admin securisee</strong><span>Service prive qui execute generation, fichiers, jobs et publication.</span></div>
+        <div class="site-role"><strong>API KOJYTO securisee</strong><span>Moteur prive qui execute uploads, generations, jobs, audios, publication et export.</span></div>
       </div>
       <nav class="nav-list" aria-label="Navigation admin">
         <button type="button" data-view-target="dashboard" class="active">Tableau de bord</button>
@@ -520,7 +535,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 15:13 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 15:25 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function isLocalApiBaseUrl(value) {
@@ -613,7 +628,7 @@ function setApiStatus(ok) {
   $("#api-status").textContent = ok ? "API OK" : "API indisponible";
   $("#api-origin").textContent = state.apiBaseUrl
     ? "API configuree"
-    : (adminConfig.sameOriginApi ? "API du meme site" : "API a configurer");
+    : (adminConfig.sameOriginApi ? "API du meme site" : "Aucune API deployee configuree");
 }
 function setView(view) {
   state.view = view;
@@ -631,7 +646,7 @@ async function refreshAll({ quiet = false } = {}) {
     renderCoursesTable();
     renderCourseDetail();
     renderPreview();
-    notice("Renseigner l'URL HTTPS de l'API admin securisee pour activer la creation et le pilotage des cours.", "error");
+    notice("Cette page GitHub Pages est l'interface admin. Pour creer ou piloter un cours ici, deployer d'abord l'API KOJYTO en HTTPS puis saisir son URL dans le champ a gauche. Ne pas saisir le site apprenant ni cette page admin.", "info");
     return;
   }
   try {
@@ -1082,7 +1097,7 @@ function bindEvents() {
       $("#api-base-url").value = "";
       window.localStorage.removeItem("kojyto-admin-api-base-url");
       setApiStatus(false);
-      notice("Utiliser une URL HTTPS d'API admin securisee pour le site public.", "error");
+      notice("Cette page publique attend l'URL HTTPS d'une API KOJYTO deployee. Le site apprenant ou cette page admin ne conviennent pas.", "error");
       return;
     }
     if (state.apiBaseUrl) {

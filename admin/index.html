@@ -62,7 +62,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   border-right: 1px solid var(--line);
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
   overflow-y: auto;
 }
 .brand h1 {
@@ -73,30 +73,15 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   line-height: 1;
 }
 .brand p { margin: 8px 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.45; }
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  width: fit-content;
-  padding: 7px 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  background: var(--surface);
-  font-size: 0.84rem;
-  font-weight: 700;
-}
-.status-dot { width: 9px; height: 9px; border-radius: 999px; background: var(--warn); }
-.status-dot.ok { background: var(--ok); }
 .nav-list {
   display: grid;
   align-content: start;
-  gap: 8px;
+  gap: 10px;
 }
 .nav-list button {
   justify-content: flex-start;
   width: 100%;
-  min-height: 42px;
+  min-height: 46px;
   border-color: transparent;
   background: transparent;
 }
@@ -112,16 +97,6 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .nav-list button.primary-nav.active { background: var(--accent-strong); }
 .side-links { display: grid; gap: 8px; }
 .side-links a { color: var(--accent-strong); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
-.workflow-card {
-  display: grid;
-  gap: 5px;
-  padding: 12px;
-  border: 1px solid rgba(12, 110, 130, 0.18);
-  border-radius: 8px;
-  background: rgba(12, 110, 130, 0.06);
-}
-.workflow-card strong { color: var(--accent-strong); font-size: 0.9rem; }
-.workflow-card span { color: var(--muted); font-size: 0.84rem; line-height: 1.35; }
 .site-roles { display: grid; gap: 8px; }
 .site-role {
   display: grid;
@@ -164,13 +139,13 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 }
 .topbar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: 16px;
 }
-.topbar h2 { margin: 0; color: var(--accent-strong); font-size: 1.35rem; }
-.topbar p { margin: 5px 0 0; color: var(--muted); }
-.top-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; min-width: 0; }
+.topbar h2 { margin: 0; color: var(--accent-strong); font-size: 1.45rem; }
+.topbar p { display: none; }
+.top-actions { display: none; }
 .banner {
   display: none;
   padding: 12px 14px;
@@ -201,6 +176,8 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .metric span { display: block; color: var(--muted); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; }
 .metric strong { display: block; margin-top: 6px; color: var(--accent-strong); font-size: 1.75rem; }
 .panel { padding: 18px; display: grid; gap: 14px; }
+.panel.compact { gap: 18px; }
+.panel.compact .panel-head { display: none; }
 .panel-head {
   display: flex;
   justify-content: space-between;
@@ -326,24 +303,16 @@ tr.clickable:hover { background: #f4f8fa; }
     <aside class="sidebar">
       <div class="brand">
         <h1>KOJYTO Admin</h1>
-        <p>Creer, controler et publier des cours pour le site apprenant.</p>
-      </div>
-      <div class="status-pill"><span class="status-dot" id="api-dot"></span><span id="api-status">Generation...</span></div>
-      <div class="workflow-card">
-        <strong>Parcours admin</strong>
-        <span>Deposer les documents, generer le cours, verifier le rendu, puis publier vers le site apprenant.</span>
+        <p>Creation et publication des cours.</p>
       </div>
       <nav class="nav-list" aria-label="Navigation admin">
         <button type="button" data-view-target="create" class="active primary-nav">Creer un cours</button>
-        <button type="button" data-view-target="dashboard">Tableau de bord</button>
+        <button type="button" data-view-target="dashboard">Cours</button>
         <button type="button" data-view-target="control">Piloter un cours</button>
         <button type="button" data-view-target="preview">Previsualiser</button>
-        <button type="button" data-view-target="capabilities">Capacites</button>
       </nav>
       <div class="side-links">
-        <a id="catalog-link" href="#">Catalogue</a>
         <a id="learner-link" href="https://jjohana.github.io/kojyto/index.html">Site apprenant public</a>
-        <a id="public-admin-link" href="https://jjohana.github.io/kojyto/admin/">Site admin public</a>
       </div>
     </aside>
     <main class="main">
@@ -351,11 +320,6 @@ tr.clickable:hover { background: #f4f8fa; }
         <div>
           <h2 id="page-title">Creer un cours</h2>
           <p id="page-subtitle">Deposer les documents, regler le cours et lancer la generation.</p>
-        </div>
-        <div class="top-actions">
-          <label class="inline-check"><input type="checkbox" id="auto-refresh" checked> Actualisation auto</label>
-          <button type="button" id="refresh-btn">Rafraichir</button>
-          <button type="button" id="export-btn">Exporter docs/</button>
         </div>
       </header>
       <div class="banner" id="notice" role="status"></div>
@@ -379,31 +343,8 @@ tr.clickable:hover { background: #f4f8fa; }
         </section>
       </section>
 
-      <section class="view" id="view-capabilities">
-        <section class="panel">
-          <div class="panel-head">
-            <div>
-              <h3>Capacites de generation</h3>
-              <p>Controle de bout en bout: documents, web, contenu, images, QCM, narration, audio et publication.</p>
-            </div>
-          </div>
-          <div class="capability-grid">
-            <article class="capability-card"><span>01</span><strong>Lecture documentaire</strong><p>Depot de 1 a 5 fichiers PDF/DOCX, extraction texte, images utiles a la comprehension, chunking et alertes.</p></article>
-            <article class="capability-card"><span>02</span><strong>Configuration pedagogique</strong><p>Niveau, volume de slides, difficulte, profil de contenu, QCM, domaines preferes et consignes.</p></article>
-            <article class="capability-card"><span>03</span><strong>Logo et marque</strong><p>Logo IAAG par defaut, logo fichier ou URL optionnels, integration reelle a gauche des pages, jamais generee dans l'image.</p></article>
-            <article class="capability-card"><span>04</span><strong>Recherche web</strong><p>Recherche facultative, domaines preferes, sources web conservees dans les slides et controle des references.</p></article>
-            <article class="capability-card"><span>05</span><strong>Contenu et slides</strong><p>Cartographie, plan, generation des slides, visuels, validation, reprise et regeneration individuelle.</p></article>
-            <article class="capability-card"><span>06</span><strong>Images</strong><p>Moteur d'image existant, prompt anti-logo/anti-etablissement, controles QA et insertion du visuel de synthese.</p></article>
-            <article class="capability-card"><span>07</span><strong>QCM</strong><p>QCM intermediaires, nettoyage qualite, banque finale, validation finale et previsualisation apprenant.</p></article>
-            <article class="capability-card"><span>08</span><strong>Narration et audio</strong><p>Scenario detaille, scripts par page, generation audio, QA audio et regeneration de narration.</p></article>
-            <article class="capability-card"><span>09</span><strong>Suivi temps reel</strong><p>Jobs, etapes, progression, evenements, alertes bloquantes et artefacts generes.</p></article>
-            <article class="capability-card"><span>10</span><strong>Assemblage et publication</strong><p>Site master, site apprenant, deck, publication, export docs/ et verification GitHub Pages.</p></article>
-          </div>
-        </section>
-      </section>
-
       <section class="view active" id="view-create">
-        <section class="panel">
+        <section class="panel compact">
           <div class="panel-head">
             <div>
               <h3>Nouveau cours</h3>
@@ -419,12 +360,12 @@ tr.clickable:hover { background: #f4f8fa; }
             <div class="field wide">
               <label for="logo">Logo optionnel</label>
               <input id="logo" name="logo" type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp">
-              <small>Par defaut, le logo IAAG est utilise. Un fichier fourni remplace le logo par defaut et reste integre a gauche des pages.</small>
+              <small>Logo IAAG par defaut.</small>
             </div>
             <div class="field wide">
               <label for="logo_url">URL de logo optionnelle</label>
               <input id="logo_url" name="logo_url" type="url" placeholder="https://exemple.fr/logo.png">
-              <small>Utilisee seulement si aucun fichier logo n'est depose. Les images generees restent sans nom d'ecole ni logo dans l'image.</small>
+              <small>Utilisee si aucun fichier logo n'est depose.</small>
             </div>
             <div class="field third">
               <label for="target_level">Niveau</label>
@@ -461,35 +402,22 @@ tr.clickable:hover { background: #f4f8fa; }
               <label for="questions_per_intermediate_quiz">Questions par QCM</label>
               <input id="questions_per_intermediate_quiz" name="questions_per_intermediate_quiz" type="number" min="1" max="20" value="5">
             </div>
-            <div class="field third">
-              <label for="pipeline_profile">Profil pipeline</label>
-              <select id="pipeline_profile" name="pipeline_profile">
-                <option value="standard">Standard</option>
-                <option value="compact">Compact</option>
-              </select>
-            </div>
-            <div class="field third">
-              <label for="parallelism">Parallelisme</label>
-              <input id="parallelism" name="parallelism" type="number" min="1" max="12" value="4">
-            </div>
-            <div class="field third">
-              <label for="model_name">Modele</label>
-              <input id="model_name" name="model_name" placeholder="defaut backend">
-            </div>
+            <input id="pipeline_profile" name="pipeline_profile" type="hidden" value="standard">
+            <input id="parallelism" name="parallelism" type="hidden" value="4">
+            <input id="model_name" name="model_name" type="hidden" value="">
             <div class="field half">
               <label for="domains_raw">Domaines preferes</label>
               <input id="domains_raw" name="domains_raw" placeholder="onisep.fr, education.gouv.fr">
             </div>
             <div class="field half">
               <label class="inline-check"><input id="external_web" name="external_web" type="checkbox" checked> Enrichissement web actif</label>
-              <small>Desactiver pour limiter la generation aux documents fournis.</small>
             </div>
             <div class="field wide">
               <label for="guide">Consignes pedagogiques</label>
               <textarea id="guide" name="guide" placeholder="Objectifs, public cible, contraintes de style, points a surveiller..."></textarea>
             </div>
             <div class="field wide">
-              <button type="submit" class="primary" id="upload-submit">Lancer la generation</button>
+              <button type="submit" class="primary" id="upload-submit">Creer le cours</button>
             </div>
           </form>
         </section>
@@ -517,7 +445,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 15:48 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 16:22 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function isLocalApiBaseUrl(value) {
@@ -551,7 +479,6 @@ const state = {
 
 const viewLabels = {
   dashboard: ["Tableau de bord", "Vue operationnelle des cours et generations."],
-  capabilities: ["Capacites", "Verification du pipeline complet de generation d'un cours."],
   create: ["Creer un cours", "Deposer les documents, regler le cours et lancer la generation."],
   control: ["Piloter un cours", "Suivi temps reel, controles, actions et publication."],
   preview: ["Previsualiser", "Controle visuel des versions master, apprenant et deck."]
@@ -606,24 +533,19 @@ async function apiMaybe(path, fallback) {
   try { return await api(path); } catch (_error) { return fallback; }
 }
 function setGenerationStatus(ok) {
-  $("#api-dot").classList.toggle("ok", ok);
-  if (ok) {
-    $("#api-status").textContent = "Generation prete";
-  } else {
-    $("#api-status").textContent = hasGenerationRuntime() ? "Verification en cours" : "Site publie";
-  }
+  const dot = $("#api-dot");
+  const status = $("#api-status");
+  if (!dot || !status) return;
+  dot.classList.toggle("ok", ok);
+  status.textContent = ok ? "Pret" : "";
 }
 function setGenerationControlsEnabled(enabled) {
-  $("#refresh-btn").disabled = !enabled;
-  $("#export-btn").disabled = !enabled;
-  $("#auto-refresh").disabled = !enabled;
-  const form = $("#upload-form");
-  if (form) {
-    form.classList.toggle("is-disabled", !enabled);
-    form.querySelectorAll("input, select, textarea, button").forEach((node) => {
-      node.disabled = !enabled;
-    });
-  }
+  const refresh = $("#refresh-btn");
+  const exportButton = $("#export-btn");
+  const autoRefresh = $("#auto-refresh");
+  if (refresh) refresh.disabled = !enabled;
+  if (exportButton) exportButton.disabled = !enabled;
+  if (autoRefresh) autoRefresh.disabled = !enabled;
 }
 function setView(view) {
   state.view = view;
@@ -638,11 +560,10 @@ async function refreshAll({ quiet = false } = {}) {
   if (!hasGenerationRuntime()) {
     setGenerationStatus(false);
     setGenerationControlsEnabled(false);
-    renderMetrics();
-    renderCoursesTable();
+    await loadStaticCatalog();
     renderCourseDetail();
     renderPreview();
-    notice("Cette version publiee affiche l'admin sans reglage a saisir. Quand l'admin KOJYTO operationnel est lance, ce meme ecran permet de generer; ici, les cours publies restent accessibles depuis le site apprenant.", "info");
+    notice("");
     return;
   }
   try {
@@ -664,6 +585,33 @@ async function loadCourses() {
   if (!state.selectedCourseId && state.courses.length) {
     state.selectedCourseId = state.courses[0].id;
   }
+}
+async function loadStaticCatalog() {
+  if (!adminConfig.siteManifestHref) {
+    state.courses = [];
+    renderMetrics();
+    renderCoursesTable();
+    return;
+  }
+  try {
+    const response = await fetch(adminConfig.siteManifestHref);
+    if (!response.ok) throw new Error("Manifest unavailable");
+    const manifest = await response.json();
+    const courses = Array.isArray(manifest.courses) ? manifest.courses : [];
+    state.courses = courses.map((course) => ({
+      id: course.course_id,
+      title: course.title,
+      status: "published",
+      published: true,
+      source_filename: course.source_filename,
+      created_at: course.created_at,
+      public_href: course.href ? "../" + String(course.href).replace(/^\.\//, "") : ""
+    }));
+  } catch (_error) {
+    state.courses = [];
+  }
+  renderMetrics();
+  renderCoursesTable();
 }
 async function loadSelectedCourse() {
   if (!state.selectedCourseId) {
@@ -702,6 +650,7 @@ function renderMetrics() {
 }
 function renderCoursesTable() {
   const filter = ($("#course-filter").value || "").toLowerCase();
+  const staticMode = !hasGenerationRuntime();
   const courses = state.courses.filter((course) => {
     return !filter || [course.title, course.status, course.source_filename, course.id].join(" ").toLowerCase().includes(filter);
   });
@@ -711,7 +660,7 @@ function renderCoursesTable() {
   }
   $("#courses-table").innerHTML = `
     <table>
-      <thead><tr><th>Cours</th><th>Statut</th><th>Publication</th><th>Source</th><th>Creation</th></tr></thead>
+      <thead><tr><th>Cours</th><th>Statut</th><th>Publication</th><th>Source</th><th>Creation</th>${staticMode ? "<th>Acces</th>" : ""}</tr></thead>
       <tbody>
         ${courses.map((course) => `
           <tr class="clickable" data-select-course="${escapeHtml(course.id)}">
@@ -720,6 +669,7 @@ function renderCoursesTable() {
             <td>${course.published ? '<span class="pill published">publie</span>' : '<span class="pill">non publie</span>'}</td>
             <td>${escapeHtml(course.source_filename)}</td>
             <td>${escapeHtml(formatDate(course.created_at))}</td>
+            ${staticMode ? `<td>${course.public_href ? `<a class="button" href="${escapeHtml(course.public_href)}">Ouvrir</a>` : ""}</td>` : ""}
           </tr>
         `).join("")}
       </tbody>
@@ -997,6 +947,10 @@ async function handleRename(event) {
 }
 async function handleUpload(event) {
   event.preventDefault();
+  if (!hasGenerationRuntime()) {
+    notice("Generation indisponible.", "error");
+    return;
+  }
   const files = Array.from($("#uploads").files || []);
   if (files.length < 1 || files.length > 5) {
     notice("Deposer entre 1 et 5 fichiers PDF/DOCX.", "error");
@@ -1085,8 +1039,10 @@ function renderPreview() {
 }
 function bindEvents() {
   $all("[data-view-target]").forEach((button) => button.addEventListener("click", () => setView(button.dataset.viewTarget)));
-  $("#refresh-btn").addEventListener("click", () => refreshAll());
-  $("#export-btn").addEventListener("click", exportPages);
+  const refresh = $("#refresh-btn");
+  const exportButton = $("#export-btn");
+  if (refresh) refresh.addEventListener("click", () => refreshAll());
+  if (exportButton) exportButton.addEventListener("click", exportPages);
   $("#course-filter").addEventListener("input", renderCoursesTable);
   $("#upload-form").addEventListener("submit", handleUpload);
   $("#uploads").addEventListener("change", () => {
@@ -1096,6 +1052,11 @@ function bindEvents() {
   document.addEventListener("click", async (event) => {
     const row = event.target.closest("[data-select-course]");
     if (row) {
+      if (!hasGenerationRuntime()) {
+        const course = state.courses.find((item) => item.id === row.dataset.selectCourse);
+        if (course && course.public_href) window.location.href = course.public_href;
+        return;
+      }
       state.selectedCourseId = row.dataset.selectCourse;
       await loadSelectedCourse();
       setView("control");
@@ -1114,16 +1075,21 @@ function bindEvents() {
   });
 }
 async function init() {
-  $("#catalog-link").href = adminConfig.catalogHref || "#";
-  $("#learner-link").href = adminConfig.learnerSiteUrl || "https://jjohana.github.io/kojyto/index.html";
-  $("#public-admin-link").href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
+  const catalogLink = $("#catalog-link");
+  const learnerLink = $("#learner-link");
+  const publicAdminLink = $("#public-admin-link");
+  if (catalogLink) catalogLink.href = adminConfig.catalogHref || "#";
+  if (learnerLink) learnerLink.href = adminConfig.learnerSiteUrl || "https://jjohana.github.io/kojyto/index.html";
+  if (publicAdminLink) publicAdminLink.href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
   setGenerationStatus(false);
   setGenerationControlsEnabled(hasGenerationRuntime());
   bindEvents();
   await refreshAll({ quiet: true });
-  window.setInterval(() => {
-    if (!document.hidden && $("#auto-refresh").checked) refreshAll({ quiet: true });
-  }, 5000);
+  if (hasGenerationRuntime()) {
+    window.setInterval(() => {
+      if (!document.hidden) refreshAll({ quiet: true });
+    }, 5000);
+  }
 }
 init();
   </script>

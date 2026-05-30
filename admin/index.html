@@ -308,6 +308,7 @@ tr.clickable:hover { background: #f4f8fa; }
         <a id="catalog-link" href="#">Catalogue</a>
         <a id="learner-link" href="https://jjohana.github.io/kojyto/index.html">Site apprenant public</a>
         <a id="public-admin-link" href="https://jjohana.github.io/kojyto/admin/">Entree admin publique</a>
+        <a id="backend-admin-link" href="/admin/">Admin FastAPI</a>
       </div>
     </aside>
     <main class="main">
@@ -453,7 +454,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "http://127.0.0.1:8765", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 13:58 UTC+02:00"}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "http://127.0.0.1:8765", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 14:10 UTC+02:00"}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 const state = {
@@ -544,7 +545,11 @@ async function refreshAll({ quiet = false } = {}) {
     if (!quiet) notice("Donnees actualisees.", "ok");
   } catch (error) {
     setApiStatus(false);
-    notice("Erreur backend: " + detailText(error), "error");
+    const localHttpBlocked = window.location.protocol === "https:" && state.apiBaseUrl.startsWith("http://");
+    const hint = localHttpBlocked
+      ? " Le navigateur peut bloquer les appels HTTPS vers un backend local HTTP; ouvrir Admin FastAPI ou saisir un backend HTTPS."
+      : "";
+    notice("Erreur backend: " + detailText(error) + hint, "error");
   }
 }
 async function loadCourses() {
@@ -898,6 +903,7 @@ async function init() {
   $("#catalog-link").href = adminConfig.catalogHref || "#";
   $("#learner-link").href = adminConfig.learnerSiteUrl || "https://jjohana.github.io/kojyto/index.html";
   $("#public-admin-link").href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
+  $("#backend-admin-link").href = apiUrl("/admin/");
   bindEvents();
   await refreshAll({ quiet: true });
   window.setInterval(() => {

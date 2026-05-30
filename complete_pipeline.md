@@ -25,7 +25,7 @@ The repository currently exposes three distinct runtime surfaces.
 
 ### 1.1 Why the distinction matters
 
-- The Streamlit app is the authoritative persisted workflow.
+- The FastAPI backend and admin site are the authoritative persisted workflow.
 - The HTML harness is the most auditable path for slide-generation experiments because it archives each intermediate artifact to disk.
 - The ad hoc ingestion harness is a separate exploratory branch for multimodal extraction, especially `PPTX`.
 
@@ -33,10 +33,10 @@ The repository currently exposes three distinct runtime surfaces.
 
 ```mermaid
 flowchart LR
-    subgraph UI[Streamlit UI]
+    subgraph UI[Runtime UI]
         A[app.py]
-        B[pages/admin_upload.py]
-        C[pages/admin_publish.py]
+        B[FastAPI /admin/ create]
+        C[FastAPI /admin/ control]
         D[pages/student_home.py]
         E[pages/student_player.py]
         F[pages/final_validation.py]
@@ -274,7 +274,7 @@ Markdown files under `storage/` are generated run reports. They are artifacts of
 
 ## 7. Upload And Course Registration
 
-Admin upload is implemented in `pages/admin_upload.py`.
+Admin upload is implemented in the FastAPI admin site served at `/admin/`.
 
 ### 7.1 Current UI inputs
 
@@ -291,7 +291,7 @@ Admin upload is implemented in `pages/admin_upload.py`.
 ```mermaid
 sequenceDiagram
     participant Admin
-    participant Page as admin_upload.py
+    participant Page as /admin/
     participant Store as persistence.py
     participant Orch as orchestrator.py
 
@@ -814,7 +814,7 @@ The harness restores deterministic output order after parallel execution so arch
 - rebuilds only the static site
 - fails if no archived slide specs are present
 
-## 18. Streamlit Page Surfaces
+## 18. UI Surfaces
 
 ### 18.1 `app.py`
 
@@ -824,7 +824,7 @@ The harness restores deterministic output order after parallel execution so arch
 
 ### 18.2 Admin pages
 
-`pages/admin_upload.py`:
+FastAPI `/admin/` create view:
 
 - upload and generation launch
 - research policy capture
@@ -832,7 +832,7 @@ The harness restores deterministic output order after parallel execution so arch
 - content profile selection: `auto|standard|scientific`
 - intermediate quiz mode and question-count selection
 
-`pages/admin_publish.py`:
+FastAPI `/admin/` control and preview views:
 
 - course selector
 - rendered slide preview

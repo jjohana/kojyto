@@ -25,7 +25,7 @@ The goal is narrow:
 
 ### 2.1 Upload-time state
 
-`pages/admin_upload.py` and `src/backend_api.py` now store:
+The FastAPI admin site and `src/backend_api.py` now store:
 
 - the operator selection: `auto|standard|scientific`
 - a pending or forced `ContentProfileAnalysis`
@@ -269,8 +269,7 @@ Core implementation:
 - `src/backend_api.py`
 - `src/backend_client.py`
 - `src/worker.py`
-- `pages/admin_upload.py`
-- `pages/admin_publish.py`
+- `src/admin_site.py`
 - `scripts/test_html_slides_generation.py`
 
 Tests:

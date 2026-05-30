@@ -60,9 +60,10 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   padding: 20px 16px;
   background: #f9fbfc;
   border-right: 1px solid var(--line);
-  display: grid;
-  grid-template-rows: auto auto auto auto minmax(0, 1fr) auto;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
+  overflow-y: auto;
 }
 .brand h1 {
   margin: 0;
@@ -91,7 +92,6 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   display: grid;
   align-content: start;
   gap: 8px;
-  overflow: auto;
 }
 .nav-list button {
   justify-content: flex-start;
@@ -104,34 +104,24 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   background: rgba(12, 110, 130, 0.11);
   border-color: rgba(12, 110, 130, 0.16);
 }
+.nav-list button.primary-nav {
+  color: #fff;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+}
+.nav-list button.primary-nav.active { background: var(--accent-strong); }
 .side-links { display: grid; gap: 8px; }
 .side-links a { color: var(--accent-strong); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
-.backend-config {
-  display: grid;
-  gap: 8px;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-}
-.backend-config label {
-  color: var(--accent-strong);
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.backend-config input { min-height: 36px; font-size: 0.88rem; }
-.backend-config small { color: var(--muted); line-height: 1.35; }
-.connection-help {
+.workflow-card {
   display: grid;
   gap: 5px;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid rgba(12, 110, 130, 0.18);
   border-radius: 8px;
   background: rgba(12, 110, 130, 0.06);
 }
-.connection-help strong { color: var(--accent-strong); font-size: 0.86rem; }
-.connection-help span { color: var(--muted); font-size: 0.82rem; line-height: 1.35; }
+.workflow-card strong { color: var(--accent-strong); font-size: 0.9rem; }
+.workflow-card span { color: var(--muted); font-size: 0.84rem; line-height: 1.35; }
 .site-roles { display: grid; gap: 8px; }
 .site-role {
   display: grid;
@@ -314,6 +304,9 @@ tr.clickable:hover { background: #f4f8fa; }
   color: var(--muted);
   background: #fbfdfe;
 }
+.requires-generation.is-disabled {
+  opacity: 0.62;
+}
 @media (max-width: 1040px) {
   .admin-shell { grid-template-columns: 1fr; }
   .sidebar { position: relative; height: auto; grid-template-rows: auto; }
@@ -333,42 +326,31 @@ tr.clickable:hover { background: #f4f8fa; }
     <aside class="sidebar">
       <div class="brand">
         <h1>KOJYTO Admin</h1>
-        <p>Creation, controle, publication et export des cours KOJYTO.</p>
+        <p>Creer, controler et publier des cours pour le site apprenant.</p>
       </div>
-      <div class="status-pill"><span class="status-dot" id="api-dot"></span><span id="api-status">API...</span></div>
-      <div class="backend-config">
-        <label for="api-base-url">URL de l'API KOJYTO</label>
-        <input id="api-base-url" type="url" placeholder="URL HTTPS de l'API deployee">
-        <button type="button" id="save-api-base">Connecter l'API</button>
-        <small id="api-origin">Aucune API deployee configuree</small>
-      </div>
-      <div class="connection-help">
-        <strong>Que renseigner ?</strong>
-        <span>Renseigner ce champ seulement si le backend KOJYTO est deploye en HTTPS. Ne pas mettre le site apprenant ni cette page admin. Sans API connectee, cette page reste une vitrine de controle et ne peut pas creer de cours.</span>
-      </div>
-      <div class="site-roles" aria-label="Role des sites KOJYTO">
-        <div class="site-role"><strong>Site apprenant</strong><span>Vitrine publique et consultation des cours publies.</span></div>
-        <div class="site-role"><strong>Site admin</strong><span>Interface de creation, controle, publication et export des cours.</span></div>
-        <div class="site-role"><strong>API KOJYTO securisee</strong><span>Moteur prive qui execute uploads, generations, jobs, audios, publication et export.</span></div>
+      <div class="status-pill"><span class="status-dot" id="api-dot"></span><span id="api-status">Generation...</span></div>
+      <div class="workflow-card">
+        <strong>Parcours admin</strong>
+        <span>Deposer les documents, generer le cours, verifier le rendu, puis publier vers le site apprenant.</span>
       </div>
       <nav class="nav-list" aria-label="Navigation admin">
-        <button type="button" data-view-target="dashboard" class="active">Tableau de bord</button>
-        <button type="button" data-view-target="capabilities">Capacites</button>
-        <button type="button" data-view-target="create">Creer un cours</button>
+        <button type="button" data-view-target="create" class="active primary-nav">Creer un cours</button>
+        <button type="button" data-view-target="dashboard">Tableau de bord</button>
         <button type="button" data-view-target="control">Piloter un cours</button>
         <button type="button" data-view-target="preview">Previsualiser</button>
+        <button type="button" data-view-target="capabilities">Capacites</button>
       </nav>
       <div class="side-links">
         <a id="catalog-link" href="#">Catalogue</a>
         <a id="learner-link" href="https://jjohana.github.io/kojyto/index.html">Site apprenant public</a>
-        <a id="public-admin-link" href="https://jjohana.github.io/kojyto/admin/">Entree admin publique</a>
+        <a id="public-admin-link" href="https://jjohana.github.io/kojyto/admin/">Site admin public</a>
       </div>
     </aside>
     <main class="main">
       <header class="topbar">
         <div>
-          <h2 id="page-title">Tableau de bord</h2>
-          <p id="page-subtitle">Vue operationnelle des cours et generations.</p>
+          <h2 id="page-title">Creer un cours</h2>
+          <p id="page-subtitle">Deposer les documents, regler le cours et lancer la generation.</p>
         </div>
         <div class="top-actions">
           <label class="inline-check"><input type="checkbox" id="auto-refresh" checked> Actualisation auto</label>
@@ -378,7 +360,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </header>
       <div class="banner" id="notice" role="status"></div>
 
-      <section class="view active" id="view-dashboard">
+      <section class="view" id="view-dashboard">
         <div class="metrics">
           <div class="metric"><span>Cours</span><strong id="metric-total">0</strong></div>
           <div class="metric"><span>Publies</span><strong id="metric-published">0</strong></div>
@@ -420,7 +402,7 @@ tr.clickable:hover { background: #f4f8fa; }
         </section>
       </section>
 
-      <section class="view" id="view-create">
+      <section class="view active" id="view-create">
         <section class="panel">
           <div class="panel-head">
             <div>
@@ -428,7 +410,7 @@ tr.clickable:hover { background: #f4f8fa; }
               <p>Deposer 1 a 5 documents PDF/DOCX, configurer la generation, puis lancer le job.</p>
             </div>
           </div>
-          <form id="upload-form" class="form-grid">
+          <form id="upload-form" class="form-grid requires-generation">
             <div class="field wide">
               <label for="uploads">Documents source</label>
               <input id="uploads" name="uploads" type="file" multiple accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
@@ -535,7 +517,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 15:25 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 15:48 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function isLocalApiBaseUrl(value) {
@@ -547,19 +529,16 @@ function isLocalApiBaseUrl(value) {
   }
 }
 function resolveInitialApiBaseUrl() {
-  const stored = window.localStorage.getItem("kojyto-admin-api-base-url") || "";
   const configured = adminConfig.apiBaseUrl || "";
-  const candidate = stored || configured;
-  if (!adminConfig.sameOriginApi && isLocalApiBaseUrl(candidate)) {
-    window.localStorage.removeItem("kojyto-admin-api-base-url");
+  if (!adminConfig.sameOriginApi && isLocalApiBaseUrl(configured)) {
     return configured && !isLocalApiBaseUrl(configured) ? configured.replace(/\/+$/, "") : "";
   }
-  return String(candidate || "").replace(/\/+$/, "");
+  return String(configured || "").replace(/\/+$/, "");
 }
 const state = {
   courses: [],
   selectedCourseId: "",
-  view: "dashboard",
+  view: "create",
   adminView: null,
   manifest: null,
   slideDeck: null,
@@ -573,7 +552,7 @@ const state = {
 const viewLabels = {
   dashboard: ["Tableau de bord", "Vue operationnelle des cours et generations."],
   capabilities: ["Capacites", "Verification du pipeline complet de generation d'un cours."],
-  create: ["Creer un cours", "Depot de documents, configuration et lancement de generation."],
+  create: ["Creer un cours", "Deposer les documents, regler le cours et lancer la generation."],
   control: ["Piloter un cours", "Suivi temps reel, controles, actions et publication."],
   preview: ["Previsualiser", "Controle visuel des versions master, apprenant et deck."]
 };
@@ -608,6 +587,9 @@ function detailText(error) {
 function normalizeApiBaseUrl(value) {
   return String(value || "").trim().replace(/\/+$/, "");
 }
+function hasGenerationRuntime() {
+  return adminConfig.sameOriginApi || Boolean(state.apiBaseUrl);
+}
 function apiUrl(path) {
   if (/^https?:\/\//i.test(path)) return path;
   const normalizedPath = path.startsWith("/") ? path : "/" + path;
@@ -623,12 +605,25 @@ async function api(path, options = {}) {
 async function apiMaybe(path, fallback) {
   try { return await api(path); } catch (_error) { return fallback; }
 }
-function setApiStatus(ok) {
+function setGenerationStatus(ok) {
   $("#api-dot").classList.toggle("ok", ok);
-  $("#api-status").textContent = ok ? "API OK" : "API indisponible";
-  $("#api-origin").textContent = state.apiBaseUrl
-    ? "API configuree"
-    : (adminConfig.sameOriginApi ? "API du meme site" : "Aucune API deployee configuree");
+  if (ok) {
+    $("#api-status").textContent = "Generation prete";
+  } else {
+    $("#api-status").textContent = hasGenerationRuntime() ? "Verification en cours" : "Site publie";
+  }
+}
+function setGenerationControlsEnabled(enabled) {
+  $("#refresh-btn").disabled = !enabled;
+  $("#export-btn").disabled = !enabled;
+  $("#auto-refresh").disabled = !enabled;
+  const form = $("#upload-form");
+  if (form) {
+    form.classList.toggle("is-disabled", !enabled);
+    form.querySelectorAll("input, select, textarea, button").forEach((node) => {
+      node.disabled = !enabled;
+    });
+  }
 }
 function setView(view) {
   state.view = view;
@@ -640,24 +635,26 @@ function setView(view) {
   if (view === "preview") renderPreview();
 }
 async function refreshAll({ quiet = false } = {}) {
-  if (!state.apiBaseUrl && !adminConfig.sameOriginApi) {
-    setApiStatus(false);
+  if (!hasGenerationRuntime()) {
+    setGenerationStatus(false);
+    setGenerationControlsEnabled(false);
     renderMetrics();
     renderCoursesTable();
     renderCourseDetail();
     renderPreview();
-    notice("Cette page GitHub Pages est l'interface admin. Pour creer ou piloter un cours ici, deployer d'abord l'API KOJYTO en HTTPS puis saisir son URL dans le champ a gauche. Ne pas saisir le site apprenant ni cette page admin.", "info");
+    notice("Cette version publiee affiche l'admin sans reglage a saisir. Quand l'admin KOJYTO operationnel est lance, ce meme ecran permet de generer; ici, les cours publies restent accessibles depuis le site apprenant.", "info");
     return;
   }
   try {
+    setGenerationControlsEnabled(true);
     await api("/health");
-    setApiStatus(true);
+    setGenerationStatus(true);
     await loadCourses();
     if (state.selectedCourseId) await loadSelectedCourse();
     if (!quiet) notice("Donnees actualisees.", "ok");
   } catch (error) {
-    setApiStatus(false);
-    notice("Erreur API admin: " + detailText(error), "error");
+    setGenerationStatus(false);
+    notice("Generation indisponible: " + detailText(error), "error");
   }
 }
 async function loadCourses() {
@@ -1090,23 +1087,6 @@ function bindEvents() {
   $all("[data-view-target]").forEach((button) => button.addEventListener("click", () => setView(button.dataset.viewTarget)));
   $("#refresh-btn").addEventListener("click", () => refreshAll());
   $("#export-btn").addEventListener("click", exportPages);
-  $("#save-api-base").addEventListener("click", async () => {
-    state.apiBaseUrl = normalizeApiBaseUrl($("#api-base-url").value);
-    if (!adminConfig.sameOriginApi && isLocalApiBaseUrl(state.apiBaseUrl)) {
-      state.apiBaseUrl = "";
-      $("#api-base-url").value = "";
-      window.localStorage.removeItem("kojyto-admin-api-base-url");
-      setApiStatus(false);
-      notice("Cette page publique attend l'URL HTTPS d'une API KOJYTO deployee. Le site apprenant ou cette page admin ne conviennent pas.", "error");
-      return;
-    }
-    if (state.apiBaseUrl) {
-      window.localStorage.setItem("kojyto-admin-api-base-url", state.apiBaseUrl);
-    } else {
-      window.localStorage.removeItem("kojyto-admin-api-base-url");
-    }
-    await refreshAll();
-  });
   $("#course-filter").addEventListener("input", renderCoursesTable);
   $("#upload-form").addEventListener("submit", handleUpload);
   $("#uploads").addEventListener("change", () => {
@@ -1134,11 +1114,11 @@ function bindEvents() {
   });
 }
 async function init() {
-  $("#api-base-url").value = state.apiBaseUrl;
   $("#catalog-link").href = adminConfig.catalogHref || "#";
   $("#learner-link").href = adminConfig.learnerSiteUrl || "https://jjohana.github.io/kojyto/index.html";
   $("#public-admin-link").href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
-  setApiStatus(false);
+  setGenerationStatus(false);
+  setGenerationControlsEnabled(hasGenerationRuntime());
   bindEvents();
   await refreshAll({ quiet: true });
   window.setInterval(() => {

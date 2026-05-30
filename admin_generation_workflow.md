@@ -7,11 +7,11 @@ This document is the operational checklist for the separate KOJYTO admin site.
 | Site | URL / entry point | Role |
 | --- | --- | --- |
 | Learner public site | `https://jjohana.github.io/kojyto/index.html` | Static public catalog and published learner courses. |
-| Admin public shell | `https://jjohana.github.io/kojyto/admin/` | Static admin interface. It needs a reachable secure FastAPI admin API to create or modify courses. |
-| FastAPI admin API | `/admin/` on the backend | Authenticated operational backend for upload, generation, jobs, preview, publication and export. |
+| Admin public site | `https://jjohana.github.io/kojyto/admin/` | Admin interface for course creation and publication. Technical endpoints are configured before export, not entered in the page. |
+| Generation service | `/admin/` on the backend | Authenticated operational service for upload, generation, jobs, preview, publication and export. |
 | Worker | `scripts/run_worker.py` | Executes queued generation, regeneration and narration jobs. |
 
-The GitHub Pages admin shell must not expose destructive actions by itself. It only becomes operational after connection to a secure admin API.
+The GitHub Pages admin must not ask the administrator to enter technical URLs. Public learner/admin/generation URLs are configured in `kojyto.site.json`, environment variables, or deployment settings before export.
 
 ## Complete Course Generation Steps
 
@@ -75,7 +75,7 @@ The GitHub Pages admin shell must not expose destructive actions by itself. It o
 
 ## Local Operation
 
-Start the backend API:
+Start the generation service:
 
 ```powershell
 .\.python311\python.exe scripts\run_backend_api.py
@@ -87,13 +87,13 @@ Start the worker in another terminal:
 .\.python311\python.exe scripts\run_worker.py
 ```
 
-Open the backend-served admin:
+Open the admin served by the generation service:
 
 ```powershell
 start http://127.0.0.1:8000/admin/
 ```
 
-If the backend runs on another port, open the same `/admin/` path on that backend.
+If the service runs on another port, open the same `/admin/` path on that service.
 
 ## GitHub Pages Export
 
@@ -103,7 +103,17 @@ The public learner snapshot is generated with:
 .\.python311\python.exe scripts\export_github_pages.py --output docs
 ```
 
-The exported admin at `docs/admin/index.html` intentionally has no local backend URL. It asks for a secure admin API URL before enabling creation and control actions.
+The exported admin at `docs/admin/index.html` intentionally has no local URL and no visible URL input. If `PUBLIC_ADMIN_API_URL` is set before export, generation actions call that configured service automatically. If it is empty, the page remains a clean published admin entry without exposing technical wiring.
+
+Public URLs are centralized in `kojyto.site.json`:
+
+```json
+{
+  "LEARNER_SITE_URL": "https://jjohana.github.io/kojyto/index.html",
+  "ADMIN_SITE_URL": "https://jjohana.github.io/kojyto/admin",
+  "PUBLIC_ADMIN_API_URL": ""
+}
+```
 
 ## Admin Acceptance Checklist
 

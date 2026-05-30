@@ -134,7 +134,7 @@ The public learner snapshot is generated with:
 .\.python311\python.exe scripts\export_github_pages.py --output docs
 ```
 
-The exported admin at `docs/admin/index.html` intentionally has no local URL and no visible URL input. If `PUBLIC_ADMIN_API_URL` is set before export, generation actions call that configured service automatically. If it is empty, the page remains a clean published admin entry without exposing technical wiring.
+The exported admin at `docs/admin/index.html` intentionally has no visible URL input. If `PUBLIC_ADMIN_API_URL` is set before export, generation actions call that configured service automatically. If it is empty, the page silently detects a running KOJYTO backend on the standard local development ports and keeps technical wiring out of the interface.
 
 Public URLs are centralized in `kojyto.site.json`:
 

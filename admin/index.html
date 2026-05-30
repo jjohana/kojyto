@@ -122,6 +122,17 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 }
 .backend-config input { min-height: 36px; font-size: 0.88rem; }
 .backend-config small { color: var(--muted); line-height: 1.35; }
+.site-roles { display: grid; gap: 8px; }
+.site-role {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.site-role strong { color: var(--accent-strong); font-size: 0.86rem; }
+.site-role span { color: var(--muted); font-size: 0.82rem; line-height: 1.35; }
 .main {
   min-width: 0;
   padding: 24px;
@@ -289,14 +300,19 @@ tr.clickable:hover { background: #f4f8fa; }
     <aside class="sidebar">
       <div class="brand">
         <h1>KOJYTO Admin</h1>
-        <p>Creation, controle, publication et export des cours depuis le backend FastAPI.</p>
+        <p>Creation, controle, publication et export des cours KOJYTO.</p>
       </div>
-      <div class="status-pill"><span class="status-dot" id="api-dot"></span><span id="api-status">Backend...</span></div>
+      <div class="status-pill"><span class="status-dot" id="api-dot"></span><span id="api-status">API...</span></div>
       <div class="backend-config">
-        <label for="api-base-url">Backend FastAPI</label>
-        <input id="api-base-url" type="url" placeholder="meme origine ou http://127.0.0.1:8765">
+        <label for="api-base-url">API admin securisee</label>
+        <input id="api-base-url" type="url" placeholder="https://api-admin.kojyto.example">
         <button type="button" id="save-api-base">Connecter</button>
-        <small id="api-origin">API: meme origine</small>
+        <small id="api-origin">API a configurer</small>
+      </div>
+      <div class="site-roles" aria-label="Role des sites KOJYTO">
+        <div class="site-role"><strong>Site apprenant</strong><span>Vitrine publique et consultation des cours publies.</span></div>
+        <div class="site-role"><strong>Site admin</strong><span>Interface de creation, controle, publication et export des cours.</span></div>
+        <div class="site-role"><strong>API admin securisee</strong><span>Service prive qui execute generation, fichiers, jobs et publication.</span></div>
       </div>
       <nav class="nav-list" aria-label="Navigation admin">
         <button type="button" data-view-target="dashboard" class="active">Tableau de bord</button>
@@ -308,7 +324,6 @@ tr.clickable:hover { background: #f4f8fa; }
         <a id="catalog-link" href="#">Catalogue</a>
         <a id="learner-link" href="https://jjohana.github.io/kojyto/index.html">Site apprenant public</a>
         <a id="public-admin-link" href="https://jjohana.github.io/kojyto/admin/">Entree admin publique</a>
-        <a id="backend-admin-link" href="/admin/">Admin FastAPI</a>
       </div>
     </aside>
     <main class="main">
@@ -454,7 +469,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "http://127.0.0.1:8765", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 14:10 UTC+02:00"}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 14:49 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 const state = {
@@ -524,8 +539,10 @@ async function apiMaybe(path, fallback) {
 }
 function setApiStatus(ok) {
   $("#api-dot").classList.toggle("ok", ok);
-  $("#api-status").textContent = ok ? "Backend OK" : "Backend indisponible";
-  $("#api-origin").textContent = "API: " + (state.apiBaseUrl || "meme origine");
+  $("#api-status").textContent = ok ? "API OK" : "API indisponible";
+  $("#api-origin").textContent = state.apiBaseUrl
+    ? "API configuree"
+    : (adminConfig.sameOriginApi ? "API du meme site" : "API a configurer");
 }
 function setView(view) {
   state.view = view;
@@ -537,6 +554,15 @@ function setView(view) {
   if (view === "preview") renderPreview();
 }
 async function refreshAll({ quiet = false } = {}) {
+  if (!state.apiBaseUrl && !adminConfig.sameOriginApi) {
+    setApiStatus(false);
+    renderMetrics();
+    renderCoursesTable();
+    renderCourseDetail();
+    renderPreview();
+    notice("Renseigner l'URL HTTPS de l'API admin securisee pour activer la creation et le pilotage des cours.", "error");
+    return;
+  }
   try {
     await api("/health");
     setApiStatus(true);
@@ -545,11 +571,7 @@ async function refreshAll({ quiet = false } = {}) {
     if (!quiet) notice("Donnees actualisees.", "ok");
   } catch (error) {
     setApiStatus(false);
-    const localHttpBlocked = window.location.protocol === "https:" && state.apiBaseUrl.startsWith("http://");
-    const hint = localHttpBlocked
-      ? " Le navigateur peut bloquer les appels HTTPS vers un backend local HTTP; ouvrir Admin FastAPI ou saisir un backend HTTPS."
-      : "";
-    notice("Erreur backend: " + detailText(error) + hint, "error");
+    notice("Erreur API admin: " + detailText(error), "error");
   }
 }
 async function loadCourses() {
@@ -903,7 +925,7 @@ async function init() {
   $("#catalog-link").href = adminConfig.catalogHref || "#";
   $("#learner-link").href = adminConfig.learnerSiteUrl || "https://jjohana.github.io/kojyto/index.html";
   $("#public-admin-link").href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
-  $("#backend-admin-link").href = apiUrl("/admin/");
+  setApiStatus(false);
   bindEvents();
   await refreshAll({ quiet: true });
   window.setInterval(() => {

@@ -192,6 +192,26 @@ html[data-embed="1"] body::after {
   animation: rise-in 520ms ease both;
 }
 
+.site-brand-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 18px;
+  padding: 10px 12px;
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.site-brand-logo img {
+  display: block;
+  width: min(100%, 220px);
+  max-height: 70px;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .site-sidebar::-webkit-scrollbar {
   width: 10px;
 }
@@ -1926,16 +1946,22 @@ html[data-embed="1"] .course-logo-rail img {
 
 @media (max-width: 720px) {
   .visual-summary-body {
+    grid-template-columns: minmax(72px, 112px) minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .visual-summary-body:not(.has-course-logo) {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .course-logo-rail {
-    justify-items: start;
+    justify-items: center;
+    padding: 8px;
+    border-radius: 12px;
   }
 
   .course-logo-rail img {
-    max-width: min(160px, 52vw);
-    max-height: 82px;
+    max-height: 74px;
   }
 }
 
@@ -2453,6 +2479,12 @@ html[data-deck="1"] .site-sidebar {
   <div class="page-shell with-site-nav">
 
     <aside class="site-sidebar">
+
+
+      <div class="site-brand-logo" aria-label="Logo IAAG">
+        <img src="assets/course-logo-291170a304.png" alt="Logo IAAG - Institut Aéronautique Amaury de la Grange">
+      </div>
+
       <h2>AERONEFS ATA 24</h2>
       <p>Parcours épuré avec navigation et QCM.</p>
 
@@ -3333,7 +3365,7 @@ html[data-deck="1"] .site-sidebar {
             </div>
           </div>
           <audio controls preload="auto" autoplay data-slide-audio>
-            <source src="audio/slides/s4-5.mp3?v=57-8f2424153259" type="audio/mpeg">
+            <source src="audio/slides/s4-5.mp3?v=58-e13d44490430" type="audio/mpeg">
           </audio>
         </section>
         <script>
@@ -3424,7 +3456,11 @@ html[data-deck="1"] .site-sidebar {
             <h2 class="visual-summary-title">Synthese visuelle</h2>
           </div>
 
-          <div class="visual-summary-body">
+          <div class="visual-summary-body has-course-logo">
+
+            <aside class="course-logo-rail" aria-label="Logo du cours">
+              <img src="assets/course-logo-291170a304.png" alt="Logo IAAG - Institut Aéronautique Amaury de la Grange">
+            </aside>
 
             <figure class="media-figure">
               <div class="block-image">
@@ -3706,7 +3742,7 @@ html[data-deck="1"] .site-sidebar {
     }());
   </script>
 
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::57-8f2424153259", "legacy_storage_keys": ["kojyto:gamification::24-61fd1b967ceb", "kojyto:gamification::25-9fd63f0d0260", "kojyto:gamification::26-da5c266c2491", "kojyto:gamification::27-543e75c02c1a", "kojyto:gamification::28-46fde91bf712", "kojyto:gamification::29-4bfaa9c0baa2", "kojyto:gamification::30-f5dc68db68ef", "kojyto:gamification::31-211767a2f766", "kojyto:gamification::32-c84691a2ee50", "kojyto:gamification::33-bf10b90cd553", "kojyto:gamification::34-762d2351e0c7", "kojyto:gamification::35-8874adee8dfb", "kojyto:gamification::36-5131251e7ed5", "kojyto:gamification::37-9507485c5829", "kojyto:gamification::38-11a7c79fcff2", "kojyto:gamification::39-f2553abc1607", "kojyto:gamification::40-5f2464623010", "kojyto:gamification::41-7659e2c60649", "kojyto:gamification::42-6dbb1b9fa4c4", "kojyto:gamification::43-b7c15aea3af4", "kojyto:gamification::44-49c7f2161342", "kojyto:gamification::45-18c2fd01f1b4", "kojyto:gamification::46-b3f762adffe2", "kojyto:gamification::47-7edfc3ee7f5d", "kojyto:gamification::48-ce9e7fd405a0", "kojyto:gamification::49-f8c5edddeaba", "kojyto:gamification::50-0ea464d587d6", "kojyto:gamification::51-3ec200793349", "kojyto:gamification::52-010831af5941", "kojyto:gamification::53-bd04bdcffe07", "kojyto:gamification::54-30c687b346e4", "kojyto:gamification::55-86a5205fa8eb", "kojyto:gamification::56-9133ed7f12dd"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "Génération AC en vol : panorama des sources", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "IDG : implantation sur moteur et liaison mécanique", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "GCU : contrôle et surveillance des IDG", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S1-4", "quiz_type": "subpart", "title": "APU GEN et répartition du contrôle GCU/GAPCU", "href": "slide-s1-4.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "Alimentation AC au sol : EXT PWR A et EXT PWR B", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "Panneau de puissance externe et réceptacles", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S2-3", "quiz_type": "subpart", "title": "Raccordement au AC SYSTEM et implantation près du NLG", "href": "slide-s2-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "Génération de secours : logique de bascule", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "Batteries et STATIC INVERTER", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "EMER GEN et EMER GEN GCU", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "Réseau AC essentiel et indisponibilité des sources normales", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "Architecture DC : vue d’ensemble", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "TR 1, TR 2, TR ESS et APU TR", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S4-3", "quiz_type": "subpart", "title": "Sources associées : BATTERY, STATIC INVERTER, EMER GEN", "href": "slide-s4-3.html", "base_xp": 100}, {"quiz_id": "slide::S4-4", "quiz_type": "subpart", "title": "APU BATTERY et alimentation de l’APU STARTER", "href": "slide-s4-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-5", "quiz_type": "subpart", "title": "Blocs de contrôle et interfaces avec le DC SYSTEM", "href": "slide-s4-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "ECAM ELEC AC : lecture générale de la page", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "Surveillance des sources : GEN 1, GEN 2 et APU GEN", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "Surveillance des IDG et des paramètres affichés", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S5-4", "quiz_type": "subpart", "title": "Panneau AC GENERATION et commandes P/BSW", "href": "slide-s5-4.html", "base_xp": 100}, {"quiz_id": "slide::S5-5", "quiz_type": "subpart", "title": "Panneau ELEC : sélection des sources et bus", "href": "slide-s5-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-6", "quiz_type": "subpart", "title": "Panneau EMER ELEC PWR : test et commande de secours", "href": "slide-s5-6.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "Ground Service Network : principe de fonctionnement", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S6-2", "quiz_type": "subpart", "title": "MAINT BUS : alimentation du réseau de service", "href": "slide-s6-2.html", "base_xp": 100}, {"quiz_id": "slide::S6-3", "quiz_type": "subpart", "title": "Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2", "href": "slide-s6-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "ECMU : gestion des contacteurs", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "CBMU : surveillance des C/B et des RCCBs", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "Page ECAM C/B : signalement des déclenchements", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-4", "quiz_type": "subpart", "title": "AC & DC CONTACTORS : distribution vers les charges", "href": "slide-s7-4.html", "base_xp": 100}, {"quiz_id": "slide::S7-5", "quiz_type": "subpart", "title": "Lien entre supervision, contacteurs et load distribution", "href": "slide-s7-5.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::58-e13d44490430", "legacy_storage_keys": ["kojyto:gamification::24-61fd1b967ceb", "kojyto:gamification::25-9fd63f0d0260", "kojyto:gamification::26-da5c266c2491", "kojyto:gamification::27-543e75c02c1a", "kojyto:gamification::28-46fde91bf712", "kojyto:gamification::29-4bfaa9c0baa2", "kojyto:gamification::30-f5dc68db68ef", "kojyto:gamification::31-211767a2f766", "kojyto:gamification::32-c84691a2ee50", "kojyto:gamification::33-bf10b90cd553", "kojyto:gamification::34-762d2351e0c7", "kojyto:gamification::35-8874adee8dfb", "kojyto:gamification::36-5131251e7ed5", "kojyto:gamification::37-9507485c5829", "kojyto:gamification::38-11a7c79fcff2", "kojyto:gamification::39-f2553abc1607", "kojyto:gamification::40-5f2464623010", "kojyto:gamification::41-7659e2c60649", "kojyto:gamification::42-6dbb1b9fa4c4", "kojyto:gamification::43-b7c15aea3af4", "kojyto:gamification::44-49c7f2161342", "kojyto:gamification::45-18c2fd01f1b4", "kojyto:gamification::46-b3f762adffe2", "kojyto:gamification::47-7edfc3ee7f5d", "kojyto:gamification::48-ce9e7fd405a0", "kojyto:gamification::49-f8c5edddeaba", "kojyto:gamification::50-0ea464d587d6", "kojyto:gamification::51-3ec200793349", "kojyto:gamification::52-010831af5941", "kojyto:gamification::53-bd04bdcffe07", "kojyto:gamification::54-30c687b346e4", "kojyto:gamification::55-86a5205fa8eb", "kojyto:gamification::56-9133ed7f12dd", "kojyto:gamification::57-8f2424153259"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "Génération AC en vol : panorama des sources", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "IDG : implantation sur moteur et liaison mécanique", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "GCU : contrôle et surveillance des IDG", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S1-4", "quiz_type": "subpart", "title": "APU GEN et répartition du contrôle GCU/GAPCU", "href": "slide-s1-4.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "Alimentation AC au sol : EXT PWR A et EXT PWR B", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "Panneau de puissance externe et réceptacles", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S2-3", "quiz_type": "subpart", "title": "Raccordement au AC SYSTEM et implantation près du NLG", "href": "slide-s2-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "Génération de secours : logique de bascule", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "Batteries et STATIC INVERTER", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "EMER GEN et EMER GEN GCU", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "Réseau AC essentiel et indisponibilité des sources normales", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "Architecture DC : vue d’ensemble", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "TR 1, TR 2, TR ESS et APU TR", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S4-3", "quiz_type": "subpart", "title": "Sources associées : BATTERY, STATIC INVERTER, EMER GEN", "href": "slide-s4-3.html", "base_xp": 100}, {"quiz_id": "slide::S4-4", "quiz_type": "subpart", "title": "APU BATTERY et alimentation de l’APU STARTER", "href": "slide-s4-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-5", "quiz_type": "subpart", "title": "Blocs de contrôle et interfaces avec le DC SYSTEM", "href": "slide-s4-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "ECAM ELEC AC : lecture générale de la page", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "Surveillance des sources : GEN 1, GEN 2 et APU GEN", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "Surveillance des IDG et des paramètres affichés", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S5-4", "quiz_type": "subpart", "title": "Panneau AC GENERATION et commandes P/BSW", "href": "slide-s5-4.html", "base_xp": 100}, {"quiz_id": "slide::S5-5", "quiz_type": "subpart", "title": "Panneau ELEC : sélection des sources et bus", "href": "slide-s5-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-6", "quiz_type": "subpart", "title": "Panneau EMER ELEC PWR : test et commande de secours", "href": "slide-s5-6.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "Ground Service Network : principe de fonctionnement", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S6-2", "quiz_type": "subpart", "title": "MAINT BUS : alimentation du réseau de service", "href": "slide-s6-2.html", "base_xp": 100}, {"quiz_id": "slide::S6-3", "quiz_type": "subpart", "title": "Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2", "href": "slide-s6-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "ECMU : gestion des contacteurs", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "CBMU : surveillance des C/B et des RCCBs", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "Page ECAM C/B : signalement des déclenchements", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-4", "quiz_type": "subpart", "title": "AC & DC CONTACTORS : distribution vers les charges", "href": "slide-s7-4.html", "base_xp": 100}, {"quiz_id": "slide::S7-5", "quiz_type": "subpart", "title": "Lien entre supervision, contacteurs et load distribution", "href": "slide-s7-5.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");

@@ -192,6 +192,26 @@ html[data-embed="1"] body::after {
   animation: rise-in 520ms ease both;
 }
 
+.site-brand-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 18px;
+  padding: 10px 12px;
+  border: 1px solid rgba(12, 110, 130, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.site-brand-logo img {
+  display: block;
+  width: min(100%, 220px);
+  max-height: 70px;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .site-sidebar::-webkit-scrollbar {
   width: 10px;
 }
@@ -1926,16 +1946,22 @@ html[data-embed="1"] .course-logo-rail img {
 
 @media (max-width: 720px) {
   .visual-summary-body {
+    grid-template-columns: minmax(72px, 112px) minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .visual-summary-body:not(.has-course-logo) {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .course-logo-rail {
-    justify-items: start;
+    justify-items: center;
+    padding: 8px;
+    border-radius: 12px;
   }
 
   .course-logo-rail img {
-    max-width: min(160px, 52vw);
-    max-height: 82px;
+    max-height: 74px;
   }
 }
 
@@ -2466,6 +2492,12 @@ html[data-deck="1"] .site-sidebar {
   <div class="page-shell with-site-nav">
 
     <aside class="site-sidebar">
+
+
+      <div class="site-brand-logo" aria-label="Logo IAAG">
+        <img src="assets/course-logo-291170a304.png" alt="Logo IAAG - Institut Aéronautique Amaury de la Grange">
+      </div>
+
       <h2>Cinematique BTS Aero</h2>
       <p>Parcours épuré avec navigation et QCM.</p>
 
@@ -3086,7 +3118,7 @@ html[data-deck="1"] .site-sidebar {
             </div>
           </div>
           <audio controls preload="auto" autoplay data-slide-audio>
-            <source src="audio/slides/s11.mp3?v=57-33582a31d065" type="audio/mpeg">
+            <source src="audio/slides/s11.mp3?v=58-bc7a3d2c2cfe" type="audio/mpeg">
           </audio>
         </section>
         <script>
@@ -3177,7 +3209,11 @@ html[data-deck="1"] .site-sidebar {
             <h2 class="visual-summary-title">Synthese visuelle</h2>
           </div>
 
-          <div class="visual-summary-body">
+          <div class="visual-summary-body has-course-logo">
+
+            <aside class="course-logo-rail" aria-label="Logo du cours">
+              <img src="assets/course-logo-291170a304.png" alt="Logo IAAG - Institut Aéronautique Amaury de la Grange">
+            </aside>
 
             <figure class="media-figure">
               <div class="block-image">
@@ -3393,7 +3429,7 @@ html[data-deck="1"] .site-sidebar {
     }());
   </script>
 
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::57-33582a31d065", "legacy_storage_keys": ["kojyto:gamification::24-ef570e8ca6a5", "kojyto:gamification::25-6aa26c839ebc", "kojyto:gamification::26-874aca4d2f28", "kojyto:gamification::27-4020ad4f640c", "kojyto:gamification::28-e74865e6965a", "kojyto:gamification::29-37418d294a93", "kojyto:gamification::30-16224ad89100", "kojyto:gamification::31-d418b2352091", "kojyto:gamification::32-c697e5966fb2", "kojyto:gamification::33-3e31bc6ac74e", "kojyto:gamification::34-7f7bc75252c5", "kojyto:gamification::35-4f1fecff7913", "kojyto:gamification::36-801e9b36e2b4", "kojyto:gamification::37-7ab7dd419e92", "kojyto:gamification::38-ac70e48cc9a2", "kojyto:gamification::39-d33d16b3605a", "kojyto:gamification::40-b146916ed206", "kojyto:gamification::41-034e24c2e54a", "kojyto:gamification::42-67ba7e113ec0", "kojyto:gamification::43-da3c67264433", "kojyto:gamification::44-cd61dbf4abb5", "kojyto:gamification::45-0e00f82fbdaf", "kojyto:gamification::46-d6e412e3bdaf", "kojyto:gamification::47-61f80a50e1f7", "kojyto:gamification::48-cad100a29276", "kojyto:gamification::49-076fbfe22c87", "kojyto:gamification::50-78d144f4bf6a", "kojyto:gamification::51-9395848f2265", "kojyto:gamification::52-a4553ca83299", "kojyto:gamification::53-5ed62ad73ea4", "kojyto:gamification::54-e66015af77a4", "kojyto:gamification::55-bf6f2fd92a70", "kojyto:gamification::56-46561734f316"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::58-bc7a3d2c2cfe", "legacy_storage_keys": ["kojyto:gamification::24-ef570e8ca6a5", "kojyto:gamification::25-6aa26c839ebc", "kojyto:gamification::26-874aca4d2f28", "kojyto:gamification::27-4020ad4f640c", "kojyto:gamification::28-e74865e6965a", "kojyto:gamification::29-37418d294a93", "kojyto:gamification::30-16224ad89100", "kojyto:gamification::31-d418b2352091", "kojyto:gamification::32-c697e5966fb2", "kojyto:gamification::33-3e31bc6ac74e", "kojyto:gamification::34-7f7bc75252c5", "kojyto:gamification::35-4f1fecff7913", "kojyto:gamification::36-801e9b36e2b4", "kojyto:gamification::37-7ab7dd419e92", "kojyto:gamification::38-ac70e48cc9a2", "kojyto:gamification::39-d33d16b3605a", "kojyto:gamification::40-b146916ed206", "kojyto:gamification::41-034e24c2e54a", "kojyto:gamification::42-67ba7e113ec0", "kojyto:gamification::43-da3c67264433", "kojyto:gamification::44-cd61dbf4abb5", "kojyto:gamification::45-0e00f82fbdaf", "kojyto:gamification::46-d6e412e3bdaf", "kojyto:gamification::47-61f80a50e1f7", "kojyto:gamification::48-cad100a29276", "kojyto:gamification::49-076fbfe22c87", "kojyto:gamification::50-78d144f4bf6a", "kojyto:gamification::51-9395848f2265", "kojyto:gamification::52-a4553ca83299", "kojyto:gamification::53-5ed62ad73ea4", "kojyto:gamification::54-e66015af77a4", "kojyto:gamification::55-bf6f2fd92a70", "kojyto:gamification::56-46561734f316", "kojyto:gamification::57-33582a31d065"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");

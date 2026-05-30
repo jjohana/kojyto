@@ -1,1 +1,910 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>KOJYTO Admin</title><style>:root{--ink:#10243b;--muted:#5b6c7f;--accent:#0d7285;--accent-strong:#153a59;--surface:rgba(255,255,255,.9);--line:rgba(16,36,59,.12);}body{margin:0;font-family:Aptos,'Segoe UI Variable','Trebuchet MS',sans-serif;color:var(--ink);background:linear-gradient(150deg,#f4efe5 0%,#edf6fa 52%,#f8fbfe 100%);}.shell{max-width:1120px;margin:0 auto;padding:34px 24px 42px;display:grid;gap:18px;}.hero{padding:34px;border-radius:24px;background:rgba(255,255,255,.84);border:1px solid var(--line);box-shadow:0 18px 48px rgba(16,36,59,.09);}.eyebrow{margin:0 0 10px;color:var(--accent);font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;}h1{margin:0;color:var(--accent-strong);font-family:Cambria,Constantia,serif;font-size:clamp(2rem,4vw,3.5rem);line-height:1.04;}p{max-width:76ch;color:var(--muted);line-height:1.7;font-size:1rem;}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}.actions a{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border-radius:12px;text-decoration:none;font-weight:800;border:1px solid rgba(13,114,133,.14);color:var(--accent-strong);background:rgba(13,114,133,.08);}.actions a.primary{background:var(--accent-strong);border-color:rgba(21,58,89,.2);color:#f7fbfd;}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}.card{padding:18px 20px;border-radius:18px;background:var(--surface);border:1px solid var(--line);box-shadow:0 12px 30px rgba(16,36,59,.07);}.card strong{display:block;color:var(--accent-strong);margin-bottom:8px;}.card span{color:var(--muted);line-height:1.6;}</style></head><body><main class='shell'><section class='hero'><p class='eyebrow'>Console d'administration</p><h1>KOJYTO Admin</h1><p>Point d'entree statique de l'espace admin sur GitHub Pages. Les actions de creation, regeneration, publication et export restent executees par l'application admin connectee au backend authentifie.</p><div class='actions'><a class='primary' href='http://127.0.0.1:8765/admin/'>Ouvrir l'admin local</a><a href='https://jjohana.github.io/kojyto/index.html'>Site apprenant</a><a href='../index.html'>Catalogue public</a></div></section><section class='grid'><article class='card'><strong>URL publique</strong><span>https://jjohana.github.io/kojyto/admin</span></article><article class='card'><strong>Backend attendu</strong><span>FastAPI local ou service deploiement avec authentification admin.</span></article><article class='card'><strong>Dernier export</strong><span>2026-05-30 13:32 UTC+02:00</span></article></section></main></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KOJYTO Admin</title>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #17283b;
+  --muted: #5d6b7a;
+  --surface: #ffffff;
+  --surface-soft: #f7fafb;
+  --line: #d9e2e7;
+  --accent: #0c6e82;
+  --accent-strong: #123d5c;
+  --warn: #a45d08;
+  --danger: #a93434;
+  --ok: #276f55;
+  --shadow: 0 16px 42px rgba(20, 37, 58, 0.09);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: #eef4f6;
+  font-family: Aptos, "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+}
+button, input, select, textarea {
+  font: inherit;
+}
+button, a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid rgba(12, 110, 130, 0.18);
+  border-radius: 8px;
+  color: var(--accent-strong);
+  background: rgba(12, 110, 130, 0.08);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+button:hover, a.button:hover { background: rgba(12, 110, 130, 0.13); }
+button.primary { background: var(--accent-strong); color: #fff; border-color: var(--accent-strong); }
+button.danger { background: rgba(169, 52, 52, 0.1); color: var(--danger); border-color: rgba(169, 52, 52, 0.2); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.admin-shell {
+  display: grid;
+  grid-template-columns: 286px minmax(0, 1fr);
+  min-height: 100vh;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 20px 16px;
+  background: #f9fbfc;
+  border-right: 1px solid var(--line);
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: 18px;
+}
+.brand h1 {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: Cambria, Constantia, serif;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+.brand p { margin: 8px 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.45; }
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--surface);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+.status-dot { width: 9px; height: 9px; border-radius: 999px; background: var(--warn); }
+.status-dot.ok { background: var(--ok); }
+.nav-list {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  overflow: auto;
+}
+.nav-list button {
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 42px;
+  border-color: transparent;
+  background: transparent;
+}
+.nav-list button.active {
+  background: rgba(12, 110, 130, 0.11);
+  border-color: rgba(12, 110, 130, 0.16);
+}
+.side-links { display: grid; gap: 8px; }
+.side-links a { color: var(--accent-strong); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+.backend-config {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.backend-config label {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.backend-config input { min-height: 36px; font-size: 0.88rem; }
+.backend-config small { color: var(--muted); line-height: 1.35; }
+.main {
+  min-width: 0;
+  padding: 24px;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+.topbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+.topbar h2 { margin: 0; color: var(--accent-strong); font-size: 1.35rem; }
+.topbar p { margin: 5px 0 0; color: var(--muted); }
+.top-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; min-width: 0; }
+.banner {
+  display: none;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--muted);
+}
+.banner.show { display: block; }
+.banner.error { border-color: rgba(169, 52, 52, 0.24); color: var(--danger); background: #fff8f8; }
+.banner.ok { border-color: rgba(39, 111, 85, 0.24); color: var(--ok); background: #f5fbf8; }
+.view { display: none; }
+.view.active { display: grid; gap: 18px; }
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 12px;
+}
+.metric, .panel {
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.metric { padding: 16px; }
+.metric span { display: block; color: var(--muted); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; }
+.metric strong { display: block; margin-top: 6px; color: var(--accent-strong); font-size: 1.75rem; }
+.panel { padding: 18px; display: grid; gap: 14px; }
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.panel h3 { margin: 0; color: var(--accent-strong); font-size: 1.08rem; }
+.panel p { margin: 0; color: var(--muted); line-height: 1.55; }
+.grid-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.form-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 12px; }
+.field { display: grid; gap: 6px; grid-column: span 4; }
+.field.wide { grid-column: span 12; }
+.field.half { grid-column: span 6; }
+.field.third { grid-column: span 4; }
+.field label { color: var(--accent-strong); font-size: 0.84rem; font-weight: 800; }
+.field small { color: var(--muted); line-height: 1.35; }
+input, select, textarea {
+  width: 100%;
+  min-height: 39px;
+  padding: 9px 10px;
+  border: 1px solid #cfdbe1;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+textarea { min-height: 98px; resize: vertical; }
+input[type="checkbox"] { width: auto; min-height: auto; }
+.inline-check { display: flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 700; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+#courses-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+th, td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #edf1f4;
+  text-align: left;
+  vertical-align: top;
+}
+th { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+tr.clickable { cursor: pointer; }
+tr.clickable:hover { background: #f4f8fa; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #eef5f8;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+.pill.done, .pill.completed, .pill.published { background: #e9f7f0; color: var(--ok); }
+.pill.failed, .pill.blocking { background: #fff1f1; color: var(--danger); }
+.pill.running, .pill.queued { background: #fff6e8; color: var(--warn); }
+.course-title { display: grid; gap: 4px; }
+.course-title strong { color: var(--accent-strong); }
+.course-title span { color: var(--muted); font-size: 0.83rem; }
+.actions-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.split-detail {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+  gap: 14px;
+}
+.list { display: grid; gap: 8px; }
+.list-item {
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid #e7eef2;
+  border-radius: 8px;
+  background: #fbfdfe;
+}
+.list-item strong { color: var(--accent-strong); }
+.list-item small { color: var(--muted); }
+.progress-bar {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e9eef1;
+}
+.progress-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), #d98524); }
+.preview-frame {
+  width: 100%;
+  min-height: 70vh;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+.empty {
+  padding: 24px;
+  border: 1px dashed #cdd9df;
+  border-radius: 8px;
+  color: var(--muted);
+  background: #fbfdfe;
+}
+@media (max-width: 1040px) {
+  .admin-shell { grid-template-columns: 1fr; }
+  .sidebar { position: relative; height: auto; grid-template-rows: auto; }
+  .metrics, .grid-2, .grid-3, .split-detail { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .main { padding: 14px; }
+  .topbar { grid-template-columns: 1fr; }
+  .top-actions { justify-content: flex-start; }
+  .field, .field.half, .field.third { grid-column: span 12; }
+  table { min-width: 640px; }
+}
+  </style>
+</head>
+<body>
+  <div class="admin-shell" id="admin-app">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>KOJYTO Admin</h1>
+        <p>Creation, controle, publication et export des cours depuis le backend FastAPI.</p>
+      </div>
+      <div class="status-pill"><span class="status-dot" id="api-dot"></span><span id="api-status">Backend...</span></div>
+      <div class="backend-config">
+        <label for="api-base-url">Backend FastAPI</label>
+        <input id="api-base-url" type="url" placeholder="meme origine ou http://127.0.0.1:8765">
+        <button type="button" id="save-api-base">Connecter</button>
+        <small id="api-origin">API: meme origine</small>
+      </div>
+      <nav class="nav-list" aria-label="Navigation admin">
+        <button type="button" data-view-target="dashboard" class="active">Tableau de bord</button>
+        <button type="button" data-view-target="create">Creer un cours</button>
+        <button type="button" data-view-target="control">Piloter un cours</button>
+        <button type="button" data-view-target="preview">Previsualiser</button>
+      </nav>
+      <div class="side-links">
+        <a id="catalog-link" href="#">Catalogue</a>
+        <a id="learner-link" href="https://jjohana.github.io/kojyto/index.html">Site apprenant public</a>
+        <a id="public-admin-link" href="https://jjohana.github.io/kojyto/admin/">Entree admin publique</a>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="page-title">Tableau de bord</h2>
+          <p id="page-subtitle">Vue operationnelle des cours et generations.</p>
+        </div>
+        <div class="top-actions">
+          <label class="inline-check"><input type="checkbox" id="auto-refresh" checked> Actualisation auto</label>
+          <button type="button" id="refresh-btn">Rafraichir</button>
+          <button type="button" id="export-btn">Exporter docs/</button>
+        </div>
+      </header>
+      <div class="banner" id="notice" role="status"></div>
+
+      <section class="view active" id="view-dashboard">
+        <div class="metrics">
+          <div class="metric"><span>Cours</span><strong id="metric-total">0</strong></div>
+          <div class="metric"><span>Publies</span><strong id="metric-published">0</strong></div>
+          <div class="metric"><span>Prets</span><strong id="metric-ready">0</strong></div>
+          <div class="metric"><span>Actifs</span><strong id="metric-active">0</strong></div>
+        </div>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Cours disponibles</h3>
+              <p>Selectionner un cours pour suivre les jobs, les alertes et les actions de publication.</p>
+            </div>
+            <input id="course-filter" type="search" placeholder="Filtrer les cours">
+          </div>
+          <div id="courses-table"></div>
+        </section>
+      </section>
+
+      <section class="view" id="view-create">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Nouveau cours</h3>
+              <p>Deposer 1 a 5 documents PDF/DOCX, configurer la generation, puis lancer le job.</p>
+            </div>
+          </div>
+          <form id="upload-form" class="form-grid">
+            <div class="field wide">
+              <label for="uploads">Documents source</label>
+              <input id="uploads" name="uploads" type="file" multiple accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+              <small id="upload-count">Aucun fichier selectionne.</small>
+            </div>
+            <div class="field wide">
+              <label for="logo">Logo optionnel</label>
+              <input id="logo" name="logo" type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp">
+              <small>Si fourni, il sera integre a gauche des visuels de cours. Les images generees restent sans nom d'ecole ni logo dans l'image.</small>
+            </div>
+            <div class="field third">
+              <label for="target_level">Niveau</label>
+              <input id="target_level" name="target_level" placeholder="Bac Pro Aeronautique">
+            </div>
+            <div class="field third">
+              <label for="target_slide_count">Nombre de slides</label>
+              <input id="target_slide_count" name="target_slide_count" type="number" min="1" max="120" value="30">
+            </div>
+            <div class="field third">
+              <label for="difficulty">Difficulte</label>
+              <select id="difficulty" name="difficulty">
+                <option value="easy">Facile</option>
+                <option value="medium">Intermediaire</option>
+                <option value="hard">Avancee</option>
+              </select>
+            </div>
+            <div class="field third">
+              <label for="content_profile_selection">Profil de contenu</label>
+              <select id="content_profile_selection" name="content_profile_selection">
+                <option value="auto">Automatique</option>
+                <option value="standard">Standard</option>
+                <option value="scientific">Scientifique</option>
+              </select>
+            </div>
+            <div class="field third">
+              <label for="intermediate_quiz_mode">QCM intermediaires</label>
+              <select id="intermediate_quiz_mode" name="intermediate_quiz_mode">
+                <option value="subpart">Par sous-partie</option>
+                <option value="slide">Par slide</option>
+              </select>
+            </div>
+            <div class="field third">
+              <label for="questions_per_intermediate_quiz">Questions par QCM</label>
+              <input id="questions_per_intermediate_quiz" name="questions_per_intermediate_quiz" type="number" min="1" max="20" value="5">
+            </div>
+            <div class="field third">
+              <label for="pipeline_profile">Profil pipeline</label>
+              <select id="pipeline_profile" name="pipeline_profile">
+                <option value="standard">Standard</option>
+                <option value="compact">Compact</option>
+              </select>
+            </div>
+            <div class="field third">
+              <label for="parallelism">Parallelisme</label>
+              <input id="parallelism" name="parallelism" type="number" min="1" max="12" value="4">
+            </div>
+            <div class="field third">
+              <label for="model_name">Modele</label>
+              <input id="model_name" name="model_name" placeholder="defaut backend">
+            </div>
+            <div class="field half">
+              <label for="domains_raw">Domaines preferes</label>
+              <input id="domains_raw" name="domains_raw" placeholder="onisep.fr, education.gouv.fr">
+            </div>
+            <div class="field half">
+              <label class="inline-check"><input id="external_web" name="external_web" type="checkbox" checked> Enrichissement web actif</label>
+              <small>Desactiver pour limiter la generation aux documents fournis.</small>
+            </div>
+            <div class="field wide">
+              <label for="guide">Consignes pedagogiques</label>
+              <textarea id="guide" name="guide" placeholder="Objectifs, public cible, contraintes de style, points a surveiller..."></textarea>
+            </div>
+            <div class="field wide">
+              <button type="submit" class="primary" id="upload-submit">Lancer la generation</button>
+            </div>
+          </form>
+        </section>
+      </section>
+
+      <section class="view" id="view-control">
+        <div id="course-detail" class="empty">Selectionner un cours dans le tableau de bord.</div>
+      </section>
+
+      <section class="view" id="view-preview">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Previsualisation</h3>
+              <p id="preview-caption">Selectionner un cours pret pour afficher la version master ou apprenant.</p>
+            </div>
+            <div class="actions-row">
+              <button type="button" data-preview-mode="master">Master</button>
+              <button type="button" data-preview-mode="user" class="primary">Apprenant</button>
+              <button type="button" data-preview-mode="deck">Deck</button>
+            </div>
+          </div>
+          <iframe id="preview-frame" class="preview-frame" title="Preview du cours"></iframe>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "http://127.0.0.1:8765", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 13:58 UTC+02:00"}</script>
+  <script>
+const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
+const state = {
+  courses: [],
+  selectedCourseId: "",
+  view: "dashboard",
+  adminView: null,
+  manifest: null,
+  quizzes: [],
+  finalQuiz: null,
+  cleanupReport: null,
+  previewMode: "user",
+  apiBaseUrl: (window.localStorage.getItem("kojyto-admin-api-base-url") || adminConfig.apiBaseUrl || "").replace(/\/+$/, "")
+};
+
+const viewLabels = {
+  dashboard: ["Tableau de bord", "Vue operationnelle des cours et generations."],
+  create: ["Creer un cours", "Depot de documents, configuration et lancement de generation."],
+  control: ["Piloter un cours", "Suivi temps reel, controles, actions et publication."],
+  preview: ["Previsualiser", "Controle visuel des versions master, apprenant et deck."]
+};
+
+function $(selector) { return document.querySelector(selector); }
+function $all(selector) { return Array.from(document.querySelectorAll(selector)); }
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[char]));
+}
+function formatDate(value) {
+  if (!value) return "n/a";
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? String(value) : date.toLocaleString("fr-FR");
+}
+function notice(message, type = "") {
+  const box = $("#notice");
+  box.textContent = message || "";
+  box.className = "banner" + (message ? " show" : "") + (type ? " " + type : "");
+}
+function detailText(error) {
+  const detail = error && error.detail ? error.detail : error;
+  if (typeof detail === "string") return detail;
+  if (detail && typeof detail.message === "string") {
+    const issues = Array.isArray(detail.issues) ? " " + detail.issues.join(" | ") : "";
+    return detail.message + issues;
+  }
+  if (error && error.message) return error.message;
+  return "Erreur inconnue.";
+}
+function normalizeApiBaseUrl(value) {
+  return String(value || "").trim().replace(/\/+$/, "");
+}
+function apiUrl(path) {
+  if (/^https?:\/\//i.test(path)) return path;
+  const normalizedPath = path.startsWith("/") ? path : "/" + path;
+  return state.apiBaseUrl ? state.apiBaseUrl + normalizedPath : normalizedPath;
+}
+async function api(path, options = {}) {
+  const response = await fetch(apiUrl(path), options);
+  const contentType = response.headers.get("content-type") || "";
+  const body = contentType.includes("application/json") ? await response.json() : await response.text();
+  if (!response.ok) throw body;
+  return body;
+}
+async function apiMaybe(path, fallback) {
+  try { return await api(path); } catch (_error) { return fallback; }
+}
+function setApiStatus(ok) {
+  $("#api-dot").classList.toggle("ok", ok);
+  $("#api-status").textContent = ok ? "Backend OK" : "Backend indisponible";
+  $("#api-origin").textContent = "API: " + (state.apiBaseUrl || "meme origine");
+}
+function setView(view) {
+  state.view = view;
+  $all(".view").forEach((node) => node.classList.toggle("active", node.id === "view-" + view));
+  $all("[data-view-target]").forEach((node) => node.classList.toggle("active", node.dataset.viewTarget === view));
+  const label = viewLabels[view] || viewLabels.dashboard;
+  $("#page-title").textContent = label[0];
+  $("#page-subtitle").textContent = label[1];
+  if (view === "preview") renderPreview();
+}
+async function refreshAll({ quiet = false } = {}) {
+  try {
+    await api("/health");
+    setApiStatus(true);
+    await loadCourses();
+    if (state.selectedCourseId) await loadSelectedCourse();
+    if (!quiet) notice("Donnees actualisees.", "ok");
+  } catch (error) {
+    setApiStatus(false);
+    notice("Erreur backend: " + detailText(error), "error");
+  }
+}
+async function loadCourses() {
+  state.courses = await api("/courses?published_only=false");
+  renderMetrics();
+  renderCoursesTable();
+  if (!state.selectedCourseId && state.courses.length) {
+    state.selectedCourseId = state.courses[0].id;
+  }
+}
+async function loadSelectedCourse() {
+  if (!state.selectedCourseId) {
+    renderCourseDetail();
+    renderPreview();
+    return;
+  }
+  const id = encodeURIComponent(state.selectedCourseId);
+  const [adminView, manifest, quizzes, finalQuiz, cleanupReport] = await Promise.all([
+    api(`/courses/${id}/admin-view`),
+    apiMaybe(`/courses/${id}/site/user/site_manifest.json`, null),
+    apiMaybe(`/courses/${id}/quizzes/subpart`, []),
+    apiMaybe(`/courses/${id}/quizzes/final`, null),
+    apiMaybe(`/courses/${id}/quizzes/quality-cleanup/report`, null)
+  ]);
+  state.adminView = adminView;
+  state.manifest = manifest;
+  state.quizzes = quizzes || [];
+  state.finalQuiz = finalQuiz;
+  state.cleanupReport = cleanupReport;
+  renderCourseDetail();
+  renderPreview();
+}
+function renderMetrics() {
+  const total = state.courses.length;
+  const published = state.courses.filter((course) => course.published).length;
+  const ready = state.courses.filter((course) => ["ready_to_publish", "published"].includes(course.status)).length;
+  const active = state.courses.filter((course) => ["queued", "running", "uploaded"].includes(course.status)).length;
+  $("#metric-total").textContent = total;
+  $("#metric-published").textContent = published;
+  $("#metric-ready").textContent = ready;
+  $("#metric-active").textContent = active;
+}
+function renderCoursesTable() {
+  const filter = ($("#course-filter").value || "").toLowerCase();
+  const courses = state.courses.filter((course) => {
+    return !filter || [course.title, course.status, course.source_filename, course.id].join(" ").toLowerCase().includes(filter);
+  });
+  if (!courses.length) {
+    $("#courses-table").innerHTML = '<div class="empty">Aucun cours disponible.</div>';
+    return;
+  }
+  $("#courses-table").innerHTML = `
+    <table>
+      <thead><tr><th>Cours</th><th>Statut</th><th>Publication</th><th>Source</th><th>Creation</th></tr></thead>
+      <tbody>
+        ${courses.map((course) => `
+          <tr class="clickable" data-select-course="${escapeHtml(course.id)}">
+            <td><div class="course-title"><strong>${escapeHtml(course.title)}</strong><span>${escapeHtml(course.id)}</span></div></td>
+            <td><span class="pill ${escapeHtml(course.status)}">${escapeHtml(course.status)}</span></td>
+            <td>${course.published ? '<span class="pill published">publie</span>' : '<span class="pill">non publie</span>'}</td>
+            <td>${escapeHtml(course.source_filename)}</td>
+            <td>${escapeHtml(formatDate(course.created_at))}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>`;
+}
+function progressPercent(progress) {
+  const total = Number(progress?.total_slides || 0) + Number(progress?.total_intermediate_quizzes || 0) + 1;
+  const done = Number(progress?.completed_slides || 0) + Number(progress?.completed_intermediate_quizzes || 0) + (progress?.final_quiz_ready ? 1 : 0);
+  return total > 1 ? Math.max(0, Math.min(100, Math.round((done / total) * 100))) : 0;
+}
+function renderCourseDetail() {
+  const root = $("#course-detail");
+  const view = state.adminView;
+  if (!state.selectedCourseId || !view || !view.course) {
+    root.className = "empty";
+    root.textContent = "Selectionner un cours dans le tableau de bord.";
+    return;
+  }
+  root.className = "view active";
+  const course = view.course;
+  const progress = view.progress || {};
+  const run = view.run_config || {};
+  const manifest = state.manifest || {};
+  const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
+  const slides = pages.filter((page) => page.kind === "slide");
+  const finalCount = Array.isArray(state.finalQuiz?.questions) ? state.finalQuiz.questions.length : 0;
+  const percent = progressPercent(progress);
+  root.innerHTML = `
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h3>${escapeHtml(course.title)}</h3>
+          <p>${escapeHtml(course.id)} | ${escapeHtml(course.source_filename)}</p>
+        </div>
+        <div class="actions-row">
+          <button type="button" data-course-action="resume">Reprendre</button>
+          <button type="button" data-course-action="publish" class="primary">Publier</button>
+          <button type="button" data-course-action="clean-quizzes">Nettoyer QCM</button>
+          <button type="button" data-course-action="regenerate-narration">Regenerer narration</button>
+          <button type="button" data-course-action="regenerate-full" class="danger">Regenerer tout</button>
+        </div>
+      </div>
+      <div class="progress-bar" aria-label="Progression"><span style="width:${percent}%"></span></div>
+      <div class="grid-3">
+        <div><span class="pill ${escapeHtml(course.status)}">${escapeHtml(course.status)}</span></div>
+        <div><strong>${percent}%</strong><p>${escapeHtml(progress.message || "Aucun message de progression.")}</p></div>
+        <div><p>Slides ${Number(progress.completed_slides || 0)}/${Number(progress.total_slides || 0)} | QCM ${Number(progress.completed_intermediate_quizzes || 0)}/${Number(progress.total_intermediate_quizzes || 0)}</p></div>
+      </div>
+      <form id="rename-form" class="form-grid">
+        <div class="field half">
+          <label for="rename-title">Renommer le cours</label>
+          <input id="rename-title" name="title" value="${escapeHtml(course.title)}">
+        </div>
+        <div class="field half">
+          <label>&nbsp;</label>
+          <button type="submit">Enregistrer le titre</button>
+        </div>
+      </form>
+    </section>
+    <div class="split-detail">
+      <section class="panel">
+        <h3>Etapes et jobs</h3>
+        ${renderSteps(view.steps || [])}
+        ${renderJobs(view.jobs || [])}
+      </section>
+      <section class="panel">
+        <h3>Alertes et evenements</h3>
+        ${renderAlerts(view.alerts || [])}
+        ${renderEvents(view.events || [])}
+      </section>
+    </div>
+    <div class="grid-2">
+      <section class="panel">
+        <h3>Configuration et sources</h3>
+        ${renderSourceManifest(view.source_manifest || {})}
+        ${renderRunConfig(run, view.research_policy || {}, view.content_analysis || {})}
+      </section>
+      <section class="panel">
+        <h3>Slides, QCM et narration</h3>
+        <div class="grid-3">
+          <div><span class="pill">${slides.length} slides</span></div>
+          <div><span class="pill">${state.quizzes.length} QCM intermediaires</span></div>
+          <div><span class="pill">${finalCount} questions finales</span></div>
+        </div>
+        ${renderSlideRegeneration(slides)}
+        ${renderQuizReport(state.cleanupReport)}
+        ${renderNarration(view.narration)}
+      </section>
+    </div>`;
+  $("#rename-form").addEventListener("submit", handleRename);
+}
+function renderSteps(steps) {
+  if (!steps.length) return '<div class="empty">Aucune etape enregistree.</div>';
+  return `<div class="list">${steps.map((step) => `
+    <div class="list-item"><strong>${escapeHtml(step.name)} <span class="pill ${escapeHtml(step.status)}">${escapeHtml(step.status)}</span></strong><small>${escapeHtml(step.detail || "")}</small></div>
+  `).join("")}</div>`;
+}
+function renderJobs(jobs) {
+  if (!jobs.length) return '<div class="empty">Aucun job.</div>';
+  const recent = jobs.slice().reverse().slice(0, 8);
+  return `<h3>Jobs recents</h3><div class="list">${recent.map((job) => `
+    <div class="list-item"><strong>${escapeHtml(job.job_type)} <span class="pill ${escapeHtml(job.status)}">${escapeHtml(job.status)}</span></strong><small>${escapeHtml(job.slide_id || job.id)} | ${escapeHtml(formatDate(job.updated_at))}</small>${job.error_message ? `<small>${escapeHtml(job.error_message)}</small>` : ""}</div>
+  `).join("")}</div>`;
+}
+function renderAlerts(alerts) {
+  if (!alerts.length) return '<div class="empty">Aucune alerte.</div>';
+  return `<div class="list">${alerts.map((alert) => `
+    <div class="list-item"><strong>${escapeHtml(alert.code)} <span class="pill ${escapeHtml(alert.level)}">${escapeHtml(alert.level)}</span></strong><small>${escapeHtml(alert.message || "")}</small><small>${escapeHtml(alert.detail || "")}</small></div>
+  `).join("")}</div>`;
+}
+function renderEvents(events) {
+  if (!events.length) return '<div class="empty">Aucun evenement.</div>';
+  return `<h3>Evenements</h3><div class="list">${events.slice().reverse().slice(0, 10).map((event) => `
+    <div class="list-item"><strong>${escapeHtml(event.name)}</strong><small>${escapeHtml(formatDate(event.created_at))}</small><small>${escapeHtml(event.detail || "")}</small></div>
+  `).join("")}</div>`;
+}
+function renderSourceManifest(manifest) {
+  const filenames = Array.isArray(manifest.source_filenames) ? manifest.source_filenames : [];
+  const logo = manifest.logo_original_filename || manifest.logo_filename || "";
+  return `<div class="list">
+    <div class="list-item"><strong>Documents</strong><small>${escapeHtml(filenames.join(", ") || "n/a")}</small></div>
+    <div class="list-item"><strong>Logo</strong><small>${escapeHtml(logo || "Aucun logo optionnel")}</small></div>
+  </div>`;
+}
+function renderRunConfig(run, policy, analysis) {
+  return `<div class="list">
+    <div class="list-item"><strong>Generation</strong><small>${escapeHtml(run.target_level || "niveau non precise")} | ${Number(run.target_slide_count || 0)} slides | ${escapeHtml(run.pipeline_profile || "standard")}</small></div>
+    <div class="list-item"><strong>QCM</strong><small>${escapeHtml(run.intermediate_quiz_mode || "subpart")} | ${Number(run.questions_per_intermediate_quiz || 0)} questions</small></div>
+    <div class="list-item"><strong>Profil contenu</strong><small>${escapeHtml(run.content_profile_selection || "auto")} -> ${escapeHtml(run.content_profile || "standard")} | ${escapeHtml(analysis.confidence || "n/a")}</small></div>
+    <div class="list-item"><strong>Web</strong><small>${policy.external_web_access ? "actif" : "desactive"} | domaines: ${escapeHtml((policy.allowed_domains || []).join(", ") || "aucun")}</small></div>
+  </div>`;
+}
+function renderSlideRegeneration(slides) {
+  if (!slides.length) return '<div class="empty">Aucune slide prete pour regeneration individuelle.</div>';
+  return `<form id="slide-form" class="form-grid">
+    <div class="field half"><label for="slide-id">Regenerer une slide</label><select id="slide-id">${slides.map((slide) => `<option value="${escapeHtml(slide.page_id)}">${escapeHtml(slide.badge || slide.page_id)} - ${escapeHtml(slide.title || "")}</option>`).join("")}</select></div>
+    <div class="field half"><label>&nbsp;</label><button type="submit">Regenerer la slide</button></div>
+  </form>`;
+}
+function renderQuizReport(report) {
+  if (!report) return '<div class="empty">Aucun nettoyage QCM lance.</div>';
+  return `<div class="list-item"><strong>Dernier nettoyage QCM</strong><small>${Number(report.questions_deleted || 0)} supprimees | ${Number(report.questions_review || 0)} a revoir | finale ${Number(report.final_questions_after || 0)}</small></div>`;
+}
+function renderNarration(narration) {
+  if (!narration) return '<div class="empty">Narration non generee.</div>';
+  return `<div class="list-item"><strong>Narration audio</strong><small>${Number(narration.total_slides || 0)} slides | ${escapeHtml(narration.voice || "")}</small></div>`;
+}
+async function handleRename(event) {
+  event.preventDefault();
+  if (!state.selectedCourseId) return;
+  const form = new FormData(event.currentTarget);
+  try {
+    await api(`/courses/${encodeURIComponent(state.selectedCourseId)}/title`, { method: "POST", body: form });
+    notice("Titre mis a jour.", "ok");
+    await refreshAll({ quiet: true });
+  } catch (error) {
+    notice("Renommage impossible: " + detailText(error), "error");
+  }
+}
+async function handleUpload(event) {
+  event.preventDefault();
+  const files = Array.from($("#uploads").files || []);
+  if (files.length < 1 || files.length > 5) {
+    notice("Deposer entre 1 et 5 fichiers PDF/DOCX.", "error");
+    return;
+  }
+  const form = new FormData();
+  files.forEach((file) => form.append("uploads", file));
+  const logo = $("#logo").files && $("#logo").files[0];
+  if (logo) form.append("logo", logo);
+  ["guide", "domains_raw", "difficulty", "model_name", "target_slide_count", "target_level", "intermediate_quiz_mode", "questions_per_intermediate_quiz", "pipeline_profile", "content_profile_selection", "parallelism"].forEach((name) => {
+    form.append(name, document.getElementById(name).value);
+  });
+  form.append("external_web", $("#external_web").checked ? "true" : "false");
+  $("#upload-submit").disabled = true;
+  notice("Upload en cours...");
+  try {
+    const result = await api("/courses/upload", { method: "POST", body: form });
+    state.selectedCourseId = result.course_id;
+    event.currentTarget.reset();
+    $("#upload-count").textContent = "Aucun fichier selectionne.";
+    notice("Generation lancee. Job " + result.job.id, "ok");
+    await refreshAll({ quiet: true });
+    setView("control");
+  } catch (error) {
+    notice("Creation impossible: " + detailText(error), "error");
+  } finally {
+    $("#upload-submit").disabled = false;
+  }
+}
+async function runCourseAction(action) {
+  if (!state.selectedCourseId) return;
+  const id = encodeURIComponent(state.selectedCourseId);
+  const paths = {
+    resume: [`/courses/${id}/resume`, "Reprise lancee."],
+    publish: [`/courses/${id}/publish`, "Cours publie."],
+    "clean-quizzes": [`/courses/${id}/quizzes/quality-cleanup`, "Nettoyage QCM termine."],
+    "regenerate-narration": [`/courses/${id}/narration/regenerate`, "Narration mise en file."],
+    "regenerate-full": [`/courses/${id}/regenerate-full`, "Regeneration complete lancee."]
+  };
+  if (action === "regenerate-full" && !window.confirm("Regenerer tout le cours efface les artefacts courants. Continuer ?")) return;
+  const spec = paths[action];
+  if (!spec) return;
+  try {
+    await api(spec[0], { method: "POST" });
+    notice(spec[1], "ok");
+    await refreshAll({ quiet: true });
+  } catch (error) {
+    notice("Action impossible: " + detailText(error), "error");
+  }
+}
+async function regenerateSelectedSlide(event) {
+  event.preventDefault();
+  if (!state.selectedCourseId) return;
+  const slideId = $("#slide-id").value;
+  try {
+    await api(`/courses/${encodeURIComponent(state.selectedCourseId)}/slides/${encodeURIComponent(slideId)}/regenerate`, { method: "POST" });
+    notice("Regeneration de slide mise en file.", "ok");
+    await refreshAll({ quiet: true });
+  } catch (error) {
+    notice("Regeneration impossible: " + detailText(error), "error");
+  }
+}
+async function exportPages() {
+  try {
+    const result = await api("/admin/github-pages/export", { method: "POST" });
+    notice(`Export docs/ OK: ${result.course_count} cours, ${result.total_size_bytes} octets.`, "ok");
+    await refreshAll({ quiet: true });
+  } catch (error) {
+    notice("Export invalide: " + detailText(error), "error");
+  }
+}
+function renderPreview() {
+  const frame = $("#preview-frame");
+  if (!state.selectedCourseId) {
+    frame.removeAttribute("src");
+    $("#preview-caption").textContent = "Aucun cours selectionne.";
+    return;
+  }
+  const id = encodeURIComponent(state.selectedCourseId);
+  const mode = state.previewMode;
+  const src = mode === "deck"
+    ? `/courses/${id}/site/user/deck.html`
+    : `/courses/${id}/site/${mode}/index.html`;
+  frame.src = apiUrl(src);
+  $("#preview-caption").textContent = `${state.selectedCourseId} | ${mode}`;
+}
+function bindEvents() {
+  $all("[data-view-target]").forEach((button) => button.addEventListener("click", () => setView(button.dataset.viewTarget)));
+  $("#refresh-btn").addEventListener("click", () => refreshAll());
+  $("#export-btn").addEventListener("click", exportPages);
+  $("#save-api-base").addEventListener("click", async () => {
+    state.apiBaseUrl = normalizeApiBaseUrl($("#api-base-url").value);
+    if (state.apiBaseUrl) {
+      window.localStorage.setItem("kojyto-admin-api-base-url", state.apiBaseUrl);
+    } else {
+      window.localStorage.removeItem("kojyto-admin-api-base-url");
+    }
+    await refreshAll();
+  });
+  $("#course-filter").addEventListener("input", renderCoursesTable);
+  $("#upload-form").addEventListener("submit", handleUpload);
+  $("#uploads").addEventListener("change", () => {
+    const count = ($("#uploads").files || []).length;
+    $("#upload-count").textContent = count ? `${count} fichier(s) selectionne(s).` : "Aucun fichier selectionne.";
+  });
+  document.addEventListener("click", async (event) => {
+    const row = event.target.closest("[data-select-course]");
+    if (row) {
+      state.selectedCourseId = row.dataset.selectCourse;
+      await loadSelectedCourse();
+      setView("control");
+    }
+    const action = event.target.closest("[data-course-action]");
+    if (action) await runCourseAction(action.dataset.courseAction);
+    const preview = event.target.closest("[data-preview-mode]");
+    if (preview) {
+      state.previewMode = preview.dataset.previewMode;
+      $all("[data-preview-mode]").forEach((button) => button.classList.toggle("primary", button === preview));
+      renderPreview();
+    }
+  });
+  document.addEventListener("submit", (event) => {
+    if (event.target && event.target.id === "slide-form") regenerateSelectedSlide(event);
+  });
+}
+async function init() {
+  $("#api-base-url").value = state.apiBaseUrl;
+  $("#catalog-link").href = adminConfig.catalogHref || "#";
+  $("#learner-link").href = adminConfig.learnerSiteUrl || "https://jjohana.github.io/kojyto/index.html";
+  $("#public-admin-link").href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
+  bindEvents();
+  await refreshAll({ quiet: true });
+  window.setInterval(() => {
+    if (!document.hidden && $("#auto-refresh").checked) refreshAll({ quiet: true });
+  }, 5000);
+}
+init();
+  </script>
+</body>
+</html>

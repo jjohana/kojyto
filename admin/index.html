@@ -17,6 +17,7 @@
   --warn: #a45d08;
   --danger: #a93434;
   --ok: #276f55;
+  --attention: #8a5a00;
   --shadow: 0 16px 42px rgba(20, 37, 58, 0.09);
 }
 * { box-sizing: border-box; }
@@ -238,12 +239,15 @@ tr.clickable:hover { background: #f4f8fa; }
   font-weight: 800;
 }
 .pill.done, .pill.completed, .pill.published { background: #e9f7f0; color: var(--ok); }
+.pill.attention { background: #fff7df; color: var(--attention); }
 .pill.failed, .pill.blocking { background: #fff1f1; color: var(--danger); }
 .pill.running, .pill.queued { background: #fff6e8; color: var(--warn); }
+.pill.pending { background: #eef3f6; color: var(--muted); }
 .course-title { display: grid; gap: 4px; }
 .course-title strong { color: var(--accent-strong); }
 .course-title span { color: var(--muted); font-size: 0.83rem; }
 .actions-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.actions-row:empty { display: none; }
 .split-detail {
   display: grid;
   grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
@@ -267,6 +271,121 @@ tr.clickable:hover { background: #f4f8fa; }
   background: #e9eef1;
 }
 .progress-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), #d98524); }
+.generation-hero {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f8fa 100%);
+  box-shadow: var(--shadow);
+}
+.generation-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.generation-title h3 { margin: 0; color: var(--accent-strong); font-size: 1.28rem; }
+.generation-title p { margin: 5px 0 0; color: var(--muted); }
+.current-work {
+  display: grid;
+  gap: 7px;
+  padding: 14px;
+  border: 1px solid #e1eaee;
+  border-radius: 8px;
+  background: #fff;
+}
+.current-work strong { color: var(--accent-strong); }
+.current-work p { margin: 0; color: var(--muted); line-height: 1.45; }
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.timeline {
+  display: grid;
+  gap: 8px;
+}
+.timeline-step {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid #e1eaee;
+  border-radius: 8px;
+  background: #fff;
+}
+.timeline-step.running { border-color: rgba(164, 93, 8, 0.3); background: #fffaf1; }
+.timeline-step.done { border-color: rgba(39, 111, 85, 0.22); background: #f8fcfa; }
+.timeline-step.attention { border-color: rgba(138, 90, 0, 0.26); background: #fffaf0; }
+.timeline-step.failed { border-color: rgba(169, 52, 52, 0.24); background: #fff8f8; }
+.step-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #edf4f7;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+.timeline-step.done .step-marker { background: #dff3ea; color: var(--ok); }
+.timeline-step.running .step-marker { background: #ffeac3; color: var(--warn); }
+.timeline-step.attention .step-marker { background: #ffefbd; color: var(--attention); }
+.timeline-step.failed .step-marker { background: #ffe1e1; color: var(--danger); }
+.step-copy { display: grid; gap: 4px; min-width: 0; }
+.step-copy strong { color: var(--accent-strong); }
+.step-copy small { color: var(--muted); line-height: 1.4; }
+.status-label {
+  white-space: nowrap;
+}
+.review-grid, .artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+.review-item, .artifact-card {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid #e1eaee;
+  border-radius: 8px;
+  background: #fbfdfe;
+}
+.review-item strong, .artifact-card strong { color: var(--accent-strong); }
+.review-item small, .artifact-card small { color: var(--muted); line-height: 1.4; }
+.artifact-card a { color: var(--accent-strong); font-weight: 800; text-decoration: none; }
+.course-settings {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: end;
+}
+.course-settings .field { grid-column: auto; }
+.activity-list {
+  display: grid;
+  gap: 8px;
+}
+.activity-item {
+  padding: 10px;
+  border-left: 3px solid rgba(12, 110, 130, 0.25);
+  background: #fbfdfe;
+}
+.activity-item strong { display: block; color: var(--accent-strong); }
+.activity-item small { color: var(--muted); }
+.course-detail-content {
+  display: grid;
+  gap: 18px;
+}
+.static-admin [data-runtime-only] { display: none !important; }
 .preview-frame {
   width: 100%;
   min-height: 70vh;
@@ -287,7 +406,7 @@ tr.clickable:hover { background: #f4f8fa; }
 @media (max-width: 1040px) {
   .admin-shell { grid-template-columns: 1fr; }
   .sidebar { position: relative; height: auto; grid-template-rows: auto; }
-  .metrics, .grid-2, .grid-3, .split-detail { grid-template-columns: 1fr; }
+  .metrics, .grid-2, .grid-3, .split-detail, .course-settings { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .main { padding: 14px; }
@@ -295,6 +414,8 @@ tr.clickable:hover { background: #f4f8fa; }
   .top-actions { justify-content: flex-start; }
   .field, .field.half, .field.third { grid-column: span 12; }
   table { min-width: 640px; }
+  .timeline-step { grid-template-columns: 30px minmax(0, 1fr); }
+  .timeline-step .status-label { grid-column: 2; justify-self: start; }
 }
   </style>
 </head>
@@ -306,10 +427,10 @@ tr.clickable:hover { background: #f4f8fa; }
         <p>Creation et publication des cours.</p>
       </div>
       <nav class="nav-list" aria-label="Navigation admin">
-        <button type="button" data-view-target="create" class="active primary-nav">Creer un cours</button>
+        <button type="button" data-view-target="create" class="active primary-nav" data-runtime-only>Creer un cours</button>
         <button type="button" data-view-target="dashboard">Cours</button>
-        <button type="button" data-view-target="control">Piloter un cours</button>
-        <button type="button" data-view-target="preview">Previsualiser</button>
+        <button type="button" data-view-target="control" data-runtime-only>Suivi de generation</button>
+        <button type="button" data-view-target="preview" data-runtime-only>Previsualiser</button>
       </nav>
       <div class="side-links">
         <a id="learner-link" href="https://jjohana.github.io/kojyto/index.html">Site apprenant public</a>
@@ -335,7 +456,7 @@ tr.clickable:hover { background: #f4f8fa; }
           <div class="panel-head">
             <div>
               <h3>Cours disponibles</h3>
-              <p>Selectionner un cours pour suivre les jobs, les alertes et les actions de publication.</p>
+              <p>Selectionner un cours pour suivre l'avancement, les alertes et la publication.</p>
             </div>
             <input id="course-filter" type="search" placeholder="Filtrer les cours">
           </div>
@@ -343,12 +464,12 @@ tr.clickable:hover { background: #f4f8fa; }
         </section>
       </section>
 
-      <section class="view active" id="view-create">
+      <section class="view active" id="view-create" data-runtime-only>
         <section class="panel compact">
           <div class="panel-head">
             <div>
               <h3>Nouveau cours</h3>
-              <p>Deposer 1 a 5 documents PDF/DOCX, configurer la generation, puis lancer le job.</p>
+              <p>Deposer 1 a 5 documents PDF/DOCX, configurer la generation, puis lancer le cours.</p>
             </div>
           </div>
           <form id="upload-form" class="form-grid requires-generation">
@@ -423,11 +544,11 @@ tr.clickable:hover { background: #f4f8fa; }
         </section>
       </section>
 
-      <section class="view" id="view-control">
+      <section class="view" id="view-control" data-runtime-only>
         <div id="course-detail" class="empty">Selectionner un cours dans le tableau de bord.</div>
       </section>
 
-      <section class="view" id="view-preview">
+      <section class="view" id="view-preview" data-runtime-only>
         <section class="panel">
           <div class="panel-head">
             <div>
@@ -445,7 +566,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 19:14 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-30 20:06 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function isLocalApiBaseUrl(value) {
@@ -478,9 +599,9 @@ const state = {
 };
 
 const viewLabels = {
-  dashboard: ["Tableau de bord", "Vue operationnelle des cours et generations."],
+  dashboard: ["Cours", "Liste des cours disponibles."],
   create: ["Creer un cours", "Deposer les documents, regler le cours et lancer la generation."],
-  control: ["Piloter un cours", "Suivi temps reel, controles, actions et publication."],
+  control: ["Suivi de generation", "Progression, controles et publication du cours."],
   preview: ["Previsualiser", "Controle visuel des versions master, apprenant et deck."]
 };
 
@@ -510,6 +631,33 @@ function detailText(error) {
   }
   if (error && error.message) return error.message;
   return "Erreur inconnue.";
+}
+function statusLabel(value) {
+  const labels = {
+    pending: "En attente",
+    queued: "En attente",
+    running: "En cours",
+    done: "Termine",
+    completed: "Termine",
+    failed: "Erreur bloquante",
+    attention: "Attention requise",
+    uploaded: "Documents recus",
+    chunked: "Documents lus",
+    mapped: "Analyse terminee",
+    planned: "Plan valide",
+    slides_built: "Slides pretes",
+    quizzes_built: "QCM prets",
+    ready_to_publish: "Pret a publier",
+    published: "Publie"
+  };
+  return labels[value] || String(value || "En attente").replace(/_/g, " ");
+}
+function statusClass(value) {
+  if (["done", "completed", "published", "ready_to_publish"].includes(value)) return "done";
+  if (["running", "queued", "uploaded", "chunked", "mapped", "planned", "slides_built", "quizzes_built"].includes(value)) return "running";
+  if (["failed", "blocking"].includes(value)) return "failed";
+  if (value === "attention" || value === "warning") return "attention";
+  return "pending";
 }
 function normalizeApiBaseUrl(value) {
   return String(value || "").trim().replace(/\/+$/, "");
@@ -555,6 +703,13 @@ function setView(view) {
   $("#page-title").textContent = label[0];
   $("#page-subtitle").textContent = label[1];
   if (view === "preview") renderPreview();
+}
+function applyRuntimeMode() {
+  const runtime = hasGenerationRuntime();
+  document.body.classList.toggle("static-admin", !runtime);
+  if (!runtime && state.view !== "dashboard") {
+    setView("dashboard");
+  }
 }
 async function refreshAll({ quiet = false } = {}) {
   if (!hasGenerationRuntime()) {
@@ -660,55 +815,127 @@ function renderCoursesTable() {
   }
   $("#courses-table").innerHTML = `
     <table>
-      <thead><tr><th>Cours</th><th>Statut</th><th>Publication</th><th>Source</th><th>Creation</th>${staticMode ? "<th>Acces</th>" : ""}</tr></thead>
+      <thead><tr><th>Cours</th><th>Etat</th><th>Publication</th><th>Action</th></tr></thead>
       <tbody>
         ${courses.map((course) => `
           <tr class="clickable" data-select-course="${escapeHtml(course.id)}">
-            <td><div class="course-title"><strong>${escapeHtml(course.title)}</strong><span>${escapeHtml(course.id)}</span></div></td>
-            <td><span class="pill ${escapeHtml(course.status)}">${escapeHtml(course.status)}</span></td>
-            <td>${course.published ? '<span class="pill published">publie</span>' : '<span class="pill">non publie</span>'}</td>
-            <td>${escapeHtml(course.source_filename)}</td>
-            <td>${escapeHtml(formatDate(course.created_at))}</td>
-            ${staticMode ? `<td>${course.public_href ? `<a class="button" href="${escapeHtml(course.public_href)}">Ouvrir</a>` : ""}</td>` : ""}
+            <td><div class="course-title"><strong>${escapeHtml(course.title)}</strong><span>${escapeHtml(formatDate(course.created_at))}</span></div></td>
+            <td><span class="pill ${statusClass(course.status)}">${escapeHtml(statusLabel(course.status))}</span></td>
+            <td>${course.published ? '<span class="pill published">Publie</span>' : '<span class="pill pending">Non publie</span>'}</td>
+            <td>${staticMode && course.public_href ? `<a class="button" href="${escapeHtml(course.public_href)}">Ouvrir</a>` : "Suivre"}</td>
           </tr>
         `).join("")}
       </tbody>
     </table>`;
 }
-function progressPercent(progress) {
-  const total = Number(progress?.total_slides || 0) + Number(progress?.total_intermediate_quizzes || 0) + 1;
-  const done = Number(progress?.completed_slides || 0) + Number(progress?.completed_intermediate_quizzes || 0) + (progress?.final_quiz_ready ? 1 : 0);
-  return total > 1 ? Math.max(0, Math.min(100, Math.round((done / total) * 100))) : 0;
+function cleanDetail(value) {
+  return String(value || "")
+    .replace(/job/gi, "operation")
+    .replace(/chunks?/gi, "extraits")
+    .replace(/[a-f0-9]{8}-[a-f0-9-]{20,}/gi, "")
+    .trim();
 }
-const PIPELINE_STAGES = [
-  { label: "Documents", steps: ["uploaded", "read_text", "read_images", "chunked"], detail: "Depot, extraction texte/images et chunks." },
-  { label: "Configuration", steps: ["uploaded"], detail: "Niveau, slides, difficulte, QCM, profil, logo et web." },
-  { label: "Recherche web", steps: ["slides_built"], detail: "Sources web ajoutees pendant la generation des slides." },
-  { label: "Plan et contenu", steps: ["mapped", "planned", "slides_built"], detail: "Cartographie, plan, contenu et validation des slides." },
-  { label: "Images", steps: ["slides_built"], detail: "Visuels generes avec consigne anti-logo/anti-etablissement." },
-  { label: "QCM", steps: ["quizzes_built"], detail: "QCM intermediaires, nettoyage et QCM final." },
-  { label: "Scenario audio", steps: ["narration_scripted"], detail: "Scenario detaille et scripts par page." },
-  { label: "Fichiers audio", steps: ["narration_audio_generated"], detail: "Generation audio, QA et integration." },
-  { label: "Assemblage site", steps: ["ready_to_publish"], detail: "Site master, apprenant, deck et manifestes." },
-  { label: "Publication", steps: ["published"], detail: "Publication et export GitHub Pages docs/." }
-];
-function slideSpecsFromDeck(deck) {
-  return Array.isArray(deck?.items) ? deck.items.map((item) => item.slide).filter(Boolean) : [];
+function hasActiveGeneration(view) {
+  const jobs = Array.isArray(view?.jobs) ? view.jobs : [];
+  return jobs.some((job) => ["queued", "running"].includes(job.status));
 }
-function stepStatus(steps, names) {
-  const byName = Object.fromEntries((steps || []).map((step) => [step.name, step]));
+function stepByName(steps) {
+  return Object.fromEntries((steps || []).map((step) => [step.name, step]));
+}
+function combineStepStatus(steps, names, fallbackDetail = "") {
+  const byName = stepByName(steps);
   const selected = names.map((name) => byName[name]).filter(Boolean);
-  if (!selected.length) return { status: "pending", detail: "En attente." };
+  if (!selected.length) return { status: "pending", detail: fallbackDetail || "En attente." };
   if (selected.some((step) => step.status === "failed")) return selected.find((step) => step.status === "failed");
   if (selected.some((step) => step.status === "running")) return selected.find((step) => step.status === "running");
   if (names.every((name) => byName[name]?.status === "done")) return selected[selected.length - 1];
   return selected[selected.length - 1];
 }
-function renderPipelineAudit(steps) {
-  return `<div class="capability-grid">${PIPELINE_STAGES.map((stage) => {
-    const step = stepStatus(steps, stage.steps);
-    return `<article class="capability-card"><span class="pill ${escapeHtml(step.status)}">${escapeHtml(step.status)}</span><strong>${escapeHtml(stage.label)}</strong><p>${escapeHtml(stage.detail)}</p><small>${escapeHtml(step.detail || "")}</small></article>`;
-  }).join("")}</div>`;
+function stageStatusFromStep(step) {
+  if (!step) return "pending";
+  if (step.status === "failed") return "failed";
+  if (step.status === "running") return "running";
+  if (step.status === "done") return "done";
+  return "pending";
+}
+function makeStage(index, key, label, status, detail) {
+  return { index, key, label, status, detail: cleanDetail(detail) };
+}
+function deriveGenerationStages(view, slideSpecs, manifest, webRefs, visualCount, finalCount) {
+  const steps = view.steps || [];
+  const course = view.course || {};
+  const progress = view.progress || {};
+  const sourceManifest = view.source_manifest || {};
+  const filenames = Array.isArray(sourceManifest.source_filenames) ? sourceManifest.source_filenames : [];
+  const alerts = Array.isArray(view.alerts) ? view.alerts : [];
+  const policy = view.research_policy || {};
+  const narration = view.narration || {};
+  const cleanupReport = state.cleanupReport;
+  const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
+  const hasSite = Boolean(view.user_site_path || pages.length);
+  const hasBlockingAlert = alerts.some((alert) => alert.level === "blocking");
+  const imageAlert = alerts.find((alert) => /image|visuel|logo|watermark|filigrane/i.test([alert.code, alert.message, alert.detail].join(" ")));
+  const extractStep = combineStepStatus(steps, ["read_text", "read_images", "chunked"], "Lecture en attente.");
+  const planStep = combineStepStatus(steps, ["mapped", "planned"], "Analyse et plan en attente.");
+  const slideStep = combineStepStatus(steps, ["slides_built"], "Slides en attente.");
+  const quizStep = combineStepStatus(steps, ["quizzes_built"], "QCM en attente.");
+  const narrationScriptStep = combineStepStatus(steps, ["narration_scripted"], "Scenario audio en attente.");
+  const narrationAudioStep = combineStepStatus(steps, ["narration_audio_generated"], "Audio en attente.");
+  const siteStep = combineStepStatus(steps, ["ready_to_publish"], "Assemblage en attente.");
+  const contentAnalysisDone = Boolean(view.content_analysis?.status && view.content_analysis.status !== "pending");
+
+  const stages = [
+    makeStage(1, "validate_documents", "Validation des documents", filenames.length ? "done" : "pending", filenames.length ? `${filenames.length} document(s) recus.` : "Deposer les documents du cours."),
+    makeStage(2, "extract_documents", "Lecture des documents", stageStatusFromStep(extractStep), extractStep.detail || "Extraction du contenu PDF/DOCX."),
+    makeStage(3, "pedagogical_analysis", "Analyse pedagogique", contentAnalysisDone ? "done" : stageStatusFromStep(planStep), view.content_analysis?.rationale || "Analyse du niveau, du profil et des objectifs."),
+    makeStage(4, "web_research", "Recherche web et sources", policy.external_web_access === false ? "done" : (webRefs.length ? "done" : stageStatusFromStep(slideStep)), policy.external_web_access === false ? "Enrichissement web non active pour ce cours." : (webRefs.length ? `${webRefs.length} source(s) retenue(s).` : "Sources recherchees pendant la creation des slides.")),
+    makeStage(5, "course_plan", "Plan du cours", stageStatusFromStep(planStep), planStep.detail || "Construction du plan et du decoupage."),
+    makeStage(6, "slide_writing", "Redaction des slides", stageStatusFromStep(slideStep), progress.total_slides ? `${Number(progress.completed_slides || 0)}/${Number(progress.total_slides || 0)} slide(s) prete(s).` : slideStep.detail || "Contenu des slides en attente."),
+    makeStage(7, "visuals", "Images et visuels", visualCount ? "done" : stageStatusFromStep(slideStep), visualCount ? `${visualCount} visuel(s) integre(s).` : "Visuels prepares avec le moteur existant."),
+    makeStage(8, "visual_quality", "Controle qualite des images", imageAlert ? "attention" : stageStatusFromStep(slideStep), imageAlert ? imageAlert.message : "Aucun logo ni nom d'ecole ne doit etre genere dans les images."),
+    makeStage(9, "intermediate_quizzes", "QCM intermediaires", state.quizzes.length ? "done" : stageStatusFromStep(quizStep), state.quizzes.length ? `${state.quizzes.length} QCM intermediaire(s).` : quizStep.detail || "Questions d'entrainement en attente."),
+    makeStage(10, "final_quiz", "QCM final", finalCount ? "done" : (stageStatusFromStep(quizStep) === "done" ? "attention" : stageStatusFromStep(quizStep)), finalCount ? `${finalCount} question(s) finales.` : "QCM final a verifier."),
+    makeStage(11, "quiz_cleanup", "Verification des QCM", cleanupReport ? (Number(cleanupReport.questions_review || 0) ? "attention" : "done") : (stageStatusFromStep(quizStep) === "done" ? "attention" : stageStatusFromStep(quizStep)), cleanupReport ? `${Number(cleanupReport.questions_deleted || 0)} question(s) retiree(s), ${Number(cleanupReport.questions_review || 0)} a verifier.` : "Nettoyage automatique attendu apres les QCM."),
+    makeStage(12, "narration_script", "Scenario de narration", narration.slides?.length ? "done" : stageStatusFromStep(narrationScriptStep), narration.slides?.length ? `${narration.slides.length} script(s) redige(s).` : narrationScriptStep.detail || "Scenario audio en attente."),
+    makeStage(13, "audio_files", "Fichiers audio", narration.page_audio?.length ? "done" : stageStatusFromStep(narrationAudioStep), narration.page_audio?.length ? `${narration.page_audio.length} fichier(s) audio disponible(s).` : narrationAudioStep.detail || "Generation audio en attente."),
+    makeStage(14, "learner_site", "Assemblage du site", hasSite ? "done" : stageStatusFromStep(siteStep), hasSite ? `${pages.length || 0} page(s) assemblee(s).` : siteStep.detail || "Site apprenant en construction."),
+    makeStage(15, "final_check", "Verification finale", hasBlockingAlert ? "attention" : (hasSite ? "done" : "pending"), hasBlockingAlert ? "Des points bloquants doivent etre controles avant publication." : "Controle final du cours et des artefacts."),
+    makeStage(16, "publication", "Publication", course.published ? "done" : (["ready_to_publish", "published"].includes(course.status) ? "attention" : "pending"), course.published ? "Cours visible sur le site apprenant." : "Publication disponible quand le cours est pret.")
+  ];
+  const currentStep = String(progress.current_step || "");
+  return stages.map((stage) => {
+    const isCurrent =
+      (currentStep === "read_text" && stage.key === "extract_documents") ||
+      (currentStep === "mapped" && stage.key === "pedagogical_analysis") ||
+      (currentStep === "planned" && stage.key === "course_plan") ||
+      (currentStep === "slides_built" && ["slide_writing", "visuals", "visual_quality", "web_research"].includes(stage.key)) ||
+      (currentStep === "quizzes_built" && ["intermediate_quizzes", "final_quiz", "quiz_cleanup"].includes(stage.key)) ||
+      (currentStep === "narration_scripted" && stage.key === "narration_script") ||
+      (currentStep === "narration_audio_generated" && stage.key === "audio_files") ||
+      (currentStep === "ready_to_publish" && stage.key === "learner_site");
+    return isCurrent && !["done", "failed", "attention"].includes(stage.status)
+      ? { ...stage, status: "running" }
+      : stage;
+  });
+}
+function progressPercentFromStages(stages) {
+  if (!stages.length) return 0;
+  const score = stages.reduce((total, stage) => {
+    if (stage.status === "done") return total + 1;
+    if (stage.status === "attention") return total + 0.85;
+    if (stage.status === "running") return total + 0.5;
+    return total;
+  }, 0);
+  return Math.max(0, Math.min(100, Math.round((score / stages.length) * 100)));
+}
+function currentStage(stages) {
+  return stages.find((stage) => stage.status === "running")
+    || stages.find((stage) => stage.status === "attention")
+    || stages.find((stage) => stage.status === "pending")
+    || stages[stages.length - 1];
+}
+function slideSpecsFromDeck(deck) {
+  return Array.isArray(deck?.items) ? deck.items.map((item) => item.slide).filter(Boolean) : [];
 }
 function collectWebRefs(slides) {
   const seen = new Set();
@@ -729,18 +956,74 @@ function countVisualBlocks(slides) {
 function questionCount(quizzes) {
   return (quizzes || []).reduce((total, quiz) => total + (Array.isArray(quiz.questions) ? quiz.questions.length : 0), 0);
 }
+function renderTimeline(stages) {
+  return `<div class="timeline">${stages.map((stage) => `
+    <article class="timeline-step ${escapeHtml(stage.status)}">
+      <span class="step-marker">${stage.index}</span>
+      <div class="step-copy">
+        <strong>${escapeHtml(stage.label)}</strong>
+        <small>${escapeHtml(stage.detail || statusLabel(stage.status))}</small>
+      </div>
+      <span class="pill ${statusClass(stage.status)} status-label">${escapeHtml(statusLabel(stage.status))}</span>
+    </article>
+  `).join("")}</div>`;
+}
+function renderGenerationHero(course, progress, stages, view) {
+  const percent = progressPercentFromStages(stages);
+  const current = currentStage(stages);
+  const active = hasActiveGeneration(view);
+  const remaining = stages.filter((stage) => stage.status === "pending").length;
+  const currentMessage = current?.status === "attention"
+    ? "Une verification est necessaire avant de continuer."
+    : active
+      ? "La generation avance automatiquement."
+      : current?.status === "done"
+        ? "Le parcours est termine."
+        : "La prochaine etape demarrera automatiquement.";
+  return `<section class="generation-hero">
+    <div class="generation-title">
+      <div>
+        <h3>${escapeHtml(course.title)}</h3>
+        <p>${escapeHtml(statusLabel(course.status))}</p>
+      </div>
+      <div class="actions-row">${renderContextualActions(course, stages, view)}</div>
+    </div>
+    <div>
+      <div class="progress-label"><span>Progression du cours</span><span>${percent}%</span></div>
+      <div class="progress-bar" aria-label="Progression"><span style="width:${percent}%"></span></div>
+    </div>
+    <div class="current-work">
+      <strong>${escapeHtml(current?.label || "Generation")}</strong>
+      <p>${escapeHtml(current?.detail || progress.message || currentMessage)}</p>
+      <p>${escapeHtml(currentMessage)}${remaining ? ` ${remaining} etape(s) restante(s).` : ""}</p>
+    </div>
+  </section>`;
+}
+function renderContextualActions(course, stages, view) {
+  const active = hasActiveGeneration(view);
+  const failed = stages.some((stage) => stage.status === "failed");
+  const blocking = (view.alerts || []).some((alert) => alert.level === "blocking");
+  const ready = ["ready_to_publish", "published"].includes(course.status) || Boolean(view.user_site_path);
+  const buttons = [];
+  if (failed && !active) buttons.push('<button type="button" data-course-action="resume">Reprendre</button>');
+  if (ready && !course.published && !blocking && !active) buttons.push('<button type="button" data-course-action="publish" class="primary">Publier</button>');
+  if ((state.quizzes.length || state.finalQuiz) && !active) buttons.push('<button type="button" data-course-action="clean-quizzes">Verifier les QCM</button>');
+  if (slideSpecsFromDeck(state.slideDeck).length && !active) buttons.push('<button type="button" data-course-action="regenerate-narration">Regenerer l\'audio</button>');
+  if (view.user_site_path) buttons.push(`<a class="button" href="${escapeHtml(apiUrl(`/courses/${encodeURIComponent(course.id)}/site/user/index.html`))}" target="_blank" rel="noopener">Ouvrir apprenant</a>`);
+  if (!active && view.source_manifest?.source_paths?.length) buttons.push('<button type="button" data-course-action="regenerate-full" class="danger">Regenerer le cours</button>');
+  return buttons.join("");
+}
 function renderCourseDetail() {
   const root = $("#course-detail");
   const view = state.adminView;
   if (!state.selectedCourseId || !view || !view.course) {
     root.className = "empty";
-    root.textContent = "Selectionner un cours dans le tableau de bord.";
+    root.textContent = "Selectionner un cours.";
     return;
   }
-  root.className = "view active";
+  root.className = "course-detail-content";
   const course = view.course;
   const progress = view.progress || {};
-  const run = view.run_config || {};
   const manifest = state.manifest || {};
   const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
   const slides = pages.filter((page) => page.kind === "slide");
@@ -748,104 +1031,118 @@ function renderCourseDetail() {
   const webRefs = collectWebRefs(slideSpecs);
   const visualCount = countVisualBlocks(slideSpecs);
   const finalCount = Array.isArray(state.finalQuiz?.questions) ? state.finalQuiz.questions.length : 0;
-  const percent = progressPercent(progress);
+  const stages = deriveGenerationStages(view, slideSpecs, manifest, webRefs, visualCount, finalCount);
   root.innerHTML = `
+    ${renderGenerationHero(course, progress, stages, view)}
     <section class="panel">
-      <div class="panel-head">
-        <div>
-          <h3>${escapeHtml(course.title)}</h3>
-          <p>${escapeHtml(course.id)} | ${escapeHtml(course.source_filename)}</p>
-        </div>
-        <div class="actions-row">
-          <button type="button" data-course-action="resume">Reprendre</button>
-          <button type="button" data-course-action="publish" class="primary">Publier</button>
-          <button type="button" data-course-action="clean-quizzes">Nettoyer QCM</button>
-          <button type="button" data-course-action="regenerate-narration">Regenerer narration</button>
-          <button type="button" data-course-action="regenerate-full" class="danger">Regenerer tout</button>
-        </div>
-      </div>
-      <div class="progress-bar" aria-label="Progression"><span style="width:${percent}%"></span></div>
-      <div class="grid-3">
-        <div><span class="pill ${escapeHtml(course.status)}">${escapeHtml(course.status)}</span></div>
-        <div><strong>${percent}%</strong><p>${escapeHtml(progress.message || "Aucun message de progression.")}</p></div>
-        <div><p>Slides ${Number(progress.completed_slides || 0)}/${Number(progress.total_slides || 0)} | QCM ${Number(progress.completed_intermediate_quizzes || 0)}/${Number(progress.total_intermediate_quizzes || 0)}</p></div>
-      </div>
-      <form id="rename-form" class="form-grid">
-        <div class="field half">
-          <label for="rename-title">Renommer le cours</label>
-          <input id="rename-title" name="title" value="${escapeHtml(course.title)}">
-        </div>
-        <div class="field half">
-          <label>&nbsp;</label>
-          <button type="submit">Enregistrer le titre</button>
-        </div>
-      </form>
+      <h3>Avancement detaille</h3>
+      ${renderTimeline(stages)}
     </section>
-    <section class="panel">
-      <h3>Audit du pipeline de generation</h3>
-      ${renderPipelineAudit(view.steps || [])}
-    </section>
-    <div class="split-detail">
-      <section class="panel">
-        <h3>Etapes et jobs</h3>
-        ${renderSteps(view.steps || [])}
-        ${renderJobs(view.jobs || [])}
-      </section>
-      <section class="panel">
-        <h3>Alertes et evenements</h3>
-        ${renderAlerts(view.alerts || [])}
-        ${renderEvents(view.events || [])}
-      </section>
-    </div>
     <div class="grid-2">
       <section class="panel">
-        <h3>Configuration et sources</h3>
-        ${renderSourceManifest(view.source_manifest || {})}
-        ${renderRunConfig(run, view.research_policy || {}, view.content_analysis || {})}
-        ${renderResearchEvidence(webRefs, view.research_policy || {})}
+        <h3>A verifier</h3>
+        ${renderReviewPanel(view.alerts || [], stages)}
       </section>
       <section class="panel">
-        <h3>Slides, QCM et narration</h3>
-        <div class="grid-3">
-          <div><span class="pill">${slides.length || slideSpecs.length} slides</span></div>
-          <div><span class="pill">${visualCount} visuels</span></div>
-          <div><span class="pill">${finalCount} questions finales</span></div>
-        </div>
-        ${renderSlideInventory(slideSpecs, manifest)}
-        ${renderQuizInventory(state.quizzes, state.finalQuiz, state.cleanupReport)}
-        ${renderSlideRegeneration(slides)}
-        ${renderNarration(view.narration)}
+        <h3>Apercu</h3>
+        ${renderPreviewAccess(view, manifest)}
       </section>
     </div>
     <section class="panel">
-      <h3>Assemblage et publication</h3>
-      ${renderAssemblyStatus(manifest, view)}
-    </section>`;
-  $("#rename-form").addEventListener("submit", handleRename);
+      <h3>Artefacts du cours</h3>
+      ${renderArtifactPanel(view, manifest, slideSpecs, webRefs, visualCount, finalCount)}
+    </section>
+    <div class="grid-2">
+      <section class="panel">
+        <h3>Parametres du cours</h3>
+        ${renderSourceManifest(view.source_manifest || {})}
+        ${renderRunConfig(view.run_config || {}, view.research_policy || {}, view.content_analysis || {})}
+        ${renderCourseSettings(course)}
+      </section>
+      <section class="panel">
+        <h3>Activite recente</h3>
+        ${renderRecentActivity(view.events || [])}
+      </section>
+    </div>
+    ${renderSlideRegeneration(slides, hasActiveGeneration(view))}`;
+  const renameForm = $("#rename-form");
+  if (renameForm) renameForm.addEventListener("submit", handleRename);
 }
-function renderSteps(steps) {
-  if (!steps.length) return '<div class="empty">Aucune etape enregistree.</div>';
-  return `<div class="list">${steps.map((step) => `
-    <div class="list-item"><strong>${escapeHtml(step.name)} <span class="pill ${escapeHtml(step.status)}">${escapeHtml(step.status)}</span></strong><small>${escapeHtml(step.detail || "")}</small></div>
-  `).join("")}</div>`;
+function renderReviewPanel(alerts, stages) {
+  const attentionStages = stages.filter((stage) => ["attention", "failed"].includes(stage.status));
+  const usefulAlerts = (alerts || []).filter((alert) => ["warning", "blocking"].includes(alert.level));
+  if (!attentionStages.length && !usefulAlerts.length) {
+    return '<div class="review-grid"><article class="review-item"><strong>Aucun point bloquant</strong><small>Le cours ne demande pas d intervention pour le moment.</small></article></div>';
+  }
+  const stageItems = attentionStages.map((stage) => `<article class="review-item"><strong>${escapeHtml(stage.label)}</strong><small>${escapeHtml(stage.detail)}</small></article>`);
+  const alertItems = usefulAlerts.map((alert) => `<article class="review-item"><strong>${escapeHtml(alert.level === "blocking" ? "Bloquant" : "A controler")}</strong><small>${escapeHtml(cleanDetail(alert.message || alert.detail))}</small></article>`);
+  return `<div class="review-grid">${stageItems.concat(alertItems).join("")}</div>`;
 }
-function renderJobs(jobs) {
-  if (!jobs.length) return '<div class="empty">Aucun job.</div>';
-  const recent = jobs.slice().reverse().slice(0, 8);
-  return `<h3>Jobs recents</h3><div class="list">${recent.map((job) => `
-    <div class="list-item"><strong>${escapeHtml(job.job_type)} <span class="pill ${escapeHtml(job.status)}">${escapeHtml(job.status)}</span></strong><small>${escapeHtml(job.slide_id || job.id)} | ${escapeHtml(formatDate(job.updated_at))}</small>${job.error_message ? `<small>${escapeHtml(job.error_message)}</small>` : ""}</div>
-  `).join("")}</div>`;
+function renderPreviewAccess(view, manifest) {
+  const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
+  if (!view.user_site_path && !pages.length) {
+    return '<div class="empty">L apercu sera disponible des que le site du cours sera assemble.</div>';
+  }
+  return `<div class="actions-row">
+    <button type="button" data-preview-mode="user" data-open-preview="1" class="primary">Version apprenant</button>
+    <button type="button" data-preview-mode="master" data-open-preview="1">Version master</button>
+    <button type="button" data-preview-mode="deck" data-open-preview="1">Deck</button>
+  </div>`;
 }
-function renderAlerts(alerts) {
-  if (!alerts.length) return '<div class="empty">Aucune alerte.</div>';
-  return `<div class="list">${alerts.map((alert) => `
-    <div class="list-item"><strong>${escapeHtml(alert.code)} <span class="pill ${escapeHtml(alert.level)}">${escapeHtml(alert.level)}</span></strong><small>${escapeHtml(alert.message || "")}</small><small>${escapeHtml(alert.detail || "")}</small></div>
-  `).join("")}</div>`;
+function renderArtifactPanel(view, manifest, slides, webRefs, visualCount, finalCount) {
+  const sourceManifest = view.source_manifest || {};
+  const filenames = Array.isArray(sourceManifest.source_filenames) ? sourceManifest.source_filenames : [];
+  const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
+  const audioCount = Array.isArray(view.narration?.page_audio) ? view.narration.page_audio.length : 0;
+  const intermediateQuestions = questionCount(state.quizzes);
+  return `<div class="artifact-grid">
+    <article class="artifact-card"><strong>Documents</strong><small>${filenames.length || 0} fichier(s) source.</small></article>
+    <article class="artifact-card"><strong>Sources web</strong><small>${webRefs.length} source(s) retenue(s).</small></article>
+    <article class="artifact-card"><strong>Slides</strong><small>${slides.length} slide(s) redigee(s).</small></article>
+    <article class="artifact-card"><strong>Images</strong><small>${visualCount} visuel(s) integre(s).</small></article>
+    <article class="artifact-card"><strong>QCM</strong><small>${state.quizzes.length} intermediaire(s), ${intermediateQuestions} question(s), ${finalCount} finale(s).</small></article>
+    <article class="artifact-card"><strong>Audio</strong><small>${audioCount} fichier(s) audio.</small></article>
+    <article class="artifact-card"><strong>Site apprenant</strong><small>${pages.length ? `${pages.length} page(s) assemblee(s).` : "En attente d assemblage."}</small></article>
+  </div>`;
 }
-function renderEvents(events) {
-  if (!events.length) return '<div class="empty">Aucun evenement.</div>';
-  return `<h3>Evenements</h3><div class="list">${events.slice().reverse().slice(0, 10).map((event) => `
-    <div class="list-item"><strong>${escapeHtml(event.name)}</strong><small>${escapeHtml(formatDate(event.created_at))}</small><small>${escapeHtml(event.detail || "")}</small></div>
+function renderCourseSettings(course) {
+  return `<form id="rename-form" class="course-settings">
+    <div class="field">
+      <label for="rename-title">Titre du cours</label>
+      <input id="rename-title" name="title" value="${escapeHtml(course.title)}">
+    </div>
+    <button type="submit">Enregistrer</button>
+  </form>`;
+}
+function eventLabel(event) {
+  const labels = {
+    "job.queued": "Generation demarree",
+    "job.resume_queued": "Reprise demarree",
+    "job.regenerate_full_queued": "Regeneration complete demarree",
+    "job.regenerate_queued": "Regeneration de slide demarree",
+    "job.narration_queued": "Regeneration audio demarree",
+    "job.completed": "Operation terminee",
+    "upload.received": "Documents recus",
+    "extract.completed": "Documents lus",
+    "content_profile.resolved": "Profil pedagogique confirme",
+    "map.completed": "Plan general construit",
+    "slide.completed": "Slide terminee",
+    "quiz.intermediate.completed": "QCM intermediaire termine",
+    "quiz.quality_cleanup.completed": "QCM verifies",
+    "quiz.final.completed": "QCM final termine",
+    "quiz.completed": "QCM termines",
+    "site.built": "Site apprenant assemble",
+    "site.rebuilt_after_narration": "Audio integre au site",
+    "publish.completed": "Cours publie",
+    "course.title_updated": "Titre mis a jour"
+  };
+  return labels[event.name] || "Mise a jour";
+}
+function renderRecentActivity(events) {
+  const recent = (events || []).slice().reverse().slice(0, 6);
+  if (!recent.length) return '<div class="empty">L activite apparaitra ici au lancement du cours.</div>';
+  return `<div class="activity-list">${recent.map((event) => `
+    <div class="activity-item"><strong>${escapeHtml(eventLabel(event))}</strong><small>${escapeHtml(formatDate(event.created_at))}</small></div>
   `).join("")}</div>`;
 }
 function renderSourceManifest(manifest) {
@@ -862,76 +1159,18 @@ function renderSourceManifest(manifest) {
 }
 function renderRunConfig(run, policy, analysis) {
   return `<div class="list">
-    <div class="list-item"><strong>Generation</strong><small>${escapeHtml(run.target_level || "niveau non precise")} | ${Number(run.target_slide_count || 0)} slides | ${escapeHtml(run.pipeline_profile || "standard")}</small></div>
-    <div class="list-item"><strong>QCM</strong><small>${escapeHtml(run.intermediate_quiz_mode || "subpart")} | ${Number(run.questions_per_intermediate_quiz || 0)} questions</small></div>
-    <div class="list-item"><strong>Profil contenu</strong><small>${escapeHtml(run.content_profile_selection || "auto")} -> ${escapeHtml(run.content_profile || "standard")} | ${escapeHtml(analysis.confidence || "n/a")}</small></div>
-    <div class="list-item"><strong>Web</strong><small>${policy.external_web_access ? "actif" : "desactive"} | domaines: ${escapeHtml((policy.allowed_domains || []).join(", ") || "aucun")}</small></div>
+    <div class="list-item"><strong>Objectif</strong><small>${escapeHtml(run.target_level || "Niveau a preciser")} | ${Number(run.target_slide_count || 0)} slides visees</small></div>
+    <div class="list-item"><strong>QCM</strong><small>${Number(run.questions_per_intermediate_quiz || 0)} question(s) par entrainement.</small></div>
+    <div class="list-item"><strong>Profil de contenu</strong><small>${escapeHtml(run.content_profile || "standard")} | ${escapeHtml(analysis.confidence || "a confirmer")}</small></div>
+    <div class="list-item"><strong>Recherche web</strong><small>${policy.external_web_access ? "Active" : "Desactivee"}${(policy.allowed_domains || []).length ? " | " + escapeHtml((policy.allowed_domains || []).join(", ")) : ""}</small></div>
   </div>`;
 }
-function renderResearchEvidence(webRefs, policy) {
-  const refs = webRefs.slice(0, 8);
-  const body = refs.length
-    ? refs.map((ref) => `<div class="list-item"><strong>${escapeHtml(ref.label)}</strong><small>${escapeHtml(ref.slide)}${ref.url ? " | " + escapeHtml(ref.url) : ""}</small></div>`).join("")
-    : '<div class="empty">Aucune source web rattachee aux slides pour le moment.</div>';
-  return `<h3>Recherche web et sources</h3><div class="list">
-    <div class="list-item"><strong>Politique web</strong><small>${policy.external_web_access ? "Recherche active" : "Recherche desactivee"} | ${webRefs.length} source(s) detectee(s)</small></div>
-    ${body}
-  </div>`;
-}
-function renderSlideInventory(slides, manifest) {
-  if (!slides.length) return '<div class="empty">Aucune slide chargee pour le controle detaille.</div>';
-  const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
-  const pageCount = pages.length || slides.length;
-  const sample = slides.slice(0, 6).map((slide) => {
-    const images = (slide.blocks || []).filter((block) => block.kind === "image").length;
-    const web = (slide.web_refs || []).length;
-    return `<div class="list-item"><strong>${escapeHtml(slide.slide_id)} - ${escapeHtml(slide.title || "")}</strong><small>${images} visuel(s) | ${web} source(s) web | ${escapeHtml(slide.layout || "")}</small></div>`;
-  }).join("");
-  return `<h3>Contenu des slides</h3><div class="list"><div class="list-item"><strong>Assemblage pedagogique</strong><small>${slides.length} slide(s), ${pageCount} page(s) avec QCM interleaves.</small></div>${sample}</div>`;
-}
-function renderQuizInventory(quizzes, finalQuiz, report) {
-  const intermediateQuestions = questionCount(quizzes);
-  const finalQuestions = Array.isArray(finalQuiz?.questions) ? finalQuiz.questions.length : 0;
-  const cleanup = report
-    ? `<div class="list-item"><strong>Nettoyage QCM</strong><small>${Number(report.questions_deleted || 0)} supprimees | ${Number(report.questions_review || 0)} a revoir | finale ${Number(report.final_questions_after || 0)}</small></div>`
-    : '<div class="list-item"><strong>Nettoyage QCM</strong><small>Aucun nettoyage lance ou aucun rapport disponible.</small></div>';
-  return `<h3>QCM</h3><div class="list">
-    <div class="list-item"><strong>QCM intermediaires</strong><small>${(quizzes || []).length} QCM | ${intermediateQuestions} question(s)</small></div>
-    <div class="list-item"><strong>QCM final</strong><small>${finalQuestions} question(s)</small></div>
-    ${cleanup}
-  </div>`;
-}
-function renderSlideRegeneration(slides) {
-  if (!slides.length) return '<div class="empty">Aucune slide prete pour regeneration individuelle.</div>';
-  return `<form id="slide-form" class="form-grid">
-    <div class="field half"><label for="slide-id">Regenerer une slide</label><select id="slide-id">${slides.map((slide) => `<option value="${escapeHtml(slide.page_id)}">${escapeHtml(slide.badge || slide.page_id)} - ${escapeHtml(slide.title || "")}</option>`).join("")}</select></div>
-    <div class="field half"><label>&nbsp;</label><button type="submit">Regenerer la slide</button></div>
-  </form>`;
-}
-function renderQuizReport(report) {
-  if (!report) return '<div class="empty">Aucun nettoyage QCM lance.</div>';
-  return `<div class="list-item"><strong>Dernier nettoyage QCM</strong><small>${Number(report.questions_deleted || 0)} supprimees | ${Number(report.questions_review || 0)} a revoir | finale ${Number(report.final_questions_after || 0)}</small></div>`;
-}
-function renderNarration(narration) {
-  if (!narration) return '<div class="empty">Narration non generee.</div>';
-  const slideScripts = Array.isArray(narration.slides) ? narration.slides.length : 0;
-  const quizIntros = Array.isArray(narration.quiz_intros) ? narration.quiz_intros.length : 0;
-  const pageAudio = Array.isArray(narration.page_audio) ? narration.page_audio.length : 0;
-  const voices = narration.voice_profile ? Object.entries(narration.voice_profile).map(([role, voice]) => `${role}:${voice}`).join(", ") : "";
-  return `<h3>Narration et audio</h3><div class="list">
-    <div class="list-item"><strong>Scenario</strong><small>${escapeHtml(narration.status || "n/a")} | ${slideScripts} script(s) slide | ${quizIntros} intro(s) QCM</small></div>
-    <div class="list-item"><strong>Fichiers audio</strong><small>${pageAudio} page(s) audio | ${escapeHtml(narration.audio_format || "mp3")} | ${escapeHtml(narration.tts_model || "")}</small></div>
-    <div class="list-item"><strong>Voix</strong><small>${escapeHtml(voices || "profil vocal non renseigne")}</small></div>
-  </div>`;
-}
-function renderAssemblyStatus(manifest, view) {
-  const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
-  const logoHref = manifest.course_logo_href || "";
-  return `<div class="grid-3">
-    <div class="list-item"><strong>Site apprenant</strong><small>${escapeHtml(view.user_site_path || "non construit")}</small></div>
-    <div class="list-item"><strong>Site master</strong><small>${escapeHtml(view.master_site_path || "non construit")}</small></div>
-    <div class="list-item"><strong>Manifeste</strong><small>${pages.length} page(s) | logo: ${escapeHtml(logoHref || "non reference")}</small></div>
-  </div>`;
+function renderSlideRegeneration(slides, active) {
+  if (active || !slides.length) return "";
+  return `<section class="panel"><h3>Regenerer une slide</h3><form id="slide-form" class="form-grid">
+    <div class="field half"><label for="slide-id">Slide</label><select id="slide-id">${slides.map((slide) => `<option value="${escapeHtml(slide.page_id)}">${escapeHtml(slide.badge || slide.page_id)} - ${escapeHtml(slide.title || "")}</option>`).join("")}</select></div>
+    <div class="field half"><label>&nbsp;</label><button type="submit">Regenerer</button></div>
+  </form></section>`;
 }
 async function handleRename(event) {
   event.preventDefault();
@@ -971,7 +1210,7 @@ async function handleUpload(event) {
     state.selectedCourseId = result.course_id;
     event.currentTarget.reset();
     $("#upload-count").textContent = "Aucun fichier selectionne.";
-    notice("Generation lancee. Job " + result.job.id, "ok");
+    notice("Generation lancee.", "ok");
     await refreshAll({ quiet: true });
     setView("control");
   } catch (error) {
@@ -984,11 +1223,11 @@ async function runCourseAction(action) {
   if (!state.selectedCourseId) return;
   const id = encodeURIComponent(state.selectedCourseId);
   const paths = {
-    resume: [`/courses/${id}/resume`, "Reprise lancee."],
+    resume: [`/courses/${id}/resume`, "Reprise demarree."],
     publish: [`/courses/${id}/publish`, "Cours publie."],
-    "clean-quizzes": [`/courses/${id}/quizzes/quality-cleanup`, "Nettoyage QCM termine."],
-    "regenerate-narration": [`/courses/${id}/narration/regenerate`, "Narration mise en file."],
-    "regenerate-full": [`/courses/${id}/regenerate-full`, "Regeneration complete lancee."]
+    "clean-quizzes": [`/courses/${id}/quizzes/quality-cleanup`, "Verification QCM terminee."],
+    "regenerate-narration": [`/courses/${id}/narration/regenerate`, "Regeneration audio demarree."],
+    "regenerate-full": [`/courses/${id}/regenerate-full`, "Regeneration complete demarree."]
   };
   if (action === "regenerate-full" && !window.confirm("Regenerer tout le cours efface les artefacts courants. Continuer ?")) return;
   const spec = paths[action];
@@ -1007,7 +1246,7 @@ async function regenerateSelectedSlide(event) {
   const slideId = $("#slide-id").value;
   try {
     await api(`/courses/${encodeURIComponent(state.selectedCourseId)}/slides/${encodeURIComponent(slideId)}/regenerate`, { method: "POST" });
-    notice("Regeneration de slide mise en file.", "ok");
+    notice("Regeneration de slide demarree.", "ok");
     await refreshAll({ quiet: true });
   } catch (error) {
     notice("Regeneration impossible: " + detailText(error), "error");
@@ -1026,7 +1265,7 @@ function renderPreview() {
   const frame = $("#preview-frame");
   if (!state.selectedCourseId) {
     frame.removeAttribute("src");
-    $("#preview-caption").textContent = "Aucun cours selectionne.";
+    $("#preview-caption").textContent = "Selectionner un cours pour ouvrir l'apercu.";
     return;
   }
   const id = encodeURIComponent(state.selectedCourseId);
@@ -1035,7 +1274,9 @@ function renderPreview() {
     ? `/courses/${id}/site/user/deck.html`
     : `/courses/${id}/site/${mode}/index.html`;
   frame.src = apiUrl(src);
-  $("#preview-caption").textContent = `${state.selectedCourseId} | ${mode}`;
+  const labels = { user: "Version apprenant", master: "Version master", deck: "Deck" };
+  const course = state.adminView?.course;
+  $("#preview-caption").textContent = `${course?.title || "Cours"} - ${labels[mode] || "Apercu"}`;
 }
 function bindEvents() {
   $all("[data-view-target]").forEach((button) => button.addEventListener("click", () => setView(button.dataset.viewTarget)));
@@ -1068,6 +1309,7 @@ function bindEvents() {
       state.previewMode = preview.dataset.previewMode;
       $all("[data-preview-mode]").forEach((button) => button.classList.toggle("primary", button === preview));
       renderPreview();
+      if (preview.dataset.openPreview === "1") setView("preview");
     }
   });
   document.addEventListener("submit", (event) => {
@@ -1082,6 +1324,7 @@ async function init() {
   if (learnerLink) learnerLink.href = adminConfig.learnerSiteUrl || "https://jjohana.github.io/kojyto/index.html";
   if (publicAdminLink) publicAdminLink.href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
   setGenerationStatus(false);
+  applyRuntimeMode();
   setGenerationControlsEnabled(hasGenerationRuntime());
   bindEvents();
   await refreshAll({ quiet: true });

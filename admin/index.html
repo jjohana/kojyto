@@ -61,7 +61,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   background: #f9fbfc;
   border-right: 1px solid var(--line);
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto auto auto minmax(0, 1fr) auto;
   gap: 18px;
 }
 .brand h1 {
@@ -133,6 +133,28 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 }
 .site-role strong { color: var(--accent-strong); font-size: 0.86rem; }
 .site-role span { color: var(--muted); font-size: 0.82rem; line-height: 1.35; }
+.capability-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+.capability-card {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e0e9ee;
+  border-radius: 8px;
+  background: #fbfdfe;
+}
+.capability-card span {
+  width: fit-content;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(12, 110, 130, 0.1);
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+.capability-card strong { color: var(--accent-strong); }
+.capability-card p { margin: 0; color: var(--muted); line-height: 1.45; }
+.capability-card ul { margin: 0; padding-left: 18px; color: var(--ink); line-height: 1.45; }
 .main {
   min-width: 0;
   padding: 24px;
@@ -316,6 +338,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </div>
       <nav class="nav-list" aria-label="Navigation admin">
         <button type="button" data-view-target="dashboard" class="active">Tableau de bord</button>
+        <button type="button" data-view-target="capabilities">Capacites</button>
         <button type="button" data-view-target="create">Creer un cours</button>
         <button type="button" data-view-target="control">Piloter un cours</button>
         <button type="button" data-view-target="preview">Previsualiser</button>
@@ -359,6 +382,29 @@ tr.clickable:hover { background: #f4f8fa; }
         </section>
       </section>
 
+      <section class="view" id="view-capabilities">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Capacites de generation</h3>
+              <p>Controle de bout en bout: documents, web, contenu, images, QCM, narration, audio et publication.</p>
+            </div>
+          </div>
+          <div class="capability-grid">
+            <article class="capability-card"><span>01</span><strong>Lecture documentaire</strong><p>Depot de 1 a 5 fichiers PDF/DOCX, extraction texte, images utiles a la comprehension, chunking et alertes.</p></article>
+            <article class="capability-card"><span>02</span><strong>Configuration pedagogique</strong><p>Niveau, volume de slides, difficulte, profil de contenu, QCM, domaines preferes et consignes.</p></article>
+            <article class="capability-card"><span>03</span><strong>Logo et marque</strong><p>Logo IAAG par defaut, logo fichier ou URL optionnels, integration reelle a gauche des pages, jamais generee dans l'image.</p></article>
+            <article class="capability-card"><span>04</span><strong>Recherche web</strong><p>Recherche facultative, domaines preferes, sources web conservees dans les slides et controle des references.</p></article>
+            <article class="capability-card"><span>05</span><strong>Contenu et slides</strong><p>Cartographie, plan, generation des slides, visuels, validation, reprise et regeneration individuelle.</p></article>
+            <article class="capability-card"><span>06</span><strong>Images</strong><p>Moteur d'image existant, prompt anti-logo/anti-etablissement, controles QA et insertion du visuel de synthese.</p></article>
+            <article class="capability-card"><span>07</span><strong>QCM</strong><p>QCM intermediaires, nettoyage qualite, banque finale, validation finale et previsualisation apprenant.</p></article>
+            <article class="capability-card"><span>08</span><strong>Narration et audio</strong><p>Scenario detaille, scripts par page, generation audio, QA audio et regeneration de narration.</p></article>
+            <article class="capability-card"><span>09</span><strong>Suivi temps reel</strong><p>Jobs, etapes, progression, evenements, alertes bloquantes et artefacts generes.</p></article>
+            <article class="capability-card"><span>10</span><strong>Assemblage et publication</strong><p>Site master, site apprenant, deck, publication, export docs/ et verification GitHub Pages.</p></article>
+          </div>
+        </section>
+      </section>
+
       <section class="view" id="view-create">
         <section class="panel">
           <div class="panel-head">
@@ -376,7 +422,12 @@ tr.clickable:hover { background: #f4f8fa; }
             <div class="field wide">
               <label for="logo">Logo optionnel</label>
               <input id="logo" name="logo" type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp">
-              <small>Si fourni, il sera integre a gauche des visuels de cours. Les images generees restent sans nom d'ecole ni logo dans l'image.</small>
+              <small>Par defaut, le logo IAAG est utilise. Un fichier fourni remplace le logo par defaut et reste integre a gauche des pages.</small>
+            </div>
+            <div class="field wide">
+              <label for="logo_url">URL de logo optionnelle</label>
+              <input id="logo_url" name="logo_url" type="url" placeholder="https://exemple.fr/logo.png">
+              <small>Utilisee seulement si aucun fichier logo n'est depose. Les images generees restent sans nom d'ecole ni logo dans l'image.</small>
             </div>
             <div class="field third">
               <label for="target_level">Niveau</label>
@@ -469,24 +520,44 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 14:49 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "generatedLabel": "2026-05-30 15:13 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
+function isLocalApiBaseUrl(value) {
+  try {
+    const host = new URL(String(value || "")).hostname.toLowerCase();
+    return host === ["local", "host"].join("") || host === "::1" || host.startsWith("127.");
+  } catch (_error) {
+    return false;
+  }
+}
+function resolveInitialApiBaseUrl() {
+  const stored = window.localStorage.getItem("kojyto-admin-api-base-url") || "";
+  const configured = adminConfig.apiBaseUrl || "";
+  const candidate = stored || configured;
+  if (!adminConfig.sameOriginApi && isLocalApiBaseUrl(candidate)) {
+    window.localStorage.removeItem("kojyto-admin-api-base-url");
+    return configured && !isLocalApiBaseUrl(configured) ? configured.replace(/\/+$/, "") : "";
+  }
+  return String(candidate || "").replace(/\/+$/, "");
+}
 const state = {
   courses: [],
   selectedCourseId: "",
   view: "dashboard",
   adminView: null,
   manifest: null,
+  slideDeck: null,
   quizzes: [],
   finalQuiz: null,
   cleanupReport: null,
   previewMode: "user",
-  apiBaseUrl: (window.localStorage.getItem("kojyto-admin-api-base-url") || adminConfig.apiBaseUrl || "").replace(/\/+$/, "")
+  apiBaseUrl: resolveInitialApiBaseUrl()
 };
 
 const viewLabels = {
   dashboard: ["Tableau de bord", "Vue operationnelle des cours et generations."],
+  capabilities: ["Capacites", "Verification du pipeline complet de generation d'un cours."],
   create: ["Creer un cours", "Depot de documents, configuration et lancement de generation."],
   control: ["Piloter un cours", "Suivi temps reel, controles, actions et publication."],
   preview: ["Previsualiser", "Controle visuel des versions master, apprenant et deck."]
@@ -584,20 +655,23 @@ async function loadCourses() {
 }
 async function loadSelectedCourse() {
   if (!state.selectedCourseId) {
+    state.slideDeck = null;
     renderCourseDetail();
     renderPreview();
     return;
   }
   const id = encodeURIComponent(state.selectedCourseId);
-  const [adminView, manifest, quizzes, finalQuiz, cleanupReport] = await Promise.all([
+  const [adminView, manifest, slideDeck, quizzes, finalQuiz, cleanupReport] = await Promise.all([
     api(`/courses/${id}/admin-view`),
     apiMaybe(`/courses/${id}/site/user/site_manifest.json`, null),
+    apiMaybe(`/courses/${id}/slides?viewer_mode=master`, { items: [] }),
     apiMaybe(`/courses/${id}/quizzes/subpart`, []),
     apiMaybe(`/courses/${id}/quizzes/final`, null),
     apiMaybe(`/courses/${id}/quizzes/quality-cleanup/report`, null)
   ]);
   state.adminView = adminView;
   state.manifest = manifest;
+  state.slideDeck = slideDeck || { items: [] };
   state.quizzes = quizzes || [];
   state.finalQuiz = finalQuiz;
   state.cleanupReport = cleanupReport;
@@ -644,6 +718,55 @@ function progressPercent(progress) {
   const done = Number(progress?.completed_slides || 0) + Number(progress?.completed_intermediate_quizzes || 0) + (progress?.final_quiz_ready ? 1 : 0);
   return total > 1 ? Math.max(0, Math.min(100, Math.round((done / total) * 100))) : 0;
 }
+const PIPELINE_STAGES = [
+  { label: "Documents", steps: ["uploaded", "read_text", "read_images", "chunked"], detail: "Depot, extraction texte/images et chunks." },
+  { label: "Configuration", steps: ["uploaded"], detail: "Niveau, slides, difficulte, QCM, profil, logo et web." },
+  { label: "Recherche web", steps: ["slides_built"], detail: "Sources web ajoutees pendant la generation des slides." },
+  { label: "Plan et contenu", steps: ["mapped", "planned", "slides_built"], detail: "Cartographie, plan, contenu et validation des slides." },
+  { label: "Images", steps: ["slides_built"], detail: "Visuels generes avec consigne anti-logo/anti-etablissement." },
+  { label: "QCM", steps: ["quizzes_built"], detail: "QCM intermediaires, nettoyage et QCM final." },
+  { label: "Scenario audio", steps: ["narration_scripted"], detail: "Scenario detaille et scripts par page." },
+  { label: "Fichiers audio", steps: ["narration_audio_generated"], detail: "Generation audio, QA et integration." },
+  { label: "Assemblage site", steps: ["ready_to_publish"], detail: "Site master, apprenant, deck et manifestes." },
+  { label: "Publication", steps: ["published"], detail: "Publication et export GitHub Pages docs/." }
+];
+function slideSpecsFromDeck(deck) {
+  return Array.isArray(deck?.items) ? deck.items.map((item) => item.slide).filter(Boolean) : [];
+}
+function stepStatus(steps, names) {
+  const byName = Object.fromEntries((steps || []).map((step) => [step.name, step]));
+  const selected = names.map((name) => byName[name]).filter(Boolean);
+  if (!selected.length) return { status: "pending", detail: "En attente." };
+  if (selected.some((step) => step.status === "failed")) return selected.find((step) => step.status === "failed");
+  if (selected.some((step) => step.status === "running")) return selected.find((step) => step.status === "running");
+  if (names.every((name) => byName[name]?.status === "done")) return selected[selected.length - 1];
+  return selected[selected.length - 1];
+}
+function renderPipelineAudit(steps) {
+  return `<div class="capability-grid">${PIPELINE_STAGES.map((stage) => {
+    const step = stepStatus(steps, stage.steps);
+    return `<article class="capability-card"><span class="pill ${escapeHtml(step.status)}">${escapeHtml(step.status)}</span><strong>${escapeHtml(stage.label)}</strong><p>${escapeHtml(stage.detail)}</p><small>${escapeHtml(step.detail || "")}</small></article>`;
+  }).join("")}</div>`;
+}
+function collectWebRefs(slides) {
+  const seen = new Set();
+  const refs = [];
+  slides.forEach((slide) => {
+    (slide.web_refs || []).forEach((ref) => {
+      const key = String(ref.url || ref.label || ref.locator || "");
+      if (!key || seen.has(key)) return;
+      seen.add(key);
+      refs.push({ label: ref.label || key, url: ref.url || "", slide: slide.slide_id || "" });
+    });
+  });
+  return refs;
+}
+function countVisualBlocks(slides) {
+  return slides.reduce((total, slide) => total + (slide.blocks || []).filter((block) => block.kind === "image").length, 0);
+}
+function questionCount(quizzes) {
+  return (quizzes || []).reduce((total, quiz) => total + (Array.isArray(quiz.questions) ? quiz.questions.length : 0), 0);
+}
 function renderCourseDetail() {
   const root = $("#course-detail");
   const view = state.adminView;
@@ -659,6 +782,9 @@ function renderCourseDetail() {
   const manifest = state.manifest || {};
   const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
   const slides = pages.filter((page) => page.kind === "slide");
+  const slideSpecs = slideSpecsFromDeck(state.slideDeck);
+  const webRefs = collectWebRefs(slideSpecs);
+  const visualCount = countVisualBlocks(slideSpecs);
   const finalCount = Array.isArray(state.finalQuiz?.questions) ? state.finalQuiz.questions.length : 0;
   const percent = progressPercent(progress);
   root.innerHTML = `
@@ -693,6 +819,10 @@ function renderCourseDetail() {
         </div>
       </form>
     </section>
+    <section class="panel">
+      <h3>Audit du pipeline de generation</h3>
+      ${renderPipelineAudit(view.steps || [])}
+    </section>
     <div class="split-detail">
       <section class="panel">
         <h3>Etapes et jobs</h3>
@@ -710,19 +840,25 @@ function renderCourseDetail() {
         <h3>Configuration et sources</h3>
         ${renderSourceManifest(view.source_manifest || {})}
         ${renderRunConfig(run, view.research_policy || {}, view.content_analysis || {})}
+        ${renderResearchEvidence(webRefs, view.research_policy || {})}
       </section>
       <section class="panel">
         <h3>Slides, QCM et narration</h3>
         <div class="grid-3">
-          <div><span class="pill">${slides.length} slides</span></div>
-          <div><span class="pill">${state.quizzes.length} QCM intermediaires</span></div>
+          <div><span class="pill">${slides.length || slideSpecs.length} slides</span></div>
+          <div><span class="pill">${visualCount} visuels</span></div>
           <div><span class="pill">${finalCount} questions finales</span></div>
         </div>
+        ${renderSlideInventory(slideSpecs, manifest)}
+        ${renderQuizInventory(state.quizzes, state.finalQuiz, state.cleanupReport)}
         ${renderSlideRegeneration(slides)}
-        ${renderQuizReport(state.cleanupReport)}
         ${renderNarration(view.narration)}
       </section>
-    </div>`;
+    </div>
+    <section class="panel">
+      <h3>Assemblage et publication</h3>
+      ${renderAssemblyStatus(manifest, view)}
+    </section>`;
   $("#rename-form").addEventListener("submit", handleRename);
 }
 function renderSteps(steps) {
@@ -752,10 +888,14 @@ function renderEvents(events) {
 }
 function renderSourceManifest(manifest) {
   const filenames = Array.isArray(manifest.source_filenames) ? manifest.source_filenames : [];
-  const logo = manifest.logo_original_filename || manifest.logo_filename || "";
+  const logoMode = manifest.logo_source_type || "default_iaag";
+  const logo = manifest.logo_display_name || manifest.logo_original_filename || manifest.logo_filename || "Logo IAAG par defaut";
+  const logoDetail = logoMode === "default_iaag"
+    ? "Logo IAAG par defaut"
+    : `${logoMode === "url" ? "URL" : "Fichier"} - ${logo}`;
   return `<div class="list">
     <div class="list-item"><strong>Documents</strong><small>${escapeHtml(filenames.join(", ") || "n/a")}</small></div>
-    <div class="list-item"><strong>Logo</strong><small>${escapeHtml(logo || "Aucun logo optionnel")}</small></div>
+    <div class="list-item"><strong>Logo</strong><small>${escapeHtml(logoDetail)}</small>${manifest.logo_source_url ? `<small>${escapeHtml(manifest.logo_source_url)}</small>` : ""}</div>
   </div>`;
 }
 function renderRunConfig(run, policy, analysis) {
@@ -764,6 +904,39 @@ function renderRunConfig(run, policy, analysis) {
     <div class="list-item"><strong>QCM</strong><small>${escapeHtml(run.intermediate_quiz_mode || "subpart")} | ${Number(run.questions_per_intermediate_quiz || 0)} questions</small></div>
     <div class="list-item"><strong>Profil contenu</strong><small>${escapeHtml(run.content_profile_selection || "auto")} -> ${escapeHtml(run.content_profile || "standard")} | ${escapeHtml(analysis.confidence || "n/a")}</small></div>
     <div class="list-item"><strong>Web</strong><small>${policy.external_web_access ? "actif" : "desactive"} | domaines: ${escapeHtml((policy.allowed_domains || []).join(", ") || "aucun")}</small></div>
+  </div>`;
+}
+function renderResearchEvidence(webRefs, policy) {
+  const refs = webRefs.slice(0, 8);
+  const body = refs.length
+    ? refs.map((ref) => `<div class="list-item"><strong>${escapeHtml(ref.label)}</strong><small>${escapeHtml(ref.slide)}${ref.url ? " | " + escapeHtml(ref.url) : ""}</small></div>`).join("")
+    : '<div class="empty">Aucune source web rattachee aux slides pour le moment.</div>';
+  return `<h3>Recherche web et sources</h3><div class="list">
+    <div class="list-item"><strong>Politique web</strong><small>${policy.external_web_access ? "Recherche active" : "Recherche desactivee"} | ${webRefs.length} source(s) detectee(s)</small></div>
+    ${body}
+  </div>`;
+}
+function renderSlideInventory(slides, manifest) {
+  if (!slides.length) return '<div class="empty">Aucune slide chargee pour le controle detaille.</div>';
+  const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
+  const pageCount = pages.length || slides.length;
+  const sample = slides.slice(0, 6).map((slide) => {
+    const images = (slide.blocks || []).filter((block) => block.kind === "image").length;
+    const web = (slide.web_refs || []).length;
+    return `<div class="list-item"><strong>${escapeHtml(slide.slide_id)} - ${escapeHtml(slide.title || "")}</strong><small>${images} visuel(s) | ${web} source(s) web | ${escapeHtml(slide.layout || "")}</small></div>`;
+  }).join("");
+  return `<h3>Contenu des slides</h3><div class="list"><div class="list-item"><strong>Assemblage pedagogique</strong><small>${slides.length} slide(s), ${pageCount} page(s) avec QCM interleaves.</small></div>${sample}</div>`;
+}
+function renderQuizInventory(quizzes, finalQuiz, report) {
+  const intermediateQuestions = questionCount(quizzes);
+  const finalQuestions = Array.isArray(finalQuiz?.questions) ? finalQuiz.questions.length : 0;
+  const cleanup = report
+    ? `<div class="list-item"><strong>Nettoyage QCM</strong><small>${Number(report.questions_deleted || 0)} supprimees | ${Number(report.questions_review || 0)} a revoir | finale ${Number(report.final_questions_after || 0)}</small></div>`
+    : '<div class="list-item"><strong>Nettoyage QCM</strong><small>Aucun nettoyage lance ou aucun rapport disponible.</small></div>';
+  return `<h3>QCM</h3><div class="list">
+    <div class="list-item"><strong>QCM intermediaires</strong><small>${(quizzes || []).length} QCM | ${intermediateQuestions} question(s)</small></div>
+    <div class="list-item"><strong>QCM final</strong><small>${finalQuestions} question(s)</small></div>
+    ${cleanup}
   </div>`;
 }
 function renderSlideRegeneration(slides) {
@@ -779,7 +952,24 @@ function renderQuizReport(report) {
 }
 function renderNarration(narration) {
   if (!narration) return '<div class="empty">Narration non generee.</div>';
-  return `<div class="list-item"><strong>Narration audio</strong><small>${Number(narration.total_slides || 0)} slides | ${escapeHtml(narration.voice || "")}</small></div>`;
+  const slideScripts = Array.isArray(narration.slides) ? narration.slides.length : 0;
+  const quizIntros = Array.isArray(narration.quiz_intros) ? narration.quiz_intros.length : 0;
+  const pageAudio = Array.isArray(narration.page_audio) ? narration.page_audio.length : 0;
+  const voices = narration.voice_profile ? Object.entries(narration.voice_profile).map(([role, voice]) => `${role}:${voice}`).join(", ") : "";
+  return `<h3>Narration et audio</h3><div class="list">
+    <div class="list-item"><strong>Scenario</strong><small>${escapeHtml(narration.status || "n/a")} | ${slideScripts} script(s) slide | ${quizIntros} intro(s) QCM</small></div>
+    <div class="list-item"><strong>Fichiers audio</strong><small>${pageAudio} page(s) audio | ${escapeHtml(narration.audio_format || "mp3")} | ${escapeHtml(narration.tts_model || "")}</small></div>
+    <div class="list-item"><strong>Voix</strong><small>${escapeHtml(voices || "profil vocal non renseigne")}</small></div>
+  </div>`;
+}
+function renderAssemblyStatus(manifest, view) {
+  const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
+  const logoHref = manifest.course_logo_href || "";
+  return `<div class="grid-3">
+    <div class="list-item"><strong>Site apprenant</strong><small>${escapeHtml(view.user_site_path || "non construit")}</small></div>
+    <div class="list-item"><strong>Site master</strong><small>${escapeHtml(view.master_site_path || "non construit")}</small></div>
+    <div class="list-item"><strong>Manifeste</strong><small>${pages.length} page(s) | logo: ${escapeHtml(logoHref || "non reference")}</small></div>
+  </div>`;
 }
 async function handleRename(event) {
   event.preventDefault();
@@ -804,7 +994,7 @@ async function handleUpload(event) {
   files.forEach((file) => form.append("uploads", file));
   const logo = $("#logo").files && $("#logo").files[0];
   if (logo) form.append("logo", logo);
-  ["guide", "domains_raw", "difficulty", "model_name", "target_slide_count", "target_level", "intermediate_quiz_mode", "questions_per_intermediate_quiz", "pipeline_profile", "content_profile_selection", "parallelism"].forEach((name) => {
+  ["guide", "domains_raw", "difficulty", "model_name", "target_slide_count", "target_level", "intermediate_quiz_mode", "questions_per_intermediate_quiz", "pipeline_profile", "content_profile_selection", "parallelism", "logo_url"].forEach((name) => {
     form.append(name, document.getElementById(name).value);
   });
   form.append("external_web", $("#external_web").checked ? "true" : "false");
@@ -887,6 +1077,14 @@ function bindEvents() {
   $("#export-btn").addEventListener("click", exportPages);
   $("#save-api-base").addEventListener("click", async () => {
     state.apiBaseUrl = normalizeApiBaseUrl($("#api-base-url").value);
+    if (!adminConfig.sameOriginApi && isLocalApiBaseUrl(state.apiBaseUrl)) {
+      state.apiBaseUrl = "";
+      $("#api-base-url").value = "";
+      window.localStorage.removeItem("kojyto-admin-api-base-url");
+      setApiStatus(false);
+      notice("Utiliser une URL HTTPS d'API admin securisee pour le site public.", "error");
+      return;
+    }
     if (state.apiBaseUrl) {
       window.localStorage.setItem("kojyto-admin-api-base-url", state.apiBaseUrl);
     } else {

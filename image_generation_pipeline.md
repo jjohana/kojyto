@@ -152,6 +152,9 @@ Current generated prompt characteristics:
 - instructs short French labels and supported facts
 - requests sober `bleu/vert/orange` colors
 - explicitly forbids photorealism and 3D
+- explicitly forbids school names, IAAG, logos, institutional marks and watermarks inside generated images
+
+The course logo is never delegated to the image model. The static site builder adds the real default IAAG logo or the course-specific uploaded/URL logo as a controlled HTML/CSS asset after image generation.
 
 ## 7. Standard vs Fast Modes
 

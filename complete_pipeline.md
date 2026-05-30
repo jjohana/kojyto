@@ -285,6 +285,10 @@ Admin upload is implemented in the FastAPI admin site served at `/admin/`.
 - external web toggle
 - content profile selection: `auto|standard|scientific`
 - intermediate quiz mode and question count
+- logo selection:
+  - default IAAG logo when no override is supplied
+  - optional uploaded logo file
+  - optional logo URL when no file is supplied
 
 ### 7.2 Registration sequence
 
@@ -309,6 +313,9 @@ For multi-document uploads:
 
 - the `Course` row stores a summarized display filename plus the first source path
 - the full file list is preserved separately in `source_manifest`
+- the selected logo metadata is preserved in `source_manifest`
+- if no logo override is supplied, `src/static_site_builder.py` uses `assets/iaag-logo.png`
+- generated images must not include the school name, IAAG, logos, institutional marks, or watermarks; the real logo is added later as a controlled site asset
 
 ## 8. Ingestion Algorithm
 
@@ -831,6 +838,7 @@ FastAPI `/admin/` create view:
 - difficulty selection
 - content profile selection: `auto|standard|scientific`
 - intermediate quiz mode and question-count selection
+- default IAAG logo, uploaded logo override, or logo URL override
 
 FastAPI `/admin/` control and preview views:
 
@@ -838,10 +846,15 @@ FastAPI `/admin/` control and preview views:
 - rendered slide preview
 - step-status inspection
 - alert inspection
+- source, web-reference, slide, image, QCM, narration, audio, and assembly inspection
 - single-slide regeneration
+- narration regeneration
+- full-course regeneration
+- QCM quality cleanup
 - publication
+- GitHub Pages `docs/` export
 
-Publication is blocked only when blocking alerts are present.
+Publication is blocked when the learner site is missing or invalid, or when the final QCM bank is too small for the configured learner draw.
 
 For the scientific branch details, see `docs/scientific_content_profile.md`.
 

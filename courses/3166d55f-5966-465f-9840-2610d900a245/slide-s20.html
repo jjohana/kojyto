@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Conclusion</title>
   <script>
     (function () {
@@ -13,6 +13,22 @@
       if (params.get("deck") === "1") {
         document.documentElement.dataset.deck = "1";
       }
+      function syncVisualViewportGap() {
+        const viewport = window.visualViewport;
+        if (!viewport) {
+          return;
+        }
+        const gap = Math.max(0, Math.round(window.innerHeight - viewport.height - viewport.offsetTop));
+        document.documentElement.style.setProperty("--visual-viewport-bottom-gap", gap + "px");
+      }
+      syncVisualViewportGap();
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", syncVisualViewportGap);
+        window.visualViewport.addEventListener("scroll", syncVisualViewportGap);
+      }
+      window.addEventListener("orientationchange", function () {
+        window.setTimeout(syncVisualViewportGap, 120);
+      });
     }());
   </script>
   <style>
@@ -34,6 +50,17 @@
   --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
   --content-width: 1360px;
   --reading-width: 76ch;
+  --visual-viewport-bottom-gap: 0px;
+  --browser-toolbar-bottom-gap: 0px;
+  --fixed-bottom-clearance: max(var(--browser-toolbar-bottom-gap), var(--visual-viewport-bottom-gap));
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (hover: none) and (pointer: coarse) and (max-width: 820px) {
+    :root {
+      --browser-toolbar-bottom-gap: 72px;
+    }
+  }
 }
 
 @keyframes ambient-float {
@@ -212,6 +239,8 @@ html[data-embed="1"] body::after {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-sizing: border-box;
+  min-height: 44px;
   padding: 12px 14px;
   border-radius: 14px;
   background: rgba(12, 110, 130, 0.08);
@@ -219,6 +248,8 @@ html[data-embed="1"] body::after {
   color: var(--accent-strong);
   text-decoration: none;
   font-weight: 700;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
 }
 
@@ -479,7 +510,9 @@ html[data-embed="1"] body::after {
   justify-content: space-between;
   gap: 12px;
   margin: 0 auto;
+  width: 100%;
   max-width: var(--content-width);
+  box-sizing: border-box;
   padding: 14px 18px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.78);
@@ -510,12 +543,15 @@ html[data-embed="1"] body::after {
 
 .page-step-nav {
   position: fixed;
-  right: max(18px, env(safe-area-inset-right));
-  bottom: max(18px, env(safe-area-inset-bottom));
+  right: 18px;
+  right: calc(18px + env(safe-area-inset-right, 0px));
+  bottom: 18px;
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   z-index: 58;
   display: flex;
   gap: 6px;
   align-items: center;
+  box-sizing: border-box;
   width: max-content;
   max-width: calc(100vw - 36px);
   padding: 6px;
@@ -532,6 +568,7 @@ html[data-embed="1"] body::after {
   padding: 11px 16px;
   border-radius: 14px;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .page-step-nav .nav-link-arrow {
@@ -559,7 +596,7 @@ html[data-embed="1"] body::after {
   margin: 0 auto;
   min-height: calc(100vh - 56px);
   box-sizing: border-box;
-  padding: 4px 0 92px;
+  padding: 4px 0 calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 .hero-panel {
@@ -736,6 +773,35 @@ html[data-embed="1"] body::after {
   justify-content: space-between;
   gap: 12px;
   align-items: baseline;
+}
+
+.visual-summary-body {
+  display: grid;
+  grid-template-columns: minmax(88px, 148px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.visual-summary-body:not(.has-course-logo) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.course-logo-rail {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(248, 252, 253, 0.92);
+  border: 1px solid rgba(20, 37, 58, 0.1);
+}
+
+.course-logo-rail img {
+  display: block;
+  max-width: 100%;
+  max-height: 108px;
+  object-fit: contain;
 }
 
 .visual-summary-panel .visual-summary-title {
@@ -1269,7 +1335,7 @@ tr:nth-child(even):not(:first-child) td {
   margin: 0 auto;
   display: grid;
   gap: 22px;
-  padding-bottom: 92px;
+  padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 .quiz-hero {
@@ -1431,6 +1497,7 @@ tr:nth-child(even):not(:first-child) td {
 .quiz-panel .quiz-actions-sticky {
   position: sticky;
   bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   z-index: 24;
   align-self: start;
   width: fit-content;
@@ -1698,7 +1765,7 @@ html[data-embed="1"] .quiz-shell {
   max-width: none;
   min-height: auto;
   margin: 0;
-  padding: 0 0 92px;
+  padding: 0 0 calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 html[data-embed="1"] .site-main {
@@ -1821,6 +1888,24 @@ html[data-embed="1"] .visual-summary-panel .visual-summary-title {
   line-height: 1.02;
 }
 
+html[data-embed="1"] .visual-summary-body {
+  grid-template-columns: minmax(56px, 86px) minmax(0, 1fr);
+  gap: 8px;
+}
+
+html[data-embed="1"] .visual-summary-body:not(.has-course-logo) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+html[data-embed="1"] .course-logo-rail {
+  padding: 8px;
+  border-radius: 12px;
+}
+
+html[data-embed="1"] .course-logo-rail img {
+  max-height: 58px;
+}
+
 @media (max-width: 760px) {
   html[data-embed="1"] .narration-panel {
     grid-template-columns: 1fr;
@@ -1836,6 +1921,21 @@ html[data-embed="1"] .visual-summary-panel .visual-summary-title {
   html[data-embed="1"] .narration-panel audio {
     grid-column: auto;
     grid-row: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .visual-summary-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .course-logo-rail {
+    justify-items: start;
+  }
+
+  .course-logo-rail img {
+    max-width: min(160px, 52vw);
+    max-height: 82px;
   }
 }
 
@@ -2211,7 +2311,9 @@ html[data-deck="1"] .site-sidebar {
 
   .page-step-nav {
     right: 14px;
+    right: calc(14px + env(safe-area-inset-right, 0px));
     bottom: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   }
 
   .completion-celebration {
@@ -2232,6 +2334,7 @@ html[data-deck="1"] .site-sidebar {
 
   .quiz-panel .quiz-actions-sticky {
     bottom: 10px;
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
     width: 100%;
     justify-content: stretch;
   }
@@ -2241,17 +2344,62 @@ html[data-deck="1"] .site-sidebar {
   }
 
   .page-step-nav {
-    left: 14px;
-    right: 14px;
+    left: 10px;
+    left: calc(10px + env(safe-area-inset-left, 0px));
+    right: 10px;
+    right: calc(10px + env(safe-area-inset-right, 0px));
+    bottom: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
     width: auto;
     max-width: none;
     justify-content: stretch;
+    padding: 6px;
+    border-radius: 20px;
   }
 
   .page-step-nav .nav-link {
     flex: 1 1 0;
     min-width: 0;
-    padding-inline: 10px;
+    min-height: 52px;
+    padding-inline: 8px;
+    font-size: 0.94rem;
+  }
+
+  .slide-toolbar {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .toolbar-meta {
+    gap: 6px;
+    font-size: 0.78rem;
+  }
+
+  .toolbar-actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+    gap: 6px;
+  }
+
+  .toolbar-actions .nav-link {
+    min-height: 40px;
+    padding: 8px;
+    font-size: 0.88rem;
+  }
+
+  .site-sidebar {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .site-sidebar p,
+  .site-sidebar .sidebar-list {
+    display: none;
+  }
+
+  .site-sidebar nav {
+    grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
   }
 
   .hero-copy h1,
@@ -2272,6 +2420,23 @@ html[data-deck="1"] .site-sidebar {
   }
 }
 
+@media (max-width: 380px) {
+  .page-step-nav {
+    gap: 4px;
+    padding: 5px;
+  }
+
+  .page-step-nav .nav-link {
+    min-height: 50px;
+    padding-inline: 6px;
+    font-size: 0.88rem;
+  }
+
+  .page-step-nav .nav-link-arrow {
+    font-size: 0.92rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2282,15 +2447,15 @@ html[data-deck="1"] .site-sidebar {
   }
 }
 </style>
-  
+
 </head>
 <body class="viewer-user page-quiz">
   <div class="page-shell with-site-nav">
-    
+
     <aside class="site-sidebar">
       <h2>Cinematique BTS Aero</h2>
       <p>Parcours épuré avec navigation et QCM.</p>
-      
+
       <section class="gamification-panel" data-gamification-widget>
         <div class="gamification-header">
           <strong>Progression</strong>
@@ -2304,33 +2469,33 @@ html[data-deck="1"] .site-sidebar {
         </div>
         <p data-gamification-next>Prochaine : Bronze</p>
       </section>
-      
+
       <nav>
-        
+
         <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
-        
-        
-        
+
+
+
         <a class="sidebar-action" href="index.html">Retour au cours</a>
-        
-        
-        
+
+
+
       </nav>
       <div class="sidebar-list">
-        
+
         <a
           class="sidebar-slide"
           href="s1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S1</strong>
           <span>Introduction à la cinématique</span>
-          
+
           <span>Distinguer la cinématique de la dynamique et situer son rôle en aéronautique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1.html"
@@ -2339,24 +2504,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S1</strong>
           <span>Introduction à la cinématique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S2</strong>
           <span>Système, point matériel et référentiel</span>
-          
+
           <span>Identifier l’objet étudié, la simplification en point matériel et le référentiel de description.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s2.html"
@@ -2365,24 +2530,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S2</strong>
           <span>Système, point matériel et référentiel</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3</strong>
           <span>Trajectoire et position</span>
-          
+
           <span>Définir la trajectoire et relier la position temporelle à l’étude du mouvement.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3.html"
@@ -2391,24 +2556,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3</strong>
           <span>Trajectoire et position</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S4</strong>
           <span>Vitesse instantanée</span>
-          
+
           <span>Relier la vitesse instantanée à la dérivée du vecteur position et à la géométrie de la trajectoire.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s4.html"
@@ -2417,24 +2582,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S4</strong>
           <span>Vitesse instantanée</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5</strong>
           <span>Vitesse moyenne et mesures de vitesse</span>
-          
+
           <span>Compléter la notion de vitesse par la vitesse moyenne et les moyens de mesure.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5.html"
@@ -2443,24 +2608,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5</strong>
           <span>Vitesse moyenne et mesures de vitesse</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s6.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S6</strong>
           <span>Accélération : définition et unité</span>
-          
+
           <span>Définir l’accélération comme dérivée de la vitesse et en donner l’unité.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s6.html"
@@ -2469,24 +2634,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S6</strong>
           <span>Accélération : définition et unité</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7</strong>
           <span>Accélération tangentielle et normale</span>
-          
+
           <span>Distinguer les composantes de l’accélération et relier chacune à son effet.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7.html"
@@ -2495,24 +2660,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7</strong>
           <span>Accélération tangentielle et normale</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s8.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S8</strong>
           <span>MRU : vitesse constante et loi horaire linéaire</span>
-          
+
           <span>Relier vitesse constante, accélération nulle et expression de la position.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s8.html"
@@ -2521,24 +2686,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S8</strong>
           <span>Mouvement rectiligne uniforme (MRU)</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s9.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S9</strong>
           <span>Mouvement rectiligne uniformément accéléré (MRUA)</span>
-          
+
           <span>Utiliser les lois horaires du MRUA avec accélération constante.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s9.html"
@@ -2547,24 +2712,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S9</strong>
           <span>Mouvement rectiligne uniformément accéléré (MRUA)</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s10.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S10</strong>
           <span>Mouvement circulaire uniforme (MCU)</span>
-          
+
           <span>Relier vitesse linéaire, vitesse angulaire et accélération normale dans un mouvement circulaire uniforme.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s10.html"
@@ -2573,24 +2738,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S10</strong>
           <span>Mouvement circulaire uniforme (MCU)</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s11.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S11</strong>
           <span>Mouvement circulaire accéléré</span>
-          
+
           <span>Identifier la variation de ω et relier accélération tangentielle et accélération angulaire.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s11.html"
@@ -2599,24 +2764,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S11</strong>
           <span>Mouvement circulaire accéléré</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s12.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S12</strong>
           <span>Équations horaires et trajectoires</span>
-          
+
           <span>Éliminer le temps pour obtenir l’équation de trajectoire et exploiter la règle de la chaîne.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s12.html"
@@ -2625,24 +2790,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S12</strong>
           <span>Équations horaires et trajectoires</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s13.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S13</strong>
           <span>Grandeurs angulaires et linéaires</span>
-          
+
           <span>Maîtriser les grandeurs angulaires et leurs liens avec les grandeurs linéaires.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s13.html"
@@ -2651,24 +2816,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S13</strong>
           <span>Grandeurs angulaires et linéaires</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s14.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S14</strong>
           <span>Méthodes graphiques et expérimentales</span>
-          
+
           <span>Exploiter des courbes et des mesures expérimentales pour déterminer vitesse, accélération et déplacement.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s14.html"
@@ -2677,24 +2842,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S14</strong>
           <span>Méthodes graphiques et expérimentales</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s15.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S15</strong>
           <span>Étude de cas – Mouvement circulaire d’une hélice</span>
-          
+
           <span>Appliquer les formules du mouvement circulaire à une hélice et interpréter l’effet dynamique associé.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s15.html"
@@ -2703,24 +2868,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S15</strong>
           <span>Étude de cas – Mouvement circulaire d’une hélice</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s16.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S16</strong>
           <span>Approche numérique avec Python</span>
-          
+
           <span>Simuler un mouvement discret et estimer numériquement la vitesse puis l’accélération.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s16.html"
@@ -2729,24 +2894,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S16</strong>
           <span>Approche numérique avec Python</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s17.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S17</strong>
           <span>Applications aéronautiques typiques</span>
-          
+
           <span>Relier les notions de cinématique à des situations concrètes du domaine aéronautique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s17.html"
@@ -2755,24 +2920,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S17</strong>
           <span>Applications aéronautiques typiques</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s18.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S18</strong>
           <span>Formulaire récapitulatif</span>
-          
+
           <span>Conserver les relations fondamentales à mobiliser dans les calculs de cinématique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s18.html"
@@ -2781,24 +2946,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S18</strong>
           <span>Formulaire récapitulatif</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s19.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S19</strong>
           <span>Erreurs fréquentes à éviter</span>
-          
+
           <span>Repérer les erreurs classiques de calcul, d’unités et de référentiel en cinématique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s19.html"
@@ -2807,24 +2972,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S19</strong>
           <span>Erreurs fréquentes à éviter</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s20.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S20</strong>
           <span>Conclusion</span>
-          
+
           <span>Retenir la place centrale de la cinématique dans l’aéronautique et ses prolongements vers la dynamique et la simulation.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide active"
           href="slide-s20.html"
@@ -2833,11 +2998,11 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S20</strong>
           <span>Conclusion</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="final-validation.html"
@@ -2846,47 +3011,47 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Validation finale</strong>
           <span>Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)</span>
-          
+
           <span>25 questions et correction après soumission.</span>
-          
+
         </a>
-        
+
       </div>
     </aside>
-    
+
 
     <main class="site-main">
-      
+
       <div class="slide-toolbar">
         <div class="toolbar-meta">
           <span>Page 40/41</span>
-          
+
           <span>Exercice</span>
         </div>
         <div class="toolbar-actions">
-          
+
           <a class="nav-link" href="../../index.html">Catalogue</a>
-          
-          
+
+
           <a class="nav-link" href="s20.html" data-deck-action="previous">Précédent</a>
-          
-          
+
+
           <a class="nav-link" href="final-validation.html" data-deck-action="next">Suivant</a>
-          
+
         </div>
       </div>
-      
 
-      
+
+
       <nav class="page-step-nav quiz-step-nav" aria-label="Navigation rapide du parcours">
-        
+
         <a class="nav-link" href="s20.html" data-deck-action="previous"><span class="nav-link-arrow" aria-hidden="true">&larr;</span><span>Précédent</span></a>
-        
-        
+
+
         <a class="nav-link page-step-nav-primary" href="final-validation.html" data-deck-action="next"><span>Suivant</span><span class="nav-link-arrow" aria-hidden="true">&rarr;</span></a>
-        
+
       </nav>
-      
+
 
       <section class="quiz-shell">
         <section class="quiz-hero">
@@ -2894,16 +3059,16 @@ html[data-deck="1"] .site-sidebar {
             <p class="eyebrow">Exercice</p>
             <h1>Conclusion</h1>
             <p>
-              
+
               Correction immédiate question par question.
-              
+
             </p>
           </div>
-          
+
         </section>
 
-        
-        
+
+
         <section class="narration-panel">
           <div class="narration-panel-header">
             <strong>Introduction de l'entrainement</strong>
@@ -2913,7 +3078,7 @@ html[data-deck="1"] .site-sidebar {
             </div>
           </div>
           <audio controls preload="auto" autoplay data-slide-audio>
-            <source src="audio/quizzes/slide-s20.mp3?v=53-5ed62ad73ea4" type="audio/mpeg">
+            <source src="audio/quizzes/slide-s20.mp3?v=57-33582a31d065" type="audio/mpeg">
           </audio>
         </section>
         <script>
@@ -2995,7 +3160,7 @@ html[data-deck="1"] .site-sidebar {
             window.addEventListener("load", playSlideAudio, { once: true });
           }());
         </script>
-        
+
 
         <section
           id="quiz-app"
@@ -3039,8 +3204,8 @@ html[data-deck="1"] .site-sidebar {
       });
     }());
   </script>
-  
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::53-5ed62ad73ea4", "legacy_storage_keys": ["kojyto:gamification::24-ef570e8ca6a5", "kojyto:gamification::25-6aa26c839ebc", "kojyto:gamification::26-874aca4d2f28", "kojyto:gamification::27-4020ad4f640c", "kojyto:gamification::28-e74865e6965a", "kojyto:gamification::29-37418d294a93", "kojyto:gamification::30-16224ad89100", "kojyto:gamification::31-d418b2352091", "kojyto:gamification::32-c697e5966fb2", "kojyto:gamification::33-3e31bc6ac74e", "kojyto:gamification::34-7f7bc75252c5", "kojyto:gamification::35-4f1fecff7913", "kojyto:gamification::36-801e9b36e2b4", "kojyto:gamification::37-7ab7dd419e92", "kojyto:gamification::38-ac70e48cc9a2", "kojyto:gamification::39-d33d16b3605a", "kojyto:gamification::40-b146916ed206", "kojyto:gamification::41-034e24c2e54a", "kojyto:gamification::42-67ba7e113ec0", "kojyto:gamification::43-da3c67264433", "kojyto:gamification::44-cd61dbf4abb5", "kojyto:gamification::45-0e00f82fbdaf", "kojyto:gamification::46-d6e412e3bdaf", "kojyto:gamification::47-61f80a50e1f7", "kojyto:gamification::48-cad100a29276", "kojyto:gamification::49-076fbfe22c87", "kojyto:gamification::50-78d144f4bf6a", "kojyto:gamification::51-9395848f2265", "kojyto:gamification::52-a4553ca83299"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
+
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::57-33582a31d065", "legacy_storage_keys": ["kojyto:gamification::24-ef570e8ca6a5", "kojyto:gamification::25-6aa26c839ebc", "kojyto:gamification::26-874aca4d2f28", "kojyto:gamification::27-4020ad4f640c", "kojyto:gamification::28-e74865e6965a", "kojyto:gamification::29-37418d294a93", "kojyto:gamification::30-16224ad89100", "kojyto:gamification::31-d418b2352091", "kojyto:gamification::32-c697e5966fb2", "kojyto:gamification::33-3e31bc6ac74e", "kojyto:gamification::34-7f7bc75252c5", "kojyto:gamification::35-4f1fecff7913", "kojyto:gamification::36-801e9b36e2b4", "kojyto:gamification::37-7ab7dd419e92", "kojyto:gamification::38-ac70e48cc9a2", "kojyto:gamification::39-d33d16b3605a", "kojyto:gamification::40-b146916ed206", "kojyto:gamification::41-034e24c2e54a", "kojyto:gamification::42-67ba7e113ec0", "kojyto:gamification::43-da3c67264433", "kojyto:gamification::44-cd61dbf4abb5", "kojyto:gamification::45-0e00f82fbdaf", "kojyto:gamification::46-d6e412e3bdaf", "kojyto:gamification::47-61f80a50e1f7", "kojyto:gamification::48-cad100a29276", "kojyto:gamification::49-076fbfe22c87", "kojyto:gamification::50-78d144f4bf6a", "kojyto:gamification::51-9395848f2265", "kojyto:gamification::52-a4553ca83299", "kojyto:gamification::53-5ed62ad73ea4", "kojyto:gamification::54-e66015af77a4", "kojyto:gamification::55-bf6f2fd92a70", "kojyto:gamification::56-46561734f316"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1", "quiz_type": "subpart", "title": "Introduction à la cinématique", "href": "slide-s1.html", "base_xp": 100}, {"quiz_id": "slide::S2", "quiz_type": "subpart", "title": "Système, point matériel et référentiel", "href": "slide-s2.html", "base_xp": 100}, {"quiz_id": "slide::S3", "quiz_type": "subpart", "title": "Trajectoire et position", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::S4", "quiz_type": "subpart", "title": "Vitesse instantanée", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::S5", "quiz_type": "subpart", "title": "Vitesse moyenne et mesures de vitesse", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::S6", "quiz_type": "subpart", "title": "Accélération : définition et unité", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::S7", "quiz_type": "subpart", "title": "Accélération tangentielle et normale", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::S8", "quiz_type": "subpart", "title": "Mouvement rectiligne uniforme (MRU)", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::S9", "quiz_type": "subpart", "title": "Mouvement rectiligne uniformément accéléré (MRUA)", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::S10", "quiz_type": "subpart", "title": "Mouvement circulaire uniforme (MCU)", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::S11", "quiz_type": "subpart", "title": "Mouvement circulaire accéléré", "href": "slide-s11.html", "base_xp": 100}, {"quiz_id": "slide::S12", "quiz_type": "subpart", "title": "Équations horaires et trajectoires", "href": "slide-s12.html", "base_xp": 100}, {"quiz_id": "slide::S13", "quiz_type": "subpart", "title": "Grandeurs angulaires et linéaires", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::S14", "quiz_type": "subpart", "title": "Méthodes graphiques et expérimentales", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::S15", "quiz_type": "subpart", "title": "Étude de cas – Mouvement circulaire d’une hélice", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::S16", "quiz_type": "subpart", "title": "Approche numérique avec Python", "href": "slide-s16.html", "base_xp": 100}, {"quiz_id": "slide::S17", "quiz_type": "subpart", "title": "Applications aéronautiques typiques", "href": "slide-s17.html", "base_xp": 100}, {"quiz_id": "slide::S18", "quiz_type": "subpart", "title": "Formulaire récapitulatif", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::S19", "quiz_type": "subpart", "title": "Erreurs fréquentes à éviter", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::S20", "quiz_type": "subpart", "title": "Conclusion", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cours complet de Cinématique – BTS Aéronautique (1ʳᵉ année)", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");
@@ -3282,7 +3447,7 @@ html[data-deck="1"] .site-sidebar {
   });
 }());
 </script>
-  
+
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S20", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S20-Q1", "prompt": "Quelle affirmation décrit correctement le rôle de la cinématique en aéronautique ?", "difficulty": "easy", "options": [{"id": "A", "text": "La cinématique sert d’abord à calculer directement les forces exercées sur un système.", "is_correct": false, "explanation": "Faux : le calcul des forces relève de la dynamique, pas de la cinématique."}, {"id": "B", "text": "La cinématique n’a aucun lien avec l’analyse des mouvements des systèmes aéronautiques.", "is_correct": false, "explanation": "Faux : elle est justement utilisée pour décrire les mouvements dans l’aéronautique."}, {"id": "C", "text": "La cinématique remplace l’étude des équations de mouvement dans les problèmes techniques.", "is_correct": false, "explanation": "Faux : les équations restent indispensables pour modéliser, calculer et interpréter un mouvement."}, {"id": "D", "text": "La cinématique sert à décrire les mouvements avant l’étude des forces qui les provoquent.", "is_correct": true, "explanation": "Vrai : la cinématique s’intéresse au mouvement lui-même, sans analyser les causes mécaniques. C’est précisément ce qui en fait une base pour les étapes suivantes comme la dynamique."}, {"id": "E", "text": "La cinématique se limite aux systèmes immobiles.", "is_correct": false, "explanation": "Faux : elle concerne les systèmes en mouvement, pas les objets au repos."}], "coverage_label": "Rôle de la cinématique", "learning_objective": "Identifier la fonction de la cinématique dans l’analyse des mouvements aéronautiques.", "correction_summary": "La bonne réponse distingue bien le mouvement de ses causes. L’erreur fréquente consiste à confondre cinématique et dynamique : la première décrit, la seconde explique les forces. En aéronautique, cette distinction est essentielle pour passer d’une observation du mouvement à une modélisation exploitable.", "course_clarification": "La cinématique décrit position, vitesse et accélération. Elle ne traite pas des forces ; elle fournit la description du mouvement sur laquelle s’appuient la dynamique, la mécanique du vol et la simulation.", "source_refs": []}, {"question_id": "S20-Q2", "prompt": "Quelle affirmation correspond à la place de la cinématique dans les applications aéronautiques ?", "difficulty": "easy", "options": [{"id": "A", "text": "La cinématique n’intervient pas dans les simulations numériques.", "is_correct": false, "explanation": "Faux : elle alimente au contraire les simulations en fournissant les grandeurs de mouvement à modéliser."}, {"id": "B", "text": "La cinématique constitue une base pour la dynamique, la mécanique du vol et les simulations numériques.", "is_correct": true, "explanation": "Vrai : la conclusion relie explicitement la cinématique à ces trois prolongements. Le mouvement décrit par la cinématique sert ensuite aux modèles dynamiques et aux outils de simulation."}, {"id": "C", "text": "La cinématique remplace la mécanique du vol dans l’analyse d’un aéronef.", "is_correct": false, "explanation": "Faux : la mécanique du vol utilise la cinématique comme base, mais ne s’y réduit pas."}, {"id": "D", "text": "La cinématique est inutile pour étudier un système réel en mouvement.", "is_correct": false, "explanation": "Faux : elle sert précisément à analyser les mouvements réels et à les prévoir."}, {"id": "E", "text": "La cinématique ne concerne que les calculs de statique.", "is_correct": false, "explanation": "Faux : la statique traite des systèmes à l’équilibre, alors que la cinématique décrit le mouvement."}], "coverage_label": "Applications de la cinématique", "learning_objective": "Relier la cinématique aux outils d’analyse et de simulation aéronautiques.", "correction_summary": "Il faut reconnaître que la cinématique n’est pas une fin en soi : elle sert de socle aux modèles plus complets. La confusion fréquente est de croire que la simulation numérique se substitue à la cinématique, alors qu’elle l’utilise comme point de départ pour représenter le mouvement.", "course_clarification": "En aéronautique, la cinématique fournit les grandeurs de mouvement nécessaires aux modèles de dynamique, de mécanique du vol et de simulation numérique. Elle aide à passer de la description du mouvement à son exploitation technique.", "source_refs": []}, {"question_id": "S20-Q3", "prompt": "Quelle affirmation résume correctement l’intérêt des compétences acquises en cinématique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elles permettent d’analyser et de prévoir le comportement de systèmes réels.", "is_correct": true, "explanation": "Vrai : la conclusion insiste sur l’usage opérationnel des compétences acquises pour comprendre et anticiper le comportement de systèmes réels."}, {"id": "B", "text": "Elles servent uniquement à mémoriser des définitions sans application technique.", "is_correct": false, "explanation": "Faux : la cinématique a un objectif pratique d’analyse et de prévision, pas seulement de mémorisation."}, {"id": "C", "text": "Elles ne sont utiles que pour des exemples idéalisés sans rapport avec l’aéronautique.", "is_correct": false, "explanation": "Faux : elles s’appliquent aux systèmes réels rencontrés en aéronautique."}, {"id": "D", "text": "Elles dispensent d’interpréter physiquement les résultats obtenus.", "is_correct": false, "explanation": "Faux : l’interprétation physique est indispensable pour exploiter correctement les calculs."}, {"id": "E", "text": "Elles rendent inutile la modélisation du mouvement.", "is_correct": false, "explanation": "Faux : l’analyse de systèmes réels passe justement par la modélisation du mouvement."}], "coverage_label": "Analyse et prévision des systèmes réels", "learning_objective": "Comprendre que la cinématique sert à analyser et à prévoir le comportement de systèmes réels.", "correction_summary": "La réponse correcte relie directement les calculs à leur usage technique. Une confusion classique consiste à croire qu’un résultat numérique suffit ; en réalité, il faut aussi savoir ce qu’il représente physiquement pour interpréter un système réel et anticiper son évolution.", "course_clarification": "Les grandeurs cinématiques ne sont pas seulement théoriques : elles servent à comprendre un mouvement mesuré, à comparer un modèle à une situation réelle et à prévoir l’évolution d’un système technique.", "source_refs": []}, {"question_id": "S20-Q4", "prompt": "Quelle affirmation est conforme à la conclusion sur les compétences attendues ?", "difficulty": "easy", "options": [{"id": "A", "text": "La maîtrise des équations est inutile si l’on connaît seulement les noms des grandeurs.", "is_correct": false, "explanation": "Faux : connaître les grandeurs sans savoir les utiliser ne permet pas de résoudre un problème technique."}, {"id": "B", "text": "L’interprétation physique des équations est secondaire par rapport à la manipulation des unités.", "is_correct": false, "explanation": "Faux : les unités sont importantes, mais l’interprétation physique reste essentielle pour comprendre le résultat."}, {"id": "C", "text": "Un technicien aéronautique peut se passer des équations de mouvement dans l’analyse d’un système.", "is_correct": false, "explanation": "Faux : les équations de mouvement sont indispensables pour calculer et vérifier le comportement d’un système."}, {"id": "D", "text": "La maîtrise des équations ne concerne que les calculs abstraits sans lien avec les systèmes réels.", "is_correct": false, "explanation": "Faux : la conclusion relie explicitement les équations à l’étude de systèmes réels."}, {"id": "E", "text": "La maîtrise des équations et de leurs interprétations physiques est indispensable au technicien aéronautique.", "is_correct": true, "explanation": "Vrai : la conclusion insiste sur le lien entre calcul, signification physique et pratique professionnelle."}], "coverage_label": "Maîtrise des équations et interprétation physique", "learning_objective": "Reconnaître l’importance des équations et de leur interprétation physique en aéronautique.", "correction_summary": "La bonne réponse rappelle qu’un calcul n’a de valeur technique que s’il est compris physiquement. L’erreur fréquente est de séparer la formule de son sens : en aéronautique, il faut à la fois savoir calculer et savoir interpréter pour agir sur un système réel.", "course_clarification": "Une équation de cinématique donne une relation mathématique entre des grandeurs de mouvement. Son usage correct exige de vérifier les unités, le contexte et la signification physique du résultat obtenu.", "source_refs": []}], "subpart_id": "15", "anchor_slide_id": "S20", "question_count_target": 4, "title": "QCM - Conclusion"}</script>
   <script>
     (function () {

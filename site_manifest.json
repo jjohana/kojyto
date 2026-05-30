@@ -1,7 +1,10 @@
 {
-  "generated_at": "2026-05-16T07:27:09.624927+00:00",
+  "generated_at": "2026-05-30T09:32:29.714898+00:00",
   "course_count": 4,
-  "total_size_bytes": 373655782,
+  "total_size_bytes": 372743118,
+  "learner_site_url": "https://jjohana.github.io/kojyto/index.html",
+  "admin_site_url": "https://jjohana.github.io/kojyto/admin",
+  "admin_href": "admin/index.html",
   "courses": [
     {
       "course_id": "7e902247-7afe-428c-8d0d-ebad5af46a8d",
@@ -16,7 +19,7 @@
       "page_count": 61,
       "slide_count": 30,
       "quiz_count": 31,
-      "size_bytes": 106286132
+      "size_bytes": 106572315
     },
     {
       "course_id": "d20aaea5-04e7-4ef7-bd1c-0070ffa29691",
@@ -33,7 +36,7 @@
       "page_count": 61,
       "slide_count": 30,
       "quiz_count": 31,
-      "size_bytes": 118725396
+      "size_bytes": 119011579
     },
     {
       "course_id": "3166d55f-5966-465f-9840-2610d900a245",
@@ -48,7 +51,7 @@
       "page_count": 41,
       "slide_count": 20,
       "quiz_count": 21,
-      "size_bytes": 70457562
+      "size_bytes": 70650635
     },
     {
       "course_id": "905e6ea3-c8bc-45c6-ba80-dce3aa90712a",
@@ -63,7 +66,7 @@
       "page_count": 39,
       "slide_count": 20,
       "quiz_count": 19,
-      "size_bytes": 78186692
+      "size_bytes": 76508589
     }
   ]
 }

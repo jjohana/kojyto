@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Architecture DC : vue d’ensemble</title>
   <script>
     (function () {
@@ -13,6 +13,22 @@
       if (params.get("deck") === "1") {
         document.documentElement.dataset.deck = "1";
       }
+      function syncVisualViewportGap() {
+        const viewport = window.visualViewport;
+        if (!viewport) {
+          return;
+        }
+        const gap = Math.max(0, Math.round(window.innerHeight - viewport.height - viewport.offsetTop));
+        document.documentElement.style.setProperty("--visual-viewport-bottom-gap", gap + "px");
+      }
+      syncVisualViewportGap();
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", syncVisualViewportGap);
+        window.visualViewport.addEventListener("scroll", syncVisualViewportGap);
+      }
+      window.addEventListener("orientationchange", function () {
+        window.setTimeout(syncVisualViewportGap, 120);
+      });
     }());
   </script>
   <style>
@@ -34,6 +50,17 @@
   --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
   --content-width: 1360px;
   --reading-width: 76ch;
+  --visual-viewport-bottom-gap: 0px;
+  --browser-toolbar-bottom-gap: 0px;
+  --fixed-bottom-clearance: max(var(--browser-toolbar-bottom-gap), var(--visual-viewport-bottom-gap));
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (hover: none) and (pointer: coarse) and (max-width: 820px) {
+    :root {
+      --browser-toolbar-bottom-gap: 72px;
+    }
+  }
 }
 
 @keyframes ambient-float {
@@ -212,6 +239,8 @@ html[data-embed="1"] body::after {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-sizing: border-box;
+  min-height: 44px;
   padding: 12px 14px;
   border-radius: 14px;
   background: rgba(12, 110, 130, 0.08);
@@ -219,6 +248,8 @@ html[data-embed="1"] body::after {
   color: var(--accent-strong);
   text-decoration: none;
   font-weight: 700;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
 }
 
@@ -479,7 +510,9 @@ html[data-embed="1"] body::after {
   justify-content: space-between;
   gap: 12px;
   margin: 0 auto;
+  width: 100%;
   max-width: var(--content-width);
+  box-sizing: border-box;
   padding: 14px 18px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.78);
@@ -510,12 +543,15 @@ html[data-embed="1"] body::after {
 
 .page-step-nav {
   position: fixed;
-  right: max(18px, env(safe-area-inset-right));
-  bottom: max(18px, env(safe-area-inset-bottom));
+  right: 18px;
+  right: calc(18px + env(safe-area-inset-right, 0px));
+  bottom: 18px;
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   z-index: 58;
   display: flex;
   gap: 6px;
   align-items: center;
+  box-sizing: border-box;
   width: max-content;
   max-width: calc(100vw - 36px);
   padding: 6px;
@@ -532,6 +568,7 @@ html[data-embed="1"] body::after {
   padding: 11px 16px;
   border-radius: 14px;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .page-step-nav .nav-link-arrow {
@@ -559,7 +596,7 @@ html[data-embed="1"] body::after {
   margin: 0 auto;
   min-height: calc(100vh - 56px);
   box-sizing: border-box;
-  padding: 4px 0 92px;
+  padding: 4px 0 calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 .hero-panel {
@@ -736,6 +773,35 @@ html[data-embed="1"] body::after {
   justify-content: space-between;
   gap: 12px;
   align-items: baseline;
+}
+
+.visual-summary-body {
+  display: grid;
+  grid-template-columns: minmax(88px, 148px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.visual-summary-body:not(.has-course-logo) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.course-logo-rail {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(248, 252, 253, 0.92);
+  border: 1px solid rgba(20, 37, 58, 0.1);
+}
+
+.course-logo-rail img {
+  display: block;
+  max-width: 100%;
+  max-height: 108px;
+  object-fit: contain;
 }
 
 .visual-summary-panel .visual-summary-title {
@@ -1269,7 +1335,7 @@ tr:nth-child(even):not(:first-child) td {
   margin: 0 auto;
   display: grid;
   gap: 22px;
-  padding-bottom: 92px;
+  padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 .quiz-hero {
@@ -1431,6 +1497,7 @@ tr:nth-child(even):not(:first-child) td {
 .quiz-panel .quiz-actions-sticky {
   position: sticky;
   bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   z-index: 24;
   align-self: start;
   width: fit-content;
@@ -1698,7 +1765,7 @@ html[data-embed="1"] .quiz-shell {
   max-width: none;
   min-height: auto;
   margin: 0;
-  padding: 0 0 92px;
+  padding: 0 0 calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 html[data-embed="1"] .site-main {
@@ -1821,6 +1888,24 @@ html[data-embed="1"] .visual-summary-panel .visual-summary-title {
   line-height: 1.02;
 }
 
+html[data-embed="1"] .visual-summary-body {
+  grid-template-columns: minmax(56px, 86px) minmax(0, 1fr);
+  gap: 8px;
+}
+
+html[data-embed="1"] .visual-summary-body:not(.has-course-logo) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+html[data-embed="1"] .course-logo-rail {
+  padding: 8px;
+  border-radius: 12px;
+}
+
+html[data-embed="1"] .course-logo-rail img {
+  max-height: 58px;
+}
+
 @media (max-width: 760px) {
   html[data-embed="1"] .narration-panel {
     grid-template-columns: 1fr;
@@ -1836,6 +1921,21 @@ html[data-embed="1"] .visual-summary-panel .visual-summary-title {
   html[data-embed="1"] .narration-panel audio {
     grid-column: auto;
     grid-row: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .visual-summary-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .course-logo-rail {
+    justify-items: start;
+  }
+
+  .course-logo-rail img {
+    max-width: min(160px, 52vw);
+    max-height: 82px;
   }
 }
 
@@ -2211,7 +2311,9 @@ html[data-deck="1"] .site-sidebar {
 
   .page-step-nav {
     right: 14px;
+    right: calc(14px + env(safe-area-inset-right, 0px));
     bottom: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   }
 
   .completion-celebration {
@@ -2232,6 +2334,7 @@ html[data-deck="1"] .site-sidebar {
 
   .quiz-panel .quiz-actions-sticky {
     bottom: 10px;
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
     width: 100%;
     justify-content: stretch;
   }
@@ -2241,17 +2344,62 @@ html[data-deck="1"] .site-sidebar {
   }
 
   .page-step-nav {
-    left: 14px;
-    right: 14px;
+    left: 10px;
+    left: calc(10px + env(safe-area-inset-left, 0px));
+    right: 10px;
+    right: calc(10px + env(safe-area-inset-right, 0px));
+    bottom: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
     width: auto;
     max-width: none;
     justify-content: stretch;
+    padding: 6px;
+    border-radius: 20px;
   }
 
   .page-step-nav .nav-link {
     flex: 1 1 0;
     min-width: 0;
-    padding-inline: 10px;
+    min-height: 52px;
+    padding-inline: 8px;
+    font-size: 0.94rem;
+  }
+
+  .slide-toolbar {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .toolbar-meta {
+    gap: 6px;
+    font-size: 0.78rem;
+  }
+
+  .toolbar-actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+    gap: 6px;
+  }
+
+  .toolbar-actions .nav-link {
+    min-height: 40px;
+    padding: 8px;
+    font-size: 0.88rem;
+  }
+
+  .site-sidebar {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .site-sidebar p,
+  .site-sidebar .sidebar-list {
+    display: none;
+  }
+
+  .site-sidebar nav {
+    grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
   }
 
   .hero-copy h1,
@@ -2272,6 +2420,23 @@ html[data-deck="1"] .site-sidebar {
   }
 }
 
+@media (max-width: 380px) {
+  .page-step-nav {
+    gap: 4px;
+    padding: 5px;
+  }
+
+  .page-step-nav .nav-link {
+    min-height: 50px;
+    padding-inline: 6px;
+    font-size: 0.88rem;
+  }
+
+  .page-step-nav .nav-link-arrow {
+    font-size: 0.92rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2282,15 +2447,15 @@ html[data-deck="1"] .site-sidebar {
   }
 }
 </style>
-  
+
 </head>
 <body class="viewer-user page-quiz">
   <div class="page-shell with-site-nav">
-    
+
     <aside class="site-sidebar">
       <h2>AERONEFS ATA 24</h2>
       <p>Parcours épuré avec navigation et QCM.</p>
-      
+
       <section class="gamification-panel" data-gamification-widget>
         <div class="gamification-header">
           <strong>Progression</strong>
@@ -2304,33 +2469,33 @@ html[data-deck="1"] .site-sidebar {
         </div>
         <p data-gamification-next>Prochaine : Bronze</p>
       </section>
-      
+
       <nav>
-        
+
         <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
-        
-        
-        
+
+
+
         <a class="sidebar-action" href="index.html">Retour au cours</a>
-        
-        
-        
+
+
+
       </nav>
       <div class="sidebar-list">
-        
+
         <a
           class="sidebar-slide"
           href="s1-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S1-1</strong>
           <span>Génération AC en vol : panorama des sources</span>
-          
+
           <span>Identifier les sources principales qui alimentent le système électrique alternatif (AC SYSTEM) en vol et leur organisation générale.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1-1.html"
@@ -2339,24 +2504,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S1-1</strong>
           <span>Génération AC en vol : panorama des sources</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s1-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S1-2</strong>
           <span>IDG : implantation sur moteur et liaison mécanique</span>
-          
+
           <span>Décrire l’implantation d’un IDG sur moteur et sa connexion mécanique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1-2.html"
@@ -2365,24 +2530,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S1-2</strong>
           <span>IDG : implantation sur moteur et liaison mécanique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s1-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S1-3</strong>
           <span>GCU : contrôle et surveillance des IDG</span>
-          
+
           <span>Expliquer le rôle de la GCU dans la commande et la surveillance des IDG.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1-3.html"
@@ -2391,24 +2556,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S1-3</strong>
           <span>GCU : contrôle et surveillance des IDG</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s1-4.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S1-4</strong>
           <span>APU GEN et répartition du contrôle GCU/GAPCU</span>
-          
+
           <span>Distinguer la source APU et son bloc de contrôle dédié.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1-4.html"
@@ -2417,24 +2582,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S1-4</strong>
           <span>APU GEN et répartition du contrôle GCU/GAPCU</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s2-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S2-1</strong>
           <span>Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
-          
+
           <span>Identifier les sources externes disponibles au sol pour alimenter le réseau AC.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s2-1.html"
@@ -2443,24 +2608,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S2-1</strong>
           <span>Alimentation AC au sol : EXT PWR A et EXT PWR B</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s2-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S2-2</strong>
           <span>Panneau de puissance externe et réceptacles</span>
-          
+
           <span>Lire le panneau de contrôle de puissance externe et ses fonctions principales.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s2-2.html"
@@ -2469,24 +2634,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S2-2</strong>
           <span>Panneau de puissance externe et réceptacles</span>
-          
+
           <span>2 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s2-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S2-3</strong>
           <span>Raccordement au AC SYSTEM et implantation près du NLG</span>
-          
+
           <span>Localiser l’interface de puissance externe et son lien avec le réseau AC.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s2-3.html"
@@ -2495,24 +2660,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S2-3</strong>
           <span>Raccordement au AC SYSTEM et implantation près du NLG</span>
-          
+
           <span>1 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3-1</strong>
           <span>Génération de secours : logique de bascule</span>
-          
+
           <span>Comprendre la logique d’alimentation de secours lorsque les sources normales ne sont plus disponibles.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3-1.html"
@@ -2521,24 +2686,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3-1</strong>
           <span>Génération de secours : logique de bascule</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3-2</strong>
           <span>Batteries et STATIC INVERTER</span>
-          
+
           <span>Montrer la chaîne BATTERY 1 / BATTERY 2 → STATIC INVERTER → réseau AC essentiel, et préciser le caractère dégradé de cette alimentation.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3-2.html"
@@ -2547,24 +2712,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3-2</strong>
           <span>Batteries et STATIC INVERTER</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3-3</strong>
           <span>EMER GEN et EMER GEN GCU</span>
-          
+
           <span>Repérer la commande et la surveillance de la source électrique de secours.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3-3.html"
@@ -2573,24 +2738,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3-3</strong>
           <span>EMER GEN et EMER GEN GCU</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3-4.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3-4</strong>
           <span>Réseau AC essentiel et indisponibilité des sources normales</span>
-          
+
           <span>Distinguer le réseau AC général du réseau AC essentiel en situation dégradée.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3-4.html"
@@ -2599,24 +2764,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3-4</strong>
           <span>Réseau AC essentiel et indisponibilité des sources normales</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S4-1</strong>
           <span>Architecture DC : vue d’ensemble</span>
-          
+
           <span>Présenter les grandes familles de sources qui alimentent le système électrique continu (DC SYSTEM) et garder visibles les liaisons avec le système électrique alternatif (AC SYSTEM).</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide active"
           href="slide-s4-1.html"
@@ -2625,24 +2790,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S4-1</strong>
           <span>Architecture DC : vue d’ensemble</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S4-2</strong>
           <span>TR 1, TR 2, TR ESS et APU TR</span>
-          
+
           <span>Identifier le rôle des transformateur-rectificateurs dans l’alimentation du réseau DC.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s4-2.html"
@@ -2651,24 +2816,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S4-2</strong>
           <span>TR 1, TR 2, TR ESS et APU TR</span>
-          
+
           <span>3 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S4-3</strong>
           <span>Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
-          
+
           <span>Situer les batteries, le STATIC INVERTER et l’EMER GEN dans la logique d’alimentation DC, en distinguant alimentation normale et secours.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s4-3.html"
@@ -2677,24 +2842,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S4-3</strong>
           <span>Sources associées : BATTERY, STATIC INVERTER, EMER GEN</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4-4.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S4-4</strong>
           <span>APU BATTERY et alimentation de l’APU STARTER</span>
-          
+
           <span>Décrire la chaîne d’alimentation dédiée au démarrage de l’APU.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s4-4.html"
@@ -2703,24 +2868,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S4-4</strong>
           <span>APU BATTERY et alimentation de l’APU STARTER</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4-5.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S4-5</strong>
           <span>Blocs de contrôle et interfaces avec le DC SYSTEM</span>
-          
+
           <span>Identifier les unités de contrôle visibles et leur lien avec l’alimentation DC.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s4-5.html"
@@ -2729,24 +2894,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S4-5</strong>
           <span>Blocs de contrôle et interfaces avec le DC SYSTEM</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-1</strong>
           <span>ECAM ELEC AC : lire la page d’un coup d’œil</span>
-          
+
           <span>Lire la page ECAM dédiée à l’électricité AC et comprendre sa logique d’affichage.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-1.html"
@@ -2755,24 +2920,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-1</strong>
           <span>ECAM ELEC AC : lecture générale de la page</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-2</strong>
           <span>Surveillance des sources AC sur l’Electronic Centralized Aircraft Monitor (ECAM)</span>
-          
+
           <span>Identifier les indications principales liées aux générateurs sur l’ECAM.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-2.html"
@@ -2781,24 +2946,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-2</strong>
           <span>Surveillance des sources : GEN 1, GEN 2 et APU GEN</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-3</strong>
           <span>Lire les paramètres de surveillance sur la page ECAM AC</span>
-          
+
           <span>Associer chaque valeur affichée à sa source de surveillance, notamment les IDG et les sources externes visibles.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-3.html"
@@ -2807,24 +2972,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-3</strong>
           <span>Surveillance des IDG et des paramètres affichés</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-4.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-4</strong>
           <span>Panneau AC GENERATION et commandes P/BSW</span>
-          
+
           <span>Repérer les P/BSW, les voyants et la chaîne EMER GEN / CSM/G sur le synoptique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-4.html"
@@ -2833,24 +2998,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-4</strong>
           <span>Panneau AC GENERATION et commandes P/BSW</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-5.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-5</strong>
           <span>Panneau ELEC : sélection des sources et bus</span>
-          
+
           <span>Identifier les commandes et voyants du panneau ELEC, puis relier chaque libellé à sa fonction de sélection ou de supervision.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-5.html"
@@ -2859,24 +3024,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-5</strong>
           <span>Panneau ELEC : sélection des sources et bus</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-6.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-6</strong>
           <span>Panneau EMER ELEC PWR : test et commande de secours</span>
-          
+
           <span>Identifier les commandes du panneau dédié à la génération électrique d’urgence.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-6.html"
@@ -2885,24 +3050,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-6</strong>
           <span>Panneau EMER ELEC PWR : test et commande de secours</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s6-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S6-1</strong>
           <span>Ground Service Network : principe de fonctionnement</span>
-          
+
           <span>Comprendre l’alimentation du réseau de service au sol sans énergiser tout le réseau électrique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s6-1.html"
@@ -2911,24 +3076,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S6-1</strong>
           <span>Ground Service Network : principe de fonctionnement</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s6-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S6-2</strong>
           <span>MAINT BUS : alimentation du réseau de service</span>
-          
+
           <span>Montrer que, switch MAINT BUS sur ON, le réseau de service au sol est alimenté par **EXT PWR A ONLY** sans mettre sous tension tout le réseau électrique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s6-2.html"
@@ -2937,24 +3102,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S6-2</strong>
           <span>MAINT BUS : alimentation du réseau de service</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s6-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S6-3</strong>
           <span>Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
-          
+
           <span>Localiser les interfaces qui relient le service au sol aux réseaux AC et DC.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s6-3.html"
@@ -2963,24 +3128,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S6-3</strong>
           <span>Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7-1</strong>
           <span>ECMU : gestion des contacteurs</span>
-          
+
           <span>Identifier le rôle des ECMU dans la commande des contacteurs électriques.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7-1.html"
@@ -2989,24 +3154,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7-1</strong>
           <span>ECMU : gestion des contacteurs</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7-2</strong>
           <span>CBMU : surveillance des C/B et des RCCBs</span>
-          
+
           <span>Expliquer la fonction de surveillance des disjoncteurs par le CBMU.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7-2.html"
@@ -3015,24 +3180,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7-2</strong>
           <span>CBMU : surveillance des C/B et des RCCBs</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7-3</strong>
           <span>Superviser les disjoncteurs via l’ECAM</span>
-          
+
           <span>Lire la page ECAM dédiée aux disjoncteurs et interpréter leur statut comme un état de supervision.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7-3.html"
@@ -3041,24 +3206,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7-3</strong>
           <span>Page ECAM C/B : signalement des déclenchements</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7-4.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7-4</strong>
           <span>AC & DC CONTACTORS : distribution vers les charges</span>
-          
+
           <span>Comprendre comment les contacteurs alimentent les réseaux de charge.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7-4.html"
@@ -3067,24 +3232,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7-4</strong>
           <span>AC & DC CONTACTORS : distribution vers les charges</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7-5.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7-5</strong>
           <span>De la supervision à la distribution des charges</span>
-          
+
           <span>Lire le synoptique électrique dans l’ordre : surveillance, commande, puis répartition vers les charges.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7-5.html"
@@ -3093,11 +3258,11 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7-5</strong>
           <span>Lien entre supervision, contacteurs et load distribution</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="final-validation.html"
@@ -3106,47 +3271,47 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Validation finale</strong>
           <span>Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion</span>
-          
+
           <span>25 questions et correction après soumission.</span>
-          
+
         </a>
-        
+
       </div>
     </aside>
-    
+
 
     <main class="site-main">
-      
+
       <div class="slide-toolbar">
         <div class="toolbar-meta">
           <span>Page 24/61</span>
-          
+
           <span>Exercice</span>
         </div>
         <div class="toolbar-actions">
-          
+
           <a class="nav-link" href="../../index.html">Catalogue</a>
-          
-          
+
+
           <a class="nav-link" href="s4-1.html" data-deck-action="previous">Précédent</a>
-          
-          
+
+
           <a class="nav-link" href="s4-2.html" data-deck-action="next">Suivant</a>
-          
+
         </div>
       </div>
-      
 
-      
+
+
       <nav class="page-step-nav quiz-step-nav" aria-label="Navigation rapide du parcours">
-        
+
         <a class="nav-link" href="s4-1.html" data-deck-action="previous"><span class="nav-link-arrow" aria-hidden="true">&larr;</span><span>Précédent</span></a>
-        
-        
+
+
         <a class="nav-link page-step-nav-primary" href="s4-2.html" data-deck-action="next"><span>Suivant</span><span class="nav-link-arrow" aria-hidden="true">&rarr;</span></a>
-        
+
       </nav>
-      
+
 
       <section class="quiz-shell">
         <section class="quiz-hero">
@@ -3154,16 +3319,16 @@ html[data-deck="1"] .site-sidebar {
             <p class="eyebrow">Exercice</p>
             <h1>Architecture DC : vue d’ensemble</h1>
             <p>
-              
+
               Correction immédiate question par question.
-              
+
             </p>
           </div>
-          
+
         </section>
 
-        
-        
+
+
         <section class="narration-panel">
           <div class="narration-panel-header">
             <strong>Introduction de l'entrainement</strong>
@@ -3173,7 +3338,7 @@ html[data-deck="1"] .site-sidebar {
             </div>
           </div>
           <audio controls preload="auto" autoplay data-slide-audio>
-            <source src="audio/quizzes/slide-s4-1.mp3?v=53-bd04bdcffe07" type="audio/mpeg">
+            <source src="audio/quizzes/slide-s4-1.mp3?v=57-8f2424153259" type="audio/mpeg">
           </audio>
         </section>
         <script>
@@ -3255,7 +3420,7 @@ html[data-deck="1"] .site-sidebar {
             window.addEventListener("load", playSlideAudio, { once: true });
           }());
         </script>
-        
+
 
         <section
           id="quiz-app"
@@ -3299,8 +3464,8 @@ html[data-deck="1"] .site-sidebar {
       });
     }());
   </script>
-  
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::53-bd04bdcffe07", "legacy_storage_keys": ["kojyto:gamification::24-61fd1b967ceb", "kojyto:gamification::25-9fd63f0d0260", "kojyto:gamification::26-da5c266c2491", "kojyto:gamification::27-543e75c02c1a", "kojyto:gamification::28-46fde91bf712", "kojyto:gamification::29-4bfaa9c0baa2", "kojyto:gamification::30-f5dc68db68ef", "kojyto:gamification::31-211767a2f766", "kojyto:gamification::32-c84691a2ee50", "kojyto:gamification::33-bf10b90cd553", "kojyto:gamification::34-762d2351e0c7", "kojyto:gamification::35-8874adee8dfb", "kojyto:gamification::36-5131251e7ed5", "kojyto:gamification::37-9507485c5829", "kojyto:gamification::38-11a7c79fcff2", "kojyto:gamification::39-f2553abc1607", "kojyto:gamification::40-5f2464623010", "kojyto:gamification::41-7659e2c60649", "kojyto:gamification::42-6dbb1b9fa4c4", "kojyto:gamification::43-b7c15aea3af4", "kojyto:gamification::44-49c7f2161342", "kojyto:gamification::45-18c2fd01f1b4", "kojyto:gamification::46-b3f762adffe2", "kojyto:gamification::47-7edfc3ee7f5d", "kojyto:gamification::48-ce9e7fd405a0", "kojyto:gamification::49-f8c5edddeaba", "kojyto:gamification::50-0ea464d587d6", "kojyto:gamification::51-3ec200793349", "kojyto:gamification::52-010831af5941"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "Génération AC en vol : panorama des sources", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "IDG : implantation sur moteur et liaison mécanique", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "GCU : contrôle et surveillance des IDG", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S1-4", "quiz_type": "subpart", "title": "APU GEN et répartition du contrôle GCU/GAPCU", "href": "slide-s1-4.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "Alimentation AC au sol : EXT PWR A et EXT PWR B", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "Panneau de puissance externe et réceptacles", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S2-3", "quiz_type": "subpart", "title": "Raccordement au AC SYSTEM et implantation près du NLG", "href": "slide-s2-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "Génération de secours : logique de bascule", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "Batteries et STATIC INVERTER", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "EMER GEN et EMER GEN GCU", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "Réseau AC essentiel et indisponibilité des sources normales", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "Architecture DC : vue d’ensemble", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "TR 1, TR 2, TR ESS et APU TR", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S4-3", "quiz_type": "subpart", "title": "Sources associées : BATTERY, STATIC INVERTER, EMER GEN", "href": "slide-s4-3.html", "base_xp": 100}, {"quiz_id": "slide::S4-4", "quiz_type": "subpart", "title": "APU BATTERY et alimentation de l’APU STARTER", "href": "slide-s4-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-5", "quiz_type": "subpart", "title": "Blocs de contrôle et interfaces avec le DC SYSTEM", "href": "slide-s4-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "ECAM ELEC AC : lecture générale de la page", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "Surveillance des sources : GEN 1, GEN 2 et APU GEN", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "Surveillance des IDG et des paramètres affichés", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S5-4", "quiz_type": "subpart", "title": "Panneau AC GENERATION et commandes P/BSW", "href": "slide-s5-4.html", "base_xp": 100}, {"quiz_id": "slide::S5-5", "quiz_type": "subpart", "title": "Panneau ELEC : sélection des sources et bus", "href": "slide-s5-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-6", "quiz_type": "subpart", "title": "Panneau EMER ELEC PWR : test et commande de secours", "href": "slide-s5-6.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "Ground Service Network : principe de fonctionnement", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S6-2", "quiz_type": "subpart", "title": "MAINT BUS : alimentation du réseau de service", "href": "slide-s6-2.html", "base_xp": 100}, {"quiz_id": "slide::S6-3", "quiz_type": "subpart", "title": "Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2", "href": "slide-s6-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "ECMU : gestion des contacteurs", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "CBMU : surveillance des C/B et des RCCBs", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "Page ECAM C/B : signalement des déclenchements", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-4", "quiz_type": "subpart", "title": "AC & DC CONTACTORS : distribution vers les charges", "href": "slide-s7-4.html", "base_xp": 100}, {"quiz_id": "slide::S7-5", "quiz_type": "subpart", "title": "Lien entre supervision, contacteurs et load distribution", "href": "slide-s7-5.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion", "href": "final-validation.html", "base_xp": 250}]}</script>
+
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::57-8f2424153259", "legacy_storage_keys": ["kojyto:gamification::24-61fd1b967ceb", "kojyto:gamification::25-9fd63f0d0260", "kojyto:gamification::26-da5c266c2491", "kojyto:gamification::27-543e75c02c1a", "kojyto:gamification::28-46fde91bf712", "kojyto:gamification::29-4bfaa9c0baa2", "kojyto:gamification::30-f5dc68db68ef", "kojyto:gamification::31-211767a2f766", "kojyto:gamification::32-c84691a2ee50", "kojyto:gamification::33-bf10b90cd553", "kojyto:gamification::34-762d2351e0c7", "kojyto:gamification::35-8874adee8dfb", "kojyto:gamification::36-5131251e7ed5", "kojyto:gamification::37-9507485c5829", "kojyto:gamification::38-11a7c79fcff2", "kojyto:gamification::39-f2553abc1607", "kojyto:gamification::40-5f2464623010", "kojyto:gamification::41-7659e2c60649", "kojyto:gamification::42-6dbb1b9fa4c4", "kojyto:gamification::43-b7c15aea3af4", "kojyto:gamification::44-49c7f2161342", "kojyto:gamification::45-18c2fd01f1b4", "kojyto:gamification::46-b3f762adffe2", "kojyto:gamification::47-7edfc3ee7f5d", "kojyto:gamification::48-ce9e7fd405a0", "kojyto:gamification::49-f8c5edddeaba", "kojyto:gamification::50-0ea464d587d6", "kojyto:gamification::51-3ec200793349", "kojyto:gamification::52-010831af5941", "kojyto:gamification::53-bd04bdcffe07", "kojyto:gamification::54-30c687b346e4", "kojyto:gamification::55-86a5205fa8eb", "kojyto:gamification::56-9133ed7f12dd"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "Génération AC en vol : panorama des sources", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "IDG : implantation sur moteur et liaison mécanique", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "GCU : contrôle et surveillance des IDG", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S1-4", "quiz_type": "subpart", "title": "APU GEN et répartition du contrôle GCU/GAPCU", "href": "slide-s1-4.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "Alimentation AC au sol : EXT PWR A et EXT PWR B", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "Panneau de puissance externe et réceptacles", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S2-3", "quiz_type": "subpart", "title": "Raccordement au AC SYSTEM et implantation près du NLG", "href": "slide-s2-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "Génération de secours : logique de bascule", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "Batteries et STATIC INVERTER", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "EMER GEN et EMER GEN GCU", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "Réseau AC essentiel et indisponibilité des sources normales", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "Architecture DC : vue d’ensemble", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "TR 1, TR 2, TR ESS et APU TR", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S4-3", "quiz_type": "subpart", "title": "Sources associées : BATTERY, STATIC INVERTER, EMER GEN", "href": "slide-s4-3.html", "base_xp": 100}, {"quiz_id": "slide::S4-4", "quiz_type": "subpart", "title": "APU BATTERY et alimentation de l’APU STARTER", "href": "slide-s4-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-5", "quiz_type": "subpart", "title": "Blocs de contrôle et interfaces avec le DC SYSTEM", "href": "slide-s4-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "ECAM ELEC AC : lecture générale de la page", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "Surveillance des sources : GEN 1, GEN 2 et APU GEN", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "Surveillance des IDG et des paramètres affichés", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S5-4", "quiz_type": "subpart", "title": "Panneau AC GENERATION et commandes P/BSW", "href": "slide-s5-4.html", "base_xp": 100}, {"quiz_id": "slide::S5-5", "quiz_type": "subpart", "title": "Panneau ELEC : sélection des sources et bus", "href": "slide-s5-5.html", "base_xp": 100}, {"quiz_id": "slide::S5-6", "quiz_type": "subpart", "title": "Panneau EMER ELEC PWR : test et commande de secours", "href": "slide-s5-6.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "Ground Service Network : principe de fonctionnement", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S6-2", "quiz_type": "subpart", "title": "MAINT BUS : alimentation du réseau de service", "href": "slide-s6-2.html", "base_xp": 100}, {"quiz_id": "slide::S6-3", "quiz_type": "subpart", "title": "Chemins de liaison : DC GND NETWORK, AC GND NETWORK et TR 2", "href": "slide-s6-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "ECMU : gestion des contacteurs", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "CBMU : surveillance des C/B et des RCCBs", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "Page ECAM C/B : signalement des déclenchements", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S7-4", "quiz_type": "subpart", "title": "AC & DC CONTACTORS : distribution vers les charges", "href": "slide-s7-4.html", "base_xp": 100}, {"quiz_id": "slide::S7-5", "quiz_type": "subpart", "title": "Lien entre supervision, contacteurs et load distribution", "href": "slide-s7-5.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - ATA 24 — Études systèmes : génération et distribution électrique avion", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");
@@ -3542,7 +3707,7 @@ html[data-deck="1"] .site-sidebar {
   });
 }());
 </script>
-  
+
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S4-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S4-1-Q1", "prompt": "Quels éléments participent directement à l’alimentation du **DC SYSTEM** ?", "difficulty": "easy", "options": [{"id": "A", "text": "Les **IDGs** alimentent directement le DC SYSTEM sans conversion intermédiaire.", "is_correct": false, "explanation": "Les IDGs sont des générateurs AC ; ils alimentent d’abord le réseau AC, pas le DC directement. Le passage vers le DC se fait ensuite par des convertisseurs comme les TR."}, {"id": "B", "text": "Les sources **EXTERNAL POWER A & B** alimentent directement le DC SYSTEM comme sources continues.", "is_correct": false, "explanation": "Les alimentations externes sont des sources AC de réseau au sol. Elles ne constituent pas des sources DC directes dans l’architecture présentée."}, {"id": "C", "text": "Le **GEN** de l’APU est un convertisseur DC dédié au DC SYSTEM.", "is_correct": false, "explanation": "Le GEN de l’APU est un générateur AC. Il participe au réseau AC, qui peut ensuite être exploité pour alimenter des éléments DC via les convertisseurs adaptés."}, {"id": "D", "text": "Les transformateur rectifier **TR 1**, **TR 2**, **TR ESS** et **APU TR** participent à l’alimentation du DC SYSTEM.", "is_correct": true, "explanation": "Ces blocs apparaissent comme des sources ou convertisseurs reliés à la distribution continue. Ils assurent la conversion nécessaire pour alimenter le réseau DC à partir de l’énergie disponible côté AC ou APU."}, {"id": "E", "text": "Le **STATIC INVERTER** fournit l’énergie principale du DC SYSTEM en vol normal.", "is_correct": false, "explanation": "Le static inverter intervient dans une logique de secours et alimente du côté AC essentiel lorsqu’aucune autre source AC n’est disponible. Il n’est pas la source principale du DC SYSTEM."}], "coverage_label": "Architecture DC : vue d’ensemble", "learning_objective": "Identifier les convertisseurs et sources qui participent réellement à l’alimentation du réseau DC.", "correction_summary": "La bonne réponse regroupe les TR et les éléments explicitement raccordés au DC SYSTEM. Le piège classique consiste à confondre les générateurs AC avec des sources DC directes.", "course_clarification": "Un **transformer rectifier (TR)** convertit une tension AC en tension DC. Dans l’architecture représentée, l’énergie AC est transformée avant d’alimenter le réseau continu.", "source_refs": []}, {"question_id": "S4-1-Q2", "prompt": "Comment les **BATTERY 1** et **BATTERY 2** sont-elles intégrées à la distribution électrique ?", "difficulty": "easy", "options": [{"id": "A", "text": "Les BATTERY 1 et 2 alimentent le réseau DC uniquement par les **GCUs**.", "is_correct": false, "explanation": "Les GCUs sont des unités de contrôle des générateurs, pas des interfaces de raccordement des batteries à la distribution DC."}, {"id": "B", "text": "Les **BATTERY 1** et **BATTERY 2** sont connectées à la distribution DC via les **BCLs**.", "is_correct": true, "explanation": "Les batteries ne sont pas raccordées seules : elles passent par les Battery Charge Limiter, qui encadrent leur charge et leur liaison à la distribution DC."}, {"id": "C", "text": "Les BATTERY 1 et 2 sont branchées directement sur le **AC SYSTEM** sans conversion.", "is_correct": false, "explanation": "Les batteries sont des sources de courant continu ; elles n’ont pas vocation à être raccordées directement au réseau AC comme une alimentation de base."}, {"id": "D", "text": "Les **BCLs** sont des convertisseurs AC/DC dédiés aux IDGs.", "is_correct": false, "explanation": "Un BCL signifie Battery Charge Limiter. Il sert à la gestion des batteries, pas à convertir la sortie des IDGs."}, {"id": "E", "text": "La **BATTERY 1** alimente seule l’ensemble du DC SYSTEM en toutes conditions.", "is_correct": false, "explanation": "Une seule batterie ne constitue pas, à elle seule, l’architecture générale d’alimentation présentée. Le schéma montre plusieurs sources et liaisons complémentaires."}], "coverage_label": "Architecture DC : vue d’ensemble", "learning_objective": "Reconnaître le rôle des batteries et des BCL dans la chaîne d’alimentation DC.", "correction_summary": "Les batteries sont intégrées au réseau DC par l’intermédiaire des BCLs. Le piège est de leur attribuer un rôle de conversion AC/DC ou de commande des générateurs.", "course_clarification": "Un **BCL** limite et encadre la charge de la batterie. Il fait partie de la logique de protection et de gestion de l’alimentation continue.", "source_refs": []}, {"question_id": "S4-1-Q3", "prompt": "Quel chemin alimente l’**APU STARTER** ?", "difficulty": "easy", "options": [{"id": "A", "text": "L’**APU STARTER** est alimenté via l’**APU TR** / **APU BATTERY**.", "is_correct": true, "explanation": "Le schéma relie explicitement le démarreur APU à cette branche d’alimentation. L’idée clé est que le démarrage de l’APU dépend de la chaîne APU TR et batterie APU."}, {"id": "B", "text": "L’APU STARTER est alimenté directement par les **IDGs** des moteurs.", "is_correct": false, "explanation": "Les IDGs alimentent le réseau AC de l’avion ; ils ne constituent pas la voie d’alimentation directe du démarreur APU."}, {"id": "C", "text": "L’APU STARTER reçoit son énergie uniquement de la **BATTERY 1** via le **BCL** de la batterie.", "is_correct": false, "explanation": "Le schéma ne montre pas une alimentation exclusive du démarreur APU par la seule BATTERY 1. La liaison indiquée passe par la branche APU TR / APU BATTERY."}, {"id": "D", "text": "L’APU STARTER est alimenté par l’**EXTERNAL POWER B** en permanence.", "is_correct": false, "explanation": "La puissance externe peut alimenter le réseau AC au sol, mais elle n’est pas la voie permanente d’alimentation du démarreur APU dans l’architecture représentée."}, {"id": "E", "text": "L’APU STARTER est alimenté par le **STATIC INVERTER**.", "is_correct": false, "explanation": "Le static inverter intervient dans une logique de secours sur l’AC essentiel. Il n’est pas indiqué comme source du démarreur APU."}], "coverage_label": "Architecture DC : vue d’ensemble", "learning_objective": "Identifier la source réellement utilisée pour l’alimentation du démarreur APU.", "correction_summary": "Le démarreur APU est rattaché à la branche APU TR / APU BATTERY. Le piège consiste à confondre cette alimentation de démarrage avec les sources AC générales ou la seule batterie principale.", "course_clarification": "L’**APU BATTERY** fournit l’énergie de démarrage associée à l’APU. L’**APU TR** s’inscrit dans la chaîne de conversion/liaison qui permet cette alimentation.", "source_refs": []}, {"question_id": "S4-1-Q4", "prompt": "Quel est le rôle du **STATIC INVERTER** dans la configuration de secours ?", "difficulty": "easy", "options": [{"id": "A", "text": "Le static inverter transforme le **DC SYSTEM** en AC pour alimenter l’ensemble du réseau AC principal en situation normale.", "is_correct": false, "explanation": "Le rôle décrit est limité à une partie du réseau AC essentiel et à une situation de secours. Il ne s’agit pas d’une alimentation normale de tout le réseau AC."}, {"id": "B", "text": "Le static inverter est alimenté directement par les **IDGs** sans passer par les batteries.", "is_correct": false, "explanation": "Le schéma montre l’inverse : ce sont les batteries qui alimentent le static inverter dans la logique de secours."}, {"id": "C", "text": "Le static inverter alimente directement le **DC SYSTEM** en courant continu.", "is_correct": false, "explanation": "Un inverter produit de l’AC à partir d’une source DC ; il n’a pas pour rôle d’alimenter directement un réseau continu."}, {"id": "D", "text": "Le static inverter remplace les **TR** en permanence pour la distribution DC.", "is_correct": false, "explanation": "Les TR assurent la conversion AC/DC pour le réseau continu. Le static inverter n’a pas cette fonction et n’est pas un remplacement permanent des TR."}, {"id": "E", "text": "Quand aucune autre source AC n’est disponible, un **static inverter** alimenté par les batteries peut fournir une partie du **AC Essential electrical system network**.", "is_correct": true, "explanation": "C’est exactement la fonction de secours indiquée : les batteries alimentent le static inverter, qui maintient une partie du réseau AC essentiel en l’absence des autres sources AC."}], "coverage_label": "Architecture DC : vue d’ensemble", "learning_objective": "Interpréter la fonction de secours du static inverter et son lien avec les batteries.", "correction_summary": "Le static inverter sert à maintenir une partie du réseau AC essentiel lorsque toutes les autres sources AC sont indisponibles. Le piège est de lui attribuer un rôle permanent ou une fonction de distribution DC.", "course_clarification": "Un **inverter** convertit du DC en AC. Ici, il intervient en secours, alimenté par les batteries, pour préserver l’**AC Essential electrical system network**.", "source_refs": []}, {"question_id": "S4-1-Q5", "prompt": "Quels blocs de contrôle sont visibles dans l’architecture de génération DC ?", "difficulty": "easy", "options": [{"id": "A", "text": "Les blocs de contrôle visibles sont uniquement les **BCLs**.", "is_correct": false, "explanation": "Les BCLs sont présents dans la chaîne batterie, mais ils ne constituent pas les seuls blocs de contrôle visibles sur l’architecture."}, {"id": "B", "text": "Le **GAPCU** commande les **IDGs** à la place des GCUs.", "is_correct": false, "explanation": "Les IDGs sont contrôlés et surveillés par leurs **GCUs** respectifs. Le GAPCU est lié à la gestion auxiliaire, pas au pilotage des IDGs moteurs."}, {"id": "C", "text": "Les blocs de contrôle visibles comprennent les **GCUs**, l’**EMER GEN GCU** et le **GAPCU**.", "is_correct": true, "explanation": "Le schéma fait apparaître ces unités comme les organes de contrôle et de surveillance associés aux générateurs et aux sources auxiliaires."}, {"id": "D", "text": "L’**EMER GEN GCU** n’apparaît pas dans la logique de contrôle du schéma.", "is_correct": false, "explanation": "L’EMER GEN GCU est explicitement mentionné comme unité de commande et de surveillance de l’EMER GEN."}, {"id": "E", "text": "Les **TR** assurent eux-mêmes la fonction de commande des générateurs.", "is_correct": false, "explanation": "Les TR sont des convertisseurs, pas des unités de commande. La commande est assurée par les GCUs, l’EMER GEN GCU et le GAPCU."}], "coverage_label": "Architecture DC : vue d’ensemble", "learning_objective": "Reconnaître les unités de contrôle associées aux sources électriques de l’avion.", "correction_summary": "Les unités de contrôle à repérer sont les GCUs, l’EMER GEN GCU et le GAPCU. Le piège est de confondre les convertisseurs de puissance avec les organes de commande.", "course_clarification": "Un **GCU** supervise un générateur. Le **GAPCU** gère la logique de puissance auxiliaire, tandis que l’**EMER GEN GCU** surveille l’équipement de secours.", "source_refs": []}], "subpart_id": "S4", "anchor_slide_id": "S4-1", "question_count_target": 5, "title": "QCM - Architecture DC : vue d’ensemble"}</script>
   <script>
     (function () {

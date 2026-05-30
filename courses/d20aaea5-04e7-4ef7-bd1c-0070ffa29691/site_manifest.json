@@ -1,11 +1,12 @@
 {
-  "site_build_version": 53,
-  "cache_token": "53-f28e317309a9",
+  "site_build_version": 57,
+  "cache_token": "57-13408515ed4d",
   "viewer_mode": "user",
   "page_count": 61,
   "slide_count": 30,
   "quiz_count": 31,
   "audio_page_count": 61,
+  "course_logo_href": "",
   "pages": [
     {
       "page_id": "S1-1",

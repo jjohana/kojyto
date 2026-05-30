@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Interaction entre santé, sécurité et qualité</title>
   <script>
     (function () {
@@ -13,6 +13,22 @@
       if (params.get("deck") === "1") {
         document.documentElement.dataset.deck = "1";
       }
+      function syncVisualViewportGap() {
+        const viewport = window.visualViewport;
+        if (!viewport) {
+          return;
+        }
+        const gap = Math.max(0, Math.round(window.innerHeight - viewport.height - viewport.offsetTop));
+        document.documentElement.style.setProperty("--visual-viewport-bottom-gap", gap + "px");
+      }
+      syncVisualViewportGap();
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", syncVisualViewportGap);
+        window.visualViewport.addEventListener("scroll", syncVisualViewportGap);
+      }
+      window.addEventListener("orientationchange", function () {
+        window.setTimeout(syncVisualViewportGap, 120);
+      });
     }());
   </script>
   <style>
@@ -34,6 +50,17 @@
   --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
   --content-width: 1360px;
   --reading-width: 76ch;
+  --visual-viewport-bottom-gap: 0px;
+  --browser-toolbar-bottom-gap: 0px;
+  --fixed-bottom-clearance: max(var(--browser-toolbar-bottom-gap), var(--visual-viewport-bottom-gap));
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (hover: none) and (pointer: coarse) and (max-width: 820px) {
+    :root {
+      --browser-toolbar-bottom-gap: 72px;
+    }
+  }
 }
 
 @keyframes ambient-float {
@@ -212,6 +239,8 @@ html[data-embed="1"] body::after {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-sizing: border-box;
+  min-height: 44px;
   padding: 12px 14px;
   border-radius: 14px;
   background: rgba(12, 110, 130, 0.08);
@@ -219,6 +248,8 @@ html[data-embed="1"] body::after {
   color: var(--accent-strong);
   text-decoration: none;
   font-weight: 700;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
 }
 
@@ -479,7 +510,9 @@ html[data-embed="1"] body::after {
   justify-content: space-between;
   gap: 12px;
   margin: 0 auto;
+  width: 100%;
   max-width: var(--content-width);
+  box-sizing: border-box;
   padding: 14px 18px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.78);
@@ -510,12 +543,15 @@ html[data-embed="1"] body::after {
 
 .page-step-nav {
   position: fixed;
-  right: max(18px, env(safe-area-inset-right));
-  bottom: max(18px, env(safe-area-inset-bottom));
+  right: 18px;
+  right: calc(18px + env(safe-area-inset-right, 0px));
+  bottom: 18px;
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   z-index: 58;
   display: flex;
   gap: 6px;
   align-items: center;
+  box-sizing: border-box;
   width: max-content;
   max-width: calc(100vw - 36px);
   padding: 6px;
@@ -532,6 +568,7 @@ html[data-embed="1"] body::after {
   padding: 11px 16px;
   border-radius: 14px;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .page-step-nav .nav-link-arrow {
@@ -559,7 +596,7 @@ html[data-embed="1"] body::after {
   margin: 0 auto;
   min-height: calc(100vh - 56px);
   box-sizing: border-box;
-  padding: 4px 0 92px;
+  padding: 4px 0 calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 .hero-panel {
@@ -736,6 +773,35 @@ html[data-embed="1"] body::after {
   justify-content: space-between;
   gap: 12px;
   align-items: baseline;
+}
+
+.visual-summary-body {
+  display: grid;
+  grid-template-columns: minmax(88px, 148px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.visual-summary-body:not(.has-course-logo) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.course-logo-rail {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(248, 252, 253, 0.92);
+  border: 1px solid rgba(20, 37, 58, 0.1);
+}
+
+.course-logo-rail img {
+  display: block;
+  max-width: 100%;
+  max-height: 108px;
+  object-fit: contain;
 }
 
 .visual-summary-panel .visual-summary-title {
@@ -1269,7 +1335,7 @@ tr:nth-child(even):not(:first-child) td {
   margin: 0 auto;
   display: grid;
   gap: 22px;
-  padding-bottom: 92px;
+  padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 .quiz-hero {
@@ -1431,6 +1497,7 @@ tr:nth-child(even):not(:first-child) td {
 .quiz-panel .quiz-actions-sticky {
   position: sticky;
   bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   z-index: 24;
   align-self: start;
   width: fit-content;
@@ -1698,7 +1765,7 @@ html[data-embed="1"] .quiz-shell {
   max-width: none;
   min-height: auto;
   margin: 0;
-  padding: 0 0 92px;
+  padding: 0 0 calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 html[data-embed="1"] .site-main {
@@ -1821,6 +1888,24 @@ html[data-embed="1"] .visual-summary-panel .visual-summary-title {
   line-height: 1.02;
 }
 
+html[data-embed="1"] .visual-summary-body {
+  grid-template-columns: minmax(56px, 86px) minmax(0, 1fr);
+  gap: 8px;
+}
+
+html[data-embed="1"] .visual-summary-body:not(.has-course-logo) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+html[data-embed="1"] .course-logo-rail {
+  padding: 8px;
+  border-radius: 12px;
+}
+
+html[data-embed="1"] .course-logo-rail img {
+  max-height: 58px;
+}
+
 @media (max-width: 760px) {
   html[data-embed="1"] .narration-panel {
     grid-template-columns: 1fr;
@@ -1836,6 +1921,27 @@ html[data-embed="1"] .visual-summary-panel .visual-summary-title {
   html[data-embed="1"] .narration-panel audio {
     grid-column: auto;
     grid-row: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .visual-summary-body {
+    grid-template-columns: minmax(72px, 112px) minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .visual-summary-body:not(.has-course-logo) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .course-logo-rail {
+    justify-items: center;
+    padding: 8px;
+    border-radius: 12px;
+  }
+
+  .course-logo-rail img {
+    max-height: 74px;
   }
 }
 
@@ -2211,7 +2317,9 @@ html[data-deck="1"] .site-sidebar {
 
   .page-step-nav {
     right: 14px;
+    right: calc(14px + env(safe-area-inset-right, 0px));
     bottom: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   }
 
   .completion-celebration {
@@ -2232,6 +2340,7 @@ html[data-deck="1"] .site-sidebar {
 
   .quiz-panel .quiz-actions-sticky {
     bottom: 10px;
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
     width: 100%;
     justify-content: stretch;
   }
@@ -2241,17 +2350,62 @@ html[data-deck="1"] .site-sidebar {
   }
 
   .page-step-nav {
-    left: 14px;
-    right: 14px;
+    left: 10px;
+    left: calc(10px + env(safe-area-inset-left, 0px));
+    right: 10px;
+    right: calc(10px + env(safe-area-inset-right, 0px));
+    bottom: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
     width: auto;
     max-width: none;
     justify-content: stretch;
+    padding: 6px;
+    border-radius: 20px;
   }
 
   .page-step-nav .nav-link {
     flex: 1 1 0;
     min-width: 0;
-    padding-inline: 10px;
+    min-height: 52px;
+    padding-inline: 8px;
+    font-size: 0.94rem;
+  }
+
+  .slide-toolbar {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .toolbar-meta {
+    gap: 6px;
+    font-size: 0.78rem;
+  }
+
+  .toolbar-actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+    gap: 6px;
+  }
+
+  .toolbar-actions .nav-link {
+    min-height: 40px;
+    padding: 8px;
+    font-size: 0.88rem;
+  }
+
+  .site-sidebar {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .site-sidebar p,
+  .site-sidebar .sidebar-list {
+    display: none;
+  }
+
+  .site-sidebar nav {
+    grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
   }
 
   .hero-copy h1,
@@ -2272,6 +2426,23 @@ html[data-deck="1"] .site-sidebar {
   }
 }
 
+@media (max-width: 380px) {
+  .page-step-nav {
+    gap: 4px;
+    padding: 5px;
+  }
+
+  .page-step-nav .nav-link {
+    min-height: 50px;
+    padding-inline: 6px;
+    font-size: 0.88rem;
+  }
+
+  .page-step-nav .nav-link-arrow {
+    font-size: 0.92rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2282,15 +2453,15 @@ html[data-deck="1"] .site-sidebar {
   }
 }
 </style>
-  
+
 </head>
 <body class="viewer-user page-quiz">
   <div class="page-shell with-site-nav">
-    
+
     <aside class="site-sidebar">
       <h2>Économie Gestion Bac Pro Aéronautique</h2>
       <p>Parcours épuré avec navigation et QCM.</p>
-      
+
       <section class="gamification-panel" data-gamification-widget>
         <div class="gamification-header">
           <strong>Progression</strong>
@@ -2304,33 +2475,33 @@ html[data-deck="1"] .site-sidebar {
         </div>
         <p data-gamification-next>Prochaine : Bronze</p>
       </section>
-      
+
       <nav>
-        
-        <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
-        
-        
-        
+
+        <a class="sidebar-action" href="/public/index.html">Catalogue des cours</a>
+
+
+
         <a class="sidebar-action" href="index.html">Retour au cours</a>
-        
-        
-        
+
+
+
       </nav>
       <div class="sidebar-list">
-        
+
         <a
           class="sidebar-slide"
           href="s1-s2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s1_s2</strong>
           <span>Couverture et sommaire du module « L’individu dans l’organisation »</span>
-          
+
           <span>Identifier le support, son autrice et les grandes thématiques annoncées.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1-s2.html"
@@ -2339,24 +2510,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s1_s2</strong>
           <span>Couverture et sommaire du module « L’individu dans l’organisation »</span>
-          
+
           <span>2 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s3</strong>
           <span>Découverte des métiers de l’aéronautique</span>
-          
+
           <span>Identifier les grandes familles de métiers du secteur et situer le pilote parmi d’autres fonctions essentielles.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3.html"
@@ -2365,24 +2536,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s3</strong>
           <span>Découverte des métiers de l’aéronautique</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s4</strong>
           <span>Ingénieur en aéronautique</span>
-          
+
           <span>Identifier les missions et les champs de collaboration de l’ingénieur aéronautique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s4.html"
@@ -2391,24 +2562,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s4</strong>
           <span>Ingénieur en aéronautique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s5</strong>
           <span>Pilote de ligne</span>
-          
+
           <span>Repérer les responsabilités du pilote de ligne et les conditions d’accès au métier.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5.html"
@@ -2417,24 +2588,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s5</strong>
           <span>Pilote de ligne</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s6.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s6</strong>
           <span>Mécanicien moteur / mécanicien aéronautique</span>
-          
+
           <span>Comprendre le rôle du mécanicien aéronautique dans la maintenance et la sécurité.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s6.html"
@@ -2443,24 +2614,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s6</strong>
           <span>Mécanicien moteur / mécanicien aéronautique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s7</strong>
           <span>Avitailleur</span>
-          
+
           <span>Identifier la mission de ravitaillement carburant et ses contraintes techniques.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7.html"
@@ -2469,24 +2640,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s7</strong>
           <span>Avitailleur</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s8.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s8</strong>
           <span>Aiguilleur du ciel</span>
-          
+
           <span>Comprendre le rôle de contrôle et de coordination du trafic aérien.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s8.html"
@@ -2495,24 +2666,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s8</strong>
           <span>Aiguilleur du ciel</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s9.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s9</strong>
           <span>Chef d’escale</span>
-          
+
           <span>Saisir les responsabilités de coordination au sol lors d’une escale.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s9.html"
@@ -2521,24 +2692,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s9</strong>
           <span>Chef d’escale</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s10.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s10</strong>
           <span>Technicien d’essai</span>
-          
+
           <span>Identifier la fonction d’essai et de validation des composants et systèmes aéronautiques.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s10.html"
@@ -2547,24 +2718,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s10</strong>
           <span>Technicien d’essai</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s11-s12.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s11_s12</strong>
           <span>Ouverture : droits et devoirs du salarié / contrat de travail</span>
-          
+
           <span>Installer la transition vers la relation salarié-entreprise et ses règles de base.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s11-s12.html"
@@ -2573,24 +2744,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s11_s12</strong>
           <span>Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s13.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s13</strong>
           <span>Les droits du salarié</span>
-          
+
           <span>Identifier les principaux droits reconnus au salarié.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s13.html"
@@ -2599,24 +2770,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s13</strong>
           <span>Les droits du salarié</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s14.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s14</strong>
           <span>Les devoirs du salarié</span>
-          
+
           <span>Repérer les obligations principales imposées au salarié.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s14.html"
@@ -2625,24 +2796,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s14</strong>
           <span>Les devoirs du salarié</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s15.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s15</strong>
           <span>Le contrat de travail</span>
-          
+
           <span>Comprendre la définition, les formes et les éléments essentiels du contrat de travail.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s15.html"
@@ -2651,50 +2822,50 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s15</strong>
           <span>Le contrat de travail</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s16.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s16</strong>
           <span>TP – L’individu dans l’organisation</span>
-          
+
           <span>Situer la page de transition vers le travail pratique du module.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s17.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s17</strong>
           <span>Ouverture de la partie « Santé, sécurité et qualité en entreprise aéronautique »</span>
-          
+
           <span>Repérer l’entrée dans la partie consacrée aux exigences de santé, sécurité et qualité.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s18.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s18</strong>
           <span>Santé en entreprise aéronautique</span>
-          
+
           <span>Identifier les risques professionnels et les mesures de prévention liées à la santé au travail.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s18.html"
@@ -2703,24 +2874,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s18</strong>
           <span>Santé en entreprise aéronautique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s19.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s19</strong>
           <span>Sécurité en entreprise aéronautique</span>
-          
+
           <span>Comprendre la prévention des accidents et les dispositifs de sécurité du secteur.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s19.html"
@@ -2729,24 +2900,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s19</strong>
           <span>Sécurité en entreprise aéronautique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s20.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s20</strong>
           <span>Qualité en entreprise aéronautique</span>
-          
+
           <span>Identifier le rôle de la qualité, les normes et les outils de maîtrise de la conformité.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s20.html"
@@ -2755,24 +2926,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s20</strong>
           <span>Qualité en entreprise aéronautique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s21.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s21</strong>
           <span>Interaction entre santé, sécurité et qualité</span>
-          
+
           <span>Montrer les liens entre conditions de travail, prévention des risques et qualité des produits.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide active"
           href="slide-s21.html"
@@ -2781,24 +2952,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s21</strong>
           <span>Interaction entre santé, sécurité et qualité</span>
-          
+
           <span>3 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s22.html"
           data-page-kind="slide"
-          
+
         >
           <strong>s22</strong>
           <span>Rémunération et parcours professionnels</span>
-          
+
           <span>Repérer les éléments de rémunération et les voies d’évolution de carrière dans le secteur aéronautique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s22.html"
@@ -2807,11 +2978,11 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice s22</strong>
           <span>Rémunération et parcours professionnels</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="final-validation.html"
@@ -2820,47 +2991,47 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Validation finale</strong>
           <span>Validation finale - Économie-Gestion Bac Pro Aéronautique</span>
-          
+
           <span>25 questions et correction après soumission.</span>
-          
+
         </a>
-        
+
       </div>
     </aside>
-    
+
 
     <main class="site-main">
-      
+
       <div class="slide-toolbar">
         <div class="toolbar-meta">
           <span>Page 36/39</span>
-          
+
           <span>Exercice</span>
         </div>
         <div class="toolbar-actions">
-          
-          <a class="nav-link" href="../../index.html">Catalogue</a>
-          
-          
+
+          <a class="nav-link" href="/public/index.html">Catalogue</a>
+
+
           <a class="nav-link" href="s21.html" data-deck-action="previous">Précédent</a>
-          
-          
+
+
           <a class="nav-link" href="s22.html" data-deck-action="next">Suivant</a>
-          
+
         </div>
       </div>
-      
 
-      
+
+
       <nav class="page-step-nav quiz-step-nav" aria-label="Navigation rapide du parcours">
-        
+
         <a class="nav-link" href="s21.html" data-deck-action="previous"><span class="nav-link-arrow" aria-hidden="true">&larr;</span><span>Précédent</span></a>
-        
-        
+
+
         <a class="nav-link page-step-nav-primary" href="s22.html" data-deck-action="next"><span>Suivant</span><span class="nav-link-arrow" aria-hidden="true">&rarr;</span></a>
-        
+
       </nav>
-      
+
 
       <section class="quiz-shell">
         <section class="quiz-hero">
@@ -2868,16 +3039,16 @@ html[data-deck="1"] .site-sidebar {
             <p class="eyebrow">Exercice</p>
             <h1>Interaction entre santé, sécurité et qualité</h1>
             <p>
-              
+
               Correction immédiate question par question.
-              
+
             </p>
           </div>
-          
+
         </section>
 
-        
-        
+
+
         <section class="narration-panel">
           <div class="narration-panel-header">
             <strong>Introduction de l'entrainement</strong>
@@ -2887,7 +3058,7 @@ html[data-deck="1"] .site-sidebar {
             </div>
           </div>
           <audio controls preload="auto" autoplay data-slide-audio>
-            <source src="audio/quizzes/slide-s21.mp3?v=53-ccea6bb120c0" type="audio/mpeg">
+            <source src="audio/quizzes/slide-s21.mp3?v=57-0a34ab86d263" type="audio/mpeg">
           </audio>
         </section>
         <script>
@@ -2969,7 +3140,7 @@ html[data-deck="1"] .site-sidebar {
             window.addEventListener("load", playSlideAudio, { once: true });
           }());
         </script>
-        
+
 
         <section
           id="quiz-app"
@@ -3013,8 +3184,8 @@ html[data-deck="1"] .site-sidebar {
       });
     }());
   </script>
-  
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::53-ccea6bb120c0", "legacy_storage_keys": ["kojyto:gamification::24-3d2acaa296e8", "kojyto:gamification::25-af00ebda180b", "kojyto:gamification::26-1ccd7b029ee2", "kojyto:gamification::27-3b1a420970e2", "kojyto:gamification::28-d42db14576c5", "kojyto:gamification::29-aeb86f789f62", "kojyto:gamification::30-ab88faff09cc", "kojyto:gamification::31-ca9dc71adcf7", "kojyto:gamification::32-aab4c36d9b13", "kojyto:gamification::33-cbd8a6c499ac", "kojyto:gamification::34-07b66a478658", "kojyto:gamification::35-de64c81231c8", "kojyto:gamification::36-25341f5a65fa", "kojyto:gamification::37-4834781f34c0", "kojyto:gamification::38-f9e7c5ec536d", "kojyto:gamification::39-22730b2ca29c", "kojyto:gamification::40-09109eeba27d", "kojyto:gamification::41-f0fc45297328", "kojyto:gamification::42-01df73df46ab", "kojyto:gamification::43-8a7cecc90de8", "kojyto:gamification::44-e73f2be40c24", "kojyto:gamification::45-2eab7f82ab14", "kojyto:gamification::46-eb9b7763a182", "kojyto:gamification::47-2c9613fec377", "kojyto:gamification::48-f21b3b2f0aa6", "kojyto:gamification::49-093415a617e4", "kojyto:gamification::50-06d5b9b6f336", "kojyto:gamification::51-b5e744a62524", "kojyto:gamification::52-f0a212862a69"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::s1_s2", "quiz_type": "subpart", "title": "Couverture et sommaire du module « L’individu dans l’organisation »", "href": "slide-s1-s2.html", "base_xp": 100}, {"quiz_id": "slide::s3", "quiz_type": "subpart", "title": "Découverte des métiers de l’aéronautique", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::s4", "quiz_type": "subpart", "title": "Ingénieur en aéronautique", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::s5", "quiz_type": "subpart", "title": "Pilote de ligne", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::s6", "quiz_type": "subpart", "title": "Mécanicien moteur / mécanicien aéronautique", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::s7", "quiz_type": "subpart", "title": "Avitailleur", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::s8", "quiz_type": "subpart", "title": "Aiguilleur du ciel", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::s9", "quiz_type": "subpart", "title": "Chef d’escale", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::s10", "quiz_type": "subpart", "title": "Technicien d’essai", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::s11_s12", "quiz_type": "subpart", "title": "Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »", "href": "slide-s11-s12.html", "base_xp": 100}, {"quiz_id": "slide::s13", "quiz_type": "subpart", "title": "Les droits du salarié", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::s14", "quiz_type": "subpart", "title": "Les devoirs du salarié", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::s15", "quiz_type": "subpart", "title": "Le contrat de travail", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::s18", "quiz_type": "subpart", "title": "Santé en entreprise aéronautique", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::s19", "quiz_type": "subpart", "title": "Sécurité en entreprise aéronautique", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::s20", "quiz_type": "subpart", "title": "Qualité en entreprise aéronautique", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "slide::s21", "quiz_type": "subpart", "title": "Interaction entre santé, sécurité et qualité", "href": "slide-s21.html", "base_xp": 100}, {"quiz_id": "slide::s22", "quiz_type": "subpart", "title": "Rémunération et parcours professionnels", "href": "slide-s22.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique", "href": "final-validation.html", "base_xp": 250}]}</script>
+
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::57-0a34ab86d263", "legacy_storage_keys": ["kojyto:gamification::24-3d2acaa296e8", "kojyto:gamification::25-af00ebda180b", "kojyto:gamification::26-1ccd7b029ee2", "kojyto:gamification::27-3b1a420970e2", "kojyto:gamification::28-d42db14576c5", "kojyto:gamification::29-aeb86f789f62", "kojyto:gamification::30-ab88faff09cc", "kojyto:gamification::31-ca9dc71adcf7", "kojyto:gamification::32-aab4c36d9b13", "kojyto:gamification::33-cbd8a6c499ac", "kojyto:gamification::34-07b66a478658", "kojyto:gamification::35-de64c81231c8", "kojyto:gamification::36-25341f5a65fa", "kojyto:gamification::37-4834781f34c0", "kojyto:gamification::38-f9e7c5ec536d", "kojyto:gamification::39-22730b2ca29c", "kojyto:gamification::40-09109eeba27d", "kojyto:gamification::41-f0fc45297328", "kojyto:gamification::42-01df73df46ab", "kojyto:gamification::43-8a7cecc90de8", "kojyto:gamification::44-e73f2be40c24", "kojyto:gamification::45-2eab7f82ab14", "kojyto:gamification::46-eb9b7763a182", "kojyto:gamification::47-2c9613fec377", "kojyto:gamification::48-f21b3b2f0aa6", "kojyto:gamification::49-093415a617e4", "kojyto:gamification::50-06d5b9b6f336", "kojyto:gamification::51-b5e744a62524", "kojyto:gamification::52-f0a212862a69", "kojyto:gamification::53-ccea6bb120c0", "kojyto:gamification::54-67367694e26f", "kojyto:gamification::55-4db4f8302860", "kojyto:gamification::56-0d7db2c9ec44"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::s1_s2", "quiz_type": "subpart", "title": "Couverture et sommaire du module « L’individu dans l’organisation »", "href": "slide-s1-s2.html", "base_xp": 100}, {"quiz_id": "slide::s3", "quiz_type": "subpart", "title": "Découverte des métiers de l’aéronautique", "href": "slide-s3.html", "base_xp": 100}, {"quiz_id": "slide::s4", "quiz_type": "subpart", "title": "Ingénieur en aéronautique", "href": "slide-s4.html", "base_xp": 100}, {"quiz_id": "slide::s5", "quiz_type": "subpart", "title": "Pilote de ligne", "href": "slide-s5.html", "base_xp": 100}, {"quiz_id": "slide::s6", "quiz_type": "subpart", "title": "Mécanicien moteur / mécanicien aéronautique", "href": "slide-s6.html", "base_xp": 100}, {"quiz_id": "slide::s7", "quiz_type": "subpart", "title": "Avitailleur", "href": "slide-s7.html", "base_xp": 100}, {"quiz_id": "slide::s8", "quiz_type": "subpart", "title": "Aiguilleur du ciel", "href": "slide-s8.html", "base_xp": 100}, {"quiz_id": "slide::s9", "quiz_type": "subpart", "title": "Chef d’escale", "href": "slide-s9.html", "base_xp": 100}, {"quiz_id": "slide::s10", "quiz_type": "subpart", "title": "Technicien d’essai", "href": "slide-s10.html", "base_xp": 100}, {"quiz_id": "slide::s11_s12", "quiz_type": "subpart", "title": "Ouverture de la partie « Droits et devoirs du salarié / Contrat de travail »", "href": "slide-s11-s12.html", "base_xp": 100}, {"quiz_id": "slide::s13", "quiz_type": "subpart", "title": "Les droits du salarié", "href": "slide-s13.html", "base_xp": 100}, {"quiz_id": "slide::s14", "quiz_type": "subpart", "title": "Les devoirs du salarié", "href": "slide-s14.html", "base_xp": 100}, {"quiz_id": "slide::s15", "quiz_type": "subpart", "title": "Le contrat de travail", "href": "slide-s15.html", "base_xp": 100}, {"quiz_id": "slide::s18", "quiz_type": "subpart", "title": "Santé en entreprise aéronautique", "href": "slide-s18.html", "base_xp": 100}, {"quiz_id": "slide::s19", "quiz_type": "subpart", "title": "Sécurité en entreprise aéronautique", "href": "slide-s19.html", "base_xp": 100}, {"quiz_id": "slide::s20", "quiz_type": "subpart", "title": "Qualité en entreprise aéronautique", "href": "slide-s20.html", "base_xp": 100}, {"quiz_id": "slide::s21", "quiz_type": "subpart", "title": "Interaction entre santé, sécurité et qualité", "href": "slide-s21.html", "base_xp": 100}, {"quiz_id": "slide::s22", "quiz_type": "subpart", "title": "Rémunération et parcours professionnels", "href": "slide-s22.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Économie-Gestion Bac Pro Aéronautique", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");
@@ -3256,7 +3427,7 @@ html[data-deck="1"] .site-sidebar {
   });
 }());
 </script>
-  
+
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::s21", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "s21_q1", "prompt": "Quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "La qualité des produits n’est pas liée aux conditions de santé et de sécurité au travail.", "is_correct": false, "explanation": "Cette affirmation contredit le lien explicite donné entre santé, sécurité et qualité. Le document établit au contraire une influence directe."}, {"id": "B", "text": "Une baisse de santé au travail améliore automatiquement la qualité finale.", "is_correct": false, "explanation": "Une fatigue ou une mauvaise condition de travail augmente le risque d’erreur, elle ne peut pas améliorer automatiquement la qualité."}, {"id": "C", "text": "La sécurité des employés influence seulement le confort, pas la qualité.", "is_correct": false, "explanation": "La sécurité ne se limite pas au confort : elle a un effet sur la fiabilité des opérations et donc sur la qualité des produits."}, {"id": "D", "text": "La santé et la sécurité des employés influencent directement la qualité des produits.", "is_correct": true, "explanation": "L’idée centrale est bien un lien direct entre conditions de travail et qualité. Si la santé ou la sécurité se dégrade, la qualité peut elle aussi être affectée."}, {"id": "E", "text": "La qualité des produits dépend uniquement des machines, jamais des personnes.", "is_correct": false, "explanation": "Le rôle des personnes est essentiel : leur état de santé, leur vigilance et leur formation influencent la qualité obtenue."}], "coverage_label": "Santé, sécurité et qualité", "learning_objective": "Identifier le lien direct entre conditions de travail et qualité des produits.", "correction_summary": "La bonne affirmation relie directement santé/sécurité et qualité. Le piège consiste à croire que la qualité dépend seulement des équipements ou du résultat final sans tenir compte des personnes.", "course_clarification": "La qualité d’un produit dépend aussi des conditions dans lesquelles le travail est réalisé. Quand les employés sont en bonne santé et en sécurité, les erreurs diminuent et la production est plus fiable.", "source_refs": []}, {"question_id": "s21_q2", "prompt": "Quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "SMS signifie Quality Management System et QMS signifie Safety Management System.", "is_correct": false, "explanation": "Les deux sigles sont inversés ici. SMS renvoie à la sécurité, tandis que QMS renvoie à la qualité."}, {"id": "B", "text": "SMS signifie Safety Management System et QMS signifie Quality Management System.", "is_correct": true, "explanation": "Les deux sigles sont donnés avec leur développement exact : SMS pour la gestion de la sécurité et QMS pour la gestion de la qualité."}, {"id": "C", "text": "SMS désigne un service médical et QMS un questionnaire qualité.", "is_correct": false, "explanation": "Ces développements ne correspondent pas aux sigles présentés. Ils désignent des systèmes de gestion, pas des outils administratifs ou médicaux."}, {"id": "D", "text": "Les sigles SMS et QMS ne renvoient à aucun système de gestion.", "is_correct": false, "explanation": "Cette affirmation est fausse : SMS et QMS nomment précisément deux systèmes de gestion utilisés pour la sécurité et la qualité."}, {"id": "E", "text": "QMS signifie Maintenance Safety System.", "is_correct": false, "explanation": "QMS ne concerne pas la maintenance de sécurité ; le sigle correspond à Quality Management System, donc à la gestion de la qualité."}], "coverage_label": "SMS et QMS", "learning_objective": "Reconnaître et associer correctement les sigles SMS et QMS à leur signification.", "correction_summary": "SMS correspond à la sécurité et QMS à la qualité. Le piège principal est d’inverser les deux sigles ou de leur attribuer un sens inventé.", "course_clarification": "Un sigle est une suite de lettres qui résume un nom plus long. Ici, SMS sert pour la gestion de la sécurité et QMS pour la gestion de la qualité, deux dimensions complémentaires.", "source_refs": []}, {"question_id": "s21_q3", "prompt": "Quelle affirmation est exacte ?", "difficulty": "easy", "options": [{"id": "A", "text": "Un technicien fatigué ou mal formé peut commettre une erreur de maintenance, ce qui peut affecter la sécurité et la qualité de l’avion.", "is_correct": true, "explanation": "L’exemple donné relie la fatigue ou le manque de formation à une erreur de maintenance, puis à des conséquences sur la sécurité et la qualité."}, {"id": "B", "text": "Un technicien fatigué travaille toujours avec plus de précision.", "is_correct": false, "explanation": "La fatigue diminue la vigilance et augmente le risque d’erreur ; elle ne garantit pas une meilleure précision."}, {"id": "C", "text": "Une erreur de maintenance n’a aucun effet sur la sécurité de l’avion.", "is_correct": false, "explanation": "Cette affirmation est contraire à l’exemple donné : une erreur peut toucher la sécurité de l’appareil."}, {"id": "D", "text": "La fatigue d’un technicien améliore la qualité de l’avion en réduisant le temps de travail.", "is_correct": false, "explanation": "Gagner du temps ne compense pas une baisse de vigilance. La fatigue favorise plutôt les défauts et les oublis."}, {"id": "E", "text": "Un manque de formation ne peut pas favoriser d’erreur de maintenance.", "is_correct": false, "explanation": "Le manque de formation est justement présenté comme un facteur possible d’erreur, car il réduit la maîtrise des gestes attendus."}], "coverage_label": "Erreur de maintenance et conséquences", "learning_objective": "Comprendre la chaîne cause-effet entre fatigue, formation, erreur de maintenance, sécurité et qualité.", "correction_summary": "La bonne réponse décrit la chaîne complète : fatigue ou mauvaise formation  erreur de maintenance  impact sur sécurité et qualité. Le piège est de nier l’effet des facteurs humains sur la fiabilité des opérations.", "course_clarification": "Une erreur de maintenance peut avoir des conséquences techniques et opérationnelles. Quand la vigilance baisse ou que la formation manque, le risque d’erreur augmente, et cela peut toucher à la fois la sécurité et la qualité.", "source_refs": []}], "subpart_id": "s21", "anchor_slide_id": "s21", "question_count_target": 3, "title": "QCM - Interaction entre santé, sécurité et qualité"}</script>
   <script>
     (function () {

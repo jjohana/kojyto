@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Consommation horaire et consommation spécifique</title>
   <script>
     (function () {
@@ -13,6 +13,22 @@
       if (params.get("deck") === "1") {
         document.documentElement.dataset.deck = "1";
       }
+      function syncVisualViewportGap() {
+        const viewport = window.visualViewport;
+        if (!viewport) {
+          return;
+        }
+        const gap = Math.max(0, Math.round(window.innerHeight - viewport.height - viewport.offsetTop));
+        document.documentElement.style.setProperty("--visual-viewport-bottom-gap", gap + "px");
+      }
+      syncVisualViewportGap();
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", syncVisualViewportGap);
+        window.visualViewport.addEventListener("scroll", syncVisualViewportGap);
+      }
+      window.addEventListener("orientationchange", function () {
+        window.setTimeout(syncVisualViewportGap, 120);
+      });
     }());
   </script>
   <style>
@@ -34,6 +50,17 @@
   --shadow-soft: 0 14px 36px rgba(20, 37, 58, 0.08);
   --content-width: 1360px;
   --reading-width: 76ch;
+  --visual-viewport-bottom-gap: 0px;
+  --browser-toolbar-bottom-gap: 0px;
+  --fixed-bottom-clearance: max(var(--browser-toolbar-bottom-gap), var(--visual-viewport-bottom-gap));
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (hover: none) and (pointer: coarse) and (max-width: 820px) {
+    :root {
+      --browser-toolbar-bottom-gap: 72px;
+    }
+  }
 }
 
 @keyframes ambient-float {
@@ -212,6 +239,8 @@ html[data-embed="1"] body::after {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-sizing: border-box;
+  min-height: 44px;
   padding: 12px 14px;
   border-radius: 14px;
   background: rgba(12, 110, 130, 0.08);
@@ -219,6 +248,8 @@ html[data-embed="1"] body::after {
   color: var(--accent-strong);
   text-decoration: none;
   font-weight: 700;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
 }
 
@@ -479,7 +510,9 @@ html[data-embed="1"] body::after {
   justify-content: space-between;
   gap: 12px;
   margin: 0 auto;
+  width: 100%;
   max-width: var(--content-width);
+  box-sizing: border-box;
   padding: 14px 18px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.78);
@@ -510,12 +543,15 @@ html[data-embed="1"] body::after {
 
 .page-step-nav {
   position: fixed;
-  right: max(18px, env(safe-area-inset-right));
-  bottom: max(18px, env(safe-area-inset-bottom));
+  right: 18px;
+  right: calc(18px + env(safe-area-inset-right, 0px));
+  bottom: 18px;
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   z-index: 58;
   display: flex;
   gap: 6px;
   align-items: center;
+  box-sizing: border-box;
   width: max-content;
   max-width: calc(100vw - 36px);
   padding: 6px;
@@ -532,6 +568,7 @@ html[data-embed="1"] body::after {
   padding: 11px 16px;
   border-radius: 14px;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .page-step-nav .nav-link-arrow {
@@ -559,7 +596,7 @@ html[data-embed="1"] body::after {
   margin: 0 auto;
   min-height: calc(100vh - 56px);
   box-sizing: border-box;
-  padding: 4px 0 92px;
+  padding: 4px 0 calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 .hero-panel {
@@ -736,6 +773,35 @@ html[data-embed="1"] body::after {
   justify-content: space-between;
   gap: 12px;
   align-items: baseline;
+}
+
+.visual-summary-body {
+  display: grid;
+  grid-template-columns: minmax(88px, 148px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.visual-summary-body:not(.has-course-logo) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.course-logo-rail {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(248, 252, 253, 0.92);
+  border: 1px solid rgba(20, 37, 58, 0.1);
+}
+
+.course-logo-rail img {
+  display: block;
+  max-width: 100%;
+  max-height: 108px;
+  object-fit: contain;
 }
 
 .visual-summary-panel .visual-summary-title {
@@ -1269,7 +1335,7 @@ tr:nth-child(even):not(:first-child) td {
   margin: 0 auto;
   display: grid;
   gap: 22px;
-  padding-bottom: 92px;
+  padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 .quiz-hero {
@@ -1431,6 +1497,7 @@ tr:nth-child(even):not(:first-child) td {
 .quiz-panel .quiz-actions-sticky {
   position: sticky;
   bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   z-index: 24;
   align-self: start;
   width: fit-content;
@@ -1698,7 +1765,7 @@ html[data-embed="1"] .quiz-shell {
   max-width: none;
   min-height: auto;
   margin: 0;
-  padding: 0 0 92px;
+  padding: 0 0 calc(104px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
 }
 
 html[data-embed="1"] .site-main {
@@ -1821,6 +1888,24 @@ html[data-embed="1"] .visual-summary-panel .visual-summary-title {
   line-height: 1.02;
 }
 
+html[data-embed="1"] .visual-summary-body {
+  grid-template-columns: minmax(56px, 86px) minmax(0, 1fr);
+  gap: 8px;
+}
+
+html[data-embed="1"] .visual-summary-body:not(.has-course-logo) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+html[data-embed="1"] .course-logo-rail {
+  padding: 8px;
+  border-radius: 12px;
+}
+
+html[data-embed="1"] .course-logo-rail img {
+  max-height: 58px;
+}
+
 @media (max-width: 760px) {
   html[data-embed="1"] .narration-panel {
     grid-template-columns: 1fr;
@@ -1836,6 +1921,21 @@ html[data-embed="1"] .visual-summary-panel .visual-summary-title {
   html[data-embed="1"] .narration-panel audio {
     grid-column: auto;
     grid-row: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .visual-summary-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .course-logo-rail {
+    justify-items: start;
+  }
+
+  .course-logo-rail img {
+    max-width: min(160px, 52vw);
+    max-height: 82px;
   }
 }
 
@@ -2211,7 +2311,9 @@ html[data-deck="1"] .site-sidebar {
 
   .page-step-nav {
     right: 14px;
+    right: calc(14px + env(safe-area-inset-right, 0px));
     bottom: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
   }
 
   .completion-celebration {
@@ -2232,6 +2334,7 @@ html[data-deck="1"] .site-sidebar {
 
   .quiz-panel .quiz-actions-sticky {
     bottom: 10px;
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
     width: 100%;
     justify-content: stretch;
   }
@@ -2241,17 +2344,62 @@ html[data-deck="1"] .site-sidebar {
   }
 
   .page-step-nav {
-    left: 14px;
-    right: 14px;
+    left: 10px;
+    left: calc(10px + env(safe-area-inset-left, 0px));
+    right: 10px;
+    right: calc(10px + env(safe-area-inset-right, 0px));
+    bottom: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px) + var(--fixed-bottom-clearance));
     width: auto;
     max-width: none;
     justify-content: stretch;
+    padding: 6px;
+    border-radius: 20px;
   }
 
   .page-step-nav .nav-link {
     flex: 1 1 0;
     min-width: 0;
-    padding-inline: 10px;
+    min-height: 52px;
+    padding-inline: 8px;
+    font-size: 0.94rem;
+  }
+
+  .slide-toolbar {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .toolbar-meta {
+    gap: 6px;
+    font-size: 0.78rem;
+  }
+
+  .toolbar-actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+    gap: 6px;
+  }
+
+  .toolbar-actions .nav-link {
+    min-height: 40px;
+    padding: 8px;
+    font-size: 0.88rem;
+  }
+
+  .site-sidebar {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .site-sidebar p,
+  .site-sidebar .sidebar-list {
+    display: none;
+  }
+
+  .site-sidebar nav {
+    grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
   }
 
   .hero-copy h1,
@@ -2272,6 +2420,23 @@ html[data-deck="1"] .site-sidebar {
   }
 }
 
+@media (max-width: 380px) {
+  .page-step-nav {
+    gap: 4px;
+    padding: 5px;
+  }
+
+  .page-step-nav .nav-link {
+    min-height: 50px;
+    padding-inline: 6px;
+    font-size: 0.88rem;
+  }
+
+  .page-step-nav .nav-link-arrow {
+    font-size: 0.92rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2282,7 +2447,7 @@ html[data-deck="1"] .site-sidebar {
   }
 }
 </style>
-  
+
   <script>
     window.MathJax = {
       tex: {
@@ -2295,15 +2460,15 @@ html[data-deck="1"] .site-sidebar {
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-  
+
 </head>
 <body class="viewer-user page-quiz">
   <div class="page-shell with-site-nav">
-    
+
     <aside class="site-sidebar">
       <h2>Cours 8 du 13 janvier 2026 filigrane + 2 docs</h2>
       <p>Parcours épuré avec navigation et QCM.</p>
-      
+
       <section class="gamification-panel" data-gamification-widget>
         <div class="gamification-header">
           <strong>Progression</strong>
@@ -2317,33 +2482,33 @@ html[data-deck="1"] .site-sidebar {
         </div>
         <p data-gamification-next>Prochaine : Bronze</p>
       </section>
-      
+
       <nav>
-        
+
         <a class="sidebar-action" href="../../index.html">Catalogue des cours</a>
-        
-        
-        
+
+
+
         <a class="sidebar-action" href="index.html">Retour au cours</a>
-        
-        
-        
+
+
+
       </nav>
       <div class="sidebar-list">
-        
+
         <a
           class="sidebar-slide"
           href="s1-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S1-1</strong>
           <span>Origine de la poussée : terme réacteur</span>
-          
+
           <span>Installer le principe physique de la poussée nette et son expression de base.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1-1.html"
@@ -2352,24 +2517,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S1-1</strong>
           <span>Origine de la poussée : terme réacteur</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s1-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S1-2</strong>
           <span>Exemple numérique et architecture double flux</span>
-          
+
           <span>Appliquer la formule de poussée à un cas chiffré et distinguer simple flux et double flux.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1-2.html"
@@ -2378,24 +2543,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S1-2</strong>
           <span>Exemple numérique et architecture double flux</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s1-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S1-3</strong>
           <span>Tuyère, poussée brute et poussée spécifique</span>
-          
+
           <span>Relier la tuyère, les conditions d’essai et les indicateurs de performance.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s1-3.html"
@@ -2404,24 +2569,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S1-3</strong>
           <span>Tuyère, poussée brute et poussée spécifique</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s2-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
-          
+
           <span>Distinguer le débit de carburant mesuré et l’indicateur rapporté à la poussée.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide active"
           href="slide-s2-1.html"
@@ -2430,24 +2595,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S2-1</strong>
           <span>Consommation horaire et consommation spécifique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s2-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S2-2</strong>
           <span>Repères de consommation et surveillance moteur</span>
-          
+
           <span>Interpréter des valeurs usuelles et les informations affichées au cockpit.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s2-2.html"
@@ -2456,24 +2621,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S2-2</strong>
           <span>Repères de consommation et surveillance moteur</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3-1</strong>
           <span>Puissance calorifique et puissance thermique théorique</span>
-          
+
           <span>Identifier la chaîne énergétique depuis le carburant jusqu’à la chaleur disponible.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3-1.html"
@@ -2482,24 +2647,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3-1</strong>
           <span>Puissance calorifique et puissance thermique théorique</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3-2</strong>
           <span>Puissance thermique réelle et puissance propulsive</span>
-          
+
           <span>Passer de l’énergie cinétique des gaz à la puissance utile sur l’avion.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3-2.html"
@@ -2508,24 +2673,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3-2</strong>
           <span>Puissance thermique réelle et puissance propulsive</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3-3</strong>
           <span>Rendements de la chaîne propulsive</span>
-          
+
           <span>Définir et comparer les rendements à chaque étage du moteur.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3-3.html"
@@ -2534,24 +2699,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3-3</strong>
           <span>Rendements de la chaîne propulsive</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s3-4.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S3-4</strong>
           <span>Lecture du diagramme d’écoulement des gaz</span>
-          
+
           <span>Interpréter l’évolution des grandeurs thermodynamiques dans les flux primaire et secondaire.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s3-4.html"
@@ -2560,24 +2725,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S3-4</strong>
           <span>Lecture du diagramme d’écoulement des gaz</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S4-1</strong>
           <span>Taux de dilution et familles de moteurs</span>
-          
+
           <span>Relier le taux de dilution aux familles de turboréacteurs.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s4-1.html"
@@ -2586,24 +2751,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S4-1</strong>
           <span>Taux de dilution et exemples de moteurs</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s4-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S4-2</strong>
           <span>Principe du turbopropulseur</span>
-          
+
           <span>Montrer pourquoi l’hélice assure une traction efficace à partir de la puissance moteur.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s4-2.html"
@@ -2612,24 +2777,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S4-2</strong>
           <span>Principe du turbopropulseur</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-1</strong>
           <span>Canal d’éjection et rôle de la tuyère</span>
-          
+
           <span>Décrire les organes de sortie d’un GTR simple flux.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-1.html"
@@ -2638,24 +2803,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-1</strong>
           <span>Canal d’éjection et rôle de la tuyère</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-2</strong>
           <span>Tuyères variables, double flux et adaptation au vol</span>
-          
+
           <span>Expliquer pourquoi la géométrie variable est nécessaire dans plusieurs architectures.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-2.html"
@@ -2664,24 +2829,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-2</strong>
           <span>Tuyères variables, double flux et adaptation au vol</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s5-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S5-3</strong>
           <span>Tuyère convergente, rapport critique et supersonique</span>
-          
+
           <span>Relier la géométrie de la tuyère au signe de la variation de vitesse selon le régime d’écoulement.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s5-3.html"
@@ -2690,24 +2855,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S5-3</strong>
           <span>Tuyère convergente, rapport critique et supersonique</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s6-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S6-1</strong>
           <span>Post-combustion et bruit de tuyère</span>
-          
+
           <span>Décrire le surcroît de poussée et les moyens de réduction du bruit en sortie.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s6-1.html"
@@ -2716,24 +2881,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S6-1</strong>
           <span>Post-combustion et bruit de tuyère</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7-1</strong>
           <span>But et formule de la poussée inverse</span>
-          
+
           <span>Poser le freinage aérodynamique au sol et sa loi de poussée.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7-1.html"
@@ -2742,24 +2907,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7-1</strong>
           <span>But et formule de la poussée inverse</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7-2</strong>
           <span>Poussée inverse : efficacité, limites et choix des flux</span>
-          
+
           <span>Comparer les architectures simple flux et double flux et situer les limites d’utilisation.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7-2.html"
@@ -2768,24 +2933,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7-2</strong>
           <span>Poussée inverse en double flux et ordres de grandeur</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s7-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S7-3</strong>
           <span>Calcul et interprétation de la poussée inverse</span>
-          
+
           <span>Exploiter la loi de poussée inverse sur un cas d’utilisation.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s7-3.html"
@@ -2794,24 +2959,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S7-3</strong>
           <span>Calcul et interprétation de la poussée inverse</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s8-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S8-1</strong>
           <span>Commandes, sécurités et limitations de l’inverseur</span>
-          
+
           <span>Identifier les conditions de mise en reverse et les verrouillages de protection.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s8-1.html"
@@ -2820,24 +2985,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S8-1</strong>
           <span>Commandes, sécurités et limitations de l’inverseur</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s8-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S8-2</strong>
           <span>Inverseur pneumatique : organes et séquence</span>
-          
+
           <span>Décrire les organes et la chronologie d’un inverseur à énergie pneumatique.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s8-2.html"
@@ -2846,24 +3011,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S8-2</strong>
           <span>Dispositif pneumatique et séquence de fonctionnement</span>
-          
+
           <span>4 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s9-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S9-1</strong>
           <span>Rôle et fonctions du train d’atterrissage</span>
-          
+
           <span>Poser les fonctions mécaniques et opérationnelles du train.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s9-1.html"
@@ -2872,24 +3037,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S9-1</strong>
           <span>Rôle et fonctions du train d’atterrissage</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s9-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S9-2</strong>
           <span>Types de trains et composition</span>
-          
+
           <span>Distinguer les architectures de base et les éléments constitutifs.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s9-2.html"
@@ -2898,24 +3063,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S9-2</strong>
           <span>Types de trains et composition</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s9-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S9-3</strong>
           <span>Géométrie des trains et dispositions des atterrisseurs</span>
-          
+
           <span>Identifier les paramètres géométriques du train d’atterrissage et comparer les principales dispositions des roues.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s9-3.html"
@@ -2924,24 +3089,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S9-3</strong>
           <span>Géométrie des trains et dispositions des atterrisseurs</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s10-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S10-1</strong>
           <span>Amortisseurs oléopneumatiques : rôle et principe</span>
-          
+
           <span>Comprendre comment le **gaz comprimé** et le **freinage hydraulique** absorbent l’impact sans rebond excessif.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s10-1.html"
@@ -2950,24 +3115,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S10-1</strong>
           <span>Amortisseurs oléopneumatiques : rôle et principe</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s10-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S10-2</strong>
           <span>Fonctionnement en trois temps de l’amortisseur</span>
-          
+
           <span>Décrire la séquence compression-détente-équilibrage.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s10-2.html"
@@ -2976,24 +3141,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S10-2</strong>
           <span>Fonctionnement en trois temps de l’amortisseur</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s10-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S10-3</strong>
           <span>États du train, verrouillages et sécurités</span>
-          
+
           <span>Présenter la cinématique des trains et les sécurités associées.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s10-3.html"
@@ -3002,24 +3167,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S10-3</strong>
           <span>Rentrée-sortie, verrouillage et secours</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s11-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S11-1</strong>
           <span>Voyants, roues et pneumatiques</span>
-          
+
           <span>Reconnaître les états de surveillance et les familles de roues/pneus.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s11-1.html"
@@ -3028,24 +3193,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S11-1</strong>
           <span>Voyants, roues et pneumatiques</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s11-2.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S11-2</strong>
           <span>Freinage, adhérence et systèmes de protection</span>
-          
+
           <span>Décrire les circuits de freinage et leurs sécurités.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s11-2.html"
@@ -3054,24 +3219,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S11-2</strong>
           <span>Freinage, adhérence et systèmes de protection</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s11-3.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S11-3</strong>
           <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
-          
+
           <span>Maîtriser les protections anti-blocage, les caractéristiques des pneus et les alertes de maintenance.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s11-3.html"
@@ -3080,24 +3245,24 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S11-3</strong>
           <span>Anti-patinage, pneus, dirigibilité et surveillance</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="s12-1.html"
           data-page-kind="slide"
-          
+
         >
           <strong>S12-1</strong>
           <span>Exercice à choix multiples : notions clés des atterrisseurs</span>
-          
+
           <span>Réviser rapidement les définitions fondamentales du train d’atterrissage, des amortisseurs, de la géométrie et du freinage.</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="slide-s12-1.html"
@@ -3106,11 +3271,11 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Exercice S12-1</strong>
           <span>QCM d’entraînement : notions clés des atterrisseurs</span>
-          
+
           <span>5 questions - correction immédiate</span>
-          
+
         </a>
-        
+
         <a
           class="sidebar-slide"
           href="final-validation.html"
@@ -3119,47 +3284,47 @@ html[data-deck="1"] .site-sidebar {
         >
           <strong>Validation finale</strong>
           <span>Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs</span>
-          
+
           <span>25 questions et correction après soumission.</span>
-          
+
         </a>
-        
+
       </div>
     </aside>
-    
+
 
     <main class="site-main">
-      
+
       <div class="slide-toolbar">
         <div class="toolbar-meta">
           <span>Page 8/61</span>
-          
+
           <span>Exercice</span>
         </div>
         <div class="toolbar-actions">
-          
+
           <a class="nav-link" href="../../index.html">Catalogue</a>
-          
-          
+
+
           <a class="nav-link" href="s2-1.html" data-deck-action="previous">Précédent</a>
-          
-          
+
+
           <a class="nav-link" href="s2-2.html" data-deck-action="next">Suivant</a>
-          
+
         </div>
       </div>
-      
 
-      
+
+
       <nav class="page-step-nav quiz-step-nav" aria-label="Navigation rapide du parcours">
-        
+
         <a class="nav-link" href="s2-1.html" data-deck-action="previous"><span class="nav-link-arrow" aria-hidden="true">&larr;</span><span>Précédent</span></a>
-        
-        
+
+
         <a class="nav-link page-step-nav-primary" href="s2-2.html" data-deck-action="next"><span>Suivant</span><span class="nav-link-arrow" aria-hidden="true">&rarr;</span></a>
-        
+
       </nav>
-      
+
 
       <section class="quiz-shell">
         <section class="quiz-hero">
@@ -3167,16 +3332,16 @@ html[data-deck="1"] .site-sidebar {
             <p class="eyebrow">Exercice</p>
             <h1>Consommation horaire et consommation spécifique</h1>
             <p>
-              
+
               Correction immédiate question par question.
-              
+
             </p>
           </div>
-          
+
         </section>
 
-        
-        
+
+
         <section class="narration-panel">
           <div class="narration-panel-header">
             <strong>Introduction de l'entrainement</strong>
@@ -3186,7 +3351,7 @@ html[data-deck="1"] .site-sidebar {
             </div>
           </div>
           <audio controls preload="auto" autoplay data-slide-audio>
-            <source src="audio/quizzes/slide-s2-1.mp3?v=53-f28e317309a9" type="audio/mpeg">
+            <source src="audio/quizzes/slide-s2-1.mp3?v=57-13408515ed4d" type="audio/mpeg">
           </audio>
         </section>
         <script>
@@ -3268,7 +3433,7 @@ html[data-deck="1"] .site-sidebar {
             window.addEventListener("load", playSlideAudio, { once: true });
           }());
         </script>
-        
+
 
         <section
           id="quiz-app"
@@ -3312,8 +3477,8 @@ html[data-deck="1"] .site-sidebar {
       });
     }());
   </script>
-  
-  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::53-f28e317309a9", "legacy_storage_keys": ["kojyto:gamification::24-5a9335da3c89", "kojyto:gamification::25-c66c65f20fed", "kojyto:gamification::26-e3b344df1beb", "kojyto:gamification::27-321730abfc29", "kojyto:gamification::28-6609eeae8ecf", "kojyto:gamification::29-a82118ada01b", "kojyto:gamification::30-5d21642fe052", "kojyto:gamification::31-9bc0d56369c6", "kojyto:gamification::32-f962d9e3062e", "kojyto:gamification::33-b77bb4d6c2e3", "kojyto:gamification::34-8f4d1034a132", "kojyto:gamification::35-2b6c08b6820a", "kojyto:gamification::36-1bedeb462e0b", "kojyto:gamification::37-32ce9906a826", "kojyto:gamification::38-8ae551aa0af4", "kojyto:gamification::39-c45a3b6bb4d9", "kojyto:gamification::40-1d619539a1d2", "kojyto:gamification::41-301edb0d03c2", "kojyto:gamification::42-8af155b0576c", "kojyto:gamification::43-0d2ee2bf90f8", "kojyto:gamification::44-c9aed8ccf0a0", "kojyto:gamification::45-b7ce58db06ec", "kojyto:gamification::46-ab3b0ab2f35a", "kojyto:gamification::47-257eba1f8889", "kojyto:gamification::48-c4129ef5531c", "kojyto:gamification::49-a096541046e5", "kojyto:gamification::50-953703adc8c2", "kojyto:gamification::51-37402c9f3ee3", "kojyto:gamification::52-4f0a426c3917"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "Origine de la poussée : terme réacteur", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "Exemple numérique et architecture double flux", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "Tuyère, poussée brute et poussée spécifique", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "Consommation horaire et consommation spécifique", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "Repères de consommation et surveillance moteur", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "Puissance calorifique et puissance thermique théorique", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "Puissance thermique réelle et puissance propulsive", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "Rendements de la chaîne propulsive", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "Lecture du diagramme d’écoulement des gaz", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "Taux de dilution et exemples de moteurs", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "Principe du turbopropulseur", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "Canal d’éjection et rôle de la tuyère", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "Tuyères variables, double flux et adaptation au vol", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "Tuyère convergente, rapport critique et supersonique", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "Post-combustion et bruit de tuyère", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "But et formule de la poussée inverse", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "Poussée inverse en double flux et ordres de grandeur", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "Calcul et interprétation de la poussée inverse", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S8-1", "quiz_type": "subpart", "title": "Commandes, sécurités et limitations de l’inverseur", "href": "slide-s8-1.html", "base_xp": 100}, {"quiz_id": "slide::S8-2", "quiz_type": "subpart", "title": "Dispositif pneumatique et séquence de fonctionnement", "href": "slide-s8-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-1", "quiz_type": "subpart", "title": "Rôle et fonctions du train d’atterrissage", "href": "slide-s9-1.html", "base_xp": 100}, {"quiz_id": "slide::S9-2", "quiz_type": "subpart", "title": "Types de trains et composition", "href": "slide-s9-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-3", "quiz_type": "subpart", "title": "Géométrie des trains et dispositions des atterrisseurs", "href": "slide-s9-3.html", "base_xp": 100}, {"quiz_id": "slide::S10-1", "quiz_type": "subpart", "title": "Amortisseurs oléopneumatiques : rôle et principe", "href": "slide-s10-1.html", "base_xp": 100}, {"quiz_id": "slide::S10-2", "quiz_type": "subpart", "title": "Fonctionnement en trois temps de l’amortisseur", "href": "slide-s10-2.html", "base_xp": 100}, {"quiz_id": "slide::S10-3", "quiz_type": "subpart", "title": "Rentrée-sortie, verrouillage et secours", "href": "slide-s10-3.html", "base_xp": 100}, {"quiz_id": "slide::S11-1", "quiz_type": "subpart", "title": "Voyants, roues et pneumatiques", "href": "slide-s11-1.html", "base_xp": 100}, {"quiz_id": "slide::S11-2", "quiz_type": "subpart", "title": "Freinage, adhérence et systèmes de protection", "href": "slide-s11-2.html", "base_xp": 100}, {"quiz_id": "slide::S11-3", "quiz_type": "subpart", "title": "Anti-patinage, pneus, dirigibilité et surveillance", "href": "slide-s11-3.html", "base_xp": 100}, {"quiz_id": "slide::S12-1", "quiz_type": "subpart", "title": "QCM d’entraînement : notions clés des atterrisseurs", "href": "slide-s12-1.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs", "href": "final-validation.html", "base_xp": 250}]}</script>
+
+  <script id="gamification-data" type="application/json">{"storage_key": "kojyto:gamification::57-13408515ed4d", "legacy_storage_keys": ["kojyto:gamification::24-5a9335da3c89", "kojyto:gamification::25-c66c65f20fed", "kojyto:gamification::26-e3b344df1beb", "kojyto:gamification::27-321730abfc29", "kojyto:gamification::28-6609eeae8ecf", "kojyto:gamification::29-a82118ada01b", "kojyto:gamification::30-5d21642fe052", "kojyto:gamification::31-9bc0d56369c6", "kojyto:gamification::32-f962d9e3062e", "kojyto:gamification::33-b77bb4d6c2e3", "kojyto:gamification::34-8f4d1034a132", "kojyto:gamification::35-2b6c08b6820a", "kojyto:gamification::36-1bedeb462e0b", "kojyto:gamification::37-32ce9906a826", "kojyto:gamification::38-8ae551aa0af4", "kojyto:gamification::39-c45a3b6bb4d9", "kojyto:gamification::40-1d619539a1d2", "kojyto:gamification::41-301edb0d03c2", "kojyto:gamification::42-8af155b0576c", "kojyto:gamification::43-0d2ee2bf90f8", "kojyto:gamification::44-c9aed8ccf0a0", "kojyto:gamification::45-b7ce58db06ec", "kojyto:gamification::46-ab3b0ab2f35a", "kojyto:gamification::47-257eba1f8889", "kojyto:gamification::48-c4129ef5531c", "kojyto:gamification::49-a096541046e5", "kojyto:gamification::50-953703adc8c2", "kojyto:gamification::51-37402c9f3ee3", "kojyto:gamification::52-4f0a426c3917", "kojyto:gamification::53-f28e317309a9", "kojyto:gamification::54-2a6be5a620db", "kojyto:gamification::55-37d4f1e2c661", "kojyto:gamification::56-c1a2b38e1a01"], "rules": {"level_xp": 500, "score_bonuses": [{"threshold": 70, "xp": 25}, {"threshold": 90, "xp": 50}], "medals": [{"key": "bronze", "label": "Bronze", "threshold_percent": 25}, {"key": "silver", "label": "Argent", "threshold_percent": 60}, {"key": "gold", "label": "Or", "threshold_percent": 100}]}, "quizzes": [{"quiz_id": "slide::S1-1", "quiz_type": "subpart", "title": "Origine de la poussée : terme réacteur", "href": "slide-s1-1.html", "base_xp": 100}, {"quiz_id": "slide::S1-2", "quiz_type": "subpart", "title": "Exemple numérique et architecture double flux", "href": "slide-s1-2.html", "base_xp": 100}, {"quiz_id": "slide::S1-3", "quiz_type": "subpart", "title": "Tuyère, poussée brute et poussée spécifique", "href": "slide-s1-3.html", "base_xp": 100}, {"quiz_id": "slide::S2-1", "quiz_type": "subpart", "title": "Consommation horaire et consommation spécifique", "href": "slide-s2-1.html", "base_xp": 100}, {"quiz_id": "slide::S2-2", "quiz_type": "subpart", "title": "Repères de consommation et surveillance moteur", "href": "slide-s2-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-1", "quiz_type": "subpart", "title": "Puissance calorifique et puissance thermique théorique", "href": "slide-s3-1.html", "base_xp": 100}, {"quiz_id": "slide::S3-2", "quiz_type": "subpart", "title": "Puissance thermique réelle et puissance propulsive", "href": "slide-s3-2.html", "base_xp": 100}, {"quiz_id": "slide::S3-3", "quiz_type": "subpart", "title": "Rendements de la chaîne propulsive", "href": "slide-s3-3.html", "base_xp": 100}, {"quiz_id": "slide::S3-4", "quiz_type": "subpart", "title": "Lecture du diagramme d’écoulement des gaz", "href": "slide-s3-4.html", "base_xp": 100}, {"quiz_id": "slide::S4-1", "quiz_type": "subpart", "title": "Taux de dilution et exemples de moteurs", "href": "slide-s4-1.html", "base_xp": 100}, {"quiz_id": "slide::S4-2", "quiz_type": "subpart", "title": "Principe du turbopropulseur", "href": "slide-s4-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-1", "quiz_type": "subpart", "title": "Canal d’éjection et rôle de la tuyère", "href": "slide-s5-1.html", "base_xp": 100}, {"quiz_id": "slide::S5-2", "quiz_type": "subpart", "title": "Tuyères variables, double flux et adaptation au vol", "href": "slide-s5-2.html", "base_xp": 100}, {"quiz_id": "slide::S5-3", "quiz_type": "subpart", "title": "Tuyère convergente, rapport critique et supersonique", "href": "slide-s5-3.html", "base_xp": 100}, {"quiz_id": "slide::S6-1", "quiz_type": "subpart", "title": "Post-combustion et bruit de tuyère", "href": "slide-s6-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-1", "quiz_type": "subpart", "title": "But et formule de la poussée inverse", "href": "slide-s7-1.html", "base_xp": 100}, {"quiz_id": "slide::S7-2", "quiz_type": "subpart", "title": "Poussée inverse en double flux et ordres de grandeur", "href": "slide-s7-2.html", "base_xp": 100}, {"quiz_id": "slide::S7-3", "quiz_type": "subpart", "title": "Calcul et interprétation de la poussée inverse", "href": "slide-s7-3.html", "base_xp": 100}, {"quiz_id": "slide::S8-1", "quiz_type": "subpart", "title": "Commandes, sécurités et limitations de l’inverseur", "href": "slide-s8-1.html", "base_xp": 100}, {"quiz_id": "slide::S8-2", "quiz_type": "subpart", "title": "Dispositif pneumatique et séquence de fonctionnement", "href": "slide-s8-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-1", "quiz_type": "subpart", "title": "Rôle et fonctions du train d’atterrissage", "href": "slide-s9-1.html", "base_xp": 100}, {"quiz_id": "slide::S9-2", "quiz_type": "subpart", "title": "Types de trains et composition", "href": "slide-s9-2.html", "base_xp": 100}, {"quiz_id": "slide::S9-3", "quiz_type": "subpart", "title": "Géométrie des trains et dispositions des atterrisseurs", "href": "slide-s9-3.html", "base_xp": 100}, {"quiz_id": "slide::S10-1", "quiz_type": "subpart", "title": "Amortisseurs oléopneumatiques : rôle et principe", "href": "slide-s10-1.html", "base_xp": 100}, {"quiz_id": "slide::S10-2", "quiz_type": "subpart", "title": "Fonctionnement en trois temps de l’amortisseur", "href": "slide-s10-2.html", "base_xp": 100}, {"quiz_id": "slide::S10-3", "quiz_type": "subpart", "title": "Rentrée-sortie, verrouillage et secours", "href": "slide-s10-3.html", "base_xp": 100}, {"quiz_id": "slide::S11-1", "quiz_type": "subpart", "title": "Voyants, roues et pneumatiques", "href": "slide-s11-1.html", "base_xp": 100}, {"quiz_id": "slide::S11-2", "quiz_type": "subpart", "title": "Freinage, adhérence et systèmes de protection", "href": "slide-s11-2.html", "base_xp": 100}, {"quiz_id": "slide::S11-3", "quiz_type": "subpart", "title": "Anti-patinage, pneus, dirigibilité et surveillance", "href": "slide-s11-3.html", "base_xp": 100}, {"quiz_id": "slide::S12-1", "quiz_type": "subpart", "title": "QCM d’entraînement : notions clés des atterrisseurs", "href": "slide-s12-1.html", "base_xp": 100}, {"quiz_id": "final::validation", "quiz_type": "final", "title": "Validation finale - Cartographie du cours : performance des moteurs, échappement, inverseur de poussée et atterrisseurs", "href": "final-validation.html", "base_xp": 250}]}</script>
   <script>
 (function () {
   const dataElement = document.getElementById("gamification-data");
@@ -3555,7 +3720,7 @@ html[data-deck="1"] .site-sidebar {
   });
 }());
 </script>
-  
+
   <script id="quiz-data" type="application/json">{"quiz_id": "slide::S2-1", "quiz_type": "subpart", "difficulty": "easy", "questions": [{"question_id": "S2-1-Q1", "prompt": "À quoi correspond la consommation horaire \\(Ch\\) d’un turboréacteur ?", "difficulty": "easy", "options": [{"id": "A", "text": "C’est la masse de carburant nécessaire pour fournir une poussée de 1 newton pendant une heure.", "is_correct": false, "explanation": "Cette définition correspond à la consommation spécifique \\(Csp\\), pas à la consommation horaire."}, {"id": "B", "text": "Elle est directement lue comme une poussée sur l’affichage moteur.", "is_correct": false, "explanation": "L’affichage de type Fuel Flow donne le débit de carburant, donc une consommation, pas une poussée."}, {"id": "C", "text": "Elle s’exprime uniquement en newtons (N).", "is_correct": false, "explanation": "\\(Ch\\) est une masse de carburant par unité de temps, donc on l’exprime en \\(kg/h\\) ou \\(lb/h\\), pas en newtons."}, {"id": "D", "text": "C’est la masse de carburant consommée en 1 heure à un régime donné.", "is_correct": true, "explanation": "La consommation horaire \\(Ch\\) mesure bien une masse de carburant rapportée à une durée d’une heure, pour un régime moteur fixé."}, {"id": "E", "text": "Elle ne dépend pas du régime moteur.", "is_correct": false, "explanation": "La consommation horaire est donnée pour un régime moteur précis ; elle varie avec le fonctionnement du turboréacteur."}], "coverage_label": "Consommation horaire", "learning_objective": "Identifier la consommation horaire comme un débit de carburant exprimé par unité de temps.", "correction_summary": "La bonne réponse décrit \\(Ch\\) comme une masse de carburant consommée en une heure. Le piège classique consiste à la confondre avec la consommation spécifique, qui rapporte la consommation à la poussée.", "course_clarification": "\\(Ch\\) est un indicateur de consommation au sens strict : il mesure combien de carburant est brûlé pendant 1 heure. En pratique, il est associé au débitmètre (Fuel Flow) au poste de pilotage.", "source_refs": []}, {"question_id": "S2-1-Q2", "prompt": "Quelle relation relie la consommation horaire \\(Ch\\) au débit massique \\(Qmc\\) ?", "difficulty": "easy", "options": [{"id": "A", "text": "\\(Ch = Qmc(kg/s) \\div 3600\\).", "is_correct": false, "explanation": "Diviser par 3600 ferait l’inverse de la conversion demandée ; on obtiendrait une valeur beaucoup trop petite."}, {"id": "B", "text": "\\(Ch = Qmc(kg/s) \\times 3600\\).", "is_correct": true, "explanation": "La formule convertit un débit en \\(kg/s\\) en une masse consommée par heure : on multiplie par 3600 pour passer de la seconde à l’heure."}, {"id": "C", "text": "\\(Ch = Qmc(kg/h) \\times 60\\).", "is_correct": false, "explanation": "Le support donne une relation avec \\(Qmc\\) en \\(kg/s\\), pas en \\(kg/h\\), et le facteur correct pour passer à l’heure est 3600."}, {"id": "D", "text": "\\(Ch = Qmc(kg/s) \\times 60\\).", "is_correct": false, "explanation": "Multiplier par 60 ne convertit que des minutes, pas des heures. La bonne conversion secondes → heures impose 3600."}, {"id": "E", "text": "\\(Ch = Qmc(kg/s) - 3600\\).", "is_correct": false, "explanation": "Il s’agit d’une conversion d’unités par multiplication, pas d’une soustraction."}], "coverage_label": "Relation entre débit carburant et consommation horaire", "learning_objective": "Appliquer la conversion entre débit massique en \\(kg/s\\) et consommation horaire en \\(kg/h\\).", "correction_summary": "Il faut multiplier \\(Qmc\\) par 3600 pour obtenir \\(Ch\\). Le piège est d’inverser la conversion ou d’utiliser un facteur 60 au lieu de 3600.", "course_clarification": "\\(Qmc\\) est un débit massique en \\(kg/s\\). Comme une heure contient 3600 secondes, la consommation horaire s’obtient en multipliant par 3600.", "source_refs": []}, {"question_id": "S2-1-Q3", "prompt": "Quelle affirmation est correcte à propos de la consommation spécifique \\(Csp\\) ?", "difficulty": "easy", "options": [{"id": "A", "text": "Elle permet de comparer les turboréacteurs entre eux en rapportant la consommation à la poussée fournie.", "is_correct": true, "explanation": "La consommation spécifique est justement un indicateur comparatif : elle relie la quantité de carburant consommée à la poussée produite."}, {"id": "B", "text": "Elle correspond au débit carburant brut mesuré en \\(kg/s\\) au poste de pilotage.", "is_correct": false, "explanation": "Le débit carburant brut est lié à \\(Ch\\), pas à \\(Csp\\). \\(Csp\\) est un rapport avec la poussée."}, {"id": "C", "text": "Elle mesure la puissance calorifique du carburant.", "is_correct": false, "explanation": "La puissance calorifique est notée \\(Pc\\) et dépend du pouvoir calorifique du carburant, pas de la poussée."}, {"id": "D", "text": "Elle donne la masse d’air externe froid aspirée par le moteur.", "is_correct": false, "explanation": "Cette grandeur n’a rien à voir avec \\(Csp\\) ; elle concerne le débit d’air et éventuellement le taux de dilution."}, {"id": "E", "text": "Elle est indépendante de toute notion de poussée.", "is_correct": false, "explanation": "C’est faux : la définition même de \\(Csp\\) est basée sur la poussée disponible."}], "coverage_label": "Consommation spécifique", "learning_objective": "Reconnaître le rôle comparatif de \\(Csp\\) comme consommation rapportée à la poussée.", "correction_summary": "La bonne réponse est celle qui relie \\(Csp\\) à la comparaison des moteurs à poussée donnée. Le piège est de la confondre avec un simple débit carburant ou avec une puissance thermique.", "course_clarification": "\\(Csp\\) est un indicateur rapporté à la poussée : plus il est faible, moins il faut de carburant pour obtenir la même poussée. C’est pourquoi il sert à comparer les turboréacteurs entre eux.", "source_refs": []}, {"question_id": "S2-1-Q4", "prompt": "Quelles unités sont usuelles pour la consommation spécifique \\(Csp\\) ?", "difficulty": "easy", "options": [{"id": "A", "text": "\\(kg/s\\) ou \\(lb/s\\).", "is_correct": false, "explanation": "Ces unités décrivent un débit massique, pas une consommation spécifique rapportée à la poussée."}, {"id": "B", "text": "\\(N\\) ou \\(lbf\\).", "is_correct": false, "explanation": "Ces unités mesurent une poussée, pas une consommation spécifique."}, {"id": "C", "text": "\\(W\\) ou \\(hp\\).", "is_correct": false, "explanation": "Ces unités correspondent à une puissance, pas à une masse de carburant rapportée à une poussée."}, {"id": "D", "text": "\\(kg\\) ou \\(lb\\).", "is_correct": false, "explanation": "Une consommation spécifique n’est pas une masse seule : elle doit intégrer une durée et une poussée."}, {"id": "E", "text": "\\(kg/h.daN\\) ou \\(lb/h.Lbf\\).", "is_correct": true, "explanation": "Ce sont les unités indiquées pour exprimer une consommation rapportée à la poussée, en système métrique ou anglo-saxon."}], "coverage_label": "Unités de consommation spécifique", "learning_objective": "Choisir les unités correctes de \\(Csp\\) et ne pas les confondre avec celles d’un débit ou d’une poussée.", "correction_summary": "Les unités attendues sont \\(kg/h.daN\\) ou \\(lb/h.Lbf\\). Le piège est de choisir des unités de débit, de poussée ou de puissance qui ne traduisent pas un rapport à la poussée.", "course_clarification": "Le terme \\(kg/h.daN\\) se lit « kilogrammes par heure et par daN ». Il indique qu’on rapporte une masse de carburant consommée en une heure à une unité de poussée.", "source_refs": []}, {"question_id": "S2-1-Q5", "prompt": "Si \\(Qmc = 3{,}2\\ \\mathrm{kg/s}\\), quelle valeur de \\(Ch\\) est correcte ?", "difficulty": "easy", "options": [{"id": "A", "text": "\\(Ch = 320\\ \\mathrm{kg/h}\\).", "is_correct": false, "explanation": "Cette valeur ignore la conversion de secondes en heures ; elle est trop faible d’un facteur 36."}, {"id": "B", "text": "\\(Ch = 1\\,920\\ \\mathrm{kg/h}\\).", "is_correct": false, "explanation": "Le calcul correct donne 11\\,520 \\(kg/h\\), donc 1\\,920 \\(kg/h\\) reste nettement trop faible."}, {"id": "C", "text": "\\(Ch = 11\\,520\\ \\mathrm{kg/h}\\).", "is_correct": true, "explanation": "On applique la relation \\(Ch = Qmc \\times 3600 : 3{,}2 \\times 3600 = 11\\,520\\)."}, {"id": "D", "text": "\\(Ch = 3{,}2\\ \\mathrm{kg/h}\\).", "is_correct": false, "explanation": "On a gardé l’unité de départ sans convertir le débit en consommation horaire ; la valeur est donc fausse."}, {"id": "E", "text": "\\(Ch = 11\\,520\\ \\mathrm{kg/s}\\).", "is_correct": false, "explanation": "Le résultat numérique 11\\,520 est correct, mais l’unité est fausse : après conversion, la consommation horaire s’exprime en \\(kg/h\\)."}], "coverage_label": "Calcul de consommation horaire", "learning_objective": "Calculer \\(Ch\\) à partir d’un débit massique en \\(kg/s\\) en appliquant la conversion horaire.", "correction_summary": "Il faut multiplier par 3600 et conserver l’unité \\(kg/h\\). Le piège principal est de garder l’unité initiale en secondes ou d’oublier la conversion temporelle.", "course_clarification": "Un débit de \\(3{,}2\\ \\mathrm{kg/s}\\) signifie 3,2 kilogrammes brûlés chaque seconde. Sur une heure complète, cela donne \\(3{,}2 \\times 3600 = 11\\,520\\ \\mathrm{kg/h}\\).", "source_refs": []}], "subpart_id": "S2", "anchor_slide_id": "S2-1", "question_count_target": 5, "title": "QCM - Consommation horaire et consommation spécifique"}</script>
   <script>
     (function () {

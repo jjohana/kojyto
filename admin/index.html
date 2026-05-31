@@ -328,6 +328,11 @@ tr.clickable:hover { background: #f4f8fa; }
 .course-title span { color: var(--muted); font-size: 0.83rem; }
 .actions-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .actions-row:empty { display: none; }
+.preview-audio-toggle[aria-pressed="true"] {
+  background: var(--accent-strong);
+  color: #fff;
+  border-color: var(--accent-strong);
+}
 .split-detail {
   display: grid;
   grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
@@ -733,6 +738,7 @@ tr.clickable:hover { background: #f4f8fa; }
               <p id="preview-caption">Sélectionner un cours prêt pour afficher la version master ou apprenant.</p>
             </div>
             <div class="actions-row">
+              <button type="button" id="preview-audio-toggle" class="preview-audio-toggle" aria-pressed="true">Son coupé</button>
               <button type="button" data-preview-mode="master">Master</button>
               <button type="button" data-preview-mode="user" class="primary">Apprenant</button>
               <button type="button" data-preview-mode="deck">Deck</button>
@@ -744,14 +750,15 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 16:44 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 18:10 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function resolveInitialApiBaseUrl() {
   return normalizeApiBaseUrl(adminConfig.apiBaseUrl || "");
 }
 const STORAGE_KEYS = {
-  selectedCourseId: "kojyto-admin:selected-course-id"
+  selectedCourseId: "kojyto-admin:selected-course-id",
+  previewMuted: "kojyto-admin:preview-muted"
 };
 function readStoredValue(key) {
   try {
@@ -786,6 +793,7 @@ const state = {
   coursesLoading: true,
   connectionFailures: 0,
   previewMode: "user",
+  previewMuted: readStoredValue(STORAGE_KEYS.previewMuted) !== "0",
   apiBaseUrl: resolveInitialApiBaseUrl()
 };
 
@@ -1001,6 +1009,7 @@ function setGenerationControlsEnabled(enabled) {
 }
 function setView(view, options = {}) {
   const nextView = validStoredView(view);
+  const previousView = state.view;
   if (nextView === "control" && !hasControlCourse() && !options.allowPending) {
     clearSelectedCourse();
     renderCourseDetail();
@@ -1019,6 +1028,7 @@ function setView(view, options = {}) {
   const label = viewLabels[state.view] || viewLabels.dashboard;
   $("#page-title").textContent = label[0];
   $("#page-subtitle").textContent = label[1];
+  if (previousView === "preview" && state.view !== "preview") stopPreviewPlayback();
   if (state.view === "preview") renderPreview();
 }
 function applyRuntimeMode() {
@@ -1853,6 +1863,56 @@ function updatePreviewModeAvailability(course) {
     button.classList.toggle("primary", button.dataset.previewMode === state.previewMode);
   });
 }
+function updatePreviewAudioButton() {
+  const button = $("#preview-audio-toggle");
+  if (!button) return;
+  button.setAttribute("aria-pressed", state.previewMuted ? "true" : "false");
+  button.textContent = state.previewMuted ? "Son coupé" : "Son actif";
+  button.title = state.previewMuted
+    ? "Le son de la prévisualisation est coupé."
+    : "Cliquer pour couper le son de la prévisualisation.";
+}
+function previewMediaNodes() {
+  const frame = $("#preview-frame");
+  if (!frame) return [];
+  try {
+    const doc = frame.contentDocument || frame.contentWindow?.document;
+    if (!doc) return [];
+    return Array.from(doc.querySelectorAll("audio, video"));
+  } catch (_error) {
+    return [];
+  }
+}
+function applyPreviewAudioState() {
+  previewMediaNodes().forEach((media) => {
+    media.defaultMuted = state.previewMuted;
+    media.muted = state.previewMuted;
+    if (state.previewMuted) {
+      media.volume = 0;
+    } else if (media.volume === 0) {
+      media.volume = 1;
+    }
+  });
+  updatePreviewAudioButton();
+}
+function setPreviewMuted(muted) {
+  state.previewMuted = Boolean(muted);
+  writeStoredValue(STORAGE_KEYS.previewMuted, state.previewMuted ? "1" : "0");
+  applyPreviewAudioState();
+}
+function stopPreviewPlayback() {
+  const frame = $("#preview-frame");
+  if (!frame) return;
+  previewMediaNodes().forEach((media) => {
+    try {
+      media.pause();
+      media.muted = true;
+    } catch (_error) {}
+  });
+  frame.removeAttribute("srcdoc");
+  frame.removeAttribute("src");
+  frame.dataset.currentSrc = "";
+}
 function renderPreviewCoursePicker(courses, currentId) {
   const root = $("#preview-course-picker");
   if (!root) return;
@@ -1874,6 +1934,10 @@ function renderPreviewCoursePicker(courses, currentId) {
 }
 function renderPreview() {
   const frame = $("#preview-frame");
+  if (state.view !== "preview") {
+    stopPreviewPlayback();
+    return;
+  }
   const courses = previewableCourses();
   const courseId = choosePreviewCourseId(courses);
   state.previewCourseId = courseId;
@@ -1881,15 +1945,20 @@ function renderPreview() {
   updatePreviewModeAvailability(course);
   renderPreviewCoursePicker(courses, courseId);
   if (!courseId || !course) {
-    frame.removeAttribute("src");
-    frame.removeAttribute("srcdoc");
+    stopPreviewPlayback();
     $("#preview-caption").textContent = "Aucun cours disponible en prévisualisation.";
     return;
   }
   const mode = state.previewMode;
   const src = previewSource(course, mode);
-  frame.removeAttribute("srcdoc");
-  frame.src = src;
+  if (frame.dataset.currentSrc !== src) {
+    stopPreviewPlayback();
+    frame.removeAttribute("srcdoc");
+    frame.src = src;
+    frame.dataset.currentSrc = src;
+  } else {
+    applyPreviewAudioState();
+  }
   const labels = { user: "Version apprenant", master: "Version master", deck: "Deck" };
   $("#preview-caption").textContent = `${displayCourseTitle(course?.title || "Cours")} - ${labels[mode] || "Aperçu"}`;
 }
@@ -1930,6 +1999,8 @@ function bindEvents() {
       renderPreview();
       if (preview.dataset.openPreview === "1") setView("preview");
     }
+    const audioToggle = event.target.closest("#preview-audio-toggle");
+    if (audioToggle) setPreviewMuted(!state.previewMuted);
   });
   document.addEventListener("change", (event) => {
     if (event.target && event.target.id === "preview-course-select") {
@@ -1940,6 +2011,14 @@ function bindEvents() {
   document.addEventListener("submit", (event) => {
     if (event.target && event.target.id === "slide-form") regenerateSelectedSlide(event);
   });
+  const previewFrame = $("#preview-frame");
+  if (previewFrame) {
+    previewFrame.addEventListener("load", () => {
+      applyPreviewAudioState();
+      window.setTimeout(applyPreviewAudioState, 250);
+      window.setTimeout(applyPreviewAudioState, 1000);
+    });
+  }
 }
 async function init() {
   const catalogLink = $("#catalog-link");
@@ -1950,6 +2029,7 @@ async function init() {
   if (publicAdminLink) publicAdminLink.href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
   state.schools = defaultSchools();
   renderSchoolSelect();
+  updatePreviewAudioButton();
   setGenerationStatus(false);
   setCoursesLoading(true);
   await detectGenerationRuntime();

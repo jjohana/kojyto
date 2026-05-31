@@ -151,6 +151,15 @@ The bundled Render demo target is:
 
 This is suitable for demonstration, not for durable storage. A restart or redeploy can remove generated files and SQLite data. For long-running use, replace SQLite with PostgreSQL and add persistent storage.
 
+Render redeploy automation:
+
+1. In Render, open `kojyto-api-jjohana`.
+2. Open `Settings`, then copy the service deploy hook URL.
+3. In GitHub, add a repository secret named `RENDER_DEPLOY_HOOK_URL`.
+4. Run the GitHub Actions workflow `Backend container` manually once, or push a backend change.
+
+When this secret exists, the workflow builds the backend image and then asks Render to deploy the latest commit. Without this secret, Render may keep serving an older backend until `Manual Deploy` > `Deploy latest commit` is clicked in Render.
+
 Use the repository helper to avoid editing the wrong field:
 
 ```powershell

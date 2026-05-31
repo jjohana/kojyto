@@ -8,7 +8,7 @@ This document is the operational checklist for the separate KOJYTO admin site.
 | --- | --- | --- |
 | Learner public site | `https://jjohana.github.io/kojyto/index.html` | Static public catalog and published learner courses. |
 | Admin public site | `https://jjohana.github.io/kojyto/admin/` | Admin interface for course creation and publication. Technical endpoints are configured before export, not entered in the page. |
-| Generation service | HTTPS backend configured in `PUBLIC_ADMIN_API_URL` | Operational service for upload, generation, preview, publication and export. |
+| Generation service | HTTPS backend configured in `BACKEND_API_URL` | Operational service for upload, generation, preview, publication and export. |
 | Worker | `scripts/run_public_service.py` or `scripts/run_worker.py` | Executes queued course generation, regeneration and narration operations. |
 
 The GitHub Pages admin must not ask the administrator to enter technical URLs. Public learner/admin/generation URLs are configured in `kojyto.site.json`, environment variables, or deployment settings before export. The public admin never redirects to a local backend.
@@ -128,11 +128,11 @@ Required deployment variables:
 | `OPENAI_API_KEY` | Text, image and audio generation. |
 | `LEARNER_SITE_URL` | `https://jjohana.github.io/kojyto/index.html` |
 | `ADMIN_SITE_URL` | `https://jjohana.github.io/kojyto/admin` |
-| `PUBLIC_ADMIN_API_URL` | Public HTTPS URL of the deployed backend, used when exporting GitHub Pages. |
+| `BACKEND_API_URL` | Public HTTPS URL of the deployed backend, used when exporting GitHub Pages. |
 | `DATABASE_URL` | Course metadata. The free demo Render config uses SQLite in `/app/storage/app.db`; use PostgreSQL for durable production usage. |
 | `STORAGE_DIR` | Uploaded documents and generated course files. The free demo Render config uses `/app/storage` without a paid persistent disk. |
 
-`Dockerfile` and `render.yaml` are included as deployment starters for a FastAPI-compatible HTTPS host. After the backend URL exists, set `PUBLIC_ADMIN_API_URL` to that HTTPS URL, regenerate `docs/`, then publish GitHub Pages.
+`Dockerfile` and `render.yaml` are included as deployment starters for a FastAPI-compatible HTTPS host. After the backend URL exists, set `BACKEND_API_URL` to that HTTPS URL, regenerate `docs/`, then publish GitHub Pages.
 GitHub Actions also publishes the backend image to `ghcr.io/jjohana/kojyto-backend:latest` after backend changes.
 
 The bundled Render demo target is:
@@ -146,11 +146,14 @@ This is suitable for demonstration, not for durable storage. A restart or redepl
 Use the repository helper to avoid editing the wrong field:
 
 ```powershell
-.\.python311\python.exe scripts\configure_public_admin.py --api-url https://your-kojyto-backend.example.com
-.\.python311\python.exe scripts\export_github_pages.py --output docs
+.\.python311\python.exe scripts\republish_site.py `
+  --learner-url https://jjohana.github.io/kojyto/index.html `
+  --admin-url https://jjohana.github.io/kojyto/admin `
+  --backend-url https://your-kojyto-backend.example.com
 ```
 
 The helper rejects non-HTTPS URLs.
+Add `--pages-repo C:\path\to\pages-repo` when the generated `docs/` snapshot must be copied into a separate GitHub Pages checkout.
 
 ## GitHub Pages Export
 
@@ -160,8 +163,8 @@ The public learner snapshot is generated with:
 .\.python311\python.exe scripts\export_github_pages.py --output docs
 ```
 
-The exported admin at `docs/admin/index.html` intentionally has no visible URL input. Generation actions call only the configured `PUBLIC_ADMIN_API_URL`. If it is empty, the exported page remains a static course management shell and does not attempt any local fallback.
-The normal export command rejects an empty `PUBLIC_ADMIN_API_URL`; this prevents publishing an admin that cannot generate courses. Use `--allow-unconnected-admin` only for local artifact review, not for the delivered GitHub Pages site.
+The exported admin at `docs/admin/index.html` intentionally has no visible URL input. Generation actions call only the configured `BACKEND_API_URL`. If it is empty, the exported page remains a static course management shell and does not attempt any local fallback.
+The normal export command rejects an empty `BACKEND_API_URL`; this prevents publishing an admin that cannot generate courses. Use `--allow-unconnected-admin` only for local artifact review, not for the delivered GitHub Pages site.
 
 Public URLs are centralized in `kojyto.site.json`:
 
@@ -169,7 +172,7 @@ Public URLs are centralized in `kojyto.site.json`:
 {
   "LEARNER_SITE_URL": "https://jjohana.github.io/kojyto/index.html",
   "ADMIN_SITE_URL": "https://jjohana.github.io/kojyto/admin",
-  "PUBLIC_ADMIN_API_URL": "https://your-kojyto-backend.example.com"
+  "BACKEND_API_URL": "https://your-kojyto-backend.example.com"
 }
 ```
 

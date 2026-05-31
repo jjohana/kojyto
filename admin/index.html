@@ -334,6 +334,13 @@ tr.clickable:hover { background: #f4f8fa; }
   font-size: 0.86rem;
   font-weight: 700;
 }
+.progress-meta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+  text-align: right;
+}
 .timeline {
   display: grid;
   gap: 8px;
@@ -637,7 +644,7 @@ tr.clickable:hover { background: #f4f8fa; }
               <input id="questions_per_intermediate_quiz" name="questions_per_intermediate_quiz" type="number" min="1" max="20" value="5">
             </div>
             <input id="pipeline_profile" name="pipeline_profile" type="hidden" value="standard">
-            <input id="parallelism" name="parallelism" type="hidden" value="4">
+            <input id="parallelism" name="parallelism" type="hidden" value="10">
             <input id="model_name" name="model_name" type="hidden" value="">
             <div class="field half">
               <label for="domains_raw">Domaines préférés</label>
@@ -682,11 +689,31 @@ const adminConfig = JSON.parse(document.getElementById("admin-config").textConte
 function resolveInitialApiBaseUrl() {
   return normalizeApiBaseUrl(adminConfig.apiBaseUrl || "");
 }
+const STORAGE_KEYS = {
+  selectedCourseId: "kojyto-admin:selected-course-id",
+  view: "kojyto-admin:view"
+};
+function readStoredValue(key) {
+  try {
+    return window.localStorage.getItem(key) || "";
+  } catch (_error) {
+    return "";
+  }
+}
+function writeStoredValue(key, value) {
+  try {
+    if (value) window.localStorage.setItem(key, value);
+    else window.localStorage.removeItem(key);
+  } catch (_error) {}
+}
+function validStoredView(value) {
+  return ["create", "dashboard", "control", "preview"].includes(value) ? value : "create";
+}
 const state = {
   courses: [],
   schools: [],
-  selectedCourseId: "",
-  view: "create",
+  selectedCourseId: readStoredValue(STORAGE_KEYS.selectedCourseId),
+  view: validStoredView(readStoredValue(STORAGE_KEYS.view)),
   adminView: null,
   manifest: null,
   slideDeck: null,
@@ -732,6 +759,41 @@ function formatDate(value) {
   const date = new Date(value);
   return Number.isNaN(date.getTime()) ? String(value) : date.toLocaleString("fr-FR");
 }
+function parseTimeMs(value) {
+  if (!value) return 0;
+  const parsed = Date.parse(value);
+  return Number.isNaN(parsed) ? 0 : parsed;
+}
+function formatDuration(ms) {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  if (hours) return `${hours} h ${String(minutes).padStart(2, "0")} min`;
+  if (minutes) return `${minutes} min ${String(seconds).padStart(2, "0")} s`;
+  return `${seconds} s`;
+}
+function generationTimeWindow(view) {
+  const jobs = Array.isArray(view?.jobs) ? view.jobs : [];
+  if (!jobs.length) return null;
+  const starts = jobs.map((job) => parseTimeMs(job.started_at || job.created_at)).filter(Boolean);
+  if (!starts.length) return null;
+  const active = jobs.some((job) => ["queued", "running"].includes(job.status));
+  const ends = jobs.map((job) => parseTimeMs(job.finished_at || job.updated_at)).filter(Boolean);
+  return {
+    start: Math.min(...starts),
+    end: active ? Date.now() : (ends.length ? Math.max(...ends) : Date.now())
+  };
+}
+function elapsedTimeLabel(view) {
+  const timeWindow = generationTimeWindow(view);
+  return timeWindow ? `Temps écoulé : ${formatDuration(timeWindow.end - timeWindow.start)}` : "";
+}
+function updateElapsedClock() {
+  const label = $("#elapsed-time-label");
+  if (!label || !state.adminView) return;
+  label.textContent = elapsedTimeLabel(state.adminView);
+}
 function notice(message, type = "") {
   const box = $("#notice");
   box.textContent = message || "";
@@ -774,6 +836,39 @@ function statusClass(value) {
   if (value === "attention" || value === "warning") return "attention";
   return "pending";
 }
+function isActiveCourse(course) {
+  return course && ["queued", "running", "uploaded", "chunked", "mapped", "planned", "slides_built", "quizzes_built", "ready_to_publish"].includes(course.status) && !course.published;
+}
+function rememberSelectedCourse(courseId) {
+  state.selectedCourseId = courseId || "";
+  writeStoredValue(STORAGE_KEYS.selectedCourseId, state.selectedCourseId);
+}
+function courseIdFromUrl() {
+  try {
+    return new URLSearchParams(window.location.search).get("course") || "";
+  } catch (_error) {
+    return "";
+  }
+}
+function chooseCourseId(courses) {
+  if (!courses.length) return "";
+  const byId = new Map(courses.map((course) => [course.id, course]));
+  const urlId = courseIdFromUrl();
+  if (urlId && byId.has(urlId)) return urlId;
+  const activeCourse = courses.find(isActiveCourse);
+  if (state.selectedCourseId && byId.has(state.selectedCourseId)) {
+    const selected = byId.get(state.selectedCourseId);
+    if (!isActiveCourse(selected) && activeCourse) return activeCourse.id;
+    return state.selectedCourseId;
+  }
+  const storedId = readStoredValue(STORAGE_KEYS.selectedCourseId);
+  if (storedId && byId.has(storedId)) {
+    const storedCourse = byId.get(storedId);
+    if (!isActiveCourse(storedCourse) && activeCourse) return activeCourse.id;
+    return storedId;
+  }
+  return activeCourse?.id || courses[0].id;
+}
 function normalizeApiBaseUrl(value) {
   return String(value || "").trim().replace(/\/+$/, "");
 }
@@ -814,10 +909,11 @@ function setGenerationControlsEnabled(enabled) {
   if (autoRefresh) autoRefresh.disabled = !enabled;
 }
 function setView(view) {
-  state.view = view;
-  $all(".view").forEach((node) => node.classList.toggle("active", node.id === "view-" + view));
+  state.view = validStoredView(view);
+  writeStoredValue(STORAGE_KEYS.view, state.view);
+  $all(".view").forEach((node) => node.classList.toggle("active", node.id === "view-" + state.view));
   $all("[data-view-target]").forEach((node) => {
-    const active = node.dataset.viewTarget === view;
+    const active = node.dataset.viewTarget === state.view;
     node.classList.toggle("active", active);
     if (active) {
       node.setAttribute("aria-current", "page");
@@ -825,10 +921,10 @@ function setView(view) {
       node.removeAttribute("aria-current");
     }
   });
-  const label = viewLabels[view] || viewLabels.dashboard;
+  const label = viewLabels[state.view] || viewLabels.dashboard;
   $("#page-title").textContent = label[0];
   $("#page-subtitle").textContent = label[1];
-  if (view === "preview") renderPreview();
+  if (state.view === "preview") renderPreview();
 }
 function applyRuntimeMode() {
   const runtime = hasGenerationRuntime();
@@ -882,11 +978,9 @@ async function loadCourses() {
   state.courses = Array.from(byId.values()).sort((left, right) => {
     return String(right.created_at || "").localeCompare(String(left.created_at || ""));
   });
+  rememberSelectedCourse(chooseCourseId(state.courses));
   renderMetrics();
   renderCoursesTable();
-  if (!state.selectedCourseId && state.courses.length) {
-    state.selectedCourseId = state.courses[0].id;
-  }
 }
 async function loadSchools() {
   try {
@@ -976,6 +1070,7 @@ async function loadStaticCatalogCourses() {
 }
 async function loadStaticCatalog() {
   state.courses = await loadStaticCatalogCourses();
+  rememberSelectedCourse(chooseCourseId(state.courses));
   renderMetrics();
   renderCoursesTable();
 }
@@ -1192,6 +1287,7 @@ function renderGenerationHero(course, progress, stages, view) {
   const percent = progressPercentFromStages(stages);
   const current = currentStage(stages);
   const active = hasActiveGeneration(view);
+  const elapsed = elapsedTimeLabel(view);
   const remaining = stages.filter((stage) => stage.status === "pending").length;
   const currentMessage = current?.status === "attention"
     ? "Une vérification est nécessaire avant de continuer."
@@ -1209,7 +1305,7 @@ function renderGenerationHero(course, progress, stages, view) {
       <div class="actions-row">${renderContextualActions(course, stages, view)}</div>
     </div>
     <div>
-      <div class="progress-label"><span>Progression du cours</span><span>${percent}%</span></div>
+      <div class="progress-label"><span>Progression du cours</span><span class="progress-meta"><span id="elapsed-time-label">${escapeHtml(elapsed)}</span><span>${percent}%</span></span></div>
       <div class="progress-bar" aria-label="Progression"><span style="width:${percent}%"></span></div>
     </div>
     <div class="current-work">
@@ -1444,7 +1540,7 @@ async function handleUpload(event) {
   notice("Upload en cours...");
   try {
     const result = await api("/courses/upload", { method: "POST", body: form });
-    state.selectedCourseId = result.course_id;
+    rememberSelectedCourse(result.course_id);
     $("#uploads").value = "";
     $("#logo").value = "";
     $("#logo_url").value = "";
@@ -1453,8 +1549,8 @@ async function handleUpload(event) {
     updateSchoolFields();
     $("#upload-count").textContent = "Aucun fichier sélectionné.";
     notice("Génération lancée.", "ok");
-    await refreshAll({ quiet: true });
     setView("control");
+    await refreshAll({ quiet: true });
   } catch (error) {
     notice("Création impossible: " + detailText(error), "error");
   } finally {
@@ -1545,7 +1641,7 @@ function bindEvents() {
         if (course && course.public_href) window.location.href = course.public_href;
         return;
       }
-      state.selectedCourseId = row.dataset.selectCourse;
+      rememberSelectedCourse(row.dataset.selectCourse);
       await loadSelectedCourse();
       setView("control");
     }
@@ -1575,6 +1671,7 @@ async function init() {
   setGenerationStatus(false);
   await detectGenerationRuntime();
   applyRuntimeMode();
+  setView(state.view);
   setGenerationControlsEnabled(hasGenerationRuntime());
   bindEvents();
   await refreshAll({ quiet: true });
@@ -1583,6 +1680,7 @@ async function init() {
       if (!document.hidden) refreshAll({ quiet: true });
     }, 5000);
   }
+  window.setInterval(updateElapsedClock, 1000);
 }
 init();
   </script>

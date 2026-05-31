@@ -586,7 +586,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 01:02 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 02:08 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function resolveInitialApiBaseUrl() {
@@ -1216,7 +1216,6 @@ async function handleRename(event) {
 }
 async function handleUpload(event) {
   event.preventDefault();
-  const uploadForm = event.currentTarget;
   if (!hasGenerationRuntime()) {
     await detectGenerationRuntime();
   }
@@ -1243,7 +1242,8 @@ async function handleUpload(event) {
   try {
     const result = await api("/courses/upload", { method: "POST", body: form });
     state.selectedCourseId = result.course_id;
-    uploadForm.reset();
+    $("#uploads").value = "";
+    $("#logo").value = "";
     $("#upload-count").textContent = "Aucun fichier sélectionné.";
     notice("Génération lancée.", "ok");
     await refreshAll({ quiet: true });

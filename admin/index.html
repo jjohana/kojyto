@@ -544,6 +544,13 @@ tr.clickable:hover { background: #f4f8fa; }
   gap: 18px;
 }
 .static-admin [data-runtime-only] { display: none !important; }
+.preview-course-picker {
+  display: grid;
+  grid-template-columns: minmax(220px, 420px) auto;
+  gap: 10px;
+  align-items: end;
+}
+.preview-course-picker .field { grid-column: auto; }
 .preview-frame {
   width: 100%;
   min-height: 70vh;
@@ -731,6 +738,7 @@ tr.clickable:hover { background: #f4f8fa; }
               <button type="button" data-preview-mode="deck">Deck</button>
             </div>
           </div>
+          <div id="preview-course-picker" class="preview-course-picker"></div>
           <iframe id="preview-frame" class="preview-frame" title="Preview du cours"></iframe>
         </section>
       </section>
@@ -766,6 +774,7 @@ const state = {
   schools: [],
   selectedCourseId: readStoredValue(STORAGE_KEYS.selectedCourseId),
   pendingCourseId: "",
+  previewCourseId: "",
   view: "create",
   adminView: null,
   manifest: null,
@@ -1791,21 +1800,77 @@ async function exportPages() {
     notice("Export invalide: " + detailText(error), "error");
   }
 }
-function renderPreview() {
-  const frame = $("#preview-frame");
-  if (!state.selectedCourseId) {
-    frame.removeAttribute("src");
-    $("#preview-caption").textContent = "Sélectionner un cours pour ouvrir l'aperçu.";
+function previewableCourses() {
+  return state.courses.filter((course) => course && (course.public_href || !course.static_only));
+}
+function choosePreviewCourseId(courses) {
+  const byId = new Map(courses.map((course) => [course.id, course]));
+  if (state.previewCourseId && byId.has(state.previewCourseId)) return state.previewCourseId;
+  if (state.selectedCourseId && byId.has(state.selectedCourseId)) return state.selectedCourseId;
+  return (courses.find((course) => course.public_href) || courses[0] || {}).id || "";
+}
+function publicDeckHref(course) {
+  const href = String(course?.public_href || "");
+  if (!href) return "";
+  const clean = href.split("#")[0].split("?")[0];
+  if (clean.endsWith("/index.html")) return clean.slice(0, -"/index.html".length) + "/deck.html";
+  return clean.replace(/\/$/, "") + "/deck.html";
+}
+function previewSource(course, mode) {
+  if (!course) return "";
+  const id = encodeURIComponent(course.id);
+  if (mode === "user" && course.public_href) return course.public_href;
+  if (mode === "deck" && course.public_href) return publicDeckHref(course);
+  if (mode === "deck") return apiUrl(`/courses/${id}/site/user/deck.html`);
+  return apiUrl(`/courses/${id}/site/${mode}/index.html`);
+}
+function updatePreviewModeAvailability(course) {
+  const masterUnavailable = Boolean(course?.public_href && course?.published);
+  const masterButton = document.querySelector('[data-preview-mode="master"]');
+  if (masterButton) masterButton.disabled = masterUnavailable;
+  if (masterUnavailable && state.previewMode === "master") state.previewMode = "user";
+  $all("[data-preview-mode]").forEach((button) => {
+    button.classList.toggle("primary", button.dataset.previewMode === state.previewMode);
+  });
+}
+function renderPreviewCoursePicker(courses, currentId) {
+  const root = $("#preview-course-picker");
+  if (!root) return;
+  if (!courses.length) {
+    root.innerHTML = "";
     return;
   }
-  const id = encodeURIComponent(state.selectedCourseId);
+  const course = courses.find((item) => item.id === currentId) || courses[0];
+  const openHref = previewSource(course, state.previewMode);
+  root.innerHTML = `
+    <div class="field">
+      <label for="preview-course-select">Cours</label>
+      <select id="preview-course-select">
+        ${courses.map((item) => `<option value="${escapeHtml(item.id)}"${item.id === course.id ? " selected" : ""}>${escapeHtml(displayCourseTitle(item.title))}</option>`).join("")}
+      </select>
+    </div>
+    ${openHref ? `<a class="button" href="${escapeHtml(openHref)}" target="_blank" rel="noopener">Ouvrir</a>` : ""}
+  `;
+}
+function renderPreview() {
+  const frame = $("#preview-frame");
+  const courses = previewableCourses();
+  const courseId = choosePreviewCourseId(courses);
+  state.previewCourseId = courseId;
+  const course = courses.find((item) => item.id === courseId) || null;
+  updatePreviewModeAvailability(course);
+  renderPreviewCoursePicker(courses, courseId);
+  if (!courseId || !course) {
+    frame.removeAttribute("src");
+    frame.removeAttribute("srcdoc");
+    $("#preview-caption").textContent = "Aucun cours disponible en prévisualisation.";
+    return;
+  }
   const mode = state.previewMode;
-  const src = mode === "deck"
-    ? `/courses/${id}/site/user/deck.html`
-    : `/courses/${id}/site/${mode}/index.html`;
-  frame.src = apiUrl(src);
+  const src = previewSource(course, mode);
+  frame.removeAttribute("srcdoc");
+  frame.src = src;
   const labels = { user: "Version apprenant", master: "Version master", deck: "Deck" };
-  const course = state.adminView?.course;
   $("#preview-caption").textContent = `${displayCourseTitle(course?.title || "Cours")} - ${labels[mode] || "Aperçu"}`;
 }
 function bindEvents() {
@@ -1842,9 +1907,14 @@ function bindEvents() {
     const preview = event.target.closest("[data-preview-mode]");
     if (preview) {
       state.previewMode = preview.dataset.previewMode;
-      $all("[data-preview-mode]").forEach((button) => button.classList.toggle("primary", button === preview));
       renderPreview();
       if (preview.dataset.openPreview === "1") setView("preview");
+    }
+  });
+  document.addEventListener("change", (event) => {
+    if (event.target && event.target.id === "preview-course-select") {
+      state.previewCourseId = event.target.value;
+      renderPreview();
     }
   });
   document.addEventListener("submit", (event) => {

@@ -124,11 +124,12 @@ This command starts FastAPI and the queue worker in the same service so generate
 Generation robustness:
 
 - KOJYTO runs one active generation at a time.
-- The backend caps concurrent generation work through `KOJYTO_MAX_PARALLELISM`; the Render demo is set to `5`.
+- The backend caps concurrent generation work through `KOJYTO_MAX_PARALLELISM`; the Render demo is set to `1` for stability.
 - The backend is the source of truth for the active course through `GET /admin/generation/active`.
 - Refreshing the GitHub Pages admin does not cancel a generation; the admin reloads the active course from the backend.
 - If another course is already queued or running, upload, resume, slide regeneration and audio regeneration return `409` with the active course id.
-- Interrupted running jobs are requeued on backend startup, then picked up again by the worker.
+- Interrupted running jobs are requeued on backend startup, then picked up again by the worker if the database and storage survived the restart.
+- Reliable resume requires durable database and file storage. Ephemeral Render storage cannot guarantee recovery after a service restart.
 
 Required deployment variables:
 
@@ -138,13 +139,51 @@ Required deployment variables:
 | `LEARNER_SITE_URL` | `https://jjohana.github.io/kojyto/index.html` |
 | `ADMIN_SITE_URL` | `https://jjohana.github.io/kojyto/admin` |
 | `BACKEND_API_URL` | Public HTTPS URL of the deployed backend, used when exporting GitHub Pages. |
-| `DATABASE_URL` | Course metadata. The free demo Render config uses SQLite in `/app/storage/app.db`; use PostgreSQL for durable production usage. |
-| `STORAGE_DIR` | Uploaded documents and generated course files. The free demo Render config uses `/app/storage` without a paid persistent disk. |
-| `KOJYTO_DEFAULT_PARALLELISM` | Default concurrent generation work. Render demo: `5`. |
-| `KOJYTO_MAX_PARALLELISM` | Hard concurrent generation cap, regardless of frontend payload. Render demo: `5`. |
+| `DATABASE_URL` | Course metadata. The free demo Render config uses SQLite in `/app/storage/app.db`; use PostgreSQL or another durable database for reliable resume. |
+| `STORAGE_DIR` | Uploaded documents and generated course files. The free demo Render config uses `/app/storage`; attach persistent storage or external object storage before relying on resume after a restart. |
+| `KOJYTO_DEFAULT_PARALLELISM` | Default concurrent generation work. Render demo: `1`. |
+| `KOJYTO_MAX_PARALLELISM` | Hard concurrent generation cap, regardless of frontend payload. Render demo: `1`. |
 
 `Dockerfile` and `render.yaml` are included as deployment starters for a FastAPI-compatible HTTPS host. After the backend URL exists, set `BACKEND_API_URL` to that HTTPS URL, regenerate `docs/`, then publish GitHub Pages.
 GitHub Actions can publish the backend image to `ghcr.io/jjohana/kojyto-backend:latest` when the `Backend container` workflow is run manually.
+
+## Backend robustness probe
+
+Run the backend robustness probe inside Codex before asking an administrator to test manually:
+
+```powershell
+.\.python311\python.exe scripts\test_backend_robustness.py --keep
+```
+
+The probe does not call OpenAI and does not generate a real course. It verifies the operational contract that matters before generation starts:
+
+- `/health` is reachable.
+- `/admin/debug/status` reports writable storage and the active-job count.
+- a course upload creates exactly one queued generation job.
+- a second upload is rejected while the first job is active.
+- `/admin/debug/courses/{course_id}` exposes source files, working directory, artifacts, steps, jobs and events.
+- a running job is requeued after a simulated backend restart if the database and storage survive.
+
+The script writes a JSON report named `backend_robustness_report.json` in its temporary work directory. If this probe fails, do not launch a real course generation.
+
+For a local scheduler stress test with 10 concurrent slide/QCM tasks:
+
+```powershell
+.\.python311\python.exe scripts\test_parallel_generation_probe.py --parallelism 10 --slides 20 --delay 0.2
+```
+
+This produces `parallel_generation_report.json` with elapsed time, generated slides, generated QCM and measured maximum concurrency. The deployed Render demo is still controlled by its own `KOJYTO_DEFAULT_PARALLELISM` and `KOJYTO_MAX_PARALLELISM` variables.
+
+## Debug endpoints
+
+Use these endpoints when a course appears blocked or lost:
+
+| Endpoint | Purpose |
+| --- | --- |
+| `GET /admin/debug/status` | Backend health, storage writability, worker state, active generation, latest courses and jobs. |
+| `GET /admin/debug/courses/{course_id}` | Course-specific progress, steps, jobs, events, alerts, artifact list and file existence checks. |
+
+These endpoints deliberately avoid raw secrets. They are designed to identify whether the problem is the worker, the job queue, the database, generated artifacts or missing files.
 
 The bundled Render demo target is:
 

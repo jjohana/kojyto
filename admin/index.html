@@ -743,8 +743,7 @@ function resolveInitialApiBaseUrl() {
   return normalizeApiBaseUrl(adminConfig.apiBaseUrl || "");
 }
 const STORAGE_KEYS = {
-  selectedCourseId: "kojyto-admin:selected-course-id",
-  view: "kojyto-admin:view"
+  selectedCourseId: "kojyto-admin:selected-course-id"
 };
 function readStoredValue(key) {
   try {
@@ -766,7 +765,7 @@ const state = {
   courses: [],
   schools: [],
   selectedCourseId: readStoredValue(STORAGE_KEYS.selectedCourseId),
-  view: validStoredView(readStoredValue(STORAGE_KEYS.view)),
+  view: "create",
   adminView: null,
   manifest: null,
   slideDeck: null,
@@ -915,18 +914,26 @@ function chooseCourseId(courses) {
   const urlId = courseIdFromUrl();
   if (urlId && byId.has(urlId)) return urlId;
   const activeCourse = courses.find(isActiveCourse);
-  if (state.selectedCourseId && byId.has(state.selectedCourseId)) {
-    const selected = byId.get(state.selectedCourseId);
-    if (!isActiveCourse(selected) && activeCourse) return activeCourse.id;
-    return state.selectedCourseId;
-  }
-  const storedId = readStoredValue(STORAGE_KEYS.selectedCourseId);
-  if (storedId && byId.has(storedId)) {
-    const storedCourse = byId.get(storedId);
-    if (!isActiveCourse(storedCourse) && activeCourse) return activeCourse.id;
-    return storedId;
-  }
-  return activeCourse?.id || courses[0].id;
+  if (activeCourse) return activeCourse.id;
+  return "";
+}
+function selectedCourse() {
+  return state.courses.find((course) => course.id === state.selectedCourseId) || null;
+}
+function activeCourse() {
+  return state.courses.find(isActiveCourse) || null;
+}
+function clearSelectedCourse() {
+  rememberSelectedCourse("");
+  state.adminView = null;
+  state.manifest = null;
+  state.slideDeck = null;
+  state.quizzes = [];
+  state.finalQuiz = null;
+  state.cleanupReport = null;
+}
+function hasControlCourse() {
+  return isActiveCourse(selectedCourse()) || hasActiveGeneration(state.adminView);
 }
 function setCoursesLoading(isLoading) {
   state.coursesLoading = Boolean(isLoading);
@@ -973,8 +980,12 @@ function setGenerationControlsEnabled(enabled) {
   if (autoRefresh) autoRefresh.disabled = !enabled;
 }
 function setView(view) {
-  state.view = validStoredView(view);
-  writeStoredValue(STORAGE_KEYS.view, state.view);
+  const nextView = validStoredView(view);
+  if (nextView === "control" && !hasControlCourse()) {
+    clearSelectedCourse();
+    renderCourseDetail();
+  }
+  state.view = nextView;
   $all(".view").forEach((node) => node.classList.toggle("active", node.id === "view-" + state.view));
   $all("[data-view-target]").forEach((node) => {
     const active = node.dataset.viewTarget === state.view;
@@ -1019,7 +1030,23 @@ async function refreshAll({ quiet = false } = {}) {
     await loadCourses();
     setGenerationStatus(true);
     state.connectionFailures = 0;
-    if (state.selectedCourseId) await loadSelectedCourse();
+    const runningCourse = activeCourse();
+    if (runningCourse) {
+      rememberSelectedCourse(runningCourse.id);
+      await loadSelectedCourse();
+      setView("control");
+    } else if (state.view === "control" && state.selectedCourseId) {
+      await loadSelectedCourse();
+      if (!hasControlCourse()) {
+        clearSelectedCourse();
+        renderCourseDetail();
+        renderPreview();
+      }
+    } else {
+      clearSelectedCourse();
+      renderCourseDetail();
+      renderPreview();
+    }
     notice("");
     if (!quiet) notice("Donnees actualisees.", "ok");
   } catch (error) {
@@ -1148,7 +1175,7 @@ async function loadStaticCatalogCourses() {
 }
 async function loadStaticCatalog() {
   state.courses = await loadStaticCatalogCourses();
-  rememberSelectedCourse(chooseCourseId(state.courses));
+  rememberSelectedCourse("");
   state.coursesLoading = false;
   renderMetrics();
   renderCoursesTable();
@@ -1453,7 +1480,7 @@ function renderContextualActions(course, stages, view) {
 function renderCourseDetail() {
   const root = $("#course-detail");
   const view = state.adminView;
-  if (!state.selectedCourseId || !view || !view.course) {
+  if (state.coursesLoading && !state.courses.length) {
     root.className = "panel";
     root.innerHTML = `<div class="courses-loading" role="status" aria-live="polite" aria-busy="true">
       <div class="loading-copy"><span class="loading-dot" aria-hidden="true"></span><span>Chargement du suivi...</span></div>
@@ -1462,6 +1489,11 @@ function renderCourseDetail() {
         <div class="loading-row"><span class="skeleton-line"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span></div>
       </div>
     </div>`;
+    return;
+  }
+  if (!state.selectedCourseId || !view || !view.course) {
+    root.className = "panel";
+    root.innerHTML = '<div class="empty">Aucune génération en cours.</div>';
     return;
   }
   root.className = "course-detail-content";
@@ -1635,7 +1667,7 @@ async function handleUpload(event) {
     await detectGenerationRuntime();
   }
   if (!hasGenerationRuntime()) {
-    notice("Service de génération momentanément indisponible.", "error");
+    notice("Création impossible pour le moment.", "error");
     return;
   }
   const files = Array.from($("#uploads").files || []);
@@ -1676,8 +1708,8 @@ async function handleUpload(event) {
     updateSchoolFields();
     $("#upload-count").textContent = "Aucun fichier sélectionné.";
     notice("Génération lancée.", "ok");
-    setView("control");
     await refreshAll({ quiet: true });
+    setView("control");
   } catch (error) {
     notice("Création impossible: " + detailText(error), "error");
   } finally {

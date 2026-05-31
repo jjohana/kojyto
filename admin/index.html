@@ -87,18 +87,24 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   width: 100%;
   min-height: 46px;
   border-color: transparent;
+  color: var(--accent-strong);
   background: transparent;
 }
 .nav-list button.active {
-  background: rgba(12, 110, 130, 0.11);
-  border-color: rgba(12, 110, 130, 0.16);
-}
-.nav-list button.primary-nav {
   color: #fff;
   background: var(--accent-strong);
   border-color: var(--accent-strong);
+  box-shadow: 0 8px 18px rgba(18, 61, 92, 0.16);
 }
-.nav-list button.primary-nav.active { background: var(--accent-strong); }
+.nav-list button.active:hover {
+  color: #fff;
+  background: #0f334d;
+  border-color: #0f334d;
+}
+.nav-list button:focus-visible {
+  outline: 3px solid rgba(12, 110, 130, 0.24);
+  outline-offset: 2px;
+}
 .side-links { display: grid; gap: 8px; }
 .side-links a { color: var(--accent-strong); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
 .site-roles { display: grid; gap: 8px; }
@@ -523,7 +529,7 @@ tr.clickable:hover { background: #f4f8fa; }
         <p>Création et publication des cours.</p>
       </div>
       <nav class="nav-list" aria-label="Navigation admin">
-        <button type="button" data-view-target="create" class="active primary-nav">Créer un cours</button>
+        <button type="button" data-view-target="create" class="active" aria-current="page">Créer un cours</button>
         <button type="button" data-view-target="dashboard">Cours publiés</button>
         <button type="button" data-view-target="control" data-runtime-only>Suivi de génération</button>
         <button type="button" data-view-target="preview" data-runtime-only>Prévisualiser</button>
@@ -670,7 +676,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 12:13 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 12:26 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function resolveInitialApiBaseUrl() {
@@ -810,7 +816,15 @@ function setGenerationControlsEnabled(enabled) {
 function setView(view) {
   state.view = view;
   $all(".view").forEach((node) => node.classList.toggle("active", node.id === "view-" + view));
-  $all("[data-view-target]").forEach((node) => node.classList.toggle("active", node.dataset.viewTarget === view));
+  $all("[data-view-target]").forEach((node) => {
+    const active = node.dataset.viewTarget === view;
+    node.classList.toggle("active", active);
+    if (active) {
+      node.setAttribute("aria-current", "page");
+    } else {
+      node.removeAttribute("aria-current");
+    }
+  });
   const label = viewLabels[view] || viewLabels.dashboard;
   $("#page-title").textContent = label[0];
   $("#page-subtitle").textContent = label[1];

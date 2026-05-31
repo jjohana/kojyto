@@ -121,6 +121,14 @@ python scripts/run_public_service.py
 
 This command starts FastAPI and the queue worker in the same service so generated files, jobs and progress share the same storage.
 
+Generation robustness:
+
+- KOJYTO runs one active generation at a time.
+- The backend is the source of truth for the active course through `GET /admin/generation/active`.
+- Refreshing the GitHub Pages admin does not cancel a generation; the admin reloads the active course from the backend.
+- If another course is already queued or running, upload, resume, slide regeneration and audio regeneration return `409` with the active course id.
+- Interrupted running jobs are requeued on backend startup, then picked up again by the worker.
+
 Required deployment variables:
 
 | Variable | Purpose |

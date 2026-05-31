@@ -744,7 +744,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 13:18 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 16:44 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function resolveInitialApiBaseUrl() {
@@ -777,6 +777,7 @@ const state = {
   previewCourseId: "",
   view: "create",
   adminView: null,
+  activeGeneration: null,
   manifest: null,
   slideDeck: null,
   quizzes: [],
@@ -934,6 +935,11 @@ function selectedCourse() {
 function activeCourse() {
   return state.courses.find(isActiveCourse) || null;
 }
+async function loadActiveGeneration() {
+  const payload = await apiMaybe("/admin/generation/active", { active: false });
+  state.activeGeneration = payload || { active: false };
+  return state.activeGeneration;
+}
 function clearSelectedCourse() {
   state.pendingCourseId = "";
   rememberSelectedCourse("");
@@ -1039,15 +1045,19 @@ async function refreshAll({ quiet = false } = {}) {
   try {
     setGenerationControlsEnabled(true);
     if (!state.courses.length) setCoursesLoading(true);
-    await apiMaybe("/health", null);
+    await api("/health");
+    const activeGeneration = await loadActiveGeneration();
     await loadSchools();
     await loadCourses();
     setGenerationStatus(true);
     state.connectionFailures = 0;
     const pendingCourseId = state.pendingCourseId;
-    const runningCourse = pendingCourseId
-      ? state.courses.find((course) => course.id === pendingCourseId) || null
-      : activeCourse();
+    const activeCourseId = activeGeneration?.active && activeGeneration.course_id ? activeGeneration.course_id : "";
+    const runningCourse = activeCourseId
+      ? state.courses.find((course) => course.id === activeCourseId) || activeGeneration.course || null
+      : pendingCourseId
+        ? state.courses.find((course) => course.id === pendingCourseId) || null
+        : activeCourse();
     if (pendingCourseId && !runningCourse) {
       rememberSelectedCourse(pendingCourseId);
       await loadSelectedCourse();
@@ -1086,7 +1096,7 @@ async function refreshAll({ quiet = false } = {}) {
 }
 async function loadCourses() {
   const [backendCourses, staticCourses] = await Promise.all([
-    api("/courses?published_only=false"),
+    apiMaybe("/courses?published_only=false", []),
     loadStaticCatalogCourses()
   ]);
   const byId = new Map();
@@ -1751,8 +1761,18 @@ async function handleUpload(event) {
     notice("Génération lancée.", "ok");
     setView("control", { allowPending: true });
     renderCourseDetail();
-    refreshAll({ quiet: true }).catch(() => {});
+    await refreshAll({ quiet: true });
   } catch (error) {
+    const activeCourseId = error?.detail?.active_course_id || error?.active_course_id || "";
+    if (activeCourseId) {
+      state.pendingCourseId = activeCourseId;
+      rememberSelectedCourse(activeCourseId);
+      setView("control", { allowPending: true });
+      renderCourseDetail();
+      await refreshAll({ quiet: true });
+      notice(detailText(error), "error");
+      return;
+    }
     notice("Création impossible: " + detailText(error), "error");
   } finally {
     $("#upload-submit").disabled = false;

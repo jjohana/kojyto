@@ -765,6 +765,7 @@ const state = {
   courses: [],
   schools: [],
   selectedCourseId: readStoredValue(STORAGE_KEYS.selectedCourseId),
+  pendingCourseId: "",
   view: "create",
   adminView: null,
   manifest: null,
@@ -913,6 +914,7 @@ function chooseCourseId(courses) {
   const byId = new Map(courses.map((course) => [course.id, course]));
   const urlId = courseIdFromUrl();
   if (urlId && byId.has(urlId)) return urlId;
+  if (state.pendingCourseId) return state.pendingCourseId;
   const activeCourse = courses.find(isActiveCourse);
   if (activeCourse) return activeCourse.id;
   return "";
@@ -924,6 +926,7 @@ function activeCourse() {
   return state.courses.find(isActiveCourse) || null;
 }
 function clearSelectedCourse() {
+  state.pendingCourseId = "";
   rememberSelectedCourse("");
   state.adminView = null;
   state.manifest = null;
@@ -933,7 +936,9 @@ function clearSelectedCourse() {
   state.cleanupReport = null;
 }
 function hasControlCourse() {
-  return isActiveCourse(selectedCourse()) || hasActiveGeneration(state.adminView);
+  return Boolean(state.pendingCourseId && state.selectedCourseId === state.pendingCourseId)
+    || isActiveCourse(selectedCourse())
+    || hasActiveGeneration(state.adminView);
 }
 function setCoursesLoading(isLoading) {
   state.coursesLoading = Boolean(isLoading);
@@ -979,9 +984,9 @@ function setGenerationControlsEnabled(enabled) {
   if (exportButton) exportButton.disabled = !enabled;
   if (autoRefresh) autoRefresh.disabled = !enabled;
 }
-function setView(view) {
+function setView(view, options = {}) {
   const nextView = validStoredView(view);
-  if (nextView === "control" && !hasControlCourse()) {
+  if (nextView === "control" && !hasControlCourse() && !options.allowPending) {
     clearSelectedCourse();
     renderCourseDetail();
   }
@@ -1030,8 +1035,15 @@ async function refreshAll({ quiet = false } = {}) {
     await loadCourses();
     setGenerationStatus(true);
     state.connectionFailures = 0;
-    const runningCourse = activeCourse();
-    if (runningCourse) {
+    const pendingCourseId = state.pendingCourseId;
+    const runningCourse = pendingCourseId
+      ? state.courses.find((course) => course.id === pendingCourseId) || null
+      : activeCourse();
+    if (pendingCourseId && !runningCourse) {
+      rememberSelectedCourse(pendingCourseId);
+      await loadSelectedCourse();
+      setView("control", { allowPending: true });
+    } else if (runningCourse) {
       rememberSelectedCourse(runningCourse.id);
       await loadSelectedCourse();
       setView("control");
@@ -1057,7 +1069,7 @@ async function refreshAll({ quiet = false } = {}) {
     } else {
       setCoursesLoading(false);
     }
-    if (state.view === "control" && !state.adminView?.course) {
+    if (state.view === "control" && !state.adminView?.course && !state.pendingCourseId) {
       setView("dashboard");
     }
     notice("");
@@ -1192,6 +1204,12 @@ async function loadSelectedCourse() {
   try {
     adminView = await api(`/courses/${id}/admin-view`);
   } catch (_error) {
+    if (state.pendingCourseId === state.selectedCourseId) {
+      state.adminView = null;
+      renderCourseDetail();
+      renderPreview();
+      return;
+    }
     const nextCourseId = chooseCourseId(state.courses);
     if (nextCourseId && nextCourseId !== state.selectedCourseId) {
       rememberSelectedCourse(nextCourseId);
@@ -1210,6 +1228,7 @@ async function loadSelectedCourse() {
     apiMaybe(`/courses/${id}/quizzes/quality-cleanup/report`, null)
   ]);
   state.adminView = adminView;
+  if (state.pendingCourseId === state.selectedCourseId) state.pendingCourseId = "";
   state.manifest = manifest;
   state.slideDeck = slideDeck || { items: [] };
   state.quizzes = quizzes || [];
@@ -1480,6 +1499,17 @@ function renderContextualActions(course, stages, view) {
 function renderCourseDetail() {
   const root = $("#course-detail");
   const view = state.adminView;
+  if (state.selectedCourseId && (!view || !view.course)) {
+    root.className = "panel";
+    root.innerHTML = `<div class="courses-loading" role="status" aria-live="polite" aria-busy="true">
+      <div class="loading-copy"><span class="loading-dot" aria-hidden="true"></span><span>Ouverture du suivi...</span></div>
+      <div class="loading-table">
+        <div class="loading-row"><span class="skeleton-line"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span></div>
+        <div class="loading-row"><span class="skeleton-line"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span></div>
+      </div>
+    </div>`;
+    return;
+  }
   if (state.coursesLoading && !state.courses.length) {
     root.className = "panel";
     root.innerHTML = `<div class="courses-loading" role="status" aria-live="polite" aria-busy="true">
@@ -1699,7 +1729,9 @@ async function handleUpload(event) {
   notice("Upload en cours...");
   try {
     const result = await api("/courses/upload", { method: "POST", body: form });
+    state.pendingCourseId = result.course_id;
     rememberSelectedCourse(result.course_id);
+    state.adminView = null;
     $("#uploads").value = "";
     $("#logo").value = "";
     $("#logo_url").value = "";
@@ -1708,8 +1740,9 @@ async function handleUpload(event) {
     updateSchoolFields();
     $("#upload-count").textContent = "Aucun fichier sélectionné.";
     notice("Génération lancée.", "ok");
-    await refreshAll({ quiet: true });
-    setView("control");
+    setView("control", { allowPending: true });
+    renderCourseDetail();
+    refreshAll({ quiet: true }).catch(() => {});
   } catch (error) {
     notice("Création impossible: " + detailText(error), "error");
   } finally {

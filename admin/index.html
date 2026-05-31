@@ -774,6 +774,7 @@ const state = {
   finalQuiz: null,
   cleanupReport: null,
   coursesLoading: true,
+  connectionFailures: 0,
   previewMode: "user",
   apiBaseUrl: resolveInitialApiBaseUrl()
 };
@@ -1013,16 +1014,26 @@ async function refreshAll({ quiet = false } = {}) {
   try {
     setGenerationControlsEnabled(true);
     if (!state.courses.length) setCoursesLoading(true);
-    await api("/health");
-    setGenerationStatus(true);
+    await apiMaybe("/health", null);
     await loadSchools();
     await loadCourses();
+    setGenerationStatus(true);
+    state.connectionFailures = 0;
     if (state.selectedCourseId) await loadSelectedCourse();
+    notice("");
     if (!quiet) notice("Donnees actualisees.", "ok");
   } catch (error) {
+    state.connectionFailures += 1;
     setGenerationStatus(false);
-    setCoursesLoading(false);
-    notice("Service de génération momentanément indisponible.", "error");
+    if (!state.courses.length) {
+      await loadStaticCatalog();
+    } else {
+      setCoursesLoading(false);
+    }
+    if (state.view === "control" && !state.adminView?.course) {
+      setView("dashboard");
+    }
+    notice("");
   }
 }
 async function loadCourses() {
@@ -1150,8 +1161,21 @@ async function loadSelectedCourse() {
     return;
   }
   const id = encodeURIComponent(state.selectedCourseId);
-  const [adminView, manifest, slideDeck, quizzes, finalQuiz, cleanupReport] = await Promise.all([
-    api(`/courses/${id}/admin-view`),
+  let adminView = null;
+  try {
+    adminView = await api(`/courses/${id}/admin-view`);
+  } catch (_error) {
+    const nextCourseId = chooseCourseId(state.courses);
+    if (nextCourseId && nextCourseId !== state.selectedCourseId) {
+      rememberSelectedCourse(nextCourseId);
+      return loadSelectedCourse();
+    }
+    state.adminView = null;
+    renderCourseDetail();
+    renderPreview();
+    return;
+  }
+  const [manifest, slideDeck, quizzes, finalQuiz, cleanupReport] = await Promise.all([
     apiMaybe(`/courses/${id}/site/user/site_manifest.json`, null),
     apiMaybe(`/courses/${id}/slides?viewer_mode=master`, { items: [] }),
     apiMaybe(`/courses/${id}/quizzes/subpart`, []),
@@ -1430,8 +1454,14 @@ function renderCourseDetail() {
   const root = $("#course-detail");
   const view = state.adminView;
   if (!state.selectedCourseId || !view || !view.course) {
-    root.className = "empty";
-    root.textContent = "Sélectionner un cours.";
+    root.className = "panel";
+    root.innerHTML = `<div class="courses-loading" role="status" aria-live="polite" aria-busy="true">
+      <div class="loading-copy"><span class="loading-dot" aria-hidden="true"></span><span>Chargement du suivi...</span></div>
+      <div class="loading-table">
+        <div class="loading-row"><span class="skeleton-line"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span></div>
+        <div class="loading-row"><span class="skeleton-line"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span><span class="skeleton-line tiny"></span></div>
+      </div>
+    </div>`;
     return;
   }
   root.className = "course-detail-content";

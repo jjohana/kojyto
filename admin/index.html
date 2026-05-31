@@ -346,6 +346,47 @@ tr.clickable:hover { background: #f4f8fa; }
 .timeline-step.done { border-color: rgba(39, 111, 85, 0.22); background: #f8fcfa; }
 .timeline-step.attention { border-color: rgba(138, 90, 0, 0.26); background: #fffaf0; }
 .timeline-step.failed { border-color: rgba(169, 52, 52, 0.24); background: #fff8f8; }
+.hourglass {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  color: currentColor;
+  transform-origin: 50% 50%;
+  animation: hourglass-turn 1.7s ease-in-out infinite;
+}
+.hourglass::before,
+.hourglass::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.hourglass::before {
+  top: 2px;
+  border-top: 7px solid currentColor;
+}
+.hourglass::after {
+  bottom: 2px;
+  border-bottom: 7px solid currentColor;
+  opacity: 0.68;
+}
+.hourglass span {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  right: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.55;
+}
+@keyframes hourglass-turn {
+  0%, 62% { transform: rotate(0deg); }
+  84%, 100% { transform: rotate(180deg); }
+}
 .step-marker {
   display: inline-flex;
   align-items: center;
@@ -366,8 +407,38 @@ tr.clickable:hover { background: #f4f8fa; }
 .step-copy strong { color: var(--accent-strong); }
 .step-copy small { color: var(--muted); line-height: 1.4; }
 .status-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   white-space: nowrap;
 }
+.status-label .hourglass,
+.current-work-title .hourglass {
+  width: 14px;
+  height: 14px;
+}
+.status-label .hourglass::before,
+.status-label .hourglass::after,
+.current-work-title .hourglass::before,
+.current-work-title .hourglass::after {
+  left: 3px;
+  right: 3px;
+  border-left-width: 4px;
+  border-right-width: 4px;
+}
+.status-label .hourglass::before,
+.current-work-title .hourglass::before { border-top-width: 6px; }
+.status-label .hourglass::after,
+.current-work-title .hourglass::after { border-bottom-width: 6px; }
+.status-label .hourglass span,
+.current-work-title .hourglass span { top: 6px; left: 5px; right: 5px; }
+.current-work-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-strong);
+}
+.current-work-title .hourglass { color: var(--warn); }
 .review-grid, .artifact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -438,6 +509,9 @@ tr.clickable:hover { background: #f4f8fa; }
   table { min-width: 640px; }
   .timeline-step { grid-template-columns: 30px minmax(0, 1fr); }
   .timeline-step .status-label { grid-column: 2; justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hourglass { animation: none; }
 }
   </style>
 </head>
@@ -596,7 +670,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 11:45 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 12:13 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function resolveInitialApiBaseUrl() {
@@ -1079,15 +1153,24 @@ function countVisualBlocks(slides) {
 function questionCount(quizzes) {
   return (quizzes || []).reduce((total, quiz) => total + (Array.isArray(quiz.questions) ? quiz.questions.length : 0), 0);
 }
+function hourglassHtml() {
+  return '<span class="hourglass" aria-hidden="true"><span></span></span>';
+}
+function stageMarkerHtml(stage) {
+  return stage.status === "running" ? hourglassHtml() : escapeHtml(stage.index);
+}
+function statusLabelHtml(status) {
+  return `${status === "running" ? hourglassHtml() : ""}${escapeHtml(statusLabel(status))}`;
+}
 function renderTimeline(stages) {
   return `<div class="timeline">${stages.map((stage) => `
     <article class="timeline-step ${escapeHtml(stage.status)}">
-      <span class="step-marker">${stage.index}</span>
+      <span class="step-marker">${stageMarkerHtml(stage)}</span>
       <div class="step-copy">
         <strong>${escapeHtml(stage.label)}</strong>
         <small>${escapeHtml(stage.detail || statusLabel(stage.status))}</small>
       </div>
-      <span class="pill ${statusClass(stage.status)} status-label">${escapeHtml(statusLabel(stage.status))}</span>
+      <span class="pill ${statusClass(stage.status)} status-label">${statusLabelHtml(stage.status)}</span>
     </article>
   `).join("")}</div>`;
 }
@@ -1116,7 +1199,7 @@ function renderGenerationHero(course, progress, stages, view) {
       <div class="progress-bar" aria-label="Progression"><span style="width:${percent}%"></span></div>
     </div>
     <div class="current-work">
-      <strong>${escapeHtml(current?.label || "Génération")}</strong>
+      <div class="current-work-title">${current?.status === "running" ? hourglassHtml() : ""}<strong>${escapeHtml(current?.label || "Génération")}</strong></div>
       <p>${escapeHtml(current?.detail || progress.message || currentMessage)}</p>
       <p>${escapeHtml(currentMessage)}${remaining ? ` ${remaining} étape(s) restante(s).` : ""}</p>
     </div>

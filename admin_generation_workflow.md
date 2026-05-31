@@ -124,7 +124,7 @@ This command starts FastAPI and the queue worker in the same service so generate
 Generation robustness:
 
 - KOJYTO runs one active generation at a time.
-- The backend caps concurrent generation work through `KOJYTO_MAX_PARALLELISM`; the Render demo is set to `1` for stability.
+- The backend caps concurrent generation work through `KOJYTO_MAX_PARALLELISM`; the Render performance test is set to `10`.
 - The backend is the source of truth for the active course through `GET /admin/generation/active`.
 - Refreshing the GitHub Pages admin does not cancel a generation; the admin reloads the active course from the backend.
 - If another course is already queued or running, upload, resume, slide regeneration and audio regeneration return `409` with the active course id.
@@ -141,8 +141,8 @@ Required deployment variables:
 | `BACKEND_API_URL` | Public HTTPS URL of the deployed backend, used when exporting GitHub Pages. |
 | `DATABASE_URL` | Course metadata. The free demo Render config uses SQLite in `/app/storage/app.db`; use PostgreSQL or another durable database for reliable resume. |
 | `STORAGE_DIR` | Uploaded documents and generated course files. The free demo Render config uses `/app/storage`; attach persistent storage or external object storage before relying on resume after a restart. |
-| `KOJYTO_DEFAULT_PARALLELISM` | Default concurrent generation work. Render demo: `1`. |
-| `KOJYTO_MAX_PARALLELISM` | Hard concurrent generation cap, regardless of frontend payload. Render demo: `1`. |
+| `KOJYTO_DEFAULT_PARALLELISM` | Default concurrent generation work. Render performance test: `10`. |
+| `KOJYTO_MAX_PARALLELISM` | Hard concurrent generation cap, regardless of frontend payload. Render performance test: `10`. |
 
 `Dockerfile` and `render.yaml` are included as deployment starters for a FastAPI-compatible HTTPS host. After the backend URL exists, set `BACKEND_API_URL` to that HTTPS URL, regenerate `docs/`, then publish GitHub Pages.
 GitHub Actions can publish the backend image to `ghcr.io/jjohana/kojyto-backend:latest` when the `Backend container` workflow is run manually.
@@ -172,7 +172,7 @@ For a local scheduler stress test with 10 concurrent slide/QCM tasks:
 .\.python311\python.exe scripts\test_parallel_generation_probe.py --parallelism 10 --slides 20 --delay 0.2
 ```
 
-This produces `parallel_generation_report.json` with elapsed time, generated slides, generated QCM and measured maximum concurrency. The deployed Render demo is still controlled by its own `KOJYTO_DEFAULT_PARALLELISM` and `KOJYTO_MAX_PARALLELISM` variables.
+This produces `parallel_generation_report.json` with elapsed time, generated slides, generated QCM and measured maximum concurrency. The deployed Render backend is controlled by its own `KOJYTO_DEFAULT_PARALLELISM` and `KOJYTO_MAX_PARALLELISM` variables.
 
 ## Debug endpoints
 

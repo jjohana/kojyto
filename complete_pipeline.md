@@ -945,7 +945,7 @@ Best current latency levers in the harness:
 Production upload path:
 
 - production orchestrator also honors stored `parallelism`, capped by `KOJYTO_MAX_PARALLELISM`
-- new uploads default to `1`; the Render demo caps execution at `1`
+- new uploads default to `1` unless the deployed admin/backend overrides the value; the Render performance test is set to `10`
 - existing archived run configs keep their persisted value
 
 ## 22. Current Constraints And Known Boundaries

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T09:12:36.617913+00:00",
+  "generated_at": "2026-05-31T09:45:12.741814+00:00",
   "course_count": 4,
   "total_size_bytes": 374663449,
   "learner_site_url": "https://jjohana.github.io/kojyto/index.html",
@@ -9,6 +9,8 @@
     {
       "course_id": "7e902247-7afe-428c-8d0d-ebad5af46a8d",
       "title": "AERONEFS ATA 24",
+      "school_id": "iaag",
+      "school_name": "IAAG - Institut Aéronautique Amaury de la Grange",
       "source_filename": "AERONEFS ATA 24.pdf",
       "source_filenames": [
         "AERONEFS ATA 24.pdf"
@@ -24,6 +26,8 @@
     {
       "course_id": "d20aaea5-04e7-4ef7-bd1c-0070ffa29691",
       "title": "Cours 8 du 13 janvier 2026_filigrane + 2 docs",
+      "school_id": "iaag",
+      "school_name": "IAAG - Institut Aéronautique Amaury de la Grange",
       "source_filename": "Cours 8 du 13 janvier 2026_filigrane.pdf + 2 autres documents",
       "source_filenames": [
         "Cours 8 du 13 janvier 2026_filigrane.pdf",
@@ -41,6 +45,8 @@
     {
       "course_id": "3166d55f-5966-465f-9840-2610d900a245",
       "title": "Cinematique_BTS_Aero",
+      "school_id": "iaag",
+      "school_name": "IAAG - Institut Aéronautique Amaury de la Grange",
       "source_filename": "Cours_Complet_Cinematique_BTS_Aero.docx",
       "source_filenames": [
         "Cours_Complet_Cinematique_BTS_Aero.docx"
@@ -56,6 +62,8 @@
     {
       "course_id": "905e6ea3-c8bc-45c6-ba80-dce3aa90712a",
       "title": "Économie Gestion Bac Pro Aéronautique",
+      "school_id": "iaag",
+      "school_name": "IAAG - Institut Aéronautique Amaury de la Grange",
       "source_filename": "Économie Gestion Bac Pro Aéronautique_Mme GAOUGAOU_filigrane (1).pdf",
       "source_filenames": [
         "Économie Gestion Bac Pro Aéronautique_Mme GAOUGAOU_filigrane (1).pdf"

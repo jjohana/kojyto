@@ -198,6 +198,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .field.wide { grid-column: span 12; }
 .field.half { grid-column: span 6; }
 .field.third { grid-column: span 4; }
+.field.hidden, .conditional.hidden { display: none; }
 .field label { color: var(--accent-strong); font-size: 0.84rem; font-weight: 800; }
 .field small { color: var(--muted); line-height: 1.35; }
 .difficulty-info {
@@ -500,12 +501,21 @@ tr.clickable:hover { background: #f4f8fa; }
               <small id="upload-count">Aucun fichier sélectionné.</small>
             </div>
             <div class="field wide">
-              <label for="logo">Logo optionnel</label>
-              <input id="logo" name="logo" type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp">
-              <small>Logo IAAG par défaut.</small>
+              <label for="school_id">École</label>
+              <select id="school_id" name="school_id"></select>
+              <small>IAAG est sélectionnée par défaut.</small>
             </div>
-            <div class="field wide">
-              <label for="logo_url">URL de logo optionnelle</label>
+            <div class="field wide conditional hidden" id="school-name-field">
+              <label for="school_name">Nom de l'école</label>
+              <input id="school_name" name="school_name" placeholder="Nom de l'école">
+            </div>
+            <div class="field wide conditional hidden" id="school-logo-field">
+              <label for="logo">Logo de l'école</label>
+              <input id="logo" name="logo" type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp">
+              <small id="school-logo-help">Obligatoire pour une nouvelle école.</small>
+            </div>
+            <div class="field wide conditional hidden" id="school-logo-url-field">
+              <label for="logo_url">URL du logo</label>
               <input id="logo_url" name="logo_url" type="url" placeholder="https://exemple.fr/logo.png">
               <small>Utilisée si aucun fichier logo n'est déposé.</small>
             </div>
@@ -586,7 +596,7 @@ tr.clickable:hover { background: #f4f8fa; }
       </section>
     </main>
   </div>
-  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 11:12 UTC+02:00", "sameOriginApi": false}</script>
+  <script id="admin-config" type="application/json">{"apiBaseUrl": "https://kojyto-api-jjohana.onrender.com", "learnerSiteUrl": "https://jjohana.github.io/kojyto/index.html", "publicAdminUrl": "https://jjohana.github.io/kojyto/admin/", "catalogHref": "../index.html", "siteManifestHref": "../site_manifest.json", "generatedLabel": "2026-05-31 11:45 UTC+02:00", "sameOriginApi": false}</script>
   <script>
 const adminConfig = JSON.parse(document.getElementById("admin-config").textContent);
 function resolveInitialApiBaseUrl() {
@@ -594,6 +604,7 @@ function resolveInitialApiBaseUrl() {
 }
 const state = {
   courses: [],
+  schools: [],
   selectedCourseId: "",
   view: "create",
   adminView: null,
@@ -755,6 +766,7 @@ async function refreshAll({ quiet = false } = {}) {
     setGenerationControlsEnabled(true);
     await api("/health");
     setGenerationStatus(true);
+    await loadSchools();
     await loadCourses();
     if (state.selectedCourseId) await loadSelectedCourse();
     if (!quiet) notice("Donnees actualisees.", "ok");
@@ -788,6 +800,67 @@ async function loadCourses() {
     state.selectedCourseId = state.courses[0].id;
   }
 }
+async function loadSchools() {
+  try {
+    const schools = await api("/schools");
+    state.schools = Array.isArray(schools) && schools.length ? schools : defaultSchools();
+  } catch (_error) {
+    state.schools = defaultSchools();
+  }
+  renderSchoolSelect();
+}
+function defaultSchools() {
+  return [{
+    id: "iaag",
+    name: "IAAG - Institut Aéronautique Amaury de la Grange",
+    logo_source_type: "default_iaag",
+    logo_display_name: "Logo IAAG par défaut",
+    is_default: true
+  }];
+}
+function renderSchoolSelect() {
+  const select = $("#school_id");
+  if (!select) return;
+  const previous = select.value || "iaag";
+  const options = state.schools.map((school) => {
+    const label = school.is_default ? "IAAG" : school.name;
+    return `<option value="${escapeHtml(school.id)}">${escapeHtml(label)}</option>`;
+  });
+  options.push('<option value="__new__">Ajouter une école</option>');
+  select.innerHTML = options.join("");
+  select.value = [...select.options].some((option) => option.value === previous) ? previous : "iaag";
+  updateSchoolFields();
+}
+function selectedSchool() {
+  const value = $("#school_id")?.value || "iaag";
+  return state.schools.find((school) => school.id === value) || null;
+}
+function updateSchoolFields() {
+  const value = $("#school_id")?.value || "iaag";
+  const isNew = value === "__new__";
+  const isDefault = value === "iaag";
+  const logoRequired = isNew || (!isDefault && !selectedSchool()?.logo_display_name);
+  $("#school-name-field")?.classList.toggle("hidden", !isNew);
+  $("#school-logo-field")?.classList.toggle("hidden", isDefault);
+  $("#school-logo-url-field")?.classList.toggle("hidden", isDefault);
+  const nameInput = $("#school_name");
+  const logoInput = $("#logo");
+  const logoUrlInput = $("#logo_url");
+  if (nameInput) nameInput.required = isNew;
+  if (logoInput) logoInput.required = false;
+  if (logoUrlInput) logoUrlInput.required = false;
+  const help = $("#school-logo-help");
+  if (help) {
+    help.textContent = logoRequired
+      ? "Obligatoire pour une nouvelle école."
+      : "Laisser vide pour conserver le logo de cette école.";
+  }
+  if (isDefault) {
+    if (nameInput) nameInput.value = "";
+    if (logoInput) logoInput.value = "";
+    if (logoUrlInput) logoUrlInput.value = "";
+  }
+}
 async function loadStaticCatalogCourses() {
   if (!adminConfig.siteManifestHref) {
     return [];
@@ -804,6 +877,8 @@ async function loadStaticCatalogCourses() {
       published: true,
       source_filename: course.source_filename,
       created_at: course.created_at,
+      school_id: "iaag",
+      school_name: "IAAG",
       public_href: course.href ? "../" + String(course.href).replace(/^\.\//, "") : "",
       static_only: true
     }));
@@ -867,7 +942,7 @@ function renderCoursesTable() {
       <tbody>
         ${courses.map((course) => `
           <tr class="clickable" data-select-course="${escapeHtml(course.id)}">
-            <td><div class="course-title"><strong>${escapeHtml(displayCourseTitle(course.title))}</strong><span>${escapeHtml(formatDate(course.created_at))}</span></div></td>
+            <td><div class="course-title"><strong>${escapeHtml(displayCourseTitle(course.title))}</strong><span>${escapeHtml(course.school_name || "IAAG")} · ${escapeHtml(formatDate(course.created_at))}</span></div></td>
             <td><span class="pill ${statusClass(course.status)}">${escapeHtml(statusLabel(course.status))}</span></td>
             <td>${course.published ? '<span class="pill published">Publié</span>' : '<span class="pill pending">Non publié</span>'}</td>
             <td>${course.public_href ? `<a class="button" href="${escapeHtml(course.public_href)}">Ouvrir</a>` : "Suivre"}</td>
@@ -1195,12 +1270,14 @@ function renderRecentActivity(events) {
 }
 function renderSourceManifest(manifest) {
   const filenames = Array.isArray(manifest.source_filenames) ? manifest.source_filenames : [];
+  const schoolName = manifest.school_name || "IAAG - Institut Aéronautique Amaury de la Grange";
   const logoMode = manifest.logo_source_type || "default_iaag";
   const logo = manifest.logo_display_name || manifest.logo_original_filename || manifest.logo_filename || "Logo IAAG par défaut";
   const logoDetail = logoMode === "default_iaag"
     ? "Logo IAAG par défaut"
     : `${logoMode === "url" ? "URL" : "Fichier"} - ${logo}`;
   return `<div class="list">
+    <div class="list-item"><strong>École</strong><small>${escapeHtml(schoolName)}</small></div>
     <div class="list-item"><strong>Documents</strong><small>${escapeHtml(filenames.join(", ") || "n/a")}</small></div>
     <div class="list-item"><strong>Logo</strong><small>${escapeHtml(logoDetail)}</small>${manifest.logo_source_url ? `<small>${escapeHtml(manifest.logo_source_url)}</small>` : ""}</div>
   </div>`;
@@ -1246,11 +1323,22 @@ async function handleUpload(event) {
     notice("Déposer entre 1 et 5 fichiers PDF/DOCX.", "error");
     return;
   }
+  const schoolId = $("#school_id").value || "iaag";
+  const schoolName = ($("#school_name").value || "").trim();
+  const logo = $("#logo").files && $("#logo").files[0];
+  const logoUrl = ($("#logo_url").value || "").trim();
+  if (schoolId === "__new__" && !schoolName) {
+    notice("Renseigner le nom de l'école.", "error");
+    return;
+  }
+  if (schoolId === "__new__" && !logo && !logoUrl) {
+    notice("Ajouter le logo de cette école.", "error");
+    return;
+  }
   const form = new FormData();
   files.forEach((file) => form.append("uploads", file));
-  const logo = $("#logo").files && $("#logo").files[0];
   if (logo) form.append("logo", logo);
-  ["guide", "domains_raw", "difficulty", "model_name", "target_slide_count", "target_level", "questions_per_intermediate_quiz", "pipeline_profile", "content_profile_selection", "parallelism", "logo_url"].forEach((name) => {
+  ["guide", "domains_raw", "difficulty", "model_name", "target_slide_count", "target_level", "questions_per_intermediate_quiz", "pipeline_profile", "content_profile_selection", "parallelism", "logo_url", "school_id", "school_name"].forEach((name) => {
     form.append(name, document.getElementById(name).value);
   });
   form.append("intermediate_quiz_mode", "slide");
@@ -1262,6 +1350,10 @@ async function handleUpload(event) {
     state.selectedCourseId = result.course_id;
     $("#uploads").value = "";
     $("#logo").value = "";
+    $("#logo_url").value = "";
+    $("#school_name").value = "";
+    $("#school_id").value = "iaag";
+    updateSchoolFields();
     $("#upload-count").textContent = "Aucun fichier sélectionné.";
     notice("Génération lancée.", "ok");
     await refreshAll({ quiet: true });
@@ -1339,6 +1431,7 @@ function bindEvents() {
   if (exportButton) exportButton.addEventListener("click", exportPages);
   $("#course-filter").addEventListener("input", renderCoursesTable);
   $("#upload-form").addEventListener("submit", handleUpload);
+  $("#school_id").addEventListener("change", updateSchoolFields);
   $("#uploads").addEventListener("change", () => {
     const count = ($("#uploads").files || []).length;
     $("#upload-count").textContent = count ? `${count} fichier(s) sélectionné(s).` : "Aucun fichier sélectionné.";
@@ -1380,6 +1473,8 @@ async function init() {
   if (catalogLink) catalogLink.href = adminConfig.catalogHref || "#";
   if (learnerLink) learnerLink.href = adminConfig.learnerSiteUrl || "https://jjohana.github.io/kojyto/index.html";
   if (publicAdminLink) publicAdminLink.href = adminConfig.publicAdminUrl || "https://jjohana.github.io/kojyto/admin/";
+  state.schools = defaultSchools();
+  renderSchoolSelect();
   setGenerationStatus(false);
   await detectGenerationRuntime();
   applyRuntimeMode();

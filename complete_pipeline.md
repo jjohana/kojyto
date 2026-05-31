@@ -188,7 +188,8 @@ Current allowed `SlideSpec.layout` values:
 
 | Table | Purpose | Notes |
 | --- | --- | --- |
-| `Course` | Top-level course record | `source_path` stores only the first source file; full multi-file metadata lives in `source_manifest` |
+| `School` | School / tenant profile | IAAG is seeded by default; custom schools store name, logo source, logo file path and default flag |
+| `Course` | Top-level course record | Linked to `School` through `school_id`; `source_path` stores only the first source file; full multi-file metadata lives in `source_manifest` |
 | `CourseArtifact` | Generic JSON artifact storage | One row per `course_id` + `artifact_type` |
 | `GenerationStepRecord` | Step-state ledger | Used for resumability and admin visibility |
 | `Attempt` | Learner quiz state | Stores current index, answers, completion, score |
@@ -196,6 +197,9 @@ Current allowed `SlideSpec.layout` values:
 ### 5.2 Artifact types currently written
 
 - `source_manifest`
+  - source document list
+  - selected `school_id` / `school_name`
+  - effective logo metadata copied from the selected school
 - `research_policy`
 - `chunks`
 - `course_map`

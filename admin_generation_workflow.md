@@ -52,14 +52,19 @@ The administrator sees only useful controls: resume after failure, publish when 
    - Reject unsupported file types and oversized files before queuing generation.
 
 2. Pedagogical configuration
+   - Select the school for the course.
+   - IAAG is available by default.
+   - To use another logo, create or select another school and provide its logo during course launch.
    - Set target level, target slide count, difficulty, content profile, pipeline profile, parallelism and question count.
    - Web enrichment is always enabled; guide text and preferred domains can steer the research.
-   - Use the default IAAG logo unless a course-specific logo is supplied.
+   - Use the selected school's logo for the course pages.
 
 3. Logo and brand handling
-   - Default logo: `assets/iaag-logo.png`.
-   - Optional custom logo: uploaded file or logo URL.
+   - Default school: IAAG with `assets/iaag-logo.png`.
+   - Other schools are persisted as `School` records with name, logo source and logo file.
+   - A custom school logo can be uploaded or supplied by URL.
    - File upload takes priority over URL when both are supplied.
+   - Existing schools reuse their saved logo when a new course is launched.
    - The selected logo is copied into the generated course site and displayed on the left side of slide and QCM visual pages.
    - The image-generation prompt forbids generated school names, IAAG, logos, institutional marks or watermarks inside the image itself.
 

@@ -185,6 +185,59 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .metric { padding: 16px; }
 .metric span { display: block; color: var(--muted); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; }
 .metric strong { display: block; margin-top: 6px; color: var(--accent-strong); font-size: 1.75rem; }
+.metric-skeleton,
+.skeleton-line {
+  display: block;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #edf3f6 0%, #f8fbfc 45%, #edf3f6 90%);
+  background-size: 220% 100%;
+  animation: loading-sheen 1.25s ease-in-out infinite;
+}
+.metric-skeleton {
+  width: 52px;
+  height: 32px;
+}
+.courses-loading {
+  display: grid;
+  gap: 12px;
+}
+.loading-copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.loading-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  animation: loading-pulse 1s ease-in-out infinite;
+}
+.loading-table {
+  display: grid;
+  gap: 8px;
+}
+.loading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(100px, 0.45fr) minmax(100px, 0.45fr) minmax(80px, 0.35fr);
+  gap: 18px;
+  align-items: center;
+  padding: 12px 8px;
+  border-bottom: 1px solid #edf1f4;
+}
+.skeleton-line { height: 16px; }
+.skeleton-line.short { width: 68%; }
+.skeleton-line.tiny { width: 86px; }
+@keyframes loading-sheen {
+  from { background-position: 120% 0; }
+  to { background-position: -120% 0; }
+}
+@keyframes loading-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1); }
+}
 .panel { padding: 18px; display: grid; gap: 14px; }
 .panel.compact { gap: 18px; }
 .panel.compact .panel-head { display: none; }
@@ -720,6 +773,7 @@ const state = {
   quizzes: [],
   finalQuiz: null,
   cleanupReport: null,
+  coursesLoading: true,
   previewMode: "user",
   apiBaseUrl: resolveInitialApiBaseUrl()
 };
@@ -869,6 +923,11 @@ function chooseCourseId(courses) {
   }
   return activeCourse?.id || courses[0].id;
 }
+function setCoursesLoading(isLoading) {
+  state.coursesLoading = Boolean(isLoading);
+  renderMetrics();
+  renderCoursesTable();
+}
 function normalizeApiBaseUrl(value) {
   return String(value || "").trim().replace(/\/+$/, "");
 }
@@ -940,6 +999,7 @@ async function refreshAll({ quiet = false } = {}) {
   if (!hasGenerationRuntime()) {
     setGenerationStatus(false);
     setGenerationControlsEnabled(false);
+    if (!state.courses.length) setCoursesLoading(true);
     await loadStaticCatalog();
     renderCourseDetail();
     renderPreview();
@@ -948,6 +1008,7 @@ async function refreshAll({ quiet = false } = {}) {
   }
   try {
     setGenerationControlsEnabled(true);
+    if (!state.courses.length) setCoursesLoading(true);
     await api("/health");
     setGenerationStatus(true);
     await loadSchools();
@@ -956,6 +1017,7 @@ async function refreshAll({ quiet = false } = {}) {
     if (!quiet) notice("Donnees actualisees.", "ok");
   } catch (error) {
     setGenerationStatus(false);
+    setCoursesLoading(false);
     notice("Service de génération momentanément indisponible.", "error");
   }
 }
@@ -979,6 +1041,7 @@ async function loadCourses() {
     return String(right.created_at || "").localeCompare(String(left.created_at || ""));
   });
   rememberSelectedCourse(chooseCourseId(state.courses));
+  state.coursesLoading = false;
   renderMetrics();
   renderCoursesTable();
 }
@@ -1071,6 +1134,7 @@ async function loadStaticCatalogCourses() {
 async function loadStaticCatalog() {
   state.courses = await loadStaticCatalogCourses();
   rememberSelectedCourse(chooseCourseId(state.courses));
+  state.coursesLoading = false;
   renderMetrics();
   renderCoursesTable();
 }
@@ -1100,6 +1164,13 @@ async function loadSelectedCourse() {
   renderPreview();
 }
 function renderMetrics() {
+  if (state.coursesLoading && !state.courses.length) {
+    ["metric-total", "metric-published", "metric-ready", "metric-active"].forEach((id) => {
+      const node = $("#" + id);
+      if (node) node.innerHTML = '<span class="metric-skeleton" aria-label="Chargement"></span>';
+    });
+    return;
+  }
   const total = state.courses.length;
   const published = state.courses.filter((course) => course.published).length;
   const ready = state.courses.filter((course) => ["ready_to_publish", "published"].includes(course.status)).length;
@@ -1109,7 +1180,29 @@ function renderMetrics() {
   $("#metric-ready").textContent = ready;
   $("#metric-active").textContent = active;
 }
+function renderCoursesLoading() {
+  return `<div class="courses-loading" role="status" aria-live="polite" aria-busy="true">
+    <div class="loading-copy"><span class="loading-dot" aria-hidden="true"></span><span>Chargement des cours...</span></div>
+    <div class="loading-table">
+      ${[1, 2, 3, 4].map(() => `
+        <div class="loading-row">
+          <div>
+            <span class="skeleton-line"></span>
+            <span class="skeleton-line short" style="margin-top:8px"></span>
+          </div>
+          <span class="skeleton-line tiny"></span>
+          <span class="skeleton-line tiny"></span>
+          <span class="skeleton-line tiny"></span>
+        </div>
+      `).join("")}
+    </div>
+  </div>`;
+}
 function renderCoursesTable() {
+  if (state.coursesLoading && !state.courses.length) {
+    $("#courses-table").innerHTML = renderCoursesLoading();
+    return;
+  }
   const filter = ($("#course-filter").value || "").toLowerCase();
   const staticMode = !hasGenerationRuntime();
   const courses = state.courses.filter((course) => {
@@ -1669,6 +1762,7 @@ async function init() {
   state.schools = defaultSchools();
   renderSchoolSelect();
   setGenerationStatus(false);
+  setCoursesLoading(true);
   await detectGenerationRuntime();
   applyRuntimeMode();
   setView(state.view);

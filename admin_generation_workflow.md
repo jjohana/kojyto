@@ -139,8 +139,9 @@ Required deployment variables:
 | `LEARNER_SITE_URL` | `https://jjohana.github.io/kojyto/index.html` |
 | `ADMIN_SITE_URL` | `https://jjohana.github.io/kojyto/admin` |
 | `BACKEND_API_URL` | Public HTTPS URL of the deployed backend, used when exporting GitHub Pages. |
-| `DATABASE_URL` | Course metadata. The free demo Render config uses SQLite in `/app/storage/app.db`; use PostgreSQL or another durable database for reliable resume. |
-| `STORAGE_DIR` | Uploaded documents and generated course files. The free demo Render config uses `/app/storage`; attach persistent storage or external object storage before relying on resume after a restart. |
+| `DATABASE_URL` | Course metadata. Render persistent setup uses `sqlite:////var/data/kojyto/app.db`; Render PostgreSQL is also supported. |
+| `STORAGE_DIR` | Uploaded documents and generated course files. Render persistent setup uses `/var/data/kojyto/storage`. |
+| `KOJYTO_STORAGE_DURABLE` | Set to `true` when `STORAGE_DIR` is mounted on persistent storage. |
 | `KOJYTO_DEFAULT_PARALLELISM` | Default concurrent generation work. Render performance test: `10`. |
 | `KOJYTO_MAX_PARALLELISM` | Hard concurrent generation cap, regardless of frontend payload. Render performance test: `10`. |
 
@@ -188,13 +189,27 @@ These endpoints deliberately avoid raw secrets. They are designed to identify wh
 The bundled Render demo target is:
 
 - backend URL: `https://kojyto-api-jjohana.onrender.com`
-- plan: `free`
+- plan: `starter`
+- persistent disk: `kojyto-storage`
+- disk mount path: `/var/data/kojyto`
+- database: `/var/data/kojyto/app.db`
+- generated files: `/var/data/kojyto/storage`
 - only required Render secret: `OPENAI_API_KEY`
 - automatic deploys disabled
 - shutdown window: 300 seconds
 - GitHub Actions keepalive ping every 10 minutes
 
-This is suitable for demonstration, not for durable storage. A restart or redeploy can remove generated files and SQLite data. For long-running use, replace SQLite with PostgreSQL and add persistent storage.
+This setup is persistent for the current single-active-course backend: the SQLite database and generated files are both stored on the Render disk. For future horizontal scaling, replace SQLite with Render PostgreSQL and keep generated files on a persistent disk or object storage.
+
+Optional Render PostgreSQL variables:
+
+```text
+DATABASE_URL=<Render internal database URL>
+STORAGE_DIR=/var/data/kojyto/storage
+KOJYTO_STORAGE_DURABLE=true
+```
+
+Render-style `postgres://...` URLs are accepted and normalized by `src/config.py`.
 
 Render deployment:
 

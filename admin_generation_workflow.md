@@ -28,12 +28,12 @@ The timeline covers:
 1. Validation des documents.
 2. Lecture des documents.
 3. Analyse pedagogique.
-4. Recherche web et sources.
-5. Plan du cours.
+4. Plan du cours.
+5. Recherche web et sources.
 6. Redaction des slides.
 7. Images et visuels.
-8. Controle qualite des images.
-9. QCM intermediaires.
+8. Verification des images.
+9. QCM par slide.
 10. QCM final.
 11. Verification des QCM.
 12. Scenario de narration.

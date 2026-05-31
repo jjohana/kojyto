@@ -911,7 +911,7 @@ Current defaults from `src/config.py`:
 | default target slides | `30` |
 | default intermediate quiz mode | `slide` |
 | default questions per intermediate quiz | `5` |
-| default parallelism | `8` |
+| default parallelism | `5`, capped by deployment settings |
 
 Current reasoning effort mapping:
 
@@ -944,8 +944,8 @@ Best current latency levers in the harness:
 
 Production upload path:
 
-- production orchestrator also honors stored `parallelism`
-- new uploads default to `8`
+- production orchestrator also honors stored `parallelism`, capped by `KOJYTO_MAX_PARALLELISM`
+- new uploads default to `5`; the Render demo caps execution at `5`
 - existing archived run configs keep their persisted value
 
 ## 22. Current Constraints And Known Boundaries

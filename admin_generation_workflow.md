@@ -55,7 +55,7 @@ The administrator sees only useful controls: resume after failure, publish when 
    - Select the school for the course.
    - IAAG is available by default.
    - To use another logo, create or select another school and provide its logo during course launch.
-   - Set target level, target slide count, difficulty, content profile, pipeline profile, parallelism and question count.
+   - Set target level, target slide count, difficulty, content profile and question count.
    - Web enrichment is always enabled; guide text and preferred domains can steer the research.
    - Use the selected school's logo for the course pages.
 
@@ -124,6 +124,7 @@ This command starts FastAPI and the queue worker in the same service so generate
 Generation robustness:
 
 - KOJYTO runs one active generation at a time.
+- The backend caps concurrent generation work through `KOJYTO_MAX_PARALLELISM`; the Render demo is set to `5`.
 - The backend is the source of truth for the active course through `GET /admin/generation/active`.
 - Refreshing the GitHub Pages admin does not cancel a generation; the admin reloads the active course from the backend.
 - If another course is already queued or running, upload, resume, slide regeneration and audio regeneration return `409` with the active course id.
@@ -139,26 +140,30 @@ Required deployment variables:
 | `BACKEND_API_URL` | Public HTTPS URL of the deployed backend, used when exporting GitHub Pages. |
 | `DATABASE_URL` | Course metadata. The free demo Render config uses SQLite in `/app/storage/app.db`; use PostgreSQL for durable production usage. |
 | `STORAGE_DIR` | Uploaded documents and generated course files. The free demo Render config uses `/app/storage` without a paid persistent disk. |
+| `KOJYTO_DEFAULT_PARALLELISM` | Default concurrent generation work. Render demo: `5`. |
+| `KOJYTO_MAX_PARALLELISM` | Hard concurrent generation cap, regardless of frontend payload. Render demo: `5`. |
 
 `Dockerfile` and `render.yaml` are included as deployment starters for a FastAPI-compatible HTTPS host. After the backend URL exists, set `BACKEND_API_URL` to that HTTPS URL, regenerate `docs/`, then publish GitHub Pages.
-GitHub Actions also publishes the backend image to `ghcr.io/jjohana/kojyto-backend:latest` after backend changes.
+GitHub Actions can publish the backend image to `ghcr.io/jjohana/kojyto-backend:latest` when the `Backend container` workflow is run manually.
 
 The bundled Render demo target is:
 
 - backend URL: `https://kojyto-api-jjohana.onrender.com`
 - plan: `free`
 - only required Render secret: `OPENAI_API_KEY`
+- automatic deploys disabled
+- shutdown window: 300 seconds
+- GitHub Actions keepalive ping every 10 minutes
 
 This is suitable for demonstration, not for durable storage. A restart or redeploy can remove generated files and SQLite data. For long-running use, replace SQLite with PostgreSQL and add persistent storage.
 
-Render redeploy automation:
+Render deployment:
 
-1. In Render, open `kojyto-api-jjohana`.
-2. Open `Settings`, then copy the service deploy hook URL.
-3. In GitHub, add a repository secret named `RENDER_DEPLOY_HOOK_URL`.
-4. Run the GitHub Actions workflow `Backend container` manually once, or push a backend change.
+1. Keep Render auto-deploy disabled for `kojyto-api-jjohana`.
+2. Deploy only when backend code must change.
+3. Use Render `Manual Deploy` > `Deploy latest commit`, or run the GitHub Actions workflow `Backend container` manually with `deploy_render=true` if `RENDER_DEPLOY_HOOK_URL` is configured.
 
-When this secret exists, the workflow builds the backend image and then asks Render to deploy the latest commit. Without this secret, Render may keep serving an older backend until `Manual Deploy` > `Deploy latest commit` is clicked in Render.
+This avoids killing an active generation when the admin site or GitHub Pages snapshot changes.
 
 Use the repository helper to avoid editing the wrong field:
 
